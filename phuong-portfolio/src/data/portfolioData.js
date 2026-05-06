@@ -44,20 +44,6 @@ export const about = {
             text: "Xây dựng prompt rõ ràng về mục tiêu, phạm vi và yêu cầu cụ thể để đảm bảo kết quả AI cung cấp đúng trọng tâm.",
         },
     ],
-    principles: [
-        {
-            title: "Ưu tiên trải nghiệm người đọc",
-            text: "Nội dung được trình bày mạch lạc, chia thành các mục rõ ràng, có tiêu đề và bố cục hợp lý để dễ theo dõi.",
-        },
-        {
-            title: "Minh chứng rõ ràng, minh bạch",
-            text: "Hình ảnh và tài liệu đính kèm đảm bảo chất lượng, hiển thị rõ ràng và có thể phóng to khi cần kiểm tra.",
-        },
-        {
-            title: "Sử dụng AI một cách có trách nhiệm",
-            text: "AI chỉ đóng vai trò hỗ trợ tham khảo, người thực hiện bài tập hoàn toàn chịu trách nhiệm về nội dung và bản chỉnh sửa cuối cùng.",
-        },
-    ],
     strengths: [
         {
             title: "Quản lý và tổ chức dữ liệu số",

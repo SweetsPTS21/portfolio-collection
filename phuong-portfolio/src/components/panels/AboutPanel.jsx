@@ -121,15 +121,6 @@ export default function AboutPanel() {
             />
 
             <StudyNoteSection
-                heading="Nguyên tắc"
-                HeadingIcon={ClipboardList}
-                ItemIcon={Sparkles}
-                items={about.principles}
-                getTitle={(item) => item.title}
-                getText={(item) => item.text}
-            />
-
-            <StudyNoteSection
                 heading="Năng lực"
                 HeadingIcon={Archive}
                 ItemIcon={Archive}
