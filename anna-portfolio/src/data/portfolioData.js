@@ -8,10 +8,10 @@ export const personalInfo = {
   major: "Luật Kinh Doanh",
   university: "Đại học Luật – ĐHQGHN",
   role: "Sinh viên ngành Luật",
-  tagline: "Digital Persona",
+  tagline: "Về tôi",
   principle: "Tối ưu hóa trải nghiệm người xem",
   description:
-    "Chào mừng bạn đến với không gian số của tôi — Tống Thị An Na. Sinh viên Luật Kinh doanh tại Trường Đại học Luật – Đại học Quốc gia Hà Nội. Hồ sơ này là một minh chứng kỹ thuật, nơi tôi vận dụng các công cụ AI để chuyển hóa kiến thức hàn lâm thành trải nghiệm giao tiếp trực tuyến. Với tôi, số hóa không chỉ là định dạng, mà là cách thức để nội dung học tập trở nên sống động, dễ tiếp cận và minh bạch.",
+    "Hồ sơ này được thiết lập dựa trên nguyên tắc Tối ưu hóa trải nghiệm người xem. Nội dung không chỉ dừng lại ở việc liệt kê mà được cấu trúc hóa theo mô hình: Mục tiêu → Quy trình → Kết quả → Minh chứng. Mọi dữ liệu và tệp đính kèm đều được sắp xếp khoa học, giúp việc tra cứu và đối soát thông tin trở nên tức thì và chính xác.",
   copyright: "© 2026 • Tống Thị An Na • Digital Portfolio",
 };
 
@@ -40,7 +40,7 @@ export const workingPrinciples = [
 export const skills = [
   {
     id: "01",
-    title: "Quản lý & Tổ chức dữ liệu số",
+    title: "Quản lý và tổ chức dữ liệu số",
     icon: "FolderOpen",
     desc: "Thiết lập hệ thống lưu trữ khoa học cho tệp và thư mục, áp dụng quy ước đặt tên nhất quán giúp truy xuất nhanh theo từng mục đích sử dụng.",
   },
@@ -52,13 +52,13 @@ export const skills = [
   },
   {
     id: "03",
-    title: "Kỹ năng Prompt Engineering",
+    title: "Kỹ năng tương tác với AI (Prompt Engineering)",
     icon: "MessageSquare",
     desc: "Soạn yêu cầu có bối cảnh rõ ràng, xác định đầu ra mong muốn và tiêu chí đánh giá để nâng cao độ chính xác của phản hồi từ AI.",
   },
   {
     id: "04",
-    title: "Tái cấu trúc & trình bày thông tin",
+    title: "Tái cấu trúc và trình bày thông tin",
     icon: "LayoutGrid",
     desc: "Chuyển hóa dữ liệu và ý tưởng thành nội dung có bố cục logic, phù hợp để công bố trên website hoặc các nền tảng số.",
   },
@@ -67,7 +67,7 @@ export const skills = [
 export const skillsBeingPracticed = [
   {
     title: "Quản lý và lưu trữ tài liệu khoa học",
-    desc: "Sắp xếp thư mục theo cấu trúc logic, phân loại rõ ràng từng phiên bản tài liệu nhằm hạin chế sai sót và nhầm lẫn trong quá trình sử dụng.",
+    desc: "Sắp xếp thư mục theo cấu trúc logic, phân loại rõ ràng từng phiên bản tài liệu nhằm hạn chế sai sót và nhầm lẫn trong quá trình sử dụng.",
   },
   {
     title: "Kiểm chứng và đánh giá nguồn thông tin",
@@ -81,10 +81,10 @@ export const skillsBeingPracticed = [
 
 export const toolGroups = [
   {
-    group: "Quản lý tệp & tài liệu",
+    group: "Quản lý tệp và tài liệu",
     icon: "HardDrive",
     tools:
-      "File Explorer, công cụ nén dữ liệu và quản lý phiên bản nhằm tối ưu lưu trữ và chia sẻ.",
+      "File Explorer, các công cụ nén dữ liệu và quản lý phiên bản nhằm tối ưu lưu trữ và chia sẻ.",
   },
   {
     group: "Nguồn học thuật",
@@ -99,13 +99,13 @@ export const toolGroups = [
       "ChatGPT, Gemini dùng trong quá trình phát triển ý tưởng và rà soát nội dung, có điều chỉnh theo mục tiêu cá nhân và yêu cầu học thuật.",
   },
   {
-    group: "Thiết kế & Nội dung số",
+    group: "Thiết kế và sáng tạo nội dung",
     icon: "Palette",
     tools:
       "Canva, Midjourney/DALL·E cho các bài tập liên quan đến hình ảnh và nội dung sáng tạo ứng dụng AI.",
   },
   {
-    group: "Hợp tác & Làm việc nhóm",
+    group: "Hợp tác và làm việc nhóm",
     icon: "Users",
     tools:
       "Trello, Google Docs, Slack hỗ trợ quản lý tiến độ, chia sẻ tài liệu và phối hợp trong các dự án học tập.",
@@ -119,9 +119,9 @@ export const projects = [
     assignmentType: "Bài tập 1",
     title: "Máy tính và các thiết bị ngoại vi",
     summary:
-      "Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi, kèm minh chứng thực hành.",
+      "Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi, kèm minh chứng thực hành trong file đính kèm.",
     content:
-      "Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi (bàn phím, chuột, máy in…), kèm minh chứng thực hành trong file đính kèm. Nội dung bao gồm phân tích cấu trúc phần cứng, cách thức kết nối các thiết bị ngoại vi và ứng dụng trong môi trường học tập pháp lý.",
+      "Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi (bàn phím, chuột, máy in…), kèm minh chứng thực hành trong file đính kèm.",
     tags: ["Phần cứng", "Thiết bị ngoại vi", "Thực hành"],
   },
   {
@@ -130,9 +130,9 @@ export const projects = [
     assignmentType: "Bài tập 2",
     title: "Khai thác dữ liệu và thông tin",
     summary:
-      "Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn.",
+      "Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.",
     content:
-      "Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp. Bài tập bao gồm quy trình xác minh thông tin từ nhiều nguồn học thuật, phân loại tài liệu theo mức độ ưu tiên và xây dựng thư mục tài liệu tham khảo có hệ thống.",
+      "Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.",
     tags: ["Tìm kiếm thông tin", "Google Scholar", "Trích dẫn"],
   },
   {
@@ -141,9 +141,9 @@ export const projects = [
     assignmentType: "Bài tập 2",
     title: "Tổng quan về trí tuệ nhân tạo",
     summary:
-      "Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế.",
+      "Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế trong học tập.",
     content:
-      "Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế trong học tập. Nội dung phân tích cách AI đang thay đổi môi trường pháp lý, từ phân tích văn bản luật tự động đến hỗ trợ nghiên cứu pháp lý, cùng các rủi ro cần lưu ý về tính liêm chính học thuật.",
+      "Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế trong học tập.",
     tags: ["Trí tuệ nhân tạo", "ChatGPT", "Gemini", "Ứng dụng AI"],
   },
   {
@@ -152,34 +152,10 @@ export const projects = [
     assignmentType: "Bài tập 3",
     title: "Giao tiếp và hợp tác trong môi trường số",
     summary:
-      "Rèn kỹ năng giao tiếp số và làm việc nhóm online với các công cụ Trello, Google Docs, Slack.",
+      "Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.",
     content:
-      'Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số. Nhóm 4 thành viên thực hiện dự án thuyết trình "Bảo vệ môi trường" qua 3 công cụ: Trello (quản lý nhiệm vụ), Google Docs (soạn thảo cộng tác), Slack (giao tiếp nhóm). Kết quả: tối ưu hóa phối hợp, giảm thời gian trao đổi không cần thiết.',
+      "Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.",
     tags: ["Trello", "Google Docs", "Slack", "Làm việc nhóm"],
-    hasReport: true,
-    reportSummary: {
-      title: "Báo cáo cá nhân — Trải nghiệm công cụ hợp tác trực tuyến",
-      toolEval: [
-        {
-          tool: "Trello",
-          strength: "Quản lý nhiệm vụ trực quan, dễ theo dõi tiến độ",
-          limit: "Cần thời gian làm quen",
-          rating: "Hiệu quả cao",
-        },
-        {
-          tool: "Google Docs",
-          strength: "Cộng tác thời gian thực, lưu phiên bản tự động",
-          limit: "Có thể xung đột chỉnh sửa",
-          rating: "Rất hiệu quả",
-        },
-        {
-          tool: "Slack",
-          strength: "Giao tiếp mạch lạc, phân kênh rõ",
-          limit: "Phụ thuộc kỷ luật người dùng",
-          rating: "Hiệu quả tốt",
-        },
-      ],
-    },
   },
   {
     id: 5,
@@ -187,20 +163,20 @@ export const projects = [
     assignmentType: "Bài tập 2",
     title: "Sáng tạo nội dung số",
     summary:
-      "Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế.",
+      "Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.",
     content:
-      "Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên. Nội dung bao gồm quy trình tạo nội dung từ ý tưởng đến sản phẩm hoàn chỉnh với Canva và Midjourney, kèm hướng dẫn kiểm tra bản quyền hình ảnh và xử lý nội dung AI-generated đúng quy định.",
+      "Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.",
     tags: ["Canva", "Midjourney", "Nội dung số", "Bản quyền"],
   },
   {
     id: 6,
     chapter: "Chương 6",
     assignmentType: "Bài tập 4",
-    title: "An toàn và liêm chính học thuật",
+    title: "An toàn và liêm chính học thuật trong môi trường số",
     summary:
-      "An toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật trong môi trường số.",
+      "Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch).",
     content:
-      "Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch). Bài tập phân tích các tình huống vi phạm liêm chính học thuật phổ biến, xây dựng quy trình kiểm tra đạo văn và hướng dẫn công bố minh bạch việc sử dụng AI trong bài tập học thuật.",
+      "Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch).",
     tags: ["An toàn số", "Liêm chính học thuật", "Đạo văn", "Bảo mật"],
   },
 ];
