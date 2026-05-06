@@ -1,0 +1,25 @@
+{
+  "name": "anna-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Tống Thị An Na — Legal Archive Design",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-spring/web": "^9.7.5",
+    "antd": "^6.3.7",
+    "lucide-react": "^0.511.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.5.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.6",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tailwindcss": "^4.1.6",
+    "vite": "^6.3.4"
+  }
+}
