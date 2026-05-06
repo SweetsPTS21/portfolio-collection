@@ -580,18 +580,6 @@ button {
     transform: translateY(-2px);
 }
 
-.paper-card {
-    border: 1px solid rgba(107, 87, 68, 0.15);
-    border-radius: 14px;
-    background:
-        repeating-linear-gradient(
-            #fffdf7 0 31px,
-            rgba(212, 184, 150, 0.36) 32px
-        ),
-        var(--paper);
-    box-shadow: 0 14px 30px rgba(72, 48, 22, 0.12);
-}
-
 .study-book {
     position: relative;
     display: grid;
@@ -664,6 +652,122 @@ button {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 16px;
+}
+
+.study-note-sheet {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid rgba(107, 87, 68, 0.15);
+    border-radius: 16px;
+    background:
+        linear-gradient(90deg, rgba(61, 107, 79, 0.08) 0 62px, transparent 62px),
+        repeating-linear-gradient(
+            #fffdf7 0 34px,
+            rgba(212, 184, 150, 0.34) 35px
+        ),
+        var(--paper);
+    box-shadow: 0 16px 30px rgba(72, 48, 22, 0.1);
+}
+
+.study-note-sheet.two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.study-note-row {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    min-height: 124px;
+    padding: 18px 20px 18px 14px;
+    border-right: 1px dashed rgba(107, 87, 68, 0.18);
+    border-bottom: 1px dashed rgba(107, 87, 68, 0.18);
+}
+
+.study-note-row:nth-child(3n),
+.study-note-sheet.two-col .study-note-row:nth-child(2n) {
+    border-right: 0;
+}
+
+.study-note-row:nth-last-child(-n + 3) {
+    border-bottom: 0;
+}
+
+.study-note-sheet.two-col .study-note-row:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+.study-note-index {
+    color: var(--lamp-green);
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.study-note-copy h4 {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 0;
+    color: var(--ink);
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.study-note-copy h4 svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--lamp-green);
+}
+
+.study-note-copy p {
+    margin: 9px 0 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.tool-icon-sheet {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(107, 87, 68, 0.15);
+    border-radius: 16px;
+    background:
+        repeating-linear-gradient(
+            #fffdf7 0 34px,
+            rgba(212, 184, 150, 0.34) 35px
+        ),
+        var(--paper);
+    box-shadow: 0 16px 30px rgba(72, 48, 22, 0.1);
+    padding: 16px;
+}
+
+.tool-icon-note {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    min-height: 112px;
+    padding: 16px 12px;
+    border: 1px dashed rgba(107, 87, 68, 0.22);
+    border-radius: 12px;
+    color: var(--ink);
+    text-align: center;
+}
+
+.tool-icon-note svg {
+    color: var(--lamp-green);
+}
+
+.tool-icon-note span {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-size: 0.94rem;
+    font-weight: 800;
+    line-height: 1.25;
 }
 
 .study-card {
@@ -939,6 +1043,31 @@ button {
         grid-template-columns: 1fr;
     }
 
+    .study-note-sheet,
+    .study-note-sheet.two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-icon-sheet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .study-note-row,
+    .study-note-row:nth-child(3n),
+    .study-note-sheet.two-col .study-note-row:nth-child(2n) {
+        border-right: 0;
+        border-bottom: 1px dashed rgba(107, 87, 68, 0.18);
+    }
+
+    .study-note-row:nth-last-child(-n + 3),
+    .study-note-sheet.two-col .study-note-row:nth-last-child(-n + 2) {
+        border-bottom: 1px dashed rgba(107, 87, 68, 0.18);
+    }
+
+    .study-note-row:last-child {
+        border-bottom: 0;
+    }
+
     .study-book {
         gap: 0;
         background:
@@ -998,6 +1127,10 @@ button {
     .study-profile-item {
         grid-template-columns: 1fr;
         gap: 4px;
+    }
+
+    .tool-icon-sheet {
+        grid-template-columns: 1fr;
     }
 
     .pdf-modal {

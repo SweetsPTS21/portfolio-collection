@@ -17,7 +17,7 @@ export const profile = {
 };
 
 export const about = {
-    intro: "Giới thiệu ngắn gọn về bản thân + cách mình xây dựng portfolio để dễ xem và dễ kiểm tra minh chứng",
+    intro: "Giới thiệu ngắn gọn về bản thân và cách portfolio được xây dựng để dễ xem, dễ kiểm tra minh chứng.",
     developmentGoals: [
         {
             title: "Mục tiêu học thuật",
@@ -177,29 +177,29 @@ export const projects = [
 
 export const conclusion = {
     opening:
-        "Sau khi Hoàn thành portfolio gồm 6 bài tập đã giúp em nhìn lại toàn bộ quá trình học theo một góc nhìn có hệ thống. Việc tự tay thiết kế giúp em nhận ra: Công nghệ không thay thế tư duy pháp lý, nhưng giúp định hình sự chuyên nghiệp và tốc độ xử lý vấn đề của một sinh viên ngành Luật.",
+        "Portfolio gồm 6 bài tập giúp hệ thống hóa quá trình học và cho thấy vai trò của công nghệ trong việc tăng tính chuyên nghiệp, tốc độ xử lý và khả năng trình bày vấn đề của sinh viên Luật.",
     coreSkills: [
         {
             title: "Cách làm việc trở nên có kế hoạch hơn",
-            text: "Trước khi bắt tay vào làm, em dành thời gian xác định mục tiêu, chuẩn bị cấu trúc và lựa chọn công cụ phù hợp thay vì làm theo cảm tính.",
+            text: "Xác định mục tiêu, chuẩn bị cấu trúc và lựa chọn công cụ phù hợp trước khi triển khai.",
         },
         {
             title: "Khai thác AI có định hướng và kiểm soát",
-            text: "em học được cách thay đổi tư duy từ nhờ AI viết hộ sang thành người hỗ trợ. Biết đặt câu hỏi đúng trọng tâm, tìm đúng nguồn và thực hiện kiểm tra chéo trước khi sử dụng.",
+            text: "Sử dụng AI như công cụ hỗ trợ tư duy; đặt câu hỏi đúng trọng tâm, chọn lọc nguồn và kiểm tra chéo trước khi dùng.",
         },
         {
             title: "Chủ động hơn trong việc xử lý thông tin",
-            text: "Em chú ý đến độ phù hợp của tài liệu, không sử dụng nguồn một cách máy móc và luôn cân nhắc bối cảnh khi đưa thông tin vào bài",
+            text: "Đánh giá độ phù hợp của tài liệu, tránh dùng nguồn máy móc và luôn cân nhắc bối cảnh học thuật.",
         },
     ],
     reflections: [
         {
             title: "Điểm tâm đắc nhất",
-            text: "Sự mạch lạc trong cả hệ thống lưu trữ lẫn tư duy. Khi dữ liệu được dọn dẹp gọn gàng, em nhận thấy các lập luận và tư duy phản biện của mình cũng trở nên sắc bén và rõ ràng hơn. Portfolio này đã phản ánh đúng sự ngăn nắp mà em đang hướng tới trong học tập và công việc.",
+            text: "Sự mạch lạc trong hệ thống lưu trữ và cách trình bày giúp lập luận rõ hơn, đồng thời phản ánh phong cách học tập gọn gàng, có tổ chức.",
         },
         {
             title: "Thách thức lớn nhất",
-            text: "Thách thức lớn nhất không nằm ở việc học công cụ, mà ở việc không được phép ỷ lại vào nó. Những lập luận nghe rất xuôi tai do AI tạo ra khi lật lại vấn đề và đưa ra các tình huống phản biện thực tế, chúng trở nên thiếu sức nặng và phi thực tế. Do đó, khó khăn lớn nhất là rèn luyện kỷ luật kiểm chứng chéo, luôn phải tra cứu ngược lại văn bản gốc, đạo luật gốc để chống lại sự ảo giác thông tin của AI..",
+            text: "Thách thức chính là tránh phụ thuộc vào AI. Mọi gợi ý cần được kiểm chứng chéo với nguồn gốc, văn bản gốc và bối cảnh thực tế.",
         },
     ],
     future: [
