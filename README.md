@@ -263,6 +263,7 @@ npm run dev
 | `anna-portfolio` | Tống Thị An Na | Editorial / Thư viện pháp lý | ✅ Hoàn thành |
 | `phuong-portfolio` | Lý Bảo Phượng | Interactive Desk / Workspace Theme | ✅ Hoàn thành |
 | `tham-portfolio` | Mai Hồng Thắm | Dreamy 3D Floating Island | ✅ Hoàn thành |
+| `trang-portfolio` | Hoàng Thu Trang | Tropical Summer Portfolio | ✅ Hoàn thành |
 
 > Cập nhật bảng này khi thêm dự án mới.
 
