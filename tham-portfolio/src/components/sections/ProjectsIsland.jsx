@@ -1,8 +1,12 @@
-import { Image, Layers3 } from "lucide-react";
+import { useState } from "react";
+import { Eye, Image } from "lucide-react";
 import { projects } from "../../data/portfolioData.js";
+import PdfViewerModal from "../ui/PdfViewerModal.jsx";
 import Island from "../world/Island.jsx";
 
 export default function ProjectsIsland() {
+    const [viewingProject, setViewingProject] = useState(null);
+
     return (
         <Island
             id="projects"
@@ -21,10 +25,23 @@ export default function ProjectsIsland() {
                         <div className="project-copy">
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
+                            <button
+                                type="button"
+                                className="project-view-button"
+                                onClick={() => setViewingProject(project)}
+                                aria-label={`Xem ${project.title}`}
+                            >
+                                <Eye size={17} />
+                                <span>Xem</span>
+                            </button>
                         </div>
                     </article>
                 ))}
             </div>
+            <PdfViewerModal
+                project={viewingProject}
+                onClose={() => setViewingProject(null)}
+            />
         </Island>
     );
 }

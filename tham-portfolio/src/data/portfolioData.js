@@ -1,4 +1,10 @@
 import avatarUrl from "../../docs/avatar.png";
+import bt1Pdf from "../../docs/bt1.pdf";
+import bt2Pdf from "../../docs/bt2.pdf";
+import bt3Pdf from "../../docs/bt3.pdf";
+import bt4Pdf from "../../docs/bt4.pdf";
+import bt5Pdf from "../../docs/bt5.pdf";
+import bt6Pdf from "../../docs/bt6.pdf";
 
 export const personalInfo = {
     name: "Mai Hồng Thắm",
@@ -118,31 +124,43 @@ export const projects = {
             title: "Chương 1: Thiết bị ngoại vi",
             description:
                 "Tổng quan máy tính, thành phần cơ bản và thiết bị ngoại vi.",
+            pdf: bt1Pdf,
+            pdfName: "bt1.pdf",
         },
         {
             title: "Chương 2: Dữ liệu & thông tin",
             description:
                 "Tìm kiếm, thu thập, tổ chức thông tin và đánh giá độ tin cậy của nguồn.",
+            pdf: bt2Pdf,
+            pdfName: "bt2.pdf",
         },
         {
             title: "Chương 3: Trí tuệ nhân tạo",
             description:
                 "Khái niệm AI, ứng dụng, lợi ích, rủi ro và liên hệ trong học tập.",
+            pdf: bt3Pdf,
+            pdfName: "bt3.pdf",
         },
         {
             title: "Chương 4: Hợp tác số",
             description:
                 "Giao tiếp số, phân công, chia sẻ tài liệu và quy tắc ứng xử online.",
+            pdf: bt4Pdf,
+            pdfName: "bt4.pdf",
         },
         {
             title: "Chương 5: Nội dung số",
             description:
                 "Lên ý tưởng, chọn công cụ, biên tập, thiết kế và lưu ý bản quyền.",
+            pdf: bt5Pdf,
+            pdfName: "bt5.pdf",
         },
         {
             title: "Chương 6: An toàn học thuật",
             description:
                 "An toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật.",
+            pdf: bt6Pdf,
+            pdfName: "bt6.pdf",
         },
     ],
 };
