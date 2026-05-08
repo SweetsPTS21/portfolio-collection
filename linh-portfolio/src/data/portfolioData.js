@@ -177,7 +177,7 @@ export const conclusion = {
     challenges: [
         {
             title: "Kiểm soát tính chính xác của dữ liệu",
-            text: "Đối với một sinh viên chuyên ngành Luật, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều dựa trên các quy định pháp luật thực tế.",
+            text: "Đối với một portfolio cá nhân, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều rõ ràng, trung thực và phù hợp với hồ sơ năng lực.",
         },
         {
             title: "Giữ vững bản sắc cá nhân",
