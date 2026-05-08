@@ -4,15 +4,15 @@
 
 **Khái quát bản thân \+ Tư duy thiết lập hồ sơ năng lực cá nhân**
 
-Họ và tên: Hoàng Thu Trang
+Họ và tên: Linh
 
-Chuyên ngành: Luật Thương mại Quốc tế
+Chuyên ngành: Digital Portfolio
 
-Đơn vị: Trường Đại học Luật – ĐHQGHN
+Đơn vị: Portfolio cá nhân
 
-Sở thích: Nấu ăn \- Thể thao- Du lịch-Xem phim
+Sở thích: Sáng tạo \- Học tập \- Công nghệ
 
-Phong cách: Tối giản • Mạch lạc • Hệ thống
+Phong cách: Candy Pop \- Tươi sáng \- Cá tính
 
 Hệ thống Portfolio này được mình xây dựng với mục tiêu tối ưu hóa trải nghiệm người xem. Mỗi nội dung đều được cấu trúc hóa để dễ dàng theo dõi: xác định mục tiêu trọng tâm, mô tả chi tiết lộ trình thực hiện và trình bày kết quả trực quan. Đi kèm với đó là hệ thống minh chứng (tệp tin/hình ảnh) được sắp xếp logic, giúp việc kiểm chứng và đối soát dữ liệu trở nên thuận tiện, nhanh chóng.
 
@@ -51,7 +51,7 @@ Thiết kế & sáng tạo nội dung: Sử dụng Canva và CapCut để thiế
 
 Làm việc nhóm & quản lý công việc: Sử dụng Google Docs, Google Meet và Trello để trao đổi, phối hợp và theo dõi tiến độ công việc nhóm.
 
-### **© 2026 • Hoàng Thu Trang • Digital Portfolio**
+### **© 2026 • Linh • Digital Portfolio**
 
 # PROJECT
 
