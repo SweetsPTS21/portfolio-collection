@@ -1,28 +1,28 @@
-import { BookOpen, MapPinned } from 'lucide-react';
+import { BookOpen, Candy } from 'lucide-react';
 import { about } from '../../data/portfolioData.js';
-import PostcardFrame from '../summer/PostcardFrame.jsx';
+import BubblePanel from '../candy/BubblePanel.jsx';
 
 export default function AboutSection() {
   return (
-    <PostcardFrame id="about" title={about.title} eyebrow="Summer diary">
+    <BubblePanel id="about" title={about.title} eyebrow="Bubble profile">
       <div className="about-layout">
-        <article className="diary-page">
+        <article className="bubble-copy-card">
           <BookOpen size={22} strokeWidth={2.3} />
           <p>{about.intro}</p>
         </article>
-        <div className="passport-grid">
+        <div className="profile-chip-grid">
           {about.profile.map(([label, value]) => (
-            <div className="passport-item" key={label}>
+            <div className="profile-chip" key={label}>
               <span>{label}</span>
               <strong>{value}</strong>
             </div>
           ))}
         </div>
       </div>
-      <div className="map-note">
-        <MapPinned size={20} strokeWidth={2.3} />
+      <div className="candy-note">
+        <Candy size={20} strokeWidth={2.3} />
         <span>{about.kicker}</span>
       </div>
-    </PostcardFrame>
+    </BubblePanel>
   );
 }

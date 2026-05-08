@@ -1,14 +1,14 @@
 import { CheckCircle2, Compass, Sparkles } from 'lucide-react';
 import { conclusion } from '../../data/portfolioData.js';
-import PostcardFrame from '../summer/PostcardFrame.jsx';
+import BubblePanel from '../candy/BubblePanel.jsx';
 
 export default function ConclusionSection() {
   return (
-    <PostcardFrame
+    <BubblePanel
       id="conclusion"
       title={conclusion.title}
       eyebrow={conclusion.futureTitle}
-      accent="blue"
+      accent="yellow"
     >
       <p className="conclusion-lead">{conclusion.intro}</p>
 
@@ -66,6 +66,6 @@ export default function ConclusionSection() {
           ))}
         </div>
       </div>
-    </PostcardFrame>
+    </BubblePanel>
   );
 }

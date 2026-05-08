@@ -1,30 +1,30 @@
-import { Camera, Stamp } from 'lucide-react';
+import { Candy, Sparkles } from 'lucide-react';
 import { projects } from '../../data/portfolioData.js';
-import PostcardFrame from '../summer/PostcardFrame.jsx';
-import PostcardCard from '../ui/PostcardCard.jsx';
+import BubblePanel from '../candy/BubblePanel.jsx';
+import CandyProjectCard from '../ui/CandyProjectCard.jsx';
 
 export default function ProjectsSection() {
   return (
-    <PostcardFrame id="projects" title={projects.title} eyebrow={projects.chooser} accent="peach">
+    <BubblePanel id="projects" title={projects.title} eyebrow={projects.chooser} accent="lavender">
       <p className="section-lead">
-        <Camera size={19} strokeWidth={2.3} />
+        <Candy size={19} strokeWidth={2.3} />
         {projects.intro}
       </p>
-      <div className="postcard-grid">
+      <div className="candy-project-grid">
         {projects.items.map((project, index) => (
-          <PostcardCard
+          <CandyProjectCard
             key={project.title}
             number={String(index + 1).padStart(2, '0')}
             title={project.title}
           >
             {project.description}
-          </PostcardCard>
+          </CandyProjectCard>
         ))}
       </div>
-      <p className="stamp-note">
-        <Stamp size={18} strokeWidth={2.3} />
+      <p className="candy-note">
+        <Sparkles size={18} strokeWidth={2.3} />
         {projects.chooser}
       </p>
-    </PostcardFrame>
+    </BubblePanel>
   );
 }

@@ -1,15 +1,15 @@
-import { ArrowDown, Plane, Sparkles } from 'lucide-react';
+import { ArrowDown, Heart, Sparkles } from 'lucide-react';
 import { about, personalInfo } from '../../data/portfolioData.js';
 import ScrollReveal from '../ui/ScrollReveal.jsx';
 
 export default function HeroSection() {
   return (
-    <header className="summer-hero">
+    <header className="candy-hero">
       <ScrollReveal>
-        <div className="hero-postcard">
+        <div className="hero-bubble">
           <p className="hero-kicker">
             <Sparkles size={18} strokeWidth={2.4} />
-            Tropical Summer Portfolio
+            Candy Pop Portfolio
           </p>
           <h1>{personalInfo.name}</h1>
           <p className="hero-subtitle">{about.kicker}</p>
@@ -20,13 +20,13 @@ export default function HeroSection() {
           </div>
         </div>
       </ScrollReveal>
-      <div className="hero-photo">
+      <div className="hero-avatar-card">
         <img src={personalInfo.avatarUrl} alt={personalInfo.name} />
-        <div className="travel-stamp" aria-hidden="true">
-          <Plane size={24} />
+        <div className="hero-avatar-badge" aria-hidden="true">
+          <Heart size={22} fill="currentColor" />
         </div>
       </div>
-      <a className="scroll-ticket" href="#about" aria-label="Xuống VỀ TÔI">
+      <a className="scroll-candy" href="#about" aria-label="Xuống VỀ TÔI">
         <ArrowDown size={20} />
       </a>
     </header>
