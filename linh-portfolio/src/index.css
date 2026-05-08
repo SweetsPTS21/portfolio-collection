@@ -6,6 +6,9 @@
 
 :root {
   --bubblegum: #ff5ca8;
+  --bubblegum-soft: #ff9aca;
+  --bubblegum-strong: #b3155a;
+  --bubblegum-action: #a80f51;
   --mint-pop: #8ef0c0;
   --lavender-pop: #c7b8ff;
   --cream-yellow: #ffe08a;
@@ -39,9 +42,9 @@ body {
   margin: 0;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 12% 10%, rgba(255, 92, 168, 0.2), transparent 18rem),
-    radial-gradient(circle at 86% 12%, rgba(142, 240, 192, 0.24), transparent 20rem),
-    radial-gradient(circle at 72% 76%, rgba(199, 184, 255, 0.26), transparent 24rem),
+    repeating-linear-gradient(115deg, rgba(255, 154, 202, 0.18) 0 18px, transparent 18px 54px),
+    linear-gradient(90deg, rgba(142, 240, 192, 0.18) 0 2px, transparent 2px 76px),
+    linear-gradient(0deg, rgba(199, 184, 255, 0.14) 0 2px, transparent 2px 84px),
     linear-gradient(180deg, #fff0f7 0%, #fff8fd 52%, #f1fbff 100%);
 }
 
@@ -71,27 +74,58 @@ a {
 .candy-bubble {
   position: absolute;
   display: block;
-  width: clamp(46px, 8vw, 116px);
-  aspect-ratio: 1;
-  border: 8px solid rgba(255, 255, 255, 0.76);
-  border-radius: 999px;
+  width: clamp(74px, 10vw, 154px);
+  height: clamp(28px, 3.5vw, 48px);
+  border: 5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px 28px 999px 28px;
   box-shadow: var(--candy-shadow);
   animation: candy-float 8s ease-in-out infinite;
 }
 
-.candy-bubble--pink { background: rgba(255, 92, 168, 0.42); }
-.candy-bubble--mint { background: rgba(142, 240, 192, 0.5); }
-.candy-bubble--lavender { background: rgba(199, 184, 255, 0.48); }
-.candy-bubble--yellow { background: rgba(255, 224, 138, 0.58); }
-.candy-bubble--blue { background: rgba(138, 216, 255, 0.45); }
-.candy-bubble--one { left: 5vw; top: 12vh; }
-.candy-bubble--two { right: 9vw; top: 10vh; animation-delay: 0.9s; }
-.candy-bubble--three { left: 18vw; top: 48vh; animation-delay: 1.5s; }
-.candy-bubble--four { right: 18vw; top: 42vh; animation-delay: 2.1s; }
-.candy-bubble--five { left: 8vw; bottom: 12vh; animation-delay: 2.8s; }
-.candy-bubble--six { right: 6vw; bottom: 16vh; animation-delay: 3.4s; }
-.candy-bubble--seven { left: 44vw; top: 18vh; animation-delay: 4s; }
-.candy-bubble--eight { left: 54vw; bottom: 8vh; animation-delay: 4.6s; }
+.candy-bubble::before,
+.candy-bubble::after {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 3px solid rgba(255, 255, 255, 0.76);
+  border-radius: 5px;
+  content: "";
+  translate: 0 -50%;
+  rotate: 45deg;
+}
+
+.candy-bubble::before { left: 12px; }
+.candy-bubble::after { right: 12px; }
+
+.candy-bubble--pink {
+  background: repeating-linear-gradient(90deg, rgba(255, 154, 202, 0.78) 0 18px, rgba(255, 215, 234, 0.86) 18px 36px);
+}
+
+.candy-bubble--mint {
+  background: repeating-linear-gradient(90deg, rgba(142, 240, 192, 0.72) 0 18px, rgba(215, 250, 232, 0.86) 18px 36px);
+}
+
+.candy-bubble--lavender {
+  background: repeating-linear-gradient(90deg, rgba(199, 184, 255, 0.72) 0 18px, rgba(236, 230, 255, 0.86) 18px 36px);
+}
+
+.candy-bubble--yellow {
+  background: repeating-linear-gradient(90deg, rgba(255, 224, 138, 0.78) 0 18px, rgba(255, 240, 184, 0.86) 18px 36px);
+}
+
+.candy-bubble--blue {
+  background: repeating-linear-gradient(90deg, rgba(138, 216, 255, 0.72) 0 18px, rgba(223, 244, 255, 0.88) 18px 36px);
+}
+
+.candy-bubble--one { left: 5vw; top: 12vh; rotate: -12deg; }
+.candy-bubble--two { right: 9vw; top: 10vh; animation-delay: 0.9s; rotate: 9deg; }
+.candy-bubble--three { left: 18vw; top: 48vh; animation-delay: 1.5s; rotate: 18deg; }
+.candy-bubble--four { right: 18vw; top: 42vh; animation-delay: 2.1s; rotate: -15deg; }
+.candy-bubble--five { left: 8vw; bottom: 12vh; animation-delay: 2.8s; rotate: 11deg; }
+.candy-bubble--six { right: 6vw; bottom: 16vh; animation-delay: 3.4s; rotate: -8deg; }
+.candy-bubble--seven { left: 44vw; top: 18vh; animation-delay: 4s; rotate: 14deg; }
+.candy-bubble--eight { left: 54vw; bottom: 8vh; animation-delay: 4.6s; rotate: -11deg; }
 
 .candy-ribbon {
   position: absolute;
@@ -162,11 +196,12 @@ a {
   position: absolute;
   right: -28px;
   bottom: -34px;
-  width: 130px;
-  aspect-ratio: 1;
+  width: 168px;
+  height: 54px;
   border-radius: 999px;
-  background: rgba(255, 224, 138, 0.68);
+  background: repeating-linear-gradient(90deg, rgba(255, 224, 138, 0.72) 0 20px, rgba(255, 154, 202, 0.44) 20px 40px);
   content: "";
+  rotate: -18deg;
 }
 
 .hero-kicker,
@@ -181,7 +216,7 @@ a {
 .hero-kicker,
 .section-eyebrow {
   margin: 0 0 14px;
-  color: var(--bubblegum);
+  color: var(--bubblegum-strong);
   font-size: 0.82rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -253,7 +288,7 @@ a {
   place-items: center;
   border: 6px solid white;
   border-radius: 999px;
-  background: var(--bubblegum);
+  background: var(--bubblegum-action);
   color: white;
   box-shadow: var(--candy-shadow);
 }
@@ -267,7 +302,7 @@ a {
   height: 50px;
   place-items: center;
   border-radius: 999px;
-  background: var(--bubblegum);
+  background: var(--bubblegum-action);
   color: white;
   box-shadow: var(--candy-shadow);
   transform: translateX(-50%);
@@ -308,8 +343,9 @@ a {
   display: block;
   width: 12px;
   aspect-ratio: 1;
-  border-radius: 999px;
-  background: var(--bubblegum);
+  border-radius: 3px;
+  background: var(--bubblegum-strong);
+  rotate: 45deg;
 }
 
 .bubble-panel__sparkles span:nth-child(2) { background: var(--mint-pop); }
@@ -349,7 +385,7 @@ a {
 .candy-note-card svg,
 .timeline-item svg,
 .reflection-card svg {
-  color: var(--bubblegum);
+  color: var(--bubblegum-strong);
 }
 
 .bubble-copy-card p,
@@ -381,7 +417,7 @@ a {
 }
 
 .profile-chip span {
-  color: var(--bubblegum);
+  color: var(--bubblegum-strong);
   font-size: 0.72rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -516,7 +552,7 @@ a {
   place-items: center;
   margin-bottom: 16px;
   border-radius: 999px;
-  background: var(--bubblegum);
+  background: var(--bubblegum-action);
   color: white;
   font-weight: 900;
 }
