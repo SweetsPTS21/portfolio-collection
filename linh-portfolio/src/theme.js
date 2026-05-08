@@ -1,24 +1,26 @@
 export const theme = {
   token: {
-    colorBgBase: '#FFF8E7',
+    colorBgBase: '#FFF0F7',
     colorBgContainer: '#FFFFFF',
-    colorPrimary: '#00A6D6',
-    colorTextBase: '#123047',
-    colorTextSecondary: '#4E7188',
-    colorWarning: '#FFB703',
-    colorError: '#FF7A59',
-    colorBorder: '#BFEAF5',
-    borderRadius: 18,
-    fontFamily: "'Nunito', 'Poppins', sans-serif",
+    colorPrimary: '#FF5CA8',
+    colorTextBase: '#2F2440',
+    colorTextSecondary: '#725D86',
+    colorInfo: '#8AD8FF',
+    colorSuccess: '#8EF0C0',
+    colorWarning: '#FFE08A',
+    colorError: '#FF6B8A',
+    colorBorder: '#F5B8D8',
+    borderRadius: 28,
+    fontFamily: "'Nunito', 'Baloo 2', sans-serif",
   },
   components: {
     Button: {
       borderRadius: 999,
-      controlHeight: 42,
-      fontWeight: 800,
+      controlHeight: 44,
+      fontWeight: 900,
     },
     Card: {
-      borderRadiusLG: 18,
+      borderRadiusLG: 28,
     },
   },
 };

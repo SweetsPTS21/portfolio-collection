@@ -1,12 +1,12 @@
 import avatarUrl from "../../docs/avatar.png";
 
 export const personalInfo = {
-    name: "Hoàng Thu Trang",
-    major: "Luật Thương mại Quốc tế",
-    university: "Trường Đại học Luật - ĐHQGHN",
-    hobbies: "Nấu ăn - Thể thao - Du lịch - Xem phim",
-    style: "Tối giản - Mạch lạc - Hệ thống",
-    footer: "© 2026 • Hoàng Thu Trang • Digital Portfolio",
+    name: "Linh",
+    major: "Digital Portfolio",
+    university: "Portfolio cá nhân",
+    hobbies: "Sáng tạo - Học tập - Công nghệ",
+    style: "Candy Pop - Tươi sáng - Cá tính",
+    footer: "© 2026 • Linh • Digital Portfolio",
     avatarUrl,
 };
 
