@@ -110,7 +110,7 @@ Việc hoàn thành portfolio với 06 bài tập không chỉ là quá trình l
 \-​Làm chủ tư duy cộng tác với AI: Em đã chuyển đổi được vai trò của AI từ công cụ thực thi sang người phản biện. Việc tối ưu hóa kỹ thuật đặt câu lệnh giúp em khai thác tối đa khả năng logic của máy tính để củng cố cho các lập luận cá nhân.  
 ​-Hệ thống hóa năng lực số: Thay vì làm việc rời rạc, em đã biết cách tổ chức thông tin và dữ liệu theo cấu trúc khoa học, giúp việc quản lý kiến thức trở nên chuyên nghiệp và có chiều sâu hơn.  
 ​2. Những thách thức  
-​-Kiểm soát tính chính xác của dữ liệu: Đối với một sinh viên chuyên ngành Luật, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều dựa trên các quy định pháp luật thực tế.  
+​-Kiểm soát tính chính xác của dữ liệu: Trong bối cảnh xây dựng portfolio số, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều dựa trên nguồn dữ liệu rõ ràng và phù hợp với mục tiêu học tập.  
 ​-Giữ vững bản sắc cá nhân: Em phải liên tục tinh chỉnh văn phong để đảm bảo công nghệ chỉ đóng vai trò hỗ trợ hình thức, còn tư duy cốt lõi và quan điểm phản biện phải luôn mang đậm dấu ấn cá nhân của chính em.
 
 ​**​Tầm nhìn và định hướng phát triển**
