@@ -264,6 +264,7 @@ npm run dev
 | `phuong-portfolio` | Lý Bảo Phượng | Interactive Desk / Workspace Theme | ✅ Hoàn thành |
 | `tham-portfolio` | Mai Hồng Thắm | Dreamy 3D Floating Island | ✅ Hoàn thành |
 | `trang-portfolio` | Hoàng Thu Trang | Tropical Summer Portfolio | ✅ Hoàn thành |
+| `linh-portfolio` | Linh | Candy Pop / Bubblegum Portfolio | ✅ Hoàn thành |
 
 > Cập nhật bảng này khi thêm dự án mới.
 
