@@ -13,7 +13,10 @@ export default function CandyBackground() {
   return (
     <div className="candy-background" aria-hidden="true">
       {bubbles.map(([tone, position]) => (
-        <span className={`candy-bubble candy-bubble--${tone} candy-bubble--${position}`} key={position} />
+        <span
+          className={`candy-bubble candy-bubble--${tone} candy-bubble--${position}`}
+          key={position}
+        />
       ))}
       <span className="candy-ribbon candy-ribbon--top" />
       <span className="candy-ribbon candy-ribbon--bottom" />
