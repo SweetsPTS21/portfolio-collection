@@ -1,4 +1,10 @@
 import avatarUrl from "../../docs/avatar.png";
+import bt1Pdf from "../../docs/bt1.pdf";
+import bt2Pdf from "../../docs/bt2.pdf";
+import bt3Pdf from "../../docs/bt3.pdf";
+import bt4Pdf from "../../docs/bt4.pdf";
+import bt5Pdf from "../../docs/bt5.pdf";
+import bt6Pdf from "../../docs/bt6.pdf";
 
 export const personalInfo = {
     name: "Hoàng Thu Trang",
@@ -116,31 +122,43 @@ export const projects = {
             title: "Bài tập 1: Máy tính và các thiết bị ngoại vi",
             description:
                 "Khám phá cấu trúc tổng thể của máy tính và nguyên lý vận hành của các thiết bị ngoại vi thiết yếu (bàn phím, chuột, máy in...). Kèm minh chứng bao gồm báo cáo chi tiết và hình ảnh thực hành thực tế được đính kèm trong hồ sơ.",
+            pdf: bt1Pdf,
+            pdfName: "bt1.pdf",
         },
         {
             title: "Bài tập 2: Khai thác dữ liệu và thông tin",
             description:
                 "Phát triển kỹ năng tìm kiếm nâng cao, thu thập và số hóa dữ liệu. Tập trung vào tư duy phản biện để thẩm định độ tin cậy của nguồn tin và thực hiện trích dẫn khoa học đúng chuẩn.",
+            pdf: bt2Pdf,
+            pdfName: "bt2.pdf",
         },
         {
             title: "Bài tập 3: Tổng quan về trí tuệ nhân tạo",
             description:
                 "Đưa ra những góc nhìn về AI: Định nghĩa, các ứng dụng đột phá và bài toán về lợi ích - rủi ro. Đưa ra các ví dụ điển hình về việc sử dụng AI để tối ưu hóa hiệu quả học tập cá nhân.",
+            pdf: bt3Pdf,
+            pdfName: "bt3.pdf",
         },
         {
             title: "Bài tập 4: Giao tiếp và hợp tác trong môi trường số",
             description:
                 "Tối ưu hóa kỹ năng làm việc nhóm trực tuyến. Phối hợp nhịp nhàng từ khâu phân công nhiệm vụ, quản lý tài liệu dùng chung đến việc thực hiện các quy tắc ứng xử văn minh trên môi trường mạng.",
+            pdf: bt4Pdf,
+            pdfName: "bt4.pdf",
         },
         {
             title: "Bài tập 5: Sáng tạo nội dung số",
             description:
                 "Quy trình sản xuất nội dung số chuyên nghiệp: Từ hình thành ý tưởng, lựa chọn công cụ thiết kế/biên tập phù hợp đến việc tuân thủ nghiêm ngặt các quy định về bản quyền tài nguyên số.",
+            pdf: bt5Pdf,
+            pdfName: "bt5.pdf",
         },
         {
             title: "Bài tập 6: An toàn số và Đạo đức học thuật",
             description:
                 "Thiết lập hàng rào bảo mật cho tài khoản cá nhân và quyền riêng tư. Đồng thời, thực hiện liêm chính học thuật thông qua việc chống đạo văn, trích dẫn minh bạch và sử dụng AI có trách nhiệm",
+            pdf: bt6Pdf,
+            pdfName: "bt6.pdf",
         },
     ],
 };

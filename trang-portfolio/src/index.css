@@ -638,12 +638,21 @@ a {
   border-radius: 16px;
 }
 
+.postcard-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .postcard-card-stamp {
   display: grid;
   width: 56px;
   height: 44px;
   place-items: center;
-  margin-bottom: 16px;
   border: 2px dashed var(--coral);
   border-radius: 12px;
   color: var(--coral);
@@ -651,12 +660,122 @@ a {
   font-weight: 900;
 }
 
+.postcard-card-button,
+.pdf-close-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 900;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.postcard-card-button {
+  flex: 0 0 auto;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 241, 199, 0.98), rgba(255, 159, 110, 0.88));
+  box-shadow: 0 12px 24px rgba(255, 122, 89, 0.16);
+}
+
+.postcard-card-button:hover,
+.postcard-card-button:focus-visible,
+.pdf-close-button:hover,
+.pdf-close-button:focus-visible {
+  background: rgba(255, 254, 248, 0.98);
+  box-shadow: 0 14px 30px rgba(18, 48, 71, 0.18);
+  outline: 2px solid rgba(0, 166, 214, 0.28);
+  outline-offset: 3px;
+  transform: translateY(-2px);
+}
+
 .postcard-card h3 {
+  position: relative;
+  z-index: 1;
   font-size: 1.04rem;
 }
 
 .postcard-card p {
+  position: relative;
+  z-index: 1;
   margin: 12px 0 0;
+}
+
+.pdf-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: clamp(14px, 3vw, 32px);
+  background: rgba(18, 48, 71, 0.44);
+  backdrop-filter: blur(14px);
+}
+
+.pdf-modal {
+  display: flex;
+  flex-direction: column;
+  width: min(1040px, 100%);
+  height: min(86vh, 820px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow-lift);
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 241, 199, 0.92), rgba(223, 247, 255, 0.9)),
+    rgba(255, 254, 248, 0.9);
+}
+
+.pdf-modal-kicker {
+  margin: 0 0 5px;
+  color: var(--ocean-deep);
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pdf-modal h2 {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.pdf-close-button {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(255, 254, 248, 0.86);
+  box-shadow: 0 10px 22px rgba(18, 48, 71, 0.13);
+}
+
+.pdf-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: #ffffff;
 }
 
 .stamp-note {
