@@ -15,6 +15,7 @@ dist-ssr
 .DS_Store
 test-results
 playwright-report
+.worktrees/
 
 # Optional
 huong-friend-portfolio/
