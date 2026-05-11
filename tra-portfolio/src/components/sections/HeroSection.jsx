@@ -1,7 +1,7 @@
-import { GraduationCap, Sparkles } from 'lucide-react';
-import PastelTag from '../kbeauty/PastelTag.jsx';
-import ScrollReveal from '../ui/ScrollReveal.jsx';
-import { personalInfo } from '../../data/portfolioData.js';
+import { GraduationCap, Sparkles } from "lucide-react";
+import PastelTag from "../kbeauty/PastelTag.jsx";
+import ScrollReveal from "../ui/ScrollReveal.jsx";
+import { personalInfo } from "../../data/portfolioData.js";
 
 export default function HeroSection() {
   return (
@@ -24,14 +24,18 @@ export default function HeroSection() {
       <ScrollReveal className="hero-copy">
         <p className="section-kicker">✦ Digital Portfolio</p>
         <h1 className="hero-title">
-          {personalInfo.displayName.split(' ').slice(0, -1).join(' ')}{' '}
-          <strong>{personalInfo.displayName.split(' ').slice(-1)}</strong>
+          <strong>{personalInfo.displayName}</strong>
         </h1>
-
         <div className="hero-tags">
-          <PastelTag icon={GraduationCap} color="pink">{personalInfo.major}</PastelTag>
-          <PastelTag color="lavender">{personalInfo.university.split('–')[0].trim()}</PastelTag>
-          <PastelTag icon={Sparkles} color="sky">Luật &amp; Công nghệ</PastelTag>
+          <PastelTag icon={GraduationCap} color="pink">
+            {personalInfo.major}
+          </PastelTag>
+          <PastelTag color="lavender">
+            {personalInfo.university.split("–")[0].trim()}
+          </PastelTag>
+          <PastelTag icon={Sparkles} color="sky">
+            Luật &amp; Công nghệ
+          </PastelTag>
         </div>
 
         {/* Stat pills */}

@@ -1,4 +1,4 @@
-import { Modal } from 'antd';
+import { Modal } from "antd";
 
 export default function PdfViewerModal({ project, open, onClose }) {
   return (
@@ -7,15 +7,24 @@ export default function PdfViewerModal({ project, open, onClose }) {
       className="pdf-modal"
       footer={null}
       open={open}
-      title={project ? `Bai ${project.number} - ${project.title}` : 'Bai tap'}
+      title={project ? `Bai ${project.number} - ${project.title}` : "Bai tap"}
       width="min(1040px, calc(100vw - 24px))"
       onCancel={onClose}
     >
       {project ? (
         <>
-          <iframe className="pdf-frame" src={project.file} title={`PDF ${project.title}`} />
-          <a className="pdf-fallback" href={project.file} target="_blank" rel="noreferrer">
-            Mo PDF trong tab moi
+          <iframe
+            className="pdf-frame"
+            src={project.file}
+            title={`PDF ${project.title}`}
+          />
+          <a
+            className="pdf-fallback"
+            href={project.file}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Mở trong tab mới
           </a>
         </>
       ) : null}

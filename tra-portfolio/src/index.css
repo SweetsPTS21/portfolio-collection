@@ -467,13 +467,14 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 24px;
 }
 /* Hero decorative cherry blossoms */
 .hero-deco {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  animation: decoFadeIn .8s ease forwards;
+  animation: decoFadeIn 0.8s ease forwards;
 }
 .hero-deco--tl {
   width: 160px;
@@ -481,17 +482,19 @@ svg {
   left: -40px;
   transform: rotate(-20deg);
   opacity: 0;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 .hero-deco--br {
   width: 130px;
   bottom: 30px;
   right: 52%;
   transform: rotate(140deg) scaleX(-1);
-  animation-delay: .6s;
+  animation-delay: 0.6s;
 }
 @keyframes decoFadeIn {
-  to { opacity: .5; }
+  to {
+    opacity: 0.5;
+  }
 }
 
 /* Stat pills */
@@ -502,9 +505,9 @@ svg {
   margin-top: 32px;
   padding: 18px 24px;
   border-radius: 24px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(240,230,236,.8);
-  box-shadow: 0 8px 28px rgba(232,160,191,.09);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(240, 230, 236, 0.8);
+  box-shadow: 0 8px 28px rgba(232, 160, 191, 0.09);
   backdrop-filter: blur(12px);
   width: fit-content;
 }
@@ -522,10 +525,10 @@ svg {
   color: var(--pink);
 }
 .hero-stat__label {
-  font-size: .72rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-soft);
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-top: 4px;
 }
@@ -543,11 +546,11 @@ svg {
   right: -10px;
   width: 52%;
   max-width: 210px;
-  opacity: .88;
+  opacity: 0.88;
   z-index: 3;
   animation: floatY 7s ease-in-out infinite;
   animation-delay: -2s;
-  filter: drop-shadow(0 8px 18px rgba(232,160,191,.18));
+  filter: drop-shadow(0 8px 18px rgba(232, 160, 191, 0.18));
 }
 .hero-visual {
   position: relative;
