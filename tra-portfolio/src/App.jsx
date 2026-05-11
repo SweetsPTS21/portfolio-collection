@@ -1,26 +1,26 @@
-import { ConfigProvider } from "antd";
-import { theme } from "./theme";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import HeroSection from "./components/sections/HeroSection";
-import AboutSection from "./components/sections/AboutSection";
-import ProjectsSection from "./components/sections/ProjectsSection";
-import SkillsSection from "./components/sections/SkillsSection";
-import ConclusionSection from "./components/sections/ConclusionSection";
+import { ConfigProvider } from 'antd';
+import GardenBackground from './components/garden/GardenBackground.jsx';
+import AboutSection from './components/sections/AboutSection.jsx';
+import ConclusionSection from './components/sections/ConclusionSection.jsx';
+import HeroSection from './components/sections/HeroSection.jsx';
+import ProjectsSection from './components/sections/ProjectsSection.jsx';
+import SkillsSection from './components/sections/SkillsSection.jsx';
+import { personalInfo } from './data/portfolioData.js';
+import { theme } from './theme.js';
 
 export default function App() {
   return (
     <ConfigProvider theme={theme}>
-      <div style={{ minHeight: "100vh", background: "var(--color-bg)" }}>
-        <Header />
-        <main>
-          <HeroSection />
+      <div className="garden-app">
+        <GardenBackground />
+        <HeroSection />
+        <main className="garden-main" aria-label="Trà portfolio">
           <AboutSection />
-          <ProjectsSection />
           <SkillsSection />
+          <ProjectsSection />
           <ConclusionSection />
         </main>
-        <Footer />
+        <footer className="garden-footer">{personalInfo.footer}</footer>
       </div>
     </ConfigProvider>
   );
