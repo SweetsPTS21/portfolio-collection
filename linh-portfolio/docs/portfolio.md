@@ -1,124 +1,125 @@
-# ABOUT ME
+# About me
 
-## **VỀ TÔI**
+# **ABOUT ME**
 
-**Khái quát bản thân \+ Tư duy thiết lập hồ sơ năng lực cá nhân**
+**Họ và tên:** Nguyễn Hải Linh  
+**Ngành học:** Luật học  
+**Trường:** Trường Đại học Luật – Đại học Quốc gia Hà Nội  
+**Sở thích:** Đọc sách, xem phim, tìm hiểu công nghệ và tham gia hoạt động xã hội  
+**Phong cách cá nhân:** Có tinh thần trách nhiệm, thích nghi nhanh với môi trường mới, luôn chủ động tiếp cận kiến thức và tôn trọng ý kiến đóng góp từ mọi người.
 
-Họ và tên: Linh
+# **Định hướng phát triển**
 
-Chuyên ngành: Digital Portfolio
+Trong thời đại công nghệ số phát triển mạnh, em mong muốn theo đuổi hướng đi kết hợp giữa kiến thức pháp lý và khả năng ứng dụng trí tuệ nhân tạo vào học tập cũng như nghiên cứu.
 
-Đơn vị: Portfolio cá nhân
+Mục tiêu của em không chỉ dừng ở việc tiếp cận kiến thức luật học theo phương pháp truyền thống mà còn hướng đến việc xây dựng tư duy làm việc hiện đại: biết khai thác dữ liệu, sử dụng công nghệ hỗ trợ và tối ưu hóa quy trình nghiên cứu pháp lý.
 
-Sở thích: Sáng tạo \- Học tập \- Công nghệ
+Về lâu dài, em hướng tới hình mẫu người làm pháp lý có khả năng sử dụng AI như một công cụ hỗ trợ phân tích và tổng hợp thông tin, nhưng vẫn giữ được tính độc lập trong tư duy, khả năng phản biện và đạo đức nghề nghiệp.
 
-Phong cách: Candy Pop \- Tươi sáng \- Cá tính
+# **Mục tiêu xây dựng Portfolio**
 
-Hệ thống Portfolio này được mình xây dựng với mục tiêu tối ưu hóa trải nghiệm người xem. Mỗi nội dung đều được cấu trúc hóa để dễ dàng theo dõi: xác định mục tiêu trọng tâm, mô tả chi tiết lộ trình thực hiện và trình bày kết quả trực quan. Đi kèm với đó là hệ thống minh chứng (tệp tin/hình ảnh) được sắp xếp logic, giúp việc kiểm chứng và đối soát dữ liệu trở nên thuận tiện, nhanh chóng.
+Portfolio này được xây dựng nhằm thể hiện quá trình học tập, khả năng tổ chức thông tin và tư duy nghiên cứu của bản thân trong quá trình tiếp cận môn học nhập môn Trí tuệ nhân tạo và AI. Nội dung được trình bày theo hướng trực quan và dễ theo dõi để người xem có thể nhanh chóng tiếp cận thông tin cần thiết cũng như kiểm tra các minh chứng liên quan.
 
-**Kỹ năng đang rèn luyện**  
-\-Quản trị và hệ thống hóa tài liệu số: Thiết lập cấu trúc thư mục logic, phân cấp dữ liệu khoa học và quản lý các phiên bản tài liệu chặt chẽ nhằm triệt tiêu sai sót trong quá trình nghiên cứu.  
-\-Thẩm định và xác thực thông tin: Phát triển tư duy phản biện khi tiếp cận dữ liệu; luôn đối chiếu đa chiều để đảm bảo tính khách quan và độ tin cậy cao nhất cho các nội dung học thuật.  
-\-Điều hướng AI hiệu quả: Làm chủ kỹ năng đặt vấn đề với AI thông qua các câu lệnh (prompt) có mục đích rõ ràng, phạm vi cụ thể nhằm thu được kết quả đầu ra chuẩn xác.
+Bố cục của portfolio được triển khai theo trình tự:
 
-**Nguyên tắc thực hiện bài tập**
+Định hướng ➜ Phương pháp thực hiện ➜ Kết quả đạt được ➜ Minh chứng liên quan
 
-**1.Tối ưu hóa trải nghiệm tiếp nhận:** Nội dung luôn được trình bày mạch lạc, phân tách bằng các tiêu đề và bố cục khoa học để người đọc dễ dàng nắm bắt thông tin.
+Thông qua cách sắp xếp này, người xem có thể hiểu rõ hơn về quá trình học tập, phương pháp làm việc và cách em ứng dụng công nghệ vào việc xử lý thông tin học thuật.
 
-**2.Minh chứng xác thực và minh bạch:** Hệ thống hình ảnh, dữ liệu đi kèm đảm bảo độ phân giải tốt, trình bày rõ ràng, phục vụ hiệu quả cho việc tra cứu và thẩm định.
+# **Năng lực nổi bật**
 
-**3.Sử dụng Trí tuệ nhân tạo (AI) trách nhiệm:** AI đóng vai trò là công cụ hỗ trợ và tham chiếu ý tưởng còn người thực hiện là chủ thể kiểm soát, trực tiếp thẩm định và chịu trách nhiệm cao nhất về nội dung cuối cùng.
+### \- Quản lý thông tin số: Có khả năng sắp xếp tài liệu học tập và dữ liệu theo hệ thống logic, giúp việc tra cứu và sử dụng thông tin trở nên nhanh chóng và hiệu quả hơn.
 
-### **\*Năng lực trọng tâm**
+### \-Tìm kiếm và chọn lọc dữ liệu: Biết cách tiếp cận các nguồn thông tin đáng tin cậy, ưu tiên dữ liệu có tính học thuật và cập nhật nhằm nâng cao chất lượng nghiên cứu.
 
-**\-Quản trị dữ liệu số:** Xây dựng quy trình lưu trữ chuyên nghiệp, áp dụng quy tắc đặt tên tệp đồng nhất giúp tối ưu hóa thời gian tìm kiếm và sử dụng tài nguyên.
+### \-Ứng dụng AI trong học tập: Có khả năng sử dụng AI để hỗ trợ tổng hợp nội dung, phân tích tài liệu và định hướng xử lý thông tin thông qua việc xây dựng yêu cầu rõ ràng và có mục tiêu cụ thể.
 
-**\-Khai thác tài nguyên học thuật:** Kỹ năng chọn lọc và khai thác các nguồn dữ liệu chính thống, ưu tiên các công trình nghiên cứu và nhà xuất bản có uy tín trong ngành.
+### \-Thiết kế và trình bày nội dung: Có kỹ năng trình bày nội dung theo bố cục khoa học, giúp tăng tính trực quan và hỗ trợ người xem tiếp cận thông tin dễ dàng hơn trên các nền tảng số.
 
-**\-Kỹ thuật tương tác AI (Prompt Engineering):** Thiết lập bối cảnh và tiêu chí đánh giá khắt khe khi làm việc với AI để nâng cao chất lượng phản hồi và độ chính xác của thông tin.
+# **Nguyên tắc học tập và thực hiện bài tập**
 
-**\-Số hóa và cấu trúc thông tin:** Chuyển đổi các ý tưởng thô thành nội dung có tính logic cao, sẵn sàng cho việc trình bày và công bố trên các nền tảng kỹ thuật số.
+### \-Tư duy trình bày thông tin: Ưu tiên cách trình bày ngắn gọn, rõ ý và có hệ thống để người đọc dễ dàng nắm bắt nội dung chính cũng như quá trình lập luận.
 
-\***Công cụ AI đã dùng**
+### \-Tính minh bạch và khả năng đối chiếu: Các nội dung quan trọng đều được gắn kèm minh chứng hoặc liên kết nguồn để đảm bảo tính xác thực và thuận tiện trong việc kiểm tra thông tin.
 
-Quản lý dữ liệu: Sử dụng File Explorer, Google Drive và các phần mềm nén file để lưu trữ, sắp xếp và quản lý dữ liệu hiệu quả.
+### \-Vai trò của AI trong học tập: AI được xem là công cụ hỗ trợ trong việc tìm kiếm và xử lý dữ liệu. Tuy nhiên, việc đánh giá, chọn lọc và hoàn thiện nội dung vẫn do bản thân trực tiếp thực hiện để đảm bảo tính chính xác và trách nhiệm học thuật.
 
-Nghiên cứu học thuật: Google Scholar cùng các nguồn tài liệu trực tuyến để tìm kiếm, chọn lọc và kiểm chứng thông tin.
+# **Công cụ và nền tảng sử dụng**
 
-Hỗ trợ AI: ChatGPT và Gemini, claude, Microsoft Copilot trong việc phát triển ý tưởng, rà soát nội dung và hỗ trợ xử lý thông tin.
+### \-Quản lý tài liệu: Sử dụng Google Drive, OneDrive và các nền tảng lưu trữ đám mây để quản lý và đồng bộ dữ liệu học tập.
 
-Thiết kế & sáng tạo nội dung: Sử dụng Canva và CapCut để thiết kế hình ảnh, chỉnh sửa video và xây dựng nội dung trực quan.
+### \-Nguồn tài liệu học thuật: Khai thác tài liệu từ thư viện số, cơ sở dữ liệu pháp luật và các website học thuật chính thống nhằm đảm bảo độ tin cậy của thông tin.
 
-Làm việc nhóm & quản lý công việc: Sử dụng Google Docs, Google Meet và Trello để trao đổi, phối hợp và theo dõi tiến độ công việc nhóm.
+### \-Công cụ AI hỗ trợ: Ứng dụng ChatGPT, Gemini và Microsoft Copilot để hỗ trợ tổng hợp thông tin, phân tích nội dung và tối ưu quá trình học tập.
 
-### **© 2026 • Linh • Digital Portfolio**
+### \-Thiết kế nội dung: Sử dụng Canva, PowerPoint và các công cụ thiết kế hình ảnh bằng AI để xây dựng nội dung trực quan và dễ tiếp cận hơn.
 
-# PROJECT
+### \-Làm việc nhóm: Sử dụng Notion, Microsoft Teams và các nền tảng cộng tác trực tuyến để trao đổi thông tin và quản lý công việc nhóm hiệu quả hơn.
 
-**Project**  
-Nội dung 6 bài được đưa vào đầy đủ (văn bản \+ hình ảnh). Có thể click ảnh để phóng to.  
-Chọn bài  
-Bài tập 1 \- Chương 1: Máy tính và các thiết bị ngoại vi  
-Bài tập 2 \- Chương 2: Khai thác dữ liệu và thông tin  
-Bài tập 2 \- Chương 3: Tổng quan về trí tuệ nhân tạo  
-Bài tập 3 \- Chương 4: Giao tiếp và hợp tác trong môi trường số  
-Bài tập 2 \- Chương 5: Sáng tạo nội dung số  
-Bài tập 4 \- Chương 6: An toàn và liêm chính học thuật trong môi trường số
+© 2026 • Nguyễn Hải Linh • Digital Portfolio
 
-**Bài tập 1: Máy tính và các thiết bị ngoại vi**  
-Nội dung: Khám phá cấu trúc tổng thể của máy tính và nguyên lý vận hành của các thiết bị ngoại vi thiết yếu (bàn phím, chuột, máy in...). Kèm minh chứng bao gồm báo cáo chi tiết và hình ảnh thực hành thực tế được đính kèm trong hồ sơ.
+# Project
 
-### **Bài tập 2: Khai thác dữ liệu và thông tin**
+Phần Project tổng hợp đầy đủ các bài tập tiêu biểu trong học phần Nhập môn Trí tuệ nhân tạo và AI. Nội dung được trình bày theo dạng trực quan, kết hợp giữa văn bản, hình ảnh minh chứng và tài liệu thực hành nhằm giúp người xem dễ dàng theo dõi quá trình học tập cũng như kỹ năng xử lý thông tin số của bản thân.
 
-​**Nội dung:** Phát triển kỹ năng tìm kiếm nâng cao, thu thập và số hóa dữ liệu. Tập trung vào tư duy phản biện để thẩm định độ tin cậy của nguồn tin và thực hiện trích dẫn khoa học đúng chuẩn.
+Mỗi bài tập đều được sắp xếp theo từng chương học với bố cục rõ ràng, thuận tiện cho việc kiểm tra nội dung và đối chiếu minh chứng. Hình ảnh trong portfolio có thể nhấn để phóng to, hỗ trợ quan sát chi tiết nội dung và thao tác thực hiện.
 
-### **​Bài tập 3: Tổng quan về trí tuệ nhân tạo**
+### **Danh sách bài tập**
 
-​**Nội dung:** Đưa ra những góc nhìn về AI: Định nghĩa, các ứng dụng đột phá và bài toán về lợi ích – rủi ro.
+\- Bài tập 1 \- Chương 1: Máy tính và các thiết bị ngoại vi
 
-**Ứng dụng:** Đưa ra các ví dụ điển hình về việc sử dụng AI để tối ưu hóa hiệu quả học tập cá nhân.
+\- Bài tập 2 \- Chương 2: Khai thác dữ liệu và thông tin
 
-### **​Bài tập 4: Giao tiếp và hợp tác trong môi trường số**
+\- Bài tập 2 \- Chương 3: Tổng quan về trí tuệ nhân tạo
 
-​**Nội dung:** Tối ưu hóa kỹ năng làm việc nhóm trực tuyến. Phối hợp nhịp nhàng từ khâu phân công nhiệm vụ, quản lý tài liệu dùng chung đến việc thực hiện các quy tắc ứng xử văn minh trên môi trường mạng.
+\- Bài tập 3 \- Chương 4: Giao tiếp và hợp tác trong môi trường số
 
-### **​Bài tập 5: Sáng tạo nội dung số**
+\- Bài tập 2 \- Chương 5: Sáng tạo nội dung số
 
-**Nội dung:** Quy trình sản xuất nội dung số chuyên nghiệp: Từ hình thành ý tưởng, lựa chọn công cụ thiết kế/biên tập phù hợp đến việc tuân thủ nghiêm ngặt các quy định về bản quyền tài nguyên số.
+\- Bài tập 4 \- Chương 6: An toàn và liêm chính học thuật trong môi trường số
 
-### **​Bài tập 6: An toàn số và Đạo đức học thuật**
+Mẹo sử dụng: Mở từng bài → kéo xuống để xem toàn bộ nội dung và hình ảnh → nhấn vào ảnh để xem rõ chi tiết.
 
-​**Nội dung:** Thiết lập hàng rào bảo mật cho tài khoản cá nhân và quyền riêng tư. Đồng thời, thực hiện liêm chính học thuật thông qua việc chống đạo văn, trích dẫn minh bạch và sử dụng AI có trách nhiệm
+© 2026 • Nguyễn Hải Linh • Digital Portfolio
 
-# CONCLUSION
+# Conclusion
 
-**CONCLUSION**
+Sau khi hoàn thiện portfolio gồm 6 bài tập của học phần Nhập môn Trí tuệ nhân tạo và AI, em nhận ra rằng việc học không chỉ nằm ở kết quả cuối cùng mà còn ở cách tổ chức tư duy, xử lý thông tin và xây dựng phương pháp làm việc phù hợp với môi trường số hiện nay.
 
-Việc hoàn thành portfolio với 06 bài tập không chỉ là quá trình lưu trữ sản phẩm, mà còn là một hành trình giúp em hệ thống hóa tư duy trong kỷ nguyên số. Thay vì chỉ tập trung vào kết quả cuối cùng, em đã học cách quan sát toàn bộ quy trình: từ việc tổ chức dữ liệu, cơ chế ra quyết định cho đến việc đánh giá sự tương tác giữa con người và công cụ hỗ trợ. Portfolio này chính là sự phản ánh cách em tiếp cận vấn đề, thử nghiệm các phương pháp mới và tinh chỉnh tư duy để thích ứng với môi trường công nghệ.
+Quá trình tự thiết kế và sắp xếp portfolio giúp em hiểu rõ hơn về vai trò của công nghệ trong học tập. AI và các công cụ số có thể hỗ trợ tăng hiệu quả xử lý công việc, tuy nhiên tư duy phân tích, khả năng chọn lọc thông tin và trách nhiệm học thuật vẫn là yếu tố quan trọng nhất đối với sinh viên ngành Luật.
 
-### **​Những chuyển biến trong tư duy số**
+**Những thay đổi em nhận thấy**  
+\- Cách làm việc trở nên có kế hoạch hơn: Trước khi bắt tay vào làm, em dành thời gian xác định mục tiêu, chuẩn bị cấu trúc và lựa chọn công cụ phù hợp thay vì làm theo cảm tính.  
+\- Chủ động hơn trong việc xử lý thông tin: Em chú ý đến độ phù hợp của tài liệu, không sử dụng nguồn một cách máy móc và luôn cân nhắc bối cảnh khi đưa thông tin vào bài.  
+\- Nhận thức rõ hơn vai trò của AI:AI được sử dụng như một công cụ hỗ trợ tư duy và kiểm tra lại nội dung, không thay thế quá trình suy nghĩ và viết của bản thân.
 
-\-**Chuyển đổi từ cảm tính sang chiến lược:** hình thành thói quen hoạch định trước khi hành động. Việc xác định rõ mục tiêu và xây dựng cấu trúc nội dung giúp em lựa chọn các công cụ số một cách có chủ đích, thay vì thực hiện theo bản năng như trước.
+**Đánh giá chung về portfolio**  
+Portfolio được xây dựng theo hướng ưu tiên sự rõ ràng và khả năng theo dõi. Người xem có thể nhanh chóng nắm được mỗi bài đang giải quyết vấn đề gì, cách triển khai ra sao và kết quả đạt được.
 
-\-**Nâng cao năng lực thẩm định thông tin:** Luôn đặt thông tin vào bối cảnh cụ thể để đánh giá độ phù hợp và tính xác thực.
+- Bố cục được giữ nhất quán giữa các bài . Nội dung không quá dài nhưng đủ để theo dõi mạch làm việc
+- Minh chứng được lựa chọn có chủ đích, tránh dàn trải
+- Khả năng ứng dụng trong học tập
 
-\-**Xác lập vị thế trước trí tuệ nhân tạo:** Học cách nhìn nhận AI như một cộng sự hỗ trợ phản biện và kiểm soát lỗi, nhưng tính bản sắc và chiều sâu của bài viết phải xuất phát từ sự chiêm nghiệm của chính bản thân em.
+Những kỹ năng rèn luyện trong quá trình làm portfolio có thể áp dụng trực tiếp vào việc học Luật, đặc biệt trong các hoạt động như đọc văn bản, phân tích tình huống và viết bài học thuật. Việc tổ chức tài liệu, đặt câu hỏi đúng trọng tâm và sử dụng AI có kiểm soát giúp quá trình học trở nên chủ động và hiệu quả hơn.
 
-### **​Ưu điểm và thách thức khi làm portfolio**
+# **Điểm ấn tượng và khó khăn lớn nhất**
 
-​1. Những điểm tâm đắc  
-\-​Làm chủ tư duy cộng tác với AI: Em đã chuyển đổi được vai trò của AI từ công cụ thực thi sang người phản biện. Việc tối ưu hóa kỹ thuật đặt câu lệnh giúp em khai thác tối đa khả năng logic của máy tính để củng cố cho các lập luận cá nhân.  
-​-Hệ thống hóa năng lực số: Thay vì làm việc rời rạc, em đã biết cách tổ chức thông tin và dữ liệu theo cấu trúc khoa học, giúp việc quản lý kiến thức trở nên chuyên nghiệp và có chiều sâu hơn.  
-​2. Những thách thức  
-​-Kiểm soát tính chính xác của dữ liệu: Trong bối cảnh xây dựng portfolio số, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều dựa trên nguồn dữ liệu rõ ràng và phù hợp với mục tiêu học tập.  
-​-Giữ vững bản sắc cá nhân: Em phải liên tục tinh chỉnh văn phong để đảm bảo công nghệ chỉ đóng vai trò hỗ trợ hình thức, còn tư duy cốt lõi và quan điểm phản biện phải luôn mang đậm dấu ấn cá nhân của chính em.
+### **Điều em tâm đắc nhất**
 
-​**​Tầm nhìn và định hướng phát triển**
+Điều khiến em hài lòng nhất là khả năng xây dựng được một hệ thống nội dung có tính liên kết và dễ theo dõi. Khi tài liệu được sắp xếp logic, việc học và triển khai ý tưởng cũng trở nên rõ ràng hơn. Portfolio không chỉ là nơi lưu trữ bài tập mà còn phản ánh quá trình phát triển tư duy và kỹ năng của bản thân trong suốt môn học.
 
-​Trong thời gian tới, em dự định tiếp tục phát triển portfolio theo hướng chuyên nghiệp hóa để kết nối chặt chẽ hơn với định hướng nghề nghiệp:
+### **Khó khăn lớn nhất**
 
-\-​**Tối ưu hóa trải nghiệm người dùng:** Tinh gọn hình thức trình bày để làm nổi bật những giá trị cốt lõi nhất.
+Khó khăn lớn nhất đối với em là việc kiểm soát chất lượng thông tin trong quá trình sử dụng AI. Nhiều nội dung do AI tạo ra có cách diễn đạt thuyết phục nhưng chưa chắc đã chính xác hoặc phù hợp với thực tế pháp lý. Vì vậy, em phải dành nhiều thời gian để kiểm tra nguồn, đọc lại tài liệu gốc và đối chiếu thông tin trước khi đưa vào bài làm. Điều này giúp em hiểu rằng AI chỉ nên đóng vai trò hỗ trợ, còn việc đánh giá và chịu trách nhiệm về nội dung vẫn thuộc về người sử dụng.
 
-\-​**Rút ra bài học kinh nghiệm:** Không chỉ dừng lại ở kỹ năng, em sẽ chú trọng vào việc đúc kết những tư duy chiến lược sau mỗi dự án.
+# **Hướng phát triển trong tương lai**
 
-\-​**Ứng dụng công nghệ vào thực tế:** Mở rộng phạm vi ứng dụng của AI và công nghệ số vào việc nghiên cứu và giải quyết các vấn đề chuyên môn trong tương lai.
+Trong thời gian tới, em mong muốn tiếp tục hoàn thiện portfolio theo hướng:
+
+- Tối ưu bố cục trình bày để nội dung ngắn gọn, trực quan và dễ tiếp cận hơn
+- Bổ sung thêm phần phân tích bài học kinh nghiệm sau mỗi bài tập
+- Phát triển nội dung theo hướng gắn với kỹ năng nghề nghiệp và định hướng chuyên ngành Luật
+- Ứng dụng công nghệ và AI hiệu quả hơn trong việc nghiên cứu, quản lý tài liệu và xây dựng nội dung học thuật
+- Nâng cao khả năng kiểm chứng thông tin nhằm đảm bảo tính chính xác và minh bạch trong quá trình học tập
+
+© 2026 • Nguyễn Hải Linh • Digital Portfolio

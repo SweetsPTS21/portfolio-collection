@@ -637,6 +637,8 @@ a {
 
 .candy-project-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 252px;
   overflow: hidden;
   padding: 22px;
@@ -674,6 +676,32 @@ a {
 
 .candy-project-card p {
   margin: 12px 0 0;
+}
+
+.candy-project-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 42px;
+  margin-top: auto;
+  padding: 9px 13px;
+  border: 2px solid rgba(47, 36, 64, 0.1);
+  border-radius: 999px;
+  background: var(--bubblegum-action);
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(168, 15, 81, 0.18);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.candy-project-card__link:hover {
+  box-shadow: 0 16px 30px rgba(168, 15, 81, 0.26);
+  transform: translateY(-2px);
 }
 
 .conclusion-lead {

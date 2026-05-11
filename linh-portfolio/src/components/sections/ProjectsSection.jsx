@@ -16,6 +16,7 @@ export default function ProjectsSection() {
             key={project.title}
             number={String(index + 1).padStart(2, '0')}
             title={project.title}
+            documentUrl={project.documentUrl}
           >
             {project.description}
           </CandyProjectCard>

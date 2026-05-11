@@ -1,25 +1,31 @@
-import avatarUrl from "../../docs/avatar.png";
+import avatarUrl from "../../docs/avatar.pnd.png";
+import bt1Url from "../../docs/bt1.pdf";
+import bt2Url from "../../docs/bt2.pdf";
+import bt3Url from "../../docs/bt3.pdf";
+import bt4Url from "../../docs/bt4.pdf";
+import bt5Url from "../../docs/bt5.pdf";
+import bt6Url from "../../docs/bt6.pdf";
 
 export const personalInfo = {
-    name: "Linh",
-    major: "Digital Portfolio",
-    university: "Portfolio cá nhân",
-    hobbies: "Sáng tạo - Học tập - Công nghệ",
-    style: "Candy Pop - Tươi sáng - Cá tính",
-    footer: "© 2026 • Linh • Digital Portfolio",
+    name: "Nguyễn Hải Linh",
+    major: "Luật học",
+    university: "Trường Đại học Luật - Đại học Quốc gia Hà Nội",
+    hobbies: "Đọc sách, xem phim, tìm hiểu công nghệ và tham gia hoạt động xã hội",
+    style: "Có tinh thần trách nhiệm, thích nghi nhanh và tôn trọng ý kiến đóng góp",
+    footer: "© 2026 • Nguyễn Hải Linh • Digital Portfolio",
     avatarUrl,
 };
 
 export const about = {
     title: "VỀ TÔI",
-    kicker: "Khái quát bản thân + Tư duy thiết lập hồ sơ năng lực cá nhân",
-    intro: "Hệ thống Portfolio này được xây dựng với mục tiêu tối ưu hóa trải nghiệm người xem. Mỗi nội dung đều được cấu trúc hóa để dễ dàng theo dõi: xác định mục tiêu trọng tâm, mô tả chi tiết lộ trình thực hiện và trình bày kết quả trực quan. Đi kèm với đó là hệ thống minh chứng (tệp tin/hình ảnh) được sắp xếp logic, giúp việc kiểm chứng và đối soát dữ liệu trở nên thuận tiện, nhanh chóng.",
+    kicker: "Khái quát bản thân + định hướng ứng dụng AI trong học tập luật học",
+    intro: "Portfolio này thể hiện quá trình học tập, khả năng tổ chức thông tin và tư duy nghiên cứu khi tiếp cận học phần Nhập môn Trí tuệ nhân tạo và AI. Nội dung được sắp xếp theo mạch Định hướng - Phương pháp thực hiện - Kết quả đạt được - Minh chứng liên quan, giúp người xem nhanh chóng nắm bắt thông tin và kiểm tra tài liệu đi kèm.",
     profile: [
         ["Họ và tên", personalInfo.name],
-        ["Chuyên ngành", personalInfo.major],
-        ["Đơn vị", personalInfo.university],
+        ["Ngành học", personalInfo.major],
+        ["Trường", personalInfo.university],
         ["Sở thích", personalInfo.hobbies],
-        ["Phong cách", personalInfo.style],
+        ["Phong cách cá nhân", personalInfo.style],
     ],
 };
 
@@ -28,15 +34,15 @@ export const practicingSkills = {
     items: [
         {
             title: "Quản trị tài liệu số",
-            text: "Thiết lập cấu trúc thư mục logic, phân cấp dữ liệu khoa học và quản lý các phiên bản tài liệu chặt chẽ nhằm triệt tiêu sai sót trong quá trình nghiên cứu.",
+            text: "Sắp xếp tài liệu học tập và dữ liệu theo hệ thống logic để việc tra cứu, sử dụng và đối chiếu thông tin diễn ra nhanh hơn.",
         },
         {
-            title: "Thẩm định thông tin",
-            text: "Phát triển tư duy phản biện khi tiếp cận dữ liệu; luôn đối chiếu đa chiều để đảm bảo tính khách quan và độ tin cậy cao nhất cho các nội dung học thuật.",
+            title: "Tìm kiếm và chọn lọc dữ liệu",
+            text: "Tiếp cận nguồn thông tin đáng tin cậy, ưu tiên dữ liệu có tính học thuật và cập nhật nhằm nâng cao chất lượng nghiên cứu.",
         },
         {
-            title: "Điều hướng AI",
-            text: "Làm chủ kỹ năng đặt vấn đề với AI thông qua các câu lệnh (prompt) có mục đích rõ ràng, phạm vi cụ thể nhằm thu được kết quả đầu ra chuẩn xác.",
+            title: "Ứng dụng AI trong học tập",
+            text: "Sử dụng AI để hỗ trợ tổng hợp nội dung, phân tích tài liệu và định hướng xử lý thông tin thông qua yêu cầu rõ ràng.",
         },
     ],
 };
@@ -45,16 +51,16 @@ export const principles = {
     title: "Nguyên tắc",
     items: [
         {
-            title: "Tối ưu hóa trải nghiệm tiếp nhận",
-            text: "Nội dung luôn được trình bày mạch lạc, phân tách bằng các tiêu đề và bố cục khoa học để người đọc dễ dàng nắm bắt thông tin.",
+            title: "Tư duy trình bày thông tin",
+            text: "Ưu tiên cách trình bày ngắn gọn, rõ ý và có hệ thống để người đọc dễ nắm bắt nội dung chính cùng quá trình lập luận.",
         },
         {
-            title: "Minh chứng xác thực và minh bạch",
-            text: "Hệ thống hình ảnh, dữ liệu đi kèm đảm bảo độ phân giải tốt, trình bày rõ ràng, phục vụ hiệu quả cho việc tra cứu và thẩm định.",
+            title: "Minh bạch và khả năng đối chiếu",
+            text: "Các nội dung quan trọng được gắn kèm minh chứng hoặc liên kết nguồn để hỗ trợ kiểm tra thông tin thuận tiện hơn.",
         },
         {
-            title: "Sử dụng AI trách nhiệm",
-            text: "AI đóng vai trò là công cụ hỗ trợ và tham chiếu ý tưởng còn người thực hiện là chủ thể kiểm soát, trực tiếp thẩm định và chịu trách nhiệm cao nhất về nội dung cuối cùng.",
+            title: "Sử dụng AI có trách nhiệm",
+            text: "AI là công cụ hỗ trợ tìm kiếm và xử lý dữ liệu, còn việc đánh giá, chọn lọc và hoàn thiện nội dung vẫn cần kiểm soát trực tiếp.",
         },
     ],
 };
@@ -63,20 +69,20 @@ export const coreSkills = {
     title: "Trọng tâm",
     items: [
         {
-            title: "Quản trị dữ liệu số",
-            text: "Xây dựng quy trình lưu trữ chuyên nghiệp, áp dụng quy tắc đặt tên tệp đồng nhất giúp tối ưu hóa thời gian tìm kiếm và sử dụng tài nguyên.",
+            title: "Quản lý thông tin số",
+            text: "Xây dựng cách lưu trữ tài liệu rõ ràng, phân nhóm dữ liệu theo mục đích học tập để giảm sai sót khi tra cứu.",
         },
         {
-            title: "Khai thác tài nguyên học thuật",
-            text: "Kỹ năng chọn lọc và khai thác các nguồn dữ liệu chính thống, ưu tiên các công trình nghiên cứu và nhà xuất bản có uy tín trong ngành.",
+            title: "Khai thác tài liệu học thuật",
+            text: "Chọn lọc thư viện số, cơ sở dữ liệu pháp luật và website học thuật chính thống để bảo đảm độ tin cậy của thông tin.",
         },
         {
-            title: "Prompt Engineering",
-            text: "Thiết lập bối cảnh và tiêu chí đánh giá khắt khe khi làm việc với AI để nâng cao chất lượng phản hồi và độ chính xác của thông tin.",
+            title: "Làm việc với công cụ AI",
+            text: "Đặt câu hỏi có mục tiêu cụ thể, kiểm chứng kết quả phản hồi và sử dụng AI như công cụ hỗ trợ tư duy.",
         },
         {
-            title: "Số hóa thông tin",
-            text: "Chuyển đổi các ý tưởng thô thành nội dung có tính logic cao, sẵn sàng cho việc trình bày và công bố trên các nền tảng kỹ thuật số.",
+            title: "Trình bày nội dung số",
+            text: "Thiết kế bố cục khoa học, trực quan và dễ theo dõi để hỗ trợ người xem tiếp cận nội dung học thuật.",
         },
     ],
 };
@@ -85,120 +91,126 @@ export const tools = {
     title: "Công cụ AI",
     items: [
         {
-            title: "Quản lý dữ liệu",
-            text: "Sử dụng File Explorer, Google Drive và các phần mềm nén file để lưu trữ, sắp xếp và quản lý dữ liệu hiệu quả.",
+            title: "Quản lý tài liệu",
+            text: "Google Drive, OneDrive và các nền tảng lưu trữ đám mây hỗ trợ quản lý, đồng bộ dữ liệu học tập.",
         },
         {
-            title: "Nghiên cứu học thuật",
-            text: "Google Scholar cùng các nguồn tài liệu trực tuyến để tìm kiếm, chọn lọc và kiểm chứng thông tin.",
+            title: "Nguồn học thuật",
+            text: "Thư viện số, cơ sở dữ liệu pháp luật và website học thuật chính thống được dùng để kiểm chứng nguồn.",
         },
         {
             title: "Hỗ trợ AI",
-            text: "ChatGPT và Gemini, claude, Microsoft Copilot trong việc phát triển ý tưởng, rà soát nội dung và hỗ trợ xử lý thông tin.",
+            text: "ChatGPT, Gemini và Microsoft Copilot hỗ trợ tổng hợp thông tin, phân tích nội dung và tối ưu quá trình học tập.",
         },
         {
-            title: "Thiết kế & sáng tạo nội dung",
-            text: "Sử dụng Canva và CapCut để thiết kế hình ảnh, chỉnh sửa video và xây dựng nội dung trực quan.",
+            title: "Thiết kế nội dung",
+            text: "Canva, PowerPoint và công cụ thiết kế hình ảnh bằng AI được dùng để xây dựng nội dung trực quan.",
         },
         {
-            title: "Làm việc nhóm & quản lý công việc",
-            text: "Sử dụng Google Docs, Google Meet và Trello để trao đổi, phối hợp và theo dõi tiến độ công việc nhóm.",
+            title: "Làm việc nhóm",
+            text: "Notion, Microsoft Teams và nền tảng cộng tác trực tuyến hỗ trợ trao đổi thông tin và quản lý công việc nhóm.",
         },
     ],
 };
 
 export const projects = {
     title: "PROJECT",
-    intro: "Nội dung 6 bài được đưa vào đầy đủ",
-    chooser: "Chọn bài",
+    intro: "Phần Project tổng hợp 6 bài tập tiêu biểu trong học phần Nhập môn Trí tuệ nhân tạo và AI, kèm tài liệu minh chứng để theo dõi quá trình học tập.",
+    chooser: "Mở từng bài để xem toàn bộ nội dung và minh chứng",
     items: [
         {
-            title: "Bài tập 1: Máy tính và các thiết bị ngoại vi",
+            title: "Bài tập 1 - Chương 1: Máy tính và các thiết bị ngoại vi",
             description:
-                "Khám phá cấu trúc tổng thể của máy tính và nguyên lý vận hành của các thiết bị ngoại vi thiết yếu (bàn phím, chuột, máy in...). Kèm minh chứng bao gồm báo cáo chi tiết và hình ảnh thực hành thực tế được đính kèm trong hồ sơ.",
+                "Tổng hợp kiến thức về máy tính, thiết bị ngoại vi và cách nhận diện vai trò của từng thiết bị trong quá trình học tập, làm việc.",
+            documentUrl: bt1Url,
         },
         {
-            title: "Bài tập 2: Khai thác dữ liệu và thông tin",
+            title: "Bài tập 2 - Chương 2: Khai thác dữ liệu và thông tin",
             description:
-                "Phát triển kỹ năng tìm kiếm nâng cao, thu thập và số hóa dữ liệu. Tập trung vào tư duy phản biện để thẩm định độ tin cậy của nguồn tin và thực hiện trích dẫn khoa học đúng chuẩn.",
+                "Rèn luyện kỹ năng tìm kiếm, thu thập, chọn lọc và tổ chức dữ liệu từ các nguồn thông tin phù hợp với mục tiêu học tập.",
+            documentUrl: bt2Url,
         },
         {
-            title: "Bài tập 3: Tổng quan về trí tuệ nhân tạo",
+            title: "Bài tập 2 - Chương 3: Tổng quan về trí tuệ nhân tạo",
             description:
-                "Đưa ra những góc nhìn về AI: Định nghĩa, các ứng dụng đột phá và bài toán về lợi ích - rủi ro. Đưa ra các ví dụ điển hình về việc sử dụng AI để tối ưu hóa hiệu quả học tập cá nhân.",
+                "Trình bày khái quát về AI, các ứng dụng nổi bật và cách sử dụng công cụ AI có kiểm soát trong môi trường học thuật.",
+            documentUrl: bt3Url,
         },
         {
-            title: "Bài tập 4: Giao tiếp và hợp tác trong môi trường số",
+            title: "Bài tập 3 - Chương 4: Giao tiếp và hợp tác trong môi trường số",
             description:
-                "Tối ưu hóa kỹ năng làm việc nhóm trực tuyến. Phối hợp nhịp nhàng từ khâu phân công nhiệm vụ, quản lý tài liệu dùng chung đến việc thực hiện các quy tắc ứng xử văn minh trên môi trường mạng.",
+                "Tập trung vào kỹ năng phối hợp trực tuyến, chia sẻ tài liệu, trao đổi thông tin và ứng xử văn minh trong không gian số.",
+            documentUrl: bt4Url,
         },
         {
-            title: "Bài tập 5: Sáng tạo nội dung số",
+            title: "Bài tập 2 - Chương 5: Sáng tạo nội dung số",
             description:
-                "Quy trình sản xuất nội dung số chuyên nghiệp: Từ hình thành ý tưởng, lựa chọn công cụ thiết kế/biên tập phù hợp đến việc tuân thủ nghiêm ngặt các quy định về bản quyền tài nguyên số.",
+                "Thể hiện quy trình xây dựng nội dung trực quan, lựa chọn công cụ thiết kế phù hợp và chú ý tới bản quyền tài nguyên số.",
+            documentUrl: bt5Url,
         },
         {
-            title: "Bài tập 6: An toàn số và Đạo đức học thuật",
+            title: "Bài tập 4 - Chương 6: An toàn và liêm chính học thuật trong môi trường số",
             description:
-                "Thiết lập hàng rào bảo mật cho tài khoản cá nhân và quyền riêng tư. Đồng thời, thực hiện liêm chính học thuật thông qua việc chống đạo văn, trích dẫn minh bạch và sử dụng AI có trách nhiệm",
+                "Nhấn mạnh bảo mật tài khoản, quyền riêng tư, chống đạo văn, trích dẫn minh bạch và trách nhiệm khi sử dụng AI.",
+            documentUrl: bt6Url,
         },
     ],
 };
 
 export const conclusion = {
     title: "CONCLUSION",
-    intro: "Việc hoàn thành portfolio với 06 bài tập không chỉ là quá trình lưu trữ sản phẩm, mà còn là hành trình hệ thống hóa tư duy trong kỷ nguyên số. Thay vì chỉ tập trung vào kết quả cuối cùng, quá trình này giúp quan sát toàn bộ quy trình: từ việc tổ chức dữ liệu, cơ chế ra quyết định cho đến việc đánh giá sự tương tác giữa con người và công cụ hỗ trợ. Portfolio này phản ánh cách tiếp cận vấn đề, thử nghiệm các phương pháp mới và tinh chỉnh tư duy để thích ứng với môi trường công nghệ.",
-    mindsetTitle: "Những chuyển biến trong tư duy số",
+    intro: "Sau khi hoàn thiện portfolio gồm 6 bài tập của học phần Nhập môn Trí tuệ nhân tạo và AI, quá trình học được nhìn nhận không chỉ qua kết quả cuối cùng mà còn qua cách tổ chức tư duy, xử lý thông tin và xây dựng phương pháp làm việc phù hợp với môi trường số.",
+    mindsetTitle: "Những thay đổi nhận thấy",
     mindsetItems: [
         {
-            title: "Chuyển đổi từ cảm tính sang chiến lược",
-            text: "hình thành thói quen hoạch định trước khi hành động. Việc xác định rõ mục tiêu và xây dựng cấu trúc nội dung giúp lựa chọn các công cụ số một cách có chủ đích, thay vì thực hiện theo bản năng như trước.",
+            title: "Làm việc có kế hoạch hơn",
+            text: "Trước khi bắt tay vào làm, quá trình học chú trọng xác định mục tiêu, chuẩn bị cấu trúc và lựa chọn công cụ phù hợp.",
         },
         {
-            title: "Nâng cao năng lực thẩm định thông tin",
-            text: "Luôn đặt thông tin vào bối cảnh cụ thể để đánh giá độ phù hợp và tính xác thực.",
+            title: "Chủ động xử lý thông tin",
+            text: "Tài liệu được xem xét theo độ phù hợp, tránh sử dụng nguồn một cách máy móc và luôn cân nhắc bối cảnh khi đưa vào bài.",
         },
         {
-            title: "Xác lập vị thế trước trí tuệ nhân tạo",
-            text: "Học cách nhìn nhận AI như một cộng sự hỗ trợ phản biện và kiểm soát lỗi, nhưng tính bản sắc và chiều sâu của bài viết phải xuất phát từ sự chiêm nghiệm của chính người thực hiện.",
+            title: "Nhận thức rõ hơn vai trò của AI",
+            text: "AI được dùng như công cụ hỗ trợ tư duy và kiểm tra lại nội dung, không thay thế quá trình suy nghĩ và viết độc lập.",
         },
     ],
     reflectionTitle: "Ưu điểm và thách thức khi làm portfolio",
     highlights: [
         {
-            title: "Làm chủ tư duy cộng tác với AI",
-            text: "Vai trò của AI được chuyển đổi từ công cụ thực thi sang người phản biện. Việc tối ưu hóa kỹ thuật đặt câu lệnh giúp khai thác khả năng logic của máy tính để củng cố cho các lập luận cá nhân.",
+            title: "Hệ thống nội dung có tính liên kết",
+            text: "Tài liệu được sắp xếp logic, giúp việc học và triển khai ý tưởng rõ ràng hơn; portfolio phản ánh quá trình phát triển tư duy và kỹ năng.",
         },
         {
-            title: "Hệ thống hóa năng lực số",
-            text: "Thay vì làm việc rời rạc, thông tin và dữ liệu được tổ chức theo cấu trúc khoa học, giúp việc quản lý kiến thức trở nên chuyên nghiệp và có chiều sâu hơn.",
+            title: "Bố cục dễ theo dõi",
+            text: "Nội dung giữ tính nhất quán giữa các bài, minh chứng được lựa chọn có chủ đích và hỗ trợ người xem hiểu nhanh cách triển khai.",
         },
     ],
     challenges: [
         {
-            title: "Kiểm soát tính chính xác của dữ liệu",
-            text: "Đối với một portfolio cá nhân, thách thức lớn nhất là thẩm định lại thông tin do AI cung cấp để tránh lỗi ảo giác, đảm bảo mọi nội dung đều rõ ràng, trung thực và phù hợp với hồ sơ năng lực.",
+            title: "Kiểm soát chất lượng thông tin khi dùng AI",
+            text: "Nội dung do AI tạo ra có thể thuyết phục nhưng chưa chắc chính xác hoặc phù hợp với thực tế pháp lý, vì vậy cần kiểm tra nguồn và đối chiếu tài liệu gốc.",
         },
         {
-            title: "Giữ vững bản sắc cá nhân",
-            text: "Cần liên tục tinh chỉnh văn phong để đảm bảo công nghệ chỉ đóng vai trò hỗ trợ hình thức, còn tư duy cốt lõi và quan điểm phản biện vẫn giữ dấu ấn cá nhân.",
+            title: "Đảm bảo trách nhiệm học thuật",
+            text: "Công nghệ chỉ nên đóng vai trò hỗ trợ, còn việc đánh giá và chịu trách nhiệm về nội dung vẫn thuộc về người sử dụng.",
         },
     ],
     futureTitle: "Tầm nhìn và định hướng phát triển",
     futureIntro:
-        "Trong thời gian tới, portfolio sẽ tiếp tục phát triển theo hướng chuyên nghiệp hóa để kết nối chặt chẽ hơn với định hướng nghề nghiệp:",
+        "Trong thời gian tới, portfolio tiếp tục được hoàn thiện theo hướng gắn với kỹ năng nghề nghiệp và định hướng chuyên ngành Luật:",
     futureItems: [
         {
-            title: "Tối ưu hóa trải nghiệm người dùng",
-            text: "Tinh gọn hình thức trình bày để làm nổi bật những giá trị cốt lõi nhất.",
+            title: "Tối ưu bố cục",
+            text: "Trình bày nội dung ngắn gọn, trực quan và dễ tiếp cận hơn.",
         },
         {
-            title: "Rút ra bài học kinh nghiệm",
-            text: "Không chỉ dừng lại ở kỹ năng, trọng tâm sẽ là đúc kết những tư duy chiến lược sau mỗi dự án.",
+            title: "Bổ sung bài học kinh nghiệm",
+            text: "Mỗi bài tập có thể mở rộng thêm phần phân tích kinh nghiệm sau quá trình thực hiện.",
         },
         {
-            title: "Ứng dụng công nghệ vào thực tế",
-            text: "Mở rộng phạm vi ứng dụng của AI và công nghệ số vào việc nghiên cứu và giải quyết các vấn đề chuyên môn trong tương lai.",
+            title: "Nâng cao kiểm chứng thông tin",
+            text: "Ứng dụng AI hiệu quả hơn trong nghiên cứu, quản lý tài liệu và xây dựng nội dung học thuật có kiểm soát.",
         },
     ],
 };
