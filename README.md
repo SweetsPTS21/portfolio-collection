@@ -266,6 +266,7 @@ npm run dev
 | `trang-portfolio` | Hoàng Thu Trang | Tropical Summer Portfolio | ✅ Hoàn thành |
 | `linh-portfolio` | Linh | Candy Pop / Bubblegum Portfolio | ✅ Hoàn thành |
 | `hanh-portfolio` | Trần Hồng Hạnh | Botanical Garden Portfolio | ✅ Hoàn thành |
+| `anh-portfolio` | Trần Lan Anh | Toy Box / Playroom Portfolio | ✅ Hoàn thành |
 
 > Cập nhật bảng này khi thêm dự án mới.
 

@@ -21,6 +21,11 @@
 | `art-festival`        | Art Festival / Creative Fair Portfolio | Graphic, lễ hội, poster mạnh     | Portfolio sáng tạo, nổi bật        |
 | `botanical-garden`    | Botanical Garden Portfolio             | Calm, organic, clean             | Portfolio nhẹ nhàng, tinh tế       |
 | `toy-box`             | Toy Box / Playroom Portfolio           | Vui, blocky, thử nghiệm          | Portfolio sáng tạo, linh hoạt      |
+| `fashion-editorial`   | Fashion Editorial Portfolio            | Stylish, trendy, tự tin           | Portfolio high-end, hiện đại       |
+| `k-beauty`            | K-Beauty / Korean Aesthetic Portfolio  | Tinh tế, clean, soft              | UI hiện đại, feminine              |
+| `dreamy-y2k`          | Dreamy Y2K Girl Portfolio              | Girly, nostalgic, nổi bật         | Portfolio Pinterest-worthy          |
+| `flower-market`       | Flower Market Portfolio                | Dịu dàng, artistic, ấm áp         | Portfolio feminine, artisan        |
+| `cafe-bakery`         | Cafe & Bakery Portfolio                | Thân thiện, đáng yêu, ấm áp       | Portfolio nữ hiện đại              |
 
 ---
 
