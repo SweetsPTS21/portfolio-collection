@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <!-- Desk surface -->
+  <rect x="40" y="220" width="400" height="12" rx="6" fill="#F5EDE8" opacity="0.8"/>
+
+  <!-- Laptop -->
+  <rect x="120" y="130" width="220" height="140" rx="12" fill="#FFFFFF" stroke="#F0E6EC" stroke-width="2"/>
+  <rect x="128" y="138" width="204" height="118" rx="8" fill="#F8F0F5"/>
+  <!-- Screen content lines -->
+  <rect x="140" y="150" width="120" height="6" rx="3" fill="#E8A0BF" opacity="0.7"/>
+  <rect x="140" y="164" width="90" height="5" rx="2.5" fill="#D4C5F9" opacity="0.6"/>
+  <rect x="140" y="176" width="150" height="5" rx="2.5" fill="#E8A0BF" opacity="0.4"/>
+  <rect x="140" y="188" width="110" height="5" rx="2.5" fill="#B8D8F5" opacity="0.5"/>
+  <rect x="140" y="200" width="130" height="5" rx="2.5" fill="#D4C5F9" opacity="0.4"/>
+  <rect x="140" y="212" width="80" height="5" rx="2.5" fill="#E8A0BF" opacity="0.35"/>
+  <!-- Laptop base -->
+  <rect x="100" y="270" width="260" height="10" rx="5" fill="#F5EDE8" stroke="#F0E6EC" stroke-width="1.5"/>
+
+  <!-- Book stack (left) -->
+  <rect x="52" y="175" width="72" height="10" rx="4" fill="#E8A0BF" opacity="0.7"/>
+  <rect x="55" y="185" width="68" height="10" rx="4" fill="#D4C5F9" opacity="0.7"/>
+  <rect x="50" y="195" width="75" height="10" rx="4" fill="#B8D8F5" opacity="0.7"/>
+  <rect x="53" y="205" width="70" height="18" rx="4" fill="#FFD6C0" opacity="0.7"/>
+
+  <!-- Coffee cup (right) -->
+  <rect x="352" y="220" width="44" height="48" rx="10" fill="#FFFFFF" stroke="#F0E6EC" stroke-width="2"/>
+  <rect x="358" y="228" width="32" height="32" rx="7" fill="#FFE0EB" opacity="0.6"/>
+  <path d="M396 240 Q408 240 408 252 Q408 264 396 264" stroke="#F0E6EC" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Steam -->
+  <path d="M366 218 Q370 210 366 202" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M374 215 Q378 207 374 199" stroke="#D4C5F9" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M382 218 Q386 210 382 202" stroke="#B8D8F5" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Person: girl studying -->
+  <!-- Body -->
+  <ellipse cx="240" cy="105" rx="32" ry="38" fill="#FFE0EB" opacity="0.85"/>
+  <!-- Head -->
+  <circle cx="240" cy="68" r="28" fill="#FFF0F5" stroke="#F4B8CE" stroke-width="1.5"/>
+  <!-- Hair -->
+  <path d="M215 60 Q220 35 240 32 Q260 35 265 60" fill="#2D2D35" opacity="0.85"/>
+  <path d="M215 60 Q210 72 212 84" stroke="#2D2D35" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M265 60 Q270 72 268 84" stroke="#2D2D35" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Face -->
+  <ellipse cx="232" cy="68" rx="3" ry="3.5" fill="#2D2D35" opacity="0.7"/>
+  <ellipse cx="248" cy="68" rx="3" ry="3.5" fill="#2D2D35" opacity="0.7"/>
+  <!-- Smile -->
+  <path d="M234 78 Q240 83 246 78" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Blush -->
+  <ellipse cx="225" cy="74" rx="5" ry="3" fill="#F4B8CE" opacity="0.45"/>
+  <ellipse cx="255" cy="74" rx="5" ry="3" fill="#F4B8CE" opacity="0.45"/>
+  <!-- Sweater/top -->
+  <path d="M215 103 Q208 115 210 130 Q225 138 240 138 Q255 138 270 130 Q272 115 265 103" fill="#D4C5F9" opacity="0.9"/>
+  <!-- Arms -->
+  <path d="M215 108 Q195 118 185 130" stroke="#FFE0EB" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M265 108 Q285 118 295 130" stroke="#FFE0EB" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <!-- Hands on laptop -->
+  <circle cx="185" cy="133" r="10" fill="#FFF0F5"/>
+  <circle cx="295" cy="133" r="10" fill="#FFF0F5"/>
+
+  <!-- Floating sparkles -->
+  <g opacity="0.6">
+    <circle cx="60" cy="90" r="3" fill="#E8A0BF"/>
+    <circle cx="420" cy="80" r="2.5" fill="#D4C5F9"/>
+    <circle cx="390" cy="120" r="2" fill="#B8D8F5"/>
+    <circle cx="80" cy="140" r="2" fill="#FFD6C0"/>
+    <text x="52" y="70" font-size="14" fill="#E8A0BF" opacity="0.5">✦</text>
+    <text x="418" y="60" font-size="12" fill="#D4C5F9" opacity="0.5">✦</text>
+    <text x="400" y="170" font-size="10" fill="#B8D8F5" opacity="0.5">✦</text>
+  </g>
+
+  <!-- Hair accessory -->
+  <ellipse cx="256" cy="42" rx="8" ry="6" fill="#E8A0BF" opacity="0.8"/>
+  <circle cx="256" cy="42" r="3" fill="#FFFFFF" opacity="0.7"/>
+</svg>
