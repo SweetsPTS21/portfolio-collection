@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Cloud rainbow crescent bow sticker set">
+  <g stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 8px 7px rgba(124,95,160,.2))">
+    <path d="M36 117a37 37 0 0 1 61-28 46 46 0 0 1 88 15 31 31 0 0 1-7 61H51a30 30 0 0 1-15-48Z" fill="#BAE6FD"/>
+    <path d="M194 157a66 66 0 0 1 132 0" fill="none" stroke="#F9A8D4"/>
+    <path d="M214 157a46 46 0 0 1 92 0" fill="none" stroke="#C084FC"/>
+    <path d="M234 157a26 26 0 0 1 52 0" fill="none" stroke="#93C5FD"/>
+    <path d="M286 39c-30 8-38 48-14 66 15 12 38 11 54-2-5 30-42 45-67 28-30-20-24-73 27-92Z" fill="#DDD6FE"/>
+    <path d="M72 36 102 55 72 75 48 58Z" fill="#F9A8D4"/>
+    <path d="M132 36 102 55 132 75 156 58Z" fill="#C084FC"/>
+    <circle cx="102" cy="55" r="10" fill="#2D1B5E"/>
+  </g>
+</svg>

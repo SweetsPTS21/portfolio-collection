@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" role="img" aria-label="Holographic Y2K sticker sheet">
+  <defs>
+    <linearGradient id="holo" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e0c3fc"/>
+      <stop offset="45%" stop-color="#8ec5fc"/>
+      <stop offset="100%" stop-color="#fbc2eb"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#fff" stroke-width="9" stroke-linejoin="round" filter="drop-shadow(0 9px 8px rgba(124,95,160,.22))">
+    <path d="M69 28 87 79 141 92 90 113 73 166 52 116 0 98 51 78Z" fill="url(#holo)"/>
+    <path d="M198 39c34-39 100-10 90 43-8 43-56 64-91 100-37-34-85-55-93-98-10-55 61-84 94-45Z" fill="#F9A8D4"/>
+    <path d="M332 39 382 62 392 117 351 155 296 147 271 98 296 49Z" fill="url(#holo)"/>
+    <path d="M80 194h86l18 34H62Z" fill="#BAE6FD"/>
+    <path d="M247 189 281 219 247 249 213 219Z" fill="#DDD6FE"/>
+    <circle cx="349" cy="211" r="32" fill="#fbc2eb"/>
+  </g>
+</svg>

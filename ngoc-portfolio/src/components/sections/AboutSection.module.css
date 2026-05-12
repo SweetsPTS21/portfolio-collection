@@ -1,0 +1,252 @@
+/* src/components/sections/AboutSection.module.css */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 3rem;
+  gap: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* overlay kem vanilla mờ để text đọc được, giữ texture hình ảnh */
+  background: rgba(250, 243, 232, 0.72);
+  z-index: 0;
+}
+
+/* Đặt tất cả children trên overlay */
+.about > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section label */
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.labelLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-kraft));
+}
+
+.labelLine:last-child {
+  background: linear-gradient(90deg, var(--border-kraft), transparent);
+}
+
+.labelText {
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  color: var(--caramel);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Left column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Avatar frame */
+.avatarFrame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--paper-white);
+  border: 1.5px dashed var(--border-kraft);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.avatarImg {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 3px solid var(--caramel);
+  box-shadow: 0 4px 18px rgba(139, 94, 60, 0.25);
+  display: block;
+}
+
+.avatarCaption {
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  color: var(--tan-medium);
+  font-weight: 600;
+}
+
+/* Info card */
+.infoCard {
+  width: 100%;
+  background-color: var(--paper-white);
+  border: 1.5px solid var(--border-kraft);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.infoName {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--espresso);
+  margin-bottom: 0.25rem;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--tan-medium);
+  line-height: 1.45;
+}
+
+.hobbiesLabel {
+  font-family: var(--font-hand);
+  font-size: 0.9rem;
+  color: var(--milk-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.hobbyTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--milk-brown);
+  background-color: rgba(139, 94, 60, 0.08);
+  border: 1px solid var(--border-kraft);
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  transition: transform 200ms ease, background-color 200ms ease;
+}
+
+.hobbyTag:hover {
+  transform: scale(1.05);
+  background-color: rgba(139, 94, 60, 0.15);
+}
+
+/* Right column */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--tan-medium);
+  line-height: 1.7;
+  border-left: 3px solid var(--border-kraft);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.goalBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.goalHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.goalTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--espresso);
+}
+
+.goalQuote {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--tan-medium);
+  line-height: 1.75;
+  background-color: rgba(212, 160, 86, 0.06);
+  border-left: 3px solid var(--caramel);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+}
+
+.goalQuoteGreen {
+  background-color: rgba(122, 158, 126, 0.06);
+  border-left-color: var(--matcha);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .leftCol {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .avatarFrame {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftCol {
+    flex-direction: column;
+    align-items: center;
+  }
+}

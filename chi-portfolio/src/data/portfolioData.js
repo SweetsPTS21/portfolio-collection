@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Vũ Huyền Chi',
   major: 'Luật Kinh Doanh',
-  university: 'Đại học Luật - Đại học quốc gia Hà Nội',
+  university: 'Trường Đại học Luật - Đại học Quốc gia Hà Nội',
   interests:
     'thích nghe nhạc kpop đặc biệt là BTS, kick boxing, màu tím mộng mơ',
   style: 'thời trang đa dạng, tính cách MBTI: ISFJ',
