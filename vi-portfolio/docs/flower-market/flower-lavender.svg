@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80" fill="none">
+  <!-- Lavender spike stem -->
+  <line x1="30" y1="75" x2="30" y2="20" stroke="#7A9E76" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Side leaf left -->
+  <path d="M30,55 C24,50 18,52 20,58 C22,64 29,61 30,55Z" fill="#8FAF8A"/>
+  <!-- Side leaf right -->
+  <path d="M30,48 C36,44 42,46 40,52 C38,58 31,55 30,48Z" fill="#7A9E76"/>
+  <!-- Lavender florets — bottom to top, getting smaller -->
+  <ellipse cx="30" cy="52" rx="4" ry="5.5" fill="#C4A8D8"/>
+  <ellipse cx="24" cy="49" rx="3.5" ry="5" fill="#B890C8"/>
+  <ellipse cx="36" cy="49" rx="3.5" ry="5" fill="#C4A8D8"/>
+  <ellipse cx="30" cy="44" rx="3.5" ry="5" fill="#B890C8"/>
+  <ellipse cx="23" cy="41" rx="3" ry="4.5" fill="#D0B8E0"/>
+  <ellipse cx="37" cy="41" rx="3" ry="4.5" fill="#C4A8D8"/>
+  <ellipse cx="30" cy="37" rx="3" ry="4" fill="#B890C8"/>
+  <ellipse cx="25" cy="34" rx="2.5" ry="4" fill="#D0B8E0"/>
+  <ellipse cx="35" cy="34" rx="2.5" ry="4" fill="#C4A8D8"/>
+  <ellipse cx="30" cy="30" rx="2.5" ry="3.5" fill="#B890C8"/>
+  <ellipse cx="27" cy="27" rx="2" ry="3" fill="#D0B8E0"/>
+  <ellipse cx="33" cy="27" rx="2" ry="3" fill="#C4A8D8"/>
+  <ellipse cx="30" cy="24" rx="2" ry="3" fill="#B890C8"/>
+  <ellipse cx="30" cy="21" rx="1.5" ry="2.5" fill="#C4A8D8"/>
+  <!-- Small dots on florets -->
+  <circle cx="30" cy="51" r="1.2" fill="#9870B0" opacity="0.5"/>
+  <circle cx="30" cy="43" r="1" fill="#9870B0" opacity="0.5"/>
+  <circle cx="30" cy="36" r="1" fill="#9870B0" opacity="0.5"/>
+</svg>

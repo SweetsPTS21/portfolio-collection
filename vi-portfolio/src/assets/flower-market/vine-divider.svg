@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+  <!-- Vine main line -->
+  <path id="vine-path" d="M0,100 C30,80 60,120 90,100 C120,80 150,115 180,100 C210,85 240,115 270,100 C300,85 330,115 360,100 C380,92 390,96 400,100"
+    stroke="#7A9E76" stroke-width="2" stroke-linecap="round"
+    stroke-dasharray="1200" stroke-dashoffset="1200"
+    fill="none"/>
+
+  <!-- Leaves along vine -->
+  <path d="M45,92 C38,78 28,80 30,90 C32,100 42,98 45,92Z" fill="#8FAF8A" opacity="0.8"/>
+  <path d="M50,96 C58,82 68,85 65,95 C62,105 52,102 50,96Z" fill="#7A9E76" opacity="0.8"/>
+
+  <path d="M135,93 C128,79 118,82 120,92 C122,102 132,100 135,93Z" fill="#8FAF8A" opacity="0.8"/>
+  <path d="M140,97 C148,83 158,86 155,96 C152,106 142,103 140,97Z" fill="#7A9E76" opacity="0.8"/>
+
+  <path d="M225,92 C218,78 208,80 210,90 C212,100 222,98 225,92Z" fill="#8FAF8A" opacity="0.8"/>
+  <path d="M230,96 C238,82 248,85 245,95 C242,105 232,102 230,96Z" fill="#7A9E76" opacity="0.8"/>
+
+  <path d="M315,93 C308,79 298,82 300,92 C302,102 312,100 315,93Z" fill="#8FAF8A" opacity="0.8"/>
+  <path d="M320,97 C328,83 338,86 335,96 C332,106 322,103 320,97Z" fill="#7A9E76" opacity="0.8"/>
+
+  <!-- Tiny flowers on vine -->
+  <!-- Daisy at 90 -->
+  <g transform="translate(90,88)">
+    <ellipse cx="0" cy="-6" rx="3" ry="5" fill="#FDF6F0"/>
+    <ellipse cx="0" cy="-6" rx="3" ry="5" fill="#FDF6F0" transform="rotate(60)"/>
+    <ellipse cx="0" cy="-6" rx="3" ry="5" fill="#FDF6F0" transform="rotate(120)"/>
+    <circle cx="0" cy="0" r="4" fill="#F5E6C8"/>
+  </g>
+  <!-- Rose bud at 180 -->
+  <g transform="translate(180,88)">
+    <path d="M0,-8 C3,-5 4,-1 2,3 C1,5 0,6 0,5 C0,6 -1,5 -2,3 C-4,-1 -3,-5 0,-8Z" fill="#C9797A"/>
+    <path d="M-3,-5 C-4,-2 -3,1 -1,3" stroke="#7A9E76" stroke-width="1" fill="none"/>
+  </g>
+  <!-- Lavender cluster at 270 -->
+  <g transform="translate(270,88)">
+    <ellipse cx="0" cy="-8" rx="2.5" ry="4" fill="#C4A8D8"/>
+    <ellipse cx="-3" cy="-5" rx="2" ry="3.5" fill="#B89EC0"/>
+    <ellipse cx="3" cy="-5" rx="2" ry="3.5" fill="#C4A8D8"/>
+  </g>
+
+  <!-- Dot decorations -->
+  <circle cx="20" cy="100" r="2" fill="#F4A0A0" opacity="0.5"/>
+  <circle cx="375" cy="100" r="2" fill="#8FAF8A" opacity="0.5"/>
+</svg>

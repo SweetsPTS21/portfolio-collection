@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" fill="none">
+  <!-- Rose bud icon -->
+  <g id="icon-rose" transform="translate(24,24)">
+    <path d="M0,-14 C6,-10 9,-3 7,5 C5,11 1,14 0,12 C-1,14 -5,11 -7,5 C-9,-3 -6,-10 0,-14Z" fill="#C9797A"/>
+    <path d="M-5,-8 C-7,-4 -7,1 -4,5" stroke="#7A9E76" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M5,-8 C7,-4 7,1 4,5" stroke="#7A9E76" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <line x1="0" y1="12" x2="0" y2="22" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Daisy icon -->
+  <g id="icon-daisy" transform="translate(90,24)">
+    <ellipse cx="0" cy="-10" rx="3.5" ry="7" fill="#FDF6F0" stroke="#EDCFC0" stroke-width="0.5"/>
+    <ellipse cx="0" cy="-10" rx="3.5" ry="7" fill="#FDF6F0" stroke="#EDCFC0" stroke-width="0.5" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-10" rx="3.5" ry="7" fill="#FDF6F0" stroke="#EDCFC0" stroke-width="0.5" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-10" rx="3.5" ry="7" fill="#FDF6F0" stroke="#EDCFC0" stroke-width="0.5" transform="rotate(135)"/>
+    <circle cx="0" cy="0" r="6" fill="#E8C99A"/>
+    <circle cx="0" cy="0" r="3.5" fill="#D4A060"/>
+    <line x1="0" y1="6" x2="0" y2="16" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tulip icon -->
+  <g id="icon-tulip" transform="translate(156,24)">
+    <path d="M0,-16 C-6,-12 -8,-4 -7,4 C-6,10 -2,14 0,13 C2,14 6,10 7,4 C8,-4 6,-12 0,-16Z" fill="#F5C5A3"/>
+    <path d="M0,-16 C0,-10 0,-2 0,13" stroke="#D98060" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+    <line x1="0" y1="13" x2="0" y2="22" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M-3,5 C-8,2 -10,-3 -8,-7" stroke="#8FAF8A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Leaf icon -->
+  <g id="icon-leaf" transform="translate(216,24)">
+    <path d="M0,-18 C10,-10 12,2 8,12 C6,18 2,20 0,18 C-2,20 -6,18 -8,12 C-12,2 -10,-10 0,-18Z" fill="#8FAF8A"/>
+    <path d="M0,-18 C0,-8 0,4 0,18" stroke="#5A7A58" stroke-width="1" opacity="0.6"/>
+    <path d="M0,0 C5,-4 9,-2 8,2" stroke="#5A7A58" stroke-width="0.8" fill="none"/>
+    <path d="M0,0 C-5,-4 -9,-2 -8,2" stroke="#5A7A58" stroke-width="0.8" fill="none"/>
+  </g>
+
+  <!-- Tag/label icon -->
+  <g id="icon-tag" transform="translate(274,16)">
+    <path d="M-12,-10 L12,-10 L18,0 L12,10 L-12,10 L-12,-10Z" fill="none" stroke="#C9797A" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="-8" cy="0" r="2" fill="#C9797A"/>
+    <line x1="-3" y1="0" x2="8" y2="0" stroke="#C9797A" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Ribbon/bow icon -->
+  <g id="icon-ribbon" transform="translate(340,24)">
+    <path d="M0,0 C-4,-8 -12,-10 -14,-6 C-16,-2 -10,4 0,0Z" fill="#F4A0A0"/>
+    <path d="M0,0 C4,-8 12,-10 14,-6 C16,-2 10,4 0,0Z" fill="#E89090"/>
+    <path d="M0,0 C-4,8 -12,10 -14,6 C-16,2 -10,-4 0,0Z" fill="#E89090"/>
+    <path d="M0,0 C4,8 12,10 14,6 C16,2 10,-4 0,0Z" fill="#F4A0A0"/>
+    <ellipse cx="0" cy="0" rx="4" ry="4" fill="#C9797A"/>
+    <line x1="0" y1="4" x2="-4" y2="14" stroke="#D4A0A0" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="4" x2="4" y2="14" stroke="#D4A0A0" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sunflower icon -->
+  <g id="icon-sunflower" transform="translate(408,24)">
+    <ellipse cx="0" cy="-11" rx="3.5" ry="6.5" fill="#F5E040"/>
+    <ellipse cx="0" cy="-11" rx="3.5" ry="6.5" fill="#F5E040" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-11" rx="3.5" ry="6.5" fill="#F0D020" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-11" rx="3.5" ry="6.5" fill="#F0D020" transform="rotate(135)"/>
+    <circle cx="0" cy="0" r="7" fill="#6B3F2A"/>
+    <circle cx="0" cy="0" r="4" fill="#5A2E1A"/>
+    <line x1="0" y1="7" x2="0" y2="17" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Lavender icon -->
+  <g id="icon-lavender" transform="translate(464,24)">
+    <ellipse cx="0" cy="-14" rx="2.5" ry="4" fill="#C4A8D8"/>
+    <ellipse cx="-3" cy="-11" rx="2" ry="3.5" fill="#B89EC0"/>
+    <ellipse cx="3" cy="-11" rx="2" ry="3.5" fill="#C4A8D8"/>
+    <ellipse cx="-1" cy="-8" rx="2" ry="3" fill="#C4A8D8"/>
+    <ellipse cx="2" cy="-7" rx="2" ry="3" fill="#B89EC0"/>
+    <line x1="0" y1="-4" x2="0" y2="8" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M0,0 C-4,-2 -6,0 -5,3" stroke="#8FAF8A" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Cherry blossom icon (sakura) -->
+  <g id="icon-sakura" transform="translate(24,80)">
+    <path d="M0,-12 C2,-6 6,-4 8,0 C6,4 2,6 0,12 C-2,6 -6,4 -8,0 C-6,-4 -2,-6 0,-12Z" fill="#FFB8C8" opacity="0.8"/>
+    <path d="M0,-12 C2,-6 6,-4 8,0 C6,4 2,6 0,12 C-2,6 -6,4 -8,0 C-6,-4 -2,-6 0,-12Z" fill="#FFB8C8" opacity="0.8" transform="rotate(72)"/>
+    <path d="M0,-12 C2,-6 6,-4 8,0 C6,4 2,6 0,12 C-2,6 -6,4 -8,0 C-6,-4 -2,-6 0,-12Z" fill="#F4A0B8" opacity="0.8" transform="rotate(144)"/>
+    <path d="M0,-12 C2,-6 6,-4 8,0 C6,4 2,6 0,12 C-2,6 -6,4 -8,0 C-6,-4 -2,-6 0,-12Z" fill="#F4A0B8" opacity="0.8" transform="rotate(216)"/>
+    <path d="M0,-12 C2,-6 6,-4 8,0 C6,4 2,6 0,12 C-2,6 -6,4 -8,0 C-6,-4 -2,-6 0,-12Z" fill="#FFB8C8" opacity="0.8" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFE0E8"/>
+    <circle cx="0" cy="0" r="2" fill="#FF9AB0"/>
+  </g>
+
+  <!-- Peony icon -->
+  <g id="icon-peony" transform="translate(90,80)">
+    <path d="M0,-14 C8,-10 12,-2 10,6 C8,14 2,16 0,14 C-2,16 -8,14 -10,6 C-12,-2 -8,-10 0,-14Z" fill="#F4A0A0" opacity="0.7"/>
+    <path d="M14,-4 C14,8 6,14 0,14 C-6,14 -14,8 -14,-4 C-14,-12 -6,-14 0,-14 C6,-14 14,-12 14,-4Z" fill="#E89090" opacity="0.5"/>
+    <path d="M0,-10 C6,-7 9,-1 7,5 C5,10 1,12 0,10 C-1,12 -5,10 -7,5 C-9,-1 -6,-7 0,-10Z" fill="#C9797A"/>
+    <ellipse cx="0" cy="2" rx="5" ry="4" fill="#A85C5C"/>
+    <ellipse cx="0" cy="2" rx="2.5" ry="2" fill="#8B4545"/>
+  </g>
+
+  <!-- Poppy icon -->
+  <g id="icon-poppy" transform="translate(156,80)">
+    <path d="M0,-14 C-2,-6 -8,-2 -8,4 C-8,10 -4,14 0,14 C4,14 8,10 8,4 C8,-2 2,-6 0,-14Z" fill="#E84040" opacity="0.8"/>
+    <path d="M0,-14 C2,-6 8,-2 8,4 C8,10 4,14 0,14 C-4,14 -8,10 -8,4 C-8,-2 -2,-6 0,-14Z" fill="#C82828" opacity="0.6"/>
+    <circle cx="0" cy="4" r="5" fill="#1A1A2E"/>
+    <circle cx="-1" cy="3" r="1" fill="#4040AA" opacity="0.5"/>
+    <circle cx="1" cy="5" r="1" fill="#4040AA" opacity="0.5"/>
+    <line x1="0" y1="14" x2="0" y2="22" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Hydrangea cluster icon -->
+  <g id="icon-hydrangea" transform="translate(216,80)">
+    <!-- 4-petal mini flowers in cluster -->
+    <g transform="translate(-6,-8)">
+      <path d="M0,-5 C2,-2 2,2 0,5 C-2,2 -2,-2 0,-5Z" fill="#B8D8F5"/>
+      <path d="M-5,0 C-2,-2 2,-2 5,0 C2,2 -2,2 -5,0Z" fill="#98C0E8"/>
+      <circle cx="0" cy="0" r="2" fill="#D8ECFF"/>
+    </g>
+    <g transform="translate(6,-8)">
+      <path d="M0,-5 C2,-2 2,2 0,5 C-2,2 -2,-2 0,-5Z" fill="#C4A8D8"/>
+      <path d="M-5,0 C-2,-2 2,-2 5,0 C2,2 -2,2 -5,0Z" fill="#B090C8"/>
+      <circle cx="0" cy="0" r="2" fill="#E0D0F0"/>
+    </g>
+    <g transform="translate(-6,4)">
+      <path d="M0,-5 C2,-2 2,2 0,5 C-2,2 -2,-2 0,-5Z" fill="#B8D8F5"/>
+      <path d="M-5,0 C-2,-2 2,-2 5,0 C2,2 -2,2 -5,0Z" fill="#98C0E8"/>
+      <circle cx="0" cy="0" r="2" fill="#D8ECFF"/>
+    </g>
+    <g transform="translate(6,4)">
+      <path d="M0,-5 C2,-2 2,2 0,5 C-2,2 -2,-2 0,-5Z" fill="#F4C8D8"/>
+      <path d="M-5,0 C-2,-2 2,-2 5,0 C2,2 -2,2 -5,0Z" fill="#E0A8C0"/>
+      <circle cx="0" cy="0" r="2" fill="#FFE0EE"/>
+    </g>
+    <line x1="0" y1="10" x2="0" y2="20" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Magnolia icon -->
+  <g id="icon-magnolia" transform="translate(274,80)">
+    <path d="M0,-16 C-4,-10 -10,-4 -10,4 C-10,10 -6,14 0,14 C6,14 10,10 10,4 C10,-4 4,-10 0,-16Z" fill="#F5EDE8" stroke="#EDCFC0" stroke-width="0.5"/>
+    <path d="M-8,-8 C-12,-2 -12,6 -8,12" stroke="#E0C8B8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M8,-8 C12,-2 12,6 8,12" stroke="#E0C8B8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="2" rx="5" ry="4" fill="#E8C8A8"/>
+    <ellipse cx="0" cy="2" rx="2.5" ry="2" fill="#D4A880"/>
+    <line x1="0" y1="14" x2="0" y2="22" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Lotus icon -->
+  <g id="icon-lotus" transform="translate(340,80)">
+    <path d="M0,-16 C-2,-10 -4,-4 -2,4 C-1,8 0,10 0,10 C0,10 1,8 2,4 C4,-4 2,-10 0,-16Z" fill="#FFB8C8"/>
+    <path d="M0,-16 C-4,-10 -8,-4 -8,4 C-8,10 -4,12 0,10 C4,12 8,10 8,4 C8,-4 4,-10 0,-16Z" fill="#F4A0B8" transform="rotate(-20)"/>
+    <path d="M0,-16 C-4,-10 -8,-4 -8,4 C-8,10 -4,12 0,10 C4,12 8,10 8,4 C8,-4 4,-10 0,-16Z" fill="#F4A0B8" transform="rotate(20)"/>
+    <path d="M-12,2 C-10,-4 -6,-8 0,-8 C6,-8 10,-4 12,2" fill="#FFCCD8" stroke="#F4A0B8" stroke-width="0.5"/>
+    <ellipse cx="0" cy="8" rx="10" ry="4" fill="#8FAF8A" opacity="0.6"/>
+    <ellipse cx="0" cy="2" rx="4" ry="3" fill="#FFE8F0"/>
+  </g>
+
+  <!-- Wisteria icon -->
+  <g id="icon-wisteria" transform="translate(408,80)">
+    <ellipse cx="0" cy="-14" rx="3" ry="5" fill="#C4A8D8"/>
+    <ellipse cx="-4" cy="-10" rx="2.5" ry="4" fill="#B890C8"/>
+    <ellipse cx="4" cy="-10" rx="2.5" ry="4" fill="#C4A8D8"/>
+    <ellipse cx="-2" cy="-6" rx="2.5" ry="4" fill="#B890C8"/>
+    <ellipse cx="3" cy="-5" rx="2.5" ry="4" fill="#C4A8D8"/>
+    <ellipse cx="0" cy="-1" rx="2.5" ry="4" fill="#D0B8E0"/>
+    <line x1="0" y1="-18" x2="0" y2="-14" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Carnation icon -->
+  <g id="icon-carnation" transform="translate(464,80)">
+    <path d="M0,-14 C1,-10 4,-8 5,-5 C4,-2 6,0 4,3 C2,5 0,6 0,6 C0,6 -2,5 -4,3 C-6,0 -4,-2 -5,-5 C-4,-8 -1,-10 0,-14Z" fill="#FF8FA0"/>
+    <path d="M-8,-10 C-7,-6 -5,-3 -4,0 C-5,4 -3,6 0,6 C3,6 5,4 4,0 C5,-3 7,-6 8,-10 C5,-8 2,-9 0,-10 C-2,-9 -5,-8 -8,-10Z" fill="#FF7088" opacity="0.7"/>
+    <path d="M-6,-12 C-4,-8 -2,-6 0,-7 C2,-6 4,-8 6,-12" stroke="#E85070" stroke-width="0.8" fill="none"/>
+    <line x1="0" y1="6" x2="0" y2="16" stroke="#7A9E76" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

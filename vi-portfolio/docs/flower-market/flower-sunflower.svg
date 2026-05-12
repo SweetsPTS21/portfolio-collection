@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <radialGradient id="sfCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5A2E1A"/>
+      <stop offset="60%" stop-color="#4A2010"/>
+      <stop offset="100%" stop-color="#3A1808"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer petals (yellow) -->
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(22.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(45 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(67.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(90 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(112.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(135 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(157.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(180 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(202.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(225 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(247.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(270 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(292.5 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#F5D020" transform="rotate(315 40 40)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="10" fill="#ECC018" transform="rotate(337.5 40 40)"/>
+  <!-- Center disk -->
+  <circle cx="40" cy="40" r="16" fill="url(#sfCenter)"/>
+  <!-- Seed pattern -->
+  <circle cx="40" cy="31" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="45" cy="33" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="48" cy="38" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="47" cy="44" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="43" cy="48" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="38" cy="50" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="33" cy="48" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="30" cy="44" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="30" cy="38" r="1.2" fill="#7A4828" opacity="0.8"/>
+  <circle cx="33" cy="33" r="1.2" fill="#7A4828" opacity="0.8"/>
+</svg>
