@@ -1090,29 +1090,29 @@ src/components/
     └── AccentLine.jsx           ← Cherry accent divider
 ```
 
-### Get Assets 2D (Free)
+### Tự tạo Assets 2D bằng SVG
 
-> Dùng để trang trí hero, background, illustration. Nhớ ghi attribution ở footer.
+> Không dùng asset 2D tải ngoài. Tạo SVG riêng trong `src/assets/fashion-editorial/`, bám palette cherry/cream/ink và dùng shape tối giản để giữ cảm giác high-end.
 
-| Asset                    | Nguồn                                                           | License      | Dùng cho                    |
-| ------------------------ | --------------------------------------------------------------- | ------------ | --------------------------- |
-| Fashion illustration SVG | [unDraw](https://undraw.co)                                     | MIT / Free   | Hero, about section         |
-| Magazine layout textures | [Freepik](https://www.freepik.com) — search "fashion editorial" | Free (attr.) | Background, section divider |
-| Minimalist fashion icons | [Flaticon](https://www.flaticon.com) — search "fashion outline" | Free (attr.) | Skill icons, nav            |
-| Asymmetric blob shapes   | [Blobmaker](https://www.blobmaker.app)                          | Free         | Hero accent shapes          |
-| High-fashion silhouettes | [SVGRepo](https://www.svgrepo.com) — search "fashion"           | CC0 / MIT    | Hero decoration             |
-| Grain/noise texture PNG  | [Noise & Texture](https://www.noisetexture.com)                 | Free         | Overlay texture             |
+| File SVG tự tạo               | Nội dung cần vẽ                                              | Dùng cho                    | Gợi ý kỹ thuật                                           |
+| ----------------------------- | ------------------------------------------------------------ | --------------------------- | -------------------------------------------------------- |
+| `fashion-figure.svg`          | Nhân vật fashion dáng dài, ít chi tiết, line art thanh mảnh  | Hero, about section         | Dùng path stroke 1.5–2px, không vẽ mặt quá chi tiết      |
+| `magazine-spread-lines.svg`   | Khung trang tạp chí, số issue, grid line, accent cherry line | Background, section divider | Dùng rect/line/text giả lập layout editorial             |
+| `fashion-outline-icons.svg`   | Hanger, jacket, sparkle, lipstick dạng outline               | Skill icons, nav            | Gom thành symbol sprite hoặc nhiều icon 24x24            |
+| `editorial-blob-shapes.svg`   | Blob bất đối xứng mềm, dùng làm mảng nền                     | Hero accent shapes          | Fill bằng `var(--accent-soft)` hoặc opacity 0.12–0.2     |
+| `runway-silhouettes.svg`      | 3–4 silhouette thời trang đứng lệch nhịp                     | Hero decoration             | Dùng fill đen/ink, đặt opacity thấp để không lấn nội dung |
+| `grain-pattern.svg`           | Pattern noise nhẹ bằng filter `feTurbulence`                 | Overlay texture             | Xuất SVG inline hoặc data-uri, opacity 0.04–0.08         |
 
-**Footer attribution template:**
+**Gợi ý cấu trúc:**
 
-```html
-<footer>
-    <p>
-        Illustrations by <a href="https://undraw.co">unDraw</a> · Icons by
-        <a href="https://www.flaticon.com">Flaticon</a> · Textures by
-        <a href="https://www.freepik.com">Freepik</a>
-    </p>
-</footer>
+```
+src/assets/fashion-editorial/
+├── fashion-figure.svg
+├── magazine-spread-lines.svg
+├── fashion-outline-icons.svg
+├── editorial-blob-shapes.svg
+├── runway-silhouettes.svg
+└── grain-pattern.svg
 ```
 
 ---
@@ -1203,30 +1203,29 @@ src/components/
     └── FloatButton.jsx
 ```
 
-### Get Assets 2D (Free)
+### Tự tạo Assets 2D bằng SVG
 
-> Dùng để trang trí card, background, skill section. Nhớ ghi attribution ở footer.
+> Không dùng asset 2D tải ngoài. Tạo SVG riêng trong `src/assets/k-beauty/`, ưu tiên nét mảnh, bo tròn mềm, pastel dịu và nhiều khoảng trắng.
 
-| Asset                               | Nguồn                                                                      | License      | Dùng cho            |
-| ----------------------------------- | -------------------------------------------------------------------------- | ------------ | ------------------- |
-| Korean-style character illustration | [unDraw](https://undraw.co)                                                | MIT / Free   | Hero, about section |
-| Soft pastel blob shapes             | [Blobmaker](https://www.blobmaker.app)                                     | Free         | Background accent   |
-| Beauty & skincare icons             | [Flaticon](https://www.flaticon.com) — search "skincare outline"           | Free (attr.) | Skill badges, decor |
-| Pastel watercolor backgrounds       | [Freepik](https://www.freepik.com) — search "pastel watercolor background" | Free (attr.) | Hero background     |
-| Cherry blossom PNG/SVG              | [SVGRepo](https://www.svgrepo.com) — search "cherry blossom"               | CC0          | Section divider     |
-| Minimal line icons (K-style)        | [Feather Icons](https://feathericons.com)                                  | MIT          | UI icons            |
+| File SVG tự tạo             | Nội dung cần vẽ                                        | Dùng cho            | Gợi ý kỹ thuật                                      |
+| --------------------------- | ------------------------------------------------------ | ------------------- | --------------------------------------------------- |
+| `kbeauty-character.svg`     | Nhân vật nửa người, tóc và outfit tối giản kiểu K-look | Hero, about section | Dùng shape phẳng, mắt/mũi chỉ là vài stroke nhỏ     |
+| `soft-pastel-blobs.svg`     | 4–6 blob pastel mờ, bo mềm                             | Background accent   | Fill pastel opacity 0.16–0.28, có thể animate float |
+| `skincare-outline-icons.svg` | Serum bottle, cream jar, leaf, sparkle                 | Skill badges, decor | Icon 24x24, stroke round cap, dùng `currentColor`   |
+| `pastel-wash-bg.svg`        | Nền loang màu nhẹ như watercolor nhưng vẽ bằng gradient | Hero background     | Dùng radialGradient/linearGradient, tránh bitmap    |
+| `cherry-blossom-divider.svg` | Cành hoa anh đào mảnh, ít cánh rơi                     | Section divider     | Path stroke mềm, petal bằng ellipse màu hồng nhạt   |
+| `minimal-line-ui-icons.svg` | Arrow, mail, link, check, star đồng bộ nét             | UI icons            | Tự vẽ bộ icon nhỏ nếu không dùng icon library       |
 
-**Footer attribution template:**
+**Gợi ý cấu trúc:**
 
-```html
-<footer>
-    <p>
-        Illustrations by <a href="https://undraw.co">unDraw</a> · Icons by
-        <a href="https://www.flaticon.com">Flaticon</a> &
-        <a href="https://feathericons.com">Feather Icons</a> · Backgrounds by
-        <a href="https://www.freepik.com">Freepik</a>
-    </p>
-</footer>
+```
+src/assets/k-beauty/
+├── kbeauty-character.svg
+├── soft-pastel-blobs.svg
+├── skincare-outline-icons.svg
+├── pastel-wash-bg.svg
+├── cherry-blossom-divider.svg
+└── minimal-line-ui-icons.svg
 ```
 
 ---
@@ -1348,30 +1347,29 @@ src/components/
     └── StickerBadge.jsx         ← Skill badges dạng sticker
 ```
 
-### Get Assets 2D (Free)
+### Tự tạo Assets 2D bằng SVG
 
-> Dùng để tạo sticker, floating objects, decoration. Nhớ ghi attribution ở footer.
+> Không dùng asset 2D tải ngoài. Tạo SVG riêng trong `src/assets/dreamy-y2k/`, dùng gradient holographic, sticker viền trắng và shape vui nhưng vẫn rõ trên nền glassmorphism.
 
-| Asset                    | Nguồn                                                             | License      | Dùng cho               |
-| ------------------------ | ----------------------------------------------------------------- | ------------ | ---------------------- |
-| Holographic sticker PNG  | [Freepik](https://www.freepik.com) — search "holographic sticker" | Free (attr.) | Floating sticker layer |
-| Star & sparkle SVG       | [SVGRepo](https://www.svgrepo.com) — search "sparkle star"        | CC0          | Twinkle decoration     |
-| Butterfly illustration   | [unDraw](https://undraw.co) / [Freepik](https://www.freepik.com)  | Free (attr.) | Floating sticker       |
-| Y2K gradient backgrounds | [Freepik](https://www.freepik.com) — search "y2k gradient"        | Free (attr.) | Hero background        |
-| Retro pixel heart SVG    | [SVGRepo](https://www.svgrepo.com) — search "pixel heart"         | CC0          | Sticker decoration     |
-| Cloud & rainbow icons    | [Flaticon](https://www.flaticon.com) — search "cloud rainbow"     | Free (attr.) | Floating objects       |
+| File SVG tự tạo            | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                               |
+| -------------------------- | ---------------------------------------------------- | ---------------------- | ------------------------------------------------------------ |
+| `holo-sticker-sheet.svg`   | Sticker sheet gồm star, heart, butterfly, mini badge | Floating sticker layer | Mỗi sticker có stroke trắng 3–5px, filter shadow nhẹ         |
+| `sparkle-stars.svg`        | Cụm sparkle 4-point và 8-point nhiều kích thước      | Twinkle decoration     | Dùng polygon/path đơn giản, animate opacity/scale bằng CSS   |
+| `butterfly-sticker.svg`    | Bướm sticker cánh gradient hồng-tím-xanh             | Floating sticker       | Dùng linearGradient, stroke trắng, rotate nhẹ khi animate    |
+| `y2k-gradient-bg.svg`      | Background holographic bằng mesh-like radial gradient | Hero background        | Dùng nhiều radialGradient, opacity thấp, không dùng bitmap   |
+| `retro-pixel-heart.svg`    | Trái tim pixel 8-bit                                  | Sticker decoration     | Vẽ bằng rect grid, giữ cạnh vuông để đúng retro feel         |
+| `cloud-rainbow-icons.svg`  | Cloud, rainbow, crescent, tiny bow                    | Floating objects       | Tạo icon set đồng nét, màu pastel sáng, có outline trắng     |
 
-**Footer attribution template:**
+**Gợi ý cấu trúc:**
 
-```html
-<footer>
-    <p>
-        Stickers & illustrations by
-        <a href="https://www.freepik.com">Freepik</a> · Icons by
-        <a href="https://www.flaticon.com">Flaticon</a> · SVGs by
-        <a href="https://www.svgrepo.com">SVGRepo</a>
-    </p>
-</footer>
+```
+src/assets/dreamy-y2k/
+├── holo-sticker-sheet.svg
+├── sparkle-stars.svg
+├── butterfly-sticker.svg
+├── y2k-gradient-bg.svg
+├── retro-pixel-heart.svg
+└── cloud-rainbow-icons.svg
 ```
 
 ---
@@ -1485,29 +1483,29 @@ src/components/
     └── WatercolorFrame.jsx
 ```
 
-### Get Assets 2D (Free)
+### Tự tạo Assets 2D bằng SVG
 
-> Dùng để trang trí hero, section divider, card background. Nhớ ghi attribution ở footer.
+> Không dùng asset 2D tải ngoài. Tạo SVG riêng trong `src/assets/flower-market/`, theo hướng hand-drawn nhẹ, màu dusty rose/sage và hình hoa đủ đơn giản để animate.
 
-| Asset                       | Nguồn                                                                   | License      | Dùng cho               |
-| --------------------------- | ----------------------------------------------------------------------- | ------------ | ---------------------- |
-| Watercolor floral PNG/SVG   | [Freepik](https://www.freepik.com) — search "watercolor flower bouquet" | Free (attr.) | Hero, about, divider   |
-| Botanical line illustration | [unDraw](https://undraw.co)                                             | MIT / Free   | Section illustration   |
-| Flower & leaf SVG           | [SVGRepo](https://www.svgrepo.com) — search "flower bouquet"            | CC0          | Petal animation, decor |
-| Floral pattern background   | [Freepik](https://www.freepik.com) — search "dusty rose floral pattern" | Free (attr.) | Card background        |
-| Hand-drawn flower icons     | [Flaticon](https://www.flaticon.com) — search "hand drawn flower"       | Free (attr.) | Skill tags, decoration |
-| Vine / branch SVG           | [SVGRepo](https://www.svgrepo.com) — search "botanical vine"            | CC0          | VineDivider component  |
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                            |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | --------------------------------------------------------- |
+| `floral-bouquet.svg`         | Bó hoa chính gồm 3–5 bông, lá sage, ruy băng nhỏ      | Hero, about, divider   | Dùng path/ellipse với gradient rất nhẹ, tránh chi tiết dày |
+| `botanical-line-art.svg`     | Illustration line art cành lá và bình hoa             | Section illustration   | Stroke 1.5px, round cap, fill gần như không có            |
+| `petals-and-leaves.svg`      | Cánh hoa rời, lá nhỏ, bud hoa                         | Petal animation, decor | Mỗi petal là symbol riêng để random position bằng CSS/JS  |
+| `floral-pattern.svg`         | Pattern hoa nhỏ lặp lại cho nền card                  | Card background        | Dùng `<pattern>` SVG, opacity 0.08–0.14                   |
+| `handdrawn-flower-icons.svg` | Rose, daisy, leaf, tag, ribbon dạng icon              | Skill tags, decoration | Icon 24x24 hoặc 32x32, stroke không quá đều để handmade   |
+| `vine-divider.svg`           | Divider cành leo ngang, vài lá và chấm hoa            | VineDivider component  | Dùng stroke-dasharray để line draw khi scroll             |
 
-**Footer attribution template:**
+**Gợi ý cấu trúc:**
 
-```html
-<footer>
-    <p>
-        Floral illustrations by <a href="https://www.freepik.com">Freepik</a> ·
-        SVGs by <a href="https://www.svgrepo.com">SVGRepo</a> · Icons by
-        <a href="https://www.flaticon.com">Flaticon</a>
-    </p>
-</footer>
+```
+src/assets/flower-market/
+├── floral-bouquet.svg
+├── botanical-line-art.svg
+├── petals-and-leaves.svg
+├── floral-pattern.svg
+├── handdrawn-flower-icons.svg
+└── vine-divider.svg
 ```
 
 ---
@@ -1632,30 +1630,29 @@ src/components/
     └── CafeButton.jsx
 ```
 
-### Get Assets 2D (Free)
+### Tự tạo Assets 2D bằng SVG
 
-> Dùng để tạo texture giấy, decoration, illustration. Nhớ ghi attribution ở footer.
+> Không dùng asset 2D tải ngoài. Tạo SVG riêng trong `src/assets/cafe-bakery/`, ưu tiên texture procedural, nét handwritten và icon đồ uống/bánh đồng bộ.
 
-| Asset                      | Nguồn                                                               | License      | Dùng cho                   |
-| -------------------------- | ------------------------------------------------------------------- | ------------ | -------------------------- |
-| Kraft paper texture PNG    | [Freepik](https://www.freepik.com) — search "kraft paper texture"   | Free (attr.) | Background paper texture   |
-| Chalkboard background      | [Freepik](https://www.freepik.com) — search "chalkboard background" | Free (attr.) | Hero chalkboard effect     |
-| Coffee & bakery icons      | [Flaticon](https://www.flaticon.com) — search "coffee cup outline"  | Free (attr.) | Nav icons, skill badges    |
-| Handwritten flourish SVG   | [SVGRepo](https://www.svgrepo.com) — search "handwritten swirl"     | CC0          | Typography accent          |
-| Food illustration (pastry) | [unDraw](https://undraw.co) / [Freepik](https://www.freepik.com)    | Free (attr.) | Hero, menu card            |
-| Vintage recipe card PNG    | [Freepik](https://www.freepik.com) — search "vintage recipe card"   | Free (attr.) | Skill / project card frame |
+| File SVG tự tạo             | Nội dung cần vẽ                                      | Dùng cho                   | Gợi ý kỹ thuật                                              |
+| --------------------------- | ---------------------------------------------------- | -------------------------- | ----------------------------------------------------------- |
+| `kraft-paper-texture.svg`   | Texture giấy kraft/vanilla bằng noise nhẹ            | Background paper texture   | Dùng `feTurbulence` + overlay opacity thấp, xuất data-uri   |
+| `chalkboard-texture.svg`    | Nền bảng phấn với grain và vệt lau nhẹ               | Hero chalkboard effect     | Dùng filter noise, vài path trắng opacity 0.06–0.12         |
+| `coffee-bakery-icons.svg`   | Cup, croissant, whisk, bread, recipe note             | Nav icons, skill badges    | Icon outline 24x24, stroke round cap, dùng `currentColor`   |
+| `handwritten-flourish.svg`  | Swirl gạch chân, mũi tên tay, sparkle phấn            | Typography accent          | Path stroke không đều, có thể animate stroke-dashoffset     |
+| `pastry-illustration.svg`   | Croissant/cupcake/coffee cup dạng flat illustration   | Hero, menu card            | Fill caramel/matcha/cream, shadow rất nhẹ                   |
+| `recipe-card-frame.svg`     | Khung recipe card vintage, đường kẻ và góc giấy       | Skill / project card frame | Vẽ bằng rect/line, có notch nhỏ, dùng CSS để đổi màu border |
 
-**Footer attribution template:**
+**Gợi ý cấu trúc:**
 
-```html
-<footer>
-    <p>
-        Textures & illustrations by
-        <a href="https://www.freepik.com">Freepik</a> · Icons by
-        <a href="https://www.flaticon.com">Flaticon</a> · SVGs by
-        <a href="https://www.svgrepo.com">SVGRepo</a>
-    </p>
-</footer>
+```
+src/assets/cafe-bakery/
+├── kraft-paper-texture.svg
+├── chalkboard-texture.svg
+├── coffee-bakery-icons.svg
+├── handwritten-flourish.svg
+├── pastry-illustration.svg
+└── recipe-card-frame.svg
 ```
 
 ---

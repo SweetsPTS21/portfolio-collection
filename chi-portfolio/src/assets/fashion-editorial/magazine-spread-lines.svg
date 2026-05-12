@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Magazine layout grid">
+  <rect width="900" height="620" fill="#FFF8F5"/>
+  <path d="M450 54v512" stroke="#1A1118" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="54" y="54" width="342" height="512" fill="none" stroke="#1A1118" stroke-opacity=".18" stroke-width="2"/>
+  <rect x="504" y="54" width="342" height="512" fill="none" stroke="#1A1118" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M88 110h255M88 142h190M88 174h236M538 110h244M538 142h180M538 174h220" stroke="#1A1118" stroke-opacity=".22" stroke-width="7" stroke-linecap="square"/>
+  <path d="M88 250h120M88 280h190M88 310h150M538 280h244M538 310h178M538 340h220" stroke="#7A6070" stroke-opacity=".24" stroke-width="4"/>
+  <path d="M86 408h308M506 408h338" stroke="#C0183A" stroke-width="9"/>
+  <text x="76" y="526" fill="#C0183A" font-family="serif" font-size="54" font-weight="700">01</text>
+  <text x="746" y="526" fill="#C0183A" font-family="serif" font-size="54" font-weight="700">06</text>
+</svg>
