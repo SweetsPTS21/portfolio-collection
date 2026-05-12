@@ -1,3 +1,11 @@
+import avatarUrl from '../../docs/avatar.jpg';
+import bt1Url from '../../docs/bt1.pdf';
+import bt2Url from '../../docs/bt2.pdf';
+import bt3Url from '../../docs/bt3.pdf';
+import bt4Url from '../../docs/bt4.pdf';
+import bt5Url from '../../docs/bt5.pdf';
+import bt6Url from '../../docs/bt6.pdf';
+
 export const personalInfo = {
   heroTitle: 'Welcome To My Portfolio',
   fullName: 'Nguyễn Thị Hồng Nhung',
@@ -11,7 +19,7 @@ export const personalInfo = {
   portfolioGoal:
     'Portfolio này là hành trình mình chinh phục môn học Nhập môn Công nghệ số và Trí tuệ nhân tạo. Tại đây, mình mong muốn chứng minh rằng: Một sinh viên Luật hiện đại không chỉ am hiểu văn bản pháp luật mà còn là một công dân số nhạy bén, biết sử dụng công nghệ để làm đẹp và chuyên nghiệp hóa kho tàng tri thức của mình.',
   imageNote: 'ảnh cá nhân, ảnh thẻ hoặc mặt chính diện',
-  avatar: '/docs/avatar.jpg',
+  avatar: avatarUrl,
 };
 
 export const goals = [
@@ -51,7 +59,7 @@ export const projects = [
     action:
       'Mình lựa chọn và sắp xếp các thiết bị ngoại vi dựa trên tiêu chí: Hiệu suất cao - Thẩm mỹ - Gọn gàng. Một không gian làm việc chỉn chu là khởi đầu cho những ý tưởng sáng tạo.',
     product: 'File mô tả sơ đồ thiết bị làm việc của Nhung',
-    file: '/docs/bt1.pdf',
+    file: bt1Url,
   },
   {
     title: 'Bài tập 2: Khai thác dữ liệu pháp luật khoa học',
@@ -59,7 +67,7 @@ export const projects = [
     action:
       'Áp dụng các phương pháp lọc dữ liệu để xây dựng danh mục tài liệu tham khảo cho các môn luật chuyên ngành. Cách mình trình bày bảng dữ liệu luôn đảm bảo tính logic, dễ tra cứu.',
     product: 'Bảng tổng hợp dữ liệu/Kết quả tìm kiếm văn bản pháp luật',
-    file: '/docs/bt2.pdf',
+    file: bt2Url,
   },
   {
     title: 'Bài tập 3: AI - Cánh tay nối dài của Luật gia',
@@ -67,7 +75,7 @@ export const projects = [
     action:
       'Nghiên cứu cách AI có thể hỗ trợ phân loại hồ sơ và dự báo xu hướng pháp lý. Mình tập trung vào việc biến những khái niệm AI khô khan thành các sơ đồ thông tin (Infographic) đẹp mắt.',
     product: 'Sơ đồ/Bản đồ tư duy về ứng dụng AI trong ngành Luật',
-    file: '/docs/bt3.pdf',
+    file: bt3Url,
   },
   {
     title: 'Bài tập 4: Giao tiếp & Cộng tác số năng động',
@@ -75,7 +83,7 @@ export const projects = [
     action:
       'Đóng góp vai trò điều phối trong nhóm, sử dụng các nền tảng số để quản lý dự án chung. Sự chỉn chu trong giao tiếp văn bản là chìa khóa để nhóm mình đạt kết quả tốt nhất.',
     product: 'Nhật ký làm việc nhóm/Hình ảnh minh họa quá trình hợp tác',
-    file: '/docs/bt4.pdf',
+    file: bt4Url,
   },
   {
     title: 'Bài tập 5: Sáng tạo nội dung số - Khi Luật học trở nên thú vị',
@@ -83,7 +91,7 @@ export const projects = [
     action:
       'Vận dụng kỹ năng sáng tạo nội dung mạng xã hội để thiết kế một video ngắn giới thiệu về một quy định pháp luật. Mình sử dụng AI để hỗ trợ chỉnh sửa hình ảnh và tạo kịch bản hấp dẫn.',
     product: 'Video clip/Hình ảnh thiết kế sáng tạo',
-    file: '/docs/bt5.pdf',
+    file: bt5Url,
   },
   {
     title: 'Bài tập 6: Liêm chính học thuật & Đạo đức AI',
@@ -91,7 +99,7 @@ export const projects = [
     action:
       'Phân tích các vấn đề bản quyền trong thời trang và nội dung số khi có sự can thiệp của AI. Đề xuất các nguyên tắc cá nhân để sử dụng AI một cách trung thực.',
     product: 'Bản cam kết/Quy tắc liêm chính học thuật cá nhân',
-    file: '/docs/bt6.pdf',
+    file: bt6Url,
   },
 ];
 
