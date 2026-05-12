@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   min-width: 320px;
   margin: 0;
   background: var(--cream);
@@ -390,7 +391,7 @@ main,
 
 .pull-quote {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   min-height: 440px;
   padding: clamp(28px, 5vw, 58px);
   border: 1px solid var(--ink);
@@ -661,7 +662,7 @@ main,
 
 .reflection-lead {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   min-height: 430px;
   padding: 34px;
   background: var(--cherry);
@@ -758,10 +759,53 @@ main,
 
   .hero-section {
     min-height: auto;
+    padding: clamp(42px, 7vw, 64px) 0 clamp(62px, 9vw, 82px);
+  }
+
+  .section-shell {
+    padding: clamp(58px, 9vw, 100px) 0;
   }
 
   .hero-visual {
-    min-height: 600px;
+    width: min(640px, 100%);
+    min-height: clamp(520px, 78vw, 620px);
+    margin: 0 auto;
+  }
+
+  .hero-spread {
+    top: 40%;
+    left: -10%;
+    width: min(560px, 82vw);
+    opacity: 0.26;
+  }
+
+  .portrait-frame {
+    inset: 22px clamp(34px, 8vw, 64px) 64px clamp(18px, 4vw, 32px);
+  }
+
+  .runway {
+    right: -14px;
+    bottom: 10px;
+    width: 68%;
+  }
+
+  .figure-line {
+    left: -22px;
+    width: min(176px, 28vw);
+  }
+
+  .caption-card {
+    right: 0;
+    bottom: 84px;
+    width: min(280px, 54%);
+  }
+
+  .pull-quote {
+    min-height: clamp(260px, 42vw, 360px);
+  }
+
+  .reflection-lead {
+    min-height: clamp(280px, 42vw, 360px);
   }
 
   .tool-grid {
@@ -774,20 +818,55 @@ main,
 }
 
 @media (max-width: 680px) {
+  .app-blob {
+    width: 360px;
+    opacity: 0.42;
+  }
+
+  .app-blob.one {
+    left: -210px;
+  }
+
+  .app-blob.two {
+    right: -210px;
+  }
+
   .editorial-nav nav {
     display: none;
+  }
+
+  .hero-section,
+  .section-shell,
+  .editorial-footer {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero-section {
+    gap: 22px;
+    padding: 34px 0 54px;
+  }
+
+  .section-shell {
+    padding: 54px 0;
   }
 
   .hero-copy h1 {
     font-size: clamp(4.2rem, 24vw, 6.2rem);
   }
 
+  .hero-spread {
+    top: 47%;
+    left: -8%;
+    width: min(300px, 76vw);
+    opacity: 0.2;
+  }
+
   .hero-visual {
-    min-height: 500px;
+    min-height: clamp(430px, 118vw, 500px);
   }
 
   .portrait-frame {
-    inset: 32px 20px 74px 20px;
+    inset: 28px 18px 62px 18px;
     box-shadow:
       14px 14px 0 var(--cherry),
       0 20px 40px var(--shadow);
@@ -795,11 +874,18 @@ main,
 
   .figure-line {
     left: -16px;
-    width: 150px;
+    width: min(135px, 36vw);
   }
 
   .icon-strip {
-    width: 190px;
+    width: min(170px, 48vw);
+    padding: 12px;
+  }
+
+  .caption-card {
+    bottom: 78px;
+    width: min(250px, 72%);
+    padding: 14px 16px;
   }
 
   .section-heading,
@@ -812,11 +898,23 @@ main,
   }
 
   .pull-quote {
-    min-height: 300px;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .reflection-lead {
+    align-items: flex-start;
+    min-height: 260px;
+    padding: 26px;
   }
 
   .project-cover {
     min-height: 140px;
+  }
+
+  .tool-card {
+    min-height: auto;
   }
 
   .tool-grid {
