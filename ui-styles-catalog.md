@@ -21,11 +21,11 @@
 | `art-festival`        | Art Festival / Creative Fair Portfolio | Graphic, lễ hội, poster mạnh     | Portfolio sáng tạo, nổi bật        |
 | `botanical-garden`    | Botanical Garden Portfolio             | Calm, organic, clean             | Portfolio nhẹ nhàng, tinh tế       |
 | `toy-box`             | Toy Box / Playroom Portfolio           | Vui, blocky, thử nghiệm          | Portfolio sáng tạo, linh hoạt      |
-| `fashion-editorial`   | Fashion Editorial Portfolio            | Stylish, trendy, tự tin           | Portfolio high-end, hiện đại       |
-| `k-beauty`            | K-Beauty / Korean Aesthetic Portfolio  | Tinh tế, clean, soft              | UI hiện đại, feminine              |
-| `dreamy-y2k`          | Dreamy Y2K Girl Portfolio              | Girly, nostalgic, nổi bật         | Portfolio Pinterest-worthy          |
-| `flower-market`       | Flower Market Portfolio                | Dịu dàng, artistic, ấm áp         | Portfolio feminine, artisan        |
-| `cafe-bakery`         | Cafe & Bakery Portfolio                | Thân thiện, đáng yêu, ấm áp       | Portfolio nữ hiện đại              |
+| `fashion-editorial`   | Fashion Editorial Portfolio            | Stylish, trendy, tự tin          | Portfolio high-end, hiện đại       |
+| `k-beauty`            | K-Beauty / Korean Aesthetic Portfolio  | Tinh tế, clean, soft             | UI hiện đại, feminine              |
+| `dreamy-y2k`          | Dreamy Y2K Girl Portfolio              | Girly, nostalgic, nổi bật        | Portfolio Pinterest-worthy         |
+| `flower-market`       | Flower Market Portfolio                | Dịu dàng, artistic, ấm áp        | Portfolio feminine, artisan        |
+| `cafe-bakery`         | Cafe & Bakery Portfolio                | Thân thiện, đáng yêu, ấm áp      | Portfolio nữ hiện đại              |
 
 ---
 
@@ -1006,6 +1006,660 @@ src/components/
 
 ---
 
+## 12. `fashion-editorial` — Fashion Editorial Portfolio
+
+Theme như website tạp chí thời trang cao cấp nhưng trẻ trung. Typography lớn, sang; layout bất đối xứng; ảnh full-width; nhiều khoảng trắng kết hợp accent màu nổi bật.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                          |
+| ----------- | -------------------------------------------------------------- |
+| Cảm xúc     | Stylish, trendy, tự tin, "cool girl"                           |
+| Hình khối   | Bất đối xứng có chủ đích, negative space táo bạo               |
+| Không gian  | White space cực lớn; section như các trang editorial tạp chí   |
+| Chuyển động | Text reveal chậm, image pan nhẹ, hover accent flash            |
+| Điểm nhấn   | Typography siêu lớn, ảnh full-width, accent màu nổi bật đơn lẻ |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFF8F5", // Kem ấm
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#C0183A", // Đỏ cherry
+        colorTextBase: "#1A1118", // Đen mềm
+        colorTextSecondary: "#7A6070",
+        colorBorder: "#F0E0D6",
+        borderRadius: 0, // Flat editorial
+        fontFamily: "'Cormorant Garamond', 'Outfit', serif",
+    },
+};
+
+// CSS Variables
+// --blush-pink: #F4A7A7;      /* Hồng đào */
+// --cherry-red: #C0183A;      /* Đỏ cherry */
+// --champagne: #C9A96E;       /* Champagne gold */
+// --soft-black: #1A1118;      /* Đen mềm */
+// --cream: #FFF8F5;           /* Kem */
+```
+
+### Typography
+
+- **Display / Heading:** `Cormorant Garamond` (high-contrast serif, magazine-grade)
+- **Body / UI:** `Outfit` (clean, trendy sans-serif)
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Outfit:wght@300;400;500;600&display=swap");
+```
+
+### Layout ideas
+
+- **Hero:** Tên lớn choán nửa viewport, ảnh portrait lệch sang phải full-height.
+- **About:** Bố cục phỏng vấn tạp chí — câu hỏi in nghiêng nhỏ, trả lời chữ to hơn.
+- **Projects:** Mỗi project như một editorial spread: ảnh lớn + caption nhỏ + link.
+- **Skills:** Danh sách kiểu mục lục tạp chí với số thứ tự.
+- **Contact:** CTA lớn, đơn giản, typography làm trọng tâm.
+
+### Animation rules
+
+| Sự kiện          | Effect                                  | Thư viện             |
+| ---------------- | --------------------------------------- | -------------------- |
+| Hero load        | Text slide từ dưới lên từng dòng        | CSS `@keyframes`     |
+| Image scroll     | Subtle parallax pan dọc                 | JS scroll listener   |
+| Section entrance | Clip-path reveal từ trái                | CSS clip-path        |
+| Card hover       | Cherry accent border flash + scale 1.01 | CSS transition 300ms |
+| Nav hover        | Gạch chân grow từ trái, màu cherry      | CSS pseudo-element   |
+
+### Component notes
+
+```
+src/components/
+├── editorial/
+│   ├── EditorialHero.jsx        ← Tên lớn + ảnh lệch
+│   ├── EditorialSpread.jsx      ← Project như trang tạp chí
+│   └── EditorialNav.jsx         ← Nav kiểu tạp chí
+├── sections/
+│   ├── FashionHeroSection.jsx
+│   ├── InterviewAboutSection.jsx
+│   ├── SpreadProjectsSection.jsx
+│   └── FashionContactSection.jsx
+└── ui/
+    ├── IssueNumber.jsx          ← Số trang/issue decoration
+    ├── PullQuote.jsx            ← Quote nổi bật
+    └── AccentLine.jsx           ← Cherry accent divider
+```
+
+### Get Assets 2D (Free)
+
+> Dùng để trang trí hero, background, illustration. Nhớ ghi attribution ở footer.
+
+| Asset                    | Nguồn                                                           | License      | Dùng cho                    |
+| ------------------------ | --------------------------------------------------------------- | ------------ | --------------------------- |
+| Fashion illustration SVG | [unDraw](https://undraw.co)                                     | MIT / Free   | Hero, about section         |
+| Magazine layout textures | [Freepik](https://www.freepik.com) — search "fashion editorial" | Free (attr.) | Background, section divider |
+| Minimalist fashion icons | [Flaticon](https://www.flaticon.com) — search "fashion outline" | Free (attr.) | Skill icons, nav            |
+| Asymmetric blob shapes   | [Blobmaker](https://www.blobmaker.app)                          | Free         | Hero accent shapes          |
+| High-fashion silhouettes | [SVGRepo](https://www.svgrepo.com) — search "fashion"           | CC0 / MIT    | Hero decoration             |
+| Grain/noise texture PNG  | [Noise & Texture](https://www.noisetexture.com)                 | Free         | Overlay texture             |
+
+**Footer attribution template:**
+
+```html
+<footer>
+    <p>
+        Illustrations by <a href="https://undraw.co">unDraw</a> · Icons by
+        <a href="https://www.flaticon.com">Flaticon</a> · Textures by
+        <a href="https://www.freepik.com">Freepik</a>
+    </p>
+</footer>
+```
+
+---
+
+## 13. `k-beauty` — K-Beauty / Korean Aesthetic Portfolio
+
+Phong cách Hàn Quốc: sáng, mềm, rất clean. Nền trắng sữa/pastel, card bo tròn mềm, shadow nhẹ, animation tối giản và mượt mà như beauty product showcase.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                   |
+| ----------- | ------------------------------------------------------- |
+| Cảm xúc     | Tinh tế, chuyên nghiệp, nhẹ nhàng, dễ chịu              |
+| Hình khối   | Bo tròn lớn (20–28px), card nổi nhẹ, shadow tinh tế     |
+| Không gian  | Nền trắng sữa, spacing rộng rãi, hierarchy rõ ràng      |
+| Chuyển động | Fade-in mượt, hover float nhẹ, transition easing smooth |
+| Điểm nhấn   | Pastel accent chọn lọc, icon tối giản, tag bo tròn      |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FDF9F7", // Trắng sữa
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#E8A0BF", // Hồng phấn chủ đạo
+        colorTextBase: "#2D2D35",
+        colorTextSecondary: "#8A8498",
+        colorInfo: "#B8D8F5", // Sky blue pastel
+        colorSuccess: "#D4C5F9", // Lavender
+        colorBorder: "#F0E6EC",
+        borderRadius: 24,
+        fontFamily: "'Plus Jakarta Sans', 'Noto Sans KR', sans-serif",
+    },
+};
+
+// CSS Variables
+// --pink-powder: #E8A0BF;     /* Hồng phấn */
+// --lavender: #D4C5F9;        /* Lavender */
+// --beige: #F5EDE8;           /* Beige ấm */
+// --peach: #FFD6C0;           /* Peach nhẹ */
+// --sky-pastel: #B8D8F5;      /* Sky blue pastel */
+```
+
+### Typography
+
+- **Heading:** `Plus Jakarta Sans` (modern, clean, premium feel)
+- **Body:** `Noto Sans KR` (phù hợp vibe K-style, dễ đọc)
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap");
+```
+
+### Layout ideas
+
+- **Hero:** Nền trắng sữa, tên với weight nhẹ + tagline pastel, avatar/ảnh bo tròn lớn.
+- **About:** Clean card với pastel soft border, thông tin ngắn gọn như beauty profile.
+- **Projects:** Grid 2–3 cột, card bo tròn, shadow `0 4px 20px rgba(0,0,0,0.06)`.
+- **Skills:** Tag pill bo tròn, pastel background theo nhóm skill.
+- **Contact:** Form tối giản, button bo tròn, hover nhẹ.
+
+### Animation rules
+
+| Sự kiện          | Effect                          | Thư viện             |
+| ---------------- | ------------------------------- | -------------------- |
+| Section entrance | Fade-in + translateY(12px → 0)  | React Motion         |
+| Card hover       | Float lên 4px + shadow tăng nhẹ | CSS transition 250ms |
+| Tag hover        | Background đổi pastel shade nhẹ | CSS transition 200ms |
+| Button hover     | Scale 1.02 + shadow pastel      | CSS transition 200ms |
+| Image hover      | Scale 1.03 nhẹ                  | CSS transition 400ms |
+
+### Component notes
+
+```
+src/components/
+├── kbeauty/
+│   ├── SoftBackground.jsx       ← Pastel gradient nền
+│   ├── GlassCard.jsx            ← Card bo tròn, shadow nhẹ
+│   └── PastelTag.jsx            ← Tag pill skill
+├── sections/
+│   ├── KBeautyHeroSection.jsx
+│   ├── BeautyProfileSection.jsx
+│   ├── ProductShowcaseSection.jsx
+│   └── KBeautyContactSection.jsx
+└── ui/
+    ├── SoftCard.jsx
+    ├── PillBadge.jsx
+    └── FloatButton.jsx
+```
+
+### Get Assets 2D (Free)
+
+> Dùng để trang trí card, background, skill section. Nhớ ghi attribution ở footer.
+
+| Asset                               | Nguồn                                                                      | License      | Dùng cho            |
+| ----------------------------------- | -------------------------------------------------------------------------- | ------------ | ------------------- |
+| Korean-style character illustration | [unDraw](https://undraw.co)                                                | MIT / Free   | Hero, about section |
+| Soft pastel blob shapes             | [Blobmaker](https://www.blobmaker.app)                                     | Free         | Background accent   |
+| Beauty & skincare icons             | [Flaticon](https://www.flaticon.com) — search "skincare outline"           | Free (attr.) | Skill badges, decor |
+| Pastel watercolor backgrounds       | [Freepik](https://www.freepik.com) — search "pastel watercolor background" | Free (attr.) | Hero background     |
+| Cherry blossom PNG/SVG              | [SVGRepo](https://www.svgrepo.com) — search "cherry blossom"               | CC0          | Section divider     |
+| Minimal line icons (K-style)        | [Feather Icons](https://feathericons.com)                                  | MIT          | UI icons            |
+
+**Footer attribution template:**
+
+```html
+<footer>
+    <p>
+        Illustrations by <a href="https://undraw.co">unDraw</a> · Icons by
+        <a href="https://www.flaticon.com">Flaticon</a> &
+        <a href="https://feathericons.com">Feather Icons</a> · Backgrounds by
+        <a href="https://www.freepik.com">Freepik</a>
+    </p>
+</footer>
+```
+
+---
+
+## 14. `dreamy-y2k` — Dreamy Y2K Girl Portfolio
+
+Style Y2K theo hướng sáng và nghệ: gradient holographic, sticker trang trí, glassmorphism, cursor custom, floating objects và typography playful. Nếu làm khéo sẽ rất "Pinterest".
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                               |
+| ----------- | ------------------------------------------------------------------- |
+| Cảm xúc     | Girly, internet aesthetic, nostalgic, cực nổi bật                   |
+| Hình khối   | Glassmorphism card, sticker floating, shape holographic             |
+| Không gian  | Gradient holographic làm nền, floating objects trang trí            |
+| Chuyển động | Sticker float/rotate, sparkle twinkle, cursor trail                 |
+| Điểm nhấn   | Sticker sao ⭐, bướm 🦋, trái tim 💗, sparkles ✨, hologram shimmer |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F0EBFF", // Tím pastel nhạt
+        colorBgContainer: "rgba(255,255,255,0.6)", // Glassmorphism
+        colorPrimary: "#C084FC", // Tím holographic
+        colorTextBase: "#2D1B5E",
+        colorTextSecondary: "#7C5FA0",
+        colorInfo: "#93C5FD", // Xanh baby
+        colorBorder: "rgba(192,132,252,0.3)",
+        borderRadius: 20,
+        fontFamily: "'Quicksand', 'Pacifico', sans-serif",
+    },
+};
+
+// CSS Variables
+// --holo-silver: linear-gradient(135deg, #e0c3fc, #8ec5fc, #fbc2eb);
+// --neon-pink-soft: #F9A8D4;   /* Hồng neon nhẹ */
+// --purple-pastel: #DDD6FE;    /* Tím pastel */
+// --baby-blue: #BAE6FD;        /* Xanh baby */
+// --glass-bg: rgba(255,255,255,0.25);
+// --glass-border: rgba(255,255,255,0.4);
+```
+
+### Typography
+
+- **Display:** `Pacifico` (retro-playful, Y2K vibe)
+- **Body:** `Quicksand` (rounded, cute, readable)
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap");
+```
+
+### Layout ideas
+
+- **Hero:** Holographic gradient nền, tên font Pacifico lớn, sticker trôi nổi xung quanh.
+- **Glassmorphism cards:** `backdrop-filter: blur(12px)`, viền trắng trong suốt.
+- **Sticker layer:** Butterflies, stars, hearts rải rác qua CSS/SVG với float animation.
+- **Cursor custom:** Cursor trail sparkle (JS canvas nhẹ).
+- **Projects:** Card glass effect, mỗi project có "sticker" riêng.
+
+### CSS Glassmorphism snippet
+
+```css
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(192, 132, 252, 0.15);
+}
+
+@keyframes sticker-float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+    66% {
+        transform: translateY(-4px) rotate(-2deg);
+    }
+}
+
+.sticker {
+    animation: sticker-float 4s ease-in-out infinite;
+}
+```
+
+### Animation rules
+
+| Sự kiện      | Effect                    | Thư viện             |
+| ------------ | ------------------------- | -------------------- |
+| Page load    | Sticker fly in từ các góc | CSS `@keyframes`     |
+| Sticker idle | Float + rotate nhẹ vô tận | CSS animation        |
+| Sparkle      | Twinkle opacity + scale   | CSS `@keyframes`     |
+| Card hover   | Glass shimmer + lift      | CSS transition 300ms |
+| Cursor       | Trail sparkle effect      | JS Canvas            |
+
+### Component notes
+
+```
+src/components/
+├── y2k/
+│   ├── HoloBackground.jsx       ← Holographic gradient nền
+│   ├── StickerLayer.jsx         ← Floating stickers
+│   ├── CursorTrail.jsx          ← Sparkle cursor effect
+│   └── GlassCard.jsx            ← Glassmorphism card
+├── sections/
+│   ├── Y2KHeroSection.jsx
+│   ├── DreamyAboutSection.jsx
+│   ├── StickerProjectsSection.jsx
+│   └── Y2KContactSection.jsx
+└── ui/
+    ├── HoloButton.jsx
+    ├── SparkleText.jsx
+    └── StickerBadge.jsx         ← Skill badges dạng sticker
+```
+
+### Get Assets 2D (Free)
+
+> Dùng để tạo sticker, floating objects, decoration. Nhớ ghi attribution ở footer.
+
+| Asset                    | Nguồn                                                             | License      | Dùng cho               |
+| ------------------------ | ----------------------------------------------------------------- | ------------ | ---------------------- |
+| Holographic sticker PNG  | [Freepik](https://www.freepik.com) — search "holographic sticker" | Free (attr.) | Floating sticker layer |
+| Star & sparkle SVG       | [SVGRepo](https://www.svgrepo.com) — search "sparkle star"        | CC0          | Twinkle decoration     |
+| Butterfly illustration   | [unDraw](https://undraw.co) / [Freepik](https://www.freepik.com)  | Free (attr.) | Floating sticker       |
+| Y2K gradient backgrounds | [Freepik](https://www.freepik.com) — search "y2k gradient"        | Free (attr.) | Hero background        |
+| Retro pixel heart SVG    | [SVGRepo](https://www.svgrepo.com) — search "pixel heart"         | CC0          | Sticker decoration     |
+| Cloud & rainbow icons    | [Flaticon](https://www.flaticon.com) — search "cloud rainbow"     | Free (attr.) | Floating objects       |
+
+**Footer attribution template:**
+
+```html
+<footer>
+    <p>
+        Stickers & illustrations by
+        <a href="https://www.freepik.com">Freepik</a> · Icons by
+        <a href="https://www.flaticon.com">Flaticon</a> · SVGs by
+        <a href="https://www.svgrepo.com">SVGRepo</a>
+    </p>
+</footer>
+```
+
+---
+
+## 15. `flower-market` — Flower Market Portfolio
+
+Portfolio như một cửa hàng hoa/artisan floral studio. Hero như bảng hiệu shop hoa, projects như các bó hoa/bộ sưu tập, skills như tag treo trên hoa, contact như card đặt hoa.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                              |
+| ----------- | ------------------------------------------------------------------ |
+| Cảm xúc     | Dịu dàng, artistic, feminine, ấm áp                                |
+| Hình khối   | Bo góc nhẹ, card như thẻ tag hoa, divider dạng nhánh cây           |
+| Không gian  | Nền trắng ngà/kem, khoảng trắng thoáng, illustration làm điểm nhấn |
+| Chuyển động | Hoa nở dần, cánh hoa rơi, hover sway nhẹ                           |
+| Điểm nhấn   | Illustration hoa vẽ tay / watercolor, tag treo, ribbon             |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FDF6F0", // Trắng ngà ấm
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#C9797A", // Hồng dusty rose
+        colorTextBase: "#2D1F1F",
+        colorTextSecondary: "#8A6E6E",
+        colorSuccess: "#8FAF8A", // Sage green
+        colorWarning: "#E8C99A", // Vàng kem
+        colorBorder: "#EDCFC0",
+        borderRadius: 14,
+        fontFamily: "'Lora', 'DM Sans', serif",
+    },
+};
+
+// CSS Variables
+// --dusty-rose: #C9797A;      /* Hồng dusty rose */
+// --cream-yellow: #F5E6C8;    /* Vàng kem */
+// --sage-green: #8FAF8A;      /* Xanh sage */
+// --ivory: #FDF6F0;           /* Trắng ngà */
+// --peach-pastel: #F5C5A3;    /* Cam pastel */
+```
+
+### Typography
+
+- **Heading:** `Lora` (organic serif, floral feel)
+- **Body:** `DM Sans` (clean, modern, cân bằng)
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap");
+```
+
+### Layout ideas
+
+- **Hero:** Bảng hiệu shop hoa — tên shop lớn, tagline serif nhỏ, illustration/ảnh hoa full-width.
+- **Projects:** Grid như showcase bó hoa — ảnh lớn, tên bó hoa (= tên project), tag nguyên liệu (= tech stack).
+- **Skills:** Tag treo trên dây/nhánh cây; mỗi tag là một skill.
+- **About:** Card giới thiệu florist — ảnh, story ngắn, style chữ serif ấm áp.
+- **Contact:** CTA như form đặt hoa, button "Book Now" / "Send a bouquet".
+
+### Animation rules
+
+| Sự kiện          | Effect                            | Thư viện             |
+| ---------------- | --------------------------------- | -------------------- |
+| Section entrance | Hoa nở dần (scale + opacity)      | React Motion         |
+| Petal decoration | Rơi chậm từ trên xuống            | CSS `@keyframes`     |
+| Tag hover        | Sway rotate ±3deg                 | CSS transition 300ms |
+| Card hover       | Lift + shadow dusty rose          | CSS transition 250ms |
+| Divider          | SVG vine draw (stroke-dashoffset) | CSS / SVG animation  |
+
+### CSS Petal Fall snippet
+
+```css
+@keyframes petal-fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.petal {
+    animation: petal-fall 6s linear infinite;
+}
+```
+
+### Component notes
+
+```
+src/components/
+├── floral/
+│   ├── FloralBackground.jsx     ← Nền kem + petal rain
+│   ├── BouquetCard.jsx          ← Project card dạng bó hoa
+│   ├── HangingTag.jsx           ← Skill tag treo trên dây
+│   └── VineDivider.jsx          ← SVG divider dạng nhánh
+├── sections/
+│   ├── ShopHeroSection.jsx
+│   ├── FloristAboutSection.jsx
+│   ├── BouquetProjectsSection.jsx
+│   └── BookingContactSection.jsx
+└── ui/
+    ├── FloralButton.jsx
+    ├── TagBadge.jsx
+    └── WatercolorFrame.jsx
+```
+
+### Get Assets 2D (Free)
+
+> Dùng để trang trí hero, section divider, card background. Nhớ ghi attribution ở footer.
+
+| Asset                       | Nguồn                                                                   | License      | Dùng cho               |
+| --------------------------- | ----------------------------------------------------------------------- | ------------ | ---------------------- |
+| Watercolor floral PNG/SVG   | [Freepik](https://www.freepik.com) — search "watercolor flower bouquet" | Free (attr.) | Hero, about, divider   |
+| Botanical line illustration | [unDraw](https://undraw.co)                                             | MIT / Free   | Section illustration   |
+| Flower & leaf SVG           | [SVGRepo](https://www.svgrepo.com) — search "flower bouquet"            | CC0          | Petal animation, decor |
+| Floral pattern background   | [Freepik](https://www.freepik.com) — search "dusty rose floral pattern" | Free (attr.) | Card background        |
+| Hand-drawn flower icons     | [Flaticon](https://www.flaticon.com) — search "hand drawn flower"       | Free (attr.) | Skill tags, decoration |
+| Vine / branch SVG           | [SVGRepo](https://www.svgrepo.com) — search "botanical vine"            | CC0          | VineDivider component  |
+
+**Footer attribution template:**
+
+```html
+<footer>
+    <p>
+        Floral illustrations by <a href="https://www.freepik.com">Freepik</a> ·
+        SVGs by <a href="https://www.svgrepo.com">SVGRepo</a> · Icons by
+        <a href="https://www.flaticon.com">Flaticon</a>
+    </p>
+</footer>
+```
+
+---
+
+## 16. `cafe-bakery` — Cafe & Bakery Portfolio
+
+Theme như một quán cafe/bakery aesthetic. Navigation như menu, projects như món trong menu, about me như "chef story", skills như recipe ingredients. Texture giấy, handwritten font nhẹ.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                              |
+| ----------- | -------------------------------------------------- |
+| Cảm xúc     | Thân thiện, đáng yêu, chuyên nghiệp, ấm áp         |
+| Hình khối   | Bo góc vừa, card như thực đơn, texture giấy kraft  |
+| Không gian  | Nền kem/nâu sữa, khoảng trắng thoáng như menu cafe |
+| Chuyển động | Steam rise, crumble fall, hover lift nhẹ           |
+| Điểm nhấn   | Menu typography, handwritten accent, recipe layout |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FAF3E8", // Kem vanilla
+        colorBgContainer: "#FFFDF7",
+        colorPrimary: "#8B5E3C", // Nâu sữa
+        colorTextBase: "#2C1810",
+        colorTextSecondary: "#7A5C46",
+        colorSuccess: "#7A9E7E", // Matcha green
+        colorWarning: "#D4A056", // Caramel
+        colorError: "#C47A7A", // Hồng mocha
+        colorBorder: "#E8D5BA",
+        borderRadius: 12,
+        fontFamily: "'Playfair Display', 'Lato', serif",
+    },
+};
+
+// CSS Variables
+// --milk-brown: #8B5E3C;      /* Nâu sữa */
+// --vanilla: #FAF3E8;         /* Kem vanilla */
+// --mocha-pink: #C47A7A;      /* Hồng mocha */
+// --caramel: #D4A056;         /* Caramel */
+// --matcha: #7A9E7E;          /* Matcha green */
+```
+
+### Typography
+
+- **Heading / Menu titles:** `Playfair Display` (elegant serif, menu feel)
+- **Body / Ingredients:** `Lato` (clean, readable)
+- **Accent handwritten:** `Caveat` (handwritten cho details nhỏ)
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Caveat:wght@400;600&display=swap");
+```
+
+### Layout ideas
+
+- **Navigation:** Thanh nav style menu cafe — các mục như "Today's Special", "About Chef", "Our Menu", "Reserve a Table".
+- **Hero:** Chalkboard-style hoặc kraft paper hero, tên to dạng menu headline.
+- **Projects (Menu):** Mỗi project như một món trong menu — tên, mô tả ngắn, "ingredients" = tech stack, "price" = link/demo.
+- **About (Chef Story):** Card story với ảnh, text serif ấm áp, handwritten quote.
+- **Skills (Recipe):** Layout recipe — ingredients list theo nhóm, với icon tương ứng.
+- **Contact:** "Reserve a Table" — form đặt chỗ, button CTA kiểu cafe.
+
+### CSS Paper Texture snippet
+
+```css
+.paper-texture {
+    background-color: #faf3e8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23FAF3E8'/%3E%3Ccircle cx='1' cy='1' r='0.5' fill='%23E8D5BA' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-15px) scaleX(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-30px) scaleX(0.8);
+        opacity: 0;
+    }
+}
+
+.steam {
+    animation: steam-rise 2s ease-out infinite;
+}
+```
+
+### Animation rules
+
+| Sự kiện          | Effect                              | Thư viện             |
+| ---------------- | ----------------------------------- | -------------------- |
+| Section entrance | Fade + translateY(16px → 0)         | React Motion         |
+| Menu item hover  | Underline grow + caramel color      | CSS transition 200ms |
+| Card hover       | Lift + shadow nâu ấm                | CSS transition 250ms |
+| Hero decoration  | Steam rise animation                | CSS `@keyframes`     |
+| Skill item       | Checkbox tick như recipe ingredient | CSS transition       |
+
+### Component notes
+
+```
+src/components/
+├── cafe/
+│   ├── CafeBackground.jsx       ← Paper texture nền
+│   ├── ChalkboardHero.jsx       ← Hero kiểu bảng đen/kraft
+│   ├── MenuNav.jsx              ← Navigation style menu
+│   └── SteamDecor.jsx           ← Steam animation decoration
+├── sections/
+│   ├── CafeHeroSection.jsx
+│   ├── ChefStorySection.jsx
+│   ├── MenuProjectsSection.jsx
+│   ├── RecipeSkillsSection.jsx
+│   └── ReserveContactSection.jsx
+└── ui/
+    ├── MenuCard.jsx             ← Project card dạng món ăn
+    ├── IngredientBadge.jsx      ← Tech stack dạng nguyên liệu
+    ├── HandwrittenAccent.jsx    ← Caveat font decoration
+    └── CafeButton.jsx
+```
+
+### Get Assets 2D (Free)
+
+> Dùng để tạo texture giấy, decoration, illustration. Nhớ ghi attribution ở footer.
+
+| Asset                      | Nguồn                                                               | License      | Dùng cho                   |
+| -------------------------- | ------------------------------------------------------------------- | ------------ | -------------------------- |
+| Kraft paper texture PNG    | [Freepik](https://www.freepik.com) — search "kraft paper texture"   | Free (attr.) | Background paper texture   |
+| Chalkboard background      | [Freepik](https://www.freepik.com) — search "chalkboard background" | Free (attr.) | Hero chalkboard effect     |
+| Coffee & bakery icons      | [Flaticon](https://www.flaticon.com) — search "coffee cup outline"  | Free (attr.) | Nav icons, skill badges    |
+| Handwritten flourish SVG   | [SVGRepo](https://www.svgrepo.com) — search "handwritten swirl"     | CC0          | Typography accent          |
+| Food illustration (pastry) | [unDraw](https://undraw.co) / [Freepik](https://www.freepik.com)    | Free (attr.) | Hero, menu card            |
+| Vintage recipe card PNG    | [Freepik](https://www.freepik.com) — search "vintage recipe card"   | Free (attr.) | Skill / project card frame |
+
+**Footer attribution template:**
+
+```html
+<footer>
+    <p>
+        Textures & illustrations by
+        <a href="https://www.freepik.com">Freepik</a> · Icons by
+        <a href="https://www.flaticon.com">Flaticon</a> · SVGs by
+        <a href="https://www.svgrepo.com">SVGRepo</a>
+    </p>
+</footer>
+```
+
+---
+
 ## Hướng dẫn chọn phong cách
 
 ```
@@ -1021,7 +1675,12 @@ Người dùng là ai?
 ├── Cute-modern, pastel, đáng nhớ   → candy-pop
 ├── Graphic design / poster mạnh    → art-festival
 ├── Nhẹ nhàng, tự nhiên, clean      → botanical-garden
-└── Vui, thử nghiệm, block/puzzle   → toy-box
+├── Vui, thử nghiệm, block/puzzle   → toy-box
+├── High-end, trendy, "cool girl"   → fashion-editorial
+├── Tinh tế, K-style, UI clean      → k-beauty
+├── Girly, holographic, Pinterest   → dreamy-y2k
+├── Dịu dàng, floral, artisan       → flower-market
+└── Thân thiện, cafe, ấm áp         → cafe-bakery
 ```
 
 ---
@@ -1037,4 +1696,4 @@ Người dùng là ai?
 
 ---
 
-_Cập nhật lần cuối: 2026-05-07 — Thêm phong cách mới vào file này khi có yêu cầu._
+_Cập nhật lần cuối: 2026-05-11 — Thêm 5 phong cách: fashion-editorial, k-beauty, dreamy-y2k, flower-market, cafe-bakery._
