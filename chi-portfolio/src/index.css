@@ -603,6 +603,54 @@ main,
   font-size: clamp(1.9rem, 4vw, 3.4rem);
 }
 
+.project-view-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 96px;
+  min-height: 42px;
+  border-radius: 0;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.project-file-modal {
+  top: 50px;
+}
+
+.project-file-modal .ant-modal-content {
+  overflow: hidden;
+  border-radius: 0;
+  padding: 0;
+  background: var(--paper);
+}
+
+.project-file-modal .ant-modal-header {
+  margin: 0;
+  padding: 18px 54px 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-file-modal .ant-modal-title {
+  color: var(--ink);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.project-file-modal .ant-modal-close {
+  top: 14px;
+}
+
+.project-file-frame {
+  display: block;
+  width: 100%;
+  height: min(74vh, 760px);
+  min-height: 420px;
+  border: 0;
+  background: var(--paper);
+}
+
 .method-card {
   max-width: 760px;
   padding: 28px;
@@ -911,6 +959,16 @@ main,
 
   .project-cover {
     min-height: 140px;
+  }
+
+  .project-view-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-file-frame {
+    height: 72vh;
+    min-height: 360px;
   }
 
   .tool-card {

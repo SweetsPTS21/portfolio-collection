@@ -115,31 +115,37 @@ export const projects = [
     title: 'Bài tập 1 - Chương 1',
     subtitle: 'Máy tính và các thiết bị ngoại vi',
     text: 'Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi, kèm minh chứng thực hành trong file đính kèm.',
+    file: '/docs/bt1.pdf',
   },
   {
     title: 'Bài tập 2 - Chương 2',
     subtitle: 'Khai thác dữ liệu và thông tin',
     text: 'Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.',
+    file: '/docs/bt2.pdf',
   },
   {
     title: 'Bài tập 2 - Chương 3',
     subtitle: 'Tổng quan về trí tuệ nhân tạo',
     text: 'Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích - rủi ro và ví dụ liên hệ thực tế trong học tập.',
+    file: '/docs/bt3.pdf',
   },
   {
     title: 'Bài tập 3 - Chương 4',
     subtitle: 'Giao tiếp và hợp tác trong môi trường số',
     text: 'Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.',
+    file: '/docs/bt4.pdf',
   },
   {
     title: 'Bài tập 2 - Chương 5',
     subtitle: 'Sáng tạo nội dung số',
     text: 'Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.',
+    file: '/docs/bt5.pdf',
   },
   {
     title: 'Bài tập 4 - Chương 6',
     subtitle: 'An toàn và liêm chính học thuật trong môi trường số',
     text: 'Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật.',
+    file: '/docs/bt6.pdf',
   },
 ];
 
