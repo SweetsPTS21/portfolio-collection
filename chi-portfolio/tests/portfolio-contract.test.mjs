@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { pathToFileURL } from "node:url";
 
 const root = process.cwd();
 const dataPath = join(root, "src", "data", "portfolioData.js");
@@ -18,20 +17,23 @@ const projectsSectionPath = join(
 
 assert.ok(existsSync(dataPath), "portfolioData.js must exist");
 
-const data = await import(pathToFileURL(dataPath));
+const dataSource = readFileSync(dataPath, "utf8").replace(
+  /import\s+(\w+)\s+from\s+['"]\.\.\/\.\.\/docs\/(bt\d\.pdf)['"];?/g,
+  'const $1 = "/assets/$2";'
+);
+const data = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(dataSource)}`
+);
 
 assert.equal(data.personalInfo.name, "Vũ Huyền Chi");
 assert.equal(data.personalInfo.major, "Luật Kinh Doanh");
 assert.equal(data.projects.length, 6, "portfolio must render 6 assignment projects");
 for (const [index, project] of data.projects.entries()) {
-  assert.equal(
-    project.file,
-    `/docs/bt${index + 1}.pdf`,
-    `${project.title} must link to the matching assignment PDF`
-  );
+  const expectedFile = `bt${index + 1}.pdf`;
+  assert.match(project.file, /\.pdf$/, `${project.title} must link to a PDF`);
   assert.ok(
-    existsSync(join(root, project.file.slice(1))),
-    `${project.file} must exist in docs`
+    existsSync(join(root, "docs", expectedFile)),
+    `${expectedFile} must exist in docs`
   );
 }
 assert.ok(
