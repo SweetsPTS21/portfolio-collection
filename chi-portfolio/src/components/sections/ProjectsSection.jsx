@@ -19,22 +19,24 @@ export default function ProjectsSection() {
         <div className="project-editorial-grid">
           {projects.map((project, index) => (
             <article className="project-spread" key={project.title}>
-              <div className="project-cover">
-                <span>{String(index + 1).padStart(2, '0')}</span>
+              <div className="project-title">
+                <div className="project-cover">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                </div>
+                <Button
+                  className="project-view-button"
+                  icon={<FileText size={17} strokeWidth={1.8} />}
+                  onClick={() => setActiveProject(project)}
+                  type="primary"
+                >
+                  Xem
+                </Button>
               </div>
               <div className="project-copy">
                 <p>{project.title}</p>
                 <h3>{project.subtitle}</h3>
                 <span>{project.text}</span>
               </div>
-              <Button
-                className="project-view-button"
-                icon={<FileText size={17} strokeWidth={1.8} />}
-                onClick={() => setActiveProject(project)}
-                type="primary"
-              >
-                Xem
-              </Button>
             </article>
           ))}
         </div>

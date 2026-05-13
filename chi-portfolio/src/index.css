@@ -569,8 +569,14 @@ main,
   transform: translate(-3px, -3px);
 }
 
+.project-title {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-cover {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
