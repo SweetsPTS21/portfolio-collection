@@ -1,4 +1,6 @@
 // src/components/ui/MenuCard.jsx
+import { Button } from "antd";
+import { Eye } from "lucide-react";
 import { Motion, spring } from "react-motion";
 import styles from "./MenuCard.module.css";
 
@@ -9,6 +11,7 @@ export default function MenuCard({
   process,
   product,
   highlight,
+  onView,
   delay = 0,
 }) {
   return (
@@ -46,6 +49,17 @@ export default function MenuCard({
               {highlight}
             </blockquote>
           )}
+
+          <div className={styles.footer}>
+            <Button
+              className={styles.viewButton}
+              icon={<Eye size={16} strokeWidth={1.8} />}
+              onClick={onView}
+              type="primary"
+            >
+              Xem
+            </Button>
+          </div>
         </article>
       )}
     </Motion>

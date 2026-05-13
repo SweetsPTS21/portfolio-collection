@@ -1,6 +1,15 @@
 // src/data/portfolioData.js
 // Single source of truth — lấy từ ngoc-portfolio/docs/portfolio.md
 
+const assignmentFiles = [
+  new URL('../../docs/bt1.pdf', import.meta.url).href,
+  new URL('../../docs/bt2.pdf', import.meta.url).href,
+  new URL('../../docs/bt3.pdf', import.meta.url).href,
+  new URL('../../docs/bt4.pdf', import.meta.url).href,
+  new URL('../../docs/bt5.pdf', import.meta.url).href,
+  new URL('../../docs/bt6.pdf', import.meta.url).href,
+];
+
 export const personalInfo = {
   name: 'Lê Phương Bảo Ngọc',
   heroTitle: 'Welcome to my portfolio',
@@ -26,6 +35,7 @@ export const projects = [
       'Tìm hiểu và lựa chọn cấu hình máy tính phù hợp với đặc thù ngành Luật — cần đa nhiệm cao, lưu trữ văn bản lớn và màn hình bảo vệ mắt.',
     highlight:
       'Thay vì chỉ liệt kê linh kiện, mình tập trung vào việc thiết lập một "văn phòng ảo" an toàn và hiệu quả.',
+    file: assignmentFiles[0],
   },
   {
     id: 2,
@@ -36,6 +46,7 @@ export const projects = [
       'Sử dụng các toán tử tìm kiếm nâng cao để lọc thông tin từ các cổng thông tin Chính phủ và các thư viện pháp luật trực tuyến.',
     highlight:
       'Áp dụng quy trình kiểm chứng nguồn tin để đảm bảo các văn bản quy phạm pháp luật luôn là phiên bản mới nhất.',
+    file: assignmentFiles[1],
   },
   {
     id: 3,
@@ -46,6 +57,7 @@ export const projects = [
       'Nghiên cứu về mô hình ngôn ngữ lớn (LLM) và cách chúng có thể hỗ trợ tóm tắt các bản án dài hàng trăm trang.',
     highlight:
       'AI không thay thế Luật sư, nhưng Luật sư biết dùng AI sẽ thay thế những người không biết.',
+    file: assignmentFiles[2],
   },
   {
     id: 4,
@@ -56,6 +68,7 @@ export const projects = [
       'Cùng các cộng sự thực hiện dự án nghiên cứu qua Google Workspace và Slack.',
     highlight:
       'Thể hiện khả năng điều phối và quản lý xung đột trong không gian số.',
+    file: assignmentFiles[3],
   },
   {
     id: 5,
@@ -66,6 +79,7 @@ export const projects = [
       'Sử dụng các công cụ AI để thiết kế hình ảnh minh họa cho các thuật ngữ pháp lý khô khan, giúp người dân dễ tiếp cận hơn với pháp luật.',
     highlight:
       'Quy trình: Viết Prompt → Tinh chỉnh → Kiểm tra bản quyền hình ảnh.',
+    file: assignmentFiles[4],
   },
   {
     id: 6,
@@ -76,6 +90,7 @@ export const projects = [
       'Phân tích các vấn đề đạo đức khi sử dụng AI trong học tập và nghiên cứu luật pháp.',
     highlight:
       'Nhấn mạnh việc trích dẫn nguồn khi AI tham gia vào quá trình tạo nội dung và bảo mật dữ liệu cá nhân.',
+    file: assignmentFiles[5],
   },
 ];
 
