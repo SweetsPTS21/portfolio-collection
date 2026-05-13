@@ -1,11 +1,11 @@
 // src/components/sections/ConclusionSection.jsx
-import { Motion, spring } from "react-motion";
-import { Sparkles, BookHeart, Trophy } from "lucide-react";
-import { conclusion } from "../../data/portfolioData";
-import styles from "./ConclusionSection.module.css";
+import { Motion, spring } from 'react-motion';
+import { Sparkles, BookHeart, Trophy } from 'lucide-react';
+import { conclusion } from '../../data/portfolioData';
+import styles from './ConclusionSection.module.css';
 
 // SVG Recipe card frame decoration
-function RecipeFrame({ children, className = "" }) {
+function RecipeFrame({ children, className = '' }) {
   return (
     <div className={`${styles.recipeCard} ${className}`}>
       {/* Corner accents */}
@@ -29,7 +29,7 @@ function RecipeFrame({ children, className = "" }) {
       </svg>
       <svg
         className={styles.cornerAccent}
-        style={{ top: 6, right: 6, transform: "rotate(90deg)" }}
+        style={{ top: 6, right: 6, transform: 'rotate(90deg)' }}
         width="20"
         height="20"
         viewBox="0 0 20 20"
@@ -47,7 +47,7 @@ function RecipeFrame({ children, className = "" }) {
       </svg>
       <svg
         className={styles.cornerAccent}
-        style={{ bottom: 6, left: 6, transform: "rotate(-90deg)" }}
+        style={{ bottom: 6, left: 6, transform: 'rotate(-90deg)' }}
         width="20"
         height="20"
         viewBox="0 0 20 20"
@@ -65,7 +65,7 @@ function RecipeFrame({ children, className = "" }) {
       </svg>
       <svg
         className={styles.cornerAccent}
-        style={{ bottom: 6, right: 6, transform: "rotate(180deg)" }}
+        style={{ bottom: 6, right: 6, transform: 'rotate(180deg)' }}
         width="20"
         height="20"
         viewBox="0 0 20 20"
@@ -89,19 +89,19 @@ function RecipeFrame({ children, className = "" }) {
 const panels = [
   {
     icon: Sparkles,
-    color: "var(--caramel)",
+    color: 'var(--caramel)',
     label: conclusion.experience.label,
     text: conclusion.experience.text,
   },
   {
     icon: BookHeart,
-    color: "var(--matcha)",
+    color: 'var(--matcha)',
     label: conclusion.knowledge.label,
     text: conclusion.knowledge.text,
   },
   {
     icon: Trophy,
-    color: "var(--mocha-pink)",
+    color: 'var(--mocha-pink)',
     label: conclusion.challenge.label,
     text: `${conclusion.challenge.challengeText}\n\n${conclusion.challenge.highlightText}`,
   },
@@ -207,61 +207,7 @@ export default function ConclusionSection() {
       {/* Footer */}
       <footer className={styles.footer}>
         <span className={styles.footerText}>✦ Bảo Ngọc Portfolio ✦</span>
-        <CoffeeFooterDecor />
       </footer>
     </section>
-  );
-}
-
-// Mini coffee illustration for footer
-function CoffeeFooterDecor() {
-  return (
-    <svg
-      width="28"
-      height="28"
-      viewBox="0 0 28 28"
-      fill="none"
-      aria-hidden="true"
-      className={styles.footerIcon}
-    >
-      <ellipse
-        cx="14"
-        cy="22"
-        rx="9"
-        ry="2"
-        fill="var(--caramel)"
-        opacity="0.3"
-      />
-      <path
-        d="M6 12 Q7 20 14 21 Q21 20 22 12 Z"
-        fill="var(--paper-white)"
-        stroke="var(--caramel)"
-        strokeWidth="1.2"
-      />
-      <ellipse
-        cx="14"
-        cy="12"
-        rx="8"
-        ry="2"
-        fill="var(--border-kraft)"
-        stroke="var(--caramel)"
-        strokeWidth="1.2"
-      />
-      <ellipse
-        cx="14"
-        cy="12"
-        rx="6"
-        ry="1.2"
-        fill="var(--milk-brown)"
-        opacity="0.7"
-      />
-      <path
-        d="M21 14 Q26 14 26 17 Q26 20 21 20"
-        stroke="var(--caramel)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
   );
 }

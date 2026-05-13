@@ -127,7 +127,7 @@
 
 .infoRow {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -148,6 +148,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  margin-top: 0.4rem;
 }
 
 .hobbyTag {
@@ -161,7 +162,9 @@
   border: 1px solid var(--border-kraft);
   border-radius: 20px;
   padding: 0.2rem 0.6rem;
-  transition: transform 200ms ease, background-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease;
 }
 
 .hobbyTag:hover {

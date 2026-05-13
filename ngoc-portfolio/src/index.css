@@ -67,6 +67,13 @@ body {
   overflow: hidden;
 }
 
+/* About slide needs to scroll vertically on small screens */
+.slide.slide--scrollable {
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
 /* ===================== Paper Texture ===================== */
 .paper-texture {
   background-color: var(--vanilla);
