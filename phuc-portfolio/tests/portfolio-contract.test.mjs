@@ -52,9 +52,36 @@ assert.ok(
   "AI hallucination example must be represented in conclusion data"
 );
 assert.ok(
-  data.futureDirections.includes("Tinh gọn nội dung nhưng tăng chiều sâu"),
+  data.conclusion.learnedSkill.includes("Kỹ năng quan trọng nhất là tư duy phản biện với dữ liệu"),
+  "updated conclusion learned skill must match docs/portfolio.md"
+);
+assert.ok(
+  data.conclusion.proud.includes("Biến kiến thức công nghệ thành ứng dụng thực tế"),
+  "updated proud point must match docs/portfolio.md"
+);
+assert.ok(
+  data.conclusion.challenge.includes("Thoát khỏi lối viết văn mẫu"),
+  "updated challenge must match docs/portfolio.md"
+);
+assert.ok(
+  data.conclusion.aiExample.includes("AI có thể tự “bịa” tình tiết"),
+  "updated AI hallucination example must match docs/portfolio.md"
+);
+assert.ok(
+  data.conclusion.solution.includes("Cần đối chiếu với án lệ thực tế"),
+  "updated AI lesson must match docs/portfolio.md"
+);
+assert.ok(
+  data.futureDirections.includes("Tinh gọn nội dung, tăng chiều sâu"),
   "future direction must be sourced from docs/portfolio.md"
 );
+assert.deepEqual(data.futureDirections, [
+  "Tinh gọn nội dung, tăng chiều sâu",
+  "Làm nổi bật trọng tâm, tránh dàn trải",
+  "Gắn kết lý thuyết với thực tiễn",
+  "Hoàn thiện kỹ năng kiểm chứng thông tin",
+  "Xây dựng quy trình kiểm tra rõ ràng khi sử dụng AI và tài liệu số",
+]);
 
 const requiredAssets = [
   "sticker-sheet.svg",

@@ -97,21 +97,20 @@ export const conclusion = {
   lead:
     'Portfolio này không chỉ là một bài tập; nó là bản ghi chép về sự thay đổi tư duy từ một sinh viên Luật truyền thống sang một người làm luật có tư duy số.',
   learnedSkill:
-    'Kỹ năng giá trị nhất em học được là tư duy phản biện với dữ liệu. Giữa muôn vàn thông tin trên Internet, việc biết cách tra cứu chuẩn xác, chọn lọc nguồn tin cậy và kiểm tra những thông tin sai lệch do AI tạo ra chính là vũ khí sắc bén nhất của người làm luật.',
-  proud:
-    'Khả năng biến những kiến thức công nghệ vốn bị coi là khô khan thành những ứng dụng sinh động, gắn liền với niềm đam mê du lịch và nghệ thuật của bản thân.',
+    'Kỹ năng quan trọng nhất là tư duy phản biện với dữ liệu: biết tra cứu chính xác, chọn nguồn tin cậy và kiểm chứng thông tin (đặc biệt là nội dung do AI tạo ra).',
+  proud: 'Biến kiến thức công nghệ thành ứng dụng thực tế, gắn với sở thích cá nhân (du lịch, nghệ thuật).',
   challenge:
-    'Vượt qua rào cản của việc trình bày theo văn mẫu để tạo ra một không gian cá nhân hóa nhưng vẫn đảm bảo tính khắt khe của học thuật.',
+    'Thoát khỏi lối viết văn mẫu, xây dựng nội dung cá nhân hóa nhưng vẫn đảm bảo tính học thuật.',
   aiExample:
-    'Ví dụ về ảo giác AI trong phân tích Án lệ: AI thường có xu hướng bịa ra các tình tiết pháp lý nếu không được cung cấp dữ liệu đầu vào chuẩn.',
+    'Ví dụ về ảo giác AI trong phân tích Án lệ: AI có thể tự “bịa” tình tiết nếu dữ liệu đầu vào không chuẩn.',
   solution:
-    'Em đã thực hiện so sánh giữa một văn bản do AI tạo ra và một án lệ thực tế của Tòa án nhân dân tối cao. Qua đó, em rút ra bài học: Công nghệ chỉ mạnh khi người dùng có kiến thức nền tảng vững chắc để kiểm soát nó.',
+    'Bài học: Cần đối chiếu với án lệ thực tế; công nghệ chỉ hiệu quả khi người dùng có nền tảng kiến thức để kiểm soát.',
 };
 
 export const futureDirections = [
-  'Tinh gọn nội dung nhưng tăng chiều sâu',
-  'Giảm bớt phần mô tả dàn trải, thay vào đó làm nổi bật trọng tâm và giá trị cốt lõi của từng bài.',
-  'Tăng cường liên kết giữa lý thuyết và thực tiễn',
+  'Tinh gọn nội dung, tăng chiều sâu',
+  'Làm nổi bật trọng tâm, tránh dàn trải',
+  'Gắn kết lý thuyết với thực tiễn',
   'Hoàn thiện kỹ năng kiểm chứng thông tin',
-  'Xây dựng quy trình kiểm tra rõ ràng hơn khi sử dụng AI và tài liệu số, nhằm đảm bảo độ chính xác và tính pháp lý.',
+  'Xây dựng quy trình kiểm tra rõ ràng khi sử dụng AI và tài liệu số',
 ];
