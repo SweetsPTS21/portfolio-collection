@@ -269,6 +269,7 @@ npm run dev
 | `anh-portfolio` | Trần Lan Anh | Toy Box / Playroom Portfolio | ✅ Hoàn thành |
 | `chi-portfolio` | Vũ Huyền Chi | Fashion Editorial Portfolio | ✅ Hoàn thành |
 | `vi-portfolio` | Phạm Yến Vi | Flower Market Portfolio | ✅ Hoàn thành |
+| `phuc-portfolio` | Dương Thị Thủy Phúc | Kawaii Stationery Portfolio | ✅ Hoàn thành |
 
 > Cập nhật bảng này khi thêm dự án mới.
 
