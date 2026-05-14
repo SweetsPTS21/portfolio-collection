@@ -9,7 +9,7 @@ import bt6Pdf from '../../docs/bt6.pdf';
 export const personalInfo = {
   name: 'Dương Thị Thủy Phúc',
   major: 'Luật học',
-  university: 'Đại học Luật - ĐHQGHN',
+  university: 'Trường Đại học Luật - ĐHQGHN',
   interests: 'Du lịch, xem phim, nghe nhạc',
   style: 'đơn giản - ngắn gọn - trọng tâm',
   avatar,
@@ -32,8 +32,7 @@ export const projects = [
   {
     title: 'Bài tập 1 - Chương 1',
     subtitle: 'Máy tính và các thiết bị ngoại vi',
-    goal:
-      'Hiểu nguyên lý hoạt động của phần cứng và thiết lập không gian làm việc số tối ưu cho việc nghiên cứu tài liệu dung lượng lớn.',
+    goal: 'Hiểu nguyên lý hoạt động của phần cứng và thiết lập không gian làm việc số tối ưu cho việc nghiên cứu tài liệu dung lượng lớn.',
     process:
       'Xây dựng cấu hình máy tính và thiết lập hệ thống màn hình kép phục vụ việc đối chiếu các văn bản luật và hợp đồng song song. Phân tích các tiêu chí lựa chọn thiết bị lưu trữ (SSD vs HDD) để bảo đảm an toàn dữ liệu.',
     file: bt1Pdf,
@@ -41,8 +40,7 @@ export const projects = [
   {
     title: 'Bài tập 2 - Chương 2',
     subtitle: 'Khai thác dữ liệu và thông tin',
-    goal:
-      'Ứng dụng các toán tử tìm kiếm nâng cao để tra cứu tài liệu học thuật và văn bản quy phạm pháp luật chính xác, nhanh chóng.',
+    goal: 'Ứng dụng các toán tử tìm kiếm nâng cao để tra cứu tài liệu học thuật và văn bản quy phạm pháp luật chính xác, nhanh chóng.',
     process:
       'Sử dụng các kỹ thuật tìm kiếm để lọc các bài báo khoa học, án lệ quốc tế và các quy định pháp luật. Phân loại và đánh giá độ tin cậy của các nguồn tài liệu mở so với các cơ sở dữ liệu pháp lý chuyên sâu.',
     file: bt2Pdf,
@@ -50,8 +48,7 @@ export const projects = [
   {
     title: 'Bài tập 3 - Chương 3',
     subtitle: 'Tổng quan về trí tuệ nhân tạo',
-    goal:
-      'Nhận thức rõ bản chất, phân loại AI và đánh giá năng lực thực tế của AI trong việc xử lý ngôn ngữ tự nhiên.',
+    goal: 'Nhận thức rõ bản chất, phân loại AI và đánh giá năng lực thực tế của AI trong việc xử lý ngôn ngữ tự nhiên.',
     process:
       'Khảo sát sự phát triển của AI. Thử nghiệm đưa một tình huống pháp lý cơ bản vào các mô hình ngôn ngữ lớn (LLMs) để kiểm tra khả năng tư duy logic và nhận diện lỗ hổng trong lập luận của AI, từ đó rút ra giới hạn của máy móc so với tư duy con người.',
     file: bt3Pdf,
@@ -59,8 +56,7 @@ export const projects = [
   {
     title: 'Bài tập 4 - Chương 4',
     subtitle: 'Giao tiếp và hợp tác trong môi trường số',
-    goal:
-      'Vận dụng các nền tảng đám mây để làm việc nhóm, quản lý phiên bản tài liệu và giao tiếp học thuật.',
+    goal: 'Vận dụng các nền tảng đám mây để làm việc nhóm, quản lý phiên bản tài liệu và giao tiếp học thuật.',
     process:
       'Sử dụng Google Workspace (Docs, Drive dung lượng lớn) để cùng nhóm biên tập một tiểu luận. Thiết lập các quy tắc phân quyền (view/comment/edit) để bảo vệ tính toàn vẹn của văn bản và sử dụng tính năng theo dõi lịch sử chỉnh sửa.',
     file: bt4Pdf,
@@ -68,8 +64,7 @@ export const projects = [
   {
     title: 'Bài tập 5 - Chương 5',
     subtitle: 'Sáng tạo nội dung số',
-    goal:
-      'Sử dụng Generative AI để hỗ trợ tổng hợp kiến thức và sáng tạo định dạng nội dung mới (video/infographic).',
+    goal: 'Sử dụng Generative AI để hỗ trợ tổng hợp kiến thức và sáng tạo định dạng nội dung mới (video/infographic).',
     process:
       'Em đã sử dụng AI (như ChatGPT/Gemini) để lên kịch bản tóm tắt một vấn đề phức tạp. Em cung cấp các từ khóa học thuật và yêu cầu AI tái cấu trúc nội dung thành ngôn ngữ súc tích, tránh lối viết lan man. Sau đó, em trực tiếp kiểm tra để loại bỏ các lập luận thiếu chặt chẽ, đảm bảo tính chính xác của pháp lý trước khi đưa vào sản xuất video/infographic.',
     file: bt5Pdf,
@@ -77,8 +72,7 @@ export const projects = [
   {
     title: 'Bài tập 6 - Chương 6',
     subtitle: 'An toàn và liêm chính học thuật trong môi trường số',
-    goal:
-      'Thiết lập bộ nguyên tắc cá nhân để sử dụng AI một cách có đạo đức, tránh đạo văn và bảo mật thông tin.',
+    goal: 'Thiết lập bộ nguyên tắc cá nhân để sử dụng AI một cách có đạo đức, tránh đạo văn và bảo mật thông tin.',
     process:
       'Dựa trên các tiêu chuẩn học thuật khắt khe, em xây dựng "Bộ 5 nguyên tắc ứng dụng AI trong nghiên cứu".',
     file: bt6Pdf,
@@ -94,15 +88,15 @@ export const aiPrinciples = [
 ];
 
 export const conclusion = {
-  lead:
-    'Portfolio này không chỉ là một bài tập; nó là bản ghi chép về sự thay đổi tư duy từ một sinh viên Luật truyền thống sang một người làm luật có tư duy số.',
+  lead: 'Portfolio này không chỉ là một bài tập; nó là bản ghi chép về sự thay đổi tư duy từ một sinh viên Luật truyền thống sang một người làm luật có tư duy số.',
   learnedSkill:
     'Kỹ năng quan trọng nhất là tư duy phản biện với dữ liệu: biết tra cứu chính xác, chọn nguồn tin cậy và kiểm chứng thông tin (đặc biệt là nội dung do AI tạo ra).',
-  proud: 'Biến kiến thức công nghệ thành ứng dụng thực tế, gắn với sở thích cá nhân (du lịch, nghệ thuật).',
+  proud:
+    'Biến kiến thức công nghệ thành ứng dụng thực tế, gắn với sở thích cá nhân (du lịch, nghệ thuật).',
   challenge:
     'Thoát khỏi lối viết văn mẫu, xây dựng nội dung cá nhân hóa nhưng vẫn đảm bảo tính học thuật.',
   aiExample:
-    'Ví dụ về ảo giác AI trong phân tích Án lệ: AI có thể tự “bịa” tình tiết nếu dữ liệu đầu vào không chuẩn.',
+    'Ví dụ về ảo giác AI trong phân tích Án lệ: AI có thể tự “bịa” tình tiết nếu dữ liệu đầu vào không chuẩn',
   solution:
     'Bài học: Cần đối chiếu với án lệ thực tế; công nghệ chỉ hiệu quả khi người dùng có nền tảng kiến thức để kiểm soát.',
 };

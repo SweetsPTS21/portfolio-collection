@@ -59,14 +59,24 @@ export default function ProjectsSection() {
           </ScrollReveal>
         ))}
       </div>
-      <ScrollReveal className="principles-note">
-        <span className="washi-label">AI rules</span>
-        <h3>Bộ 5 nguyên tắc ứng dụng AI trong nghiên cứu</h3>
-        <ol>
-          {aiPrinciples.map((principle) => (
-            <li key={principle}>{principle}</li>
+      <ScrollReveal className="principles-note principles-sticker-board">
+        <div className="principles-header">
+          <span className="washi-label">AI rules</span>
+          <h3>Bộ 5 nguyên tắc ứng dụng AI trong nghiên cứu</h3>
+        </div>
+        <div className="principles-sticker-grid">
+          {aiPrinciples.map((principle, index) => (
+            <motion.article
+              className="principle-sticker"
+              key={principle}
+              whileHover={{ y: -6, rotate: index % 2 === 0 ? -1 : 1 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+            >
+              <span className="principle-sticker__pin">0{index + 1}</span>
+              <p>{principle}</p>
+            </motion.article>
           ))}
-        </ol>
+        </div>
       </ScrollReveal>
       <Modal
         title={activeProject?.title}

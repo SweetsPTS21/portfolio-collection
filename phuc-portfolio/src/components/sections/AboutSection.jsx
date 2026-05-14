@@ -18,7 +18,7 @@ export default function AboutSection() {
         <SectionTitle
           eyebrow="About Me"
           title="Bản sắc & tầm nhìn"
-          note="Một trang ghi chú cá nhân về cách Phúc kết nối tư duy luật với công nghệ số."
+          note="Một trang ghi chú cá nhân về cách mình kết nối tư duy luật với công nghệ số."
         />
       </ScrollReveal>
       <div className="about-grid">

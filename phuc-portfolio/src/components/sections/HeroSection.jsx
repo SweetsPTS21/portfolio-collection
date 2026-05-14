@@ -32,6 +32,9 @@ export default function HeroSection() {
           <Button href="#about" icon={<BookOpen size={18} />}>
             Giới thiệu
           </Button>
+          <Button href="#conclusion" icon={<Sparkles size={18} />}>
+            Tổng kết
+          </Button>
         </div>
       </div>
       <motion.div
