@@ -5,19 +5,21 @@
 @tailwind utilities;
 
 :root {
-  --paper-pink: #fff8fd;
+  --paper-pink: #fff5f4;
   --paper-white: rgba(255, 255, 255, 0.9);
-  --bubble-pink: #ff6fb1;
-  --bubble-pink-soft: #ff9aca;
-  --gel-blue: #6ec6ff;
-  --mint-check: #54d7a0;
-  --sunny-yellow: #ffd166;
-  --lavender-note: #cdb4ff;
-  --ink: #392033;
-  --muted: #8a6680;
-  --line: #ffd1e8;
-  --shadow: 0 18px 42px rgba(255, 111, 177, 0.18);
-  --shadow-strong: 0 28px 70px rgba(57, 32, 51, 0.16);
+  --bubble-pink: #ff8a7a;
+  --bubble-pink-soft: #ffb1a4;
+  --gel-blue: #78c8ff;
+  --mint-check: #6fd8c4;
+  --sunny-yellow: #ffc6a5;
+  --lavender-note: #d7c2ff;
+  --galaxy-pink: #ff8ec7;
+  --galaxy-blue: #82d9ff;
+  --ink: #3b2233;
+  --muted: #8a6676;
+  --line: #ffd3cb;
+  --shadow: 0 18px 42px rgba(255, 138, 122, 0.19);
+  --shadow-strong: 0 28px 70px rgba(59, 34, 51, 0.16);
   font-family: 'Nunito', system-ui, sans-serif;
   color: var(--ink);
   background: var(--paper-pink);
@@ -56,10 +58,37 @@ a {
   min-height: 100vh;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 8%, rgba(255, 209, 232, 0.86), transparent 26%),
-    radial-gradient(circle at 84% 14%, rgba(110, 198, 255, 0.45), transparent 28%),
-    radial-gradient(circle at 50% 95%, rgba(84, 215, 160, 0.24), transparent 30%),
-    linear-gradient(180deg, #fff8fd 0%, #ffffff 48%, #f4fdff 100%);
+    radial-gradient(circle at 12% 8%, rgba(255, 142, 199, 0.62), transparent 25%),
+    radial-gradient(circle at 84% 12%, rgba(130, 217, 255, 0.54), transparent 28%),
+    radial-gradient(circle at 50% 92%, rgba(255, 198, 165, 0.54), transparent 30%),
+    linear-gradient(135deg, #fff5f4 0%, #ffe2dc 34%, #f8dcf0 62%, #dff4ff 100%);
+}
+
+.kawaii-app::before,
+.kawaii-app::after {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: '';
+}
+
+.kawaii-app::before {
+  background:
+    radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.95) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.82) 0 1px, transparent 2px),
+    radial-gradient(circle at 86% 46%, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px),
+    radial-gradient(circle at 36% 74%, rgba(255, 255, 255, 0.76) 0 1px, transparent 2px);
+  background-size: 190px 190px, 260px 260px, 220px 220px, 280px 280px;
+  opacity: 0.62;
+}
+
+.kawaii-app::after {
+  background:
+    radial-gradient(ellipse at 18% 28%, rgba(255, 138, 122, 0.2), transparent 38%),
+    radial-gradient(ellipse at 78% 34%, rgba(120, 200, 255, 0.22), transparent 42%),
+    radial-gradient(ellipse at 52% 72%, rgba(255, 142, 199, 0.18), transparent 44%);
+  filter: blur(10px);
 }
 
 .stationery-bg {
@@ -82,7 +111,7 @@ a {
 .stationery-bg__stickers,
 .stationery-bg__tape {
   position: absolute;
-  filter: drop-shadow(0 18px 24px rgba(255, 111, 177, 0.16));
+  filter: drop-shadow(0 18px 24px rgba(255, 138, 122, 0.18));
   opacity: 0.72;
   animation: sticker-float 7s ease-in-out infinite;
 }
@@ -227,8 +256,9 @@ a {
   border: 4px solid #fff;
   border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.93), rgba(255, 248, 253, 0.82)),
-    radial-gradient(circle at top right, rgba(255, 209, 232, 0.8), transparent 35%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.93), rgba(255, 245, 244, 0.84)),
+    radial-gradient(circle at top right, rgba(120, 200, 255, 0.32), transparent 36%),
+    radial-gradient(circle at bottom left, rgba(255, 177, 164, 0.42), transparent 34%);
   box-shadow: var(--shadow-strong);
 }
 
@@ -241,8 +271,8 @@ a {
   border-radius: 9px;
   background: repeating-linear-gradient(
     90deg,
-    rgba(255, 209, 102, 0.84) 0 18px,
-    rgba(255, 236, 164, 0.9) 18px 36px
+    rgba(255, 198, 165, 0.9) 0 18px,
+    rgba(255, 226, 220, 0.94) 18px 36px
   );
   content: '';
   rotate: -4deg;
@@ -281,13 +311,13 @@ a {
   width: max-content;
   padding: 7px 13px;
   border-radius: 8px;
-  background: rgba(255, 209, 102, 0.82);
-  color: #7b4f08;
+  background: rgba(255, 198, 165, 0.86);
+  color: #7c4238;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  box-shadow: 0 8px 18px rgba(255, 209, 102, 0.24);
+  box-shadow: 0 8px 18px rgba(255, 138, 122, 0.2);
 }
 
 .rive-ready-mascot {
@@ -296,9 +326,9 @@ a {
   justify-content: space-between;
   gap: 14px;
   padding: 10px 12px;
-  border: 3px dashed rgba(255, 111, 177, 0.36);
+  border: 3px dashed rgba(255, 138, 122, 0.34);
   border-radius: 18px;
-  background: rgba(255, 248, 253, 0.85);
+  background: rgba(255, 245, 244, 0.86);
 }
 
 .rive-ready-mascot img {
@@ -424,8 +454,9 @@ a {
   border: 4px solid #fff;
   border-radius: 24px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 253, 0.88)),
-    radial-gradient(circle at top right, rgba(110, 198, 255, 0.24), transparent 34%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 245, 244, 0.88)),
+    radial-gradient(circle at top right, rgba(120, 200, 255, 0.24), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(255, 177, 164, 0.22), transparent 36%);
 }
 
 .project-index {
@@ -474,9 +505,9 @@ a {
 .principles-sticker-board {
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 253, 0.78)),
-    radial-gradient(circle at 12% 12%, rgba(255, 209, 102, 0.22), transparent 30%),
-    radial-gradient(circle at 90% 18%, rgba(110, 198, 255, 0.22), transparent 28%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 244, 0.78)),
+    radial-gradient(circle at 12% 12%, rgba(255, 177, 164, 0.28), transparent 30%),
+    radial-gradient(circle at 90% 18%, rgba(120, 200, 255, 0.24), transparent 28%);
 }
 
 .principles-sticker-board::before {
@@ -488,8 +519,8 @@ a {
   border-radius: 9px;
   background: repeating-linear-gradient(
     90deg,
-    rgba(255, 154, 202, 0.7) 0 16px,
-    rgba(255, 209, 232, 0.86) 16px 32px
+    rgba(255, 138, 122, 0.66) 0 16px,
+    rgba(255, 177, 164, 0.86) 16px 32px
   );
   content: '';
   rotate: 12deg;
@@ -515,26 +546,26 @@ a {
   padding: 48px 16px 18px;
   border: 4px solid #fff;
   border-radius: 18px;
-  background: #fff4bd;
+  background: #ffe2dc;
   box-shadow: 0 16px 30px rgba(57, 32, 51, 0.12);
 }
 
 .principle-sticker:nth-child(2n) {
-  background: #dff5ff;
+  background: #dff4ff;
   rotate: 1.4deg;
 }
 
 .principle-sticker:nth-child(3n) {
-  background: #ffe5f2;
+  background: #ffdce9;
   rotate: -1.2deg;
 }
 
 .principle-sticker:nth-child(4n) {
-  background: #e6fbef;
+  background: #e3f8f7;
 }
 
 .principle-sticker:nth-child(5n) {
-  background: #efe6ff;
+  background: #eee4ff;
   rotate: 1deg;
 }
 
@@ -571,7 +602,7 @@ a {
 
 .principle-sticker p {
   margin: 0;
-  color: #5e4158;
+  color: #664656;
   font-size: 0.95rem;
   font-weight: 800;
   line-height: 1.58;
