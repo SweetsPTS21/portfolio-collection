@@ -34,7 +34,7 @@ export default function AboutSection() {
 
             return (
               <ScrollReveal key={fact.label} delay={index * 0.06}>
-                <Card className="fact-card">
+                <Card className={`fact-card fact-card--${index + 1}`}>
                   {icon}
                   <h3>{fact.label}</h3>
                   <p>{fact.value}</p>

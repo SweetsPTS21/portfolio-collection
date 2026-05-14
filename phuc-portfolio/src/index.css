@@ -424,6 +424,29 @@ a {
   box-shadow: var(--shadow);
 }
 
+.fact-card {
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+
+.fact-card--1 {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(120, 200, 255, 0.3), transparent 34%),
+    linear-gradient(145deg, #fff7f5 0%, #ffe2dc 100%);
+}
+
+.fact-card--2 {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 142, 199, 0.26), transparent 36%),
+    linear-gradient(145deg, #fff8fb 0%, #ffdce9 100%);
+}
+
+.fact-card--3 {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 177, 164, 0.34), transparent 34%),
+    linear-gradient(145deg, #f6fcff 0%, #dff4ff 100%);
+}
+
 .fact-card svg,
 .summary-card svg,
 .future-note > svg {
