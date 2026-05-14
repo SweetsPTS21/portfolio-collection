@@ -1,36 +1,53 @@
 # 💫 Catalog 3 — Feminine 3D Motion Portfolio Themes
 
 > Catalog này tập trung vào portfolio nữ có màu sáng, UI nịnh mắt, cute, nhiều animation 3D và micro-interaction.  
-> Khác `catalog-2`, các theme ở đây ưu tiên trải nghiệm motion-led: hero 3D, scene chuyển động, tương tác theo scroll/cursor, illustration Rive và section transition mượt.
+> Phiên bản này chuyển sang stack **free, npm-first, tự chủ trong codebase**: không phụ thuộc Spline/Rive editor hoặc asset runtime đóng. 3D scene được dựng bằng Three.js/React Three Fiber; animation UI dùng Motion; scroll dùng Lenis; icon/mascot animation dùng Lottie hoặc SVG/CSS.
 
-## UI library stack
+---
 
-Các theme trong catalog này mặc định có thể dùng thêm:
+## Free npm-first stack
+
+Các package dưới đây đều có sẵn trên npm và license MIT theo `npm view` tại thời điểm cập nhật.
 
 ```bash
-npm install framer-motion gsap @splinetool/react-spline @rive-app/react-canvas
+npm install motion three @react-three/fiber @react-three/drei @react-three/postprocessing lenis lottie-react @use-gesture/react maath
 ```
 
-| Library       | Vai trò chính trong catalog này                                      | Nên dùng cho                                      |
-| ------------- | --------------------------------------------------------------------- | ------------------------------------------------- |
-| Framer Motion | Page transition, card hover, layout animation, modal/drawer animation | UI layer, route transition, reusable components   |
-| GSAP          | ScrollTrigger, timeline nhiều bước, cursor parallax, scene choreography | Scroll storytelling, sequence phức tạp            |
-| Spline        | 3D hero/object/room/planet scene                                      | Object 3D chính, background scene, interactive 3D |
-| Rive          | 2D animated character/icon/state machine                              | Mascot, icon state, CTA, loading, reaction        |
+| Package                       | Thay cho                    | Vai trò chính                                             |
+| ----------------------------- | --------------------------- | --------------------------------------------------------- |
+| `motion`                      | Framer Motion / GSAP nhẹ    | UI animation, route transition, scroll-linked transforms  |
+| `three`                       | Spline runtime              | Core 3D engine                                            |
+| `@react-three/fiber`          | Spline React scene          | React renderer cho Three.js                               |
+| `@react-three/drei`           | Spline helpers              | Camera, controls, text, environment, HTML overlay helpers |
+| `@react-three/postprocessing` | Spline material/glow preset | Bloom, depth, outline, vignette nhẹ                       |
+| `lenis`                       | GSAP smooth scroll setup    | Smooth scroll có cleanup và reduced-motion fallback       |
+| `lottie-react`                | Rive runtime                | Animated 2D mascot/icon/CTA bằng JSON                     |
+| `@use-gesture/react`          | Rive/Spline interaction     | Drag, hover, pointer gesture                              |
+| `maath`                       | GSAP tween helpers          | Damping/easing math cho camera/object trong R3F           |
 
-> Nguyên tắc: Spline/Rive là visual asset runtime; Framer Motion điều khiển UI React; GSAP điều khiển timeline dài, scroll và choreography. Không trộn hết mọi thứ vào một component.
+### Migration map
+
+| Stack cũ trong bản trước | Đề xuất chuyển đổi                                   | Lý do                                     |
+| ------------------------ | ---------------------------------------------------- | ----------------------------------------- |
+| Framer Motion            | `motion`                                             | Package hiện đại, MIT, import gọn         |
+| GSAP                     | `motion` + `lenis` + CSS keyframes                   | Đủ cho portfolio, giảm license risk       |
+| Spline                   | `three` + `@react-three/fiber` + `@react-three/drei` | 3D nằm trong code, dễ version control     |
+| Rive                     | `lottie-react` + SVG/CSS + React state               | Free npm, asset JSON dễ ship trong repo   |
+| Spline/Rive asset files  | `.glb`, `.gltf`, `.json`, `.svg`, texture `.webp`    | Chuẩn web phổ biến, không khóa vào editor |
+
+Nguyên tắc phân vai: `motion` điều khiển UI React; R3F điều khiển 3D scene; Lenis xử lý scroll; Lottie chỉ dùng cho icon/mascot nhỏ; CSS/SVG xử lý decoration nhẹ.
 
 ---
 
 ## Danh sách phong cách
 
-| ID                    | Tên phong cách                         | Vibe                                | Motion trọng tâm                       |
-| --------------------- | -------------------------------------- | ----------------------------------- | -------------------------------------- |
-| `pastel-orbit-room`   | Pastel Orbit Room Portfolio            | Căn phòng 3D pastel, cute, dreamy   | Spline room + Framer page transitions  |
-| `crystal-bloom-lab`   | Crystal Bloom Lab Portfolio            | Pha lê, hoa, glow, nữ tính          | GSAP scroll + Spline crystal objects   |
-| `sweet-ui-arcade`     | Sweet UI Arcade Portfolio              | Game UI cute, candy, vui, pop       | Rive UI reactions + GSAP arcade flow   |
-| `cloud-cosmetic-case` | Cloud Cosmetic Case Portfolio          | Beauty case, cloud, clean, glossy   | Spline product-like scene + Rive icons |
-| `ribbon-galaxy-stage` | Ribbon Galaxy Stage Portfolio          | Sân khấu thiên hà sáng, idol-cute   | GSAP stage timeline + Framer modals    |
+| ID                    | Tên phong cách                | Vibe                              | Motion trọng tâm                         |
+| --------------------- | ----------------------------- | --------------------------------- | ---------------------------------------- |
+| `pastel-orbit-room`   | Pastel Orbit Room Portfolio   | Căn phòng 3D pastel, cute, dreamy | R3F room + Motion route transitions      |
+| `crystal-bloom-lab`   | Crystal Bloom Lab Portfolio   | Pha lê, hoa, glow, nữ tính        | R3F crystal + Motion/Lenis scroll reveal |
+| `sweet-ui-arcade`     | Sweet UI Arcade Portfolio     | Game UI cute, candy, vui, pop     | Lottie UI reactions + Motion arcade flow |
+| `cloud-cosmetic-case` | Cloud Cosmetic Case Portfolio | Beauty case, cloud, clean, glossy | R3F product scene + Lottie icons         |
+| `ribbon-galaxy-stage` | Ribbon Galaxy Stage Portfolio | Sân khấu thiên hà sáng, idol-cute | R3F star stage + Motion curtain modals   |
 
 ---
 
@@ -40,13 +57,13 @@ Portfolio như một căn phòng 3D nhỏ lơ lửng trong không gian pastel. B
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                       |
-| ----------- | ----------------------------------------------------------- |
-| Cảm xúc     | Dreamy, cute, cá nhân, sáng, cozy                           |
-| Hình khối   | 3D rounded, đồ vật nhỏ, orbit ring, card kính mờ nhẹ        |
-| Không gian  | Hero là Spline room full-bleed, UI nổi bên trên             |
-| Chuyển động | Object orbit, camera drift, card float, page fade/scale     |
-| Điểm nhấn   | Mini laptop, moon lamp, pastel planets, floating notes      |
+| Yếu tố      | Mô tả                                                  |
+| ----------- | ------------------------------------------------------ |
+| Cảm xúc     | Dreamy, cute, cá nhân, sáng, cozy                      |
+| Hình khối   | Rounded 3D, mini object, orbit ring, glass UI overlay  |
+| Không gian  | Hero là R3F scene full-bleed, text HTML nổi bên trên   |
+| Chuyển động | Object orbit, camera drift, card float, route fade     |
+| Điểm nhấn   | Mini laptop, moon lamp, pastel planets, floating notes |
 
 ### Bảng màu
 
@@ -66,41 +83,36 @@ export const theme = {
         fontFamily: "'Quicksand', 'Nunito', sans-serif",
     },
 };
-
-// CSS Variables
-// --orbit-pink: #FF7AC8;
-// --moon-lilac: #C8A8FF;
-// --sky-blue: #8DBDFF;
-// --mint-glow: #78E7C6;
-// --cream-star: #FFEAC2;
 ```
 
 ### Library usage
 
-| Library       | Cách dùng trong theme                                                   |
-| ------------- | ------------------------------------------------------------------------ |
-| Spline        | Hero room 3D, camera orbit nhẹ, object hover/click chuyển section        |
-| Framer Motion | Route fade, card spring, modal project detail, shared layout highlight   |
-| GSAP          | Optional: scroll camera cue hoặc object parallax ngoài Spline            |
-| Rive          | Mini assistant/icon reaction ở nav hoặc loading scene                    |
+| Package              | Cách dùng trong theme                                 |
+| -------------------- | ----------------------------------------------------- |
+| `@react-three/fiber` | Canvas room scene, object hotspot, camera drift       |
+| `@react-three/drei`  | `Float`, `Html`, `OrbitControls`, `PerspectiveCamera` |
+| `motion`             | Route fade, card spring, modal detail, shared layout  |
+| `lenis`              | Smooth scroll giữa Home/Projects/About/Contact        |
+| `lottie-react`       | Mini assistant/loading icon nếu cần                   |
+| `maath`              | Damping camera/object toward pointer                  |
 
 ### Layout / flow
 
-- **Home:** Spline room chiếm viewport đầu, các object là entry point.
-- **Projects:** Project cards như floating windows quanh laptop.
+- **Home:** R3F room chiếm viewport đầu, các object là entry point.
+- **Projects:** Floating windows quanh laptop.
 - **About:** Profile panel như khung ảnh trong phòng.
 - **Skills:** Orbit map quanh hành tinh mini.
-- **Contact:** Moon lamp CTA, bật sáng khi hover.
+- **Contact:** Moon lamp CTA bật sáng khi hover.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                            | Tool           |
-| ---------------- | ------------------------------------------------- | -------------- |
-| Page load        | Spline scene fade-in + UI stagger                 | Framer Motion  |
-| Object hover     | Glow ring + object label                          | Spline/Framer  |
-| Route change     | Scale 0.98 → 1, blur 6px → 0                      | Framer Motion  |
-| Scroll           | Camera/object parallax nhẹ                        | GSAP optional  |
-| CTA hover        | Rive icon đổi state + sparkle                     | Rive           |
+| Sự kiện      | Effect                            | Tool                 |
+| ------------ | --------------------------------- | -------------------- |
+| Page load    | 3D scene fade-in + UI stagger     | `motion`             |
+| Object hover | Glow ring + HTML label            | R3F + `drei/Html`    |
+| Route change | Scale 0.98 → 1, blur 6px → 0      | `motion`             |
+| Camera       | Pointer parallax, damped movement | R3F + `maath`        |
+| CTA hover    | Lottie sparkle hoặc SVG sparkle   | `lottie-react` / SVG |
 
 ### Src structure
 
@@ -116,16 +128,17 @@ src/
 │   ├── OrbitSkillsPage.jsx
 │   └── MoonContactPage.jsx
 ├── features/
-│   ├── spline-room/
-│   │   ├── OrbitRoomScene.jsx
-│   │   ├── sceneEvents.js
-│   │   └── cameraPresets.js
+│   ├── r3f-room/
+│   │   ├── OrbitRoomCanvas.jsx
+│   │   ├── RoomObjects.jsx
+│   │   ├── roomMaterials.js
+│   │   └── cameraRig.js
 │   ├── floating-panels/
 │   │   ├── FloatingProjectPanel.jsx
 │   │   └── RoomInfoPanel.jsx
-│   └── rive-reactions/
-│       ├── RiveMascot.jsx
-│       └── riveStateMap.js
+│   └── lottie-reactions/
+│       ├── LottieMascot.jsx
+│       └── animationMap.js
 ├── components/
 │   ├── layout/
 │   └── ui/
@@ -134,29 +147,30 @@ src/
 
 ### Assets cần chuẩn bị
 
-| Asset                 | Loại   | Dùng cho                    |
-| --------------------- | ------ | --------------------------- |
-| `orbit-room.spline`   | Spline | Hero room và object hotspot |
-| `mini-assistant.riv`  | Rive   | Nav/helper reaction         |
-| `orbit-rings.svg`     | SVG    | Background overlay          |
-| `pastel-stars.svg`    | SVG    | Floating decoration         |
-| `room-ui-icons.svg`   | SVG    | Nav/object labels           |
+| Asset                 | Loại        | Dùng cho                    |
+| --------------------- | ----------- | --------------------------- |
+| `room-objects.glb`    | GLB/GLTF    | Hero room và object hotspot |
+| `mini-assistant.json` | Lottie JSON | Nav/helper reaction         |
+| `orbit-rings.svg`     | SVG         | Background overlay          |
+| `pastel-stars.svg`    | SVG         | Floating decoration         |
+| `room-ui-icons.svg`   | SVG         | Nav/object labels           |
+| `room-poster.webp`    | Image       | Mobile/fallback poster      |
 
 ---
 
 ## 2. `crystal-bloom-lab` — Crystal Bloom Lab Portfolio
 
-Theme như một phòng lab pha lê và hoa phát sáng: các project là mẫu pha lê, kỹ năng là hạt sáng, timeline là cành hoa nở theo scroll. Rất hợp portfolio muốn đẹp, sang nhẹ nhưng vẫn cute.
+Theme như một phòng lab pha lê và hoa phát sáng: project là mẫu pha lê, kỹ năng là hạt sáng, timeline là cành hoa nở theo scroll.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                         |
-| ----------- | ------------------------------------------------------------- |
-| Cảm xúc     | Glossy, sáng, nữ tính, clean, có chút fantasy                 |
-| Hình khối   | Crystal prism, bloom petal, capsule card, glow edge           |
-| Không gian  | Nền trắng hồng, gradient aura, crystal 3D làm focal point     |
-| Chuyển động | Crystal rotate, bloom reveal, scroll timeline, shimmer border |
-| Điểm nhấn   | Pha lê 3D, hoa nở, glow dust, lab label cute                  |
+| Yếu tố      | Mô tả                                                     |
+| ----------- | --------------------------------------------------------- |
+| Cảm xúc     | Glossy, sáng, nữ tính, clean, fantasy nhẹ                 |
+| Hình khối   | Crystal prism, bloom petal, capsule card, glow edge       |
+| Không gian  | Nền trắng hồng, aura gradient, crystal 3D làm focal point |
+| Chuyển động | Crystal rotate, bloom reveal, shimmer border              |
+| Điểm nhấn   | Pha lê 3D, hoa nở, glow dust, lab label cute              |
 
 ### Bảng màu
 
@@ -176,41 +190,36 @@ export const theme = {
         fontFamily: "'Fraunces', 'DM Sans', serif",
     },
 };
-
-// CSS Variables
-// --crystal-pink: #F45FB4;
-// --aura-blue: #91C8FF;
-// --leaf-mint: #67DDB9;
-// --lab-yellow: #FFD96A;
-// --glass-border: rgba(255, 214, 236, 0.75);
 ```
 
 ### Library usage
 
-| Library       | Cách dùng trong theme                                                 |
-| ------------- | ---------------------------------------------------------------------- |
-| Spline        | Crystal cluster 3D, hover material/glow states                        |
-| GSAP          | ScrollTrigger cho bloom timeline, pin section, stagger particles       |
-| Framer Motion | Card entrance, tabs, project detail modal, layoutId transition         |
-| Rive          | Animated flower/gem icon cho loading, CTA và empty state               |
+| Package                       | Cách dùng trong theme                              |
+| ----------------------------- | -------------------------------------------------- |
+| `@react-three/fiber`          | Crystal cluster, hover material/glow states        |
+| `@react-three/postprocessing` | Bloom nhẹ cho crystal, không lạm dụng              |
+| `motion`                      | Scroll reveal, card entrance, project detail modal |
+| `lenis`                       | Smooth scroll cho bloom timeline                   |
+| `lottie-react`                | Gem/flower icon cho CTA và loading                 |
+| `@use-gesture/react`          | Drag/tilt sample card hoặc rotate crystal          |
 
 ### Layout / flow
 
-- **Hero:** Crystal 3D xoay rất chậm, title overlay lệch một bên.
+- **Hero:** Crystal 3D xoay chậm, title HTML overlay.
 - **Projects:** Lab samples; mỗi sample mở modal detail.
 - **Skills:** Glow particle map theo nhóm kỹ năng.
-- **About:** Bloom timeline: hoa/cành nở dọc theo scroll.
-- **Contact:** "Send a signal" capsule CTA với Rive gem sparkle.
+- **About:** Bloom timeline nở dọc theo scroll.
+- **Contact:** Capsule CTA với Lottie gem sparkle.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                      | Tool          |
-| ---------------- | ------------------------------------------- | ------------- |
-| Scroll timeline  | Stem draw + petals scale in                 | GSAP          |
-| Crystal hover    | Material glow + rotate toward pointer       | Spline        |
-| Card hover       | Border shimmer + glass lift                 | Framer Motion |
-| Project open     | Shared layout card → modal                  | Framer Motion |
-| CTA state        | Gem sparkle state machine                   | Rive          |
+| Sự kiện         | Effect                       | Tool             |
+| --------------- | ---------------------------- | ---------------- |
+| Scroll timeline | Stem draw + petals scale in  | `motion` + Lenis |
+| Crystal hover   | Glow + rotate toward pointer | R3F + `maath`    |
+| Card hover      | Border shimmer + glass lift  | `motion`         |
+| Project open    | Shared layout card → modal   | `motion`         |
+| CTA state       | Gem sparkle loop/click       | `lottie-react`   |
 
 ### Src structure
 
@@ -219,7 +228,7 @@ src/
 ├── app/
 │   ├── App.jsx
 │   ├── routes.js
-│   └── gsapSetup.js
+│   └── motionConfig.js
 ├── pages/
 │   ├── CrystalLabHomePage.jsx
 │   ├── LabSamplesProjectsPage.jsx
@@ -227,8 +236,9 @@ src/
 │   └── SignalContactPage.jsx
 ├── features/
 │   ├── crystal-scene/
-│   │   ├── CrystalSplineScene.jsx
-│   │   └── crystalHotspots.js
+│   │   ├── CrystalCanvas.jsx
+│   │   ├── CrystalCluster.jsx
+│   │   └── crystalMaterials.js
 │   ├── bloom-timeline/
 │   │   ├── BloomTimeline.jsx
 │   │   ├── useBloomScroll.js
@@ -236,37 +246,34 @@ src/
 │   └── lab-samples/
 │       ├── SampleCard.jsx
 │       └── SampleDetailModal.jsx
-├── components/
-│   ├── layout/
-│   └── ui/
 └── assets/crystal-bloom-lab/
 ```
 
 ### Assets cần chuẩn bị
 
-| Asset                    | Loại   | Dùng cho                         |
-| ------------------------ | ------ | -------------------------------- |
-| `crystal-cluster.spline` | Spline | Hero object, project sample area |
-| `gem-flower.riv`         | Rive   | CTA/loading/icon state           |
-| `bloom-stem.svg`         | SVG    | Scroll timeline                  |
-| `glow-particles.svg`     | SVG    | Background aura                  |
-| `lab-labels.svg`         | SVG    | Project cards, tags              |
+| Asset                 | Loại        | Dùng cho                         |
+| --------------------- | ----------- | -------------------------------- |
+| `crystal-cluster.glb` | GLB/GLTF    | Hero object, project sample area |
+| `gem-flower.json`     | Lottie JSON | CTA/loading/icon state           |
+| `bloom-stem.svg`      | SVG         | Scroll timeline                  |
+| `glow-particles.svg`  | SVG         | Background aura                  |
+| `lab-labels.svg`      | SVG         | Project cards, tags              |
 
 ---
 
 ## 3. `sweet-ui-arcade` — Sweet UI Arcade Portfolio
 
-Portfolio như một arcade mini nhưng dùng bảng màu sáng, candy, cute. Các project là machine/card game, skills là power-up, contact là ticket booth.
+Portfolio như một arcade mini dùng bảng màu sáng, candy, cute. Project là machine/card game, skills là power-up, contact là ticket booth.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                      |
-| ----------- | ---------------------------------------------------------- |
-| Cảm xúc     | Vui, cute, pop, interactive, high-energy                   |
-| Hình khối   | Rounded arcade cabinet, pixel sticker, candy button        |
-| Không gian  | Nền sáng, checker pastel, UI có depth và bóng mềm          |
-| Chuyển động | Button press, score counter, ticket roll, Rive reactions   |
-| Điểm nhấn   | Mini game-like hero, progress bars, badges, animated icons |
+| Yếu tố      | Mô tả                                                   |
+| ----------- | ------------------------------------------------------- |
+| Cảm xúc     | Vui, cute, pop, interactive, high-energy                |
+| Hình khối   | Rounded arcade cabinet, pixel sticker, candy button     |
+| Không gian  | Nền sáng, checker pastel, UI có depth và bóng mềm       |
+| Chuyển động | Button press, score counter, ticket roll, icon reaction |
+| Điểm nhấn   | Mini game hero, progress bars, badges, animated icons   |
 
 ### Bảng màu
 
@@ -286,41 +293,35 @@ export const theme = {
         fontFamily: "'Baloo 2', 'Poppins', sans-serif",
     },
 };
-
-// CSS Variables
-// --arcade-pink: #FF5FA2;
-// --coin-yellow: #FFD447;
-// --screen-blue: #5FB7FF;
-// --mint-power: #39DCA6;
-// --soft-cream: #FFF9F1;
 ```
 
 ### Library usage
 
-| Library       | Cách dùng trong theme                                               |
-| ------------- | -------------------------------------------------------------------- |
-| Rive          | Animated buttons, mascot-free UI reactions, score badge, ticket roll |
-| GSAP          | Arcade intro timeline, score count-up, scroll snap choreography      |
-| Framer Motion | Pressable cards/buttons, project drawers, achievement badges         |
-| Spline        | Optional 3D arcade cabinet hoặc candy joystick hero                  |
+| Package              | Cách dùng trong theme                                  |
+| -------------------- | ------------------------------------------------------ |
+| `lottie-react`       | Start button, score badge, ticket print, success state |
+| `motion`             | Pressable cards/buttons, drawers, achievement badges   |
+| `lenis`              | Smooth scroll + section snap feel                      |
+| `@react-three/fiber` | Optional candy joystick hoặc arcade cabinet 3D         |
+| `@use-gesture/react` | Drag cartridge, joystick interaction                   |
 
 ### Layout / flow
 
-- **Home:** Arcade cabinet 3D hoặc 2.5D, title như game start screen.
-- **Projects:** Game select menu, mỗi project là một cartridge/ticket.
+- **Home:** Arcade cabinet 2.5D/R3F optional, title như game start screen.
+- **Projects:** Game select menu, mỗi project là cartridge/ticket.
 - **Skills:** Power-up grid, level meters.
 - **About:** Player card/profile stats.
 - **Contact:** Ticket booth CTA với ticket print animation.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                  | Tool          |
-| ---------------- | --------------------------------------- | ------------- |
-| Start button     | Press down + screen flash               | Framer/Rive   |
-| Score counter    | Count-up khi section enter              | GSAP          |
-| Project select   | Cartridge slide + drawer reveal         | Framer Motion |
-| Ticket CTA       | Ticket print looping state              | Rive          |
-| Scroll sections  | Snap + arcade marquee movement          | GSAP          |
+| Sự kiện        | Effect                          | Tool            |
+| -------------- | ------------------------------- | --------------- |
+| Start button   | Press down + screen flash       | `motion`/Lottie |
+| Score counter  | Count-up khi section enter      | `motion`        |
+| Project select | Cartridge slide + drawer reveal | `motion`        |
+| Ticket CTA     | Ticket print loop               | `lottie-react`  |
+| Optional 3D    | Cabinet/joystick float          | R3F + Drei      |
 
 ### Src structure
 
@@ -337,47 +338,44 @@ src/
 │   └── TicketBoothContactPage.jsx
 ├── features/
 │   ├── arcade-flow/
-│   │   ├── ArcadeIntroTimeline.jsx
+│   │   ├── ArcadeIntro.jsx
 │   │   ├── useScoreCounter.js
-│   │   └── arcadeGsapTimeline.js
-│   ├── rive-ui/
-│   │   ├── RiveStartButton.jsx
-│   │   ├── RiveTicketPrinter.jsx
-│   │   └── riveInputs.js
+│   │   └── arcadeVariants.js
+│   ├── lottie-ui/
+│   │   ├── LottieStartButton.jsx
+│   │   ├── LottieTicketPrinter.jsx
+│   │   └── animationMap.js
 │   └── game-select/
 │       ├── GameProjectCard.jsx
 │       └── ProjectCartridgeDrawer.jsx
-├── components/
-│   ├── layout/
-│   └── ui/
 └── assets/sweet-ui-arcade/
 ```
 
 ### Assets cần chuẩn bị
 
-| Asset                    | Loại   | Dùng cho                           |
-| ------------------------ | ------ | ---------------------------------- |
-| `arcade-cabinet.spline`  | Spline | Optional hero 3D                   |
-| `arcade-ui-controls.riv` | Rive   | Button, score, ticket interactions |
-| `candy-checker.svg`      | SVG    | Background                         |
-| `power-up-icons.svg`     | SVG    | Skills                             |
-| `ticket-frame.svg`       | SVG    | Project/contact cards              |
+| Asset                     | Loại        | Dùng cho                           |
+| ------------------------- | ----------- | ---------------------------------- |
+| `arcade-cabinet.glb`      | GLB/GLTF    | Optional hero 3D                   |
+| `arcade-ui-controls.json` | Lottie JSON | Button, score, ticket interactions |
+| `candy-checker.svg`       | SVG         | Background                         |
+| `power-up-icons.svg`      | SVG         | Skills                             |
+| `ticket-frame.svg`        | SVG         | Project/contact cards              |
 
 ---
 
 ## 4. `cloud-cosmetic-case` — Cloud Cosmetic Case Portfolio
 
-Theme như một hộp mỹ phẩm/beauty case đặt trên mây. UI sáng, glossy, clean, nhiều 3D product feel nhưng vẫn cute. Hợp portfolio nữ muốn tinh tế, hiện đại, nịnh mắt.
+Theme như một hộp mỹ phẩm/beauty case đặt trên mây. UI sáng, glossy, clean, nhiều 3D product feel nhưng vẫn cute.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                       |
-| ----------- | ----------------------------------------------------------- |
-| Cảm xúc     | Beauty, glossy, clean, mềm, sang nhẹ                        |
-| Hình khối   | Cosmetic compact, pill, pearl, cloud panel, glass surface   |
-| Không gian  | Spline cosmetic case hero, cloud layers sáng                |
-| Chuyển động | Case open, pearl float, cloud drift, glossy highlight sweep |
-| Điểm nhấn   | Compact mirror, lip tint capsule, pearl dots, cloud nav     |
+| Yếu tố      | Mô tả                                                     |
+| ----------- | --------------------------------------------------------- |
+| Cảm xúc     | Beauty, glossy, clean, mềm, sang nhẹ                      |
+| Hình khối   | Cosmetic compact, pill, pearl, cloud panel, glass surface |
+| Không gian  | R3F cosmetic case hero, cloud layers sáng                 |
+| Chuyển động | Case open, pearl float, cloud drift, gloss sweep          |
+| Điểm nhấn   | Compact mirror, lip tint capsule, pearl dots, cloud nav   |
 
 ### Bảng màu
 
@@ -397,41 +395,35 @@ export const theme = {
         fontFamily: "'Manrope', 'Nunito Sans', sans-serif",
     },
 };
-
-// CSS Variables
-// --gloss-pink: #FF8AC7;
-// --cloud-blue: #9BD5FF;
-// --pearl-white: #FFFFFF;
-// --aqua-shine: #7BE6D3;
-// --champagne: #FFE1A3;
 ```
 
 ### Library usage
 
-| Library       | Cách dùng trong theme                                                |
-| ------------- | --------------------------------------------------------------------- |
-| Spline        | Cosmetic case 3D, compact mirror open/close, product-like hero        |
-| Framer Motion | Glass panels, drawers, tabs, page reveal, hover polish                |
-| GSAP          | Cloud parallax, glossy sweep, scroll-triggered product steps          |
-| Rive          | Animated beauty icons, cloud CTA, form success state                  |
+| Package              | Cách dùng trong theme                                   |
+| -------------------- | ------------------------------------------------------- |
+| `@react-three/fiber` | Cosmetic case 3D, compact mirror open/close             |
+| `@react-three/drei`  | `Float`, `ContactShadows`, `Environment`, `Html` labels |
+| `motion`             | Glass panels, drawers, tabs, page reveal, hover polish  |
+| `lenis`              | Cloud parallax theo scroll                              |
+| `lottie-react`       | Beauty icons, cloud CTA, form success state             |
 
 ### Layout / flow
 
 - **Home:** 3D beauty case mở ra, các item đại diện section.
-- **Projects:** Product shelf; mỗi project là một compact/capsule.
+- **Projects:** Product shelf; mỗi project là compact/capsule.
 - **Skills:** Ingredient list như beauty formula.
 - **About:** Mirror profile card với soft reflection.
-- **Contact:** Cloud form, Rive success icon.
+- **Contact:** Cloud form, Lottie success icon.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                  | Tool          |
-| ---------------- | --------------------------------------- | ------------- |
-| Hero interaction | Cosmetic case open/close                | Spline        |
-| Cloud layer      | Slow parallax theo scroll/cursor        | GSAP          |
-| Panel hover      | Gloss highlight sweep                   | Framer/GSAP   |
-| Project open     | Product card → detail drawer            | Framer Motion |
-| Form success     | Rive cloud/check sparkle                | Rive          |
+| Sự kiện          | Effect                       | Tool           |
+| ---------------- | ---------------------------- | -------------- |
+| Hero interaction | Cosmetic case open/close     | R3F            |
+| Cloud layer      | Slow parallax theo scroll    | Lenis + Motion |
+| Panel hover      | Gloss highlight sweep        | `motion` / CSS |
+| Project open     | Product card → detail drawer | `motion`       |
+| Form success     | Cloud/check sparkle          | `lottie-react` |
 
 ### Src structure
 
@@ -448,46 +440,43 @@ src/
 │   └── CloudContactPage.jsx
 ├── features/
 │   ├── cosmetic-scene/
-│   │   ├── CosmeticCaseScene.jsx
-│   │   ├── productHotspots.js
-│   │   └── splineActions.js
+│   │   ├── CosmeticCaseCanvas.jsx
+│   │   ├── CosmeticCaseModel.jsx
+│   │   └── productHotspots.js
 │   ├── cloud-motion/
 │   │   ├── CloudParallaxLayer.jsx
-│   │   └── useCloudGsap.js
+│   │   └── useCloudScroll.js
 │   └── product-shelf/
 │       ├── ProductProjectCard.jsx
 │       └── ProductDetailDrawer.jsx
-├── components/
-│   ├── layout/
-│   └── ui/
 └── assets/cloud-cosmetic-case/
 ```
 
 ### Assets cần chuẩn bị
 
-| Asset                       | Loại   | Dùng cho                 |
-| --------------------------- | ------ | ------------------------ |
-| `cosmetic-case.spline`      | Spline | Hero/product interaction |
-| `beauty-cloud-icons.riv`    | Rive   | CTA/form/icon states     |
-| `cloud-layer.svg`           | SVG    | Parallax background      |
-| `pearl-particles.svg`       | SVG    | Floating decoration      |
-| `cosmetic-label-frames.svg` | SVG    | Cards/tabs               |
+| Asset                       | Loại        | Dùng cho                 |
+| --------------------------- | ----------- | ------------------------ |
+| `cosmetic-case.glb`         | GLB/GLTF    | Hero/product interaction |
+| `beauty-cloud-icons.json`   | Lottie JSON | CTA/form/icon states     |
+| `cloud-layer.svg`           | SVG         | Parallax background      |
+| `pearl-particles.svg`       | SVG         | Floating decoration      |
+| `cosmetic-label-frames.svg` | SVG         | Cards/tabs               |
 
 ---
 
 ## 5. `ribbon-galaxy-stage` — Ribbon Galaxy Stage Portfolio
 
-Theme như một sân khấu thiên hà pastel: ribbon bay, star platform 3D, spotlight sáng, UI idol nhưng mềm và cute. Hợp portfolio muốn tạo ấn tượng mạnh ở hero.
+Theme như một sân khấu thiên hà pastel: ribbon bay, star platform 3D, spotlight sáng, UI idol nhưng mềm và cute.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                        |
-| ----------- | ------------------------------------------------------------ |
-| Cảm xúc     | Rực rỡ, tự tin, magical, cute, sân khấu                      |
-| Hình khối   | 3D star platform, ribbon trail, stage card, ticket badge     |
-| Không gian  | Nền galaxy sáng, không tối; dùng hồng, vàng, xanh pastel     |
-| Chuyển động | Spotlight sweep, ribbon orbit, stage reveal, star confetti   |
-| Điểm nhấn   | Star stage, ribbon wave, galaxy dust, ticket detail modal    |
+| Yếu tố      | Mô tả                                                    |
+| ----------- | -------------------------------------------------------- |
+| Cảm xúc     | Rực rỡ, tự tin, magical, cute, sân khấu                  |
+| Hình khối   | 3D star platform, ribbon trail, stage card, ticket badge |
+| Không gian  | Galaxy sáng, dùng hồng, vàng, xanh pastel                |
+| Chuyển động | Spotlight sweep, ribbon orbit, stage reveal, confetti    |
+| Điểm nhấn   | Star stage, ribbon wave, galaxy dust, ticket modal       |
 
 ### Bảng màu
 
@@ -507,41 +496,35 @@ export const theme = {
         fontFamily: "'Fredoka', 'Poppins', sans-serif",
     },
 };
-
-// CSS Variables
-// --stage-pink: #FF63D8;
-// --galaxy-blue: #7BB5FF;
-// --star-yellow: #FFE45C;
-// --mint-laser: #64EAC8;
-// --soft-galaxy: #FFF6FF;
 ```
 
 ### Library usage
 
-| Library       | Cách dùng trong theme                                                |
-| ------------- | --------------------------------------------------------------------- |
-| Spline        | 3D star platform, floating ribbons, stage props                       |
-| GSAP          | Stage intro timeline, spotlight sweep, scroll-pinned performance flow |
-| Framer Motion | Ticket modal, project card hover, route curtain reveal                |
-| Rive          | Animated star/ribbon icon, CTA reaction, loading sparkle              |
+| Package                       | Cách dùng trong theme                             |
+| ----------------------------- | ------------------------------------------------- |
+| `@react-three/fiber`          | Star platform, floating ribbons, stage props      |
+| `@react-three/postprocessing` | Bloom nhẹ cho star/ribbon                         |
+| `motion`                      | Ticket modal, project hover, route curtain reveal |
+| `lenis`                       | Scroll-pinned-feel bằng section progress nhẹ      |
+| `lottie-react`                | Star/ribbon CTA reaction, loading sparkle         |
 
 ### Layout / flow
 
-- **Home:** 3D star stage, title như show intro, spotlight chạy.
+- **Home:** 3D star stage, title như show intro, spotlight chạy bằng CSS/SVG.
 - **Projects:** Setlist/ticket grid; project detail mở như VIP pass.
 - **Skills:** Galaxy badges theo constellation ring.
 - **About:** Performer profile card, timeline như show chapters.
-- **Contact:** Encore CTA với Rive star burst.
+- **Contact:** Encore CTA với Lottie star burst.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                  | Tool          |
-| ---------------- | --------------------------------------- | ------------- |
-| Stage intro      | Spotlight → title → ribbon → CTA        | GSAP          |
-| 3D scene         | Platform float + ribbons orbit          | Spline        |
-| Project hover    | Ticket lift + star burst                | Framer Motion |
-| Detail open      | Curtain reveal modal                    | Framer Motion |
-| CTA click        | Rive star burst state                   | Rive          |
+| Sự kiện       | Effect                           | Tool           |
+| ------------- | -------------------------------- | -------------- |
+| Stage intro   | Spotlight → title → ribbon → CTA | `motion` + CSS |
+| 3D scene      | Platform float + ribbons orbit   | R3F + Drei     |
+| Project hover | Ticket lift + star burst         | `motion`       |
+| Detail open   | Curtain reveal modal             | `motion`       |
+| CTA click     | Star burst reaction              | `lottie-react` |
 
 ### Src structure
 
@@ -550,7 +533,7 @@ src/
 ├── app/
 │   ├── App.jsx
 │   ├── routes.js
-│   └── gsapSetup.js
+│   └── motionConfig.js
 ├── pages/
 │   ├── GalaxyStageHomePage.jsx
 │   ├── SetlistProjectsPage.jsx
@@ -558,31 +541,28 @@ src/
 │   └── EncoreContactPage.jsx
 ├── features/
 │   ├── galaxy-stage/
-│   │   ├── GalaxyStageScene.jsx
-│   │   ├── StageIntroTimeline.jsx
-│   │   └── spotlightTimeline.js
+│   │   ├── GalaxyStageCanvas.jsx
+│   │   ├── StarPlatform.jsx
+│   │   └── RibbonOrbit.jsx
 │   ├── tickets/
 │   │   ├── TicketProjectGrid.jsx
 │   │   ├── TicketProjectCard.jsx
 │   │   └── VipProjectModal.jsx
-│   └── rive-stars/
-│       ├── RiveStarBurst.jsx
-│       └── riveInputs.js
-├── components/
-│   ├── layout/
-│   └── ui/
+│   └── lottie-stars/
+│       ├── LottieStarBurst.jsx
+│       └── animationMap.js
 └── assets/ribbon-galaxy-stage/
 ```
 
 ### Assets cần chuẩn bị
 
-| Asset                    | Loại   | Dùng cho                       |
-| ------------------------ | ------ | ------------------------------ |
-| `galaxy-stage.spline`    | Spline | Hero 3D stage                  |
-| `star-ribbon-burst.riv`  | Rive   | CTA/loading/icon reactions     |
-| `ribbon-trails.svg`      | SVG    | Overlay/background             |
-| `galaxy-confetti.svg`    | SVG    | Floating particles             |
-| `ticket-star-frame.svg`  | SVG    | Project cards/detail modal     |
+| Asset                    | Loại        | Dùng cho                   |
+| ------------------------ | ----------- | -------------------------- |
+| `galaxy-stage.glb`       | GLB/GLTF    | Hero 3D stage              |
+| `star-ribbon-burst.json` | Lottie JSON | CTA/loading/icon reactions |
+| `ribbon-trails.svg`      | SVG         | Overlay/background         |
+| `galaxy-confetti.svg`    | SVG         | Floating particles         |
+| `ticket-star-frame.svg`  | SVG         | Project cards/detail modal |
 
 ---
 
@@ -593,37 +573,41 @@ src/
 ```txt
 src/
 ├── app/
-│   ├── motionConfig.js       ← Framer defaults: spring, easing, reduced motion
-│   └── gsapSetup.js          ← Register plugin/timeline helpers nếu dùng GSAP
+│   ├── motionConfig.js       ← Motion variants, spring, easing, reduced motion
+│   └── lenisSetup.js         ← Smooth scroll setup + cleanup
 ├── features/
-│   ├── <theme-scene>/        ← Spline scene wrapper + hotspot mapping
-│   ├── <theme-rive>/         ← Rive components + state machine input mapping
-│   └── <theme-motion>/       ← GSAP timelines, scroll hooks, choreography
+│   ├── <theme-r3f-scene>/    ← Canvas, 3D models, camera rig, materials
+│   ├── <theme-lottie>/       ← Lottie wrappers + animation map
+│   └── <theme-motion>/       ← Scroll hooks, Motion variants, choreography
 ├── components/
 │   ├── layout/               ← Route/page shell, navigation, transition wrapper
 │   └── ui/                   ← Buttons, cards, badges, modal, drawer
-└── assets/<theme-id>/        ← .spline, .riv, SVG, texture files
+└── assets/<theme-id>/        ← .glb/.gltf, .json, SVG, texture, poster fallback
 ```
 
 ### Phân vai tool rõ ràng
 
-| Việc cần làm                         | Tool nên dùng       | Ghi chú triển khai                                        |
-| ------------------------------------ | ------------------- | --------------------------------------------------------- |
-| Page/route transition                | Framer Motion       | Dùng `AnimatePresence`, variants, shared motion config    |
-| Hover/tap card, modal, drawer        | Framer Motion       | Giữ tương tác UI gần component React                      |
-| Scroll storytelling nhiều bước       | GSAP                | Tách timeline vào hook/file riêng                         |
-| Camera/object 3D chính               | Spline              | Không đặt text quan trọng bên trong Spline scene          |
-| Animated icon/state machine          | Rive                | Dùng cho CTA/loading/reaction, không lạm dụng cho layout  |
-| Particle nhẹ                         | CSS/SVG hoặc GSAP   | Chỉ dùng canvas nếu thật sự cần                           |
+| Việc cần làm                  | Tool nên dùng                         | Ghi chú triển khai                           |
+| ----------------------------- | ------------------------------------- | -------------------------------------------- |
+| Page/route transition         | `motion`                              | Dùng variants/shared layout, không cần GSAP  |
+| Hover/tap card, modal, drawer | `motion`                              | Giữ UI animation gần component React         |
+| Smooth scroll                 | `lenis`                               | Cleanup khi unmount, tắt khi reduced motion  |
+| Scroll progress transform     | `motion` `useScroll` / `useTransform` | Dùng cho parallax, scale, progress indicator |
+| Camera/object 3D chính        | R3F + Drei + `maath`                  | Text chính vẫn là HTML/CSS                   |
+| Animated icon/mascot          | `lottie-react`                        | Dùng JSON nhỏ, tránh autoplay quá nhiều      |
+| Pointer/drag interaction      | `@use-gesture/react`                  | Dùng cho joystick, card drag, object tilt    |
+| Glow/postprocessing           | `@react-three/postprocessing`         | Dùng tiết chế, có fallback mobile            |
+| Particle nhẹ                  | SVG/CSS hoặc R3F instancing           | Không thêm canvas riêng nếu R3F scene đã có  |
 
 ### Performance rules
 
-- Lazy load Spline và Rive bằng route-level hoặc component-level suspense.
-- Không render nhiều scene Spline cùng lúc trong một page.
-- Với mobile, dùng fallback poster/SVG nếu Spline scene nặng hoặc frame rate thấp.
-- Text chính phải là HTML/CSS, không đặt trong Spline/Rive để giữ accessibility và responsive.
-- GSAP timeline phải cleanup khi component unmount.
-- Tôn trọng `prefers-reduced-motion`: tắt idle loop, particle drift, camera orbit và scroll pin phức tạp.
+- Lazy load R3F scene và Lottie animation bằng route-level hoặc component-level suspense.
+- Không render nhiều `<Canvas>` nặng cùng lúc trong một page.
+- Với mobile, dùng poster `.webp` hoặc SVG fallback nếu 3D scene nặng.
+- Text chính phải là HTML/CSS, không đặt trong GLB/Lottie để giữ accessibility và responsive.
+- Lenis và animation loop phải cleanup khi component unmount.
+- Tôn trọng `prefers-reduced-motion`: tắt idle loop, particle drift, camera orbit và parallax phức tạp.
+- Dùng compressed GLB/texture nhỏ; tránh model quá chi tiết cho portfolio sinh viên.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -641,14 +625,15 @@ src/
 ### Checklist khi áp dụng theme
 
 - [ ] Chọn theme ID và ghi vào `README.md` của sub-project.
-- [ ] Cài Framer Motion, GSAP, Spline React và Rive React nếu theme dùng đủ stack.
-- [ ] Tạo `src/app/motionConfig.js` và `src/app/gsapSetup.js` nếu có timeline/route transition.
-- [ ] Tạo `src/assets/<theme-id>/` chứa `.spline`, `.riv`, SVG và poster fallback.
-- [ ] Tách Spline wrapper, Rive wrapper và GSAP timeline thành feature riêng.
+- [ ] Cài stack npm-first: `motion`, `three`, `@react-three/fiber`, `@react-three/drei`, `lenis`, `lottie-react`.
+- [ ] Chỉ cài `@react-three/postprocessing`, `@use-gesture/react`, `maath` nếu theme thật sự cần.
+- [ ] Tạo `src/app/motionConfig.js` và `src/app/lenisSetup.js`.
+- [ ] Tạo `src/assets/<theme-id>/` chứa `.glb/.gltf`, Lottie `.json`, SVG và poster fallback.
+- [ ] Tách R3F scene, Lottie wrapper và Motion choreography thành feature riêng.
 - [ ] Dùng HTML/CSS cho text chính, form, button và navigation.
 - [ ] Kiểm tra desktop/mobile ở 375px, 768px, 1280px.
 - [ ] Kiểm tra reduced motion và fallback khi 3D asset chưa load.
 
 ---
 
-_Cập nhật lần cuối: 2026-05-14 — Khởi tạo 5 theme portfolio nữ sáng, cute, tập trung animation 3D với Framer Motion, GSAP, Spline và Rive._
+_Cập nhật lần cuối: 2026-05-14 — Chuyển Catalog 3 sang stack free, npm-first: Motion, Three.js, React Three Fiber, Drei, Lenis, Lottie React, use-gesture, maath._
