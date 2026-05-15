@@ -7,6 +7,9 @@
   --sky-gem: #8cb8ff;
   --dream-lilac: #c7a8ff;
   --soft-white: #fff5fe;
+  --photo-pink-bg: #ffe6ec;
+  --photo-pink-wash: #fee3e8;
+  --photo-pink-glow: #fde4e8;
   --ink: #33234a;
   --muted: #776995;
   --border: #ffc7f2;
@@ -24,12 +27,23 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--photo-pink-bg);
   background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(255, 255, 255, 0.7),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(255, 255, 255, 0.44),
+      transparent 30%
+    ),
     linear-gradient(
       135deg,
-      rgba(255, 245, 254, 0.75),
-      rgba(255, 230, 109, 0.2),
-      rgba(109, 242, 214, 0.2)
+      rgba(255, 230, 236, 0.95),
+      rgba(254, 227, 232, 0.92),
+      rgba(253, 228, 232, 0.9)
     ),
     url('./assets/magical-girl-ui/color.jpg') center/cover fixed;
 }
@@ -211,7 +225,7 @@ p {
 }
 
 h1 {
-  max-width: 920px;
+  max-width: 980px;
   margin-bottom: 24px;
   font-family: 'Coiny', 'Quicksand', sans-serif;
   font-size: clamp(2.35rem, 7vw, 5.6rem);
@@ -274,7 +288,7 @@ h1 {
   inset: 5% 8% 0;
   width: 84%;
   height: 92%;
-  border-radius: 32px 32px 0 0;
+  border-radius: 32px;
   object-fit: cover;
   object-position: 50% 22%;
   box-shadow: 0 28px 70px rgba(51, 35, 74, 0.24);
@@ -561,7 +575,7 @@ ul {
 
 @media (max-width: 860px) {
   .app-shell {
-    padding-top: 124px;
+    padding-top: 160px;
   }
 
   .magic-nav {
