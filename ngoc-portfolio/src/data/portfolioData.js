@@ -108,6 +108,6 @@ export const conclusion = {
     challengeText:
       'Thách thức: Việc cá nhân hóa các sản phẩm công nghệ sao cho vẫn giữ được sự nghiêm túc của ngành Luật.',
     highlightText:
-      'Tái bút: Mình đã tạo ra được một hồ sơ số chuyên nghiệp, nơi mình tự hào giới thiệu bản thân với nhà tuyển dụng trong tương lai.',
+      'Tái bút: Đối với dự án cá nhân này, mình rất tự hào khi đã học hỏi và đúc kết cho mình thêm nhiều kiến thức và kinh nghiệm về công nghệ số và ứng dụng trí tuệ nhân tạo. Tạo ra một nền tảng vững chắc cho bản thân trong tương lai.',
   },
 };
