@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('portfolio renders the flower-market experience without project modal buttons', async ({
+test('portfolio renders the flower-market experience with assignment PDF modal buttons', async ({
   page,
 }) => {
   const consoleErrors = [];
@@ -53,8 +53,14 @@ test('portfolio renders the flower-market experience without project modal butto
       return Math.round(intro.top - title.bottom);
     });
   expect(projectHeadingGap).toBeLessThanOrEqual(8);
-  await expect(page.getByRole('button', { name: /mở bài|open|pdf/i })).toHaveCount(
-    0,
+  const viewButtons = page.getByRole('button', { name: 'Xem bài' });
+  await expect(viewButtons).toHaveCount(6);
+  await viewButtons.first().click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.locator('.project-file-frame')).toBeVisible();
+  await expect(page.locator('.project-file-frame')).toHaveAttribute(
+    'src',
+    /bt1\.pdf/i,
   );
   await expect(
     page.getByText('© 2026 • Phạm Yến Vi • Digital Portfolio'),

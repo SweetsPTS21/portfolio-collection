@@ -1,4 +1,13 @@
-export default function BouquetProjectCard({ title, description, flower, index }) {
+import { Button } from 'antd';
+import { FileText } from 'lucide-react';
+
+export default function BouquetProjectCard({
+  title,
+  description,
+  flower,
+  index,
+  onView,
+}) {
   return (
     <article className="project-card">
       <div className="bouquet-wrap" aria-hidden="true">
@@ -14,6 +23,17 @@ export default function BouquetProjectCard({ title, description, flower, index }
       <span className="ribbon-label project-ribbon">assignment</span>
       <h3>{title}</h3>
       <p>{description}</p>
+      {onView ? (
+        <div className="project-actions">
+          <Button
+            icon={<FileText size={17} strokeWidth={1.8} />}
+            onClick={onView}
+            type="primary"
+          >
+            Xem bài
+          </Button>
+        </div>
+      ) : null}
     </article>
   );
 }

@@ -1,4 +1,10 @@
 import avatarUrl from '../../docs/avatar.png';
+import bt1Pdf from '../../docs/bt1.pdf';
+import bt2Pdf from '../../docs/bt2.pdf';
+import bt3Pdf from '../../docs/bt3.pdf';
+import bt4Pdf from '../../docs/bt4.pdf';
+import bt5Pdf from '../../docs/bt5.pdf';
+import bt6Pdf from '../../docs/bt6.pdf';
 import botanicalLineArt from '../assets/flower-market/botanical-line-art.svg';
 import floralBouquet from '../assets/flower-market/flower-sunflower.svg';
 import floralPattern from '../assets/flower-market/floral-pattern.svg';
@@ -150,37 +156,47 @@ export const tools = {
 export const projects = {
   title: 'Bài tập',
   intro:
-    'Nội dung 6 bài được đưa vào đầy đủ theo mô tả trong portfolio. Phiên bản đầu chưa có nút mở modal project.',
+    'Nội dung 6 bài được đưa vào đầy đủ theo mô tả trong portfolio, kèm minh chứng PDF để người xem có thể mở và theo dõi trực tiếp.',
   items: [
     {
       title: 'Bài tập 1 - Chương 1: Máy tính và các thiết bị ngoại vi',
       description:
         'Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi (bàn phím, chuột, máy in...), kèm minh chứng thực hành trong file đính kèm.',
       flower: flowerTulip,
+      file: bt1Pdf,
+      pdfName: 'bt1.pdf',
     },
     {
       title: 'Bài tập 2 - Chương 2: Khai thác dữ liệu và thông tin',
       description:
         'Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.',
       flower: flowerLavender,
+      file: bt2Pdf,
+      pdfName: 'bt2.pdf',
     },
     {
       title: 'Bài tập 2 - Chương 3: Tổng quan về trí tuệ nhân tạo',
       description:
         'Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích - rủi ro và ví dụ liên hệ thực tế trong học tập.',
       flower: flowerSakura,
+      file: bt3Pdf,
+      pdfName: 'bt3.pdf',
     },
     {
       title: 'Bài tập 3 - Chương 4: Giao tiếp và hợp tác trong môi trường số',
       description:
         'Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.',
       flower: flowerSunflower,
+      file: bt4Pdf,
+      pdfName: 'bt4.pdf',
     },
     {
       title: 'Bài tập 2 - Chương 5: Sáng tạo nội dung số',
       description:
         'Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.',
       flower: flowerTulip,
+      file: bt5Pdf,
+      pdfName: 'bt5.pdf',
     },
     {
       title:
@@ -188,6 +204,8 @@ export const projects = {
       description:
         'Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch).',
       flower: flowerLavender,
+      file: bt6Pdf,
+      pdfName: 'bt6.pdf',
     },
   ],
 };
