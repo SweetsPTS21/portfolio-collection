@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260" role="img" aria-label="Compact mirror">
+  <circle cx="140" cy="126" r="102" fill="#FF5BC8" stroke="#33234A" stroke-width="7"/>
+  <circle cx="140" cy="126" r="76" fill="#FFF5FE" stroke="#FFE66D" stroke-width="8"/>
+  <ellipse cx="140" cy="119" rx="54" ry="42" fill="#C7A8FF" opacity=".45"/>
+  <path d="M89 208h102l25 35H64Z" fill="#8CB8FF" stroke="#33234A" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M118 66 129 91 156 94 135 111 141 138 118 124 95 138 101 111 80 94 107 91Z" fill="#FFE66D"/>
+</svg>

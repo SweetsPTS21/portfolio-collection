@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 340" role="img" aria-label="Spell card frame">
+  <rect x="18" y="18" width="224" height="304" rx="30" fill="#fff" stroke="#33234A" stroke-width="6"/>
+  <rect x="36" y="42" width="188" height="256" rx="22" fill="#FFF5FE" stroke="#FFC7F2" stroke-width="4" stroke-dasharray="8 8"/>
+  <path d="m130 52 12 28 30 3-23 20 7 30-26-16-26 16 7-30-23-20 30-3Z" fill="#FFE66D" stroke="#FF5BC8" stroke-width="4"/>
+  <path d="M54 258h152" stroke="#C7A8FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M76 282h108" stroke="#6DF2D6" stroke-width="8" stroke-linecap="round"/>
+</svg>

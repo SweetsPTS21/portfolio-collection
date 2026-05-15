@@ -16,14 +16,14 @@ npm install framer-motion @rive-app/react-canvas lenis
 
 > `SVGator`, `Realtime Colors` và `Blush` là công cụ thiết kế/asset pipeline, không bắt buộc là runtime package trong app.
 
-| Library / Tool  | Vai trò chính trong catalog này                                      | Nên dùng cho                                                 |
-| --------------- | --------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Framer Motion   | Animation UI React, page transition, modal/drawer, card hover         | Section entrance, route transition, shared layout, CTA hover |
-| Rive            | Animated 2D icon/mascot/state machine                                 | Mascot, CTA state, loading, empty state, tiny reaction       |
-| SVGator         | Tạo animation SVG timeline rồi export SVG/CSS/JS                      | Sticker, underline, ribbon, sparkle, icon động phức tạp      |
-| Lenis           | Smooth scroll có kiểm soát                                            | Portfolio nhiều section, scroll reveal, anchor navigation    |
-| Realtime Colors | Tạo và kiểm tra bảng màu sáng, contrast, palette variants             | Token màu, theme preview, dark/light hoặc seasonal variant   |
-| Blush           | Illustration pack/custom character theo style cute/feminine           | Hero illustration, empty state, about avatar, decor scene    |
+| Library / Tool  | Vai trò chính trong catalog này                               | Nên dùng cho                                                 |
+| --------------- | ------------------------------------------------------------- | ------------------------------------------------------------ |
+| Framer Motion   | Animation UI React, page transition, modal/drawer, card hover | Section entrance, route transition, shared layout, CTA hover |
+| Rive            | Animated 2D icon/mascot/state machine                         | Mascot, CTA state, loading, empty state, tiny reaction       |
+| SVGator         | Tạo animation SVG timeline rồi export SVG/CSS/JS              | Sticker, underline, ribbon, sparkle, icon động phức tạp      |
+| Lenis           | Smooth scroll có kiểm soát                                    | Portfolio nhiều section, scroll reveal, anchor navigation    |
+| Realtime Colors | Tạo và kiểm tra bảng màu sáng, contrast, palette variants     | Token màu, theme preview, dark/light hoặc seasonal variant   |
+| Blush           | Illustration pack/custom character theo style cute/feminine   | Hero illustration, empty state, about avatar, decor scene    |
 
 Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùng cho interactive micro-animation; SVGator dùng để sản xuất SVG animation có thể tái dùng; Lenis chỉ xử lý scroll; Realtime Colors hỗ trợ chọn palette; Blush hỗ trợ nguồn illustration đồng bộ style.
 
@@ -31,13 +31,13 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùn
 
 ## Danh sách phong cách
 
-| ID                    | Tên phong cách                         | Vibe                               | Hợp với                            |
-| --------------------- | -------------------------------------- | ---------------------------------- | ---------------------------------- |
-| `kawaii-stationery`   | Kawaii Stationery Portfolio            | Cute, học tập, sticker, pastel pop | Portfolio sinh viên, designer, dev |
-| `fruit-soda-shop`     | Fruit Soda Shop Portfolio              | Tươi, juicy, rực rỡ, bubbly        | Portfolio trẻ trung, năng lượng    |
-| `ribbon-craft-studio` | Ribbon Craft Studio Portfolio          | Girly, handmade, bow, soft-bright  | Portfolio nữ tính, creative        |
-| `pop-idol-stage`      | Pop Idol Stage Portfolio               | Sân khấu, star, sparkle, tự tin    | Portfolio nổi bật, cá tính         |
-| `magical-girl-ui`     | Magical Girl UI Portfolio              | Fantasy cute, biến hình, dreamy    | Portfolio visual mạnh, đáng nhớ    |
+| ID                    | Tên phong cách                | Vibe                               | Hợp với                            |
+| --------------------- | ----------------------------- | ---------------------------------- | ---------------------------------- |
+| `kawaii-stationery`   | Kawaii Stationery Portfolio   | Cute, học tập, sticker, pastel pop | Portfolio sinh viên, designer, dev |
+| `fruit-soda-shop`     | Fruit Soda Shop Portfolio     | Tươi, juicy, rực rỡ, bubbly        | Portfolio trẻ trung, năng lượng    |
+| `ribbon-craft-studio` | Ribbon Craft Studio Portfolio | Girly, handmade, bow, soft-bright  | Portfolio nữ tính, creative        |
+| `pop-idol-stage`      | Pop Idol Stage Portfolio      | Sân khấu, star, sparkle, tự tin    | Portfolio nổi bật, cá tính         |
+| `magical-girl-ui`     | Magical Girl UI Portfolio     | Fantasy cute, biến hình, dreamy    | Portfolio visual mạnh, đáng nhớ    |
 
 ---
 
@@ -47,13 +47,13 @@ Portfolio như một bàn học nhiều sticker: notebook, bút gel, washi tape,
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                               |
-| ----------- | ------------------------------------------------------------------- |
-| Cảm xúc     | Dễ thương, chăm chỉ, vui, có tổ chức                                |
-| Hình khối   | Card bo 14–18px, viền dashed, sticker outline trắng                 |
-| Không gian  | Nền giấy sáng, grid notebook, nhiều sticker nhỏ                     |
-| Chuyển động | Sticker bounce, bút underline chạy, sticky note flip nhẹ            |
-| Điểm nhấn   | Doodle SVG, tape label, icon heart/star, checklist học tập          |
+| Yếu tố      | Mô tả                                                      |
+| ----------- | ---------------------------------------------------------- |
+| Cảm xúc     | Dễ thương, chăm chỉ, vui, có tổ chức                       |
+| Hình khối   | Card bo 14–18px, viền dashed, sticker outline trắng        |
+| Không gian  | Nền giấy sáng, grid notebook, nhiều sticker nhỏ            |
+| Chuyển động | Sticker bounce, bút underline chạy, sticky note flip nhẹ   |
+| Điểm nhấn   | Doodle SVG, tape label, icon heart/star, checklist học tập |
 
 ### Bảng màu
 
@@ -95,7 +95,7 @@ export const theme = {
 ### Library usage
 
 | Library / Tool  | Cách dùng trong theme                                               |
-| --------------- | -------------------------------------------------------------------- |
+| --------------- | ------------------------------------------------------------------- |
 | Framer Motion   | Sticky note flip, flashcard deck, route transition như lật trang vở |
 | Rive            | Mascot bút/chú mèo học tập, CTA gửi postcard, loading sticker       |
 | SVGator         | Animate doodle underline, washi tape peel, sticker pop sequence     |
@@ -113,13 +113,13 @@ export const theme = {
 
 ### Animation rules
 
-| Sự kiện          | Effect                                      | Thư viện             |
-| ---------------- | ------------------------------------------- | -------------------- |
-| Page load        | Sticker pop-in theo stagger                 | CSS / React Motion   |
-| Section entrance | Fade + translateY(18px) + scale(0.98 → 1)   | IntersectionObserver |
-| Card hover       | Lift + rotate ±1.5deg                       | CSS transition       |
-| Tape hover       | Tape peel nhẹ bằng rotate/translate         | CSS transition       |
-| Doodle underline | Stroke draw dưới heading                    | SVG/CSS animation    |
+| Sự kiện          | Effect                                    | Thư viện             |
+| ---------------- | ----------------------------------------- | -------------------- |
+| Page load        | Sticker pop-in theo stagger               | CSS / React Motion   |
+| Section entrance | Fade + translateY(18px) + scale(0.98 → 1) | IntersectionObserver |
+| Card hover       | Lift + rotate ±1.5deg                     | CSS transition       |
+| Tape hover       | Tape peel nhẹ bằng rotate/translate       | CSS transition       |
+| Doodle underline | Stroke draw dưới heading                  | SVG/CSS animation    |
 
 ### Component notes
 
@@ -154,15 +154,15 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo             | Nội dung cần vẽ                                  | Dùng cho                 | Gợi ý kỹ thuật                                      |
-| --------------------------- | ------------------------------------------------ | ------------------------ | --------------------------------------------------- |
-| `sticker-sheet.svg`         | Heart, star, smile, flower, bow, cloud sticker   | Floating sticker layer   | Stroke trắng 4px, filter shadow nhẹ                 |
-| `notebook-grid.svg`         | Pattern giấy kẻ ô và margin line                 | Background               | Dùng `<pattern>`, opacity thấp để không rối text     |
-| `washi-tape-set.svg`        | 5 tape màu có pattern chấm/sọc/checker           | Label, card corner       | Clip-path nhẹ, texture bằng rect opacity thấp        |
-| `gel-pen-doodles.svg`       | Underline, arrow, sparkle, circle highlight      | Heading accent           | Stroke round cap, animate stroke-dashoffset         |
-| `school-supply-icons.svg`   | Pen, eraser, notebook, ruler, paper clip         | Skill badge, nav icon    | Icon 24x24, dùng `currentColor`                     |
-| `cute-stamp-postcard.svg`   | Stamp, envelope, tiny heart mail                 | Contact section          | Tách stamp thành symbol để reuse                    |
-| `sticky-note-shapes.svg`    | Note vuông, note tròn, label, bookmark           | Project cards            | Path hơi lệch để có cảm giác handmade               |
+| File SVG tự tạo           | Nội dung cần vẽ                                | Dùng cho               | Gợi ý kỹ thuật                                   |
+| ------------------------- | ---------------------------------------------- | ---------------------- | ------------------------------------------------ |
+| `sticker-sheet.svg`       | Heart, star, smile, flower, bow, cloud sticker | Floating sticker layer | Stroke trắng 4px, filter shadow nhẹ              |
+| `notebook-grid.svg`       | Pattern giấy kẻ ô và margin line               | Background             | Dùng `<pattern>`, opacity thấp để không rối text |
+| `washi-tape-set.svg`      | 5 tape màu có pattern chấm/sọc/checker         | Label, card corner     | Clip-path nhẹ, texture bằng rect opacity thấp    |
+| `gel-pen-doodles.svg`     | Underline, arrow, sparkle, circle highlight    | Heading accent         | Stroke round cap, animate stroke-dashoffset      |
+| `school-supply-icons.svg` | Pen, eraser, notebook, ruler, paper clip       | Skill badge, nav icon  | Icon 24x24, dùng `currentColor`                  |
+| `cute-stamp-postcard.svg` | Stamp, envelope, tiny heart mail               | Contact section        | Tách stamp thành symbol để reuse                 |
+| `sticky-note-shapes.svg`  | Note vuông, note tròn, label, bookmark         | Project cards          | Path hơi lệch để có cảm giác handmade            |
 
 ---
 
@@ -220,13 +220,13 @@ export const theme = {
 ### Library usage
 
 | Library / Tool  | Cách dùng trong theme                                              |
-| --------------- | ------------------------------------------------------------------- |
-| Framer Motion   | Bubble card hover, flavor drawer, menu item stagger, CTA bounce     |
-| Rive            | Ly soda/icon fruit đổi state khi hover hoặc khi gửi contact         |
-| SVGator         | Bubble fizz, fruit slice spin, straw wiggle, splash blob animation  |
+| --------------- | ------------------------------------------------------------------ |
+| Framer Motion   | Bubble card hover, flavor drawer, menu item stagger, CTA bounce    |
+| Rive            | Ly soda/icon fruit đổi state khi hover hoặc khi gửi contact        |
+| SVGator         | Bubble fizz, fruit slice spin, straw wiggle, splash blob animation |
 | Lenis           | Smooth scroll cho flavor menu dài và section reveal mềm            |
-| Realtime Colors | Tạo combo citrus/strawberry/soda-blue có độ tương phản ổn           |
-| Blush           | Illustration quầy nước/nhân vật cute cho about hoặc order section   |
+| Realtime Colors | Tạo combo citrus/strawberry/soda-blue có độ tương phản ổn          |
+| Blush           | Illustration quầy nước/nhân vật cute cho about hoặc order section  |
 
 ### Layout ideas
 
@@ -238,13 +238,13 @@ export const theme = {
 
 ### Animation rules
 
-| Sự kiện          | Effect                                  | Thư viện           |
-| ---------------- | --------------------------------------- | ------------------ |
-| Bubble idle      | Float lên xuống lệch pha                | CSS keyframes      |
-| Fruit decoration | Rotate 3–8deg chậm                      | CSS keyframes      |
-| Card hover       | Splash blob scale từ góc card           | CSS pseudo-element |
-| Button hover     | Bubble trail chạy ngang                 | CSS keyframes      |
-| Section entrance | Slide-up + sparkle fade                 | React Motion       |
+| Sự kiện          | Effect                        | Thư viện           |
+| ---------------- | ----------------------------- | ------------------ |
+| Bubble idle      | Float lên xuống lệch pha      | CSS keyframes      |
+| Fruit decoration | Rotate 3–8deg chậm            | CSS keyframes      |
+| Card hover       | Splash blob scale từ góc card | CSS pseudo-element |
+| Button hover     | Bubble trail chạy ngang       | CSS keyframes      |
+| Section entrance | Slide-up + sparkle fade       | React Motion       |
 
 ### Component notes
 
@@ -280,15 +280,15 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo             | Nội dung cần vẽ                                      | Dùng cho              | Gợi ý kỹ thuật                                      |
-| --------------------------- | ---------------------------------------------------- | --------------------- | --------------------------------------------------- |
-| `soda-cup-hero.svg`         | Ly soda, đá viên, straw, bubble, trái cây trang trí  | Hero                  | Dùng gradient trong suốt, giữ shape rõ trên mobile  |
-| `fruit-sticker-sheet.svg`   | Lemon, orange, strawberry, cherry, kiwi, blueberry   | Sticker decoration    | Mỗi fruit có outline trắng và shadow nhẹ            |
-| `bubble-pattern.svg`        | Bubble nhiều cỡ                                      | Background            | SVG pattern opacity 0.12–0.22                       |
-| `splash-blobs.svg`          | Blob splash nhiều màu                                | Hover layer/card      | Dùng CSS mask hoặc absolute SVG                     |
-| `menu-ticket-frame.svg`     | Khung receipt/order ticket                           | About/project card    | Viền dashed, góc bo nhẹ, notch ở cạnh               |
-| `fizz-particles.svg`        | Dot, sparkle, mini bubble                            | Animation particle    | Reuse `<symbol>`, animate bằng CSS                  |
-| `fruit-icons-24.svg`        | Icon line fruit đơn giản                             | Skill chips/nav       | `currentColor`, stroke 2px, round cap               |
+| File SVG tự tạo           | Nội dung cần vẽ                                     | Dùng cho           | Gợi ý kỹ thuật                                     |
+| ------------------------- | --------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| `soda-cup-hero.svg`       | Ly soda, đá viên, straw, bubble, trái cây trang trí | Hero               | Dùng gradient trong suốt, giữ shape rõ trên mobile |
+| `fruit-sticker-sheet.svg` | Lemon, orange, strawberry, cherry, kiwi, blueberry  | Sticker decoration | Mỗi fruit có outline trắng và shadow nhẹ           |
+| `bubble-pattern.svg`      | Bubble nhiều cỡ                                     | Background         | SVG pattern opacity 0.12–0.22                      |
+| `splash-blobs.svg`        | Blob splash nhiều màu                               | Hover layer/card   | Dùng CSS mask hoặc absolute SVG                    |
+| `menu-ticket-frame.svg`   | Khung receipt/order ticket                          | About/project card | Viền dashed, góc bo nhẹ, notch ở cạnh              |
+| `fizz-particles.svg`      | Dot, sparkle, mini bubble                           | Animation particle | Reuse `<symbol>`, animate bằng CSS                 |
+| `fruit-icons-24.svg`      | Icon line fruit đơn giản                            | Skill chips/nav    | `currentColor`, stroke 2px, round cap              |
 
 ---
 
@@ -346,13 +346,13 @@ export const theme = {
 ### Library usage
 
 | Library / Tool  | Cách dùng trong theme                                                |
-| --------------- | --------------------------------------------------------------------- |
+| --------------- | -------------------------------------------------------------------- |
 | Framer Motion   | Craft kit modal, label card lift, route transition như mở hộp quà    |
-| Rive            | Bow/charm CTA, form success, tiny sewing mascot reaction              |
-| SVGator         | Ribbon wave, stitch line draw, charm swing, bow wiggle timeline       |
-| Lenis           | Smooth scroll theo atelier/process pages                              |
-| Realtime Colors | Kiểm thử palette coral/mint/butter/lilac tránh quá nhạt hoặc mờ text  |
-| Blush           | Illustration handmade/craft girl cho hero hoặc profile page           |
+| Rive            | Bow/charm CTA, form success, tiny sewing mascot reaction             |
+| SVGator         | Ribbon wave, stitch line draw, charm swing, bow wiggle timeline      |
+| Lenis           | Smooth scroll theo atelier/process pages                             |
+| Realtime Colors | Kiểm thử palette coral/mint/butter/lilac tránh quá nhạt hoặc mờ text |
+| Blush           | Illustration handmade/craft girl cho hero hoặc profile page          |
 
 ### Layout ideas
 
@@ -364,13 +364,13 @@ export const theme = {
 
 ### Animation rules
 
-| Sự kiện          | Effect                                    | Thư viện        |
-| ---------------- | ----------------------------------------- | --------------- |
-| Hero ribbon      | Wave path nhẹ bằng transform              | CSS keyframes   |
-| Bow decoration   | Wiggle khi hover hoặc khi vào viewport    | CSS keyframes   |
-| Stitch border    | Stroke-dashoffset draw quanh card         | SVG/CSS         |
-| Section entrance | Fade + clip-path reveal như mở hộp quà    | CSS / Motion    |
-| Project hover    | Charm swing + card lift                   | CSS transition  |
+| Sự kiện          | Effect                                 | Thư viện       |
+| ---------------- | -------------------------------------- | -------------- |
+| Hero ribbon      | Wave path nhẹ bằng transform           | CSS keyframes  |
+| Bow decoration   | Wiggle khi hover hoặc khi vào viewport | CSS keyframes  |
+| Stitch border    | Stroke-dashoffset draw quanh card      | SVG/CSS        |
+| Section entrance | Fade + clip-path reveal như mở hộp quà | CSS / Motion   |
+| Project hover    | Charm swing + card lift                | CSS transition |
 
 ### Component notes
 
@@ -406,15 +406,15 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo             | Nội dung cần vẽ                                  | Dùng cho             | Gợi ý kỹ thuật                                      |
-| --------------------------- | ------------------------------------------------ | -------------------- | --------------------------------------------------- |
-| `ribbon-wave-hero.svg`      | Ribbon dài uốn sóng, highlight và shadow mềm    | Hero background      | Path fill coral, thêm linearGradient nhẹ            |
-| `bow-sticker-set.svg`       | Bow nhiều kiểu: classic, tiny, double, charm bow | Decoration/card      | Stroke trắng, có thể rotate/scale bằng CSS          |
-| `stitch-border-frame.svg`   | Khung stitch, scallop edge, dashed thread        | Card frame           | Path stroke-dasharray để animate draw               |
-| `craft-charms.svg`          | Heart, star, pearl, flower charm                 | Hover decoration     | Gắn vào card bằng absolute, animation swing         |
-| `thread-spool-icons.svg`    | Cuộn chỉ, kim, kéo, pin cushion                  | Skills/nav icon      | Icon đơn nét, màu đổi bằng CSS                      |
-| `fabric-pattern.svg`        | Pattern sợi vải/chấm nhỏ                         | Background/card      | Dùng `feTurbulence` nhẹ hoặc pattern line opacity   |
-| `gift-tag-shapes.svg`       | Gift tag, label, price tag, tiny ribbon          | Contact/project meta | Tạo nhiều symbol để reuse                           |
+| File SVG tự tạo           | Nội dung cần vẽ                                  | Dùng cho             | Gợi ý kỹ thuật                                    |
+| ------------------------- | ------------------------------------------------ | -------------------- | ------------------------------------------------- |
+| `ribbon-wave-hero.svg`    | Ribbon dài uốn sóng, highlight và shadow mềm     | Hero background      | Path fill coral, thêm linearGradient nhẹ          |
+| `bow-sticker-set.svg`     | Bow nhiều kiểu: classic, tiny, double, charm bow | Decoration/card      | Stroke trắng, có thể rotate/scale bằng CSS        |
+| `stitch-border-frame.svg` | Khung stitch, scallop edge, dashed thread        | Card frame           | Path stroke-dasharray để animate draw             |
+| `craft-charms.svg`        | Heart, star, pearl, flower charm                 | Hover decoration     | Gắn vào card bằng absolute, animation swing       |
+| `thread-spool-icons.svg`  | Cuộn chỉ, kim, kéo, pin cushion                  | Skills/nav icon      | Icon đơn nét, màu đổi bằng CSS                    |
+| `fabric-pattern.svg`      | Pattern sợi vải/chấm nhỏ                         | Background/card      | Dùng `feTurbulence` nhẹ hoặc pattern line opacity |
+| `gift-tag-shapes.svg`     | Gift tag, label, price tag, tiny ribbon          | Contact/project meta | Tạo nhiều symbol để reuse                         |
 
 ---
 
@@ -472,13 +472,13 @@ export const theme = {
 ### Library usage
 
 | Library / Tool  | Cách dùng trong theme                                               |
-| --------------- | -------------------------------------------------------------------- |
+| --------------- | ------------------------------------------------------------------- |
 | Framer Motion   | Ticket hover, curtain/modal reveal, star badge spring, route motion |
-| Rive            | Light stick, star burst, fan-letter CTA, loading sparkle             |
-| SVGator         | Spotlight sweep, marquee dots, confetti drift, sparkle burst         |
-| Lenis           | Smooth scroll qua stage/setlist/backstage/fan-letter sections        |
-| Realtime Colors | Tạo palette idol-pink/stage-blue/star-yellow sáng nhưng không chói   |
-| Blush           | Illustration performer/fan-letter cute cho backstage/about           |
+| Rive            | Light stick, star burst, fan-letter CTA, loading sparkle            |
+| SVGator         | Spotlight sweep, marquee dots, confetti drift, sparkle burst        |
+| Lenis           | Smooth scroll qua stage/setlist/backstage/fan-letter sections       |
+| Realtime Colors | Tạo palette idol-pink/stage-blue/star-yellow sáng nhưng không chói  |
+| Blush           | Illustration performer/fan-letter cute cho backstage/about          |
 
 ### Layout ideas
 
@@ -490,13 +490,13 @@ export const theme = {
 
 ### Animation rules
 
-| Sự kiện          | Effect                                   | Thư viện           |
-| ---------------- | ---------------------------------------- | ------------------ |
-| Spotlight        | Sweep qua hero 8–12s loop                | CSS keyframes      |
-| Sparkles         | Twinkle opacity + scale                  | CSS keyframes      |
-| Confetti         | Drift chậm, lệch pha từng item           | CSS keyframes      |
-| Ticket hover     | Tear notch shadow + translateY(-6px)     | CSS transition     |
-| Star marquee     | Marquee dot pulse stagger                | CSS animation      |
+| Sự kiện      | Effect                               | Thư viện       |
+| ------------ | ------------------------------------ | -------------- |
+| Spotlight    | Sweep qua hero 8–12s loop            | CSS keyframes  |
+| Sparkles     | Twinkle opacity + scale              | CSS keyframes  |
+| Confetti     | Drift chậm, lệch pha từng item       | CSS keyframes  |
+| Ticket hover | Tear notch shadow + translateY(-6px) | CSS transition |
+| Star marquee | Marquee dot pulse stagger            | CSS animation  |
 
 ### Component notes
 
@@ -532,15 +532,15 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo             | Nội dung cần vẽ                                  | Dùng cho             | Gợi ý kỹ thuật                                      |
-| --------------------------- | ------------------------------------------------ | -------------------- | --------------------------------------------------- |
-| `stage-spotlights.svg`      | Cone light pastel, stage arcs, glow circles      | Hero background      | Dùng radialGradient, opacity 0.35–0.6               |
-| `star-marquee-frame.svg`    | Khung star với bóng đèn tròn                     | Hero title/project   | Dot lights tách class để pulse stagger              |
-| `idol-confetti.svg`         | Star, ribbon, circle, triangle confetti          | Floating layer       | Tạo symbol nhiều màu, animate translate/rotate      |
-| `microphone-lightstick.svg` | Mic, light stick, headphone, music note          | Icon set             | Stroke round, fill bright, dễ đổi màu bằng CSS      |
-| `concert-ticket-card.svg`   | Ticket frame có notch hai bên                    | Project card         | ViewBox rộng, border dashed hoặc perforation dots   |
-| `sparkle-burst.svg`         | Burst, twinkle, shine lines                      | Button/heading       | Animate scale + opacity                             |
-| `backstage-pass.svg`        | ID pass, lanyard, mini QR block                  | About section        | Dùng rect grid đơn giản thay QR thật                |
+| File SVG tự tạo             | Nội dung cần vẽ                             | Dùng cho           | Gợi ý kỹ thuật                                    |
+| --------------------------- | ------------------------------------------- | ------------------ | ------------------------------------------------- |
+| `stage-spotlights.svg`      | Cone light pastel, stage arcs, glow circles | Hero background    | Dùng radialGradient, opacity 0.35–0.6             |
+| `star-marquee-frame.svg`    | Khung star với bóng đèn tròn                | Hero title/project | Dot lights tách class để pulse stagger            |
+| `idol-confetti.svg`         | Star, ribbon, circle, triangle confetti     | Floating layer     | Tạo symbol nhiều màu, animate translate/rotate    |
+| `microphone-lightstick.svg` | Mic, light stick, headphone, music note     | Icon set           | Stroke round, fill bright, dễ đổi màu bằng CSS    |
+| `concert-ticket-card.svg`   | Ticket frame có notch hai bên               | Project card       | ViewBox rộng, border dashed hoặc perforation dots |
+| `sparkle-burst.svg`         | Burst, twinkle, shine lines                 | Button/heading     | Animate scale + opacity                           |
+| `backstage-pass.svg`        | ID pass, lanyard, mini QR block             | About section      | Dùng rect grid đơn giản thay QR thật              |
 
 ---
 
@@ -597,14 +597,14 @@ export const theme = {
 
 ### Library usage
 
-| Library / Tool  | Cách dùng trong theme                                               |
-| --------------- | -------------------------------------------------------------------- |
-| Framer Motion   | Spell card flip, compact modal, transformation route reveal          |
-| Rive            | Wand/gem CTA, star companion, compact mirror open state              |
-| SVGator         | Magic circle rotate, wand trail draw, constellation line animation   |
-| Lenis           | Smooth scroll cho spellbook/constellation pages                      |
-| Realtime Colors | Tạo palette magic-pink/moon-yellow/aqua-gem đủ sáng và dễ đọc        |
-| Blush           | Illustration magical girl/fantasy character cho hero/profile         |
+| Library / Tool  | Cách dùng trong theme                                              |
+| --------------- | ------------------------------------------------------------------ |
+| Framer Motion   | Spell card flip, compact modal, transformation route reveal        |
+| Rive            | Wand/gem CTA, star companion, compact mirror open state            |
+| SVGator         | Magic circle rotate, wand trail draw, constellation line animation |
+| Lenis           | Smooth scroll cho spellbook/constellation pages                    |
+| Realtime Colors | Tạo palette magic-pink/moon-yellow/aqua-gem đủ sáng và dễ đọc      |
+| Blush           | Illustration magical girl/fantasy character cho hero/profile       |
 
 ### Layout ideas
 
@@ -616,13 +616,13 @@ export const theme = {
 
 ### Animation rules
 
-| Sự kiện          | Effect                                      | Thư viện             |
-| ---------------- | ------------------------------------------- | -------------------- |
-| Magic circle     | Rotate rất chậm + counter-rotate icon       | CSS keyframes        |
-| Wand trail       | Sparkle path follow pointer hoặc load path  | SVG/CSS/JS nhẹ       |
-| Card hover       | Flip/transform nhẹ, không lật text quá dài  | CSS transform        |
-| Star orbit       | Orbit quanh hero/avatar                     | CSS keyframes        |
-| Section entrance | Starburst reveal + fade                     | React Motion / CSS   |
+| Sự kiện          | Effect                                     | Thư viện           |
+| ---------------- | ------------------------------------------ | ------------------ |
+| Magic circle     | Rotate rất chậm + counter-rotate icon      | CSS keyframes      |
+| Wand trail       | Sparkle path follow pointer hoặc load path | SVG/CSS/JS nhẹ     |
+| Card hover       | Flip/transform nhẹ, không lật text quá dài | CSS transform      |
+| Star orbit       | Orbit quanh hero/avatar                    | CSS keyframes      |
+| Section entrance | Starburst reveal + fade                    | React Motion / CSS |
 
 ### Component notes
 
@@ -659,16 +659,16 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo              | Nội dung cần vẽ                                      | Dùng cho              | Gợi ý kỹ thuật                                      |
-| ---------------------------- | ---------------------------------------------------- | --------------------- | --------------------------------------------------- |
-| `magic-circle.svg`           | Vòng phép, star ticks, orbit dots, moon marks        | Hero/about background | Tách layer để rotate ngược chiều nhau               |
-| `wand-and-trail.svg`         | Wand, ribbon trail, sparkle path                     | Hero/CTA animation    | Path có stroke-dasharray để tạo trail draw          |
-| `gem-button-shapes.svg`      | Gem oval, heart gem, star gem                        | CTA/button/badge      | Dùng linearGradient và highlight nhỏ                |
-| `spell-card-frame.svg`       | Card frame starburst, corner ornament                | Project cards         | Giữ vùng content sạch, ornament ở góc               |
-| `moon-star-stickers.svg`     | Moon, star, planet, bow, tiny wing                   | Floating decoration   | Outline trắng, drop shadow nhẹ                      |
-| `constellation-map.svg`      | Chòm sao, node, line nối, tiny sparkle               | Skills section        | Animate line draw bằng stroke-dashoffset            |
-| `compact-mirror.svg`         | Compact mirror, blush circle, shine                  | Contact/about         | Có thể animate open/close bằng rotate               |
-| `sparkle-dust-pattern.svg`   | Star dust pattern nhiều cỡ                           | Background overlay    | Opacity thấp, không che text                        |
+| File SVG tự tạo            | Nội dung cần vẽ                               | Dùng cho              | Gợi ý kỹ thuật                             |
+| -------------------------- | --------------------------------------------- | --------------------- | ------------------------------------------ |
+| `magic-circle.svg`         | Vòng phép, star ticks, orbit dots, moon marks | Hero/about background | Tách layer để rotate ngược chiều nhau      |
+| `wand-and-trail.svg`       | Wand, ribbon trail, sparkle path              | Hero/CTA animation    | Path có stroke-dasharray để tạo trail draw |
+| `gem-button-shapes.svg`    | Gem oval, heart gem, star gem                 | CTA/button/badge      | Dùng linearGradient và highlight nhỏ       |
+| `spell-card-frame.svg`     | Card frame starburst, corner ornament         | Project cards         | Giữ vùng content sạch, ornament ở góc      |
+| `moon-star-stickers.svg`   | Moon, star, planet, bow, tiny wing            | Floating decoration   | Outline trắng, drop shadow nhẹ             |
+| `constellation-map.svg`    | Chòm sao, node, line nối, tiny sparkle        | Skills section        | Animate line draw bằng stroke-dashoffset   |
+| `compact-mirror.svg`       | Compact mirror, blush circle, shine           | Contact/about         | Có thể animate open/close bằng rotate      |
+| `sparkle-dust-pattern.svg` | Star dust pattern nhiều cỡ                    | Background overlay    | Opacity thấp, không che text               |
 
 ---
 
@@ -678,14 +678,14 @@ src/
 
 Không bắt buộc giữ cấu trúc one-page `App.jsx` + nhiều section như các portfolio trước. Chọn cấu trúc theo trải nghiệm của theme:
 
-| Trải nghiệm theme                   | Cấu trúc nên dùng                                         | Khi nào dùng                                      |
-| ----------------------------------- | --------------------------------------------------------- | ------------------------------------------------- |
-| Landing đơn giản                    | `pages/HomePage.jsx` + `sections/`                        | Portfolio ít project, muốn scroll nhanh          |
-| Multi-page theo chủ đề              | `app/routes.js` + `pages/*Page.jsx`                       | Theme có concept mạnh như shop, stage, spellbook |
-| Scene/interactive shell             | `features/<theme>-scene/` + `components/layout/`          | Cần background động, sticker layer, canvas/SVG    |
-| Project detail riêng                | `pages/ProjectDetailPage.jsx` hoặc `features/*/Detail.jsx` | Project cần nhiều ảnh, PDF, write-up, demo link   |
-| Modal/drawer route                  | `features/*/*Drawer.jsx` + route state                    | Muốn mở chi tiết mà không rời bối cảnh chính      |
-| Asset-heavy theme                   | `assets/<theme-id>/` + `features/*/assetMap.js`           | Có nhiều SVG cần map tên, variant, màu, motion    |
+| Trải nghiệm theme       | Cấu trúc nên dùng                                          | Khi nào dùng                                     |
+| ----------------------- | ---------------------------------------------------------- | ------------------------------------------------ |
+| Landing đơn giản        | `pages/HomePage.jsx` + `sections/`                         | Portfolio ít project, muốn scroll nhanh          |
+| Multi-page theo chủ đề  | `app/routes.js` + `pages/*Page.jsx`                        | Theme có concept mạnh như shop, stage, spellbook |
+| Scene/interactive shell | `features/<theme>-scene/` + `components/layout/`           | Cần background động, sticker layer, canvas/SVG   |
+| Project detail riêng    | `pages/ProjectDetailPage.jsx` hoặc `features/*/Detail.jsx` | Project cần nhiều ảnh, PDF, write-up, demo link  |
+| Modal/drawer route      | `features/*/*Drawer.jsx` + route state                     | Muốn mở chi tiết mà không rời bối cảnh chính     |
+| Asset-heavy theme       | `assets/<theme-id>/` + `features/*/assetMap.js`            | Có nhiều SVG cần map tên, variant, màu, motion   |
 
 Gợi ý tổ chức mặc định:
 
@@ -723,14 +723,14 @@ Nguyên tắc: layout/page quyết định trải nghiệm điều hướng; fea
 
 ### Motion / asset pipeline
 
-| Layer              | Cách tổ chức                                                         |
-| ------------------ | -------------------------------------------------------------------- |
-| Framer Motion      | Đặt variants dùng chung trong `src/app/motionConfig.js`              |
-| Lenis              | Khởi tạo ở layout/root app, cleanup khi unmount, tắt khi reduce motion |
-| Rive               | Đặt `.riv` trong `src/assets/<theme-id>/rive/`, wrapper trong feature |
-| SVGator            | Export SVG/CSS/JS vào `src/assets/<theme-id>/svgator/`               |
-| Realtime Colors    | Lưu palette/token đã chọn vào `src/app/theme.js` hoặc CSS variables  |
-| Blush              | Export illustration vào `src/assets/<theme-id>/blush/` và tối ưu SVG |
+| Layer           | Cách tổ chức                                                           |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Đặt variants dùng chung trong `src/app/motionConfig.js`                |
+| Lenis           | Khởi tạo ở layout/root app, cleanup khi unmount, tắt khi reduce motion |
+| Rive            | Đặt `.riv` trong `src/assets/<theme-id>/rive/`, wrapper trong feature  |
+| SVGator         | Export SVG/CSS/JS vào `src/assets/<theme-id>/svgator/`                 |
+| Realtime Colors | Lưu palette/token đã chọn vào `src/app/theme.js` hoặc CSS variables    |
+| Blush           | Export illustration vào `src/assets/<theme-id>/blush/` và tối ưu SVG   |
 
 Runtime nên chỉ giữ những gì app cần. Realtime Colors dùng ở giai đoạn thiết kế palette; Blush và SVGator dùng để xuất asset; Framer Motion, Rive và Lenis là phần có thể chạy trong app.
 
@@ -745,15 +745,15 @@ Runtime nên chỉ giữ những gì app cần. Realtime Colors dùng ở giai �
 
 ### Motion style
 
-| Nhóm animation        | Khuyến nghị                                                                      |
-| --------------------- | --------------------------------------------------------------------------------- |
-| Entrance              | Stagger 60–120ms, opacity + translateY + scale nhẹ                               |
-| Idle decoration       | Loop 4–12s, lệch delay từng item, tránh chuyển động cùng nhịp                    |
-| Hover                 | 180–300ms, lift/rotate/sparkle ngắn, không làm text nhảy layout                  |
-| SVG draw              | Dùng `stroke-dasharray` + `stroke-dashoffset` cho underline, stitch, constellation |
-| Reduced motion        | Tắt idle loop, giữ opacity/transform transition ngắn hoặc bỏ animation           |
-| Smooth scroll         | Lenis chỉ bật cho scroll trải nghiệm; không dùng nếu page có form/modal dài      |
-| Rive state            | Dùng state machine cho hover/click/success, tránh autoplay liên tục quá nhiều    |
+| Nhóm animation  | Khuyến nghị                                                                        |
+| --------------- | ---------------------------------------------------------------------------------- |
+| Entrance        | Stagger 60–120ms, opacity + translateY + scale nhẹ                                 |
+| Idle decoration | Loop 4–12s, lệch delay từng item, tránh chuyển động cùng nhịp                      |
+| Hover           | 180–300ms, lift/rotate/sparkle ngắn, không làm text nhảy layout                    |
+| SVG draw        | Dùng `stroke-dasharray` + `stroke-dashoffset` cho underline, stitch, constellation |
+| Reduced motion  | Tắt idle loop, giữ opacity/transform transition ngắn hoặc bỏ animation             |
+| Smooth scroll   | Lenis chỉ bật cho scroll trải nghiệm; không dùng nếu page có form/modal dài        |
+| Rive state      | Dùng state machine cho hover/click/success, tránh autoplay liên tục quá nhiều      |
 
 ```css
 @media (prefers-reduced-motion: reduce) {

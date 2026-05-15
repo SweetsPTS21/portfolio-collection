@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Constellation map">
+  <rect width="520" height="300" rx="28" fill="#33234A"/>
+  <path d="M72 196 152 92 236 144 333 74 447 186" fill="none" stroke="#8CB8FF" stroke-width="4" stroke-dasharray="10 10"/>
+  <g fill="#FFE66D" stroke="#fff" stroke-width="4">
+    <circle cx="72" cy="196" r="12"/>
+    <circle cx="152" cy="92" r="12"/>
+    <circle cx="236" cy="144" r="12"/>
+    <circle cx="333" cy="74" r="12"/>
+    <circle cx="447" cy="186" r="12"/>
+  </g>
+  <g fill="#fff" opacity=".78">
+    <circle cx="60" cy="54" r="3"/>
+    <circle cx="126" cy="230" r="3"/>
+    <circle cx="282" cy="235" r="4"/>
+    <circle cx="396" cy="118" r="3"/>
+    <circle cx="478" cy="52" r="4"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-label="Wand and sparkle trail">
+  <path d="M38 126C142 22 256 154 402 48" fill="none" stroke="#FF5BC8" stroke-width="9" stroke-linecap="round" stroke-dasharray="18 20" opacity=".55"/>
+  <path d="m393 50 24-31 9 38 36 13-34 17-2 39-27-28-38 10 18-34-21-33Z" fill="#FFE66D" stroke="#33234A" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="273" y="88" width="160" height="18" rx="9" transform="rotate(-28 273 88)" fill="#8CB8FF" stroke="#33234A" stroke-width="4"/>
+  <circle cx="292" cy="116" r="13" fill="#6DF2D6" stroke="#33234A" stroke-width="4"/>
+  <g fill="#fff">
+    <path d="M96 44 104 62 122 70 104 78 96 96 88 78 70 70 88 62Z"/>
+    <path d="M177 104 182 116 194 121 182 126 177 138 172 126 160 121 172 116Z"/>
+    <path d="M464 118 470 132 484 138 470 144 464 158 458 144 444 138 458 132Z"/>
+  </g>
+</svg>

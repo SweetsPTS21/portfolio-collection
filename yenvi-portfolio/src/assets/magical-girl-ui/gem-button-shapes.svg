@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180" role="img" aria-label="Gem button shapes">
+  <defs>
+    <linearGradient id="gem" x1="0" x2="1">
+      <stop stop-color="#FF5BC8"/>
+      <stop offset=".55" stop-color="#C7A8FF"/>
+      <stop offset="1" stop-color="#6DF2D6"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 90 86 34h188l46 56-46 56H86Z" fill="url(#gem)" stroke="#33234A" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m86 34 42 112M274 34l-42 112M128 34l52 112 52-112" fill="none" stroke="#fff" stroke-width="4" opacity=".75"/>
+  <ellipse cx="139" cy="65" rx="45" ry="12" fill="#fff" opacity=".32"/>
+</svg>
