@@ -382,15 +382,15 @@ Theme như một hộp mỹ phẩm/beauty case đặt trên mây. UI sáng, glos
 ```js
 export const theme = {
     token: {
-        colorBgBase: "#F8FCFF",
+        colorBgBase: "#F0F7FF",
         colorBgContainer: "#FFFFFF",
-        colorPrimary: "#FF8AC7",
-        colorTextBase: "#28314A",
-        colorTextSecondary: "#70809A",
+        colorPrimary: "#3B82F6",
+        colorTextBase: "#1E293B",
+        colorTextSecondary: "#64748B",
         colorSuccess: "#7BE6D3",
         colorWarning: "#FFE1A3",
-        colorInfo: "#9BD5FF",
-        colorBorder: "#DCEEFF",
+        colorInfo: "#93C5FD",
+        colorBorder: "#BFDBFE",
         borderRadius: 20,
         fontFamily: "'Manrope', 'Nunito Sans', sans-serif",
     },
