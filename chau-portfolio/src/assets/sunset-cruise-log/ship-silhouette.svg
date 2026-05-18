@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" role="img" aria-labelledby="title desc">
+  <title id="title">Ship silhouette</title>
+  <desc id="desc">A simple sunset cruise sailboat silhouette with hull, mast, sails, and deck lights.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" x2="1">
+      <stop offset="0" stop-color="#2D2040"/>
+      <stop offset="1" stop-color="#49345F"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#2D2040" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M258 30v128" stroke-width="12"/>
+    <path d="M258 48 132 158h126Z" fill="#2D2040" stroke-width="8"/>
+    <path d="M272 58 382 158H272Z" fill="#3D2A54" stroke-width="8"/>
+    <path d="M78 157h363c-20 47-63 66-141 66H166c-39 0-70-27-88-66Z" fill="url(#hull)" stroke-width="10"/>
+    <path d="M130 174h272" stroke="#FFD08A" stroke-width="6" opacity=".8"/>
+    <path d="M132 196c44 10 87 14 128 13 45-1 87-6 126-18" stroke="#5EC4B8" stroke-width="8" opacity=".42"/>
+    <path d="M76 224c31-10 62-10 93 0s62 10 93 0 62-10 93 0 62 10 93 0" stroke="#5EC4B8" stroke-width="10" opacity=".55"/>
+  </g>
+  <g fill="#FFD08A">
+    <circle cx="176" cy="174" r="5"/>
+    <circle cx="220" cy="174" r="5"/>
+    <circle cx="264" cy="174" r="5"/>
+    <circle cx="308" cy="174" r="5"/>
+    <circle cx="352" cy="174" r="5"/>
+  </g>
+</svg>

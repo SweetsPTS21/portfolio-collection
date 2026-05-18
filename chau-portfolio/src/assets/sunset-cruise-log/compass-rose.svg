@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Compass rose</title>
+  <desc id="desc">A detailed compass rose with cardinal letters and a separate needle shape.</desc>
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".78" stop-color="#FFF5F0"/>
+      <stop offset="1" stop-color="#FCCDE0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="160" cy="160" r="132" fill="url(#paper)" stroke="#2D2040" stroke-width="8"/>
+  <circle cx="160" cy="160" r="92" fill="none" stroke="#F2789F" stroke-width="3" stroke-dasharray="8 8"/>
+  <g transform="translate(160 160)">
+    <path d="M0-116 22-24 0-40-22-24Z" fill="#F2789F" stroke="#2D2040" stroke-width="4"/>
+    <path d="M116 0 24 22 40 0 24-22Z" fill="#FFD08A" stroke="#2D2040" stroke-width="4"/>
+    <path d="M0 116-22 24 0 40 22 24Z" fill="#5EC4B8" stroke="#2D2040" stroke-width="4"/>
+    <path d="M-116 0-24-22-40 0-24 22Z" fill="#C8A8E8" stroke="#2D2040" stroke-width="4"/>
+    <path d="M72-72 18-18 32-12 18-18 12-32Z" fill="#FFF" stroke="#2D2040" stroke-width="3"/>
+    <path d="M72 72 18 18 12 32 18 18 32 12Z" fill="#FFF" stroke="#2D2040" stroke-width="3"/>
+    <path d="M-72 72-18 18-32 12-18 18-12 32Z" fill="#FFF" stroke="#2D2040" stroke-width="3"/>
+    <path d="M-72-72-18-18-12-32-18-18-32-12Z" fill="#FFF" stroke="#2D2040" stroke-width="3"/>
+    <g id="needle">
+      <path d="M0-76 11 0 0 76-11 0Z" fill="#2D2040"/>
+      <path d="M0-76 11 0H0Z" fill="#FFD08A"/>
+    </g>
+    <circle r="12" fill="#FFFFFF" stroke="#2D2040" stroke-width="5"/>
+  </g>
+  <g fill="#2D2040" font-family="Georgia, serif" font-size="30" font-weight="700" text-anchor="middle">
+    <text x="160" y="43">N</text>
+    <text x="281" y="171">E</text>
+    <text x="160" y="294">S</text>
+    <text x="39" y="171">W</text>
+  </g>
+</svg>
