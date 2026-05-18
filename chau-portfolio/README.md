@@ -13,15 +13,15 @@ Digital portfolio cho Nguyễn Minh Châu (Luật - Đại học Luật, ĐHQGHN
 ### Bảng màu
 
 ```js
-colorBgBase: "#FFF5F0"       // warm sunset base
+colorBgBase: "#F2F8FF"       // blue-white base
 colorBgContainer: "#FFFFFF"
-colorPrimary: "#F2789F"      // sunset pink
-colorTextBase: "#2D2040"     // deep plum
-colorTextSecondary: "#6B5A7A"
-colorSuccess: "#5EC4B8"      // ocean teal
-colorWarning: "#FFD08A"      // lantern gold
-colorError: "#FF6B6B"
-colorBorder: "#FCCDE0"
+colorPrimary: "#7DB7F0"      // pastel blue
+colorTextBase: "#1F3557"     // deep plum
+colorTextSecondary: "#5D7192"
+colorSuccess: "#8FDDE7"      // ocean teal
+colorWarning: "#BFD7FF"      // moonlight blue
+colorError: "#FF8FA3"
+colorBorder: "#CFE5FF"
 borderRadius: 14
 fontFamily: "'Playfair Display', 'Nunito', serif"
 ```

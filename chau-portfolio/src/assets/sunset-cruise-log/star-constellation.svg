@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" role="img" aria-labelledby="title desc">
   <title id="title">Star constellation</title>
   <desc id="desc">A small constellation of star dots connected by fine lines in a twilight sky accent.</desc>
-  <rect width="420" height="180" rx="28" fill="#2D2040" opacity=".06"/>
-  <g fill="none" stroke="#C8A8E8" stroke-width="2" opacity=".72">
+  <rect width="420" height="180" rx="28" fill="#1F3557" opacity=".06"/>
+  <g fill="none" stroke="#D9ECFF" stroke-width="2" opacity=".72">
     <path d="M38 112 86 78 132 96 178 50 232 82 284 42 350 88"/>
     <path d="M132 96 154 136 210 128 232 82"/>
   </g>
-  <g fill="#FFD08A">
+  <g fill="#BFD7FF">
     <circle cx="38" cy="112" r="5"/>
     <circle cx="86" cy="78" r="4"/>
     <circle cx="132" cy="96" r="6"/>

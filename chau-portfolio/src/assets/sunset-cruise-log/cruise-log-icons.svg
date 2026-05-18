@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-labelledby="title desc">
   <title id="title">Cruise log icons</title>
   <desc id="desc">A six icon strip: anchor, helm, telescope, map, flag, and bell.</desc>
-  <g fill="none" stroke="#2D2040" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#1F3557" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <g transform="translate(20 14)">
       <circle cx="14" cy="8" r="5"/>
       <path d="M14 13v35M2 30c3 13 11 20 24 20s21-7 24-20M2 30h14M50 30H36M14 48l-8-8M14 48l8-8"/>
@@ -27,7 +27,7 @@
       <path d="M6 19h28M10 19c0-13 4-20 10-20s10 7 10 20M20-1v-5M15 25h10"/>
     </g>
   </g>
-  <g fill="#F2789F" opacity=".22">
+  <g fill="#7DB7F0" opacity=".22">
     <circle cx="34" cy="40" r="24"/>
     <circle cx="88" cy="40" r="24"/>
     <circle cx="136" cy="40" r="24"/>

@@ -96,8 +96,15 @@ assert.match(projects, /projects\.map/, "Projects page must render project entri
 assert.match(conclusion, /conclusion/, "Conclusion page must render conclusion data");
 
 const css = read("src/index.css");
-assert.match(css, /--sunset-pink:\s*#F2789F/i, "CSS must include sunset-cruise-log palette");
-assert.match(css, /--ocean-teal:\s*#5EC4B8/i, "CSS must include ocean teal");
+assert.match(css, /--pastel-blue:\s*#7DB7F0/i, "CSS must include pastel blue as the primary theme color");
+assert.match(css, /--sky-blue:\s*#A7D8FF/i, "CSS must include sky blue");
+assert.match(css, /--ocean-teal:\s*#8FDDE7/i, "CSS must include soft ocean teal");
+assert.doesNotMatch(css, /#F2789F|#FFB088|#FFD08A/i, "CSS must not keep the old warm sunset palette as primary colors");
 assert.match(css, /@keyframes\s+wave/, "CSS must include wave animation");
 assert.match(css, /@keyframes\s+lanternGlow/, "CSS must include lantern animation");
 assert.match(css, /asset-sky|asset-wave|asset-ship|asset-lantern|asset-compass/, "CSS must style rendered SVG assets");
+
+const theme = read("src/theme.js");
+assert.match(theme, /colorPrimary:\s*"#7DB7F0"/, "Ant Design primary token must use pastel blue");
+assert.match(theme, /colorBgBase:\s*"#F2F8FF"/, "Ant Design background token must use blue-white");
+assert.doesNotMatch(theme, /#F2789F|#FFB088|#FFD08A/i, "Ant Design theme must not keep old warm sunset tokens");
