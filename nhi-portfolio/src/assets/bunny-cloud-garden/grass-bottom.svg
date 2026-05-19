@@ -1,0 +1,44 @@
+<svg viewBox="0 0 600 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Grass blades -->
+  <path d="M0 40 L0 28 Q3 20 6 28 L6 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M10 40 L10 24 Q14 16 18 24 L18 40Z" fill="#7EEDC8" opacity="0.35"/>
+  <path d="M22 40 L22 30 Q25 22 28 30 L28 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <path d="M35 40 L35 22 Q39 14 43 22 L43 40Z" fill="#7EEDC8" opacity="0.4"/>
+  <path d="M50 40 L50 26 Q53 18 56 26 L56 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M65 40 L65 20 Q69 12 73 20 L73 40Z" fill="#A8E8A8" opacity="0.35"/>
+  <path d="M80 40 L80 28 Q83 20 86 28 L86 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M95 40 L95 24 Q99 16 103 24 L103 40Z" fill="#7EEDC8" opacity="0.38"/>
+  <path d="M115 40 L115 26 Q118 18 121 26 L121 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <path d="M130 40 L130 22 Q134 14 138 22 L138 40Z" fill="#7EEDC8" opacity="0.35"/>
+  <path d="M150 40 L150 28 Q153 20 156 28 L156 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M168 40 L168 20 Q172 12 176 20 L176 40Z" fill="#A8E8A8" opacity="0.4"/>
+  <path d="M190 40 L190 26 Q193 18 196 26 L196 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M210 40 L210 24 Q214 16 218 24 L218 40Z" fill="#7EEDC8" opacity="0.35"/>
+  <path d="M230 40 L230 28 Q233 20 236 28 L236 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <path d="M250 40 L250 20 Q254 12 258 20 L258 40Z" fill="#7EEDC8" opacity="0.38"/>
+  <path d="M270 40 L270 26 Q273 18 276 26 L276 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M290 40 L290 22 Q294 14 298 22 L298 40Z" fill="#A8E8A8" opacity="0.35"/>
+  <path d="M310 40 L310 28 Q313 20 316 28 L316 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M330 40 L330 24 Q334 16 338 24 L338 40Z" fill="#7EEDC8" opacity="0.4"/>
+  <path d="M350 40 L350 26 Q353 18 356 26 L356 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <path d="M370 40 L370 20 Q374 12 378 20 L378 40Z" fill="#7EEDC8" opacity="0.35"/>
+  <path d="M390 40 L390 28 Q393 20 396 28 L396 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M410 40 L410 22 Q414 14 418 22 L418 40Z" fill="#A8E8A8" opacity="0.38"/>
+  <path d="M430 40 L430 26 Q433 18 436 26 L436 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M450 40 L450 24 Q454 16 458 24 L458 40Z" fill="#7EEDC8" opacity="0.35"/>
+  <path d="M470 40 L470 28 Q473 20 476 28 L476 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <path d="M490 40 L490 20 Q494 12 498 20 L498 40Z" fill="#7EEDC8" opacity="0.4"/>
+  <path d="M510 40 L510 26 Q513 18 516 26 L516 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M530 40 L530 22 Q534 14 538 22 L538 40Z" fill="#A8E8A8" opacity="0.35"/>
+  <path d="M550 40 L550 28 Q553 20 556 28 L556 40Z" fill="#7EEDC8" opacity="0.3"/>
+  <path d="M570 40 L570 24 Q574 16 578 24 L578 40Z" fill="#7EEDC8" opacity="0.38"/>
+  <path d="M590 40 L590 26 Q593 18 596 26 L596 40Z" fill="#A8E8A8" opacity="0.3"/>
+  <!-- Ground fill -->
+  <rect x="0" y="34" width="600" height="6" fill="#7EEDC8" opacity="0.15"/>
+  <!-- Tiny flowers in grass -->
+  <circle cx="45" cy="32" r="2" fill="#FF8ABF" opacity="0.4"/>
+  <circle cx="145" cy="30" r="1.5" fill="#FFE17A" opacity="0.4"/>
+  <circle cx="265" cy="32" r="2" fill="#D8B8FF" opacity="0.4"/>
+  <circle cx="385" cy="30" r="1.5" fill="#FF8ABF" opacity="0.4"/>
+  <circle cx="505" cy="32" r="2" fill="#FFE17A" opacity="0.4"/>
+</svg>

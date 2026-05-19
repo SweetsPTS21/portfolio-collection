@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 4-point star sparkle -->
+  <path d="M50 42 L52 48 L58 50 L52 52 L50 58 L48 52 L42 50 L48 48 Z" fill="#FFE17A" opacity="0.8"/>
+  <path d="M25 20 L26 23 L29 24 L26 25 L25 28 L24 25 L21 24 L24 23 Z" fill="#FF8ABF" opacity="0.6"/>
+  <path d="M75 30 L76.5 34 L80 35 L76.5 36 L75 40 L73.5 36 L70 35 L73.5 34 Z" fill="#A8D4FF" opacity="0.7"/>
+  <path d="M30 70 L31 73 L34 74 L31 75 L30 78 L29 75 L26 74 L29 73 Z" fill="#D8B8FF" opacity="0.6"/>
+  <path d="M70 75 L71.5 79 L75 80 L71.5 81 L70 85 L68.5 81 L65 80 L68.5 79 Z" fill="#7EEDC8" opacity="0.65"/>
+  <path d="M15 50 L16 52 L18 53 L16 54 L15 56 L14 54 L12 53 L14 52 Z" fill="#FFE17A" opacity="0.5"/>
+  <path d="M85 60 L86 62.5 L88.5 63 L86 63.5 L85 66 L84 63.5 L81.5 63 L84 62.5 Z" fill="#FFB8C8" opacity="0.55"/>
+</svg>

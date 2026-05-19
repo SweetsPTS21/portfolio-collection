@@ -1,0 +1,7 @@
+<svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 180 Q200 -20 380 180" stroke="#FFB8C8" stroke-width="12" fill="none" opacity="0.6"/>
+  <path d="M35 180 Q200 0 365 180" stroke="#FFE17A" stroke-width="10" fill="none" opacity="0.5"/>
+  <path d="M50 180 Q200 20 350 180" stroke="#7EEDC8" stroke-width="9" fill="none" opacity="0.5"/>
+  <path d="M65 180 Q200 40 335 180" stroke="#A8D4FF" stroke-width="8" fill="none" opacity="0.45"/>
+  <path d="M80 180 Q200 60 320 180" stroke="#D8B8FF" stroke-width="7" fill="none" opacity="0.4"/>
+</svg>

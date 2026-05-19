@@ -1,0 +1,30 @@
+<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <ellipse cx="38" cy="22" rx="7" ry="20" fill="#FFD6E8" stroke="#FF8ABF" stroke-width="1.5"/>
+  <ellipse cx="62" cy="22" rx="7" ry="20" fill="#FFD6E8" stroke="#FF8ABF" stroke-width="1.5"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="85" rx="22" ry="26" fill="#FFF5F9" stroke="#FFD6E8" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="50" cy="55" r="20" fill="#FFFFFF" stroke="#FFD6E8" stroke-width="1.5"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="52" r="3" fill="#3D2244"/>
+  <circle cx="56" cy="52" r="3" fill="#3D2244"/>
+  <circle cx="45" cy="50.5" r="1.2" fill="#FFFFFF"/>
+  <circle cx="57" cy="50.5" r="1.2" fill="#FFFFFF"/>
+  <!-- Cheeks -->
+  <circle cx="38" cy="57" r="3.5" fill="#FFD6E8" opacity="0.5"/>
+  <circle cx="62" cy="57" r="3.5" fill="#FFD6E8" opacity="0.5"/>
+  <!-- Smile -->
+  <path d="M46 60 Q50 63 54 60" stroke="#FF8ABF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Watering can -->
+  <rect x="72" y="65" width="28" height="20" rx="4" fill="#7EEDC8" stroke="#5ECBA0" stroke-width="1.5"/>
+  <rect x="70" y="62" width="32" height="5" rx="2.5" fill="#5ECBA0"/>
+  <path d="M100 72 L112 68 L112 74 L100 78" fill="#7EEDC8" stroke="#5ECBA0" stroke-width="1"/>
+  <!-- Water drops (sparkle) -->
+  <circle cx="114" cy="80" r="2" fill="#A8D4FF" opacity="0.7"/>
+  <circle cx="110" cy="86" r="1.5" fill="#A8D4FF" opacity="0.6"/>
+  <circle cx="116" cy="88" r="1.8" fill="#A8D4FF" opacity="0.5"/>
+  <circle cx="112" cy="94" r="1.2" fill="#7EEDC8" opacity="0.5"/>
+  <!-- Arm holding -->
+  <path d="M65 75 Q70 70 72 72" stroke="#FFD6E8" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
