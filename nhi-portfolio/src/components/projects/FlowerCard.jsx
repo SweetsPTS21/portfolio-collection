@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Eye, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import flowerFrame from '../../assets/bunny-cloud-garden/flower-frame.svg';
 
-export default function FlowerCard({ project, index, onViewPdf }) {
+export default function FlowerCard({ project, index }) {
   return (
     <motion.article
       className="flower-card"
@@ -19,22 +19,13 @@ export default function FlowerCard({ project, index, onViewPdf }) {
         <p>{project.process}</p>
         {project.pdf && (
           <div className="flower-actions">
-            <button
-              className="flower-action primary"
-              onClick={() => onViewPdf(project)}
-              type="button"
-              aria-label={`Xem nội dung ${project.title}`}
-            >
-              <Eye size={17} />
-              <span>Xem nhanh</span>
-            </button>
             <Link
-              className="flower-action secondary"
+              className="flower-action primary"
               to={`/projects/${project.chapter}`}
               aria-label={`Xem chi tiết ${project.title}`}
             >
               <ArrowRight size={17} />
-              <span>Chi tiết</span>
+              <span>Xem chi tiết</span>
             </Link>
             <a
               className="flower-action secondary"
