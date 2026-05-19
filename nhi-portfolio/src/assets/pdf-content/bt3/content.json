@@ -1,0 +1,48 @@
+{
+  "source": "bt3.pdf",
+  "totalPages": 6,
+  "pages": [
+    {
+      "page": 1,
+      "image": "page-1.png",
+      "text": "Viết Prompt hiệu quảcho các tác vụhọc tập\nCác tác vụhọc tập và 3 phiên bản prompt khác nhau\nThửnghiệm với công cụlà ChatGPT\nTác vụ1:Tóm tắt tài liệu.\nPrompt cơ bản: “tóm tắt cho tôi bản án sau.”\nPrompt cải tiến:“tóm tắt những lập luận,kết quảbản án sau,hãy loại bỏcác yếu tố\nliên quan tới quy trình tốtụng.”\nPrompt nâng cao: “Hãy đóng vai một chuyên gia phân tích hồsơ vụán có kinh\nnghiệm, có khảnăng tổng hợp thông tin pháp lý từcác văn bản dài một cách súc tích\nvà chính xác.Tôi có nội dung toàn văn của một bản án tranh chấp hợp đồng dài 20\ntrang. Tôi cần nắm bắt nhanh nội dung cốt lõi đểbáo cáo lại mà không cần đọc từng\ntrang.Hãy đọc kỹnội dung bản án tôi cung cấp bên dưới. Sau đó, hãy tóm tắt lại vụán\nbằng cách lọc bỏcác chi tiết thủtục tốtụng không cần thiết (ngày giờkhai mạc, lý\nlịch thư ký...) và tập trung vào nội dung tranh tụng.\nHãy thực hiện từng bước sau:\nPhân loại: Xác định rõ quan hệpháp luật tranh chấp và các yêu cầu khởi kiện cụthể.\nĐối chiếu: So sánh lập luận của Nguyên đơn và Bịđơn đểtìm ra điểm mâu thuẫn mấu\nchốt.\nPhân tích: Đọc kỹphần \"Nhận định của Tòa án\", tìm các căn cứpháp lý và chứng cứ\nmà Tòa án chấp nhận hoặc bác bỏ.\nTổng hợp: Viết báo cáo tóm tắt theo cấu trúc yêu cầu.\nTrình bày kết quảdưới dạng báo cáo với các gạch đầu dòng như sau\n1. Quan điểm của Nguyên đơn:\nYêu cầu khởi kiện là gì?\nCác căn cứ, lý lẽchính đểbảo vệyêu cầu đó?\n2. Quan điểm của Bịđơn:\nĐồng ý hay phản đối yêu cầu của Nguyên đơn?\nLý lẽphản biện hoặc yêu cầu phản tố(nếu có).\n3. Ý kiến của Viện Kiểm sát (VKS):\nQuan điểm vềviệc tuân theo pháp luật tốtụng.\nQuan điểm vềđường lối giải quyết vụán (đềnghịchấp nhận hay bác bỏyêu cầu).\n4. Nhận định và Phán quyết của Tòa án :\nTòa án xác định hợp đồng có hiệu lực hay vô hiệu? Vì sao?\nTòa án chấp nhận lập luận của bên nào? Bác bỏlập luận nào?\nKết quảcuối cùng: Ai thắng? Sốtiền/tài sản phải bồi thường/trảlại là bao nhiêu?”\nTác vụ2:Giải thích khái niệm luật dân sự\nPrompt cơ bản:Giải thích khái niệm luật dân sự",
+      "width": 1655,
+      "height": 2339
+    },
+    {
+      "page": 2,
+      "image": "page-2.png",
+      "text": "Prompt cải tiến:Hãy giải thích khái niệm 'Luật Dân sự' của Việt Nam cho một sinh\nviên năm nhất ngành luật. Hãy bao gồm định nghĩa, đối tượng điều chỉnh và phương\npháp điều chỉnh. Trình bày câu trảlời rõ ràng, ngắn gọn dưới 300 từ\nPrompt nâng cao:Bạn là một Giáo sư Luật học uyên bác hãy Giải thích khái niệm\n\"Luật Dân sự\" cho một sinh viên ngành luật năm 1 bao gồm định nghĩa, đối tượng\nđiều chỉnh và phương pháp điều chỉnh\nThực hiện từng bước\nĐịnh nghĩa cốt lõi: Đưa ra định nghĩa rõ ràng nhất.\nPhân tích: Giải thích \"Đối tượng điều chỉnh\" (Tài sản và Nhân thân) bằng các ví\ndụthực tếgần gũi (ví dụ: mua bán rau, kết hôn, thừa kế).\nSo sánh: Phân biệt nhanh với \"Luật Hình sự\" đểlàm rõ bản chất.\nKết luận:\nViết thành bài báo cáo.Dùng các gạch đầu dòng cho các ý chính.\nTác vụ3:Tạo bộcâu hỏi trắc nghiệm ôn tập môn tin học cơ sở:\nPrompt cơ bản:Tạo bộcâu hỏi trắc nghiệm ôn tập môn tin học cơ sở\nPrompt cải tiến:Tạo bộcâu hỏi trắc nghiệm ôn tập môn tin học cơ sởtrong đó có\nnhiều câu hỏi vềmảng \"An toàn thông tin\" và \"Phần cứng máy tính\".\nPrompt nâng cao:Đóng vai một Giảng viên Tin học đang ra đềthi kết thúc học\nphần.Tôi cần ôn tập kỹvềmảng \"An toàn thông tin\" và \"Phần cứng máy tính\".Tạo 5\ncâu hỏi trắc nghiệm mức độKhó. Các phương án nhiễu (đáp án sai) phải có vẻhợp lý\nđểgây nhầm lẫn.\nHãy làm theo mẫu này: Câu hỏi: Bộnhớnào sau đây là bộnhớkhảbiến (mất\ndữliệu khi tắt điện)? A. ROM B. HDD C. RAM D. SSD Đáp án: C. RAM Giải\nthích: RAM là bộnhớtruy cập ngẫu nhiên, cần nguồn điện đểduy trì dữliệu.\nHãy tạo 5 câu hỏi mới theo mẫu trên.Trình bày dưới dạng bảng (Table) gồm các\ncột: STT, Câu hỏi, Các lựa chọn, Đáp án đúng, Giải thích chi tiết.",
+      "width": 1655,
+      "height": 2339
+    },
+    {
+      "page": 3,
+      "image": "page-3.png",
+      "text": "STT\ntác vụhọc tập\nprompt\nkết quả\n1\ntóm tắt tài liệu\ncơ bản\n- Nội dung: Tóm tắt còn chung chung, kểlểsự\nviệc theo trình tựthời gian.\n2\ncải tiến\n- Đã ngắn gọn hơn.\n- Loại bỏđược một sốthủtục tốtụng.\n- Tuy nhiên cấu trúc vẫn là văn xuôi (đoạn\nvăn), khó tra cứu nhanh các con sốhoặc phán\nquyết cụthể.\n3\nnâng cao\n- Cấu trúc xuất sắc: Phân chia rõ ràng 4 mục\n(Nguyên đơn, Bịđơn, VKS, Tòa án).\n- Tính chính xác: Tập trung thẳng vào vấn đề\ntranh chấp và sốtiền bồi thường.\n- Dễđọc: Dạng gạch đầu dòng giúp nắm bắt\nngay lập tức nội dung cốt lõi.\n4\ngiải thích khái\nniệm\ncơ bản\n- Đưa ra định nghĩa hàn lâm, khô khan giống\ntừđiển.\n- Có thểnhầm lẫn hoặc đưa thông tin chung\nchung không cụthểcho Việt Nam.\n5\ncải tiến\n- Đã giới hạn phạm vi là \"Việt Nam\" và đối\ntượng \"Sinh viên\".\n- Độdài phù hợp.\n- Tuy nhiên thiếu các ví dụminh họa sinh\nđộng đểdễhiểu.\n6\nnâng cao\n- Dễhiểu & Sâu sắc: Nhờđóng vai \"Giáo sư\",\ngiọng văn uyên bác.\n- Tư duy mạch lạc: Có sựso sánh với \"Luật\nHình sự\" giúp làm rõ bản chất vấn đề.\n- Trực quan hơn giúp khái niệm trừu tượng trở\nnên cụthể\n7\ntạo câu hỏi ôn\ntập\ncơ bản\n- Câu hỏi ngẫu nhiên, thường quá dễhoặc\nkhông đúng trọng tâm.\n- định dạng lộn xộn.\n8\ncải tiến\n- Tập trung hơn vào chủđề“An toàn thông\ntin\" và \"Phần cứng máy tính”.\n- Tuy nhiên, không có giải thích tại sao\nđúng/sai.\n- Các phương án nhiễu thường quá lộliễu (dễ\nđoán).",
+      "width": 1655,
+      "height": 2339
+    },
+    {
+      "page": 4,
+      "image": "page-4.png",
+      "text": "9\nnâng cao\n- Chuyên nghiệp: Định dạng bảng rất dễhọc\nvà tựkiểm tra.\n- Chất lượng cao: Câu hỏi mức độ\"Khó\" với\ncác phương án nhiễu hợp lý.\n- Giá trịhọc tập: Cột \"Giải thích chi tiết\" giúp\nngười học hiểu sâu kiến thức thay vì học vẹt.\nMinh chứng ảnh chụp màn hình:minh chứng BT2-t3-ck\nIV. PHÂN TÍCH LÝ DO HIỆU QUẢ\nDựa trên kết quảthực nghiệm, em nhận thấy prompt hiệu quảkhông chỉdo viết dài\nhơn, mà do chúng kích hoạt được các cơ chếtư duy sâu của AI:\n1. Vai trò:\nGán vai trò (ví dụ: \"Bạn là Giáo sư Luật \" ởTác vụ2) giúp câu trảlời có giọng điệu\nchuyên nghiệp hơn.\nĐây là một cơ chếtạo bối cảnh.\nKhi em gán vai \"Giáo sư Luật\", em đang ra lệnh cho mô hình AI ưu tiên và kích hoạt\ncác cụm kiến thức liên quan đến: Ngôn ngữpháp lý chính xác, tư duy so sánh (giữa\nDân sựvà Hình sự), và kỹnăng sư phạm (giải thích cái khó hiểu thành cái đơn giản).\n2. Các bước thực hiện.\nYêu cầu thực hiện từng bước giúp câu trảlời dài và đầy đủhơn.\nĐây là kỹthuật cốt lõi đểchống lại sự\"ảo giác\" (hallucination) và đảm bảo tính logic.\nAI vềcơ bản là cỗmáy dựđoán từ. Khi đối mặt với một văn bản dài 20 trang (Tác vụ\n1), nếu chỉbảo \"tóm tắt\", nó có thểđoán hoặc viết lan man.\nViệc cung cấp các bước thực hiện thông qua quy trình: Bước 1: Phân loại -> Bước 2:\nĐối chiếu -> Bước 3: Phân tích (như trong Prompt Nâng cao Tác vụ1) buộc AI phải\ntạo thực hiện từng bước. Nó không thểnhảy cóc đến kết luận mà phải đi qua các bước\nkiểm chứng thông tin.\nKết quảlà bản tóm tắt án lệởTác vụ1 không chỉliệt kê sựkiện, mà còn tách bạch\nđược quan điểm tranh tụng của Nguyên đơn và Bịđơn một cách sắc bén điều chỉcó\nđược nhờquy trình tư duy được chỉđịnh rõ ràng.\n3. Đối tượng,yêu cầu rõ ràng.",
+      "width": 1655,
+      "height": 2339
+    },
+    {
+      "page": 5,
+      "image": "page-5.png",
+      "text": "Nói cho ai nghe (\"Sinh viên năm 1\") hoặc định dạng (\"Bảng\") giúp kết quảdễđọc\nhơn.Kiến thức về\"Luật Dân sự\" rất mênh mông. Ràng buộc \"dành cho sinh viên năm\n1\" và \"sửdụng ví dụthực tế\" (Tác vụ2) đã giúp loại bỏnhững lý luận học thuật khô\nkhan, chỉgiữlại những gì dễhiểu nhất.\nRàng buộc \"phương án nhiễu phải hợp lý\" (Tác vụ3) buộc AI phải tư duy sâu hơn để\ntìm ra những lỗi sai phổbiến của người học, thay vì đưa ra các đáp án sai ngớngẩn.\nKết quả:Kết quảđược AI tạo ra theo đúng yêu cầu mục đích sửdụng (đểhọc, đểthi),\nthay vì một khối thông tin thô sơ.\nV. TỔNG HỢP CÁC NGUYÊN TẮC VÀ MẸO VIẾT PROMPT HIỆU QUẢ\nTừphân tích trên, em đúc kết bộnguyên tắc nâng cao đểviết prompt:\n1. Nguyên tắc chỉđịnh vai trò.\nĐừng chỉhỏi câu hỏi. Hãy gán cho AI một vịtrí chuyên gia phù hợp nhất với tác vụ.\nVí dụ: Thay vì \"Viết câu hỏi trắc nghiệm\", hãy dùng \"Đóng vai Giảng viên ra đềthi\nkết thúc học phần\".\n2. Nguyên tắc cung cấp quy trình\nVới các tác vụphức tạp (tóm tắt văn bản dài, phân tích logic), đừng mong đợi AI làm\nđúng ngay. Hãy cung cấp một quy trình tư duy đểAI bám vào.\nVí dụ: Chia nhỏnhiệm vụtóm tắt bản án thành: Phân loại -> Đối chiếu -> Kết luận.\n3. Nguyên tắc tạo ra các yêu cầu ràng buộc vềcấu trúc\nSửdụng Ràng buộc đểloại bỏnhững kết quảkhông mong muốn.\nVí dụ: \"Trình bày dưới dạng Bảng\", \"Không dùng từngữchuyên ngành quá sâu\",\n\"Giới hạn dưới 300 từ\". Những ràng buộc này định hình sản phẩm cuối cùng chính\nxác như ý muốn.\n4. Cung cấp mẫu\nTại tác vụ3 sau khi cung cấp mẫu câu hỏi cho AI thì AI đã tạo ra các câu hỏi có cấu\ntrúc chính xác hơn.\nKết luận: Viết prompt hiệu quảlà một kỹnăng tư duy, đòi hỏi người dùng chuyển từ\nthụđộng sang chủđộng. Chất lượng của câu trảlời phụthuộc hoàn toàn vào cấu trúc\nlogic và bối cảnh mà người dùng thiết lập trong prompt.",
+      "width": 1655,
+      "height": 2339
+    },
+    {
+      "page": 6,
+      "image": "page-6.png",
+      "text": "",
+      "width": 1655,
+      "height": 2339
+    }
+  ]
+}
