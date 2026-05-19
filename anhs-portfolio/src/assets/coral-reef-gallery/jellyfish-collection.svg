@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 100" fill="none">
+  <!-- Bell jellyfish -->
+  <g id="jelly-bell">
+    <ellipse cx="40" cy="25" rx="22" ry="18" fill="#FFB8D8" opacity="0.4"/>
+    <ellipse cx="40" cy="25" rx="16" ry="12" fill="#FFB8D8" opacity="0.25"/>
+    <ellipse cx="35" cy="20" rx="6" ry="4" fill="white" opacity="0.3"/>
+    <path d="M25 40 C25 55 23 70 26 85" stroke="#FFB8D8" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <path d="M35 42 C35 58 33 74 36 90" stroke="#FFB8D8" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+    <path d="M45 42 C45 57 47 72 44 87" stroke="#FFB8D8" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+    <path d="M55 40 C55 54 57 68 54 82" stroke="#FFB8D8" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  </g>
+  <!-- Moon jellyfish -->
+  <g id="jelly-moon" transform="translate(60,10)">
+    <ellipse cx="40" cy="20" rx="18" ry="15" fill="#C8A8FF" opacity="0.35"/>
+    <ellipse cx="40" cy="20" rx="12" ry="10" fill="#C8A8FF" opacity="0.2"/>
+    <ellipse cx="36" cy="16" rx="5" ry="3" fill="white" opacity="0.25"/>
+    <path d="M28 32 Q30 50 32 65" stroke="#C8A8FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+    <path d="M37 34 Q38 52 40 68" stroke="#C8A8FF" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+    <path d="M46 34 Q47 50 45 66" stroke="#C8A8FF" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+    <path d="M52 32 Q54 48 51 62" stroke="#C8A8FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+  </g>
+  <!-- Small comb jelly -->
+  <g id="jelly-comb" transform="translate(135,15)">
+    <ellipse cx="20" cy="15" rx="12" ry="10" fill="#5EEBC4" opacity="0.3"/>
+    <ellipse cx="20" cy="15" rx="8" ry="6" fill="#5EEBC4" opacity="0.2"/>
+    <path d="M14 24 C14 35 12 46 15 55" stroke="#5EEBC4" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <path d="M20 25 C20 36 19 47 21 56" stroke="#5EEBC4" stroke-width="1" stroke-linecap="round" opacity="0.25"/>
+    <path d="M26 24 C26 34 28 44 25 53" stroke="#5EEBC4" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  </g>
+</svg>
