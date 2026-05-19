@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" role="img" aria-label="Scanline grid">
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0v28" fill="none" stroke="#00F5FF" stroke-opacity=".22" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scan" x1="0" x2="1">
+      <stop stop-color="#00F5FF" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#00F5FF" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#00F5FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="280" fill="url(#grid)"/>
+  <rect y="48" width="420" height="5" fill="url(#scan)"/>
+  <rect y="146" width="420" height="3" fill="#FF2D78" opacity=".3"/>
+  <path d="M0 230h420M86 0v280M260 0v280" stroke="#8B00FF" stroke-opacity=".18"/>
+</svg>

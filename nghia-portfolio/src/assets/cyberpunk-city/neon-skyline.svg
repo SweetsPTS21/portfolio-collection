@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-label="Cyberpunk city skyline">
+  <defs>
+    <linearGradient id="skyGlow" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#00F5FF" stop-opacity=".18"/>
+      <stop offset=".52" stop-color="#8B00FF" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#FF2D78" stop-opacity=".16"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" fill="url(#skyGlow)"/>
+  <g fill="#090916" stroke="#1A1A3E" stroke-width="2">
+    <path d="M0 310h52V160h42v150h38V105h66v205h52V188h42v122h56V130h70v180h42V74h82v236h52V144h60v166h46V96h88v214h34V170h54v140h42V118h76v192h56V154h48v156h52V220h42v90h48v50H0z"/>
+  </g>
+  <g filter="url(#cyanGlow)">
+    <path d="M20 310h1160" stroke="#00F5FF" stroke-width="3"/>
+    <path d="M185 120h45M185 148h45M185 176h45M508 92h56M508 124h56M508 156h56M760 116h64M760 148h64M996 138h60" stroke="#00F5FF" stroke-width="4"/>
+    <path d="M318 150h68M318 183h68M650 168h42M650 198h42M908 145h54M908 177h54" stroke="#FF2D78" stroke-width="4"/>
+    <circle cx="544" cy="54" r="12" fill="#00FF88"/>
+    <circle cx="782" cy="86" r="8" fill="#FF2D78"/>
+  </g>
+  <g fill="#00F5FF" opacity=".78">
+    <rect x="72" y="184" width="10" height="18"/><rect x="72" y="224" width="10" height="18"/><rect x="148" y="132" width="10" height="18"/>
+    <rect x="438" y="158" width="10" height="18"/><rect x="438" y="202" width="10" height="18"/><rect x="862" y="196" width="10" height="18"/>
+    <rect x="1110" y="188" width="10" height="18"/><rect x="1110" y="232" width="10" height="18"/>
+  </g>
+</svg>

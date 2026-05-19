@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 720" role="img" aria-label="Pixel rain pattern">
+  <defs>
+    <linearGradient id="rainFade" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#00F5FF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#00F5FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="720" fill="none"/>
+  <g fill="url(#rainFade)" opacity=".72">
+    <rect x="18" y="24" width="3" height="86"/><rect x="72" y="132" width="2" height="58"/><rect x="124" y="44" width="3" height="110"/>
+    <rect x="188" y="210" width="2" height="94"/><rect x="248" y="80" width="3" height="72"/><rect x="318" y="168" width="2" height="120"/>
+    <rect x="44" y="312" width="3" height="98"/><rect x="102" y="430" width="2" height="62"/><rect x="166" y="340" width="3" height="128"/>
+    <rect x="222" y="476" width="2" height="84"/><rect x="292" y="364" width="3" height="108"/><rect x="338" y="520" width="2" height="70"/>
+  </g>
+  <g fill="#FF2D78" opacity=".55">
+    <rect x="32" y="180" width="4" height="4"/><rect x="148" y="248" width="4" height="4"/><rect x="260" y="308" width="4" height="4"/>
+    <rect x="92" y="586" width="4" height="4"/><rect x="316" y="640" width="4" height="4"/>
+  </g>
+</svg>
