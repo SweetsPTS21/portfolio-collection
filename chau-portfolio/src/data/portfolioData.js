@@ -13,7 +13,7 @@ export const profile = {
   motto: "Kiến thức là nền tảng, công nghệ là công cụ, tư duy là chìa khóa.",
   major: "Luật",
   university: "Đại học Luật - DHQGHN",
-  hobbies: "Âm nhạc - thể thao - nấu ăn",
+  hobbies: "Âm nhạc - Thể thao - Nấu ăn",
   style: "Đơn giản - Hiện đại - Tối ưu",
   footer: "© 2026 • Nguyễn Minh Châu • Digital Portfolio",
   avatarUrl,
@@ -28,7 +28,7 @@ export const direction = {
 export const portfolioGoal = {
   title: "Mục tiêu của Portfolio",
   text:
-    "Đây là bản minh chứng cho kỹ năng sinh tồn trong môi trường số: từ khả năng thiết lập hạ tầng làm việc, khai thác dữ liệu thô đến việc thiết lập kỷ luật liêm chính học thuật. Mọi nội dung ở đây đều tuân thủ nguyên tắc không dư thừa, đi thẳng vào trọng tâm.",
+    "Đây là bản minh chứng cho kỹ năng sinh tồn trong môi trường số: Từ khả năng thiết lập hạ tầng làm việc, khai thác dữ liệu thô đến việc thiết lập kỷ luật liêm chính học thuật. Mọi nội dung ở đây đều tuân thủ nguyên tắc không dư thừa, đi thẳng vào trọng tâm.",
 };
 
 export const strengths = [
