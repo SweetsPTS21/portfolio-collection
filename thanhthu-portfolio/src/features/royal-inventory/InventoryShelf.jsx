@@ -1,5 +1,4 @@
 import { BookOpen, Feather, KeyRound, Landmark, Map, Moon } from 'lucide-react';
-import crownKeyWandSet from '../../assets/storybook-royal-forest/crown-key-wand-set.svg';
 import InventoryItemBadge from './InventoryItemBadge.jsx';
 
 const inventory = [

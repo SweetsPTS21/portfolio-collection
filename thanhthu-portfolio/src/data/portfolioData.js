@@ -1,8 +1,16 @@
+const assignmentFiles = [
+  new URL('../../docs/Bt1.pdf', import.meta.url).href,
+  new URL('../../docs/Bt2.pdf', import.meta.url).href,
+  new URL('../../docs/Bt3.pdf', import.meta.url).href,
+  new URL('../../docs/Bt4.pdf', import.meta.url).href,
+  new URL('../../docs/Bt5.pdf', import.meta.url).href,
+  new URL('../../docs/Bt6.pdf', import.meta.url).href,
+];
+
 export const theme = {
   id: 'storybook-royal-forest',
   name: 'Storybook Royal Forest Portfolio',
-  tagline:
-    'Một cuốn sách cổ tích mở ra khu rừng phép thuật trong buổi tối: bầu trời sao lấp lánh, ánh trăng, sao băng, đom đóm, cỗ xe ngựa và cột đèn đường dẫn tới lâu đài xa xa.',
+  tagline: 'Chào mừng bạn bước vào không gian lưu trữ kỹ thuật số của mình - một góc nhỏ được thiết kế tinh gọn, nơi những dòng code khô khan của công nghệ và những điều khoản nguyên tắc của pháp luật được giao hòa bằng một góc nhìn nhẹ nhàng, thanh lịch'
 };
 
 export const personalInfo = {
@@ -11,13 +19,11 @@ export const personalInfo = {
   major: 'Luật học',
   course: 'Nhập môn công nghệ số và trí tuệ nhân tạo',
   greeting: 'Xin chào, mình là Nguyễn Thanh Thư.',
-  intro:
-    'Chào mừng bạn bước vào không gian lưu trữ kỹ thuật số của mình - một góc nhỏ được thiết kế tinh gọn, nơi những dòng code khô khan của công nghệ và những điều khoản nguyên tắc của pháp luật được giao hòa bằng một góc nhìn nhẹ nhàng, thanh lịch.',
   lifestyle:
     'Tối giản, lãng mạn và thanh lịch. Mình tin rằng sự tinh tế luôn đến từ những điều giản đơn nhất.',
   interests: ['Âm nhạc êm ái', 'Viện bảo tàng', 'Game giả tưởng', 'Những giấc ngủ sâu'],
   footer:
-    'Nguyễn Thanh Thư - AI chỉ là người bạn đồng hành; con người mới là người quyết định hướng đi.',
+    'Nguyễn Thanh Thư - 2026',
 };
 
 export const philosophy = {
@@ -34,6 +40,8 @@ export const projects = [
     goal: 'Thiết lập một góc làm việc số thanh lịch, tối giản nhưng đáp ứng tối đa hiệu suất.',
     action:
       'Mình phân loại tài liệu theo từng thư mục cụ thể, đổi tên file đồng nhất theo nội dung và thời gian, đồng thời loại bỏ những file không cần thiết để tối ưu không gian lưu trữ.',
+    pdf: assignmentFiles[0],
+    pdfName: 'Bt1.pdf',
   },
   {
     chapter: 'Chương 2',
@@ -42,6 +50,8 @@ export const projects = [
     goal: 'Nghệ thuật tinh lọc thông tin trong kỷ nguyên quá tải dữ liệu.',
     action:
       'Mình áp dụng các toán tử tìm kiếm để đi thẳng đến cội nguồn của vấn đề, giữ tư duy pháp lý ở trạng thái trong trẻo và chuẩn mực.',
+    pdf: assignmentFiles[1],
+    pdfName: 'Bt2.pdf',
   },
   {
     chapter: 'Chương 3',
@@ -50,6 +60,8 @@ export const projects = [
     goal: 'Nhìn nhận AI dưới góc độ triết học và nghệ thuật.',
     action:
       'Mình dùng AI để sắp xếp dữ liệu thô, nhưng giữ phần hồn của bài luận, tính nhân văn và sự lãng mạn của công bằng ở tư duy con người.',
+    pdf: assignmentFiles[2],
+    pdfName: 'Bt3.pdf',
   },
   {
     chapter: 'Chương 4',
@@ -58,6 +70,8 @@ export const projects = [
     goal: 'Hợp tác tĩnh lặng và tôn trọng không gian cá nhân trên môi trường mạng.',
     action:
       'Nhóm trao đổi qua tài liệu chung và bình luận rõ ràng thay vì nhắn tin dồn dập, để mỗi người có thời gian nghỉ ngơi và làm việc tốt hơn.',
+    pdf: assignmentFiles[3],
+    pdfName: 'Bt4.pdf',
   },
   {
     chapter: 'Chương 5',
@@ -66,6 +80,8 @@ export const projects = [
     goal: 'Tạo ra một tác phẩm số giao thoa giữa Pháp luật, Âm nhạc và Game.',
     action:
       'Mình dùng AI tạo sinh để hỗ trợ phối nhạc nền êm dịu, rồi gọt giũa kịch bản tối giản để kiến thức pháp lý trở nên dễ tiếp nhận.',
+    pdf: assignmentFiles[4],
+    pdfName: 'Bt5.pdf',
   },
   {
     chapter: 'Chương 6',
@@ -74,6 +90,8 @@ export const projects = [
     goal: 'Đưa ra góc nhìn học thuật phản biện, không thỏa hiệp với sự hời hợt của công nghệ.',
     action:
       'Mình phản đối việc lạm dụng AI để viết luận, vì sinh viên Luật cần giữ năng lực lập luận, cảm thụ ngôn ngữ và trách nhiệm học thuật của chính mình.',
+    pdf: assignmentFiles[5],
+    pdfName: 'Bt6.pdf',
   },
 ];
 

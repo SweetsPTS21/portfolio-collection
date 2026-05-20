@@ -34,7 +34,7 @@ function AboutPage() {
       eyebrow="Prologue"
       id="about"
       lead={personalInfo.intro}
-      title="Lời chào từ Thanh Thư"
+      title="Giới thiệu"
     >
       <div className="about-grid">
         <ScrollCard className="profile-card">

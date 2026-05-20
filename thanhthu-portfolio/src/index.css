@@ -615,7 +615,7 @@ footer {
 
 .scene-asset--royal-couple {
   right: clamp(12px, 8vw, 140px);
-  bottom: clamp(56px, 11vh, 132px);
+  bottom: clamp(35px, 5vh, 132px);
   width: clamp(210px, 28vw, 420px);
   opacity: 0.36;
   filter: drop-shadow(0 20px 34px rgba(3, 6, 20, 0.34));
@@ -842,6 +842,45 @@ dd {
 .chapter-card .goal {
   color: var(--text-bright);
   font-weight: 900;
+}
+
+.chapter-card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.chapter-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.chapter-action.primary {
+  background: rgba(201, 167, 255, 0.22);
+  color: var(--text-bright);
+}
+
+.chapter-action.primary:hover {
+  background: rgba(201, 167, 255, 0.38);
+  transform: translateY(-1px);
+}
+
+.chapter-action.secondary {
+  background: rgba(248, 215, 122, 0.18);
+  color: var(--icon-gold);
+}
+
+.chapter-action.secondary:hover {
+  background: rgba(248, 215, 122, 0.34);
+  transform: translateY(-1px);
 }
 
 .reflection-grid {
