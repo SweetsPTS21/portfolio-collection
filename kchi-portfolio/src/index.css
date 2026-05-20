@@ -303,9 +303,7 @@ h1 {
 .cafe-panel,
 .avatar-card,
 .mirror-card,
-.constellation-card,
-.mini-menu,
-.menu-card {
+.mini-menu {
   border: 1px solid rgba(207, 234, 255, 0.9);
   background: rgba(255, 255, 255, 0.76);
   box-shadow: 0 22px 70px rgba(36, 56, 74, 0.08);
@@ -314,8 +312,7 @@ h1 {
 
 .hero-copy,
 .cafe-panel,
-.mirror-card,
-.constellation-card {
+.mirror-card {
   border-radius: 28px;
   padding: clamp(20px, 4vw, 34px);
 }
@@ -329,24 +326,37 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(242, 250, 255, 0.9), rgba(207, 234, 255, 0.4));
+  background: linear-gradient(135deg, rgba(242, 250, 255, 0.9), rgba(207, 234, 255, 0.4)) !important;
+}
+
+.avatar {
+  position: absolute;
+  inset: 5% 8% 0;
+  width: 84%;
+  height: 92%;
+  border-radius: 32px;
+  object-fit: cover;
+  object-position: 50% 22%;
+  box-shadow: 0 28px 70px rgba(36, 56, 74, 0.18);
 }
 
 .avatar-kitty {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  width: 70%;
-  transform: translateX(-50%);
+  top: 8px;
+  right: 8px;
+  width: 35%;
+  opacity: 0.7;
+  z-index: 2;
+  transform: none;
   animation: kitty-tail-sway 3s ease-in-out infinite;
 }
 
 .avatar-latte {
   position: absolute;
-  bottom: 8%;
-  right: 8%;
+  bottom: 4%;
+  right: -10%;
   width: 45%;
-  opacity: 0.7;
+  opacity: 0.6;
   animation: steam-rise 4.6s ease-in-out infinite;
 }
 
@@ -452,8 +462,7 @@ ul {
   border-radius: 24px;
 }
 
-.mini-menu span,
-.menu-number {
+.mini-menu span {
   color: var(--kitty-blue);
   font-weight: 900;
 }
@@ -644,8 +653,11 @@ ul {
 }
 
 .constellation-card {
-  background: rgba(36, 56, 74, 0.9);
+  background: rgba(36, 56, 74, 0.92);
+  border: 1px solid rgba(142, 205, 246, 0.3);
   border-radius: 28px;
+  padding: clamp(20px, 4vw, 34px);
+  box-shadow: 0 22px 70px rgba(36, 56, 74, 0.15);
 }
 
 .constellation-card img {
@@ -661,7 +673,18 @@ ul {
 .panel-kitty-stretching {
   display: block;
   width: min(280px, 80%) !important;
-  opacity: 0.55;
+  margin: 12px auto;
+  opacity: 0.6;
+  animation: kitty-tail-sway 5s ease-in-out infinite;
+}
+
+@keyframes kitty-tail-sway {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
 }
 
 @keyframes steam-rise {
