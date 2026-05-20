@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" fill="none">
+  <!-- Counter surface -->
+  <rect x="0" y="180" width="600" height="120" rx="0" fill="#E8F4FD"/>
+  <rect x="0" y="180" width="600" height="4" fill="#CFEAFF"/>
+  <!-- Shelf behind -->
+  <rect x="40" y="60" width="520" height="8" rx="4" fill="#D4B870" opacity="0.3"/>
+  <rect x="40" y="120" width="520" height="8" rx="4" fill="#D4B870" opacity="0.25"/>
+  <!-- Jars on shelf -->
+  <rect x="80" y="30" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#CFEAFF" stroke-width="1.5"/>
+  <ellipse cx="95" cy="30" rx="16" ry="4" fill="#9FE3D0" opacity="0.5"/>
+  <rect x="180" y="35" width="25" height="25" rx="5" fill="#FFFFFF" stroke="#CFEAFF" stroke-width="1.5"/>
+  <ellipse cx="192" cy="35" rx="13" ry="3.5" fill="#FFE3A8" opacity="0.5"/>
+  <rect x="350" y="32" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#CFEAFF" stroke-width="1.5"/>
+  <ellipse cx="364" cy="32" rx="15" ry="4" fill="#B9C8F6" opacity="0.5"/>
+  <!-- Cups on counter -->
+  <path d="M120 200 L124 230 Q140 235 156 230 L160 200 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <ellipse cx="140" cy="200" rx="20" ry="6" fill="#FFF8EE" stroke="#FFE3A8" stroke-width="1"/>
+  <path d="M420 195 L424 228 Q440 233 456 228 L460 195 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <ellipse cx="440" cy="195" rx="20" ry="6" fill="#FFF8EE" stroke="#FFE3A8" stroke-width="1"/>
+  <!-- Tiny plant -->
+  <rect x="280" y="160" width="16" height="20" rx="4" fill="#9FE3D0" opacity="0.6"/>
+  <path d="M285 160 Q288 145 288 140" stroke="#7BC8A4" stroke-width="1.5" fill="none"/>
+  <path d="M291 160 Q294 148 292 142" stroke="#7BC8A4" stroke-width="1.5" fill="none"/>
+  <circle cx="288" cy="138" r="4" fill="#9FE3D0" opacity="0.7"/>
+  <circle cx="293" cy="140" r="3.5" fill="#9FE3D0" opacity="0.6"/>
+</svg>

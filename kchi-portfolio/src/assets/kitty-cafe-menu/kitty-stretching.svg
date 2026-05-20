@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" fill="none">
+  <!-- Stretching kitty - front paws extended, butt up -->
+  <!-- Body arched -->
+  <path d="M60 80 Q100 50 150 65" stroke="#8ECDF6" stroke-width="2" fill="none"/>
+  <ellipse cx="150" cy="68" rx="25" ry="22" fill="#E8F4FD" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Front low body -->
+  <ellipse cx="70" cy="85" rx="22" ry="16" fill="#E8F4FD" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Head down -->
+  <circle cx="50" cy="82" r="20" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Ears -->
+  <path d="M36 66 L40 54 L47 65 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <path d="M52 64 L58 52 L62 65 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <path d="M38 66 L41 57 L46 65 Z" fill="#FFB8C8" opacity="0.5"/>
+  <path d="M53 64 L57 55 L61 65 Z" fill="#FFB8C8" opacity="0.5"/>
+  <!-- Squinty happy eyes -->
+  <path d="M42 80 Q45 77 48 80" stroke="#24384A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M53 79 Q56 76 59 79" stroke="#24384A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="85" rx="2" ry="1.5" fill="#FF8E9E"/>
+  <!-- Front paws stretched forward -->
+  <path d="M35 95 L15 105" stroke="#8ECDF6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M42 97 L22 107" stroke="#8ECDF6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="14" cy="106" rx="6" ry="4" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <ellipse cx="21" cy="108" rx="6" ry="4" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <!-- Butt up high, back legs standing -->
+  <line x1="140" y1="85" x2="138" y2="110" stroke="#8ECDF6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="158" y1="85" x2="160" y2="110" stroke="#8ECDF6" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="137" cy="112" rx="6" ry="4" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <ellipse cx="160" cy="112" rx="6" ry="4" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <!-- Tail up -->
+  <path d="M172 60 Q185 45 180 32 Q177 25 182 20" stroke="#8ECDF6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
