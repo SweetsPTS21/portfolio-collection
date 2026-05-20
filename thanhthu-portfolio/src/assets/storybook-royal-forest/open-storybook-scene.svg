@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Open storybook scene</title>
+  <desc id="desc">An open painted storybook under moonlight, stars, and shooting stars.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1">
+      <stop stop-color="#182450"/>
+      <stop offset="1" stop-color="#0D1638"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#9ED8B4"/>
+      <stop offset="1" stop-color="#4A3F74"/>
+    </linearGradient>
+  </defs>
+  <g id="page-left">
+    <path d="M60 96c120-38 210-20 300 24v194c-98-44-194-60-300-24z" fill="url(#paper)" stroke="#4A3F74" stroke-width="6"/>
+    <path d="M110 150h72M214 170h82" fill="none" stroke="#D8C7FF" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+  </g>
+  <g id="page-right">
+    <path d="M360 120c90-44 180-62 300-24v194c-106-36-202-20-300 24z" fill="url(#paper)" stroke="#4A3F74" stroke-width="6"/>
+    <path d="M418 168h138M414 196h90" fill="none" stroke="#D8C7FF" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+  </g>
+  <path id="spine" d="M360 120v194" stroke="#D8C7FF" stroke-width="10" stroke-linecap="round"/>
+  <path id="forest-path" d="M360 126c-12 54-24 98-58 136 40-18 76-18 116 0-34-38-46-82-58-136z" fill="url(#path)" opacity=".82"/>
+  <g id="moon-and-stars">
+    <circle cx="540" cy="78" r="30" fill="#F8F0D8"/>
+    <circle cx="552" cy="66" r="30" fill="#182450"/>
+    <path d="M156 70l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM246 92l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#F6D77B"/>
+    <path d="M460 58l86-24" stroke="#F8F0D8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
