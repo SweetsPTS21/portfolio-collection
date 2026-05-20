@@ -1,10 +1,10 @@
 import avatarUrl from '../../docs/avatar.png';
-import bt1Pdf from '../../docs/bt1.pdf';
-import bt2Pdf from '../../docs/bt2.pdf';
-import bt3Pdf from '../../docs/bt3.pdf';
-import bt4Pdf from '../../docs/bt4.pdf';
-import bt5Pdf from '../../docs/bt5.pdf';
-import bt6Pdf from '../../docs/bt6.pdf';
+import bt1Pdf from '../../docs/BT1.pdf';
+import bt2Pdf from '../../docs/BT2.pdf';
+import bt3Pdf from '../../docs/BT3.pdf';
+import bt4Pdf from '../../docs/BT4.pdf';
+import bt5Pdf from '../../docs/BT5.pdf';
+import bt6Pdf from '../../docs/BT6.pdf';
 
 export const personalInfo = {
   name: 'Vũ Duy Đức Toàn',
@@ -62,18 +62,17 @@ export const strengths = {
 
 export const principles = {
   title: 'Nguyên tắc thực hiện bài tập',
-  items: [
-    'Học tập chủ động',
-    'Kiểm chứng nguồn tin',
-    'Giữ liêm chính học thuật',
-  ],
+  items: ['Học tập chủ động', 'Kiểm chứng nguồn tin', 'Giữ liêm chính học thuật'],
 };
 
 export const tools = {
   title: 'Công cụ và nền tảng sử dụng',
   items: [
     ['Lưu trữ và quản lý tài liệu', 'Google Drive, Google Workspace'],
-    ['Nguồn học liệu', 'Cổng thông tin điện tử Chính phủ, tài liệu pháp luật chính thống'],
+    [
+      'Nguồn học liệu',
+      'Cổng thông tin điện tử Chính phủ, tài liệu pháp luật chính thống',
+    ],
     ['Công cụ AI', 'Gemini và các công cụ hỗ trợ học tập'],
     ['Thiết kế nội dung', 'Canva, CapCut'],
     ['Kỹ năng cá nhân', 'Cờ vua, làm việc nhóm, quản lý thời gian'],
