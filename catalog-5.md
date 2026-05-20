@@ -35,7 +35,8 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùn
 | `candy-arcade-world`    | Candy Arcade World Portfolio     | Kẹo, game, pixel cute, rực rỡ, vui     | Portfolio dev/designer trẻ trung       |
 | `sakura-letter-desk`    | Sakura Letter Desk Portfolio     | Hoa anh đào, thư tay, nhẹ nhàng, Nhật  | Portfolio tinh tế, nữ tính, minimalist |
 | `fairy-mushroom-forest` | Fairy Mushroom Forest Portfolio  | Rừng nấm, tiên, fantasy, dreamy cute   | Portfolio visual, illustration, art    |
-| `kitty-cafe-menu`       | Kitty Café Menu Portfolio        | Mèo, café, bánh, ấm áp, cozy cute     | Portfolio nữ yêu mèo, food, lifestyle |
+| `kitty-cafe-menu`       | Kitty Café Menu Portfolio        | Mèo, café, bánh, xanh lam nhạt, cozy cute | Portfolio nữ yêu mèo, food, lifestyle |
+| `storybook-royal-forest` | Storybook Royal Forest Portfolio | Đêm trăng, sao băng, cỗ xe ngựa, cổ tích | Portfolio nữ tính, art, luxury creative |
 
 ---
 
@@ -601,53 +602,53 @@ src/
 
 ## 5. `kitty-cafe-menu` — Kitty Café Menu Portfolio
 
-Portfolio như một quán café mèo dễ thương: mèo ngủ, latte art, bánh macaron, menu board, chuông cửa. Ấm áp, cozy, cute, phù hợp cho nữ yêu mèo và muốn portfolio mang cảm giác thư giãn, gần gũi.
+Portfolio như một quán café mèo dễ thương với tone xanh lam nhạt: mèo ngủ, latte art, bánh macaron, menu board, chuông cửa. Mát dịu, cozy, cute, phù hợp cho nữ yêu mèo và muốn portfolio mang cảm giác thư giãn, trong trẻo, gần gũi.
 
 ### Đặc điểm nhận dạng
 
 | Yếu tố      | Mô tả                                                             |
 | ----------- | ----------------------------------------------------------------- |
-| Cảm xúc     | Ấm áp, cozy, dễ thương, thư giãn, gần gũi                        |
+| Cảm xúc     | Mát dịu, cozy, dễ thương, thư giãn, trong trẻo                   |
 | Hình khối   | Menu card, cup badge, paw print accent, chalkboard frame, macaron |
-| Không gian  | Nền kem ấm, wood texture nhẹ, steam wisps, paw print trail       |
+| Không gian  | Nền xanh lam nhạt, cloud cream layer, steam wisps, paw print trail |
 | Chuyển động | Cat tail sway, steam rise, paw print walk, bell jingle, cup tilt |
-| Điểm nhấn   | Cat mascot SVG, latte cup, macaron stack, menu board, paw print  |
+| Điểm nhấn   | Cat mascot SVG, blue latte cup, macaron stack, menu board, paw print |
 
 ### Bảng màu
 
 ```js
 export const theme = {
     token: {
-        colorBgBase: "#FFF8F2",
+        colorBgBase: "#F2FAFF",
         colorBgContainer: "#FFFFFF",
-        colorPrimary: "#FF9EB5",
-        colorTextBase: "#3D2B22",
-        colorTextSecondary: "#8A6B5E",
-        colorSuccess: "#8AE0B8",
-        colorWarning: "#FFE0A0",
-        colorError: "#FF7A6B",
-        colorBorder: "#FFE0D0",
+        colorPrimary: "#8ECDF6",
+        colorTextBase: "#24384A",
+        colorTextSecondary: "#6B879D",
+        colorSuccess: "#9FE3D0",
+        colorWarning: "#FFE3A8",
+        colorError: "#FF8E9E",
+        colorBorder: "#CFEAFF",
         borderRadius: 16,
         fontFamily: "'Nunito', 'Poppins', sans-serif",
     },
 };
 
 // CSS Variables
-// --kitty-pink: #FF9EB5;
-// --latte-cream: #FFF8F2;
-// --mocha-brown: #C8A088;
-// --macaron-mint: #8AE0B8;
-// --caramel-gold: #FFE0A0;
-// --berry-jam: #FF7A6B;
+// --kitty-blue: #8ECDF6;
+// --cloud-cream: #F2FAFF;
+// --sky-milk: #CFEAFF;
+// --macaron-mint: #9FE3D0;
+// --honey-foam: #FFE3A8;
+// --berry-coral: #FF8E9E;
 // --milk-white: #FFFFFF;
-// --choco-dark: #3D2B22;
-// --blueberry-muffin: #A8B8E8;
+// --soft-navy: #24384A;
+// --blueberry-lavender: #B9C8F6;
 ```
 
 ### Typography
 
-- **Heading:** `Nunito` tròn, ấm, gợi cảm giác cozy café.
-- **Body:** `Poppins` gọn, hiện đại, dễ đọc trên nền kem.
+- **Heading:** `Nunito` tròn, mềm, gợi cảm giác cozy café xanh lam nhạt.
+- **Body:** `Poppins` gọn, hiện đại, dễ đọc trên nền xanh rất nhạt.
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
@@ -662,12 +663,12 @@ export const theme = {
 | SVGator         | Steam rise loop, paw print walk path, tail sway, macaron stack bounce    |
 | Lenis           | Smooth scroll qua café menu sections                                     |
 | CSS Keyframes   | Steam idle rise, tail sway loop, paw print fade trail, cup wobble        |
-| Realtime Colors | Tạo palette kitty-pink/mocha-brown/macaron-mint ấm và cozy              |
+| Realtime Colors | Tạo palette kitty-blue/sky-milk/macaron-mint sáng, mát dịu và cozy      |
 | Blush           | Illustration cat café girl/barista cho hero hoặc about                   |
 
 ### Layout ideas
 
-- **Hero:** Café counter scene, cat mascot ngủ trên quầy, menu board phía sau, steam từ cup.
+- **Hero:** Café counter scene xanh lam nhạt, cat mascot ngủ trên quầy, menu board phía sau, steam từ cup.
 - **About:** Barista profile card dạng name tag/apron badge, có cat avatar.
 - **Projects:** Café menu: mỗi project là một menu item (Latte, Mocha, Matcha...) với description.
 - **Skills:** Macaron tower: mỗi nhóm skill là một tầng macaron màu khác nhau.
@@ -730,14 +731,177 @@ src/
 
 | File SVG tự tạo              | Nội dung cần vẽ                                          | Dùng cho               | Gợi ý kỹ thuật                                          |
 | ---------------------------- | -------------------------------------------------------- | ---------------------- | ------------------------------------------------------- |
-| `kitty-mascot-set.svg`       | Mèo nhiều pose: ngủ, thức, vẫy, chơi, peek, cuộn tròn  | Mascot/decoration      | Tách tail, ears, eyes riêng để animate, fill soft colors|
+| `kitty-mascot-set.svg`       | Mèo nhiều pose: ngủ, thức, vẫy, chơi, peek, cuộn tròn  | Mascot/decoration      | Tách tail, ears, eyes riêng để animate, fill soft blue/white colors |
 | `latte-cup-set.svg`          | Cup latte, cappuccino, matcha, có latte art trên mặt     | Hero/project cards     | Cup shape + foam layer, art detail bằng path nhỏ        |
-| `macaron-stack.svg`          | Macaron nhiều màu: pink, mint, lavender, lemon, berry    | Skills section         | Oval shape, filling line, shadow nhẹ, stack arrangement |
+| `macaron-stack.svg`          | Macaron nhiều màu: sky blue, mint, lavender, lemon, berry | Skills section         | Oval shape, filling line, shadow nhẹ, stack arrangement |
 | `steam-wisps.svg`            | Steam/hơi nước nhiều kiểu wisp                           | Particle decoration    | Path wavy, opacity gradient, animate rise + fade        |
-| `paw-print-set.svg`          | Paw print nhiều cỡ, có toe beans detail                  | Trail/decoration       | Circle arrangement, fill soft pink/brown                |
+| `paw-print-set.svg`          | Paw print nhiều cỡ, có toe beans detail                  | Trail/decoration       | Circle arrangement, fill soft blue/navy                 |
 | `cafe-menu-board.svg`        | Chalkboard frame, có chalk text area, doodle border      | Section frame          | Rect dark + chalk texture pattern, border doodle        |
 | `bakery-icons.svg`           | Croissant, cookie, cake slice, donut, muffin, spoon     | Nav/badge icons        | Icon 24x24, stroke 2px, fill warm pastry colors        |
 | `door-bell-set.svg`          | Chuông cửa, ribbon bow, tiny cat face bell               | Contact CTA/decoration | Tách bell body và clapper để animate swing              |
+
+---
+
+
+## 6. `storybook-royal-forest` — Storybook Royal Forest Portfolio
+
+Portfolio như một tranh vẽ cổ tích ban đêm: bầu trời sao lấp lánh, sao băng rơi, ánh trăng phủ lên khu rừng, công chúa và hoàng tử đi dạo cạnh cỗ xe ngựa, cột đèn đường, đom đóm bay và hàng cây tối. Cổ điển, lãng mạn, fantasy, phù hợp cho portfolio nữ tính muốn có cảm giác kể chuyện, sang nhẹ và giàu hình ảnh.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Cổ điển, tranh vẽ, mơ mộng, lãng mạn, magical ban đêm                 |
+| Hình khối   | Moon frame, star trail, lantern post, carriage silhouette, scroll card |
+| Không gian  | Nền xanh đêm, ánh trăng, rừng tối, cột đèn đường, firefly layer       |
+| Chuyển động | Sao băng rơi, sao twinkle, đom đóm drift, lantern glow, carriage roll |
+| Điểm nhấn   | Moonlit storybook hero, royal couple, horse carriage, street lamp, trees |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#0D1638",
+        colorBgContainer: "#182450",
+        colorPrimary: "#D8C7FF",
+        colorTextBase: "#F8F0D8",
+        colorTextSecondary: "#C9C1DC",
+        colorSuccess: "#9ED8B4",
+        colorWarning: "#F6D77B",
+        colorInfo: "#9BC8FF",
+        colorBorder: "#4A3F74",
+        borderRadius: 18,
+        fontFamily: "'Cormorant Garamond', 'Nunito', serif",
+    },
+};
+
+// CSS Variables
+// --midnight-blue: #0D1638;
+// --deep-indigo: #182450;
+// --moon-ivory: #F8F0D8;
+// --starlight-gold: #F6D77B;
+// --royal-lavender: #D8C7FF;
+// --castle-violet: #4A3F74;
+// --forest-sage: #9ED8B4;
+// --rose-petal: #E9A9C6;
+// --sky-spell: #9BC8FF;
+// --parchment-border: #4A3F74;
+```
+
+### Typography
+
+- **Heading:** `Cormorant Garamond` thanh lịch, cổ điển, hợp phong cách tranh vẽ cổ tích.
+- **Body:** `Nunito` mềm, dễ đọc, giữ độ thân thiện trên nền xanh đêm.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                            |
+| --------------- | -------------------------------------------------------------------------------- |
+| Framer Motion   | Page turn, chapter reveal, carriage entrance, scroll card hover                 |
+| Rive            | Princess/prince walk loop, carriage arrival, lantern click glow, letter unlock  |
+| SVGator         | Shooting star path, firefly flight, lantern sway, moon glow pulse               |
+| Lenis           | Smooth scroll như lật từng chương truyện trong đêm                              |
+| CSS Keyframes   | Star twinkle, shooting-star, firefly-drift, lantern-glow, carriage wheel rotate |
+| Realtime Colors | Tạo palette midnight-blue/moon-ivory/starlight-gold đủ contrast                |
+| Blush           | Illustration cổ tích kiểu tranh vẽ: royal couple, moonlit road, carriage        |
+
+### Layout ideas
+
+- **Hero:** Moonlit storybook scene, bầu trời sao, sao băng, đường rừng, cột đèn và cỗ xe ngựa.
+- **About:** Scroll letter/profile parchment có wax seal, portrait dạng cameo frame.
+- **Projects:** Mỗi project là một chapter card, có castle room hoặc quest icon riêng.
+- **Skills:** Royal inventory: crown, key, potion, map, sword, wand, book, lantern.
+- **Contact:** "Send a royal letter" CTA với envelope seal mở ra, lantern glow và firefly success.
+
+### Animation rules
+
+| Sự kiện          | Effect                                             | Thư viện          |
+| ---------------- | -------------------------------------------------- | ----------------- |
+| Page load        | Night sky fade-in + moon glow + storybook open      | Framer Motion/CSS |
+| Star field       | Star twinkle nhiều nhịp, không đồng bộ              | CSS keyframes     |
+| Shooting star    | Sao băng rơi chéo 6–9s loop, trail fade             | CSS/SVGator       |
+| Fireflies        | Đom đóm drift organic quanh cây và cột đèn          | CSS/SVG animation |
+| Lantern idle     | Cột đèn glow pulse + sway rất nhẹ                   | CSS keyframes     |
+| Carriage         | Cỗ xe ngựa vào cảnh, bánh xe rotate, shadow slide    | Framer Motion/Rive|
+| Royal couple     | Công chúa/hoàng tử walk loop, cape/dress sway        | Rive/SVGator      |
+| Card hover       | Scroll card lift + star sparkle + moon rim light     | CSS transition    |
+| Contact success  | Wax seal pop + envelope open + firefly burst         | Rive/Framer Motion|
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Storybook royal forest shell
+│   ├── routes.js                       ← prologue, chapters, inventory, royal-letter
+│   └── theme.js
+├── pages/
+│   ├── StorybookHeroPage.jsx           ← Open book + forest path + castle
+│   ├── ChapterProjectsPage.jsx         ← Projects dạng chapter cards
+│   ├── RoyalInventorySkillsPage.jsx    ← Skills dạng inventory items
+│   └── RoyalLetterContactPage.jsx      ← Contact envelope/wax seal
+├── features/
+│   ├── storybook-scene/
+│   │   ├── OpenBookBackground.jsx
+│   │   ├── ForestPathLayer.jsx
+│   │   ├── CastleSilhouette.jsx
+│   │   └── SparkleDustLayer.jsx
+│   ├── royal-mascot/
+│   │   ├── RoyalMascotRiveController.jsx
+│   │   ├── PrincessPrinceIdle.jsx
+│   │   ├── CrownSparkle.jsx
+│   │   └── MagicKeyReaction.jsx
+│   ├── chapter-projects/
+│   │   ├── ChapterCardGrid.jsx
+│   │   ├── ChapterCard.jsx
+│   │   ├── QuestIconBadge.jsx
+│   │   └── PageTurnDetail.jsx
+│   └── royal-inventory/
+│       ├── InventoryShelf.jsx
+│       ├── InventoryItemBadge.jsx
+│       └── SkillScrollTooltip.jsx
+├── components/
+│   ├── layout/                         ← Storybook nav, chapter transition wrapper
+│   └── ui/                             ← CrownButton, ScrollCard, RibbonTag, SealBadge
+└── assets/storybook-royal-forest/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                | Nội dung cần vẽ                                           | Dùng cho               | Gợi ý kỹ thuật                                           |
+| ------------------------------ | --------------------------------------------------------- | ---------------------- | -------------------------------------------------------- |
+| `open-storybook-scene.svg`     | Sách mở dưới trăng, bầu trời sao, sao băng, forest path   | Hero/background        | Tách page, moon, stars, shooting star để animate riêng   |
+| `castle-silhouette-set.svg`    | Lâu đài đêm nhiều layer: tower, gate, window, flag        | Hero/section divider   | Tách window để twinkle, flag để flutter                  |
+| `royal-mascot-pair.svg`        | Công chúa và hoàng tử đi dạo dưới ánh trăng               | Background scene layer | Tách chân/tay/cape/dress để walk loop và sway; không đặt trong profile card |
+| `enchanted-forest-path.svg`    | Đường rừng đêm, cây tối, cột đèn đường, đom đóm           | Background/transition  | Layer parallax, firefly symbols, lamp glow radialGradient|
+| `crown-key-wand-set.svg`       | Crown, magic key, wand, potion, sword mini, shield        | Skills/badges          | Icon 24x24, stroke 2px, fill moon/royal colors           |
+| `scroll-letter-set.svg`        | Parchment scroll, envelope, wax seal, ribbon              | About/contact/cards    | Seal và ribbon là group riêng để pop/flutter             |
+| `sparkle-dust-particles.svg`   | Star, shooting-star trail, glow dot, firefly, tiny heart  | Particle layer         | Symbol reuse, opacity/scale/path random bằng CSS vars    |
+| `carriage-lantern-set.svg`     | Cỗ xe ngựa cổ điển, bánh xe, cột đèn, đèn lồng            | Decoration/contact     | Tách horse, wheel, lamp glow để animate riêng            |
+| `storybook-icons.svg`          | Castle, crown, book, rose, key, shield, letter, lantern   | Nav/badge icons        | currentColor + pastel fill, dùng chung trong UI          |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `storybook-royal-forest` trong data/theme config và README của sub-project    |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ hero storybook, chapter projects, royal inventory skills, royal letter contact |
+| Feature folders    | Tách `storybook-scene`, `royal-mascot`, `chapter-projects`, `royal-inventory`        |
+| UI components      | Có `CrownButton`, `ScrollCard`, `RibbonTag`, `SealBadge` dùng lại trong các page      |
+| Asset folder       | Tạo `src/assets/storybook-royal-forest/` và đủ 9 SVG files trong bảng asset phía trên |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Profile card       | `storybook-card` ưu tiên avatar thật từ `docs/avatar.png`; royal couple chỉ là nền/decorative layer |
+| Motion             | Nhấn mạnh star twinkle, shooting-star, firefly-drift, lantern-glow, carriage/walk loop |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ     |
+| Responsive         | Hero, chapter cards, inventory và contact assets phải về 1 cột ở mobile nhỏ          |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt animation lặp                            |
+| Performance        | SVG tối ưu, không render quá 20–30 particle visible, không nhúng text chính trong SVG |
 
 ---
 
@@ -835,4 +999,4 @@ src/
 
 ---
 
-_Cập nhật lần cuối: 2026-05-19 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot và animation phong phú._
+_Cập nhật lần cuối: 2026-05-20 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot, storybook fantasy và animation phong phú._
