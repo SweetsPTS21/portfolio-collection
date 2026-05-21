@@ -1,0 +1,155 @@
+import assert from "node:assert/strict";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = dirname(dirname(fileURLToPath(import.meta.url)));
+const read = (path) => readFileSync(join(root, path), "utf8");
+
+const requiredFiles = [
+  "README.md",
+  "src/App.jsx",
+  "src/main.jsx",
+  "src/app/App.jsx",
+  "src/app/routes.js",
+  "src/app/theme.js",
+  "src/app/motionConfig.js",
+  "src/app/riveSetup.js",
+  "src/app/lenisSetup.js",
+  "src/data/portfolioData.js",
+  "src/pages/SakuraDeskHeroPage.jsx",
+  "src/pages/LetterProjectsPage.jsx",
+  "src/pages/InkPaletteSkillsPage.jsx",
+  "src/pages/LetterMailboxContactPage.jsx",
+  "src/features/sakura-scene/SakuraBranch.jsx",
+  "src/features/sakura-scene/PetalFallLayer.jsx",
+  "src/features/sakura-scene/InkSplashAccent.jsx",
+  "src/features/sakura-scene/SparrowBird.jsx",
+  "src/features/letter-desk/EnvelopeCard.jsx",
+  "src/features/letter-desk/LetterReveal.jsx",
+  "src/features/letter-desk/WashiSealStamp.jsx",
+  "src/features/letter-desk/PostcardProjectCard.jsx",
+  "src/features/ink-palette/InkPaletteGrid.jsx",
+  "src/features/ink-palette/InkColorBadge.jsx",
+  "src/features/ink-palette/BrushStrokeDraw.jsx",
+  "src/components/layout/PaperNav.jsx",
+  "src/components/layout/PaperPageShell.jsx",
+  "src/components/layout/FoldPageTransition.jsx",
+  "src/components/ui/SealButton.jsx",
+  "src/components/ui/EnvelopeCard.jsx",
+  "src/components/ui/InkBadge.jsx",
+  "src/components/ui/PetalTag.jsx",
+];
+
+for (const file of requiredFiles) {
+  assert.ok(existsSync(join(root, file)), `${file} should exist`);
+}
+
+const readme = read("README.md");
+const data = read("src/data/portfolioData.js");
+const css = read("src/index.css");
+const routes = read("src/app/routes.js");
+const sakuraBranch = read("src/features/sakura-scene/SakuraBranch.jsx");
+const petalFallLayer = read("src/features/sakura-scene/PetalFallLayer.jsx");
+const heroPage = read("src/pages/SakuraDeskHeroPage.jsx");
+const projectsPageCard = read("src/features/letter-desk/PostcardProjectCard.jsx");
+const mailboxPage = read("src/pages/LetterMailboxContactPage.jsx");
+
+assert.match(readme, /sakura-letter-desk/, "README should declare the catalog theme id");
+assert.match(data, /themeId:\s*["']sakura-letter-desk["']/, "data should declare theme id");
+assert.match(data, /Lê Thị Hoàng Yến/, "data should include the student name");
+assert.match(data, /Sở hữu trí tuệ/, "data should include future IP-law direction");
+assert.match(data, /BT1\.pdf/, "project data should reference BT1.pdf");
+assert.match(data, /BT6\.pdf/, "project data should reference BT6.pdf");
+assert.match(data, /cardVariant:\s*["']library-slip["']/, "chapter 1 should use a library slip object card");
+assert.match(data, /cardVariant:\s*["']integrity-certificate["']/, "chapter 6 should use an integrity certificate object card");
+assert.match(routes, /\/desk/, "desk route should exist");
+assert.match(routes, /\/letters/, "letters route should exist");
+assert.match(routes, /\/palette/, "palette route should exist");
+assert.match(routes, /\/mailbox/, "mailbox route should exist");
+assert.match(sakuraBranch, /sakura-branch\.png/, "sakura branch should use the PNG asset");
+assert.doesNotMatch(sakuraBranch, /sakura-branch\.svg/, "sakura branch should no longer import the SVG asset");
+assert.match(css, /\.sakura-branch\s*{[\s\S]*left:\s*-72px;/, "sakura branch should sit in the upper-left corner");
+assert.doesNotMatch(css, /\.sakura-branch\s*{[\s\S]*right:\s*-72px;/, "sakura branch should not sit in the upper-right corner");
+assert.match(petalFallLayer, /sakura-petal-blush\.svg/, "petal layer should import the blush petal asset");
+assert.match(petalFallLayer, /sakura-petal-soft\.svg/, "petal layer should import the soft petal asset");
+assert.match(petalFallLayer, /sakura-petal-rose\.svg/, "petal layer should import the rose petal asset");
+assert.match(petalFallLayer, /sakura-petal-light\.svg/, "petal layer should import the light petal asset");
+assert.match(petalFallLayer, /petal-depth-back/, "petal layer should render a background-depth petal class");
+assert.match(petalFallLayer, /petal-depth-front/, "petal layer should render a foreground-depth petal class");
+
+for (const token of [
+  "--sakura-pink: #F2A0B8",
+  "--blossom-white: #FFFBF7",
+  "--ink-charcoal: #2D2028",
+  "--washi-gold: #FFE4A0",
+  "--paper-cream: #FFF5EC",
+  "sakura-petal-fall",
+  "sakura-petal-fall-deep",
+  "sakura-petal-sway",
+  ".petal-backdrop",
+  "branch-sway",
+  "ink-stroke-draw",
+  "sparrow-hop",
+  "prefers-reduced-motion",
+]) {
+  assert.match(css, new RegExp(token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `${token} should be present`);
+}
+
+assert.match(heroPage, /student-profile-slip/, "identity block should be a custom student profile slip");
+assert.match(heroPage, /variant="bookmark-note"/, "portfolio goals should render as bookmark notes");
+assert.match(heroPage, /variant="scroll-letter"/, "future direction should render as a scroll letter");
+assert.match(projectsPageCard, /project-card-\$\{project\.cardVariant\}/, "project cards should use per-project object variants");
+assert.match(mailboxPage, /variant="book-page"/, "reflection summary should render as a book page");
+assert.match(mailboxPage, /variant="certificate"/, "challenge summary should render as a certificate");
+assert.match(mailboxPage, /thank-you-envelope/, "final message should render as a thank-you envelope");
+
+for (const objectClass of [
+  ".student-profile-slip",
+  ".desk-object-bookmark-note",
+  ".desk-object-scroll-letter",
+  ".desk-object-book-page",
+  ".desk-object-certificate",
+  ".project-card-library-slip",
+  ".project-card-source-note",
+  ".project-card-folded-ai-letter",
+  ".project-card-club-postcard",
+  ".project-card-film-strip-card",
+  ".project-card-integrity-certificate",
+  ".thank-you-envelope",
+]) {
+  assert.match(css, new RegExp(objectClass.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `${objectClass} should be styled`);
+}
+
+const assetDir = join(root, "src/assets/sakura-letter-desk");
+assert.ok(existsSync(assetDir), "sakura-letter-desk asset directory should exist");
+assert.deepEqual(
+  readdirSync(assetDir).filter((file) => file.endsWith(".svg")).sort(),
+  [
+    "desk-stationery-icons.svg",
+    "envelope-set.svg",
+    "ink-splash-set.svg",
+    "paper-texture-pattern.svg",
+    "sakura-petal-blush.svg",
+    "sakura-petal-light.svg",
+    "sakura-petal-rose.svg",
+    "sakura-petal-soft.svg",
+    "sakura-petals.svg",
+    "sparrow-poses.svg",
+    "washi-tape-japanese.svg",
+  ].sort(),
+  "catalog SVG asset set should be complete",
+);
+assert.ok(existsSync(join(assetDir, "sakura-branch.png")), "sakura branch PNG asset should exist");
+
+const collectJsx = (dir) =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) return collectJsx(full);
+    return entry.name.endsWith(".jsx") ? [full] : [];
+  });
+
+for (const filePath of collectJsx(join(root, "src"))) {
+  const source = readFileSync(filePath, "utf8");
+  assert.match(source, /import React from ["']react["'];/, `${filePath} should import React explicitly`);
+}
