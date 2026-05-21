@@ -462,46 +462,67 @@ src/
 
 ## 4. `fairy-mushroom-forest` — Fairy Mushroom Forest Portfolio
 
-Portfolio như một khu rừng nấm cổ tích: nấm nhiều màu, tiên nhỏ, đom đóm, lá rụng, cổng gỗ. Fantasy cute, dreamy nhưng vẫn sáng và rực rỡ, phù hợp cho portfolio visual/art muốn tạo thế giới riêng.
+Portfolio như một khu rừng nấm cổ tích enchanted: nấm phát sáng bioluminescent, tiên nhỏ để lại vệt sáng tím, đom đóm lung linh, sương mù huyền bí, ánh trăng xuyên tán lá. Fantasy đậm chất "enchanted forest" — magical, dreamy, có chiều sâu, phù hợp cho portfolio visual/art muốn tạo thế giới riêng đầy mê hoặc.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                             |
-| ----------- | ----------------------------------------------------------------- |
-| Cảm xúc     | Fantasy, dreamy, magical, whimsical, enchanting                    |
-| Hình khối   | Mushroom card, leaf badge, fairy wing accent, wood frame, acorn   |
-| Không gian  | Nền xanh lá nhạt, mushroom cluster, firefly dots, moss texture   |
-| Chuyển động | Firefly glow drift, mushroom bounce, fairy flutter, leaf fall     |
-| Điểm nhấn   | Mushroom SVG nhiều màu, fairy wings, firefly, acorn, wood gate   |
+| Yếu tố      | Mô tả                                                                    |
+| ----------- | ------------------------------------------------------------------------ |
+| Cảm xúc     | Enchanted, magical, mysterious-cute, whimsical, bioluminescent           |
+| Hình khối   | Mushroom house card, leaf badge, fairy wing accent, wood gate, stepping stone |
+| Không gian  | Nền xanh rừng sâu, parallax 4 layers (sky → trees → mushrooms → fireflies), mist overlay |
+| Chuyển động | Firefly glow drift, mushroom glow pulse, fairy trail, gate open, mist drift, moonbeam |
+| Điểm nhấn   | Nấm phát sáng, fairy trail tím, cổng gỗ enchanted, moonbeam rays, bioluminescent moss |
+
+### Concept chính: Bioluminescent Enchanted Forest
+
+Theme xây dựng trên ý tưởng **rừng phát quang** — mọi thứ trong rừng đều tỏa sáng nhẹ: nấm glow tím/xanh, rêu phát quang, đom đóm vàng, fairy trail tím. Tạo cảm giác bước vào một thế giới khác khi truy cập portfolio.
+
+**Parallax depth layers:**
+```
+Layer 1 (xa nhất): Bầu trời đêm xanh tím + trăng lưỡi liềm
+Layer 2: Tán cây silhouette tối, moonbeam rays xuyên qua
+Layer 3: Nấm lớn phát sáng, cổng gỗ, cây trung cảnh
+Layer 4: Foreground — đom đóm, sương mù, fairy dust, lá rơi
+Layer 5: UI content (mushroom house cards, text)
+```
 
 ### Bảng màu
 
 ```js
 export const theme = {
     token: {
-        colorBgBase: "#F5FFF5",
-        colorBgContainer: "#FFFFFF",
-        colorPrimary: "#FF7EB3",
-        colorTextBase: "#1E3322",
-        colorTextSecondary: "#5A7A5E",
-        colorSuccess: "#7AE8A8",
-        colorWarning: "#FFE088",
-        colorError: "#FF7A7A",
-        colorBorder: "#C8F0C8",
+        colorBgBase: "#F0FFF0",
+        colorBgContainer: "#F8FFF8",
+        colorPrimary: "#34D399",
+        colorTextBase: "#1A2E1A",
+        colorTextSecondary: "#4A6B4A",
+        colorSuccess: "#4ADE80",
+        colorWarning: "#FBBF24",
+        colorError: "#FB7185",
+        colorBorder: "#A7D8A7",
         borderRadius: 18,
         fontFamily: "'Baloo 2', 'Quicksand', sans-serif",
     },
 };
 
 // CSS Variables
-// --fairy-pink: #FF7EB3;
-// --mushroom-red: #FF8A7A;
-// --forest-mint: #7AE8A8;
-// --firefly-gold: #FFE088;
-// --moss-green: #A8D8A8;
-// --acorn-brown: #C8A070;
-// --lilac-wing: #D0A8FF;
-// --sky-clearing: #C8E8FF;
+// --forest-primary: #34D399;        ← Primary — xanh lá mint sáng, chủ đạo
+// --forest-light: #6EE7B7;          ← Xanh lá nhạt cho hover/glow
+// --fairy-purple: #A855F7;          ← Tím fairy cho accent/trail effects
+// --fairy-glow: #C084FC;            ← Tím sáng cho fairy dust
+// --mushroom-red: #EF4444;          ← Đỏ nấm đậm, nổi bật
+// --mushroom-coral: #FF8A7A;        ← Cam nấm phụ
+// --forest-deep: #166534;           ← Xanh rừng sâu cho depth/silhouette
+// --forest-mint: #4ADE80;           ← Xanh lá phát sáng, bioluminescent
+// --firefly-gold: #FBBF24;          ← Vàng đom đóm đậm, rõ ràng
+// --moss-glow: #86EFAC;             ← Rêu phát quang
+// --acorn-brown: #92400E;           ← Nâu đất đậm, earthy
+// --lilac-wing: #C084FC;            ← Tím cánh tiên (accent)
+// --enchanted-teal: #2DD4BF;        ← Xanh ngọc enchanted
+// --moonlight: #FEF9C3;             ← Ánh trăng vàng nhạt
+// --mist-white: rgba(255,255,255,0.15); ← Sương mù
+// --leaf-canopy: #BBF7D0;           ← Xanh lá tán cây sáng
 ```
 
 ### Typography
@@ -515,88 +536,115 @@ export const theme = {
 
 ### Library usage
 
-| Library / Tool  | Cách dùng trong theme                                                   |
-| --------------- | ----------------------------------------------------------------------- |
-| Framer Motion   | Mushroom bounce entrance, fairy flutter, gate open reveal, route magic  |
-| Rive            | Fairy mascot fly/wave/sprinkle dust, mushroom grow, firefly glow state  |
-| SVGator         | Firefly drift path, leaf fall spiral, fairy wing flutter, gate creak    |
-| Lenis           | Smooth scroll qua forest path sections, parallax depth layers           |
-| CSS Keyframes   | Firefly glow pulse, mushroom idle bounce, leaf sway, moss shimmer      |
-| Realtime Colors | Tạo palette fairy-pink/forest-mint/firefly-gold sáng và magical        |
-| Blush           | Illustration fairy/forest girl cho hero hoặc about                      |
+| Library / Tool  | Cách dùng trong theme                                                          |
+| --------------- | ------------------------------------------------------------------------------ |
+| Framer Motion   | Gate open reveal, mushroom grow entrance, fairy trail, parallax layers, route magic |
+| Rive            | Fairy mascot fly/wave/sprinkle dust, mushroom glow state, firefly swarm        |
+| SVGator         | Firefly drift path, leaf fall spiral, fairy wing flutter, mist drift, moonbeam |
+| Lenis           | Smooth scroll + parallax 4 forest depth layers                                 |
+| CSS Keyframes   | Firefly glow pulse, mushroom bioluminescent pulse, mist drift, moss shimmer    |
+| Realtime Colors | Tạo palette fairy-purple/forest-mint/firefly-gold magical và enchanted         |
+| Blush           | Illustration fairy/forest girl cho hero hoặc about                             |
 
 ### Layout ideas
 
-- **Hero:** Forest clearing với mushroom cluster, fairy bay ngang, firefly dots lung linh.
-- **About:** Mushroom house card: profile info bên trong nấm lớn, fairy avatar.
-- **Projects:** Forest path: mỗi project là một mushroom stop dọc theo path.
-- **Skills:** Acorn collection: mỗi nhóm skill là một loại acorn/seed khác nhau.
-- **Contact:** "Ring the fairy bell" CTA, bell chime + fairy dust scatter.
+- **Hero:** "Bước vào khu rừng" — Cổng gỗ enchanted mở ra (gate animation) → reveal parallax forest scene. Moonbeam xuyên tán lá, nấm phát sáng ở foreground, fairy bay ngang để lại trail tím, đom đóm lung linh. Sương mù nhẹ drift ở foreground.
+- **About:** Mushroom house card — profile info bên trong ngôi nhà nấm lớn phát sáng, fairy avatar, bioluminescent moss decoration.
+- **Projects:** Forest path với mushroom house stops — mỗi project là một ngôi nhà nấm dọc theo con đường rừng. Card có cap nấm làm header (gradient tím/đỏ/xanh), thân nấm là body, hover thì glow + fairy dust burst.
+- **Skills:** Enchanted tree — mỗi nhóm skill là một nhánh cây phát sáng, acorn/seed badges treo trên cành.
+- **Contact:** "Ring the fairy bell" CTA — bell chime + fairy dust scatter + forest glow intensify.
+
+### Navigation — Forest stepping stones
+
+- Nav là một **con đường đá bước chân** nằm ngang
+- Mỗi nav item là một **stepping stone** phát sáng khi hover/active
+- Active item có đom đóm bay quanh (CSS animation)
+- Transition giữa pages: fairy dust scatter → mist → new scene reveal
 
 ### Animation rules
 
-| Sự kiện          | Effect                                          | Thư viện          |
-| ---------------- | ----------------------------------------------- | ----------------- |
-| Page load        | Gate open + forest reveal + firefly fade in     | Framer Motion     |
-| Firefly idle     | Glow pulse + drift random path 5–10s           | CSS keyframes     |
-| Mushroom bounce  | Squash-stretch bounce khi vào viewport          | Framer Motion     |
-| Fairy flutter    | Wing flutter + drift horizontal                 | Rive / CSS        |
-| Leaf fall        | Spiral fall path, rotate, fade                  | SVG/CSS animation |
-| Card hover       | Mushroom grow slightly + fairy dust burst       | CSS transition    |
-| Gate open        | Rotate open từ center + light ray reveal        | Framer Motion     |
-| Section entrance | Fade + translateY(20px) + firefly stagger       | Framer Motion     |
-| Moss shimmer     | Subtle color shift 8s loop                      | CSS keyframes     |
+| Sự kiện          | Effect                                                    | Thư viện          |
+| ---------------- | --------------------------------------------------------- | ----------------- |
+| Hero intro       | Gate open → moonbeam rays → mist clear → forest reveal   | Framer Motion     |
+| Scroll parallax  | 4 forest layers di chuyển tốc độ khác nhau               | Lenis + Framer Motion |
+| Firefly idle     | Glow pulse + drift random path 5–10s, stagger            | CSS keyframes     |
+| Mushroom glow    | Bioluminescent pulse (box-shadow tím/xanh) 3s loop       | CSS keyframes     |
+| Fairy trail      | SVG path draw + sparkle particles theo đường bay         | SVGator + CSS     |
+| Fairy flutter    | Wing flutter + drift horizontal + dust sprinkle          | Rive / CSS        |
+| Mist drift       | Horizontal drift rất chậm (30–40s loop), opacity thấp    | CSS keyframes     |
+| Moonbeam         | Subtle ray opacity pulse 8s loop                         | CSS keyframes     |
+| Leaf fall        | Spiral fall path, rotate, fade                           | SVG/CSS animation |
+| Card enter       | Mushroom "grow" từ dưới lên (scaleY 0→1 từ bottom)      | Framer Motion     |
+| Card hover       | Mushroom glow intensify + fairy dust burst + slight lift | CSS transition    |
+| Gate open        | Rotate open từ center + moonbeam ray reveal              | Framer Motion     |
+| Section entrance | Fade + translateY(20px) + firefly stagger appear         | Framer Motion     |
+| Nav hover        | Stepping stone glow + firefly appear around              | CSS transition    |
+| Moss shimmer     | Bioluminescent color shift 6s loop                       | CSS keyframes     |
+| Route transition | Fairy dust scatter → mist fade → new scene              | Framer Motion     |
 
 ### Component notes
 
 ```txt
 src/
 ├── app/
-│   ├── App.jsx                        ← Fairy forest shell
-│   ├── routes.js                      ← clearing, path, acorn-tree, fairy-bell
+│   ├── App.jsx                        ← Enchanted fairy forest shell
+│   ├── routes.js                      ← gate, clearing, path, enchanted-tree, fairy-bell
 │   └── theme.js
 ├── pages/
-│   ├── ForestClearingHeroPage.jsx     ← Hero forest clearing với mushrooms
-│   ├── ForestPathProjectsPage.jsx     ← Projects dọc theo forest path
-│   ├── AcornTreeSkillsPage.jsx        ← Skills dạng acorn collection
-│   └── FairyBellContactPage.jsx       ← Contact ring the fairy bell
+│   ├── EnchantedGateHeroPage.jsx      ← Hero: gate open → parallax forest reveal
+│   ├── ForestPathProjectsPage.jsx     ← Projects: mushroom house stops along path
+│   ├── EnchantedTreeSkillsPage.jsx    ← Skills: glowing tree branches + acorn badges
+│   └── FairyBellContactPage.jsx       ← Contact: ring the fairy bell
 ├── features/
 │   ├── forest-scene/
-│   │   ├── ForestBackground.jsx
-│   │   ├── MushroomCluster.jsx
-│   │   ├── FireflyLayer.jsx
-│   │   ├── LeafFallLayer.jsx
-│   │   └── WoodGateReveal.jsx
+│   │   ├── ForestParallaxLayers.jsx   ← 4-layer parallax (sky, trees, mushrooms, fireflies)
+│   │   ├── EnchantedGateReveal.jsx    ← Gate open animation + moonbeam
+│   │   ├── MoonbeamRays.jsx           ← Light rays through canopy
+│   │   ├── EnchantedMistLayer.jsx     ← Foreground mist drift
+│   │   ├── MushroomCluster.jsx        ← Bioluminescent mushroom group
+│   │   ├── FireflySwarmLayer.jsx      ← Firefly glow + drift particles
+│   │   └── LeafFallLayer.jsx          ← Falling leaves
 │   ├── fairy-mascot/
-│   │   ├── FairyRiveController.jsx
-│   │   ├── FairyDustParticles.jsx
-│   │   └── FairyFlutter.jsx
+│   │   ├── FairyRiveController.jsx    ← Fairy state machine
+│   │   ├── FairyTrailEffect.jsx       ← Purple trail following fairy path
+│   │   ├── FairyDustParticles.jsx     ← Sparkle dust burst
+│   │   └── FairyFlutter.jsx           ← Wing flutter animation
 │   ├── mushroom-path/
-│   │   ├── ForestPathSVG.jsx
-│   │   ├── MushroomStopCard.jsx
-│   │   └── PathDrawAnimation.jsx
-│   └── acorn-skills/
-│       ├── AcornTreeScene.jsx
-│       ├── AcornBadge.jsx
-│       └── SeedGrowAnimation.jsx
+│   │   ├── ForestPathSVG.jsx          ← Winding path SVG
+│   │   ├── MushroomHouseCard.jsx      ← Project card shaped as mushroom house
+│   │   ├── SteppingStoneNav.jsx       ← Navigation as glowing stones
+│   │   └── PathDrawAnimation.jsx      ← Path reveal on scroll
+│   └── enchanted-tree/
+│       ├── EnchantedTreeScene.jsx     ← Glowing tree with branches
+│       ├── GlowBranchSkillGroup.jsx   ← Skill group on glowing branch
+│       ├── AcornBadge.jsx             ← Individual skill badge
+│       └── BioluminescentMoss.jsx     ← Moss glow background
 ├── components/
-│   ├── layout/                        ← Forest nav, gate page transition
-│   └── ui/                            ← MushroomButton, LeafCard, FairyBadge, AcornTag
+│   ├── layout/                        ← Forest nav (stepping stones), gate page transition
+│   └── ui/                            ← MushroomButton, GlowCard, FairyBadge, StoneTag
 └── assets/fairy-mushroom-forest/
 ```
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo              | Nội dung cần vẽ                                         | Dùng cho               | Gợi ý kỹ thuật                                         |
-| ---------------------------- | ------------------------------------------------------- | ---------------------- | ------------------------------------------------------ |
-| `mushroom-collection.svg`    | Nấm nhiều kiểu: đỏ chấm, tím, xanh, vàng, nhỏ/lớn    | Cards/decoration       | Mỗi mushroom là symbol, fill gradient, cap + stem      |
-| `fairy-character.svg`        | Fairy nhiều pose: bay, vẫy, rắc bụi, ngồi trên nấm    | Mascot/hero            | Tách wing riêng để flutter, body nhỏ cute              |
-| `firefly-dots.svg`           | Firefly glow dots nhiều cỡ, có halo mềm                | Particle layer         | Circle + radialGradient glow, animate opacity          |
-| `forest-leaves.svg`          | Lá nhiều loại: oak, maple, round, fern                  | Falling particles/decor| Path organic, fill autumn-green/gold, animate fall     |
-| `wood-gate-frame.svg`        | Cổng gỗ fairy tale, có ivy/moss, arch shape             | Hero/page transition   | Tách cánh cổng riêng để animate open                   |
-| `acorn-seed-set.svg`         | Acorn, chestnut, pinecone, seed pod, tiny sprout        | Skill badges           | Icon cute, fill warm brown/green, cap detail           |
-| `forest-path-elements.svg`   | Stepping stones, moss patch, tiny flower, mushroom mini | Path/map decoration    | Scatter elements, organic placement                    |
-| `fairy-icons.svg`            | Wand, bell, potion, crystal, lantern, key              | Nav/badge icons        | Icon 24x24, stroke 2px, fill pastel, currentColor     |
+| File SVG tự tạo              | Nội dung cần vẽ                                                | Dùng cho               | Gợi ý kỹ thuật                                              |
+| ---------------------------- | -------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------- |
+| `mushroom-houses.svg`        | Nấm dạng nhà: cửa sổ, cửa ra vào, ống khói, phát sáng        | Project cards          | Cap gradient + glow filter, stem có door/window detail       |
+| `mushroom-collection.svg`    | Nấm nhiều kiểu: đỏ chấm, tím glow, xanh, vàng, nhỏ/lớn      | Decoration/background  | Mỗi mushroom là symbol, fill gradient, feGaussianBlur glow  |
+| `fairy-character.svg`        | Fairy nhiều pose: bay, vẫy, rắc bụi, ngồi trên nấm           | Mascot/hero            | Tách wing riêng để flutter, body nhỏ cute, trail path       |
+| `fairy-trail-path.svg`       | Đường bay cong với sparkle dots dọc theo path                  | Page transition/hover  | Path curve + circle dots, animate stroke-dashoffset          |
+| `firefly-swarm.svg`          | Firefly glow dots nhiều cỡ, có halo mềm, radial gradient      | Particle layer         | Circle + radialGradient glow vàng, animate opacity + drift  |
+| `forest-depth-layers.svg`    | 3–4 layer silhouette cây (xa→gần), tối→sáng                   | Hero parallax          | Mỗi layer là path riêng, fill opacity giảm dần              |
+| `enchanted-gate.svg`         | Cổng gỗ fairy tale có ivy phát sáng, moss, arch, chi tiết     | Hero intro animation   | Tách 2 cánh cổng riêng, ivy có glow, animate rotate open   |
+| `moonbeam-rays.svg`          | Tia sáng trăng xuyên tán lá, gradient fade từ trên xuống      | Hero background        | Linear gradient rects, opacity thấp, animate pulse          |
+| `enchanted-mist.svg`         | Sương mù nhiều layer, organic blobs, opacity rất thấp         | Foreground parallax    | Blob paths, fill white opacity 0.08–0.15, animate translateX|
+| `bioluminescent-moss.svg`    | Rêu phát sáng pattern, dots và patches xanh glow              | Background texture     | Pattern tile, radialGradient glow, opacity 0.1–0.2          |
+| `stepping-stones-nav.svg`    | Đá bước chân phát sáng, moss trên đá, nhiều shape             | Navigation             | Rounded rect stones, glow filter on hover state             |
+| `enchanted-tree.svg`         | Cây lớn có nhánh phát sáng, lá glow, acorn treo              | Skills section         | Trunk + branches path, glow trên branch tips                |
+| `forest-leaves.svg`          | Lá nhiều loại: oak, maple, round, fern, autumn colors         | Falling particles/decor| Path organic, fill green/gold, animate fall spiral           |
+| `acorn-seed-set.svg`         | Acorn, chestnut, pinecone, seed pod, tiny sprout              | Skill badges           | Icon cute, fill warm brown/green, cap detail                |
+| `forest-path-elements.svg`   | Stepping stones, moss patch, tiny flower, mushroom mini       | Path/map decoration    | Scatter elements, organic placement                         |
+| `fairy-icons.svg`            | Wand, bell, potion, crystal, lantern, key, mushroom           | Nav/badge icons        | Icon 24x24, stroke 2px, fill pastel glow, currentColor     |
 
 ---
 

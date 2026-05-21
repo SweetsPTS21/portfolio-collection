@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" fill="none">
+  <!-- Sign board -->
+  <rect x="20" y="10" width="260" height="50" rx="6" fill="#92400E" opacity="0.8"/>
+  <rect x="22" y="12" width="256" height="46" rx="5" fill="#B45309" opacity="0.6"/>
+  <!-- Wood grain -->
+  <line x1="30" y1="25" x2="270" y2="25" stroke="#78350F" stroke-width="0.5" opacity="0.3"/>
+  <line x1="30" y1="35" x2="270" y2="35" stroke="#78350F" stroke-width="0.5" opacity="0.25"/>
+  <line x1="30" y1="45" x2="270" y2="45" stroke="#78350F" stroke-width="0.5" opacity="0.3"/>
+  <!-- Hanging rope left -->
+  <path d="M40 0 Q38 5 40 10" stroke="#92400E" stroke-width="2" fill="none"/>
+  <!-- Hanging rope right -->
+  <path d="M260 0 Q262 5 260 10" stroke="#92400E" stroke-width="2" fill="none"/>
+  <!-- Ivy decoration -->
+  <circle cx="30" cy="15" r="4" fill="#4ADE80" opacity="0.5"/>
+  <circle cx="270" cy="15" r="3.5" fill="#4ADE80" opacity="0.5"/>
+  <circle cx="25" cy="50" r="3" fill="#86EFAC" opacity="0.4"/>
+  <circle cx="275" cy="50" r="3" fill="#86EFAC" opacity="0.4"/>
+</svg>

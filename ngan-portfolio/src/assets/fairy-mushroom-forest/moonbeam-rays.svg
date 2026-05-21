@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <!-- Ray 1 - widest, most subtle -->
+  <polygon points="0,0 200,0 600,400 400,400" fill="#FEF9C3" opacity="0.05"/>
+  <!-- Ray 2 -->
+  <polygon points="50,0 150,0 500,400 350,400" fill="white" opacity="0.07"/>
+  <!-- Ray 3 -->
+  <polygon points="100,0 180,0 450,400 320,400" fill="#FBBF24" opacity="0.05"/>
+  <!-- Ray 4 - narrowest, slightly brighter -->
+  <polygon points="0,0 80,0 350,400 220,400" fill="white" opacity="0.1"/>
+</svg>
