@@ -36,6 +36,7 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùn
 | `sakura-letter-desk`    | Sakura Letter Desk Portfolio     | Hoa anh đào, thư tay, nhẹ nhàng, Nhật  | Portfolio tinh tế, nữ tính, minimalist |
 | `fairy-mushroom-forest` | Fairy Mushroom Forest Portfolio  | Rừng nấm, tiên, fantasy, dreamy cute   | Portfolio visual, illustration, art    |
 | `kitty-cafe-menu`       | Kitty Café Menu Portfolio        | Mèo, café, bánh, xanh lam nhạt, cozy cute | Portfolio nữ yêu mèo, food, lifestyle |
+| `underwater-world`      | Underwater World Portfolio       | Đại dương, cá, san hô, xanh dương nhạt, dreamy aqua | Portfolio art, creative, ocean lover |
 | `storybook-royal-forest` | Storybook Royal Forest Portfolio | Đêm trăng, sao băng, cỗ xe ngựa, cổ tích | Portfolio nữ tính, art, luxury creative |
 
 ---
@@ -743,7 +744,172 @@ src/
 ---
 
 
-## 6. `storybook-royal-forest` — Storybook Royal Forest Portfolio
+## 6. `underwater-world` — Underwater World Portfolio
+
+Portfolio như một thế giới đại dương trong trẻo: ánh mặt trời chiếu xuyên qua mặt nước, đàn cá nhiều màu bơi quanh san hô, cua nhỏ đi trên cát, sao biển nằm cạnh vỏ sò, rong rêu biển và các loài thủy sinh tạo thành một hệ sinh thái mềm mại. Theme dùng xanh dương nhạt làm chủ đạo, mát dịu, dreamy, giàu chi tiết nhưng vẫn sáng và cute.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Trong trẻo, mát dịu, dreamy, khám phá, sống động, ocean cute          |
+| Hình khối   | Bubble card, wave divider, coral badge, shell tab, starfish accent     |
+| Không gian  | Nền xanh dương nhạt, sunbeam từ trên cao, coral reef, seaweed layers   |
+| Chuyển động | Fish school swim, bubble rise, seaweed sway, crab walk, sunray shimmer |
+| Điểm nhấn   | Đàn cá nhiều loài, cua, sao biển, rong biển, san hô, vỏ sò, sinh vật biển |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#EAF9FF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#68C7F5",
+        colorTextBase: "#17364D",
+        colorTextSecondary: "#5E8298",
+        colorSuccess: "#7FE3C6",
+        colorWarning: "#FFE08A",
+        colorInfo: "#9DDCFF",
+        colorError: "#FF8AA8",
+        colorBorder: "#BDEBFF",
+        borderRadius: 18,
+        fontFamily: "'Nunito', 'Quicksand', sans-serif",
+    },
+};
+
+// CSS Variables
+// --ocean-blue: #68C7F5;
+// --aqua-bg: #EAF9FF;
+// --sunbeam-cream: #FFF4C8;
+// --reef-coral: #FF9DB4;
+// --seaweed-mint: #7FE3C6;
+// --shell-lilac: #CDB8FF;
+// --starfish-peach: #FFB785;
+// --bubble-white: #FFFFFF;
+// --deep-text: #17364D;
+// --foam-border: #BDEBFF;
+```
+
+### Typography
+
+- **Heading:** `Quicksand` tròn, nhẹ, hợp cảm giác bubble và đại dương trong trẻo.
+- **Body:** `Nunito` mềm, dễ đọc, giữ tone cute và thân thiện.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                       |
+| --------------- | --------------------------------------------------------------------------- |
+| Framer Motion   | Fish school entrance, bubble card hover, reef section reveal, route wave    |
+| Rive            | Fish mascot swim/blink/wave, crab walk state, starfish reaction, CTA bubble |
+| SVGator         | Sunbeam shimmer, fish swim path, seaweed sway, bubble rise loop             |
+| Lenis           | Smooth scroll qua các tầng đại dương với parallax coral/seaweed             |
+| CSS Keyframes   | Bubble rise, seaweed sway, tiny fish idle swim, light caustics shimmer      |
+| Realtime Colors | Tạo palette ocean-blue/aqua-bg/reef-coral sáng, mát và đủ contrast          |
+| Blush           | Illustration ocean girl/mermaid diver hoặc underwater reef scene cho hero    |
+
+### Layout ideas
+
+- **Hero:** Underwater reef scene xanh dương nhạt, sunbeam chiếu từ trên xuống, đàn cá nhiều màu bơi thành nhóm quanh tên portfolio.
+- **About:** Profile card dạng bubble glass, viền sóng nhẹ, có shell badge và avatar nằm trong pearl frame.
+- **Projects:** Mỗi project là một coral reef card, hover thì cá nhỏ bơi qua và bubble nổi lên.
+- **Skills:** Sea garden: mỗi nhóm skill là một cụm rong biển/san hô, icon thủy sinh làm badge.
+- **Contact:** "Send a sea note" CTA trong bottle message, bubble burst + starfish wave khi gửi thành công.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                       | Thư viện          |
+| ---------------- | ------------------------------------------------------------ | ----------------- |
+| Page load        | Water surface fade-in + sunbeam sweep + fish school entrance | Framer Motion/CSS |
+| Fish school      | Swim ngang theo path cong, stagger, đổi layer depth nhẹ      | SVGator/CSS       |
+| Bubble idle      | Bubble rise 5–9s loop, scale/opacity random                  | CSS keyframes     |
+| Seaweed          | Sway trái/phải organic, lệch nhịp giữa từng cụm              | CSS keyframes     |
+| Crab walk        | Đi ngang ngắn, dừng, giơ càng, lặp 6–8s                      | Rive/CSS          |
+| Sunbeam          | Light ray shimmer rất nhẹ, không làm giảm readability        | CSS/SVG filter    |
+| Card hover       | Lift + bubble pop + tiny fish pass-through                   | Framer Motion     |
+| Section entrance | Fade + translateY(18px) + coral/shell stagger                | Framer Motion     |
+| Contact success  | Bottle cork pop + bubble burst + starfish wave               | Rive/Framer Motion|
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Underwater world shell
+│   ├── routes.js                       ← reef, fish-trail, sea-garden, bottle-note
+│   └── theme.js
+├── pages/
+│   ├── OceanReefHeroPage.jsx           ← Hero reef với sunbeam và đàn cá
+│   ├── FishTrailProjectsPage.jsx       ← Projects dạng coral reef cards
+│   ├── SeaGardenSkillsPage.jsx         ← Skills dạng seaweed/coral garden
+│   └── BottleNoteContactPage.jsx       ← Contact bottle message + bubble success
+├── features/
+│   ├── underwater-scene/
+│   │   ├── OceanGradientBackground.jsx
+│   │   ├── SunbeamLayer.jsx
+│   │   ├── BubbleParticleLayer.jsx
+│   │   └── CoralReefBase.jsx
+│   ├── ocean-mascot/
+│   │   ├── FishRiveController.jsx
+│   │   ├── FishSchoolSwim.jsx
+│   │   ├── CrabWalkAnimation.jsx
+│   │   └── StarfishReaction.jsx
+│   ├── reef-projects/
+│   │   ├── ReefProjectGrid.jsx
+│   │   ├── CoralProjectCard.jsx
+│   │   ├── ShellProjectBadge.jsx
+│   │   └── FishPassHover.jsx
+│   └── sea-garden-skills/
+│       ├── SeaGardenScene.jsx
+│       ├── SeaweedSkillGroup.jsx
+│       ├── CoralSkillBadge.jsx
+│       └── AquaticIconTooltip.jsx
+├── components/
+│   ├── layout/                         ← Ocean nav, wave transition wrapper
+│   └── ui/                             ← BubbleButton, CoralCard, ShellTag, WaveDivider
+└── assets/underwater-world/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                                  | Dùng cho               | Gợi ý kỹ thuật                                            |
+| ---------------------------- | ---------------------------------------------------------------- | ---------------------- | --------------------------------------------------------- |
+| `fish-school-set.svg`        | Nhiều loài cá: cá nhỏ, cá nhiệt đới, cá đuôi dài, cá tròn cute | Hero/particles/mascot  | Tách thân, vây, đuôi để animate swim; màu pastel đa dạng |
+| `coral-reef-scene.svg`       | Cụm san hô nhiều tầng, đá biển, cát, shell, pearl              | Hero/background/cards  | Layer parallax, gradient pastel, shadow rất nhẹ           |
+| `crab-starfish-set.svg`      | Cua nhiều pose, sao biển, nhím biển cute, ốc biển              | Decoration/contact     | Tách càng cua và chân để walk loop, starfish wave nhẹ     |
+| `seaweed-aquatic-plants.svg` | Rong biển, tảo, cỏ biển, thủy sinh nhiều chiều cao             | Skills/background      | Path cong, anchor dưới đáy, animate sway bằng transform   |
+| `bubble-particle-set.svg`    | Bubble nhiều kích thước, highlight, sparkle nước               | Particle layer         | Circle + opacity, dùng CSS vars cho duration/delay        |
+| `sunbeam-caustics.svg`       | Tia nắng xuyên mặt nước, vệt sáng caustics                     | Hero/background        | Linear/radial gradient, mask mềm, animate opacity/shift   |
+| `shell-pearl-icons.svg`      | Vỏ sò, ngọc trai, conch, sand dollar, wave icon                | Nav/badge/icons        | Icon 24x24, currentColor + fill pastel                    |
+| `message-bottle-set.svg`     | Chai thư, nút bần, cuộn giấy, ribbon, bubble success           | Contact CTA            | Tách cork, note và bubbles để animate gửi thành công      |
+| `aquatic-creature-icons.svg` | Cá ngựa, sứa cute, rùa biển mini, bạch tuộc nhỏ, sao biển      | Skills/project badges  | Dùng symbol reuse, stroke 2px, fill aqua/coral/lilac      |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| Theme ID           | Ghi rõ `underwater-world` trong data/theme config và README của sub-project           |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes  |
+| Pages              | Có đủ ocean reef hero, fish trail projects, sea garden skills, bottle note contact    |
+| Feature folders    | Tách `underwater-scene`, `ocean-mascot`, `reef-projects`, `sea-garden-skills`         |
+| UI components      | Có `BubbleButton`, `CoralCard`, `ShellTag`, `WaveDivider` dùng lại trong các page      |
+| Asset folder       | Tạo `src/assets/underwater-world/` và đủ 9 SVG files trong bảng asset phía trên        |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục          |
+| Visual priority    | Hero phải thể hiện rõ thế giới đại dương: đàn cá, cua, sao biển, rong biển, sunbeam   |
+| Motion             | Nhấn mạnh fish school swim, bubble rise, seaweed sway, crab walk, sunbeam shimmer      |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Hero, project reef cards, sea garden và contact assets phải về 1 cột ở mobile nhỏ     |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt fish loop, bubble drift và seaweed sway    |
+| Performance        | Giới hạn 20–30 bubble/fish particle visible, lazy load scene SVG, optimize bằng SVGO   |
+
+---
+
+
+## 7. `storybook-royal-forest` — Storybook Royal Forest Portfolio
 
 Portfolio như một tranh vẽ cổ tích ban đêm: bầu trời sao lấp lánh, sao băng rơi, ánh trăng phủ lên khu rừng, công chúa và hoàng tử đi dạo cạnh cỗ xe ngựa, cột đèn đường, đom đóm bay và hàng cây tối. Cổ điển, lãng mạn, fantasy, phù hợp cho portfolio nữ tính muốn có cảm giác kể chuyện, sang nhẹ và giàu hình ảnh.
 
@@ -999,4 +1165,4 @@ src/
 
 ---
 
-_Cập nhật lần cuối: 2026-05-20 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot, storybook fantasy và animation phong phú._
+_Cập nhật lần cuối: 2026-05-21 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot, underwater world, storybook fantasy và animation phong phú._
