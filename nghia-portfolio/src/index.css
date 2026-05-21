@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Orbitron:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap");
 
 :root {
   --bg-base: #050508;
@@ -154,7 +154,7 @@ a {
   color: var(--neon-cyan);
   background: rgba(13, 13, 24, 0.78);
   box-shadow: var(--glow-cyan);
-  font-family: "Orbitron", monospace;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 900;
   text-decoration: none;
 }
@@ -268,7 +268,7 @@ h2,
 h3 {
   position: relative;
   margin: 0;
-  font-family: "Orbitron", monospace;
+  font-family: "Rajdhani", sans-serif;
   letter-spacing: 0;
 }
 
@@ -502,7 +502,7 @@ h1 {
   top: 1rem;
   right: 1rem;
   color: rgba(0, 245, 255, 0.24);
-  font-family: "Orbitron", monospace;
+  font-family: "Rajdhani", sans-serif;
   font-size: 3rem;
   font-weight: 900;
 }

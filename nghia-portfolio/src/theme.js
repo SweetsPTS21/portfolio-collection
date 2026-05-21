@@ -7,6 +7,6 @@ export const theme = {
     colorTextSecondary: "#8888AA",
     colorBorder: "#1A1A3E",
     borderRadius: 2,
-    fontFamily: "'JetBrains Mono', 'Orbitron', monospace",
+    fontFamily: "'JetBrains Mono', 'Rajdhani', monospace",
   },
 };
