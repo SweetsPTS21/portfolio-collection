@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Palette, GraduationCap, Sparkles, Target } from 'lucide-react';
+import { BookOpen, FileText, GraduationCap, Palette, Sparkles, Target } from 'lucide-react';
 import PageShell from '../components/layout/PageShell';
 import LeafBadge from '../components/ui/LeafBadge';
 import FireflyParticles from '../components/ui/FireflyParticles';
@@ -30,13 +30,13 @@ export default function AboutPage() {
           {/* Left: Text */}
           <motion.div initial="hidden" animate="visible" className="hero-text">
             <motion.p variants={fadeUp} custom={0} className="hero-greeting">
-              ✨ Welcome to the Enchanted Forest
+              ✨ {about.greeting}
             </motion.p>
             <motion.h1 variants={fadeUp} custom={1} className="hero-name">
               <span className="gradient-text">Thiên Ngân</span>
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="hero-subtitle">
-              {about.subtitle}
+              {about.fullGreeting}
             </motion.p>
             <motion.div variants={fadeUp} custom={3} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <LeafBadge label="🎨 Vẽ tranh" color="#A855F7" />
@@ -67,7 +67,7 @@ export default function AboutPage() {
           {[
             { icon: GraduationCap, color: '#34D399', title: 'Chuyên ngành', text: about.major },
             { icon: Palette, color: '#A855F7', title: 'Sở thích', text: about.hobbies },
-            { icon: Sparkles, color: '#FBBF24', title: 'Phong cách', text: about.style },
+            { icon: Sparkles, color: '#FBBF24', title: 'Phong cách', text: about.styleDetail },
           ].map((card, i) => {
             const Icon = card.icon;
             return (
@@ -96,6 +96,22 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ═══ CÂU CHUYỆN CÁ NHÂN ═══ */}
+      <section className="section story-section">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="story-grid">
+          <div className="story-card">
+            <BookOpen size={26} color="var(--fairy-purple)" />
+            <h2 className="story-title"><span className="gradient-text">Một chút về bản thân</span></h2>
+            <p>{about.personalStory}</p>
+          </div>
+          <div className="story-card">
+            <FileText size={26} color="var(--forest-primary)" />
+            <h2 className="story-title"><span className="gradient-text">Mục tiêu Portfolio</span></h2>
+            <p>{about.portfolioGoal}</p>
+          </div>
+        </motion.div>
+      </section>
+
       {/* ═══ ĐỊNH HƯỚNG — Forest clearing ═══ */}
       <section className="section orientation-section">
         <img src={mushroomCluster} alt="" aria-hidden="true" className="orientation-mushroom" />
@@ -105,7 +121,9 @@ export default function AboutPage() {
           </div>
           <div>
             <h2 className="section-title" style={{ marginBottom: 12 }}><span className="gradient-text">Định hướng</span></h2>
+            <p className="orientation-text">{about.orientationIntro}</p>
             <p className="orientation-text">{about.orientation}</p>
+            <p className="orientation-text">{about.orientationOutro}</p>
           </div>
         </motion.div>
       </section>
@@ -115,8 +133,15 @@ export default function AboutPage() {
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-title">
           <span className="gradient-text">Công cụ & Nền tảng</span>
         </motion.h2>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {about.tools.map((t) => <LeafBadge key={t} label={t} />)}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="tool-groups-grid">
+          {about.toolGroups.map((group) => (
+            <div key={group.label} className="tool-group-card">
+              <strong>{group.label}</strong>
+              <div className="tool-badge-row">
+                {group.items.map((tool) => <LeafBadge key={tool} label={tool} />)}
+              </div>
+            </div>
+          ))}
         </motion.div>
       </section>
 

@@ -2,10 +2,29 @@ export const about = {
   name: 'Trần Vũ Thiên Ngân',
   greeting: 'Welcome to my Portfolio!',
   subtitle: 'Rất vui vì bạn đã ghé thăm triển lãm kỹ thuật số của mình',
+  fullGreeting:
+    'Welcome to my Portfolio! Rất vui vì bạn đã ghé thăm triển lãm kỹ thuật số của mình - nơi những điều khoản pháp luật khô khan được tô điểm bằng lăng kính của nghệ thuật và công nghệ.',
   major: 'Luật học — Đại học Luật, ĐHQG Hà Nội (VNU-UL)',
   hobbies: 'Vẽ tranh, Chụp ảnh, Đọc sách',
   style: 'Trẻ trung, Sáng tạo và luôn tràn đầy năng lượng',
+  personalStory:
+    'Với mình, mỗi vụ án là một câu chuyện, mỗi điều luật là một nét cọ, và việc của người học Luật là bức họa lại bức tranh công lý một cách chân thực nhất.',
+  styleDetail:
+    'Trẻ trung, Sáng tạo và luôn tràn đầy năng lượng. Mình thích phá vỡ những ranh giới cũ kỹ để tìm ra những góc nhìn mới mẻ.',
   orientation: 'Kết hợp tư duy logic, sắc bén của ngành Luật với khả năng sáng tạo không giới hạn để truyền tải kiến thức pháp lý sinh động, trẻ trung và dễ tiếp cận nhất.',
+  orientationIntro:
+    'Người ta thường nói học Luật thì không thể bay bổng và sáng tạo. Trong kỷ nguyên số, mình xem công nghệ và AI như một bảng màu mới.',
+  orientationOutro:
+    'Portfolio này chính là bản phác thảo đầu tiên cho hành trình đó!',
+  portfolioGoal:
+    'Portfolio này được xây dựng như là một minh chứng năng lực, khẳng định tư duy của một sinh viên Luật thế hệ mới - không rập khuôn, máy móc mà luôn chủ động kết hợp logic pháp lý với kỹ năng số hiện đại. Bên cạnh đó, đây cũng là sự định vị cá nhân: Tạo lập một bản sơ yếu lý lịch số sinh động, sẵn sàng kết nối với thầy cô, bạn bè và làm bệ phóng cho các cơ hội nghề nghiệp tương lai.',
+  toolGroups: [
+    { label: 'Quản lý tài liệu', items: ['Google Drive', 'File Explorer'] },
+    { label: 'Soạn thảo & trình bày', items: ['Microsoft Word', 'Canva'] },
+    { label: 'Nghiên cứu học thuật', items: ['Google Scholar', 'Thư viện số'] },
+    { label: 'Hỗ trợ AI', items: ['ChatGPT', 'Gemini'] },
+    { label: 'Làm việc nhóm & trao đổi', items: ['Discord', 'Google Docs'] },
+  ],
   tools: ['Google Drive', 'Microsoft Word', 'Canva', 'Google Scholar', 'ChatGPT', 'Gemini', 'Discord', 'Google Docs', 'Notion'],
 };
 
