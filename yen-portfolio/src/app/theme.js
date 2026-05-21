@@ -11,6 +11,6 @@ export const theme = {
     colorInfo: "#A8C8E8",
     colorBorder: "#FFD8E4",
     borderRadius: 12,
-    fontFamily: "'Zen Maru Gothic', 'Noto Sans JP', sans-serif",
+    fontFamily: "'Nunito', 'Noto Sans JP', system-ui, sans-serif",
   },
 };

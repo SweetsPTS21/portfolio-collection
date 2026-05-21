@@ -16,7 +16,13 @@ export default function FoldPageTransition() {
             key={route.path}
             path={route.path}
             element={
-              <motion.main variants={pageVariants} initial="initial" animate="animate" exit="exit">
+              <motion.main
+                className="page-transition-surface"
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
                 {route.element}
               </motion.main>
             }
