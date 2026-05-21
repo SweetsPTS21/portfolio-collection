@@ -1,0 +1,1392 @@
+[
+  {
+    "file": "wrap1-001-bow-sheer.png",
+    "source": "wrap-icon-1.png",
+    "x": 581,
+    "y": 18,
+    "width": 153,
+    "height": 167,
+    "detectedArea": 12790
+  },
+  {
+    "file": "wrap1-002-bow-ribbon-large.png",
+    "source": "wrap-icon-1.png",
+    "x": 25,
+    "y": 22,
+    "width": 177,
+    "height": 155,
+    "detectedArea": 13305
+  },
+  {
+    "file": "wrap1-003-bow-wavy.png",
+    "source": "wrap-icon-1.png",
+    "x": 418,
+    "y": 24,
+    "width": 154,
+    "height": 148,
+    "detectedArea": 11419
+  },
+  {
+    "file": "wrap1-004-bow-gingham.png",
+    "source": "wrap-icon-1.png",
+    "x": 224,
+    "y": 25,
+    "width": 174,
+    "height": 151,
+    "detectedArea": 13026
+  },
+  {
+    "file": "wrap1-005-heart-pixel.png",
+    "source": "wrap-icon-1.png",
+    "x": 756,
+    "y": 28,
+    "width": 140,
+    "height": 129,
+    "detectedArea": 9987
+  },
+  {
+    "file": "wrap1-006-speech-heart.png",
+    "source": "wrap-icon-1.png",
+    "x": 1096,
+    "y": 38,
+    "width": 127,
+    "height": 111,
+    "detectedArea": 8570
+  },
+  {
+    "file": "wrap1-007-heart-wings.png",
+    "source": "wrap-icon-1.png",
+    "x": 898,
+    "y": 43,
+    "width": 188,
+    "height": 111,
+    "detectedArea": 9787
+  },
+  {
+    "file": "wrap1-008-star-outline-large.png",
+    "source": "wrap-icon-1.png",
+    "x": 1064,
+    "y": 168,
+    "width": 160,
+    "height": 156,
+    "detectedArea": 11384
+  },
+  {
+    "file": "wrap1-009-star-gem.png",
+    "source": "wrap-icon-1.png",
+    "x": 737,
+    "y": 174,
+    "width": 145,
+    "height": 143,
+    "detectedArea": 8601
+  },
+  {
+    "file": "wrap1-010-star-soft.png",
+    "source": "wrap-icon-1.png",
+    "x": 907,
+    "y": 176,
+    "width": 141,
+    "height": 138,
+    "detectedArea": 8538
+  },
+  {
+    "file": "wrap1-011-heart-puffy.png",
+    "source": "wrap-icon-1.png",
+    "x": 31,
+    "y": 178,
+    "width": 159,
+    "height": 140,
+    "detectedArea": 13011
+  },
+  {
+    "file": "wrap1-012-heart-lace.png",
+    "source": "wrap-icon-1.png",
+    "x": 373,
+    "y": 181,
+    "width": 168,
+    "height": 146,
+    "detectedArea": 14557
+  },
+  {
+    "file": "wrap1-013-heart-iridescent.png",
+    "source": "wrap-icon-1.png",
+    "x": 216,
+    "y": 182,
+    "width": 144,
+    "height": 135,
+    "detectedArea": 11242
+  },
+  {
+    "file": "wrap1-014-heart-gem.png",
+    "source": "wrap-icon-1.png",
+    "x": 562,
+    "y": 186,
+    "width": 152,
+    "height": 138,
+    "detectedArea": 12051
+  },
+  {
+    "file": "wrap1-015-butterfly-doodle.png",
+    "source": "wrap-icon-1.png",
+    "x": 890,
+    "y": 323,
+    "width": 132,
+    "height": 121,
+    "detectedArea": 9230
+  },
+  {
+    "file": "wrap1-016-sparkle-four-point-large.png",
+    "source": "wrap-icon-1.png",
+    "x": 35,
+    "y": 325,
+    "width": 100,
+    "height": 108,
+    "detectedArea": 2233
+  },
+  {
+    "file": "wrap1-017-sparkle-four-point-small.png",
+    "source": "wrap-icon-1.png",
+    "x": 167,
+    "y": 325,
+    "width": 86,
+    "height": 93,
+    "detectedArea": 1762
+  },
+  {
+    "file": "wrap1-018-butterfly-watercolor.png",
+    "source": "wrap-icon-1.png",
+    "x": 728,
+    "y": 325,
+    "width": 147,
+    "height": 122,
+    "detectedArea": 9469
+  },
+  {
+    "file": "wrap1-019-sparkle-cluster.png",
+    "source": "wrap-icon-1.png",
+    "x": 311,
+    "y": 330,
+    "width": 90,
+    "height": 103,
+    "detectedArea": 1903
+  },
+  {
+    "file": "wrap1-020-cross-sparkle.png",
+    "source": "wrap-icon-1.png",
+    "x": 603,
+    "y": 330,
+    "width": 55,
+    "height": 61,
+    "detectedArea": 697
+  },
+  {
+    "file": "wrap1-021-sparkle-burst.png",
+    "source": "wrap-icon-1.png",
+    "x": 426,
+    "y": 331,
+    "width": 118,
+    "height": 115,
+    "detectedArea": 2297
+  },
+  {
+    "file": "wrap1-022-sparkle-tiny.png",
+    "source": "wrap-icon-1.png",
+    "x": 302,
+    "y": 333,
+    "width": 46,
+    "height": 47,
+    "detectedArea": 405
+  },
+  {
+    "file": "wrap1-023-butterfly-pixel.png",
+    "source": "wrap-icon-1.png",
+    "x": 1047,
+    "y": 334,
+    "width": 139,
+    "height": 111,
+    "detectedArea": 8561
+  },
+  {
+    "file": "wrap1-024-sparkle-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 569,
+    "y": 369,
+    "width": 59,
+    "height": 65,
+    "detectedArea": 767
+  },
+  {
+    "file": "wrap1-025-sparkle-silver.png",
+    "source": "wrap-icon-1.png",
+    "x": 648,
+    "y": 371,
+    "width": 49,
+    "height": 55,
+    "detectedArea": 517
+  },
+  {
+    "file": "wrap1-026-sparkle-tiny-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 231,
+    "y": 376,
+    "width": 49,
+    "height": 58,
+    "detectedArea": 602
+  },
+  {
+    "file": "wrap1-027-sparkle-dot.png",
+    "source": "wrap-icon-1.png",
+    "x": 366,
+    "y": 396,
+    "width": 36,
+    "height": 39,
+    "detectedArea": 298
+  },
+  {
+    "file": "wrap1-028-tulip.png",
+    "source": "wrap-icon-1.png",
+    "x": 360,
+    "y": 441,
+    "width": 79,
+    "height": 129,
+    "detectedArea": 4911
+  },
+  {
+    "file": "wrap1-029-flower-four-petal.png",
+    "source": "wrap-icon-1.png",
+    "x": 464,
+    "y": 441,
+    "width": 120,
+    "height": 119,
+    "detectedArea": 7313
+  },
+  {
+    "file": "wrap1-030-blossom-five-petal.png",
+    "source": "wrap-icon-1.png",
+    "x": 31,
+    "y": 443,
+    "width": 125,
+    "height": 117,
+    "detectedArea": 7764
+  },
+  {
+    "file": "wrap1-031-cloud-white.png",
+    "source": "wrap-icon-1.png",
+    "x": 607,
+    "y": 445,
+    "width": 173,
+    "height": 109,
+    "detectedArea": 9858
+  },
+  {
+    "file": "wrap1-032-cloud-blue-hearts.png",
+    "source": "wrap-icon-1.png",
+    "x": 796,
+    "y": 445,
+    "width": 185,
+    "height": 118,
+    "detectedArea": 11277
+  },
+  {
+    "file": "wrap1-033-daisy.png",
+    "source": "wrap-icon-1.png",
+    "x": 191,
+    "y": 446,
+    "width": 127,
+    "height": 121,
+    "detectedArea": 8420
+  },
+  {
+    "file": "wrap1-034-cloud-gingham.png",
+    "source": "wrap-icon-1.png",
+    "x": 992,
+    "y": 453,
+    "width": 188,
+    "height": 115,
+    "detectedArea": 11452
+  },
+  {
+    "file": "wrap1-035-memo-grid-tape.png",
+    "source": "wrap-icon-1.png",
+    "x": 600,
+    "y": 557,
+    "width": 155,
+    "height": 150,
+    "detectedArea": 16414
+  },
+  {
+    "file": "wrap1-036-sticky-good-vibes.png",
+    "source": "wrap-icon-1.png",
+    "x": 923,
+    "y": 560,
+    "width": 150,
+    "height": 149,
+    "detectedArea": 15286
+  },
+  {
+    "file": "wrap1-037-speech-cloud.png",
+    "source": "wrap-icon-1.png",
+    "x": 196,
+    "y": 563,
+    "width": 178,
+    "height": 140,
+    "detectedArea": 13734
+  },
+  {
+    "file": "wrap1-038-sticky-pink-tape.png",
+    "source": "wrap-icon-1.png",
+    "x": 763,
+    "y": 569,
+    "width": 147,
+    "height": 142,
+    "detectedArea": 14195
+  },
+  {
+    "file": "wrap1-039-speech-oval.png",
+    "source": "wrap-icon-1.png",
+    "x": 22,
+    "y": 573,
+    "width": 168,
+    "height": 119,
+    "detectedArea": 12028
+  },
+  {
+    "file": "wrap1-040-speech-rectangle.png",
+    "source": "wrap-icon-1.png",
+    "x": 385,
+    "y": 573,
+    "width": 189,
+    "height": 121,
+    "detectedArea": 14120
+  },
+  {
+    "file": "wrap1-041-folder-heart.png",
+    "source": "wrap-icon-1.png",
+    "x": 1085,
+    "y": 581,
+    "width": 148,
+    "height": 132,
+    "detectedArea": 13878
+  },
+  {
+    "file": "wrap1-042-browser-titlebar.png",
+    "source": "wrap-icon-1.png",
+    "x": 19,
+    "y": 713,
+    "width": 355,
+    "height": 67,
+    "detectedArea": 16907
+  },
+  {
+    "file": "wrap1-043-traffic-dot-red.png",
+    "source": "wrap-icon-1.png",
+    "x": 575,
+    "y": 723,
+    "width": 68,
+    "height": 66,
+    "detectedArea": 1981
+  },
+  {
+    "file": "wrap1-044-window-controls.png",
+    "source": "wrap-icon-1.png",
+    "x": 390,
+    "y": 724,
+    "width": 177,
+    "height": 69,
+    "detectedArea": 8450
+  },
+  {
+    "file": "wrap1-045-traffic-dot-yellow.png",
+    "source": "wrap-icon-1.png",
+    "x": 634,
+    "y": 726,
+    "width": 64,
+    "height": 63,
+    "detectedArea": 1748
+  },
+  {
+    "file": "wrap1-046-traffic-dot-green.png",
+    "source": "wrap-icon-1.png",
+    "x": 691,
+    "y": 727,
+    "width": 63,
+    "height": 62,
+    "detectedArea": 1684
+  },
+  {
+    "file": "wrap1-047-status-bar.png",
+    "source": "wrap-icon-1.png",
+    "x": 776,
+    "y": 727,
+    "width": 451,
+    "height": 67,
+    "detectedArea": 20998
+  },
+  {
+    "file": "wrap1-048-tamagotchi-keychain.png",
+    "source": "wrap-icon-1.png",
+    "x": 31,
+    "y": 774,
+    "width": 180,
+    "height": 171,
+    "detectedArea": 13568
+  },
+  {
+    "file": "wrap1-049-paperclip-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 228,
+    "y": 795,
+    "width": 106,
+    "height": 133,
+    "detectedArea": 4121
+  },
+  {
+    "file": "wrap1-050-star-gem-eight.png",
+    "source": "wrap-icon-1.png",
+    "x": 532,
+    "y": 802,
+    "width": 125,
+    "height": 122,
+    "detectedArea": 5809
+  },
+  {
+    "file": "wrap1-051-cursor-pixel.png",
+    "source": "wrap-icon-1.png",
+    "x": 819,
+    "y": 802,
+    "width": 76,
+    "height": 119,
+    "detectedArea": 3739
+  },
+  {
+    "file": "wrap1-052-diamond-sparkle.png",
+    "source": "wrap-icon-1.png",
+    "x": 685,
+    "y": 804,
+    "width": 92,
+    "height": 119,
+    "detectedArea": 3580
+  },
+  {
+    "file": "wrap1-053-hand-pointer.png",
+    "source": "wrap-icon-1.png",
+    "x": 926,
+    "y": 805,
+    "width": 94,
+    "height": 114,
+    "detectedArea": 4911
+  },
+  {
+    "file": "wrap1-054-gem-heart.png",
+    "source": "wrap-icon-1.png",
+    "x": 389,
+    "y": 808,
+    "width": 111,
+    "height": 111,
+    "detectedArea": 6554
+  },
+  {
+    "file": "wrap1-055-cursor-click-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 1069,
+    "y": 829,
+    "width": 86,
+    "height": 91,
+    "detectedArea": 3036
+  },
+  {
+    "file": "wrap1-056-washi-grid-scallop.png",
+    "source": "wrap-icon-1.png",
+    "x": 1047,
+    "y": 932,
+    "width": 168,
+    "height": 78,
+    "detectedArea": 8451
+  },
+  {
+    "file": "wrap1-057-washi-gingham.png",
+    "source": "wrap-icon-1.png",
+    "x": 654,
+    "y": 933,
+    "width": 186,
+    "height": 75,
+    "detectedArea": 9528
+  },
+  {
+    "file": "wrap1-058-washi-pink-solid.png",
+    "source": "wrap-icon-1.png",
+    "x": 230,
+    "y": 934,
+    "width": 186,
+    "height": 76,
+    "detectedArea": 9509
+  },
+  {
+    "file": "wrap1-059-washi-polka-dot.png",
+    "source": "wrap-icon-1.png",
+    "x": 861,
+    "y": 934,
+    "width": 170,
+    "height": 73,
+    "detectedArea": 8427
+  },
+  {
+    "file": "wrap1-060-washi-plaid.png",
+    "source": "wrap-icon-1.png",
+    "x": 32,
+    "y": 936,
+    "width": 179,
+    "height": 73,
+    "detectedArea": 8404
+  },
+  {
+    "file": "wrap1-061-washi-heart-pattern.png",
+    "source": "wrap-icon-1.png",
+    "x": 428,
+    "y": 936,
+    "width": 213,
+    "height": 73,
+    "detectedArea": 10665
+  },
+  {
+    "file": "wrap1-062-tiny-heart.png",
+    "source": "wrap-icon-1.png",
+    "x": 1073,
+    "y": 1011,
+    "width": 39,
+    "height": 42,
+    "detectedArea": 426
+  },
+  {
+    "file": "wrap1-063-sparkle-pair-purple.png",
+    "source": "wrap-icon-1.png",
+    "x": 1132,
+    "y": 1013,
+    "width": 62,
+    "height": 75,
+    "detectedArea": 832
+  },
+  {
+    "file": "wrap1-064-exclamation-mark.png",
+    "source": "wrap-icon-1.png",
+    "x": 747,
+    "y": 1014,
+    "width": 27,
+    "height": 51,
+    "detectedArea": 287
+  },
+  {
+    "file": "wrap1-065-heart-doodle.png",
+    "source": "wrap-icon-1.png",
+    "x": 427,
+    "y": 1015,
+    "width": 72,
+    "height": 69,
+    "detectedArea": 2210
+  },
+  {
+    "file": "wrap1-066-swirl-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 231,
+    "y": 1020,
+    "width": 168,
+    "height": 62,
+    "detectedArea": 2349
+  },
+  {
+    "file": "wrap1-067-ribbon-squiggle.png",
+    "source": "wrap-icon-1.png",
+    "x": 850,
+    "y": 1021,
+    "width": 136,
+    "height": 61,
+    "detectedArea": 2001
+  },
+  {
+    "file": "wrap1-068-swirl-blue.png",
+    "source": "wrap-icon-1.png",
+    "x": 544,
+    "y": 1022,
+    "width": 181,
+    "height": 59,
+    "detectedArea": 2710
+  },
+  {
+    "file": "wrap1-069-squiggle-pink.png",
+    "source": "wrap-icon-1.png",
+    "x": 43,
+    "y": 1024,
+    "width": 166,
+    "height": 46,
+    "detectedArea": 1604
+  },
+  {
+    "file": "wrap1-070-exclamation-dot.png",
+    "source": "wrap-icon-1.png",
+    "x": 767,
+    "y": 1027,
+    "width": 47,
+    "height": 57,
+    "detectedArea": 467
+  },
+  {
+    "file": "wrap1-071-heart-cluster.png",
+    "source": "wrap-icon-1.png",
+    "x": 1040,
+    "y": 1029,
+    "width": 50,
+    "height": 51,
+    "detectedArea": 786
+  },
+  {
+    "file": "wrap1-072-sparkle-pair-white.png",
+    "source": "wrap-icon-1.png",
+    "x": 1172,
+    "y": 1047,
+    "width": 38,
+    "height": 44,
+    "detectedArea": 300
+  },
+  {
+    "file": "wrap1-073-lace-border-scallop-long.png",
+    "source": "wrap-icon-1.png",
+    "x": 21,
+    "y": 1086,
+    "width": 623,
+    "height": 59,
+    "detectedArea": 22398
+  },
+  {
+    "file": "wrap1-074-lace-border-pink-long.png",
+    "source": "wrap-icon-1.png",
+    "x": 648,
+    "y": 1088,
+    "width": 584,
+    "height": 63,
+    "detectedArea": 22106
+  },
+  {
+    "file": "wrap1-075-label-made-with-love.png",
+    "source": "wrap-icon-1.png",
+    "x": 21,
+    "y": 1152,
+    "width": 170,
+    "height": 78,
+    "detectedArea": 9075
+  },
+  {
+    "file": "wrap1-076-label-thank-you.png",
+    "source": "wrap-icon-1.png",
+    "x": 198,
+    "y": 1152,
+    "width": 181,
+    "height": 78,
+    "detectedArea": 10148
+  },
+  {
+    "file": "wrap1-077-label-bow.png",
+    "source": "wrap-icon-1.png",
+    "x": 583,
+    "y": 1153,
+    "width": 153,
+    "height": 77,
+    "detectedArea": 7866
+  },
+  {
+    "file": "wrap1-078-heart-sticker-bow.png",
+    "source": "wrap-icon-1.png",
+    "x": 1099,
+    "y": 1153,
+    "width": 100,
+    "height": 90,
+    "detectedArea": 4615
+  },
+  {
+    "file": "wrap1-079-label-xoxo.png",
+    "source": "wrap-icon-1.png",
+    "x": 397,
+    "y": 1154,
+    "width": 175,
+    "height": 76,
+    "detectedArea": 9070
+  },
+  {
+    "file": "wrap1-080-label-fairy-core.png",
+    "source": "wrap-icon-1.png",
+    "x": 743,
+    "y": 1156,
+    "width": 195,
+    "height": 74,
+    "detectedArea": 10165
+  },
+  {
+    "file": "wrap1-081-label-cutie.png",
+    "source": "wrap-icon-1.png",
+    "x": 944,
+    "y": 1156,
+    "width": 143,
+    "height": 74,
+    "detectedArea": 7113
+  },
+  {
+    "file": "wrap2-001-tamagotchi-large.png",
+    "source": "wrap-icon-2.png",
+    "x": 31,
+    "y": 4,
+    "width": 244,
+    "height": 348,
+    "detectedArea": 49799
+  },
+  {
+    "file": "wrap2-002-cd-sweet-days.png",
+    "source": "wrap-icon-2.png",
+    "x": 497,
+    "y": 18,
+    "width": 264,
+    "height": 266,
+    "detectedArea": 48617
+  },
+  {
+    "file": "wrap2-003-note-to-self.png",
+    "source": "wrap-icon-2.png",
+    "x": 930,
+    "y": 24,
+    "width": 303,
+    "height": 309,
+    "detectedArea": 70179
+  },
+  {
+    "file": "wrap2-004-heart-mirror.png",
+    "source": "wrap-icon-2.png",
+    "x": 263,
+    "y": 29,
+    "width": 250,
+    "height": 290,
+    "detectedArea": 47348
+  },
+  {
+    "file": "wrap2-005-bunny-bow.png",
+    "source": "wrap-icon-2.png",
+    "x": 743,
+    "y": 29,
+    "width": 196,
+    "height": 303,
+    "detectedArea": 39570
+  },
+  {
+    "file": "wrap2-006-popup-so-cute.png",
+    "source": "wrap-icon-2.png",
+    "x": 940,
+    "y": 321,
+    "width": 270,
+    "height": 166,
+    "detectedArea": 37021
+  },
+  {
+    "file": "wrap2-007-browser-window-tabs.png",
+    "source": "wrap-icon-2.png",
+    "x": 44,
+    "y": 333,
+    "width": 871,
+    "height": 110,
+    "detectedArea": 69627
+  },
+  {
+    "file": "wrap2-008-chapter-heart-02.png",
+    "source": "wrap-icon-2.png",
+    "x": 180,
+    "y": 447,
+    "width": 138,
+    "height": 130,
+    "detectedArea": 10285
+  },
+  {
+    "file": "wrap2-009-chapter-heart-06.png",
+    "source": "wrap-icon-2.png",
+    "x": 741,
+    "y": 447,
+    "width": 136,
+    "height": 131,
+    "detectedArea": 10094
+  },
+  {
+    "file": "wrap2-010-chapter-heart-01.png",
+    "source": "wrap-icon-2.png",
+    "x": 36,
+    "y": 448,
+    "width": 139,
+    "height": 129,
+    "detectedArea": 10295
+  },
+  {
+    "file": "wrap2-011-chapter-heart-03.png",
+    "source": "wrap-icon-2.png",
+    "x": 321,
+    "y": 448,
+    "width": 137,
+    "height": 129,
+    "detectedArea": 10141
+  },
+  {
+    "file": "wrap2-012-chapter-heart-04.png",
+    "source": "wrap-icon-2.png",
+    "x": 460,
+    "y": 448,
+    "width": 138,
+    "height": 129,
+    "detectedArea": 10248
+  },
+  {
+    "file": "wrap2-013-chapter-heart-05.png",
+    "source": "wrap-icon-2.png",
+    "x": 602,
+    "y": 448,
+    "width": 137,
+    "height": 129,
+    "detectedArea": 10191
+  },
+  {
+    "file": "wrap2-014-round-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 895,
+    "y": 480,
+    "width": 103,
+    "height": 104,
+    "detectedArea": 6059
+  },
+  {
+    "file": "wrap2-015-round-star.png",
+    "source": "wrap-icon-2.png",
+    "x": 1000,
+    "y": 480,
+    "width": 102,
+    "height": 103,
+    "detectedArea": 5902
+  },
+  {
+    "file": "wrap2-016-round-flower.png",
+    "source": "wrap-icon-2.png",
+    "x": 1105,
+    "y": 480,
+    "width": 103,
+    "height": 104,
+    "detectedArea": 6046
+  },
+  {
+    "file": "wrap2-019-button-read-more.png",
+    "source": "wrap-icon-2.png",
+    "x": 33,
+    "y": 584,
+    "width": 206,
+    "height": 85,
+    "detectedArea": 12241
+  },
+  {
+    "file": "wrap2-020-button-view-work.png",
+    "source": "wrap-icon-2.png",
+    "x": 238,
+    "y": 584,
+    "width": 209,
+    "height": 85,
+    "detectedArea": 12426
+  },
+  {
+    "file": "wrap2-021-button-download.png",
+    "source": "wrap-icon-2.png",
+    "x": 446,
+    "y": 584,
+    "width": 210,
+    "height": 85,
+    "detectedArea": 12560
+  },
+  {
+    "file": "wrap2-022-button-contact-me.png",
+    "source": "wrap-icon-2.png",
+    "x": 652,
+    "y": 584,
+    "width": 207,
+    "height": 85,
+    "detectedArea": 12325
+  },
+  {
+    "file": "wrap2-action-mail.png",
+    "source": "wrap-icon-2.png",
+    "x": 892,
+    "y": 584,
+    "width": 70,
+    "height": 88,
+    "detectedArea": null,
+    "extraction": "manual-split"
+  },
+  {
+    "file": "wrap2-action-save.png",
+    "source": "wrap-icon-2.png",
+    "x": 955,
+    "y": 584,
+    "width": 74,
+    "height": 88,
+    "detectedArea": null,
+    "extraction": "manual-split"
+  },
+  {
+    "file": "wrap2-action-camera.png",
+    "source": "wrap-icon-2.png",
+    "x": 1024,
+    "y": 584,
+    "width": 76,
+    "height": 88,
+    "detectedArea": null,
+    "extraction": "manual-split"
+  },
+  {
+    "file": "wrap2-action-cart.png",
+    "source": "wrap-icon-2.png",
+    "x": 1106,
+    "y": 584,
+    "width": 108,
+    "height": 88,
+    "detectedArea": null,
+    "extraction": "manual-split"
+  },
+  {
+    "file": "wrap2-023-label-grid-flower.png",
+    "source": "wrap-icon-2.png",
+    "x": 474,
+    "y": 663,
+    "width": 212,
+    "height": 119,
+    "detectedArea": 17203
+  },
+  {
+    "file": "wrap2-024-label-bow-left.png",
+    "source": "wrap-icon-2.png",
+    "x": 31,
+    "y": 670,
+    "width": 219,
+    "height": 113,
+    "detectedArea": 17708
+  },
+  {
+    "file": "wrap2-025-label-blue-plaid-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 682,
+    "y": 674,
+    "width": 193,
+    "height": 109,
+    "detectedArea": 15260
+  },
+  {
+    "file": "wrap2-026-label-cloud-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 250,
+    "y": 676,
+    "width": 217,
+    "height": 108,
+    "detectedArea": 16819
+  },
+  {
+    "file": "wrap2-027-sparkle-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 881,
+    "y": 686,
+    "width": 74,
+    "height": 82,
+    "detectedArea": 1801
+  },
+  {
+    "file": "wrap2-028-sparkle-white.png",
+    "source": "wrap-icon-2.png",
+    "x": 948,
+    "y": 686,
+    "width": 74,
+    "height": 79,
+    "detectedArea": 1742
+  },
+  {
+    "file": "wrap2-029-heart-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 1018,
+    "y": 687,
+    "width": 78,
+    "height": 75,
+    "detectedArea": 2719
+  },
+  {
+    "file": "wrap2-030-star-blue.png",
+    "source": "wrap-icon-2.png",
+    "x": 1148,
+    "y": 688,
+    "width": 73,
+    "height": 72,
+    "detectedArea": 2251
+  },
+  {
+    "file": "wrap2-031-flower-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 1087,
+    "y": 692,
+    "width": 71,
+    "height": 71,
+    "detectedArea": 2213
+  },
+  {
+    "file": "wrap2-032-speech-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 1115,
+    "y": 765,
+    "width": 105,
+    "height": 97,
+    "detectedArea": 5581
+  },
+  {
+    "file": "wrap2-033-heart-pixel.png",
+    "source": "wrap-icon-2.png",
+    "x": 878,
+    "y": 768,
+    "width": 110,
+    "height": 99,
+    "detectedArea": 5783
+  },
+  {
+    "file": "wrap2-034-bow-sticker.png",
+    "source": "wrap-icon-2.png",
+    "x": 988,
+    "y": 768,
+    "width": 124,
+    "height": 108,
+    "detectedArea": 7517
+  },
+  {
+    "file": "wrap2-035-divider-blue-bow.png",
+    "source": "wrap-icon-2.png",
+    "x": 597,
+    "y": 784,
+    "width": 251,
+    "height": 59,
+    "detectedArea": 4537
+  },
+  {
+    "file": "wrap2-036-divider-pink-bow.png",
+    "source": "wrap-icon-2.png",
+    "x": 33,
+    "y": 785,
+    "width": 255,
+    "height": 72,
+    "detectedArea": 5798
+  },
+  {
+    "file": "wrap2-037-divider-pink-heart-line.png",
+    "source": "wrap-icon-2.png",
+    "x": 301,
+    "y": 791,
+    "width": 289,
+    "height": 54,
+    "detectedArea": 4484
+  },
+  {
+    "file": "wrap2-038-divider-flower-star.png",
+    "source": "wrap-icon-2.png",
+    "x": 25,
+    "y": 847,
+    "width": 300,
+    "height": 58,
+    "detectedArea": 5416
+  },
+  {
+    "file": "wrap2-039-underline-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 355,
+    "y": 861,
+    "width": 270,
+    "height": 46,
+    "detectedArea": 5111
+  },
+  {
+    "file": "wrap2-040-underline-blue-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 626,
+    "y": 861,
+    "width": 240,
+    "height": 60,
+    "detectedArea": 3547
+  },
+  {
+    "file": "wrap2-041-star-gem.png",
+    "source": "wrap-icon-2.png",
+    "x": 880,
+    "y": 863,
+    "width": 93,
+    "height": 92,
+    "detectedArea": 3424
+  },
+  {
+    "file": "wrap2-042-flower-pink-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 971,
+    "y": 875,
+    "width": 79,
+    "height": 78,
+    "detectedArea": 2825
+  },
+  {
+    "file": "wrap2-043-flower-purple.png",
+    "source": "wrap-icon-2.png",
+    "x": 1050,
+    "y": 878,
+    "width": 77,
+    "height": 75,
+    "detectedArea": 2518
+  },
+  {
+    "file": "wrap2-044-star-soft.png",
+    "source": "wrap-icon-2.png",
+    "x": 1131,
+    "y": 878,
+    "width": 85,
+    "height": 81,
+    "detectedArea": 2972
+  },
+  {
+    "file": "wrap2-045-tape-heart-pattern.png",
+    "source": "wrap-icon-2.png",
+    "x": 202,
+    "y": 910,
+    "width": 167,
+    "height": 91,
+    "detectedArea": 10381
+  },
+  {
+    "file": "wrap2-046-tape-pink-hearts.png",
+    "source": "wrap-icon-2.png",
+    "x": 367,
+    "y": 913,
+    "width": 143,
+    "height": 89,
+    "detectedArea": 8668
+  },
+  {
+    "file": "wrap2-047-tape-blue-cloud.png",
+    "source": "wrap-icon-2.png",
+    "x": 511,
+    "y": 913,
+    "width": 175,
+    "height": 88,
+    "detectedArea": 10695
+  },
+  {
+    "file": "wrap2-048-tape-gingham.png",
+    "source": "wrap-icon-2.png",
+    "x": 32,
+    "y": 916,
+    "width": 170,
+    "height": 84,
+    "detectedArea": 9808
+  },
+  {
+    "file": "wrap2-049-tape-rainbow.png",
+    "source": "wrap-icon-2.png",
+    "x": 687,
+    "y": 918,
+    "width": 175,
+    "height": 88,
+    "detectedArea": 10650
+  },
+  {
+    "file": "wrap2-050-heart-wing.png",
+    "source": "wrap-icon-2.png",
+    "x": 893,
+    "y": 948,
+    "width": 135,
+    "height": 78,
+    "detectedArea": 5225
+  },
+  {
+    "file": "wrap2-051-wand-star.png",
+    "source": "wrap-icon-2.png",
+    "x": 1034,
+    "y": 948,
+    "width": 72,
+    "height": 84,
+    "detectedArea": 2347
+  },
+  {
+    "file": "wrap2-052-cherries.png",
+    "source": "wrap-icon-2.png",
+    "x": 1118,
+    "y": 952,
+    "width": 85,
+    "height": 79,
+    "detectedArea": 3118
+  },
+  {
+    "file": "wrap2-053-bow-iridescent.png",
+    "source": "wrap-icon-2.png",
+    "x": 340,
+    "y": 998,
+    "width": 143,
+    "height": 128,
+    "detectedArea": 9838
+  },
+  {
+    "file": "wrap2-054-bow-gingham-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 186,
+    "y": 999,
+    "width": 146,
+    "height": 119,
+    "detectedArea": 8593
+  },
+  {
+    "file": "wrap2-055-bow-large.png",
+    "source": "wrap-icon-2.png",
+    "x": 31,
+    "y": 1004,
+    "width": 154,
+    "height": 127,
+    "detectedArea": 10903
+  },
+  {
+    "file": "wrap2-056-cursor-white.png",
+    "source": "wrap-icon-2.png",
+    "x": 611,
+    "y": 1007,
+    "width": 125,
+    "height": 117,
+    "detectedArea": 7601
+  },
+  {
+    "file": "wrap2-057-bow-blue.png",
+    "source": "wrap-icon-2.png",
+    "x": 486,
+    "y": 1012,
+    "width": 124,
+    "height": 111,
+    "detectedArea": 6281
+  },
+  {
+    "file": "wrap2-058-cursor-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 758,
+    "y": 1019,
+    "width": 76,
+    "height": 106,
+    "detectedArea": 3605
+  },
+  {
+    "file": "wrap2-059-hand-pointer.png",
+    "source": "wrap-icon-2.png",
+    "x": 841,
+    "y": 1021,
+    "width": 75,
+    "height": 105,
+    "detectedArea": 3477
+  },
+  {
+    "file": "wrap2-060-heart-pixel-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 917,
+    "y": 1027,
+    "width": 84,
+    "height": 101,
+    "detectedArea": 4064
+  },
+  {
+    "file": "wrap2-061-cursor-pink-outline.png",
+    "source": "wrap-icon-2.png",
+    "x": 1115,
+    "y": 1035,
+    "width": 73,
+    "height": 103,
+    "detectedArea": 3280
+  },
+  {
+    "file": "wrap2-062-heart-pixel-medium.png",
+    "source": "wrap-icon-2.png",
+    "x": 1007,
+    "y": 1038,
+    "width": 95,
+    "height": 89,
+    "detectedArea": 4287
+  },
+  {
+    "file": "wrap2-063-paperclip-blue-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 148,
+    "y": 1127,
+    "width": 110,
+    "height": 108,
+    "detectedArea": 4485
+  },
+  {
+    "file": "wrap2-064-pearl-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 585,
+    "y": 1128,
+    "width": 115,
+    "height": 106,
+    "detectedArea": 5485
+  },
+  {
+    "file": "wrap2-065-pushpin-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 454,
+    "y": 1130,
+    "width": 88,
+    "height": 101,
+    "detectedArea": 3442
+  },
+  {
+    "file": "wrap2-066-lollipop-heart.png",
+    "source": "wrap-icon-2.png",
+    "x": 311,
+    "y": 1131,
+    "width": 95,
+    "height": 94,
+    "detectedArea": 2880
+  },
+  {
+    "file": "wrap2-067-paperclip-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 30,
+    "y": 1133,
+    "width": 97,
+    "height": 97,
+    "detectedArea": 3781
+  },
+  {
+    "file": "wrap2-068-gem-heart-blue.png",
+    "source": "wrap-icon-2.png",
+    "x": 1112,
+    "y": 1134,
+    "width": 105,
+    "height": 96,
+    "detectedArea": 5332
+  },
+  {
+    "file": "wrap2-069-gem-heart-pink.png",
+    "source": "wrap-icon-2.png",
+    "x": 999,
+    "y": 1135,
+    "width": 104,
+    "height": 95,
+    "detectedArea": 5302
+  },
+  {
+    "file": "wrap2-070-bow-pink-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 739,
+    "y": 1140,
+    "width": 112,
+    "height": 92,
+    "detectedArea": 5376
+  },
+  {
+    "file": "wrap2-071-bow-blue-small.png",
+    "source": "wrap-icon-2.png",
+    "x": 879,
+    "y": 1141,
+    "width": 103,
+    "height": 87,
+    "detectedArea": 4838
+  }
+]

@@ -1,0 +1,411 @@
+:root {
+  --page-width: 941;
+  --page-height: 1672;
+  --sheet-max-width: 1320px;
+  color: #604653;
+  background: #f6dce6;
+  font-family: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f6dce6;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.portfolio-app {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  place-items: start center;
+}
+
+.portfolio-sheet {
+  position: relative;
+  width: min(100vw, var(--sheet-max-width));
+  aspect-ratio: 941 / 1672;
+  overflow: hidden;
+  /* background: #fff4f8; */
+}
+
+.page-frame {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-section,
+.projects-section,
+.conclusion-section,
+.contact-strip {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero-section {
+  top: 2.2%;
+  left: 6.4%;
+  width: 87.8%;
+  height: 31.8%;
+}
+
+.hero-section h1,
+.projects-section > h2,
+.conclusion-section > h2 {
+  margin: 0;
+  color: #ff78ab;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.9;
+  text-shadow:
+    0 0.18vw 0 #fff,
+    0 -0.12vw 0 #fff,
+    0.16vw 0 0 #fff,
+    -0.16vw 0 0 #fff,
+    0 0.42vw 0 #d94f8e;
+}
+
+.hero-section h1 {
+  position: absolute;
+  top: 0.4%;
+  left: 28%;
+  width: 44%;
+  text-align: center;
+  font-size: clamp(3.5rem, 14vw, 8.2rem);
+}
+
+.avatar-card {
+  position: absolute;
+  top: 20%;
+  left: 11%;
+  width: 39%;
+  rotate: -3deg;
+}
+
+.avatar-frame {
+  width: 100%;
+  height: auto;
+}
+
+.intro-copy {
+  position: absolute;
+  top: 22%;
+  right: 6%;
+  width: 43%;
+  color: #604653;
+}
+
+.hello {
+  margin: 0;
+  font-size: clamp(1.08rem, 3vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.intro-copy h2 {
+  margin: 0 0 0.55vw;
+  color: #f46ea8;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(2rem, 5.2vw, 3.15rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.role-pill {
+  display: inline-block;
+  margin: 0 0 0.7vw;
+  padding: 0.35vw 1vw;
+  border-radius: 0.35vw;
+  color: #fff;
+  background: #ef77aa;
+  font-size: clamp(0.6rem, 1.35vw, 0.82rem);
+  font-weight: 800;
+}
+
+.intro-text {
+  margin: 0 0 0.48vw;
+  font-size: clamp(0.66rem, 1.45vw, 0.92rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.goal-box {
+  margin-top: 0.85vw;
+}
+
+.goal-box h3 {
+  margin: 0 0 0.35vw;
+  color: #ef6da5;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1rem, 2.3vw, 1.4rem);
+  line-height: 1;
+}
+
+.goal-box ul,
+.proud-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goal-box li {
+  display: inline-block;
+  margin: 0.12vw 0.14vw;
+  padding: 0.22vw 0.6vw;
+  border: 0.1vw solid #b8bfd0;
+  border-radius: 999px;
+  background: #fff;
+  color: #6b5664;
+  font-size: clamp(0.5rem, 1.08vw, 0.68rem);
+  font-weight: 800;
+}
+
+.projects-section {
+  top: 36.6%;
+  left: 17.1%;
+  width: 68.8%;
+  height: 39.8%;
+}
+
+.projects-section > h2 {
+  text-align: center;
+  font-size: clamp(2.9rem, 8.1vw, 4.25rem);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 77%;
+  align-content: space-between;
+}
+
+.project-card {
+  position: relative;
+  aspect-ratio: 1122 / 1402;
+  min-width: 0;
+}
+
+.project-card-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-number {
+  position: absolute;
+  top: 5.9%;
+  left: 5.2%;
+  width: 17%;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0.1vw 0 #d94f8e;
+}
+
+.project-card h3 {
+  position: absolute;
+  top: 53.5%;
+  left: 9%;
+  width: 82%;
+  margin: 0;
+  color: #f36fa7;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(0.95rem, 2.45vw, 1.45rem);
+  line-height: 0.92;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.project-card > p:not(.project-number) {
+  position: absolute;
+  top: 63.4%;
+  left: 11%;
+  display: -webkit-box;
+  width: 78%;
+  margin: 0;
+  overflow: hidden;
+  color: #665461;
+  font-size: clamp(0.45rem, 1vw, 0.64rem);
+  font-weight: 700;
+  line-height: 1.22;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.project-card button {
+  position: absolute;
+  bottom: 10.6%;
+  left: 31%;
+  width: 37%;
+  height: 5.4%;
+  border: 0.12vw solid #ff79ae;
+  border-radius: 0.22vw;
+  color: #f2609b;
+  background: #fff8fb;
+  font-size: clamp(0.42rem, 0.9vw, 0.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.conclusion-section {
+  top: 75.4%;
+  left: 8.7%;
+  width: 82.6%;
+  height: 15.3%;
+}
+
+.conclusion-section > h2 {
+  position: absolute;
+  top: -20%;
+  left: 34%;
+  font-size: clamp(3rem, 8.2vw, 5.25rem);
+}
+
+.conclusion-left-card,
+.conclusion-right-card {
+  position: absolute;
+}
+
+.conclusion-left-card {
+  left: 10.5%;
+  bottom: 10%;
+  width: 37%;
+  rotate: -3deg;
+}
+
+.conclusion-right-card {
+  right: 12%;
+  bottom: 13%;
+  width: 37%;
+  rotate: 3deg;
+}
+
+.conclusion-frame {
+  width: 100%;
+  height: auto;
+}
+
+.conclusion-copy {
+  position: absolute;
+  top: 29%;
+  left: 17%;
+  width: 70%;
+}
+
+.conclusion-copy h3 {
+  margin: 0 0 0.6vw;
+  color: #5c4350;
+  font-size: clamp(1.02rem, 2.5vw, 1.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.conclusion-copy p {
+  margin: 0 0 0.45vw;
+  color: #62535d;
+  font-size: clamp(0.48rem, 1vw, 0.64rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.proud-list {
+  position: absolute;
+  top: 28%;
+  left: 21%;
+  width: 66%;
+}
+
+.proud-list h3 {
+  margin: 0 0 0.6vw;
+  color: #6aa0da;
+  font-size: clamp(1.05rem, 2.6vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.proud-list li {
+  margin-bottom: 0.38vw;
+  color: #665763;
+  font-size: clamp(0.42rem, 0.92vw, 0.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.contact-strip {
+  left: 16.4%;
+  bottom: 3.4%;
+  width: 68.8%;
+  height: 5.9%;
+  display: grid;
+  grid-template-columns: 1fr 1.28fr 1fr;
+  align-items: center;
+  gap: 0.8vw;
+  color: #694c59;
+  font-size: clamp(0.46rem, 1vw, 0.66rem);
+  font-weight: 800;
+}
+
+.contact-strip h2 {
+  position: absolute;
+  top: -1.9vw;
+  left: 34%;
+  margin: 0;
+  color: #f36fa7;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1rem, 2.45vw, 1.45rem);
+  letter-spacing: 0;
+}
+
+.contact-strip p,
+.contact-strip a {
+  margin: 0;
+  min-width: 0;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .portfolio-sheet {
+    width: 100vw;
+  }
+}
