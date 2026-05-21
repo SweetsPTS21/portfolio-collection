@@ -19,9 +19,9 @@ export default function Conclusion() {
         <OffsetBlock width={50} height={90} gradient="linear-gradient(135deg, #B5DEFF, #7EC8E3)" rotation={-12} opacity={0.2} style={{ bottom: 10, left: '8%' }} />
 
         <div className="section" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 24, alignItems: 'end' }}>
+          <div className="conclusion-header-grid" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 24, alignItems: 'end' }}>
             {/* Vertical text */}
-            <VerticalText text="REFLECTION" fontSize={14} opacity={0.4} style={{ position: 'relative' }} />
+            <VerticalText text="REFLECTION" fontSize={14} opacity={0.4} style={{ position: 'relative' }} className="vertical-text-hide" />
 
             {/* Main heading */}
             <motion.div
@@ -51,7 +51,7 @@ export default function Conclusion() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div className="conclusion-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
           {/* Điểm tâm đắc — large, spans full width */}
           <motion.div
             variants={fadeInUp}
@@ -65,6 +65,7 @@ export default function Conclusion() {
               gridTemplateColumns: '56px 1fr',
               gap: 20,
             }}
+            className="conclusion-card-inner"
           >
             <CornerBrackets size={22} position="top-left" />
             <CornerBrackets size={22} position="bottom-right" />
@@ -143,6 +144,7 @@ export default function Conclusion() {
             position: 'relative',
             overflow: 'hidden',
           }}
+          className="quote-section"
         >
           {/* Giant quote mark */}
           <span
@@ -151,7 +153,7 @@ export default function Conclusion() {
               top: -10,
               left: 20,
               fontSize: 140,
-              fontFamily: "'Fredoka', sans-serif",
+              fontFamily: "'Baloo 2', sans-serif",
               color: 'var(--color-primary)',
               opacity: 0.12,
               lineHeight: 1,

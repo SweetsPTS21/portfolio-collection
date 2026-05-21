@@ -18,7 +18,7 @@ export default function Footer() {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          fontFamily: "'Fredoka', sans-serif",
+          fontFamily: "'Baloo 2', sans-serif",
           fontSize: 'clamp(60px, 10vw, 100px)',
           fontWeight: 700,
           textTransform: 'uppercase',
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <p
           style={{
-            fontFamily: "'Fredoka', sans-serif",
+            fontFamily: "'Baloo 2', sans-serif",
             fontSize: 22,
             fontWeight: 600,
             color: 'var(--color-text)',

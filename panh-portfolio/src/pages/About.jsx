@@ -71,6 +71,7 @@ export default function About() {
             initial="hidden"
             animate="visible"
             variants={slideInRight}
+            className="hero-avatar-row"
             style={{ display: 'flex', alignItems: 'flex-end', gap: 24, marginTop: 16 }}
           >
             {/* Avatar with offset block behind */}
@@ -90,7 +91,8 @@ export default function About() {
                 <img
                   src="/avatar.jpg"
                   alt="Phương Anh"
-                  style={{ width: 300, height: 360, objectFit: 'cover', display: 'block' }}
+                  className="hero-avatar"
+                  style={{ width: 300, height: 360, objectFit: 'cover', display: 'block', maxWidth: '100%' }}
                 />
               </div>
               <CornerBrackets size={28} position="top-left" style={{ top: -8, left: -8 }} />
@@ -125,7 +127,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             style={{
-              fontFamily: "'Fredoka', sans-serif",
+              fontFamily: "'Baloo 2', sans-serif",
               fontSize: 'clamp(48px, 7vw, 72px)',
               fontWeight: 700,
               textTransform: 'uppercase',
@@ -147,7 +149,7 @@ export default function About() {
           viewport={{ once: true }}
         >
           {/* Bento grid: 1 large + 2 small */}
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gridTemplateRows: 'auto auto', gap: 16 }}>
+          <div className="bento-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gridTemplateRows: 'auto auto', gap: 16 }}>
             {/* Large card — spans 1 row, left */}
             <motion.div
               variants={fadeInUp}
@@ -243,7 +245,7 @@ export default function About() {
           variants={fadeInUp}
           style={{ position: 'relative', zIndex: 2 }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 32, alignItems: 'start' }}>
+          <div className="orientation-grid" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 32, alignItems: 'start' }}>
             {/* Left icon block */}
             <div style={{ width: 56, height: 56, background: 'rgba(255,107,157,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid var(--color-primary)' }}>
               <Target size={28} color="var(--color-primary)" />

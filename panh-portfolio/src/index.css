@@ -43,7 +43,7 @@ body {
 
 /* ── Heading font ── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fredoka', 'Quicksand', sans-serif;
+  font-family: 'Baloo 2', 'Quicksand', sans-serif;
 }
 
 /* ── Gradient text utility ── */
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Oversized text ── */
 .oversized-text {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
   font-size: clamp(64px, 10vw, 120px);
   font-weight: 700;
   line-height: 0.9;
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Watermark text ── */
 .watermark {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
   font-size: clamp(80px, 12vw, 160px);
   font-weight: 700;
   text-transform: uppercase;
@@ -127,5 +127,48 @@ h1, h2, h3, h4, h5, h6 {
   }
   .oversized-text {
     font-size: clamp(40px, 12vw, 72px);
+  }
+}
+
+/* ── About page mobile ── */
+@media (max-width: 768px) {
+  .hero-avatar-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .hero-avatar {
+    width: 220px !important;
+    height: 270px !important;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .bento-grid > *:first-child {
+    grid-row: auto !important;
+  }
+  .orientation-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .orientation-grid > *:first-child {
+    display: none;
+  }
+}
+
+/* ── Conclusion page mobile ── */
+@media (max-width: 768px) {
+  .conclusion-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .conclusion-card-inner {
+    grid-template-columns: 1fr !important;
+  }
+  .conclusion-header-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .conclusion-header-grid .vertical-text-hide {
+    display: none;
+  }
+  .quote-section {
+    padding: 32px 20px !important;
   }
 }

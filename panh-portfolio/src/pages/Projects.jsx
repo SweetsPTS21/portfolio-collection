@@ -127,7 +127,7 @@ export default function Projects() {
                           padding: 24,
                         }}
                       >
-                        <span style={{ fontSize: 72, fontWeight: 700, fontFamily: "'Fredoka', sans-serif", color: 'white', lineHeight: 1 }}>
+                        <span style={{ fontSize: 72, fontWeight: 700, fontFamily: "'Baloo 2', sans-serif", color: 'white', lineHeight: 1 }}>
                           {project.num}
                         </span>
                         <Icon size={32} color="white" style={{ marginTop: 12 }} />
@@ -188,7 +188,7 @@ export default function Projects() {
                         style={{
                           fontSize: 48,
                           fontWeight: 700,
-                          fontFamily: "'Fredoka', sans-serif",
+                          fontFamily: "'Baloo 2', sans-serif",
                           color: project.color,
                           opacity: 0.7,
                           lineHeight: 1,

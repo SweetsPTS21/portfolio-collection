@@ -129,7 +129,7 @@ export function VerticalText({ text, fontSize = 14, color = 'var(--color-text-se
       style={{
         writingMode: 'vertical-rl',
         textOrientation: 'mixed',
-        fontFamily: "'Fredoka', sans-serif",
+        fontFamily: "'Baloo 2', sans-serif",
         fontSize,
         fontWeight: 700,
         letterSpacing: '0.15em',

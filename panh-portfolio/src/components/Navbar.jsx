@@ -60,7 +60,7 @@ export default function Navbar() {
         </div>
         <span
           style={{
-            fontFamily: "'Fredoka', sans-serif",
+            fontFamily: "'Baloo 2', sans-serif",
             fontSize: 20,
             fontWeight: 700,
             color: 'var(--color-text)',
