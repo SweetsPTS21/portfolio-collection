@@ -1,5 +1,5 @@
 import { Castle } from 'lucide-react';
-import avatarUrl from '../../../docs/avatar.png';
+import avatarUrl from '../../../docs/avatar.jpg';
 import CrownSparkle from './CrownSparkle.jsx';
 
 export default function PrincessPrinceIdle() {
