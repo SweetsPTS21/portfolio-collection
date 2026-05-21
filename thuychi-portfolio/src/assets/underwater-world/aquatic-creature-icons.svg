@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" role="img" aria-label="Aquatic creature icons">
+  <path d="M42 66c0-31 36-50 63-28 15 12 15 42 0 55-28 22-63 3-63-27Z" fill="#CDB8FF"/>
+  <path d="M106 67c28-22 48-24 66 0-18 23-38 22-66 0Z" fill="#68C7F5"/>
+  <circle cx="78" cy="57" r="5" fill="#17364D"/>
+  <path d="M230 30c33 3 54 24 51 54-40 15-74 1-83-27z" fill="#7FE3C6"/>
+  <path d="M217 85c-10 18-4 30 17 35m36-32c17 13 17 25 0 36" fill="none" stroke="#7FE3C6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M382 22c30 0 50 21 50 44H332c0-23 20-44 50-44Z" fill="#FF9DB4"/>
+  <path d="M344 72c-16 15-11 32 8 44m30-44c-15 20-12 34 8 44m32-44c-14 15-10 32 8 44" fill="none" stroke="#FF9DB4" stroke-width="8" stroke-linecap="round"/>
+</svg>

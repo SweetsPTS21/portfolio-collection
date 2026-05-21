@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './components/layout/Sidebar';
 import SettingsSidebar from './components/layout/SettingsSidebar';
 import MainHeader from './components/layout/MainHeader';
@@ -6,6 +7,14 @@ import AboutView from './pages/AboutView';
 import ProjectsContainer from './pages/ProjectsContainer';
 import CourseView from './pages/CourseView';
 import SeasonalScene from './components/layout/SeasonalScene';
+
+const pageVariants = {
+  initial: { opacity: 0, y: 20, scale: 0.98 },
+  animate: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: -15, scale: 0.99 },
+};
+
+const pageTransition = { duration: 0.35, ease: 'easeOut' };
 
 export default function App() {
   const [activeView, setActiveView] = useState('about');
@@ -22,6 +31,9 @@ export default function App() {
     if (projectId !== null) setActiveProject(projectId);
   };
 
+  // Unique key for AnimatePresence
+  const viewKey = activeView === 'project' ? `project-${activeProject}` : activeView;
+
   return (
     <div className="app">
       <SeasonalScene theme={theme} />
@@ -36,12 +48,28 @@ export default function App() {
         </div>
         <main>
           <MainHeader activeView={activeView} />
-          <CourseView active={activeView === 'course'} />
-          <ProjectsContainer
-            active={activeView === 'project'}
-            activeProject={activeProject}
-          />
-          <AboutView active={activeView === 'about'} />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={viewKey}
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={pageTransition}
+            >
+              {activeView === 'course' && <CourseView active />}
+              {activeView === 'project' && (
+                <ProjectsContainer
+                  active
+                  activeProject={activeProject}
+                  onNavigate={handleViewChange}
+                />
+              )}
+              {activeView === 'about' && (
+                <AboutView active onNavigate={handleViewChange} />
+              )}
+            </motion.div>
+          </AnimatePresence>
         </main>
       </div>
     </div>

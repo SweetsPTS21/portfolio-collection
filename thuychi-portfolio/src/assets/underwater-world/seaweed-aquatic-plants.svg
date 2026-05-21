@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" role="img" aria-label="Seaweed aquatic plants">
+  <g fill="none" stroke-linecap="round" stroke-width="14">
+    <path d="M70 230C42 174 104 135 68 78c-18-29 11-54 30-64" stroke="#7FE3C6"/>
+    <path d="M150 230c-20-62 33-88 21-140-8-35 21-58 44-68" stroke="#68C7F5"/>
+    <path d="M264 230c-45-63 20-101-15-153-18-27 11-50 34-62" stroke="#7FE3C6"/>
+    <path d="M382 230c-23-48 18-78 13-121-5-44 38-68 66-82" stroke="#CDB8FF"/>
+  </g>
+  <g fill="#7FE3C6" opacity=".7">
+    <ellipse cx="62" cy="154" rx="16" ry="7" transform="rotate(-35 62 154)"/>
+    <ellipse cx="173" cy="132" rx="18" ry="8" transform="rotate(24 173 132)"/>
+    <ellipse cx="266" cy="101" rx="18" ry="8" transform="rotate(-29 266 101)"/>
+    <ellipse cx="412" cy="116" rx="20" ry="8" transform="rotate(28 412 116)"/>
+  </g>
+</svg>

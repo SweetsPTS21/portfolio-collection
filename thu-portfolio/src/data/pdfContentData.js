@@ -1,8 +1,7 @@
-// PDF content will be populated after running the extractor tool.
-// Usage: python tools/pdf-extractor/extract.py --input docs/ --output src/assets/pdf-content/ --batch
+// PDF content extracted via: python tools/pdf-extractor/extract.py --batch
 
-const modules = import.meta.glob('../assets/pdf-content/bt*/content.json', { eager: true });
-const imageModules = import.meta.glob('../assets/pdf-content/bt*/page-*.png', { eager: true, import: 'default' });
+const modules = import.meta.glob('../assets/pdf-content/BT*/content.json', { eager: true });
+const imageModules = import.meta.glob('../assets/pdf-content/BT*/page-*.png', { eager: true, import: 'default' });
 
 function resolveImages(btKey) {
   const resolved = {};
@@ -22,7 +21,7 @@ function resolveImages(btKey) {
  * @param {number} num - 1-based assignment number (1-6)
  */
 export function getPdfContent(num) {
-  const key = `bt${num}`;
+  const key = `BT${num}`;
   const contentPath = Object.keys(modules).find((p) => p.includes(`/${key}/content.json`));
   if (!contentPath) return null;
 

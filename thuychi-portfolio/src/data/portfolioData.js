@@ -14,7 +14,7 @@ export const profile = {
   quote:
     'Sự mềm mỏng, thanh lịch hoàn toàn có thể song hành cùng một tư duy pháp lý sắc bén.',
   intro:
-    'Xin chào, mình là Trần Thị Thùy Chi! Portfolio này giống như một cuốn sổ lưu niệm kỹ thuật số xinh xắn, nơi mình cất giữ những mảnh ghép tri thức đầu tiên về Công nghệ và Pháp luật.',
+    'Xin chào, mình là Trần Thị Thùy Chi! Portfolio này giống như một thế giới đại dương kỹ thuật số trong trẻo, nơi mình cất giữ những mảnh ghép tri thức đầu tiên về Công nghệ và Pháp luật.',
   interests: ['Nghe lofi', 'Dạo phố mua sắm', 'Du lịch'],
   style: ['Soft girl', 'Nhẹ nhàng', 'Nữ tính'],
 };

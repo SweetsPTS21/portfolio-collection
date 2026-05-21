@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
-import { navItems } from '../../app/routeConfig';
+import { Sparkles } from "lucide-react";
+import { navItems } from "../../app/routes";
 
 export default function Navbar() {
   return (
-    <header className="forest-nav">
+    <header className="ocean-nav">
       <NavLink
-        to="/about"
+        to="/reef"
         className="brand-mark"
-        aria-label="Thuy Chi about page"
+        aria-label="Thuy Chi underwater profile"
       >
         <Sparkles size={20} />
         <span>Thuy Chi Portfolio</span>
@@ -19,7 +19,7 @@ export default function Navbar() {
           <NavLink
             key={to}
             to={to}
-            className={({ isActive }) => `nav-gem ${isActive ? 'active' : ''}`}
+            className={({ isActive }) => `nav-gem ${isActive ? "active" : ""}`}
           >
             <Icon size={18} />
             <span>{label}</span>

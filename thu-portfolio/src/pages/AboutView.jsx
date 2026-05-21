@@ -2,7 +2,7 @@ import React from 'react';
 import { profile } from '../data/portfolioData';
 import avatarUrl from '../assets/avatar.png';
 
-export default function AboutView({ active }) {
+export default function AboutView({ active, onNavigate }) {
   if (!active) return null;
 
   return (
@@ -73,7 +73,7 @@ export default function AboutView({ active }) {
             <strong> (CS300) Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo</strong>.
             Hy vọng bạn sẽ tìm thấy chút niềm vui và sự mới lạ trong không gian thú vị này.
           </p>
-          <button className="explore-btn" onClick={() => {}}>
+          <button className="explore-btn" onClick={() => onNavigate('project', 1)}>
             KHÁM PHÁ NÀO! →
           </button>
         </section>
@@ -90,7 +90,7 @@ export default function AboutView({ active }) {
             </div>
             <div className="ticket-right">
               <p className="ticket-name">{profile.name.toUpperCase()}</p>
-              <span className="email-tag">{profile.studentId}@vnu.edu.vn</span>
+              <span className="email-tag">{profile.email}</span>
             </div>
           </div>
         </div>

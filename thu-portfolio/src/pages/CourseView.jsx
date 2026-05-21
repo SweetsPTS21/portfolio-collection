@@ -17,28 +17,49 @@ export default function CourseView({ active }) {
 
       <section className="card">
         <div className="card-header">
-          <span className="card-badge">💡 Tổng kết & Suy ngẫm</span>
+          <span className="card-badge">📝 Nhật ký chặng đường</span>
         </div>
-        <blockquote className="motto-quote">"{conclusion.summary}"</blockquote>
+        <p className="conclusion-text">{conclusion.journey}</p>
+      </section>
 
-        <div className="conclusion-grid">
-          <div className="meta-block">
-            <h4>🌱 Trải nghiệm & Trưởng thành</h4>
-            <p>{conclusion.growth}</p>
-          </div>
-          <div className="meta-block">
-            <h4>✨ Kỹ năng quý nhất</h4>
-            <p>{conclusion.bestSkill}</p>
-          </div>
-          <div className="meta-block">
-            <h4>🏆 Điểm tâm đắc</h4>
-            <p>{conclusion.highlight}</p>
-          </div>
-          <div className="meta-block">
-            <h4>⚡ Thách thức</h4>
-            <p>{conclusion.challenge}</p>
-          </div>
+      <section className="card">
+        <div className="card-header">
+          <span className="card-badge">💡 Sự chuyển dịch tư duy</span>
         </div>
+        <blockquote className="motto-quote">
+          "Tư duy là cốt lõi, công nghệ là đòn bẩy."
+        </blockquote>
+        <p className="conclusion-text">{conclusion.mindshift}</p>
+      </section>
+
+      <div className="conclusion-grid">
+        <section className="card">
+          <div className="card-header">
+            <span className="card-badge">🏆 Điểm tự hào</span>
+          </div>
+          <p className="conclusion-text">{conclusion.highlight}</p>
+        </section>
+
+        <section className="card">
+          <div className="card-header">
+            <span className="card-badge">⚡ Thách thức</span>
+          </div>
+          <p className="conclusion-text">{conclusion.challenge}</p>
+        </section>
+      </div>
+
+      <section className="card">
+        <div className="card-header">
+          <span className="card-badge">🚀 Tầm nhìn phía trước</span>
+        </div>
+        <p className="conclusion-text">{conclusion.vision}</p>
+      </section>
+
+      <section className="card">
+        <div className="card-header">
+          <span className="card-badge">❤️ Lời cảm ơn</span>
+        </div>
+        <p className="conclusion-text">{conclusion.thanks}</p>
       </section>
     </article>
   );

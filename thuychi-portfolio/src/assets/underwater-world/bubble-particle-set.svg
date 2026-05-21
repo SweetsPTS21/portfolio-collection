@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Water bubbles">
+  <g fill="#fff" stroke="#BDEBFF" stroke-width="4" opacity=".78">
+    <circle cx="42" cy="210" r="18"/><circle cx="94" cy="162" r="10"/><circle cx="142" cy="204" r="25"/>
+    <circle cx="194" cy="126" r="15"/><circle cx="218" cy="56" r="24"/><circle cx="64" cy="70" r="28"/>
+  </g>
+  <g fill="#fff" opacity=".8">
+    <circle cx="34" cy="202" r="5"/><circle cx="55" cy="58" r="7"/><circle cx="209" cy="45" r="6"/>
+  </g>
+</svg>

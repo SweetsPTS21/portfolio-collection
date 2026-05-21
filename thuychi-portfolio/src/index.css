@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
 
 :root {
-  --fairy-pink: #FF7EB3;
-  --mushroom-red: #FF8A7A;
-  --forest-mint: #7AE8A8;
-  --firefly-gold: #FFE088;
-  --moss-green: #A8D8A8;
-  --acorn-brown: #C8A070;
-  --lilac-wing: #D0A8FF;
-  --sky-clearing: #C8E8FF;
-  --soft-white: #F5FFF5;
-  --leaf-bg: #E8FFE8;
-  --leaf-wash: #D8F5D8;
-  --leaf-glow: #C8F0C8;
-  --ink: #1E3322;
-  --muted: #5A7A5E;
-  --border: #C8F0C8;
-  color: var(--ink);
-  font-family: 'Quicksand', system-ui, sans-serif;
+  --ocean-blue: #68C7F5;
+  --aqua-bg: #EAF9FF;
+  --sunbeam-cream: #FFF4C8;
+  --reef-coral: #FF9DB4;
+  --seaweed-mint: #7FE3C6;
+  --shell-lilac: #CDB8FF;
+  --starfish-peach: #FFB785;
+  --bubble-white: #FFFFFF;
+  --deep-text: #17364D;
+  --muted: #5E8298;
+  --foam-border: #BDEBFF;
+  color: var(--deep-text);
+  font-family: "Nunito", "Quicksand", system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -30,35 +26,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--leaf-bg);
-  background:
-    radial-gradient(
-      circle at 18% 12%,
-      rgba(255, 255, 255, 0.7),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 82% 28%,
-      rgba(255, 255, 255, 0.44),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(245, 255, 245, 0.95),
-      rgba(232, 255, 232, 0.92),
-      rgba(216, 245, 216, 0.9)
-    );
-}
-
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  content: '';
-  background-image: url('./assets/fairy-mushroom-forest/forest-leaves.svg');
-  background-size: 260px 260px;
-  opacity: 0.18;
+  background: var(--aqua-bg);
 }
 
 a {
@@ -78,22 +46,180 @@ a {
   padding: 96px clamp(16px, 4vw, 52px) 48px;
 }
 
-/* ===== NAVBAR ===== */
-.forest-nav {
+.ocean-gradient-background,
+.sunbeam-layer,
+.bubble-particle-layer,
+.coral-reef-base,
+.background-side-decorations,
+.swimming-fish-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ocean-gradient-background {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(255, 244, 200, 0.66), transparent 24%),
+    radial-gradient(circle at 84% 26%, rgba(255, 255, 255, 0.58), transparent 28%),
+    linear-gradient(180deg, #eaf9ff 0%, #d9f3ff 42%, #c8ecfb 100%);
+}
+
+.sunbeam-layer img {
+  width: 100%;
+  min-height: 72vh;
+  object-fit: cover;
+  opacity: 0.52;
+  animation: sunbeam-shimmer 8s ease-in-out infinite;
+}
+
+.bubble-sheet {
+  position: absolute;
+  right: 6%;
+  top: 14%;
+  width: min(24vw, 240px);
+  opacity: 0.32;
+  animation: bubble-rise 9s ease-in-out infinite;
+}
+
+.floating-bubble {
+  position: absolute;
+  left: var(--bubble-left);
+  bottom: -40px;
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: inset 4px 4px 8px rgba(255, 255, 255, 0.74);
+  animation: bubble-rise var(--bubble-duration) linear infinite;
+  animation-delay: var(--bubble-delay);
+}
+
+.coral-reef-base {
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.42;
+}
+
+.coral-reef-base img {
+  width: 100%;
+  min-width: 760px;
+  animation: seaweed-sway 9s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.background-side-decorations {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-side {
+  position: absolute;
+  top: 112px;
+  bottom: 42px;
+  width: min(26vw, 310px);
+  display: grid;
+  align-content: space-between;
+  gap: 28px;
+  opacity: 0.42;
+}
+
+.left-side {
+  left: max(-48px, calc((100vw - 1500px) / 2));
+  justify-items: start;
+}
+
+.right-side {
+  right: max(-48px, calc((100vw - 1500px) / 2));
+  justify-items: end;
+}
+
+.background-fish-school-swim {
+  width: min(25vw, 300px);
+  transform: translateX(-34%);
+}
+
+.background-crab-walk-animation {
+  width: min(21vw, 240px);
+  transform: translateX(-28%);
+}
+
+.background-fish-pass-hover {
+  width: min(25vw, 300px);
+  opacity: 0.72;
+  transform: translateX(36%) scaleX(-1);
+}
+
+.background-bottle-note-grid {
+  width: min(24vw, 290px);
+  opacity: 0.82;
+  transform: translateX(34%) rotate(-5deg);
+  animation: bottle-float 7s ease-in-out infinite;
+}
+
+.swimming-fish-layer {
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.34;
+}
+
+.swimming-fish {
+  position: absolute;
+  top: var(--fish-top);
+  width: var(--fish-width);
+  animation-delay: var(--fish-delay);
+  animation-duration: var(--fish-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
+.fish-tiny {
+  --fish-width: clamp(46px, 5vw, 82px);
+  --fish-duration: 28s;
+}
+
+.fish-small {
+  --fish-width: clamp(72px, 7vw, 118px);
+  --fish-duration: 24s;
+}
+
+.fish-medium {
+  --fish-width: clamp(96px, 9vw, 152px);
+  --fish-duration: 30s;
+}
+
+.fish-large {
+  --fish-width: clamp(118px, 12vw, 190px);
+  --fish-duration: 34s;
+}
+
+.swim-left-to-right {
+  left: calc(-1 * var(--fish-width) - 6vw);
+  animation-name: swim-left-to-right;
+}
+
+.swim-right-to-left {
+  right: calc(-1 * var(--fish-width) - 6vw);
+  animation-name: swim-right-to-left;
+}
+
+.ocean-nav {
   position: fixed;
   top: 18px;
   left: 50%;
   z-index: 20;
   display: flex;
-  width: min(1100px, calc(100vw - 28px));
+  width: min(1120px, calc(100vw - 28px));
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 10px;
-  border: 1px solid rgba(200, 240, 200, 0.88);
+  border: 1px solid rgba(189, 235, 255, 0.92);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 18px 46px rgba(30, 51, 34, 0.12);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 18px 46px rgba(23, 54, 77, 0.12);
   backdrop-filter: blur(18px);
   transform: translateX(-50%);
 }
@@ -110,10 +236,10 @@ a {
 
 .brand-mark {
   padding: 0 18px;
-  color: var(--fairy-pink);
+  color: var(--ocean-blue);
 }
 
-.forest-nav nav {
+.ocean-nav nav {
   display: flex;
   gap: 8px;
 }
@@ -129,80 +255,11 @@ a {
 
 .nav-gem.active,
 .nav-gem:hover {
-  color: var(--ink);
-  background: linear-gradient(
-    135deg,
-    rgba(122, 232, 168, 0.24),
-    rgba(208, 168, 255, 0.18)
-  );
+  color: var(--deep-text);
+  background: linear-gradient(135deg, rgba(104, 199, 245, 0.24), rgba(127, 227, 198, 0.2));
   transform: translateY(-2px);
 }
 
-/* ===== FOREST SCENE (background decorations) ===== */
-.forest-scene {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.scene-mushrooms {
-  position: absolute;
-  right: -90px;
-  bottom: -60px;
-  width: min(52vw, 480px);
-  opacity: 0.32;
-  animation: mushroom-sway 12s ease-in-out infinite;
-}
-
-.scene-fairy {
-  position: absolute;
-  top: 94px;
-  left: -40px;
-  width: min(28vw, 260px);
-  opacity: 0.44;
-  animation: fairy-flutter 5s ease-in-out infinite;
-}
-
-.scene-fireflies {
-  position: absolute;
-  top: 18%;
-  right: 7%;
-  width: min(32vw, 340px);
-  opacity: 0.52;
-  animation: firefly-drift 8s ease-in-out infinite;
-}
-
-.glow-dot {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--firefly-gold);
-  box-shadow:
-    0 0 24px var(--firefly-gold),
-    0 0 44px var(--forest-mint);
-  animation: glow-pulse 4.8s ease-in-out infinite;
-}
-
-.dot-a {
-  top: 25%;
-  left: 10%;
-}
-
-.dot-b {
-  top: 58%;
-  right: 18%;
-  animation-delay: 1.2s;
-}
-
-.dot-c {
-  bottom: 18%;
-  left: 34%;
-  animation-delay: 2.1s;
-}
-
-/* ===== PAGE SHELL ===== */
 .page-shell {
   position: relative;
   z-index: 1;
@@ -210,15 +267,22 @@ a {
   margin: 0 auto;
 }
 
-.eyebrow {
+.eyebrow,
+.shell-tag,
+.shell-project-badge {
   display: inline-flex;
-  margin: 0 0 10px;
-  padding: 8px 14px;
-  border: 1px solid var(--border);
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--foam-border);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.68);
-  color: var(--fairy-pink);
-  font-weight: 800;
+  color: var(--ocean-blue);
+  font-weight: 900;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  padding: 8px 14px;
   text-transform: uppercase;
 }
 
@@ -232,29 +296,29 @@ p {
 h1 {
   max-width: 980px;
   margin-bottom: 24px;
-  font-family: 'Baloo 2', 'Quicksand', sans-serif;
-  font-size: clamp(2.35rem, 7vw, 5.6rem);
-  line-height: 0.95;
+  font-family: "Quicksand", "Nunito", sans-serif;
+  font-size: clamp(2.3rem, 7vw, 5.4rem);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
 .lead,
-.hero-copy > p {
-  max-width: 760px;
+.hero-copy > p,
+.coral-card p {
+  max-width: 780px;
   color: var(--muted);
-  font-size: clamp(1.02rem, 2vw, 1.2rem);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
   line-height: 1.75;
 }
 
 .quote {
-  color: var(--ink);
-  font-weight: 800;
+  color: var(--deep-text);
+  font-weight: 900;
 }
 
-/* ===== GRID LAYOUTS ===== */
 .hero-grid,
 .two-column,
-.reflection-grid {
+.bottle-note-content-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
   gap: 24px;
@@ -262,28 +326,53 @@ h1 {
 }
 
 .hero-copy,
-.forest-panel,
-.avatar-card,
-.mirror-card,
-.constellation-card,
-.mini-spell,
-.spell-card {
-  border: 1px solid rgba(200, 240, 200, 0.9);
+.coral-card,
+.avatar-bubble-card,
+.message-bottle-card,
+.sea-creature-panel,
+.project-reef-card {
+  border: 1px solid rgba(189, 235, 255, 0.92);
   background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 22px 70px rgba(30, 51, 34, 0.08);
+  box-shadow: 0 22px 70px rgba(23, 54, 77, 0.1);
   backdrop-filter: blur(16px);
 }
 
 .hero-copy,
-.forest-panel,
-.mirror-card,
-.constellation-card {
+.coral-card,
+.message-bottle-card,
+.sea-creature-panel {
   border-radius: 28px;
   padding: clamp(20px, 4vw, 34px);
 }
 
-/* ===== AVATAR CARD ===== */
-.avatar-card {
+.fish-school-swim {
+  width: min(420px, 100%);
+  margin-bottom: 20px;
+  animation: fish-school-swim 10s ease-in-out infinite;
+}
+
+.fish-school-swim img,
+.fish-rive-controller img,
+.crab-walk-animation img,
+.starfish-reaction img {
+  width: 100%;
+}
+
+.wave-divider {
+  display: flex;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.wave-divider span {
+  width: 64px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ocean-blue), var(--seaweed-mint));
+  opacity: 0.62;
+}
+
+.avatar-bubble-card {
   position: relative;
   min-height: 520px;
   overflow: hidden;
@@ -292,47 +381,48 @@ h1 {
 
 .avatar {
   position: absolute;
-  inset: 5% 8% 0;
+  inset: 7% 8% 0;
   width: 84%;
-  height: 92%;
+  height: 90%;
   border-radius: 32px;
   object-fit: cover;
   object-position: 50% 22%;
-  box-shadow: 0 28px 70px rgba(30, 51, 34, 0.18);
+  box-shadow: 0 28px 70px rgba(23, 54, 77, 0.18);
 }
 
-.avatar-mushroom {
+.avatar-shell-frame {
   position: absolute;
-  inset: 3% auto auto 50%;
-  width: 112%;
-  opacity: 0.25;
+  left: 50%;
+  top: 4%;
+  z-index: 1;
+  width: min(78%, 330px);
+  opacity: 0.35;
   transform: translateX(-50%);
-  animation: mushroom-sway 18s linear infinite;
 }
 
-.avatar-fairy {
+.fish-rive-controller {
   position: absolute;
-  right: -12%;
-  bottom: 4%;
-  width: 80px;
-  opacity: 0.6;
-  animation: fairy-flutter 4.6s ease-in-out infinite;
+  right: -18%;
+  bottom: 5%;
+  z-index: 2;
+  width: 64%;
+  opacity: 0.82;
+  animation: fish-school-swim 7s ease-in-out infinite;
 }
 
-/* ===== IDENTITY GRID ===== */
 .identity-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .info-card {
   min-height: 98px;
   padding: 16px;
-  border: 1px solid rgba(200, 240, 200, 0.9);
+  border: 1px solid rgba(189, 235, 255, 0.92);
   border-radius: 20px;
-  background: rgba(245, 255, 245, 0.82);
+  background: rgba(234, 249, 255, 0.78);
 }
 
 .info-card span {
@@ -348,20 +438,23 @@ h1 {
   line-height: 1.35;
 }
 
-.two-column {
+.two-column,
+.wide-card,
+.reef-project-grid,
+.sea-garden-scene,
+.reflection-lists {
   margin-top: 24px;
 }
 
-/* ===== FOREST PANEL ===== */
-.panel-title {
+.coral-card-title {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
-  color: var(--fairy-pink);
+  color: var(--ocean-blue);
 }
 
-.panel-title h2 {
+.coral-card-title h2 {
   margin: 0;
   font-size: clamp(1.25rem, 2vw, 1.65rem);
 }
@@ -373,129 +466,113 @@ ul {
   line-height: 1.75;
 }
 
-/* ===== CHIP CLOUD ===== */
-.chip-cloud {
+.chip-cloud,
+.seaweed-badges,
+.project-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 18px;
 }
 
-.chip-cloud span {
-  display: inline-flex;
-  align-items: center;
+.chip-cloud span,
+.shell-tag {
   min-height: 38px;
   padding: 0 13px;
-  border: 1px solid rgba(200, 240, 200, 0.95);
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 224, 136, 0.32),
-    rgba(122, 232, 168, 0.24)
-  );
-  font-weight: 800;
+  background: linear-gradient(135deg, rgba(255, 244, 200, 0.44), rgba(127, 227, 198, 0.26));
 }
 
-.chip-cloud.dark span {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.14);
-}
-
-/* ===== STRENGTH STRIP & SPELL CARDS ===== */
-.spell-strip,
-.project-grid,
-.reflection-lists {
+.reef-project-grid {
   display: grid;
-  gap: 18px;
-  margin-top: 24px;
-}
-
-.spell-strip {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.mini-spell {
-  min-height: 174px;
-  padding: 20px;
-  border-radius: 24px;
-}
-
-.mini-spell span,
-.spell-number {
-  color: var(--fairy-pink);
-  font-weight: 900;
-}
-
-.mini-spell p {
-  margin: 14px 0 0;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.project-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.spell-card {
+.project-reef-card {
   position: relative;
-  min-height: 390px;
+  min-height: 410px;
   overflow: hidden;
   border-radius: 30px;
 }
 
-.spell-card-frame {
+.project-reef-art {
   position: absolute;
-  top: 62%;
-  right: clamp(12px, 4vw, 34px);
-  width: min(34%, 220px);
-  opacity: 0.15;
-  transform: translateY(-50%) rotate(10deg);
+  right: -8%;
+  bottom: -6%;
+  width: min(60%, 380px);
+  opacity: 0.22;
 }
 
-.spell-content {
+.fish-pass-hover {
+  position: absolute;
+  left: -38%;
+  top: 18px;
+  width: 280px;
+  opacity: 0;
+  transition: transform 700ms ease, opacity 240ms ease;
+}
+
+.project-reef-card:hover .fish-pass-hover {
+  opacity: 0.72;
+  transform: translateX(220%);
+}
+
+.background-side .fish-pass-hover {
+  position: static;
+  width: min(25vw, 300px);
+  opacity: 0.72;
+  transform: translateX(36%) scaleX(-1);
+}
+
+.background-side .fish-school-swim {
+  width: min(25vw, 300px);
+  margin: 0;
+}
+
+.background-side .crab-walk-animation {
+  width: min(21vw, 240px);
+}
+
+.project-reef-content {
   position: relative;
   z-index: 1;
   padding: 32px;
 }
 
-.spell-card:nth-child(even) .spell-content {
-  margin-left: auto;
+.shell-project-badge {
+  min-height: 38px;
+  padding: 0 12px;
 }
 
-.spell-content h2 {
+.shell-project-badge img {
+  width: 32px;
+}
+
+.project-reef-content h2 {
   margin: 18px 0 12px;
   font-size: clamp(1.3rem, 3vw, 2rem);
 }
 
-.spell-content h3 {
-  color: var(--ink);
+.project-reef-content h3 {
+  color: var(--deep-text);
   font-size: 1rem;
   line-height: 1.45;
 }
 
-.spell-content p,
-.mirror-card p {
+.project-reef-content p,
+.message-bottle-card p {
   color: var(--muted);
   line-height: 1.75;
 }
 
-/* ===== SPELL ACTIONS (PDF buttons) ===== */
-.spell-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.spell-action {
+.bubble-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   min-height: 42px;
   padding: 0 14px;
-  border: 1px solid rgba(200, 240, 200, 0.92);
+  border: 1px solid rgba(189, 235, 255, 0.94);
   border-radius: 999px;
   font-weight: 900;
   line-height: 1;
@@ -505,131 +582,230 @@ ul {
     background 180ms ease;
 }
 
-.spell-action.primary {
+.bubble-button.primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--fairy-pink), var(--lilac-wing));
-  box-shadow: 0 12px 28px rgba(255, 126, 179, 0.24);
+  background: linear-gradient(135deg, var(--ocean-blue), var(--shell-lilac));
+  box-shadow: 0 12px 28px rgba(104, 199, 245, 0.26);
 }
 
-.spell-action.secondary {
-  color: var(--ink);
+.bubble-button.secondary {
+  color: var(--deep-text);
   background: rgba(255, 255, 255, 0.7);
 }
 
-.spell-action:hover,
-.spell-action:focus-visible {
+.bubble-button:hover,
+.bubble-button:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(30, 51, 34, 0.12);
+  box-shadow: 0 16px 34px rgba(23, 54, 77, 0.14);
 }
 
-/* ===== REFLECTION / CONCLUSION ===== */
-.reflection-grid {
-  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
-}
-
-.mirror-card img {
-  display: block;
-  width: min(260px, 78%);
-  margin: 0 auto 18px;
-  animation: firefly-drift 7s ease-in-out infinite;
-}
-
-.constellation-card {
-  background: rgba(30, 51, 34, 0.88);
-}
-
-.constellation-card img {
-  width: 100%;
-  border-radius: 22px;
-}
-
+.sea-garden-scene,
 .reflection-lists {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes mushroom-sway {
+.seaweed-skill-group {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid rgba(189, 235, 255, 0.92);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  padding: 28px;
+}
+
+.seaweed-skill-group > img {
+  position: absolute;
+  right: -80px;
+  bottom: -32px;
+  width: 290px;
+  opacity: 0.24;
+  animation: seaweed-sway 8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.seaweed-skill-group h2,
+.seaweed-badges {
+  position: relative;
+  z-index: 1;
+}
+
+.coral-skill-badge {
+  padding-left: 8px;
+}
+
+.aquatic-icon-tooltip img {
+  display: block;
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.bottle-note-content-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.82fr);
+}
+
+.sea-creature-panel {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.crab-walk-animation {
+  animation: crab-walk 8s ease-in-out infinite;
+}
+
+.starfish-reaction {
+  width: 78%;
+  margin-left: auto;
+  animation: starfish-wave 5s ease-in-out infinite;
+}
+
+@keyframes fish-school-swim {
   0%, 100% {
-    transform: translateX(-50%) rotate(0deg);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateX(-50%) rotate(3deg);
+    transform: translate3d(18px, -10px, 0);
   }
 }
 
-@keyframes fairy-flutter {
+@keyframes bubble-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.72);
+  }
+  18% {
+    opacity: 0.82;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-108vh) scale(1.08);
+  }
+}
+
+@keyframes seaweed-sway {
   0%, 100% {
-    opacity: 0.44;
-    transform: translate3d(0, 0, 0) rotate(-1deg);
+    transform: rotate(-1deg);
   }
   50% {
-    opacity: 0.72;
-    transform: translate3d(12px, -8px, 0) rotate(2deg);
+    transform: rotate(2deg);
   }
 }
 
-@keyframes firefly-drift {
+@keyframes sunbeam-shimmer {
   0%, 100% {
-    transform: translateY(0) rotate(-2deg);
+    opacity: 0.42;
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-14px) rotate(2deg);
+    opacity: 0.64;
+    transform: translateX(18px);
   }
 }
 
-@keyframes glow-pulse {
+@keyframes crab-walk {
   0%, 100% {
-    opacity: 0.3;
-    transform: scale(0.72);
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(24px);
+  }
+}
+
+@keyframes starfish-wave {
+  0%, 100% {
+    transform: rotate(-2deg) scale(1);
   }
   50% {
-    opacity: 0.9;
-    transform: scale(1.08);
+    transform: rotate(3deg) scale(1.04);
   }
 }
 
-/* ===== RESPONSIVE ===== */
+@keyframes bottle-float {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes swim-left-to-right {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  48% {
+    transform: translateX(48vw) translateY(-12px);
+  }
+  100% {
+    transform: translateX(112vw) translateY(8px);
+  }
+}
+
+@keyframes swim-right-to-left {
+  0% {
+    transform: translateX(0) translateY(0) scaleX(-1);
+  }
+  52% {
+    transform: translateX(-48vw) translateY(12px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-112vw) translateY(-8px) scaleX(-1);
+  }
+}
+
 @media (max-width: 860px) {
   .app-shell {
-    padding-top: 160px;
+    padding-top: 176px;
   }
 
-  .forest-nav {
+  .ocean-nav {
     align-items: stretch;
     border-radius: 28px;
     flex-direction: column;
   }
 
-  .forest-nav nav {
+  .ocean-nav nav {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .nav-gem {
-    justify-content: center;
-    padding: 0 10px;
-  }
-
+  .nav-gem,
   .brand-mark {
     justify-content: center;
   }
 
   .hero-grid,
   .two-column,
-  .reflection-grid,
-  .project-grid,
-  .reflection-lists,
-  .spell-strip {
+  .reef-project-grid,
+  .sea-garden-scene,
+  .bottle-note-content-grid,
+  .reflection-lists {
     grid-template-columns: 1fr;
   }
 
-  .avatar-card {
-    min-height: 430px;
+  .background-side {
+    width: 150px;
+    opacity: 0.2;
   }
 
-  .spell-card-frame {
-    width: min(30%, 190px);
-    opacity: 0.12;
+  .background-fish-school-swim,
+  .background-fish-pass-hover,
+  .background-bottle-note-grid,
+  .background-crab-walk-animation {
+    width: 150px;
+  }
+
+  .swimming-fish-layer {
+    opacity: 0.2;
+  }
+
+  .avatar-bubble-card {
+    min-height: 430px;
   }
 }
 
@@ -647,29 +823,20 @@ ul {
   }
 
   .hero-copy,
-  .forest-panel,
-  .mirror-card,
-  .constellation-card,
-  .spell-content {
+  .coral-card,
+  .message-bottle-card,
+  .sea-creature-panel,
+  .project-reef-content,
+  .seaweed-skill-group {
     padding: 20px;
   }
 
-  .spell-content {
-    max-width: 100%;
-  }
-
-  .spell-card-frame,
-  .spell-card:nth-child(even) .spell-card-frame {
-    top: 14px;
-    right: 12px;
-    left: auto;
-    width: 118px;
-    opacity: 0.08;
-    transform: none;
-  }
-
-  .avatar-card {
+  .avatar-bubble-card {
     min-height: 360px;
+  }
+
+  .background-side-decorations {
+    display: none;
   }
 }
 

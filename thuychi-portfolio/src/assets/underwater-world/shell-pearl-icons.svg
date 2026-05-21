@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-label="Shell pearl icons">
+  <path d="M28 92c6-50 25-74 62-74s57 24 62 74z" fill="#CDB8FF"/>
+  <path d="M42 90c9-33 23-52 48-70M91 20c1 24 0 48 0 70M138 90c-10-33-24-52-48-70" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="90" cy="82" r="16" fill="#fff"/>
+  <path d="M218 74c20-30 61-30 82 0-18 27-64 27-82 0z" fill="#FFE9C8" stroke="#FFB785" stroke-width="6"/>
+  <circle cx="260" cy="75" r="13" fill="#fff"/>
+</svg>

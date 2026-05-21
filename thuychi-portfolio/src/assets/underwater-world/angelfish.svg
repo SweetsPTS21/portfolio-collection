@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 140" role="img" aria-label="Angelfish">
+  <path d="M28 70 4 42v56z" fill="#CDB8FF"/>
+  <path d="M42 70c22-44 74-58 116 0-42 58-94 44-116 0Z" fill="#FFF4C8"/>
+  <path d="M78 24c18 24 21 67 0 92-14-27-14-65 0-92Z" fill="#68C7F5"/>
+  <path d="M112 18c16 32 17 72 0 104 28-28 32-75 0-104Z" fill="#CDB8FF"/>
+  <circle cx="134" cy="62" r="6" fill="#17364D"/>
+  <path d="M100 52c-18 15-19 27 0 42" fill="none" stroke="#FF9DB4" stroke-width="6" stroke-linecap="round"/>
+</svg>
