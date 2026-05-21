@@ -3,7 +3,11 @@ import { projects } from '../data/portfolioData';
 import { getPdfContent } from '../data/pdfContentData';
 import PageGallery from '../components/projects/PageGallery';
 
-export default function ProjectsContainer({ active, activeProject, onNavigate }) {
+export default function ProjectsContainer({
+  active,
+  activeProject,
+  onNavigate,
+}) {
   if (!active || !activeProject) return null;
 
   const project = projects.find((p) => p.id === activeProject);
@@ -17,7 +21,9 @@ export default function ProjectsContainer({ active, activeProject, onNavigate })
     <article className="view-section active" id="projectView">
       <section className="card project-detail-card">
         <div className="card-header">
-          <span className="card-badge">{project.emoji} {project.title}</span>
+          <span className="card-badge">
+            {project.emoji} {project.title}
+          </span>
         </div>
 
         <h2 className="project-chapter">{project.chapter}</h2>
@@ -39,7 +45,10 @@ export default function ProjectsContainer({ active, activeProject, onNavigate })
 
         {pdfContent && (
           <div className="project-gallery-section">
-            <h4>📄 Nội dung bài tập</h4>
+            <h4>
+              📄 Dưới đây là báo cáo về kết quả thực hành của mình, mọi người
+              cùng xem nhé!
+            </h4>
             <PageGallery pages={pdfContent.pages} />
           </div>
         )}

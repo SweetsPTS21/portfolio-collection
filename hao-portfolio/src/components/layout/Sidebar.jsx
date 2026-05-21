@@ -7,7 +7,7 @@ export default function Sidebar({ activeView, activeProject, onNavigate }) {
 
   return (
     <aside className="sidebar">
-      <div className="brand-box">THU24VNU</div>
+      <div className="brand-box">WELCOME</div>
 
       <nav className="nav-group">
         {/* Profile accordion */}

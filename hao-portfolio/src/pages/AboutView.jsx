@@ -13,18 +13,27 @@ export default function AboutView({ active, onNavigate }) {
         <div className="paper-content">
           <span className="card-badge">📂 HỒ SƠ SINH VIÊN</span>
           <div className="stamp-circle" aria-hidden="true">
-            <span className="stamp-text">THU</span>
+            <span className="stamp-text">HAO</span>
             <span className="stamp-sub">VNU</span>
           </div>
           <h1 className="hero-title">XIN CHÀO!</h1>
           <h2 className="hero-name-big">
-            MÌNH LÀ <span className="underline-accent">{profile.name.toUpperCase()}</span>
+            MÌNH LÀ{' '}
+            <span className="underline-accent">
+              {profile.name.toUpperCase()}
+            </span>
           </h2>
-          <p className="hero-welcome">Chào mừng bạn đến với portfolio của mình nhé!</p>
-          <span className="school-stamp" aria-hidden="true">VNU-UL</span>
+          <p className="hero-welcome">
+            Chào mừng bạn đến với portfolio của mình nhé!
+          </p>
+          <span className="school-stamp" aria-hidden="true">
+            VNU-UL
+          </span>
         </div>
         <div className="paper-edge-bottom" aria-hidden="true" />
-        <span className="deco-butterfly" aria-hidden="true">🦋</span>
+        <span className="deco-butterfly" aria-hidden="true">
+          🦋
+        </span>
       </section>
 
       {/* About section - lined paper with avatar */}
@@ -33,8 +42,13 @@ export default function AboutView({ active, onNavigate }) {
         <div className="paper-content about-grid">
           <div className="about-text">
             <h2 className="section-title">ĐÔI CHÚT VỀ BẢN THÂN</h2>
-            <p>Xin chào, mình là <strong>{profile.name}</strong></p>
-            <p>Mã sinh viên: <span className="highlight-box">{profile.studentId}</span></p>
+            <p>
+              Xin chào, mình là <strong>{profile.name}</strong>
+            </p>
+            <p>
+              Mã sinh viên:{' '}
+              <span className="highlight-box">{profile.studentId}</span>
+            </p>
             <p className="about-paragraph">{profile.intro}</p>
             <p className="about-paragraph">{profile.portfolioDesc}</p>
 
@@ -60,9 +74,7 @@ export default function AboutView({ active, onNavigate }) {
         <section className="sticky-note note-yellow">
           <div className="tape-deco tape-center" aria-hidden="true" />
           <h3 className="sticky-title">CHÂM NGÔN YÊU THÍCH</h3>
-          <blockquote className="sticky-quote">
-            "{profile.motto}"
-          </blockquote>
+          <blockquote className="sticky-quote">"{profile.motto}"</blockquote>
           <p className="sticky-text">{profile.philosophy}</p>
         </section>
 
@@ -70,10 +82,17 @@ export default function AboutView({ active, onNavigate }) {
           <h3 className="section-title">TẠI SAO CÓ SITE NÀY?</h3>
           <p className="sticky-text">
             Đây là nơi lưu giữ thành quả của mình sau 6 bài học đầu tiên của môn
-            <strong> (CS300) Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo</strong>.
-            Hy vọng bạn sẽ tìm thấy chút niềm vui và sự mới lạ trong không gian thú vị này.
+            <strong>
+              {' '}
+              (CS300) Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo
+            </strong>
+            . Hy vọng bạn sẽ tìm thấy chút niềm vui và sự mới lạ trong không
+            gian thú vị này.
           </p>
-          <button className="explore-btn" onClick={() => onNavigate('project', 1)}>
+          <button
+            className="explore-btn"
+            onClick={() => onNavigate('project', 1)}
+          >
             KHÁM PHÁ NÀO! →
           </button>
         </section>
@@ -85,7 +104,9 @@ export default function AboutView({ active, onNavigate }) {
           <h3 className="ticket-title">LIÊN HỆ VỚI MÌNH</h3>
           <div className="ticket-info">
             <div className="ticket-left">
-              <p><strong>TRƯỜNG ĐẠI HỌC LUẬT</strong></p>
+              <p>
+                <strong>TRƯỜNG ĐẠI HỌC LUẬT</strong>
+              </p>
               <p>Đại học Quốc Gia Hà Nội</p>
             </div>
             <div className="ticket-right">

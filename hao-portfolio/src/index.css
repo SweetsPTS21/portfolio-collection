@@ -180,7 +180,7 @@ main { min-width: 0; }
 }
 .sidebar-wrapper::-webkit-scrollbar { display: none; }
 
-.sidebar, .settings-sidebar {
+.sidebar, .settings-sidebar, .music-player {
   background: var(--card-bg);
   border: var(--border);
   box-shadow: var(--shadow);
@@ -430,6 +430,204 @@ main { min-width: 0; }
   opacity: 1;
   background: var(--accent-pop);
   border-style: solid;
+}
+
+/* ========== MUSIC PLAYER ========== */
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-md);
+}
+
+.music-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.player-eyebrow {
+  font-weight: 700;
+}
+
+.player-count {
+  padding: 2px 8px;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--accent-highlight);
+}
+
+.vinyl-wrap {
+  width: 118px;
+  height: 118px;
+  margin: 2px auto 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.75), transparent 45%),
+    var(--accent-highlight);
+  border: var(--border);
+  box-shadow: var(--shadow-subtle);
+}
+
+.vinyl-disc {
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--ink);
+  background:
+    radial-gradient(circle at center, var(--accent-pop) 0 19%, var(--ink) 20% 22%, transparent 23%),
+    repeating-radial-gradient(circle at center, #1f1f1f 0 6px, #333 7px 8px);
+  animation: vinyl-spin 4s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl-wrap.is-playing .vinyl-disc {
+  animation-play-state: running;
+}
+
+.vinyl-label {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-pop);
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+@keyframes vinyl-spin {
+  to { transform: rotate(360deg); }
+}
+
+.track-info {
+  text-align: center;
+}
+
+.track-info h3 {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  line-height: 1.1;
+  margin-bottom: 3px;
+}
+
+.track-info p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.player-icon-btn {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-base), background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.player-icon-btn:hover {
+  transform: translateY(-1px);
+  background: var(--accent-highlight);
+  box-shadow: var(--shadow-hover);
+}
+
+.play-toggle {
+  width: 42px;
+  height: 42px;
+  background: var(--accent-main);
+}
+
+.seek-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.player-slider {
+  width: 100%;
+  height: 7px;
+  appearance: none;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background:
+    linear-gradient(to right, var(--accent-main) 0 var(--slider-progress), var(--accent-highlight) var(--slider-progress) 100%);
+  outline: none;
+  cursor: pointer;
+}
+
+.player-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-subtle);
+}
+
+.player-slider::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-subtle);
+}
+
+.time-row, .volume-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.volume-row {
+  color: var(--ink);
+}
+
+.volume-slider {
+  flex: 1;
+}
+
+.player-message {
+  margin-top: 2px;
+  padding: 7px 9px;
+  border: 1px dashed var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--accent-highlight);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.player-message span {
+  font-weight: 700;
 }
 
 /* ========== HEADER ========== */

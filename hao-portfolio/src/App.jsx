@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './components/layout/Sidebar';
 import SettingsSidebar from './components/layout/SettingsSidebar';
+import MusicPlayer from './components/layout/MusicPlayer';
 import MainHeader from './components/layout/MainHeader';
 import AboutView from './pages/AboutView';
 import ProjectsContainer from './pages/ProjectsContainer';
@@ -45,6 +46,7 @@ export default function App() {
             onNavigate={handleViewChange}
           />
           <SettingsSidebar theme={theme} onThemeChange={setTheme} />
+          <MusicPlayer />
         </div>
         <main>
           <MainHeader activeView={activeView} />

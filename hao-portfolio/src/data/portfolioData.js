@@ -6,7 +6,12 @@ export const profile = {
   greeting: 'Chào mừng bạn đến với portfolio của mình nhé!',
   intro:
     'Là sinh viên Luật tại trường Đại học Luật – Đại học Quốc gia Hà Nội, mình luôn dành một góc nhỏ đam mê cho công nghệ. Với mình, việc mày mò các giải pháp số đơn giản là để hành trình học Luật trở nên dễ thở và cảm hứng hơn.',
-  interests: ['Trekking & Đạp xe', 'Lắp ráp Lego', 'Đọc truyện trinh thám', 'Nghe nhạc Lo-fi'],
+  interests: [
+    'Trekking & Đạp xe',
+    'Lắp ráp Lego',
+    'Đọc truyện trinh thám',
+    'Nghe nhạc Lo-fi',
+  ],
   style: 'Kỷ luật, sáng tạo và liêm chính.',
   motto:
     'Trí tuệ nhân tạo có thể tổng hợp vạn điều lý thuyết trong một giây, nhưng chỉ có tư duy sắc bén và sự thấu cảm của con người mới tìm thấy công lý ẩn sau những dòng văn bản. Sử dụng AI không phải để ngừng tư duy, mà là để nâng tầm tư duy lên những tầng cao mới.',
@@ -21,7 +26,7 @@ export const courseInfo = {
   name: 'CS300 — Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo',
   description:
     'Học phần giúp sinh viên tiếp cận công nghệ một cách có chọn lọc: biết hiểu, biết kiểm chứng và biết ứng dụng AI có trách nhiệm trong học thuật.',
-  semester: 'Mùa Thu 2024',
+  semester: 'Summer 2026',
 };
 
 export const projects = [
