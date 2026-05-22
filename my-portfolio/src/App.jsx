@@ -4,9 +4,9 @@ import avatarFrame from './assets/avatar-portrait.png';
 import conclusionLeft from './assets/conclution-left.png';
 import conclusionRight from './assets/conclution-right.png';
 import projectFrame from './assets/project-card.png';
+import introNote from './assets/note.png';
 import {
   chapters,
-  goals,
   portfolioTitle,
   profile,
   reflection,
@@ -47,20 +47,29 @@ export default function App() {
             />
           </div>
 
-          <div className="intro-copy">
+          <div className="hero-profile-note" aria-label="Thông tin cá nhân">
+            <img
+              className="intro-note"
+              src={introNote}
+              alt=""
+              draggable="false"
+            />
             <p className="hello">Xin chào, mình là</p>
-            <h2>{profile.name}</h2>
-            <p className="role-pill">{profile.major}</p>
-            <p className="intro-text">{profile.school}</p>
-            <p className="intro-text">{profile.hobby}</p>
-            <div className="goal-box">
-              <h3>Mục tiêu</h3>
-              <ul>
-                {goals.map((goal) => (
-                  <li key={goal}>{goal}</li>
-                ))}
-              </ul>
-            </div>
+            <h2 className="profile-name">{profile.name}</h2>
+            <dl className="profile-note-list">
+              <div>
+                <dt>Ngành học</dt>
+                <dd>{profile.major}</dd>
+              </div>
+              <div>
+                <dt>Trường</dt>
+                <dd>{profile.school}</dd>
+              </div>
+              <div>
+                <dt>Định hướng</dt>
+                <dd>{profile.future}</dd>
+              </div>
+            </dl>
           </div>
         </section>
 

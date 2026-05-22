@@ -41,45 +41,49 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; SVGator d
 
 ## 1. `ocean-wave-diary` — Ocean Wave Diary Portfolio
 
-Portfolio như một cuốn nhật ký bên bờ biển: sóng nhẹ, vỏ sò, cát trắng, bọt biển, seagull bay. Theme mát mẻ, dreamy, phù hợp cho nữ yêu biển và muốn portfolio mang cảm giác thư giãn nhưng vẫn chuyên nghiệp.
+Portfolio như một cuốn nhật ký mở ra vào chiều hoàng hôn trên biển: bầu trời xanh dương nhạt chuyển hồng, mặt trời vàng thấp trên đường chân trời, sóng phản chiếu ánh nắng, mây pastel, bờ cát, vỏ sò và những trang diary mềm mại. Theme nhiều cảnh vật, sáng, thơ, nữ tính, phù hợp cho portfolio muốn có cảm giác thư giãn nhưng vẫn chỉn chu.
 
 ### Đặc điểm nhận dạng
 
-| Yếu tố      | Mô tả                                                          |
-| ----------- | -------------------------------------------------------------- |
-| Cảm xúc     | Thư giãn, mơ mộng, mát mẻ, nhẹ nhàng, nữ tính                 |
-| Hình khối   | Card bo 16–20px, wave edge, shell badge, sand texture nhẹ      |
-| Không gian  | Nền trắng xanh nhạt, wave layer dưới cùng, foam dots           |
-| Chuyển động | Wave sway, bubble float, seagull glide, shell rotate nhẹ       |
-| Điểm nhấn   | Wave SVG lớn, seashell sticker, foam dots, diary page, anchor  |
+| Yếu tố      | Mô tả                                                                 |
+| ----------- | --------------------------------------------------------------------- |
+| Cảm xúc     | Dịu, mơ mộng, trong trẻo, lãng mạn, cảm giác hoàng hôn bình yên       |
+| Hình khối   | Card bo 18–24px, wave edge, diary paper, sun stamp, shell badge       |
+| Không gian  | Nền xanh dương nhạt, mây hồng, mặt trời vàng, sóng nhiều lớp, bờ cát |
+| Chuyển động | Wave sway, sun glow, cloud drift, sparkle shimmer, seagull glide      |
+| Điểm nhấn   | Sunset hero scene, wave SVG lớn, reflection path, seashell, diary page |
+| Chất liệu   | Paper grain nhẹ, sand texture, glassy water highlight, foam dots      |
 
 ### Bảng màu
 
 ```js
 export const theme = {
     token: {
-        colorBgBase: "#F0FAFF",
+        colorBgBase: "#EEF9FF",
         colorBgContainer: "#FFFFFF",
-        colorPrimary: "#5BB8E8",
-        colorTextBase: "#1B3A4B",
-        colorTextSecondary: "#5A7D8F",
-        colorSuccess: "#6FD9B5",
-        colorWarning: "#FFD88A",
-        colorError: "#FF7A8A",
-        colorBorder: "#B8E4F8",
-        borderRadius: 18,
+        colorPrimary: "#7CCDF2",
+        colorTextBase: "#18384A",
+        colorTextSecondary: "#5A7F92",
+        colorSuccess: "#7DDEC3",
+        colorWarning: "#FFD978",
+        colorError: "#FF8EA8",
+        colorBorder: "#BFEAF8",
+        borderRadius: 20,
         fontFamily: "'Quicksand', 'Nunito', sans-serif",
     },
 };
 
 // CSS Variables
-// --ocean-blue: #5BB8E8;
-// --foam-white: #F0FAFF;
-// --coral-pink: #FF9FB8;
-// --sand-warm: #FFE8C8;
-// --seafoam-green: #6FD9B5;
-// --deep-navy: #1B3A4B;
-// --shell-lavender: #C8B8FF;
+// --sky-blue-soft: #EEF9FF;
+// --ocean-blue: #7CCDF2;
+// --wave-blue: #A7E4FF;
+// --sunset-pink: #FFB7C8;
+// --blush-cloud: #FFD7E2;
+// --sun-gold: #FFD978;
+// --sand-warm: #FFEBC7;
+// --foam-white: #FBFEFF;
+// --seafoam-green: #7DDEC3;
+// --deep-navy: #18384A;
 ```
 
 ### Typography
@@ -93,34 +97,37 @@ export const theme = {
 
 ### Library usage
 
-| Library / Tool  | Cách dùng trong theme                                                |
-| --------------- | -------------------------------------------------------------------- |
-| Framer Motion   | Wave card hover, diary page flip, route transition như lật trang      |
-| SVGator         | Wave sway loop, seagull glide path, bubble rise, foam particle       |
-| Lenis           | Smooth scroll giữa diary pages, anchor tới sections                  |
-| CSS Keyframes   | Bubble idle float, wave gentle sway, shell rotate nhẹ                |
-| Realtime Colors | Tạo palette ocean-blue/coral-pink/seafoam có contrast tốt            |
-| Blush           | Illustration beach girl/seashell cho hero hoặc about section         |
+| Library / Tool  | Cách dùng trong theme                                                          |
+| --------------- | ------------------------------------------------------------------------------ |
+| Framer Motion   | Hero scene reveal theo lớp, diary page flip, route transition như lật trang    |
+| SVGator         | Wave sway loop, sun reflection shimmer, seagull glide path, cloud drift        |
+| Lenis           | Smooth scroll giữa diary pages, anchor tới shore/diary/gallery/bottle sections |
+| CSS Keyframes   | Wave gentle sway, sparkle twinkle, shell rotate, cloud float, sun glow         |
+| Realtime Colors | Tạo palette sky-blue/sunset-pink/sun-gold có contrast tốt                     |
+| Blush           | Illustration beach girl, diary writer, seashell picnic cho hero/about section  |
 
 ### Layout ideas
 
-- **Hero:** Wave SVG lớn ở dưới viewport, tên nằm như tiêu đề nhật ký, seagull bay ngang.
-- **About:** Diary page card với sand texture nhẹ, shell decoration ở góc.
-- **Projects:** Mỗi project là một trang nhật ký có wave divider giữa các entry.
-- **Skills:** Seashell collection: mỗi nhóm skill là một loại vỏ sò khác nhau.
-- **Contact:** Message in a bottle CTA, nút gửi có bubble trail animation.
+- **Hero:** Full-bleed sunset beach scene: sky gradient xanh nhạt → hồng, mặt trời vàng sát đường chân trời, 3–5 lớp sóng, reflection path trên mặt nước, seagull bay ngang.
+- **About:** Diary page đặt trên nền cát, có shell, starfish, sun stamp và tape hồng nhạt ở góc.
+- **Projects:** Mỗi project là một postcard/diary spread; phía trên có thumbnail cảnh biển khác nhau như bờ cát, mây hồng, thuyền xa, vệt nắng trên nước.
+- **Skills:** Seashell collection theo nhóm màu: blue shell, pink shell, gold shell, seafoam shell; hover mở tooltip như note nhỏ.
+- **Gallery/Highlights:** Scene strip ngang gồm cloud layer, wave divider, sparkle trên nước và mini lighthouse ở xa.
+- **Contact:** Message in a bottle CTA đặt ở mép sóng, nút gửi có bubble trail và ánh vàng phản chiếu.
 
 ### Animation rules
 
-| Sự kiện          | Effect                                      | Thư viện             |
-| ---------------- | ------------------------------------------- | -------------------- |
-| Page load        | Wave rise từ dưới + content fade in         | Framer Motion        |
-| Wave background  | Gentle sway loop 6–10s                      | CSS keyframes        |
-| Bubble idle      | Float lên chậm, opacity fade out ở top      | CSS keyframes        |
-| Card hover       | Lift + subtle wave shadow                   | CSS transition       |
-| Section entrance | Slide-up + fade, stagger 0.1s giữa items   | Framer Motion        |
-| Seagull          | Glide path từ trái sang phải, loop          | SVG/CSS animation    |
-| Shell decoration | Rotate ±5deg chậm                          | CSS keyframes        |
+| Sự kiện          | Effect                                                | Thư viện          |
+| ---------------- | ----------------------------------------------------- | ----------------- |
+| Page load        | Sky fade in, sun rise nhẹ, wave layer trượt từ dưới   | Framer Motion     |
+| Wave background  | 3 lớp sóng sway lệch phase 6–12s                      | CSS keyframes     |
+| Sun reflection   | Vệt vàng shimmer rất nhẹ trên mặt nước                | SVG/CSS animation |
+| Cloud idle       | Mây hồng trôi ngang chậm, opacity thay đổi nhẹ        | CSS keyframes     |
+| Sparkle idle     | Sparkle trên nước twinkle không đồng bộ               | CSS keyframes     |
+| Card hover       | Lift + shadow xanh nhạt + wave edge dịch 2–4px        | CSS transition    |
+| Section entrance | Slide-up + fade, stagger 0.1s giữa items              | Framer Motion     |
+| Seagull          | Glide path từ trái sang phải, loop rất chậm           | SVG/CSS animation |
+| Shell decoration | Rotate ±5deg chậm                                     | CSS keyframes     |
 
 ### Component notes
 
@@ -138,9 +145,13 @@ src/
 ├── features/
 │   ├── ocean-scene/
 │   │   ├── WaveBackground.jsx
+│   │   ├── SunsetSkyLayer.jsx
+│   │   ├── SunReflection.jsx
+│   │   ├── CloudDriftLayer.jsx
 │   │   ├── BubbleLayer.jsx
 │   │   ├── SeagullGlide.jsx
-│   │   └── FoamParticles.jsx
+│   │   ├── FoamParticles.jsx
+│   │   └── ShoreDecorations.jsx
 │   ├── diary-entries/
 │   │   ├── DiaryEntryCard.jsx
 │   │   ├── DiaryPageFlip.jsx
@@ -156,16 +167,19 @@ src/
 
 ### Tự tạo Assets 2D bằng SVG
 
-| File SVG tự tạo            | Nội dung cần vẽ                                    | Dùng cho               | Gợi ý kỹ thuật                                     |
-| -------------------------- | -------------------------------------------------- | ---------------------- | -------------------------------------------------- |
-| `wave-layers.svg`          | 3–4 lớp sóng chồng nhau, màu xanh gradient        | Background dưới cùng   | Dùng path curve, opacity khác nhau mỗi layer       |
-| `seashell-collection.svg`  | Conch, scallop, starfish, sand dollar, coral piece | Skill badges/decoration| Mỗi shell là symbol, stroke mềm, fill pastel       |
-| `bubble-set.svg`           | Bubble nhiều cỡ, có highlight trắng                | Floating particles     | Circle + ellipse highlight, opacity 0.3–0.6        |
-| `seagull-silhouette.svg`   | 2–3 seagull poses bay                              | Hero animation         | Path đơn giản, animate translateX + slight wave    |
-| `foam-dots-pattern.svg`    | Chấm foam nhỏ rải rác                             | Section divider/bg     | SVG pattern, opacity thấp, random size             |
-| `diary-page-frame.svg`     | Khung trang nhật ký có gáy sách và line rule       | Project cards          | Rect + line pattern, corner fold nhẹ               |
-| `bottle-message.svg`       | Chai thủy tinh, cork, cuộn giấy bên trong          | Contact CTA            | Glass effect bằng opacity gradient                 |
-| `anchor-rope-icons.svg`    | Anchor, rope knot, compass, helm wheel             | Nav icons/decoration   | Icon 24x24, stroke 2px, currentColor              |
+| File SVG tự tạo                | Nội dung cần vẽ                                           | Dùng cho                 | Gợi ý kỹ thuật                                      |
+| ------------------------------ | --------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
+| `sunset-sky-panorama.svg`      | Bầu trời xanh nhạt, mây hồng, mặt trời vàng trên biển     | Hero background          | Linear/radial gradient, layer opacity thấp          |
+| `wave-layers-sunset.svg`       | 4–5 lớp sóng xanh nhạt có highlight hồng/vàng             | Background dưới cùng     | Path curve, opacity khác nhau, animate translateX   |
+| `sun-reflection-ribbon.svg`    | Vệt ánh vàng trên mặt nước, sparkle nhỏ                   | Hero water highlight     | Narrow paths + small stars, shimmer bằng opacity    |
+| `pink-cloud-clusters.svg`      | Cụm mây hồng pastel nhiều kích thước                      | Sky decoration           | Symbol reuse, blur nhẹ, drift theo layer            |
+| `shoreline-sand-scene.svg`     | Bờ cát, vỏ sò, starfish, đá nhỏ, nét sóng chạm bờ         | Section divider/footer   | Sand noise pattern + soft shadow                    |
+| `seashell-collection.svg`      | Conch, scallop, starfish, sand dollar, coral piece        | Skill badges/decoration  | Mỗi shell là symbol, stroke mềm, fill pastel        |
+| `seagull-silhouette.svg`       | 2–3 seagull poses bay                                     | Hero animation           | Path đơn giản, animate translateX + slight wave     |
+| `foam-dots-pattern.svg`        | Chấm foam nhỏ rải rác                                     | Section divider/bg       | SVG pattern, opacity thấp, random size              |
+| `diary-page-frame.svg`         | Khung trang nhật ký có gáy sách, line rule, sun stamp     | Project cards            | Rect + line pattern, corner fold nhẹ                |
+| `bottle-message.svg`           | Chai thủy tinh, cork, cuộn giấy bên trong                 | Contact CTA              | Glass effect bằng opacity gradient                  |
+| `anchor-rope-icons.svg`        | Anchor, rope knot, compass, helm wheel                    | Nav icons/decoration     | Icon 24x24, stroke 2px, currentColor                |
 
 ---
 

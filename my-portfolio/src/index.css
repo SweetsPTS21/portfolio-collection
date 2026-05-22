@@ -1,7 +1,7 @@
 :root {
   --page-width: 941;
   --page-height: 1672;
-  --sheet-max-width: 1320px;
+  --sheet-max-width: 1120px;
   color: #604653;
   background: #f6dce6;
   font-family: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
@@ -99,8 +99,8 @@ img {
 .hero-section h1 {
   position: absolute;
   top: 0.4%;
-  left: 28%;
-  width: 44%;
+  left: 27%;
+  width: 46%;
   text-align: center;
   font-size: clamp(3.5rem, 14vw, 8.2rem);
 }
@@ -108,8 +108,8 @@ img {
 .avatar-card {
   position: absolute;
   top: 20%;
-  left: 11%;
-  width: 39%;
+  left: 7%;
+  width: 35%;
   rotate: -3deg;
 }
 
@@ -118,81 +118,92 @@ img {
   height: auto;
 }
 
-.intro-copy {
+.hero-profile-note {
   position: absolute;
-  top: 22%;
-  right: 6%;
-  width: 43%;
-  color: #604653;
+  top: 13%;
+  right: 5%;
+  width: 46%;
+  height: auto;
+  rotate: 3deg;
+}
+
+.intro-note {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hello {
+  position: absolute;
+  top: 24%;
+  left: 14%;
   margin: 0;
-  font-size: clamp(1.08rem, 3vw, 1.85rem);
+  font-size: clamp(0.9rem, 2.05vw, 1.45rem);
   font-weight: 800;
   line-height: 1.1;
 }
 
-.intro-copy h2 {
+.profile-name {
+  position: absolute;
+  top: 34%;
+  left: 14%;
+  width: 72%;
+}
+
+.hero-profile-note h2 {
   margin: 0 0 0.55vw;
   color: #f46ea8;
   font-family: 'Baloo 2', cursive;
-  font-size: clamp(2rem, 5.2vw, 3.15rem);
+  font-size: clamp(1.65rem, 4.2vw, 2.75rem);
   line-height: 0.96;
   letter-spacing: 0;
 }
 
-.role-pill {
-  display: inline-block;
-  margin: 0 0 0.7vw;
-  padding: 0.35vw 1vw;
-  border-radius: 0.35vw;
-  color: #fff;
-  background: #ef77aa;
-  font-size: clamp(0.6rem, 1.35vw, 0.82rem);
-  font-weight: 800;
+.profile-note-list {
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.42vw;
+  width: 72%;
+  margin: 0;
 }
 
-.intro-text {
-  margin: 0 0 0.48vw;
-  font-size: clamp(0.66rem, 1.45vw, 0.92rem);
-  font-weight: 700;
-  line-height: 1.22;
+.profile-note-list div {
+  min-width: 0;
 }
 
-.goal-box {
-  margin-top: 0.85vw;
-}
-
-.goal-box h3 {
-  margin: 0 0 0.35vw;
+.profile-note-list dt {
+  margin: 0;
   color: #ef6da5;
-  font-family: 'Baloo 2', cursive;
-  font-size: clamp(1rem, 2.3vw, 1.4rem);
-  line-height: 1;
+  font-size: clamp(0.48rem, 1.05vw, 0.7rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
 }
 
-.goal-box ul,
 .proud-list ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.goal-box li {
-  display: inline-block;
-  margin: 0.12vw 0.14vw;
-  padding: 0.22vw 0.6vw;
-  border: 0.1vw solid #b8bfd0;
-  border-radius: 999px;
-  background: #fff;
+.profile-note-list dd {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
   color: #6b5664;
-  font-size: clamp(0.5rem, 1.08vw, 0.68rem);
+  font-size: clamp(0.58rem, 1.24vw, 0.82rem);
   font-weight: 800;
+  line-height: 1.12;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .projects-section {
-  top: 36.6%;
+  top: 34.6%;
   left: 17.1%;
   width: 68.8%;
   height: 39.8%;

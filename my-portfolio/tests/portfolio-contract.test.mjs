@@ -56,6 +56,10 @@ assert.doesNotMatch(app, /decorativeIcons|decor-|heroTemplate|hero-template/, "A
 assert.doesNotMatch(app, /avatar-art|portrait-face|project-visual|projectLooks/, "App should not draw synthetic image placeholders");
 assert.match(app, /chapters\.map/, "App should render project cards from portfolio data");
 assert.match(app, /aria-label=\{portfolioTitle\}/, "App should expose the portfolio title as an accessible label");
+assert.match(app, /hero-profile-note/, "hero should render a right-side personal information note");
+assert.match(app, /profile-note-list/, "hero note should list compact personal details");
+assert.match(app, /profile\.future/, "hero note should include the future direction from portfolio data");
+assert.doesNotMatch(app, /className=["']goal-box["']/, "hero should remove the old goal box to keep the intro compact");
 
 assert.match(css, /--page-width:\s*941;/, "CSS should preserve current page.png width");
 assert.match(css, /--page-height:\s*1672;/, "CSS should preserve current page.png height");
@@ -63,6 +67,9 @@ assert.match(css, /--sheet-max-width:\s*1120px;/, "sheet should scale above the 
 assert.match(css, /\.portfolio-sheet\s*{[\s\S]*aspect-ratio:\s*941\s*\/\s*1672;/, "sheet should match current page.png aspect ratio");
 assert.match(css, /\.portfolio-sheet\s*{[\s\S]*width:\s*min\(100vw,\s*var\(--sheet-max-width\)\);/, "sheet width should use the larger desktop scale variable");
 assert.match(css, /\.page-frame\s*{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;[\s\S]*width:\s*100%;[\s\S]*height:\s*100%;/, "page.png should fill the frame");
+assert.match(css, /\.avatar-card\s*{[\s\S]*left:\s*7%;[\s\S]*width:\s*35%;/, "hero avatar frame should sit on the left side");
+assert.match(css, /\.hero-profile-note\s*{[\s\S]*right:\s*5%;[\s\S]*width:\s*46%;/, "hero personal note should sit on the right side");
+assert.match(css, /\.profile-note-list\s*{[\s\S]*grid-template-columns:\s*1fr;/, "hero note should stack compact personal fields");
 assert.match(css, /\.projects-grid\s*{[\s\S]*grid-template-columns:\s*repeat\(3,\s*1fr\);/, "project list should follow the 3-column DESIGN layout");
 assert.match(css, /\.projects-section\s*{[\s\S]*top:\s*34\.6%;[\s\S]*height:\s*39\.8%;/, "project section should align with the middle panel in the current page.png");
 assert.match(css, /\.projects-grid\s*{[\s\S]*height:\s*77%;[\s\S]*align-content:\s*space-between;/, "project grid should distribute the two project rows across the current middle panel");
