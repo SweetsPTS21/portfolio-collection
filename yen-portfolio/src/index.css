@@ -136,7 +136,7 @@ img {
   transform: translateY(-2px);
 }
 
-.sakura-branch {
+.sakura-branch-left {
   position: fixed;
   top: -20px;
   left: -72px;
@@ -145,6 +145,17 @@ img {
   pointer-events: none;
   transform-origin: 0 0;
   animation: branch-sway 7s ease-in-out infinite;
+}
+
+.sakura-branch-right {
+  position: fixed;
+  top: -34px;
+  right: -64px;
+  z-index: 1;
+  width: min(62vw, 720px);
+  pointer-events: none;
+  transform-origin: 100% 0;
+  animation: branch-sway-reverse 7s ease-in-out infinite;
 }
 
 .petal-layer,
@@ -212,6 +223,8 @@ img {
   pointer-events: none;
   opacity: 0.78;
   filter: drop-shadow(0 16px 28px rgba(122, 96, 104, 0.14));
+  transform-origin: 50% 100%;
+  animation: dog-companion-breathe 4.6s ease-in-out infinite;
 }
 
 .page-transition-surface {
@@ -960,6 +973,8 @@ h1 {
   width: min(34%, 150px);
   opacity: 0.94;
   filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.28));
+  transform-origin: 50% 100%;
+  animation: cat-brush-perch 3.8s ease-in-out infinite;
 }
 
 .brush-girl {
@@ -1101,6 +1116,16 @@ h1 {
   }
 }
 
+@keyframes branch-sway-reverse {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-1.8deg);
+  }
+}
+
 @keyframes ink-stroke-draw {
   0%,
   100% {
@@ -1128,6 +1153,32 @@ h1 {
   }
   45% {
     transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes dog-companion-breathe {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.8deg) scale(1);
+  }
+  45% {
+    transform: translateY(-7px) rotate(1.2deg) scale(1.015);
+  }
+  72% {
+    transform: translateY(-2px) rotate(-0.4deg) scale(1.006);
+  }
+}
+
+@keyframes cat-brush-perch {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  42% {
+    transform: translateY(-8px) rotate(-1.8deg);
+  }
+  68% {
+    transform: translateY(-3px) rotate(1deg);
   }
 }
 

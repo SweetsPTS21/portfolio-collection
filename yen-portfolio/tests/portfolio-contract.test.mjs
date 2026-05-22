@@ -80,14 +80,17 @@ assert.match(css, /\.page-transition-surface\s*{[\s\S]*position:\s*relative;[\s\
 assert.match(appShell, /dog\.png/, "app shell should import dog background asset");
 assert.match(appShell, /className=["']dog-bg-companion["']/, "app shell should render dog in a dedicated background class");
 assert.match(css, /\.dog-bg-companion\s*{[\s\S]*position:\s*fixed;[\s\S]*left:\s*clamp\(8px,\s*3vw,\s*42px\);[\s\S]*bottom:\s*0;/, "dog companion should sit in the lower-left background");
+assert.match(css, /\.dog-bg-companion\s*{[\s\S]*animation:\s*dog-companion-breathe/, "dog companion should have a gentle idle animation");
 assert.match(brushStrokeDraw, /cat\.png/, "brush stroke draw should import cat asset");
 assert.match(brushStrokeDraw, /className=["']brush-cat["']/, "brush stroke draw should render cat inside the brush card");
 assert.match(css, /\.brush-stroke-draw\s*{[\s\S]*position:\s*relative;[\s\S]*overflow:\s*hidden;/, "brush stroke draw should frame the cat asset");
-assert.match(css, /\.brush-cat\s*{[\s\S]*position:\s*absolute;[\s\S]*right:\s*14px;[\s\S]*bottom:\s*10px;/, "cat should sit inside the brush stroke draw surface");
-assert.match(sakuraBranch, /sakura-branch\.png/, "sakura branch should use the PNG asset");
+assert.match(css, /\.brush-cat\s*{[\s\S]*position:\s*absolute;[\s\S]*left:\s*14px;[\s\S]*bottom:\s*10px;/, "cat should sit inside the brush stroke draw surface");
+assert.match(css, /\.brush-cat\s*{[\s\S]*animation:\s*cat-brush-perch/, "cat should have a gentle perch animation");
+assert.match(sakuraBranch, /sakura-branch-left\.png/, "sakura branch should use the left PNG asset");
+assert.match(sakuraBranch, /sakura-branch-right\.png/, "sakura branch should use the right PNG asset");
 assert.doesNotMatch(sakuraBranch, /sakura-branch\.svg/, "sakura branch should no longer import the SVG asset");
-assert.match(css, /\.sakura-branch\s*{[\s\S]*left:\s*-72px;/, "sakura branch should sit in the upper-left corner");
-assert.doesNotMatch(css, /\.sakura-branch\s*{[\s\S]*right:\s*-72px;/, "sakura branch should not sit in the upper-right corner");
+assert.match(css, /\.sakura-branch-left\s*{[\s\S]*left:\s*-72px;/, "left sakura branch should sit in the upper-left corner");
+assert.match(css, /\.sakura-branch-right\s*{[\s\S]*right:\s*-64px;/, "right sakura branch should sit in the upper-right corner");
 assert.match(petalFallLayer, /sakura-petal-blush\.svg/, "petal layer should import the blush petal asset");
 assert.match(petalFallLayer, /sakura-petal-soft\.svg/, "petal layer should import the soft petal asset");
 assert.match(petalFallLayer, /sakura-petal-rose\.svg/, "petal layer should import the rose petal asset");
@@ -96,11 +99,11 @@ assert.match(petalFallLayer, /petal-depth-back/, "petal layer should render a ba
 assert.match(petalFallLayer, /petal-depth-front/, "petal layer should render a foreground-depth petal class");
 
 for (const token of [
-  "--sakura-pink: #F2A0B8",
-  "--blossom-white: #FFFBF7",
-  "--ink-charcoal: #2D2028",
-  "--washi-gold: #FFE4A0",
-  "--paper-cream: #FFF5EC",
+  "--sakura-pink: #f2a0b8",
+  "--blossom-white: #fffbf7",
+  "--ink-charcoal: #2d2028",
+  "--washi-gold: #ffe4a0",
+  "--paper-cream: #fff5ec",
   "sakura-petal-fall",
   "sakura-petal-fall-deep",
   "sakura-petal-sway",
@@ -108,6 +111,8 @@ for (const token of [
   "branch-sway",
   "ink-stroke-draw",
   "sparrow-hop",
+  "dog-companion-breathe",
+  "cat-brush-perch",
   "prefers-reduced-motion",
 ]) {
   assert.match(css, new RegExp(token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `${token} should be present`);
@@ -161,6 +166,8 @@ assert.deepEqual(
   "catalog SVG asset set should be complete",
 );
 assert.ok(existsSync(join(assetDir, "sakura-branch.png")), "sakura branch PNG asset should exist");
+assert.ok(existsSync(join(assetDir, "sakura-branch-left.png")), "left sakura branch PNG asset should exist");
+assert.ok(existsSync(join(assetDir, "sakura-branch-right.png")), "right sakura branch PNG asset should exist");
 assert.ok(existsSync(join(assetDir, "dog.png")), "dog background PNG asset should exist");
 assert.ok(existsSync(join(assetDir, "cat.png")), "cat brush PNG asset should exist");
 
