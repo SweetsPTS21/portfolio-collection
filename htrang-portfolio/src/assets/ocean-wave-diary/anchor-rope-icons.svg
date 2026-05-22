@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120" role="img" aria-label="Anchor rope and compass icons">
+  <g fill="none" stroke="#18384A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".56">
+    <circle cx="52" cy="24" r="12"/>
+    <path d="M52 36v58M24 58h56M28 88c22 28 58 28 80 0M18 88h20M66 88h20"/>
+    <path d="M136 30c40 0 40 58 80 58s40-58 80-58" stroke="#7CCDF2" opacity=".72"/>
+    <circle cx="210" cy="60" r="28" stroke="#FFB7C8"/>
+    <path d="M210 36l10 24-10 24-10-24z" fill="#FFD978" stroke="none" opacity=".86"/>
+  </g>
+</svg>

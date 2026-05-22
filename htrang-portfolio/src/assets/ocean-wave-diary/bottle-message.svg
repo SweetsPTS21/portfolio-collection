@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 360" role="img" aria-label="Message bottle with a small diary note">
+  <defs>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#FBFEFF" stop-opacity=".2"/>
+      <stop offset=".5" stop-color="#A7E4FF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#7CCDF2" stop-opacity=".22"/>
+    </linearGradient>
+  </defs>
+  <path d="M94 28h70v58c0 26 56 54 56 130 0 76-46 120-92 120S36 292 36 216c0-76 58-104 58-130z" fill="url(#glass)" stroke="#18384A" stroke-opacity=".18" stroke-width="8"/>
+  <rect x="86" y="16" width="86" height="32" rx="12" fill="#FFEBC7" stroke="#18384A" stroke-opacity=".16" stroke-width="5"/>
+  <rect x="72" y="178" width="114" height="72" rx="12" fill="#FBFEFF" opacity=".78"/>
+  <path d="M92 202h74M92 224h58" stroke="#FFB7C8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="180" cy="116" r="16" fill="#FFD978" opacity=".76"/>
+</svg>

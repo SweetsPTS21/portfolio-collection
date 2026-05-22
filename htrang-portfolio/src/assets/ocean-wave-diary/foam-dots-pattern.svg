@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-label="Foam bubbles and sparkle pattern">
+  <g fill="none" stroke="#FBFEFF" stroke-width="3" opacity=".82">
+    <circle cx="54" cy="68" r="16"/>
+    <circle cx="134" cy="126" r="10"/>
+    <circle cx="224" cy="78" r="20"/>
+    <circle cx="318" cy="152" r="13"/>
+    <circle cx="440" cy="90" r="18"/>
+    <circle cx="476" cy="192" r="9"/>
+  </g>
+  <g fill="#FFD978" opacity=".72">
+    <path d="M96 196l5 11 11 5-11 5-5 11-5-11-11-5 11-5z"/>
+    <path d="M384 38l6 13 13 6-13 6-6 13-6-13-13-6 13-6z"/>
+    <path d="M260 206l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/>
+  </g>
+</svg>

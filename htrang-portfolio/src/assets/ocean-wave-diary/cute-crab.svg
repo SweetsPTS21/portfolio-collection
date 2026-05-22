@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="Cute pastel crab on the beach">
+  <defs>
+    <linearGradient id="shell" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB7C8"/>
+      <stop offset="1" stop-color="#FF8EA8"/>
+    </linearGradient>
+    <linearGradient id="claw" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFD7E2"/>
+      <stop offset="1" stop-color="#FFB7C8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="180" cy="154" rx="88" ry="58" fill="url(#shell)" stroke="#18384A" stroke-opacity=".16" stroke-width="7"/>
+  <path d="M116 132c-22-30-58-38-86-16 14 26 44 34 76 22" fill="none" stroke="#FFB7C8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M244 132c22-30 58-38 86-16-14 26-44 34-76 22" fill="none" stroke="#FFB7C8" stroke-width="16" stroke-linecap="round"/>
+  <g fill="url(#claw)" stroke="#18384A" stroke-opacity=".14" stroke-width="6">
+    <path d="M40 104c-16-24 2-58 32-56 22 2 36 28 22 48-12-12-24-12-36 0 8 10 2 20-18 8z"/>
+    <path d="M320 104c16-24-2-58-32-56-22 2-36 28-22 48 12-12 24-12 36 0-8 10-2 20 18 8z"/>
+  </g>
+  <g stroke="#18384A" stroke-opacity=".22" stroke-width="10" stroke-linecap="round">
+    <path d="M110 176l-44 28M136 198l-26 38M250 176l44 28M224 198l26 38"/>
+    <path d="M156 102l-14-38M204 102l14-38"/>
+  </g>
+  <g>
+    <circle cx="142" cy="62" r="17" fill="#FBFEFF"/>
+    <circle cx="218" cy="62" r="17" fill="#FBFEFF"/>
+    <circle cx="147" cy="66" r="7" fill="#18384A"/>
+    <circle cx="213" cy="66" r="7" fill="#18384A"/>
+    <path d="M154 150c14 18 38 18 52 0" fill="none" stroke="#18384A" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+    <circle cx="118" cy="136" r="9" fill="#FFD7E2" opacity=".8"/>
+    <circle cx="242" cy="136" r="9" fill="#FFD7E2" opacity=".8"/>
+  </g>
+  <g fill="#FFD978" opacity=".82">
+    <circle cx="70" cy="226" r="7"/>
+    <circle cx="304" cy="214" r="5"/>
+    <path d="M284 172l6 12 13 5-13 5-6 12-6-12-13-5 13-5z"/>
+  </g>
+</svg>
