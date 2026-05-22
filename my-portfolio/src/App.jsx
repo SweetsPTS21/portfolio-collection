@@ -8,6 +8,12 @@ import bt3Img1 from './assets/portfolio/bt3-img.png';
 import bt4Img1 from './assets/portfolio/bt4-img.png';
 import bt5Img1 from './assets/portfolio/bt5-img.png';
 import bt6Img1 from './assets/portfolio/bt6-img.png';
+import bt1Pdf from '../docs/Bt1.pdf';
+import bt2Pdf from '../docs/Bt2.pdf';
+import bt3Pdf from '../docs/Bt3.pdf';
+import bt4Pdf from '../docs/Bt4.pdf';
+import bt5Pdf from '../docs/Bt5.pdf';
+import bt6Pdf from '../docs/Bt6.pdf';
 import conclutionLeft1 from './assets/portfolio/conclution-left.png';
 import conclutionRight1 from './assets/portfolio/conclution-right.png';
 import infoCardBg from './assets/portfolio/info-card-bg.png';
@@ -72,6 +78,32 @@ import wrap2066LollipopHeart1 from './assets/portfolio/wrap-icon-2/wrap2-066-lol
 import wrap2067PaperclipPink1 from './assets/portfolio/wrap-icon-2/wrap2-067-paperclip-pink.png';
 import wrap2070BowPinkSmall1 from './assets/portfolio/wrap-icon-2/wrap2-070-bow-pink-small.png';
 import backgroundFull1 from './assets/portfolio/background-full.png';
+import bgBowRibbonLarge from './assets/portfolio/wrap-icon-1/wrap1-002-bow-ribbon-large.png';
+import bgBowWavy from './assets/portfolio/wrap-icon-1/wrap1-003-bow-wavy.png';
+import bgHeartPuffy from './assets/portfolio/wrap-icon-1/wrap1-011-heart-puffy.png';
+import bgHeartIridescent from './assets/portfolio/wrap-icon-1/wrap1-013-heart-iridescent.png';
+import bgStarGem from './assets/portfolio/wrap-icon-1/wrap1-009-star-gem.png';
+import bgCloudWhite from './assets/portfolio/wrap-icon-1/wrap1-031-cloud-white.png';
+import bgCloudGingham from './assets/portfolio/wrap-icon-1/wrap1-034-cloud-gingham.png';
+import bgCursorPixel from './assets/portfolio/wrap-icon-1/wrap1-051-cursor-pixel.png';
+import bgCursorClickPink from './assets/portfolio/wrap-icon-1/wrap1-055-cursor-click-pink.png';
+import bgTapeLove from './assets/portfolio/wrap-icon-1/wrap1-075-label-made-with-love.png';
+import bgLabelCutie from './assets/portfolio/wrap-icon-1/wrap1-081-label-cutie.png';
+import bgTinyHeart from './assets/portfolio/wrap-icon-1/wrap1-062-tiny-heart.png';
+import bgTamagotchiLarge from './assets/portfolio/wrap-icon-2/wrap2-001-tamagotchi-large.png';
+import bgCdSweetDays from './assets/portfolio/wrap-icon-2/wrap2-002-cd-sweet-days.png';
+import bgNoteToSelf from './assets/portfolio/wrap-icon-2/wrap2-003-note-to-self.png';
+import bgHeartMirror from './assets/portfolio/wrap-icon-2/wrap2-004-heart-mirror.png';
+import bgBrowserWindowTabs from './assets/portfolio/wrap-icon-2/wrap2-007-browser-window-tabs.png';
+import bgPopupSoCute from './assets/portfolio/wrap-icon-2/wrap2-006-popup-so-cute.png';
+import bgTapeRainbow from './assets/portfolio/wrap-icon-2/wrap2-049-tape-rainbow.png';
+import bgWandStar from './assets/portfolio/wrap-icon-2/wrap2-051-wand-star.png';
+import bgBowIridescent from './assets/portfolio/wrap-icon-2/wrap2-053-bow-iridescent.png';
+import bgBowBlueSmall from './assets/portfolio/wrap-icon-2/wrap2-071-bow-blue-small.png';
+import bgGemHeartPink from './assets/portfolio/wrap-icon-2/wrap2-069-gem-heart-pink.png';
+import bgCursorWhite from './assets/portfolio/wrap-icon-2/wrap2-056-cursor-white.png';
+import bgFlowerPurple from './assets/portfolio/wrap-icon-2/wrap2-043-flower-purple.png';
+import bgSparkleWhite from './assets/portfolio/wrap-icon-2/wrap2-028-sparkle-white.png';
 
 const pageMotion = {
   hidden: { opacity: 0, scale: 0.985, y: 18 },
@@ -92,10 +124,242 @@ const layerMotion = {
   },
 };
 
+const backgroundDecorItems = [
+  {
+    src: bgTamagotchiLarge,
+    className: 'bg-xl bg-left bg-float-slow',
+    x: '4vw',
+    y: '8vh',
+    rotate: '-8deg',
+    delay: '-1s',
+  },
+  {
+    src: bgCdSweetDays,
+    className: 'bg-xl bg-right bg-drift',
+    x: 'calc(100vw - 190px)',
+    y: '10vh',
+    rotate: '12deg',
+    delay: '-2.4s',
+  },
+  {
+    src: bgNoteToSelf,
+    className: 'bg-lg bg-left bg-wiggle',
+    x: '6vw',
+    y: '42vh',
+    rotate: '5deg',
+    delay: '-0.7s',
+  },
+  {
+    src: bgHeartMirror,
+    className: 'bg-lg bg-right bg-float-slow',
+    x: 'calc(100vw - 170px)',
+    y: '48vh',
+    rotate: '-11deg',
+    delay: '-3s',
+  },
+  {
+    src: bgBrowserWindowTabs,
+    className: 'bg-wide bg-left bg-drift',
+    x: '3vw',
+    y: '78vh',
+    rotate: '-3deg',
+    delay: '-1.5s',
+  },
+  {
+    src: bgPopupSoCute,
+    className: 'bg-md bg-right bg-wiggle',
+    x: 'calc(100vw - 175px)',
+    y: '78vh',
+    rotate: '9deg',
+    delay: '-2s',
+  },
+  {
+    src: bgBowRibbonLarge,
+    className: 'bg-md bg-left bg-float-slow',
+    x: '16vw',
+    y: '5vh',
+    rotate: '10deg',
+    delay: '-1.8s',
+  },
+  {
+    src: bgBowWavy,
+    className: 'bg-sm bg-right bg-wiggle',
+    x: '82vw',
+    y: '29vh',
+    rotate: '-10deg',
+    delay: '-0.4s',
+  },
+  {
+    src: bgHeartPuffy,
+    className: 'bg-sm bg-left bg-float-slow',
+    x: '14vw',
+    y: '26vh',
+    rotate: '-7deg',
+    delay: '-2.2s',
+  },
+  {
+    src: bgHeartIridescent,
+    className: 'bg-sm bg-right bg-twinkle',
+    x: '89vw',
+    y: '63vh',
+    rotate: '14deg',
+    delay: '-1.2s',
+  },
+  {
+    src: bgStarGem,
+    className: 'bg-xs bg-left bg-twinkle',
+    x: '9vw',
+    y: '62vh',
+    rotate: '18deg',
+    delay: '-1.9s',
+  },
+  {
+    src: bgCloudWhite,
+    className: 'bg-sm bg-right bg-drift',
+    x: '74vw',
+    y: '5vh',
+    rotate: '-2deg',
+    delay: '-3.2s',
+  },
+  {
+    src: bgCloudGingham,
+    className: 'bg-sm bg-left bg-drift',
+    x: '18vw',
+    y: '72vh',
+    rotate: '6deg',
+    delay: '-1.1s',
+  },
+  {
+    src: bgCursorPixel,
+    className: 'bg-xs bg-right bg-wiggle',
+    x: '77vw',
+    y: '40vh',
+    rotate: '-14deg',
+    delay: '-0.8s',
+  },
+  {
+    src: bgCursorClickPink,
+    className: 'bg-xs bg-left bg-wiggle',
+    x: '20vw',
+    y: '52vh',
+    rotate: '8deg',
+    delay: '-2.7s',
+  },
+  {
+    src: bgTapeLove,
+    className: 'bg-md bg-left bg-drift',
+    x: '7vw',
+    y: '91vh',
+    rotate: '7deg',
+    delay: '-3.6s',
+  },
+  {
+    src: bgLabelCutie,
+    className: 'bg-sm bg-right bg-float-slow',
+    x: '83vw',
+    y: '91vh',
+    rotate: '-5deg',
+    delay: '-1.6s',
+  },
+  {
+    src: bgTinyHeart,
+    className: 'bg-tiny bg-left bg-twinkle',
+    x: '29vw',
+    y: '14vh',
+    rotate: '0deg',
+    delay: '-0.5s',
+  },
+  {
+    src: bgTapeRainbow,
+    className: 'bg-md bg-right bg-drift',
+    x: '73vw',
+    y: '18vh',
+    rotate: '-9deg',
+    delay: '-2.6s',
+  },
+  {
+    src: bgWandStar,
+    className: 'bg-xs bg-left bg-twinkle',
+    x: '25vw',
+    y: '86vh',
+    rotate: '-12deg',
+    delay: '-1.4s',
+  },
+  {
+    src: bgBowIridescent,
+    className: 'bg-sm bg-right bg-float-slow',
+    x: '80vw',
+    y: '70vh',
+    rotate: '11deg',
+    delay: '-2.1s',
+  },
+  {
+    src: bgBowBlueSmall,
+    className: 'bg-xs bg-left bg-wiggle',
+    x: '11vw',
+    y: '36vh',
+    rotate: '-4deg',
+    delay: '-3.1s',
+  },
+  {
+    src: bgGemHeartPink,
+    className: 'bg-xs bg-right bg-twinkle',
+    x: '92vw',
+    y: '38vh',
+    rotate: '8deg',
+    delay: '-0.9s',
+  },
+  {
+    src: bgCursorWhite,
+    className: 'bg-xs bg-left bg-wiggle',
+    x: '30vw',
+    y: '7vh',
+    rotate: '16deg',
+    delay: '-1.7s',
+  },
+  {
+    src: bgFlowerPurple,
+    className: 'bg-xs bg-right bg-float-slow',
+    x: '70vw',
+    y: '87vh',
+    rotate: '-7deg',
+    delay: '-2.9s',
+  },
+  {
+    src: bgSparkleWhite,
+    className: 'bg-tiny bg-right bg-twinkle',
+    x: '68vw',
+    y: '31vh',
+    rotate: '0deg',
+    delay: '-0.2s',
+  },
+];
+
+const BackgroundDecor = () => (
+  <div className="background-decor" aria-hidden="true">
+    <div className="background-grid" />
+    {backgroundDecorItems.map((item, index) => (
+      <img
+        key={`${item.src}-${index}`}
+        className={`bg-decor-item ${item.className}`}
+        alt=""
+        src={item.src}
+        style={{
+          '--x': item.x,
+          '--y': item.y,
+          '--rotate': item.rotate,
+          '--delay': item.delay,
+        }}
+      />
+    ))}
+  </div>
+);
+
 const App = () => {
   return (
     <div className="wrapper">
       <div className="app">
+        <BackgroundDecor />
         <motion.div
           className="main-page"
           variants={pageMotion}
@@ -107,13 +371,7 @@ const App = () => {
               <span key={index} />
             ))}
           </div>
-          <div className="background-layer">
-            <img
-              className="background-full"
-              alt="Background"
-              src={backgroundFull1}
-            />
-          </div>
+          <div className="background-layer"></div>
           <motion.div className="content-layer" variants={layerMotion}>
             <div className="contact-section">
               <p className="text-wrapper">
@@ -162,7 +420,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   Sắp xếp file như một kệ sách tiểu thuyết, đặt tên đúng chuẩn
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt1Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 1 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
               <div className="project-card-2">
                 <div className="project-img-fram">
@@ -172,7 +438,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   Tìm kiếm nguồn dữ liệu chính thống, giúp học nhẹ nhàng hơn
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt2Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 2 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
               <div className="project-card-3">
                 <div className="project-img-fram">
@@ -182,7 +456,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   AI là công cụ, quyết định vẫn là ở con người
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt3Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 3 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
               <div className="project-card-4">
                 <div className="project-img-fram">
@@ -192,7 +474,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   Làm việc nhóm trên Notion như một câu lạc bộ sách nhỏ
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt4Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 4 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
               <div className="project-card-5">
                 <div className="project-img-fram">
@@ -202,7 +492,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   Dùng AI gợi ý kịch bản video ngắn về luật sở hữu trí tuệ
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt5Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 5 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
               <div className="project-card-6">
                 <div className="project-img-fram">
@@ -212,7 +510,15 @@ const App = () => {
                 <p className="text-wrapper-5">
                   Không copy AI, luôn tư duy độc lập, trích dẫn nguồn đầy đủ
                 </p>
-                <div className="text-wrapper-6">Xem thêm</div>
+                <a
+                  className="text-wrapper-6"
+                  href={bt6Pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Mở bài tập 6 PDF"
+                >
+                  Xem thêm
+                </a>
               </div>
             </div>
             <div className="hero-section">
