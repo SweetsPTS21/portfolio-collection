@@ -1,31 +1,58 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { projects } from '../data/portfolio';
+import { projectIntro, projects } from '../data/portfolio';
 
-function ProjectCard({ project, index }) {
+function ProjectFeature({ project, index }) {
   const Icon = project.icon;
 
   return (
     <motion.article
-      className="project-card glass-card"
+      className="project-feature"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45, delay: index * 0.07 }}
-      whileHover={{ y: -8, scale: 1.015 }}
     >
-      <span className="project-card__number">{project.id}</span>
-      <div className="project-card__icon" style={{ '--project-color': project.color }}>
-        <Icon size={44} strokeWidth={1.5} />
+      <div
+        className="project-feature__header glass-card"
+        style={{ '--project-color': project.color }}
+      >
+        <span className="project-card__number">{project.id}</span>
+        <div className="project-card__icon">
+          <Icon size={44} strokeWidth={1.5} />
+        </div>
+        <div>
+          <h3>{project.title}</h3>
+          <strong>{project.subtitle}</strong>
+        </div>
       </div>
-      <h3>{project.title}</h3>
-      <strong>{project.subtitle}</strong>
-      <p>{project.desc}</p>
-      <a className="project-card__pdf" href={project.pdf} target="_blank" rel="noreferrer">
-        <span>Mở PDF</span>
-        <ExternalLink size={16} strokeWidth={1.8} />
-      </a>
+
+      <div className="project-step-list">
+        {project.beats.map((beat, beatIndex) => (
+          <motion.div
+            className="project-step-card"
+            key={`${project.id}-${beat.label}`}
+            initial={{ opacity: 0, x: beatIndex % 2 === 0 ? -18 : 18 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08 + beatIndex * 0.05 }}
+          >
+            <span>{beat.label}</span>
+            <p>{beat.text}</p>
+          </motion.div>
+        ))}
+
+        <a
+          className="project-card__pdf"
+          href={project.pdf}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span>Mở PDF</span>
+          <ExternalLink size={16} strokeWidth={1.8} />
+        </a>
+      </div>
     </motion.article>
   );
 }
@@ -44,9 +71,10 @@ export default function Projects() {
           <span>Dự án</span>
           <span className="hud-star">✦</span>
         </div>
-        <div className="projects-grid">
+        <p className="section-lead">{projectIntro}</p>
+        <div className="project-feature-flow">
           {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectFeature key={project.id} project={project} index={i} />
           ))}
         </div>
         <div className="decor-dot-grid projects-frame__dots" />

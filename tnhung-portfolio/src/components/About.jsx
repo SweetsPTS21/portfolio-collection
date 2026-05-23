@@ -5,17 +5,26 @@ import { person } from '../data/portfolio';
 
 const infoItems = [
   { icon: User, label: 'Họ và tên', value: person.name },
-  { icon: GraduationCap, label: 'Vai trò', value: person.role },
+  { icon: GraduationCap, label: 'Ngành học', value: person.major },
   { icon: BookOpen, label: 'Trường', value: person.school },
   { icon: Heart, label: 'Sở thích', value: person.hobbies },
+  { icon: Heart, label: 'Phong cách cá nhân', value: person.style },
 ];
 
 function scrollToProjects() {
-  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-  document.getElementById('projects')?.scrollIntoView({ behavior });
+  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
 }
 
-export default function About() {
+export default function About({ onNavigate }) {
+  const handleProjectsClick = () => {
+    if (onNavigate) {
+      onNavigate('projects');
+      return;
+    }
+
+    scrollToProjects();
+  };
+
   return (
     <section id="about" className="page-section about-section">
       <div className="about-grid">
@@ -34,14 +43,13 @@ export default function About() {
             <span>Welcome to</span>
             <strong>My Digital Space</strong>
           </h1>
-          <p className="about-intro">{person.intro}</p>
           <p className="about-quote">"{person.quote}"</p>
           <motion.button
             className="glass-cta"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             type="button"
-            onClick={scrollToProjects}
+            onClick={handleProjectsClick}
           >
             Khám phá hành trình <span aria-hidden="true">→</span>
           </motion.button>
@@ -85,6 +93,23 @@ export default function About() {
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="home-story-flow">
+        {person.homeStoryCards.map((card, index) => (
+          <motion.article
+            className="home-info-card glass-card"
+            key={card.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.12 + index * 0.08 }}
+          >
+            <span className="home-info-card__index">{String(index + 1).padStart(2, '0')}</span>
+            <h2>{card.title}</h2>
+            <p>{card.content}</p>
+          </motion.article>
+        ))}
       </div>
     </section>
   );

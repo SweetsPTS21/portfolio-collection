@@ -2,18 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 
-const links = ['Về Tôi', 'Dự Án', 'Tổng Kết', 'Tầm nhìn'];
+const pages = [
+  { id: 'home', label: 'Trang chính' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'conclusion', label: 'Conclusion' },
+];
 
-export default function Navbar() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)')
-      .matches
-      ? 'auto'
-      : 'smooth';
-    if (el) el.scrollIntoView({ behavior });
-  };
-
+export default function Navbar({ activePage, onPageChange }) {
   return (
     <motion.nav
       className="site-nav"
@@ -26,16 +21,16 @@ export default function Navbar() {
         <span>Thúy Nhung</span>
       </div>
       <div className="site-nav__links">
-        {links.map((link, i) => (
+        {pages.map((page) => (
           <motion.button
-            key={link}
-            onClick={() =>
-              scrollTo(['about', 'projects', 'mindset', 'conclusion'][i])
-            }
+            key={page.id}
+            className={activePage === page.id ? 'is-active' : undefined}
+            onClick={() => onPageChange(page.id)}
             whileHover={{ y: -2 }}
             type="button"
+            aria-current={activePage === page.id ? 'page' : undefined}
           >
-            {link}
+            {page.label}
           </motion.button>
         ))}
       </div>

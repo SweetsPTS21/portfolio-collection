@@ -1,6 +1,7 @@
 import React from 'react';
 import planetOne from '../assets/planet-1.png';
 import planetTwo from '../assets/planet-2.png';
+import ShootingStars from './ShootingStars';
 
 const sparkles = [
   { id: 1, x: 8, y: 14, size: 3, delay: 0.1 },
@@ -38,6 +39,7 @@ export default function Background() {
       <CircuitLines className="decor-circuit digital-bg__circuit digital-bg__circuit--bottom" />
       <div className="decor-dot-grid digital-bg__dots digital-bg__dots--left" />
       <div className="decor-dot-grid digital-bg__dots digital-bg__dots--right" />
+      <ShootingStars />
       {sparkles.map((item) => (
         <span
           key={item.id}
