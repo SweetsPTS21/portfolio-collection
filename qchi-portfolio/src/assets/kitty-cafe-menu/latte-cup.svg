@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Saucer -->
+  <ellipse cx="100" cy="170" rx="60" ry="12" fill="#E8F4FD" stroke="#CFEAFF" stroke-width="1.5"/>
+  <!-- Cup body -->
+  <path d="M60 90 L65 155 Q100 165 135 155 L140 90 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Cup handle -->
+  <path d="M140 100 Q165 105 165 125 Q165 145 140 145" stroke="#8ECDF6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Foam top -->
+  <ellipse cx="100" cy="90" rx="40" ry="12" fill="#FFF8EE" stroke="#FFE3A8" stroke-width="1.5"/>
+  <!-- Latte art - cat face -->
+  <circle cx="100" cy="88" r="6" fill="#D4A574" opacity="0.5"/>
+  <circle cx="94" cy="84" r="2" fill="#D4A574" opacity="0.6"/>
+  <circle cx="106" cy="84" r="2" fill="#D4A574" opacity="0.6"/>
+  <path d="M90 80 L93 74 L96 80" fill="#D4A574" opacity="0.4"/>
+  <path d="M104 80 L107 74 L110 80" fill="#D4A574" opacity="0.4"/>
+  <!-- Steam wisps -->
+  <path d="M85 70 Q83 55 88 45" stroke="#CFEAFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M100 65 Q98 48 103 38" stroke="#CFEAFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M115 70 Q117 55 112 42" stroke="#CFEAFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Kitty body -->
+  <ellipse cx="100" cy="130" rx="45" ry="40" fill="#E8F4FD"/>
+  <ellipse cx="100" cy="130" rx="45" ry="40" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Kitty head -->
+  <circle cx="100" cy="80" r="35" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="2"/>
+  <!-- Ears -->
+  <path d="M72 55 L80 30 L92 52 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="2"/>
+  <path d="M108 52 L120 30 L128 55 Z" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="2"/>
+  <path d="M76 53 L82 36 L90 51 Z" fill="#FFB8C8" opacity="0.6"/>
+  <path d="M110 51 L118 36 L124 53 Z" fill="#FFB8C8" opacity="0.6"/>
+  <!-- Eyes -->
+  <ellipse cx="88" cy="78" rx="5" ry="6" fill="#24384A"/>
+  <ellipse cx="112" cy="78" rx="5" ry="6" fill="#24384A"/>
+  <circle cx="86" cy="76" r="2" fill="#FFFFFF"/>
+  <circle cx="110" cy="76" r="2" fill="#FFFFFF"/>
+  <!-- Nose -->
+  <ellipse cx="100" cy="88" rx="3" ry="2.5" fill="#FF8E9E"/>
+  <!-- Mouth -->
+  <path d="M94 92 Q100 97 106 92" stroke="#6B879D" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="60" y1="82" x2="80" y2="85" stroke="#B9C8F6" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="58" y1="90" x2="79" y2="90" stroke="#B9C8F6" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="120" y1="85" x2="140" y2="82" stroke="#B9C8F6" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="121" y1="90" x2="142" y2="90" stroke="#B9C8F6" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Tail -->
+  <path d="M145 130 Q165 110 155 90 Q148 78 155 68" stroke="#8ECDF6" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Paws -->
+  <ellipse cx="80" cy="165" rx="12" ry="8" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <ellipse cx="120" cy="165" rx="12" ry="8" fill="#FFFFFF" stroke="#8ECDF6" stroke-width="1.5"/>
+  <!-- Paw beans -->
+  <circle cx="76" cy="164" r="2.5" fill="#FFB8C8" opacity="0.7"/>
+  <circle cx="82" cy="164" r="2.5" fill="#FFB8C8" opacity="0.7"/>
+  <circle cx="79" cy="168" r="2" fill="#FFB8C8" opacity="0.7"/>
+  <circle cx="116" cy="164" r="2.5" fill="#FFB8C8" opacity="0.7"/>
+  <circle cx="122" cy="164" r="2.5" fill="#FFB8C8" opacity="0.7"/>
+  <circle cx="119" cy="168" r="2" fill="#FFB8C8" opacity="0.7"/>
+</svg>
