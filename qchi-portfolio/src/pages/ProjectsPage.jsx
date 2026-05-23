@@ -1,18 +1,18 @@
 import React from 'react';
 import PageShell from '../components/layout/PageShell';
-import MenuCard from '../components/projects/MenuCard';
+import ResearchNoteCard from '../components/projects/ResearchNoteCard';
 import { projects } from '../data/portfolioData';
 
 export default function ProjectsPage() {
   return (
-    <PageShell eyebrow="Café menu" title="Sản phẩm nghiên cứu">
+    <PageShell eyebrow="Research notes" title="Sản phẩm nghiên cứu">
       <p className="lead">
-        Tập hợp các sản phẩm và quá trình nghiên cứu – mỗi dự án là một thức uống
-        đặc biệt trong menu học thuật của mình.
+        Tập hợp các sản phẩm và quá trình nghiên cứu như những trang ghi chú
+        trên bàn học: rõ mục tiêu, có quy trình và luôn kèm tài liệu gốc để kiểm chứng.
       </p>
       <section className="project-grid">
         {projects.map((project, index) => (
-          <MenuCard key={project.title} project={project} index={index} />
+          <ResearchNoteCard key={project.title} project={project} index={index} />
         ))}
       </section>
     </PageShell>

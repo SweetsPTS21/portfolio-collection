@@ -1,0 +1,10 @@
+<svg width="420" height="300" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kraft paper tags and notes">
+  <rect x="44" y="56" width="152" height="96" rx="16" fill="#B98245"/>
+  <circle cx="72" cy="84" r="9" fill="#FFF7EA"/>
+  <path d="M86 84H164M70 116H168" stroke="#FFF7EA" stroke-width="6" stroke-linecap="round"/>
+  <rect x="206" y="96" width="164" height="118" rx="18" fill="#FFF0CE" stroke="#C49A5A" stroke-width="5"/>
+  <path d="M230 134H342M230 166H318" stroke="#B98245" stroke-width="7" stroke-linecap="round"/>
+  <rect x="114" y="174" width="134" height="76" rx="14" fill="#7B4D2E" opacity=".92"/>
+  <path d="M134 204H220M134 226H198" stroke="#FFE7B2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M92 58L66 34M188 154L222 186M264 96L244 58" stroke="#CFE5F4" stroke-width="7" stroke-linecap="round"/>
+</svg>

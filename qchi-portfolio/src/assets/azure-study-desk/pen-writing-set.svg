@@ -1,0 +1,9 @@
+<svg width="440" height="220" viewBox="0 0 440 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pen writing underline">
+  <path d="M62 160C124 132 179 186 240 154C294 126 340 137 386 112" stroke="#2E86C1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M266 72L324 130" stroke="#7B4D2E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M314 118L344 148L325 167L295 137L314 118Z" fill="#B98245"/>
+  <path d="M344 148L372 176L334 164L325 167L344 148Z" fill="#183044"/>
+  <circle cx="376" cy="177" r="5" fill="#183044"/>
+  <path d="M112 98H230" stroke="#CFE5F4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M86 68H206" stroke="#CFE5F4" stroke-width="8" stroke-linecap="round"/>
+</svg>

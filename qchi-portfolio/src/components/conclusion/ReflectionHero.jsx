@@ -1,19 +1,19 @@
 import React from "react";
-import macaronStack from "../../assets/kitty-cafe-menu/macaron-stack.svg";
-import cafeCounter from "../../assets/kitty-cafe-menu/cafe-counter.svg";
-import kittyStretching from "../../assets/kitty-cafe-menu/kitty-stretching.svg";
+import clipboardContact from "../../assets/azure-study-desk/clipboard-contact.svg";
+import deskToolIcons from "../../assets/azure-study-desk/desk-tool-icons.svg";
+import notebookPages from "../../assets/azure-study-desk/notebook-pages.svg";
 import ChipCloud from "../ui/ChipCloud";
 
 export default function ReflectionHero({ summary, skills }) {
     return (
         <section className="reflection-grid">
             <div className="mirror-card">
-                <img src={macaronStack} alt="" />
+                <img src={notebookPages} alt="" />
                 <p>{summary}</p>
             </div>
             <div className="constellation-card">
-                <img src={cafeCounter} alt="" />
-                <img className="panel-kitty-stretching" src={kittyStretching} alt="" />
+                <img src={clipboardContact} alt="" />
+                <img className="panel-tool-icons" src={deskToolIcons} alt="" />
                 <ChipCloud items={skills} variant="dark" />
             </div>
         </section>

@@ -1,25 +1,25 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Cat } from 'lucide-react';
+import { PenLine } from 'lucide-react';
 import { navItems } from '../../app/routeConfig';
 
 export default function Navbar() {
   return (
-    <header className="cafe-nav">
+    <header className="study-nav">
       <NavLink
         to="/about"
         className="brand-mark"
-        aria-label="Khánh Chi about page"
+        aria-label="Quỳnh Chi about page"
       >
-        <Cat size={20} />
-        <span>Khánh Chi Portfolio</span>
+        <PenLine size={20} />
+        <span>Quỳnh Chi Portfolio</span>
       </NavLink>
       <nav aria-label="Primary navigation">
         {navItems.map(({ to, label, icon: Icon }) => (
           <NavLink
             key={to}
             to={to}
-            className={({ isActive }) => `nav-gem ${isActive ? 'active' : ''}`}
+            className={({ isActive }) => `nav-tab ${isActive ? 'active' : ''}`}
           >
             <Icon size={18} />
             <span>{label}</span>

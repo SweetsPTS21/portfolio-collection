@@ -1,0 +1,16 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azure study desk scene">
+  <rect width="720" height="520" rx="36" fill="#EFF8FF"/>
+  <rect x="42" y="58" width="286" height="170" rx="24" fill="#CFE5F4"/>
+  <path d="M64 194C119 153 160 171 205 133C252 94 285 120 311 86" stroke="#8DCBF5" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+  <path d="M70 82H300M70 122H260M70 162H282" stroke="#F9FDFF" stroke-width="7" stroke-linecap="round" opacity=".72"/>
+  <rect x="88" y="266" width="552" height="190" rx="28" fill="#7B4D2E"/>
+  <path d="M113 312H611M113 362H611M113 414H611" stroke="#9A6843" stroke-width="8" stroke-linecap="round" opacity=".58"/>
+  <rect x="174" y="198" width="260" height="196" rx="22" fill="#FFFDF7" stroke="#CFE5F4" stroke-width="8"/>
+  <path d="M304 209V383" stroke="#CFE5F4" stroke-width="4"/>
+  <path d="M205 250H275M205 284H268M205 318H286M330 250H394M330 284H380M330 318H406" stroke="#9EC4DA" stroke-width="6" stroke-linecap="round"/>
+  <rect x="445" y="242" width="118" height="88" rx="16" fill="#B98245"/>
+  <path d="M466 271H536M466 296H520" stroke="#FFF7EA" stroke-width="6" stroke-linecap="round"/>
+  <rect x="488" y="116" width="112" height="168" rx="56" fill="#E6BD75" opacity=".35"/>
+  <path d="M544 116V80" stroke="#7B4D2E" stroke-width="12" stroke-linecap="round"/>
+  <path d="M498 286H590" stroke="#7B4D2E" stroke-width="14" stroke-linecap="round"/>
+</svg>

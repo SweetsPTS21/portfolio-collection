@@ -2,40 +2,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Download, ExternalLink } from "lucide-react";
 
-const chalkDoodles = [
-    "☆ today's special ☆",
-    "♡ café menu ♡",
-    "~ welcome ~",
-    "✿ おすすめ ✿",
-    "★ best seller ★",
-    "♪ enjoy ♪",
+const noteLabels = [
+    "Research note",
+    "Source review",
+    "AI prompt log",
+    "Meeting brief",
+    "Media draft",
+    "Integrity map",
 ];
 
-export default function MenuCard({ project, index }) {
-    const doodle = chalkDoodles[index % chalkDoodles.length];
+export default function ResearchNoteCard({ project, index }) {
+    const label = noteLabels[index % noteLabels.length];
 
     return (
         <motion.article
-            className="menu-card"
-            whileHover={{ y: -8, rotate: index % 2 === 0 ? -1 : 1 }}
+            className="research-note-card"
+            whileHover={{ y: -8, rotate: index % 2 === 0 ? -0.6 : 0.6 }}
             transition={{
                 type: "spring",
                 stiffness: 260,
-                damping: 20,
+                damping: 22,
             }}
         >
-            {/* Chalk doodle text */}
-            <span className="chalk-doodle" aria-hidden="true">{doodle}</span>
+            <span className="note-tab" aria-hidden="true">{label}</span>
+            <span className="note-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
 
-            <div className="menu-content">
-                <span className="menu-number">Menu {index + 1}</span>
+            <div className="note-content">
+                <span className="note-number">Ghi chú {index + 1}</span>
                 <h2>{project.title}</h2>
                 <h3>{project.goal}</h3>
                 <p>{project.process}</p>
                 {project.pdf ? (
-                    <div className="menu-actions">
+                    <div className="note-actions">
                         <a
-                            className="menu-action primary"
+                            className="note-action primary"
                             href={project.pdf}
                             target="_blank"
                             rel="noreferrer"
@@ -45,7 +45,7 @@ export default function MenuCard({ project, index }) {
                             <span>Mở PDF</span>
                         </a>
                         <a
-                            className="menu-action secondary"
+                            className="note-action secondary"
                             href={project.pdf}
                             download={project.pdfName}
                             aria-label={`Tải PDF ${project.title}`}
@@ -55,13 +55,6 @@ export default function MenuCard({ project, index }) {
                         </a>
                     </div>
                 ) : null}
-            </div>
-
-            {/* Chalk pieces at bottom-right */}
-            <div className="chalk-pieces" aria-hidden="true">
-                <span className="chalk chalk-white" />
-                <span className="chalk chalk-yellow" />
-                <span className="chalk chalk-mint" />
             </div>
         </motion.article>
     );

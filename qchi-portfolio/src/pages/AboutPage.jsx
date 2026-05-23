@@ -1,17 +1,17 @@
 import React from "react";
-import { Scale, Coffee } from "lucide-react";
+import { LibraryBig, Scale } from "lucide-react";
 import AvatarCard from "../components/about/AvatarCard";
 import StrengthStrip from "../components/about/StrengthStrip";
 import PageShell from "../components/layout/PageShell";
 import ChipCloud from "../components/ui/ChipCloud";
 import InfoCard from "../components/ui/InfoCard";
-import CafePanel from "../components/ui/CafePanel";
+import StudyPanel from "../components/ui/StudyPanel";
 import { goals, profile, strengths, tools } from "../data/portfolioData";
 
 export default function AboutPage() {
     return (
         <PageShell
-            eyebrow="Kitty café profile"
+            eyebrow="Azure study desk"
             title="WELCOME TO MY PORTFOLIO"
         >
             <section className="hero-grid">
@@ -32,19 +32,19 @@ export default function AboutPage() {
             </section>
 
             <section className="two-column">
-                <CafePanel title="Mục tiêu học tập" icon={<Scale size={22} />}>
+                <StudyPanel title="Mục tiêu học tập" icon={<Scale size={22} />}>
                     <ul>
                         {goals.map((goal) => (
                             <li key={goal}>{goal}</li>
                         ))}
                     </ul>
-                </CafePanel>
-                <CafePanel
+                </StudyPanel>
+                <StudyPanel
                     title="Công cụ đã dùng"
-                    icon={<Coffee size={22} />}
+                    icon={<LibraryBig size={22} />}
                 >
                     <ChipCloud items={tools} />
-                </CafePanel>
+                </StudyPanel>
             </section>
 
             <StrengthStrip items={strengths} />
