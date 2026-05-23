@@ -76,7 +76,7 @@ export const projects = [
     title: 'Chương 4: Giao tiếp và hợp tác trong môi trường số',
     goal: 'Lên ý tưởng, viết, chỉnh sửa nội dung và phối hợp với các thành viên khác thực hiện nhiệm vụ được giao.',
     process:
-      'Với thế mạnh hoạt bát, mình đảm nhận vai trò điều phối chính cho cuộc họp trực tuyến của nhóm: thiết lập chương trình nghị sự, phân công nhiệm vụ dứt khoát và chốt biên bản cuối cùng để bảo đảm hiệu suất chuyên môn cao.',
+      'Với thế mạnh về nội dung, mình đảm nhận việc lên ý tưởng, biên soạn và chỉnh sửa tài liệu cho buổi họp trực tuyến; đồng thời phối hợp cùng các thành viên để hoàn thiện nhiệm vụ được giao một cách hiệu quả',
     pdf: assignmentFiles[3],
     pdfName: 'bt4.pdf',
     icon: 'cappuccino',
