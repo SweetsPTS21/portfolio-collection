@@ -1,16 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 import avatar from "../../assets/azure-study-desk/avatar.jpg";
-import kraftTags from "../../assets/azure-study-desk/kraft-paper-tags.svg";
-import notebookPages from "../../assets/azure-study-desk/notebook-pages.svg";
-import penWritingSet from "../../assets/azure-study-desk/pen-writing-set.svg";
+import brassClipsPins from "../../assets/azure-study-desk/brass-clips-pins.svg";
+import openNotebookLayered from "../../assets/azure-study-desk/open-notebook-layered.svg";
+import paperStackSet from "../../assets/azure-study-desk/paper-stack-set.svg";
+import penUnderlineAnimated from "../../assets/azure-study-desk/pen-underline-animated.svg";
+import { noteReveal } from "../../app/motionConfig";
 
 export default function AvatarCard() {
     return (
-        <div className="avatar-card">
-            <img className="avatar-notebook" src={notebookPages} alt="" />
-            <img className="avatar" src={avatar} alt="Vũ Thị Quỳnh Chi" />
-            <img className="avatar-kraft" src={kraftTags} alt="" />
-            <img className="avatar-pen" src={penWritingSet} alt="" />
-        </div>
+        <motion.div
+            className="avatar-card"
+            variants={noteReveal}
+            initial="initial"
+            animate="animate"
+        >
+            <img className="avatar-notebook" src={openNotebookLayered} alt="" />
+            <img className="avatar-paper-stack" src={paperStackSet} alt="" />
+            <figure className="profile-sheet">
+                <img className="avatar" src={avatar} alt="Vũ Thị Quỳnh Chi" />
+                <figcaption>Business law portfolio</figcaption>
+            </figure>
+            <img className="avatar-clip" src={brassClipsPins} alt="" />
+            <img className="avatar-pen" src={penUnderlineAnimated} alt="" />
+        </motion.div>
     );
 }

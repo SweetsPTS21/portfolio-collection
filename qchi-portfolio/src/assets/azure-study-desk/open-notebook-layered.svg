@@ -1,0 +1,10 @@
+<svg width="680" height="480" viewBox="0 0 680 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open layered legal research notebook">
+  <path d="M78 84C154 48 244 70 330 104V396C242 356 156 340 78 376V84Z" fill="#FFFDF7" stroke="#CFE5F4" stroke-width="10"/>
+  <path d="M602 84C526 48 436 70 350 104V396C438 356 524 340 602 376V84Z" fill="#FFFFFF" stroke="#CFE5F4" stroke-width="10"/>
+  <path d="M340 98V404" stroke="#9EC4DA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M118 142H278M118 188H262M118 234H290M118 280H238M398 142H560M398 188H536M398 234H574M398 280H510" stroke="#8DCBF5" stroke-width="8" stroke-linecap="round" opacity=".76"/>
+  <rect x="142" y="318" width="118" height="34" rx="17" fill="#B98245" opacity=".88"/>
+  <rect x="424" y="316" width="142" height="34" rx="17" fill="#7B4D2E" opacity=".82"/>
+  <path d="M528 82L602 82V152" fill="#EFF8FF"/>
+  <path d="M528 82H602V152" stroke="#CFE5F4" stroke-width="8" stroke-linejoin="round"/>
+</svg>

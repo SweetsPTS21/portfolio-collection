@@ -1,0 +1,9 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Floating paper dust and desk particles">
+  <circle cx="52" cy="76" r="10" fill="#B98245" opacity=".72"/>
+  <circle cx="214" cy="44" r="7" fill="#2E86C1" opacity=".62"/>
+  <circle cx="304" cy="132" r="12" fill="#C49A5A" opacity=".58"/>
+  <circle cx="126" cy="212" r="8" fill="#8DCBF5" opacity=".76"/>
+  <circle cx="268" cy="276" r="9" fill="#7B4D2E" opacity=".46"/>
+  <path d="M78 292L114 270M238 196L276 180M154 112L188 96" stroke="#C49A5A" stroke-width="6" stroke-linecap="round" opacity=".56"/>
+  <rect x="176" y="246" width="44" height="18" rx="9" fill="#FFF0CE" opacity=".86" transform="rotate(-15 176 246)"/>
+</svg>

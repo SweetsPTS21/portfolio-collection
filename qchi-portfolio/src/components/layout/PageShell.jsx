@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const pageVariants = {
-    initial: { opacity: 0, y: 26, scale: 0.98 },
-    animate: { opacity: 1, y: 0, scale: 1 },
-    exit: { opacity: 0, y: -18, scale: 0.99 },
-};
+import { pageTransition, pageVariants } from "../../app/motionConfig";
 
 export default function PageShell({ eyebrow, title, children }) {
     return (
@@ -15,8 +10,9 @@ export default function PageShell({ eyebrow, title, children }) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.42, ease: "easeOut" }}
+            transition={pageTransition}
         >
+            <span className="page-binding" aria-hidden="true" />
             <p className="eyebrow">{eyebrow}</p>
             <h1>{title}</h1>
             {children}

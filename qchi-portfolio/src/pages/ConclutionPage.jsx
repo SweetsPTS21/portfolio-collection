@@ -16,21 +16,36 @@ export default function ConclutionPage() {
                 skills={conclusion.skills}
             />
             <section className="reflection-lists">
-                <StudyPanel title="Điểm tâm đắc" icon={<BookMarked size={22} />}>
+                <StudyPanel
+                    title="Điểm tâm đắc"
+                    icon={<BookMarked size={22} />}
+                    meta="Highlight notes"
+                    accent="blue"
+                >
                     <ul>
                         {conclusion.highlights.map((item) => (
                             <li key={item}>{item}</li>
                         ))}
                     </ul>
                 </StudyPanel>
-                <StudyPanel title="Thách thức" icon={<ClipboardList size={22} />}>
+                <StudyPanel
+                    title="Thách thức"
+                    icon={<ClipboardList size={22} />}
+                    meta="Integrity checks"
+                    accent="brown"
+                >
                     <ul>
                         {conclusion.challenges.map((item) => (
                             <li key={item}>{item}</li>
                         ))}
                     </ul>
                 </StudyPanel>
-                <StudyPanel title="Định hướng" icon={<Scale size={22} />}>
+                <StudyPanel
+                    title="Định hướng"
+                    icon={<Scale size={22} />}
+                    meta="Next direction"
+                    accent="blue"
+                >
                     <ul>
                         {conclusion.direction.map((item) => (
                             <li key={item}>{item}</li>

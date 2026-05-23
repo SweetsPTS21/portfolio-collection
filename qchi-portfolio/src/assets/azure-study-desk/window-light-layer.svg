@@ -1,0 +1,13 @@
+<svg width="760" height="620" viewBox="0 0 760 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azure window light layer">
+  <rect x="74" y="42" width="346" height="310" rx="30" fill="#CFE5F4" opacity=".9"/>
+  <path d="M110 88H386M110 186H386M246 70V324" stroke="#F9FDFF" stroke-width="13" stroke-linecap="round" opacity=".78"/>
+  <path d="M100 320L508 620H760L388 86L100 320Z" fill="url(#light)" opacity=".72"/>
+  <path d="M32 368C154 286 230 324 338 238C446 152 523 184 630 88" stroke="#8DCBF5" stroke-width="16" stroke-linecap="round" opacity=".5"/>
+  <defs>
+    <linearGradient id="light" x1="276" y1="148" x2="646" y2="608" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".56" stop-color="#BFE8FF" stop-opacity=".44"/>
+      <stop offset="1" stop-color="#EFF8FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

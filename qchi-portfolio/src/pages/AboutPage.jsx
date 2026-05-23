@@ -32,7 +32,12 @@ export default function AboutPage() {
             </section>
 
             <section className="two-column">
-                <StudyPanel title="Mục tiêu học tập" icon={<Scale size={22} />}>
+                <StudyPanel
+                    title="Mục tiêu học tập"
+                    icon={<Scale size={22} />}
+                    meta="Learning goals"
+                    accent="blue"
+                >
                     <ul>
                         {goals.map((goal) => (
                             <li key={goal}>{goal}</li>
@@ -42,6 +47,8 @@ export default function AboutPage() {
                 <StudyPanel
                     title="Công cụ đã dùng"
                     icon={<LibraryBig size={22} />}
+                    meta="Tool index"
+                    accent="brown"
                 >
                     <ChipCloud items={tools} />
                 </StudyPanel>
