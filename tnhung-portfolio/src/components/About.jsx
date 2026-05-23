@@ -1,0 +1,91 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { BookOpen, GraduationCap, Heart, User } from 'lucide-react';
+import { person } from '../data/portfolio';
+
+const infoItems = [
+  { icon: User, label: 'Họ và tên', value: person.name },
+  { icon: GraduationCap, label: 'Vai trò', value: person.role },
+  { icon: BookOpen, label: 'Trường', value: person.school },
+  { icon: Heart, label: 'Sở thích', value: person.hobbies },
+];
+
+function scrollToProjects() {
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  document.getElementById('projects')?.scrollIntoView({ behavior });
+}
+
+export default function About() {
+  return (
+    <section id="about" className="page-section about-section">
+      <div className="about-grid">
+        <motion.div
+          className="about-copy glass-panel"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="hud-title about-kicker">
+            <span>Về tôi</span>
+            <span className="hud-star">✦</span>
+          </div>
+          <h1 className="about-heading">
+            <span>Welcome to</span>
+            <strong>My Digital Space</strong>
+          </h1>
+          <p className="about-intro">{person.intro}</p>
+          <p className="about-quote">"{person.quote}"</p>
+          <motion.button
+            className="glass-cta"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            type="button"
+            onClick={scrollToProjects}
+          >
+            Khám phá hành trình <span aria-hidden="true">→</span>
+          </motion.button>
+          <div className="decor-dot-grid about-copy__dots" />
+        </motion.div>
+
+        <motion.div
+          className="about-profile glass-panel"
+          initial={{ opacity: 0, x: 36 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
+          <div className="about-avatar-wrap">
+            <div className="about-avatar__ring" />
+            <div className="about-avatar">
+              <img src="/avatar.jpg" alt="Thúy Nhung" />
+            </div>
+            <div className="about-avatar__spark" aria-hidden="true">✦</div>
+          </div>
+
+          <div className="about-info-list">
+            {infoItems.map(({ icon: Icon, label, value }, i) => (
+              <motion.div
+                className="about-info"
+                key={label}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.08 }}
+                whileHover={{ x: 5 }}
+              >
+                <div className="about-info__icon">
+                  <Icon size={28} strokeWidth={1.6} />
+                </div>
+                <div>
+                  <div className="about-info__label">{label}</div>
+                  <div className="about-info__value">{value}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
