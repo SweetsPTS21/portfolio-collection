@@ -40,15 +40,14 @@ export const strengths = [
   'Tổ chức, sắp xếp và lưu trữ dữ liệu pháp lý theo hệ thống rõ ràng.',
   'Tìm kiếm độc lập và đánh giá độ tin cậy của nguồn học liệu pháp lý chuyên sâu.',
   'Viết câu lệnh truy vấn để điều hướng mô hình ngôn ngữ lớn theo mục tiêu học thuật.',
-  'Điều phối làm việc nhóm trực tuyến với chương trình nghị sự, phân công nhiệm vụ và biên bản rõ ràng.',
+  'Lên ý tưởng, viết, chỉnh sửa nội dung và phối hợp với các thành viên khác thực hiện nhiệm vụ được giao.',
   'Giữ tinh thần năng động và tự tin khi ứng dụng công nghệ vào học tập pháp lý.',
 ];
 
 export const projects = [
   {
     title: 'Chương 1: Tổ chức, sắp xếp và lưu trữ dữ liệu',
-    goal:
-      'Rèn luyện thao tác quản lý tệp tin linh hoạt, xây dựng không gian lưu trữ tài liệu học thuật tốc độ cao và khoa học.',
+    goal: 'Rèn luyện thao tác quản lý tệp tin linh hoạt, xây dựng không gian lưu trữ tài liệu học thuật tốc độ cao và khoa học.',
     process:
       'Mình thực hiện các lệnh tạo, đổi tên, sao chép và di chuyển tài liệu một cách dứt khoát. Hệ thống thư mục được phân tầng rành mạch giúp truy xuất hàng loạt văn bản quy phạm pháp luật chỉ trong tích tắc.',
     pdf: assignmentFiles[0],
@@ -57,8 +56,7 @@ export const projects = [
   },
   {
     title: 'Chương 2: Khai thác dữ liệu và thông tin',
-    goal:
-      'Phát triển kỹ năng tìm kiếm độc lập và đánh giá độ tin cậy của các nguồn học liệu pháp lý chuyên sâu.',
+    goal: 'Phát triển kỹ năng tìm kiếm độc lập và đánh giá độ tin cậy của các nguồn học liệu pháp lý chuyên sâu.',
     process:
       'Mình chủ động khai thác các cơ sở dữ liệu thư viện và nền tảng học thuật quốc tế. Hơn 10 tài liệu nghiên cứu được thẩm định dựa trên uy tín tác giả, tính cập nhật của ngành Luật Kinh Doanh, rồi tổng hợp và trích dẫn theo định dạng Harvard.',
     pdf: assignmentFiles[1],
@@ -67,8 +65,7 @@ export const projects = [
   },
   {
     title: 'Chương 3: Tổng quan về trí tuệ nhân tạo',
-    goal:
-      'Nâng cao kỹ năng viết câu lệnh truy vấn để làm chủ và điều hướng các mô hình ngôn ngữ lớn theo ý muốn.',
+    goal: 'Nâng cao kỹ năng viết câu lệnh truy vấn để làm chủ và điều hướng các mô hình ngôn ngữ lớn theo ý muốn.',
     process:
       'Mình thử nghiệm nhiều câu lệnh từ cơ bản đến nâng cao, so sánh kết quả khi yêu cầu AI tóm tắt tài liệu hoặc giải thích khái niệm pháp lý phức tạp. Từ đó, mình rút ra nguyên tắc giao tiếp sắc bén để biến công nghệ thành trợ lý học thuật đắc lực.',
     pdf: assignmentFiles[2],
@@ -77,8 +74,7 @@ export const projects = [
   },
   {
     title: 'Chương 4: Giao tiếp và hợp tác trong môi trường số',
-    goal:
-      'Tổ chức và điều hành một cuộc họp trực tuyến chuyên nghiệp, thúc đẩy tinh thần làm việc nhóm năng động.',
+    goal: 'Lên ý tưởng, viết, chỉnh sửa nội dung và phối hợp với các thành viên khác thực hiện nhiệm vụ được giao.',
     process:
       'Với thế mạnh hoạt bát, mình đảm nhận vai trò điều phối chính cho cuộc họp trực tuyến của nhóm: thiết lập chương trình nghị sự, phân công nhiệm vụ dứt khoát và chốt biên bản cuối cùng để bảo đảm hiệu suất chuyên môn cao.',
     pdf: assignmentFiles[3],
@@ -87,8 +83,7 @@ export const projects = [
   },
   {
     title: 'Chương 5: Sáng tạo nội dung số',
-    goal:
-      'Tích hợp đa dạng các công cụ tạo sinh để thiết kế một sản phẩm truyền thông học thuật mang đậm dấu ấn cá nhân.',
+    goal: 'Tích hợp đa dạng các công cụ tạo sinh để thiết kế một sản phẩm truyền thông học thuật mang đậm dấu ấn cá nhân.',
     process:
       'Mình kết hợp nền tảng tạo văn bản và công cụ thiết kế hình ảnh để xây dựng bài thuyết trình sinh động. Thuật toán hỗ trợ phác thảo khung sườn nhanh, còn cá tính năng động của mình thổi sức sống vào từng hình ảnh minh họa và câu chữ.',
     pdf: assignmentFiles[4],
@@ -97,8 +92,7 @@ export const projects = [
   },
   {
     title: 'Chương 6: An toàn và liêm chính học thuật trong môi trường số',
-    goal:
-      'Xác lập ranh giới đạo đức nghiêm ngặt và xây dựng bộ nguyên tắc hành xử trách nhiệm trên không gian mạng.',
+    goal: 'Xác lập ranh giới đạo đức nghiêm ngặt và xây dựng bộ nguyên tắc hành xử trách nhiệm trên không gian mạng.',
     process:
       'Mình thiết kế một bản đồ họa thông tin ghi rõ các nguyên tắc cá nhân: nói không với gian lận, minh bạch trong mọi trích dẫn và bảo vệ tư duy độc lập trước sự cám dỗ của việc sao chép tự động.',
     pdf: assignmentFiles[5],
