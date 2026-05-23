@@ -1,0 +1,24 @@
+<svg width="430" height="520" viewBox="0 0 430 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="jellyBell" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210 139) scale(146 111)">
+      <stop stop-color="#FBFEFF" stop-opacity="0.95"/>
+      <stop offset="0.58" stop-color="#A7E4FF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFB7C8" stop-opacity="0.46"/>
+    </radialGradient>
+    <filter id="jellyGlow" x="20" y="9" width="390" height="497" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#A7E4FF" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#18384A" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <g filter="url(#jellyGlow)">
+    <path d="M82 170C85 87 139 38 213 38C287 38 344 88 348 171C312 198 267 211 214 211C161 211 117 198 82 170Z" fill="url(#jellyBell)" stroke="#FBFEFF" stroke-width="7"/>
+    <path d="M116 171C143 155 172 148 204 148C247 148 284 158 319 179" stroke="#FBFEFF" stroke-width="7" stroke-linecap="round" opacity="0.78"/>
+    <path d="M138 219C126 269 133 329 107 382C91 415 89 448 111 480" stroke="#7CCDF2" stroke-width="8" stroke-linecap="round" opacity="0.58"/>
+    <path d="M189 221C180 278 207 333 184 382C169 414 160 444 172 482" stroke="#FFB7C8" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M238 221C251 274 229 332 257 386C275 421 277 453 259 489" stroke="#FFD978" stroke-width="8" stroke-linecap="round" opacity="0.58"/>
+    <path d="M294 215C310 265 291 320 315 369C336 413 337 447 311 478" stroke="#7DDEC3" stroke-width="8" stroke-linecap="round" opacity="0.58"/>
+    <circle cx="168" cy="114" r="9" fill="#FBFEFF" opacity="0.92"/>
+    <circle cx="252" cy="104" r="7" fill="#FBFEFF" opacity="0.8"/>
+    <circle cx="212" cy="74" r="5" fill="#FFD978" opacity="0.85"/>
+  </g>
+</svg>

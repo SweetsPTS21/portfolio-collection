@@ -1,0 +1,19 @@
+<svg width="460" height="340" viewBox="0 0 460 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sparkleGlow" x="0" y="0" width="460" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#FFD978" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#FFB7C8" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <g filter="url(#sparkleGlow)">
+    <path d="M91 48L104 83L139 96L104 109L91 144L78 109L43 96L78 83L91 48Z" fill="#FFD978"/>
+    <path d="M247 27L258 56L287 67L258 78L247 107L236 78L207 67L236 56L247 27Z" fill="#FBFEFF"/>
+    <path d="M361 99L371 125L397 135L371 145L361 171L351 145L325 135L351 125L361 99Z" fill="#FFB7C8"/>
+    <path d="M185 177L197 209L229 221L197 233L185 265L173 233L141 221L173 209L185 177Z" fill="#7DDEC3"/>
+    <path d="M331 224L339 246L361 254L339 262L331 284L323 262L301 254L323 246L331 224Z" fill="#A7E4FF"/>
+    <circle cx="65" cy="240" r="8" fill="#FBFEFF"/>
+    <circle cx="418" cy="214" r="7" fill="#FFD978"/>
+    <circle cx="152" cy="75" r="6" fill="#FFB7C8"/>
+    <circle cx="270" cy="288" r="6" fill="#FBFEFF"/>
+  </g>
+</svg>
