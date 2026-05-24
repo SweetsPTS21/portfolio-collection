@@ -4,8 +4,8 @@ import { Sparkles } from 'lucide-react';
 
 const pages = [
   { id: 'home', label: 'Trang chính' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'conclusion', label: 'Conclusion' },
+  { id: 'projects', label: 'Dự án' },
+  { id: 'conclusion', label: 'Kết luận' },
 ];
 
 export default function Navbar({ activePage, onPageChange }) {

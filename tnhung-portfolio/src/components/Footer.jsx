@@ -15,7 +15,7 @@ export default function Footer() {
         <span>Trịnh Thị Thúy Nhung</span>
       </div>
       <span className="site-footer__meta">
-        Portfolio · Nhập môn Công nghệ số & Ứng dụng AI · 2025
+        Portfolio · Nhập môn Công nghệ số & Ứng dụng AI · 2026
       </span>
     </motion.footer>
   );
