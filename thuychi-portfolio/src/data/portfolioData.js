@@ -1,10 +1,10 @@
 const assignmentFiles = [
-  new URL('../../docs/bt1.pdf', import.meta.url).href,
-  new URL('../../docs/bt2.pdf', import.meta.url).href,
-  new URL('../../docs/bt3.pdf', import.meta.url).href,
-  new URL('../../docs/bt4.pdf', import.meta.url).href,
-  new URL('../../docs/bt5.pdf', import.meta.url).href,
-  new URL('../../docs/bt6.pdf', import.meta.url).href,
+  new URL('../../docs/Bt1.pdf', import.meta.url).href,
+  new URL('../../docs/Bt2.pdf', import.meta.url).href,
+  new URL('../../docs/Bt3.pdf', import.meta.url).href,
+  new URL('../../docs/Bt4.pdf', import.meta.url).href,
+  new URL('../../docs/Bt5.pdf', import.meta.url).href,
+  new URL('../../docs/Bt6.pdf', import.meta.url).href,
 ];
 
 export const profile = {
