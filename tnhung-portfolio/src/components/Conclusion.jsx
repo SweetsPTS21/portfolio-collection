@@ -1,9 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Target, TrendingUp, Zap } from 'lucide-react';
+import {
+  BookOpen,
+  Target,
+  TrendingUp,
+  Zap,
+  BookHeadphones,
+  TvMinimalPlay,
+  Scale,
+} from 'lucide-react';
 import { conclusion } from '../data/portfolio';
 
-const skillIcons = [BookOpen, Zap, TrendingUp];
+const skillIcons = [
+  BookOpen,
+  Zap,
+  TrendingUp,
+  BookHeadphones,
+  TvMinimalPlay,
+  Scale,
+];
 
 export default function Conclusion() {
   return (
@@ -53,22 +68,22 @@ export default function Conclusion() {
                 const Icon = skillIcons[i] ?? BookOpen;
 
                 return (
-                <motion.div
-                  className="conclusion-skill"
-                  key={title}
-                  initial={{ opacity: 0, x: i % 2 === 0 ? -18 : 18 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.12 + i * 0.08 }}
-                >
-                  <div className="conclusion-skill__icon">
-                    <Icon size={22} strokeWidth={1.7} />
-                  </div>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{desc}</p>
-                  </div>
-                </motion.div>
+                  <motion.div
+                    className="conclusion-skill"
+                    key={title}
+                    initial={{ opacity: 0, x: i % 2 === 0 ? -18 : 18 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.12 + i * 0.08 }}
+                  >
+                    <div className="conclusion-skill__icon">
+                      <Icon size={22} strokeWidth={1.7} />
+                    </div>
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{desc}</p>
+                    </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -115,9 +130,7 @@ export default function Conclusion() {
                 </div>
               ))}
             </div>
-            <div className="conclusion-quote">
-              "{conclusion.quote}"
-            </div>
+            <div className="conclusion-quote">"{conclusion.quote}"</div>
           </section>
         </div>
       </motion.div>

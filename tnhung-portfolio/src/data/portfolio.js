@@ -281,16 +281,28 @@ export const conclusion = {
   ],
   coreSkills: [
     {
-      title: 'Kỹ năng thẩm định thông tin',
-      desc: 'Mình trở nên cẩn trọng hơn trong việc kiểm tra nguồn dữ liệu, đánh giá lập luận và nhìn nhận thông tin dưới nhiều góc độ khác nhau.',
+      title: 'Kỹ năng tổ chức và quản lý dữ liệu số',
+      desc: 'Mình xây dựng thói quen lưu trữ tài liệu khoa học, sắp xếp thông tin hợp lý và tối ưu không gian học tập trên môi trường số.',
     },
     {
-      title: 'Kỹ năng sử dụng AI tạo sinh',
-      desc: 'Mình học được cách đặt prompt rõ ràng, định hướng AI đi đúng trọng tâm và loại bỏ những nội dung khuôn mẫu để phục vụ việc học tập hiệu quả hơn.',
+      title: 'Kỹ năng tìm kiếm và thẩm định thông tin',
+      desc: 'Quá trình khai thác dữ liệu giúp mình biết cách tra cứu tài liệu học thuật, ưu tiên nguồn chính thống và đánh giá độ tin cậy của thông tin trước khi sử dụng.',
     },
     {
-      title: 'Kỹ năng trình bày và tổ chức nội dung',
-      desc: 'Mình biết cách xây dựng bố cục website mạch lạc, tối ưu trải nghiệm người xem và biến một bài tập học thuật thành một không gian thể hiện dấu ấn cá nhân.',
+      title: 'Kỹ năng sử dụng AI có chọn lọc và tư duy phản biện',
+      desc: 'Mình hiểu cách khai thác AI như một công cụ hỗ trợ học tập: biết đặt prompt rõ ràng, kiểm chứng thông tin và giữ vững góc nhìn cá nhân thay vì phụ thuộc hoàn toàn vào AI.',
+    },
+    {
+      title: 'Kỹ năng giao tiếp và hợp tác trong môi trường số',
+      desc: 'Thông qua hoạt động làm việc nhóm trực tuyến, mình rèn luyện khả năng trình bày ý kiến mạch lạc, giao tiếp văn minh và duy trì sự chuyên nghiệp trên nền tảng số.',
+    },
+    {
+      title: 'Kỹ năng sáng tạo nội dung số',
+      desc: 'Quá trình xây dựng sản phẩm bằng AI tạo sinh giúp mình biết kết hợp công nghệ với tư duy cá nhân để tạo ra nội dung có tính thẩm mỹ và mang dấu ấn riêng.',
+    },
+    {
+      title: 'Ý thức về an toàn số và liêm chính học thuật',
+      desc: 'Mình hiểu rõ hơn tầm quan trọng của bảo mật dữ liệu, tôn trọng bản quyền và sử dụng công nghệ một cách minh bạch, có trách nhiệm.',
     },
   ],
   highlightLabel: 'Điều mình tâm đắc nhất:',
