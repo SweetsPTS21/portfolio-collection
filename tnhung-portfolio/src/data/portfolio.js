@@ -74,7 +74,7 @@ export const projects = [
     subtitle: 'Bài tập 1 (Chương 1): Tổ chức, sắp xếp và lưu trữ dữ liệu',
     goal: 'Rèn luyện thao tác quản lý tệp tin, xây dựng không gian lưu trữ tài liệu học thuật đề cao tính logic và sự tinh tế.',
     process:
-      'Mình đã thực hành tuần tự các lệnh tạo mới, đổi tên, sao chép và phân loại thư mục trên hệ điều hành máy tính. Từ những dữ liệu ban đầu, mình sắp xếp mọi văn bản học tập thành một hệ thống phân tầng mạch lạc. Việc này giúp không gian làm việc số trở nên thanh thoát và quá trình tìm kiếm giáo trình Luật diễn ra vô cùng êm ái.',
+      'Mình đã thực hành tuần tự các lệnh tạo mới, đổi tên, sao chép và phân loại thư mục trên hệ điều hành máy tính. Từ những dữ liệu ban đầu, mình sắp xếp mọi văn bản học tập thành một hệ thống phân tầng mạch lạc. Việc này giúp không gian làm việc số trở nên thanh thoát và quá trình tìm kiếm giáo trình diễn ra nhanh chóng hơn.',
     product: 'docs/Bt1.pdf',
     beats: [
       {
@@ -91,7 +91,7 @@ export const projects = [
       },
       {
         label: 'Kết quả',
-        text: 'Không gian làm việc số trở nên thanh thoát, việc tìm giáo trình Luật diễn ra êm ái hơn.',
+        text: 'Không gian làm việc số trở nên thanh thoát, việc tìm giáo trình diễn ra nhanh chóng hơn.',
       },
     ],
     color: '#c084fc',
@@ -264,7 +264,7 @@ export const projections = [
     type: 'CONCLUSION',
     label: 'Thẻ Kết luận',
     content:
-      'Qua quá trình học tập và xây dựng portfolio, mình nhận ra rằng công nghệ chỉ thật sự có giá trị khi con người biết sử dụng nó bằng tư duy chủ động và phản biện. AI có thể hỗ trợ rất nhiefeufm nhưng chính suy nghĩ và bản sắc cá nhân mới tạo nên giá trị khác biệt.',
+      'Qua quá trình học tập và xây dựng portfolio, mình nhận ra rằng công nghệ chỉ thật sự có giá trị khi con người biết sử dụng nó bằng tư duy chủ động và phản biện. AI có thể hỗ trợ rất nhiều nhưng chính suy nghĩ và bản sắc cá nhân mới tạo nên giá trị khác biệt.',
   },
 ];
 
@@ -290,7 +290,7 @@ export const conclusion = {
     },
     {
       title: 'Kỹ năng trình bày và tổ chức nội dung',
-      desc: 'Mình biết cách xây dựng bố cục website mạch lạc, tối ưu trải nghiệm người xmình và biến một bài tập học thuật thành một không gian thể hiện dấu ấn cá nhân.',
+      desc: 'Mình biết cách xây dựng bố cục website mạch lạc, tối ưu trải nghiệm người xem và biến một bài tập học thuật thành một không gian thể hiện dấu ấn cá nhân.',
     },
   ],
   highlightLabel: 'Điều mình tâm đắc nhất:',
