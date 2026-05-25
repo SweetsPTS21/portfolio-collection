@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Typography } from 'antd';
-import { FolderOpen, Search, Brain, Users, Video, Shield, ArrowRight } from 'lucide-react';
+import { FolderOpen, Search, Brain, Users, Video, Shield, ArrowRight, FileText } from 'lucide-react';
 import { OffsetBlock, DotGrid, CornerBrackets, LineAccent, EqualizerBars } from '../components/Decorative';
 import { staggerContainer, fadeInUp, hoverLift } from '../animations';
 
@@ -14,6 +14,7 @@ const projects = [
     color: '#FF6B9D',
     gradient: 'linear-gradient(135deg, #FFDEE9, #FF6B9D)',
     desc: 'Thiết lập Google Drive theo chủ nghĩa tối giản. Thư mục chia thành 3 nhóm: Học thuật, Cá nhân, và Hành chính — gọn gàng như playlist nhạc trên Spotify.',
+    file: new URL('../../docs/Bt1.pdf', import.meta.url).href,
   },
   {
     num: '02',
@@ -22,6 +23,7 @@ const projects = [
     color: '#7EC8E3',
     gradient: 'linear-gradient(135deg, #B5DEFF, #7EC8E3)',
     desc: 'Sử dụng từ khóa nâng cao để lọc đúng dữ liệu chuẩn. Tra cứu nhanh và chính xác — hiểu và tìm đúng luật là nguyên tắc tối thượng!',
+    file: new URL('../../docs/Bt2.pdf', import.meta.url).href,
   },
   {
     num: '03',
@@ -31,6 +33,7 @@ const projects = [
     gradient: 'linear-gradient(135deg, #FFD4A8, #FFB347)',
     desc: 'AI soạn thảo nhanh nhưng không có cảm xúc. Pháp luật cần sự thấu cảm — AI chỉ là công cụ hỗ trợ, cái "tâm" phải đến từ người làm luật.',
     featured: true,
+    file: new URL('../../docs/Bt3.pdf', import.meta.url).href,
   },
   {
     num: '04',
@@ -39,6 +42,7 @@ const projects = [
     color: '#7DCEA0',
     gradient: 'linear-gradient(135deg, #B8F0CE, #7DCEA0)',
     desc: 'Làm việc nhóm trên Notion với tinh thần Hiện đại và Tôn trọng. Công việc chia theo bảng, trao đổi nhẹ nhàng, tôn trọng thời gian nghỉ ngơi.',
+    file: new URL('../../docs/Bt4.pdf', import.meta.url).href,
   },
   {
     num: '05',
@@ -47,6 +51,7 @@ const projects = [
     color: '#FF85B1',
     gradient: 'linear-gradient(135deg, #FFDEE9, #FF85B1)',
     desc: 'Dùng AI phác thảo kịch bản, làm video ngắn về kiến thức pháp luật. Phong cách dễ thương, nhạc nền chill, hiệu ứng chữ đơn giản.',
+    file: new URL('../../docs/Bt5.pdf', import.meta.url).href,
   },
   {
     num: '06',
@@ -55,6 +60,7 @@ const projects = [
     color: '#7EC8E3',
     gradient: 'linear-gradient(135deg, #B5DEFF, #7EC8E3)',
     desc: 'Dễ thương nhưng phải nghiêm túc! Hạn chế copy-paste AI, mọi gợi ý đều kiểm chứng, tài liệu tham khảo trích dẫn minh bạch.',
+    file: new URL('../../docs/Bt6.pdf', import.meta.url).href,
   },
 ];
 
@@ -142,6 +148,29 @@ export default function Projects() {
                         <Paragraph style={{ color: 'var(--color-text-secondary)', fontSize: 19, margin: 0, lineHeight: 1.8 }}>
                           {project.desc}
                         </Paragraph>
+                        <a
+                          href={project.file}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`Mở file ${project.title}`}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            marginTop: 18,
+                            padding: '10px 16px',
+                            border: `1px solid ${project.color}55`,
+                            background: `${project.color}14`,
+                            color: project.color,
+                            fontWeight: 700,
+                            fontSize: 15,
+                            textDecoration: 'none',
+                          }}
+                        >
+                          <FileText size={17} />
+                          <span>Mở file</span>
+                          <ArrowRight size={16} />
+                        </a>
                         <div style={{ position: 'absolute', bottom: 12, right: 16 }}>
                           <DotGrid rows={2} cols={4} dotSize={4} gap={6} opacity={0.2} />
                         </div>
@@ -221,6 +250,29 @@ export default function Projects() {
                       <Paragraph style={{ color: 'var(--color-text-secondary)', margin: 0, fontSize: 19, lineHeight: 1.7 }}>
                         {project.desc}
                       </Paragraph>
+                      <a
+                        href={project.file}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Mở file ${project.title}`}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 8,
+                          marginTop: 16,
+                          padding: '9px 14px',
+                          border: `1px solid ${project.color}55`,
+                          background: `${project.color}14`,
+                          color: project.color,
+                          fontWeight: 700,
+                          fontSize: 14,
+                          textDecoration: 'none',
+                        }}
+                      >
+                        <FileText size={16} />
+                        <span>Mở file</span>
+                        <ArrowRight size={15} />
+                      </a>
 
                       {/* Accent block */}
                       <div
