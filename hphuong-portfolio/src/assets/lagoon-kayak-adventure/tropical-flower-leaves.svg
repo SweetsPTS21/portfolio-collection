@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="plantTitle plantDesc">
+  <title id="plantTitle">Tropical Flower and Leaves</title>
+  <desc id="plantDesc">Illustrated colorful hibiscus flower and lush green tropical palm and monstera leaves.</desc>
+  <defs>
+    <filter id="leafShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#123E48" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <g filter="url(#leafShadow)">
+    <!-- Monstera Leaf (Big Green Leaf on the bottom-left) -->
+    <g transform="translate(140, 240) rotate(-15)">
+      <path d="M 0 0 C -40 -30, -90 -30, -110 20 C -120 50, -90 90, -40 100 C -20 104, 20 90, 40 60 C 50 40, 30 20, 0 0 Z" fill="#70E6A8" />
+      <!-- Monstera Leaf Cuts / Holes -->
+      <path d="M -80 30 Q -60 25, -45 35 Q -60 45, -80 30 Z" fill="#ECFFFB" />
+      <path d="M -60 65 Q -40 55, -25 60 Q -40 75, -60 65 Z" fill="#ECFFFB" />
+      <path d="M -95 10 Q -80 0, -65 10 Q -80 20, -95 10 Z" fill="#ECFFFB" opacity="0.6" />
+      <!-- Leaf Stem/Veins -->
+      <path d="M 0 0 C -30 30, -50 50, -80 80" stroke="#4FB680" stroke-width="3" stroke-linecap="round" fill="none" />
+      <path d="M -25 25 C -40 20, -60 15, -75 10" stroke="#4FB680" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M -45 45 C -60 45, -70 45, -85 50" stroke="#4FB680" stroke-width="2" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Palm Frond Leaf (Long Elegant Leaf on the top-right) -->
+    <g transform="translate(240, 150) rotate(45)">
+      <!-- Main Stem -->
+      <path d="M -150 0 Q 0 -50, 150 0" stroke="#54D597" stroke-width="4" stroke-linecap="round" fill="none" />
+      <!-- Leaflets -->
+      <path d="M -120 -5 C -130 -25, -100 -30, -80 -10 Z" fill="#70E6A8" />
+      <path d="M -90 -9 C -105 -35, -70 -40, -50 -15 Z" fill="#70E6A8" />
+      <path d="M -60 -12 C -75 -42, -40 -48, -20 -18 Z" fill="#54D597" />
+      <path d="M -30 -14 C -45 -48, -10 -52, 10 -20 Z" fill="#70E6A8" />
+      <path d="M 0 -15 C -15 -50, 20 -50, 40 -20 Z" fill="#70E6A8" />
+      <path d="M 30 -14 C 15 -48, 50 -48, 70 -18 Z" fill="#54D597" />
+      <path d="M 60 -12 C 45 -42, 80 -40, 100 -15 Z" fill="#70E6A8" />
+      <path d="M 90 -9 C 75 -35, 110 -30, 120 -10 Z" fill="#70E6A8" />
+    </g>
+
+    <!-- Hibiscus Flower (Vibrant pink flower in the middle) -->
+    <g transform="translate(200, 200)">
+      <!-- Petals -->
+      <path d="M 0 0 C -25 -25, -55 -25, -50 0 C -45 25, -25 25, 0 0 Z" fill="#FF7F9E" />
+      <path d="M 0 0 C -25 25, -25 55, 0 50 C 25 45, 25 25, 0 0 Z" fill="#FF5F82" />
+      <path d="M 0 0 C 25 25, 55 25, 50 0 C 45 -25, 25 -25, 0 0 Z" fill="#FF7F9E" />
+      <path d="M 0 0 C 25 -25, 25 -55, 0 -50 C -25 -45, -25 -25, 0 0 Z" fill="#FF5F82" />
+      <!-- Center core -->
+      <circle cx="0" cy="0" r="12" fill="#FFD86B" />
+      <!-- Stamen/Pistil (Golden rod sticking out) -->
+      <path d="M 0 0 Q 30 -30, 50 -40" stroke="#FFD86B" stroke-width="4" stroke-linecap="round" fill="none" />
+      <circle cx="50" cy="-40" r="6" fill="#FF7F9E" />
+      <circle cx="45" cy="-45" r="3" fill="#FFD86B" />
+      <circle cx="55" cy="-35" r="3" fill="#FFD86B" />
+    </g>
+
+    <!-- Plumeria Flower (Small Yellow/White Flower on the side) -->
+    <g transform="translate(100, 120) rotate(15)">
+      <!-- Petals -->
+      <path d="M 0 0 C -15 -15, -30 -10, -25 5 C -20 15, -10 10, 0 0 Z" fill="#FFFFFF" />
+      <path d="M 0 0 C -15 15, -10 30, 5 25 C 15 20, 10 10, 0 0 Z" fill="#FFFFFF" />
+      <path d="M 0 0 C 15 15, 30 10, 25 -5 C 20 -15, 10 -10, 0 0 Z" fill="#FFFFFF" />
+      <path d="M 0 0 C 15 -15, 10 -30, -5 -25 C -15 -20, -10 -10, 0 0 Z" fill="#FFFFFF" />
+      <!-- Golden center overlay -->
+      <circle cx="0" cy="0" r="7" fill="#FFD86B" opacity="0.9" />
+      <circle cx="0" cy="0" r="3" fill="#FFB700" />
+    </g>
+  </g>
+</svg>

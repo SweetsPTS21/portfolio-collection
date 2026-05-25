@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="rippleTitle rippleDesc">
+  <title id="rippleTitle">Water Ripples and Bubbles</title>
+  <desc id="rippleDesc">Shiny water bubbles with light reflection highlights and circular rippling wave lines.</desc>
+  <defs>
+    <radialGradient id="bubbleGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#ECFFFB" stop-opacity="0.6" />
+      <stop offset="80%" stop-color="#7CEAFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#27C6C2" stop-opacity="0.5" />
+    </radialGradient>
+  </defs>
+
+  <!-- Water Ripple Rings -->
+  <g fill="none" stroke="#27C6C2" stroke-linecap="round" opacity="0.4">
+    <!-- Center Ripple -->
+    <ellipse cx="150" cy="150" rx="120" ry="40" stroke-width="2" />
+    <ellipse cx="150" cy="150" rx="80" ry="26" stroke-width="1.5" stroke-dasharray="6, 6" />
+    <ellipse cx="150" cy="150" rx="40" ry="13" stroke-width="1" />
+  </g>
+
+  <!-- Decorative Bubbles with highlights -->
+  <!-- Big Bubble -->
+  <g transform="translate(180, 100)">
+    <circle cx="0" cy="0" r="24" fill="url(#bubbleGrad)" />
+    <!-- Highlight gloss -->
+    <ellipse cx="-8" cy="-8" rx="6" ry="3" fill="#FFFFFF" transform="rotate(-30 -8 -8)" />
+  </g>
+
+  <!-- Medium Bubble -->
+  <g transform="translate(90, 180)">
+    <circle cx="0" cy="0" r="16" fill="url(#bubbleGrad)" />
+    <ellipse cx="-5" cy="-5" rx="4" ry="2" fill="#FFFFFF" transform="rotate(-30 -5 -5)" />
+  </g>
+
+  <!-- Small Bubbles -->
+  <g transform="translate(230, 200)">
+    <circle cx="0" cy="0" r="10" fill="url(#bubbleGrad)" />
+    <circle cx="-3" cy="-3" r="2.5" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(130, 80)">
+    <circle cx="0" cy="0" r="8" fill="url(#bubbleGrad)" opacity="0.75" />
+  </g>
+  <g transform="translate(210, 60)">
+    <circle cx="0" cy="0" r="12" fill="url(#bubbleGrad)" />
+    <ellipse cx="-4" cy="-4" rx="3" ry="1.5" fill="#FFFFFF" transform="rotate(-30 -4 -4)" />
+  </g>
+  <g transform="translate(60, 120)">
+    <circle cx="0" cy="0" r="6" fill="url(#bubbleGrad)" opacity="0.6" />
+  </g>
+</svg>

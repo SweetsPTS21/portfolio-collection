@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" role="img" aria-labelledby="iconTitle iconDesc">
+  <title id="iconTitle">Paddle Toolkit Icons</title>
+  <desc id="iconDesc">Icons for skills group: paddle, compass, waterproof dry bag, sunscreen cream, binoculars.</desc>
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#27C6C2" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Icon 1: Paddle (Quản lý tệp) -->
+  <g transform="translate(50, 50)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="35" fill="#ECFFFB" stroke="#27C6C2" stroke-width="2" />
+    <g transform="rotate(45) scale(0.85)">
+      <rect x="-3" y="-35" width="6" height="70" rx="3" fill="#123E48" />
+      <path d="M -8 -35 C -15 -35, -20 -45, -20 -25 C -20 -5, -15 -15, -8 -15 Z" fill="#FF7F9E" />
+      <path d="M 8 35 C 15 35, 20 45, 20 25 C 20 5, 15 15, 8 15 Z" fill="#FF7F9E" />
+    </g>
+  </g>
+
+  <!-- Icon 2: Compass (Nguồn học thuật) -->
+  <g transform="translate(150, 50)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="35" fill="#ECFFFB" stroke="#27C6C2" stroke-width="2" />
+    <g scale="0.85">
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#123E48" stroke-width="2" />
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#27C6C2" stroke-width="1" stroke-dasharray="2, 2" />
+      <path d="M -3 -3 L 0 -16 L 3 -3 L 0 16 Z" fill="#FF7F9E" />
+      <path d="M -3 3 L 0 16 L 3 3 L 0 -16 Z" fill="#123E48" opacity="0.4" />
+      <circle cx="0" cy="0" r="3" fill="#FFD86B" />
+    </g>
+  </g>
+
+  <!-- Icon 3: Dry Bag (Công cụ AI) -->
+  <g transform="translate(250, 50)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="35" fill="#ECFFFB" stroke="#27C6C2" stroke-width="2" />
+    <g transform="translate(-15, -20) scale(0.9)">
+      <!-- Dry bag outline and fill -->
+      <path d="M 5 8 L 25 8 L 27 38 C 27 42, 23 45, 15 45 C 7 45, 3 42, 3 38 Z" fill="#70E6A8" stroke="#123E48" stroke-width="2" />
+      <!-- Rolled top clip -->
+      <rect x="2" y="3" width="26" height="5" rx="2.5" fill="#FFD86B" stroke="#123E48" stroke-width="2" />
+      <path d="M 6 3 Q 15 -3, 24 3" fill="none" stroke="#123E48" stroke-width="2" />
+      <!-- Buckle -->
+      <rect x="13" y="8" width="4" height="6" fill="#123E48" />
+    </g>
+  </g>
+
+  <!-- Icon 4: Sunscreen (Thiết kế sáng tạo) -->
+  <g transform="translate(350, 50)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="35" fill="#ECFFFB" stroke="#27C6C2" stroke-width="2" />
+    <g transform="translate(-12, -22) scale(0.85)">
+      <!-- Sunscreen tube -->
+      <path d="M 4 8 L 20 8 L 24 38 L 0 38 Z" fill="#FFD86B" stroke="#123E48" stroke-width="2.5" />
+      <!-- Tube cap -->
+      <rect x="6" y="38" width="12" height="6" rx="1.5" fill="#FF7F9E" stroke="#123E48" stroke-width="2" />
+      <!-- Sun emblem -->
+      <circle cx="12" cy="22" r="5" fill="#FF7F9E" />
+      <circle cx="12" cy="22" r="8" fill="none" stroke="#FF7F9E" stroke-width="1.5" stroke-dasharray="2, 2" />
+    </g>
+  </g>
+
+  <!-- Icon 5: Binoculars (Làm việc nhóm) -->
+  <g transform="translate(450, 50)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="35" fill="#ECFFFB" stroke="#27C6C2" stroke-width="2" />
+    <g transform="translate(-18, -16) scale(0.9)">
+      <!-- Binoculars body -->
+      <!-- Left lens tube -->
+      <rect x="2" y="5" width="10" height="24" rx="2" fill="#7CEAFF" stroke="#123E48" stroke-width="2.5" />
+      <ellipse cx="7" cy="29" rx="5" ry="2" fill="#27C6C2" stroke="#123E48" stroke-width="2" />
+      
+      <!-- Right lens tube -->
+      <rect x="24" y="5" width="10" height="24" rx="2" fill="#7CEAFF" stroke="#123E48" stroke-width="2.5" />
+      <ellipse cx="29" cy="29" rx="5" ry="2" fill="#27C6C2" stroke="#123E48" stroke-width="2" />
+      
+      <!-- Center bridge -->
+      <rect x="12" y="10" width="12" height="4" fill="#FFD86B" stroke="#123E48" stroke-width="2" />
+      <circle cx="18" cy="18" r="3" fill="#FF7F9E" stroke="#123E48" stroke-width="2" />
+    </g>
+  </g>
+</svg>
