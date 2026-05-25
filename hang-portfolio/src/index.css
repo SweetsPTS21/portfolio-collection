@@ -1,0 +1,974 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+
+/* beach-market-stroll */
+:root {
+  --market-cream: #F8F3EA;
+  --coast-blue: #2F80B7;
+  --sky-blue: #7DB8DA;
+  --sand-beige: #EFE0C4;
+  --warm-beige: #D8C39D;
+  --paper-white: #FFFFFF;
+  --mist-border: #D8E7EF;
+  --ink-blue: #1E3A4C;
+  --soft-shadow: 0 24px 70px rgba(30, 58, 76, 0.16);
+  color: var(--ink-blue);
+  background: var(--market-cream);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.beach-market-app {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(125, 184, 218, 0.34), transparent 24rem),
+    radial-gradient(circle at 92% 20%, rgba(239, 224, 196, 0.22), transparent 28rem),
+    linear-gradient(180deg, rgba(238, 248, 252, 0.68) 0%, rgba(248, 243, 234, 0.28) 46%, #FFFFFF 100%);
+}
+
+.beach-market-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.beach-market-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background:
+    linear-gradient(90deg, rgba(248, 243, 234, 0.18) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(248, 243, 234, 0.2) 100%),
+    linear-gradient(180deg, rgba(238, 248, 252, 0.08), rgba(248, 243, 234, 0.22) 78%);
+}
+
+.market-hero-generated,
+.sea-sparkle-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.market-hero-generated {
+  z-index: 1;
+  object-position: center bottom;
+  opacity: 0.9;
+  filter: saturate(1.14) contrast(1.05);
+  transform: scale(1.035);
+  animation: scenic-breathe 18s ease-in-out infinite alternate;
+}
+
+.sea-sparkle-overlay {
+  z-index: 2;
+  object-position: center;
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  animation: sparkle-drift 16s ease-in-out infinite alternate;
+}
+
+.market-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px clamp(18px, 4vw, 54px);
+  backdrop-filter: blur(16px);
+  background: rgba(248, 243, 234, 0.84);
+  border-bottom: 1px solid rgba(216, 231, 239, 0.9);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--coast-blue), var(--sand-beige));
+  color: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(47, 128, 183, 0.24);
+  font-weight: 800;
+}
+
+.market-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.market-header nav a {
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(216, 231, 239, 0.95);
+  font-weight: 800;
+  font-size: 0.84rem;
+}
+
+.market-header nav a[aria-current="page"] {
+  background: var(--coast-blue);
+  color: var(--paper-white);
+  border-color: rgba(47, 128, 183, 0.86);
+}
+
+.market-main {
+  position: relative;
+  z-index: 1;
+}
+
+.market-section {
+  position: relative;
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: clamp(58px, 9vw, 112px) 0;
+}
+
+.section-heading,
+.stall-project-grid,
+.basket-skill-grid,
+.order-card {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section::before,
+.projects-section::after,
+.basket-section::before,
+.basket-section::after,
+.order-section::before,
+.order-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 18px 26px rgba(30, 58, 76, 0.14));
+}
+
+.projects-section::before {
+  top: 18px;
+  right: -38px;
+  width: clamp(116px, 13vw, 210px);
+  aspect-ratio: 358 / 310;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-camera.png");
+  transform: rotate(7deg);
+}
+
+.projects-section::after {
+  left: -70px;
+  bottom: 20px;
+  width: clamp(180px, 22vw, 330px);
+  aspect-ratio: 595 / 318;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  transform: rotate(-4deg);
+}
+
+.basket-section::before {
+  top: 24px;
+  left: -48px;
+  width: clamp(120px, 15vw, 230px);
+  aspect-ratio: 439 / 346;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-parasol.png");
+  transform: rotate(-10deg);
+}
+
+.basket-section::after {
+  right: -58px;
+  bottom: 10px;
+  width: clamp(128px, 16vw, 240px);
+  aspect-ratio: 356 / 276;
+  background-image: url("./assets/beach-market-stroll/generated/slices/props-empty-crate.png");
+  transform: rotate(5deg);
+}
+
+.order-section::before {
+  top: 28px;
+  left: -42px;
+  width: clamp(160px, 22vw, 300px);
+  aspect-ratio: 689 / 539;
+  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png");
+  transform: rotate(-6deg);
+}
+
+.order-section::after {
+  right: clamp(0px, 8vw, 120px);
+  top: 48px;
+  width: clamp(82px, 10vw, 140px);
+  aspect-ratio: 371 / 308;
+  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png");
+  transform: rotate(9deg);
+}
+
+.hero-section {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.72fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.route-page {
+  min-height: calc(100vh - 72px);
+}
+
+.route-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.42fr);
+  align-items: center;
+  gap: clamp(22px, 4vw, 52px);
+  margin-bottom: clamp(24px, 5vw, 52px);
+}
+
+.route-hero h1,
+.route-heading h1 {
+  margin: 18px 0 16px;
+  font-family: "Josefin Sans", "Nunito", sans-serif;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.route-hero h1 {
+  max-width: 760px;
+  font-size: clamp(3.2rem, 8vw, 7.2rem);
+}
+
+.route-heading h1 {
+  max-width: 860px;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+}
+
+.route-hero p,
+.route-heading p,
+.content-card p,
+.project-chapter-card p,
+.fact-list dd {
+  color: #506C7B;
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.route-hero p,
+.route-heading p {
+  max-width: 760px;
+  font-size: clamp(1.05rem, 2vw, 1.24rem);
+}
+
+.route-avatar {
+  margin-top: 0;
+  min-width: 0;
+}
+
+.content-card-grid,
+.project-chapter-grid,
+.conclusion-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.about-card-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.content-card,
+.project-chapter-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)) padding-box,
+    linear-gradient(135deg, var(--coast-blue), var(--sky-blue), var(--sand-beige)) border-box;
+  border: 3px solid transparent;
+  border-radius: 22px;
+  box-shadow: var(--soft-shadow);
+}
+
+.content-card {
+  padding: 24px;
+}
+
+.about-card-grid .content-card:nth-child(1),
+.about-card-grid .content-card:nth-child(2) {
+  grid-column: span 6;
+}
+
+.about-card-grid .content-card:nth-child(3),
+.about-card-grid .content-card:nth-child(4),
+.about-card-grid .content-card:nth-child(5) {
+  grid-column: span 4;
+}
+
+.content-card h2,
+.project-chapter-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 14px 0 12px;
+  font-family: "Josefin Sans", "Nunito", sans-serif;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.content-card h2 {
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+}
+
+.fact-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.fact-list div {
+  display: grid;
+  gap: 4px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(47, 128, 183, 0.16);
+}
+
+.fact-list dt {
+  color: var(--ink-blue);
+  font-weight: 900;
+}
+
+.fact-list dd {
+  margin: 0;
+}
+
+.project-chapter-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-chapter-card {
+  min-height: 520px;
+  padding: 24px 22px 72px;
+}
+
+.project-chapter-card h2 {
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+}
+
+.chapter-block {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(248, 243, 234, 0.68);
+  border: 1px solid rgba(47, 128, 183, 0.16);
+}
+
+.chapter-block h3 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  color: var(--coast-blue);
+  letter-spacing: 0;
+}
+
+.chapter-block p {
+  margin: 0;
+}
+
+.chapter-link {
+  left: 22px;
+  right: 22px;
+}
+
+.conclusion-card-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: stretch;
+}
+
+.conclusion-card {
+  min-height: 0;
+}
+
+.conclusion-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.conclusion-card:nth-child(1) {
+  grid-row: span 2;
+  padding-bottom: clamp(158px, 16vw, 228px);
+}
+
+.conclusion-card:nth-child(1) p {
+  font-size: 1.08rem;
+}
+
+.conclusion-card:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: clamp(20px, 3vw, 40px);
+  bottom: clamp(30px, 4vw, 62px);
+  z-index: 0;
+  width: clamp(82px, 12vw, 142px);
+  aspect-ratio: 358 / 371;
+  pointer-events: none;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-starfish.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.32;
+  filter: drop-shadow(0 16px 22px rgba(30, 58, 76, 0.14));
+  transform: rotate(10deg);
+}
+
+.conclusion-card:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  right: clamp(20px, 4vw, 50px);
+  bottom: clamp(16px, 3vw, 34px);
+  z-index: 0;
+  width: min(48%, 330px);
+  aspect-ratio: 595 / 318;
+  pointer-events: none;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.38;
+  filter: drop-shadow(0 18px 24px rgba(30, 58, 76, 0.13));
+  transform: rotate(-3deg);
+}
+
+.conclusion-card:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+.route-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.order-card h2 {
+  margin: 18px 0 16px;
+  font-family: "Josefin Sans", "Nunito", sans-serif;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 {
+  max-width: 760px;
+  font-size: clamp(3.3rem, 9vw, 8rem);
+}
+
+.hero-copy p,
+.section-heading p,
+.vendor-profile-card p,
+.order-card p,
+.stall-card p {
+  color: #506C7B;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.hero-copy > p {
+  max-width: 660px;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.hero-details span,
+.principle-list span {
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(47, 128, 183, 0.28);
+  font-weight: 800;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.market-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 900;
+  border: 2px solid rgba(36, 60, 58, 0.08);
+  box-shadow: 0 14px 34px rgba(36, 60, 58, 0.14);
+}
+
+.market-button-primary {
+  background: linear-gradient(135deg, var(--coast-blue), var(--sand-beige));
+}
+
+.market-button-light {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 45%, rgba(255, 255, 255, 0.82) 45% 55%, transparent 55%),
+    var(--coast-blue);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.65);
+}
+
+.vendor-profile-card,
+.order-card,
+.basket-skill-card,
+.stall-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--coast-blue), var(--sky-blue), var(--sand-beige)) border-box;
+  border: 3px solid transparent;
+  box-shadow: var(--soft-shadow);
+}
+
+.vendor-profile-card {
+  border-radius: 28px;
+  padding: 20px;
+}
+
+.vendor-profile-card::before,
+.order-card::before,
+.stall-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 54px;
+  background: repeating-linear-gradient(90deg, var(--coast-blue) 0 26px, var(--paper-white) 26px 52px, var(--sand-beige) 52px 78px, var(--paper-white) 78px 104px);
+  opacity: 0.9;
+}
+
+.avatar-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 48px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 8px solid var(--paper-white);
+  box-shadow: 0 16px 34px rgba(30, 58, 76, 0.16);
+}
+
+.vendor-profile-card h2,
+.basket-skill-card h3,
+.stall-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 8px;
+  font-family: "Josefin Sans", "Nunito", sans-serif;
+}
+
+.principle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.section-kicker {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: #fff;
+  color: #1E3A4C;
+  border: 1px solid rgba(47, 128, 183, 0.3);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.section-heading h2,
+.order-card h2 {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+}
+
+.stall-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stall-card {
+  min-height: 430px;
+  border-radius: 22px;
+  padding: 74px 18px 20px;
+}
+
+.stall-card::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 42px;
+  z-index: 0;
+  width: 150px;
+  aspect-ratio: 1;
+  background: url("./assets/beach-market-stroll/generated/slices/coastal-scallop-shell.png") center / contain no-repeat;
+  opacity: 0.16;
+  transform: rotate(8deg);
+}
+
+.stall-card:nth-child(2)::after {
+  right: -22px;
+  bottom: 34px;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-starfish.png");
+  transform: rotate(-10deg);
+}
+
+.stall-card:nth-child(3)::after {
+  right: -36px;
+  bottom: 28px;
+  width: 170px;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-camera.png");
+  transform: rotate(7deg);
+}
+
+.stall-card:nth-child(4)::after {
+  right: -28px;
+  bottom: 24px;
+  width: 180px;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-parasol.png");
+  transform: rotate(-12deg);
+}
+
+.stall-card:nth-child(5)::after {
+  right: -58px;
+  bottom: 40px;
+  width: 230px;
+  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  transform: rotate(5deg);
+}
+
+.stall-card:nth-child(6)::after {
+  right: -44px;
+  bottom: 38px;
+  width: 190px;
+  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png");
+  transform: rotate(-7deg);
+}
+
+.stall-card-awning {
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  right: 18px;
+  height: 34px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(90deg, var(--coast-blue) 0 18px, var(--paper-white) 18px 36px, var(--sand-beige) 36px 54px, var(--paper-white) 54px 72px);
+}
+
+.price-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 2px solid rgba(47, 128, 183, 0.32);
+  color: #1E3A4C;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.price-tag span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--coast-blue);
+}
+
+.price-tag-mint {
+  border-color: rgba(125, 184, 218, 0.72);
+}
+
+.price-tag-gold {
+  border-color: rgba(239, 224, 196, 0.95);
+}
+
+.stall-card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.project-goal {
+  font-weight: 900;
+  color: #1E3A4C;
+}
+
+.stall-card-link {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 11px 14px;
+  background: linear-gradient(135deg, #FFFFFF, var(--sand-beige));
+  font-weight: 900;
+}
+
+.basket-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.basket-skill-card {
+  border-radius: 22px;
+  padding: 22px;
+  min-height: 220px;
+}
+
+.basket-skill-card::after {
+  content: "";
+  position: absolute;
+  right: -54px;
+  bottom: -48px;
+  z-index: 0;
+  width: 172px;
+  aspect-ratio: 1;
+  background: url("./assets/beach-market-stroll/generated/slices/props-sea-glass.png") center / contain no-repeat;
+  opacity: 0.2;
+  transform: rotate(-10deg);
+}
+
+.badge-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.basket-badge {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(47, 128, 183, 0.36);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.order-section {
+  padding-bottom: 92px;
+}
+
+.order-card {
+  width: min(850px, 100%);
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: clamp(82px, 9vw, 116px) clamp(22px, 5vw, 58px) 42px;
+}
+
+.order-card::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -54px;
+  z-index: 0;
+  width: clamp(180px, 28vw, 320px);
+  aspect-ratio: 1;
+  background: url("./assets/beach-market-stroll/generated/slices/receipt-kraft-tag.png") center / contain no-repeat;
+  opacity: 0.16;
+  transform: rotate(6deg);
+}
+
+.order-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.order-card blockquote {
+  margin: 24px 0;
+  padding: 20px 22px;
+  border-left: 8px solid var(--coast-blue);
+  border-radius: 0 18px 18px 0;
+  background: rgba(248, 243, 234, 0.86);
+  color: #1E3A4C;
+  font-weight: 900;
+  line-height: 1.7;
+}
+
+.market-footer {
+  position: relative;
+  z-index: 1;
+  padding: 28px 18px 42px;
+  text-align: center;
+  color: #607986;
+  font-weight: 800;
+}
+
+@keyframes scenic-breathe {
+  from { transform: scale(1.025) translate3d(-0.4%, 0, 0); }
+  to { transform: scale(1.055) translate3d(0.4%, -0.7%, 0); }
+}
+
+@keyframes sparkle-drift {
+  from { transform: translate3d(-1%, 0, 0) scale(1.02); opacity: 0.18; }
+  to { transform: translate3d(1%, -1%, 0) scale(1.04); opacity: 0.28; }
+}
+
+@media (max-width: 920px) {
+  .hero-section,
+  .route-hero {
+    grid-template-columns: 1fr;
+    padding-top: 46px;
+  }
+
+  .stall-project-grid,
+  .basket-skill-grid,
+  .project-chapter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .conclusion-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conclusion-card:nth-child(1),
+  .conclusion-card:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .conclusion-card:nth-child(1) {
+    padding-bottom: 24px;
+  }
+
+  .conclusion-card:nth-child(1)::before,
+  .conclusion-card:nth-child(1)::after {
+    display: none;
+  }
+
+  .about-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-card-grid .content-card:nth-child(n) {
+    grid-column: auto;
+  }
+
+  .market-hero-generated {
+    opacity: 0.78;
+    object-position: 46% bottom;
+  }
+
+  .projects-section::before,
+  .basket-section::after {
+    opacity: 0.64;
+  }
+}
+
+@media (max-width: 620px) {
+  .market-header {
+    align-items: flex-start;
+  }
+
+  .market-header nav a {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3rem, 16vw, 4.6rem);
+  }
+
+  .stall-project-grid,
+  .basket-skill-grid,
+  .project-chapter-grid,
+  .conclusion-card-grid,
+  .about-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-hero h1,
+  .route-heading h1 {
+    font-size: clamp(2.7rem, 14vw, 4.25rem);
+  }
+
+  .project-chapter-card,
+  .conclusion-card {
+    min-height: auto;
+  }
+
+  .projects-section::before,
+  .projects-section::after,
+  .basket-section::before,
+  .basket-section::after,
+  .order-section::before,
+  .order-section::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
