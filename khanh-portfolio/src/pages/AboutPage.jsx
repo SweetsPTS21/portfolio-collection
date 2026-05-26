@@ -1,6 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, Layers, BookOpen, Scale, Activity, Bot, Music } from "lucide-react";
+import {
+  Cpu,
+  Layers,
+  BookOpen,
+  Scale,
+  Activity,
+  Bot,
+  Music,
+} from "lucide-react";
 import {
   personalInfo,
   orientationDisplay,
@@ -9,7 +17,6 @@ import {
   toolsets,
 } from "../data/khanhData";
 import CloudCard from "../components/ui/CloudCard";
-
 
 const pageTransition = {
   initial: { opacity: 0, scale: 0.96, y: 15 },
@@ -57,6 +64,9 @@ export default function AboutPage() {
               <strong>Trường học:</strong> {personalInfo.university}
             </div>
             <div>
+              <strong>Mã sinh viên:</strong> {personalInfo.studentId}
+            </div>
+            <div>
               <strong>Phong cách:</strong> {personalInfo.style}
             </div>
           </div>
@@ -73,9 +83,15 @@ export default function AboutPage() {
               Sở thích của mình:
             </h3>
             <div className="about-style-box">
-              <span className="badge-cloud"><Activity size={14} /> Cầu lông</span>
-              <span className="badge-cloud"><Bot size={14} /> Nghiên cứu AI &amp; Luật</span>
-              <span className="badge-cloud"><Music size={14} /> Thư giãn với Âm nhạc</span>
+              <span className="badge-cloud">
+                <Activity size={14} /> Cầu lông
+              </span>
+              <span className="badge-cloud">
+                <Bot size={14} /> Nghiên cứu AI &amp; Luật
+              </span>
+              <span className="badge-cloud">
+                <Music size={14} /> Thư giãn với Âm nhạc
+              </span>
             </div>
           </div>
         </div>
@@ -94,7 +110,9 @@ export default function AboutPage() {
               <div key={idx} className="orientation-step">
                 <step.Icon size={22} className="orientation-step-icon" />
                 <div>
-                  <div className="orientation-step-headline">{step.headline}</div>
+                  <div className="orientation-step-headline">
+                    {step.headline}
+                  </div>
                   <div className="orientation-step-detail">{step.detail}</div>
                 </div>
               </div>
@@ -110,17 +128,29 @@ export default function AboutPage() {
           </div>
           <ul className="panel-list">
             {portfolioMission.points.map((point, idx) => (
-              <li key={idx} className="panel-list-item">{point}</li>
+              <li key={idx} className="panel-list-item">
+                {point}
+              </li>
             ))}
           </ul>
         </CloudCard>
       </div>
 
       {/* Core Principles — with emoji icons */}
-      <section className="principles-container" style={{ marginBottom: "40px" }}>
+      <section
+        className="principles-container"
+        style={{ marginBottom: "40px" }}
+      >
         <CloudCard delay={0.3}>
           <h2 className="principles-title">
-            <Scale size={18} style={{ display: "inline", verticalAlign: "middle", marginRight: "6px" }} />
+            <Scale
+              size={18}
+              style={{
+                display: "inline",
+                verticalAlign: "middle",
+                marginRight: "6px",
+              }}
+            />
             {coreSkills.title}
           </h2>
           <p
@@ -174,7 +204,6 @@ export default function AboutPage() {
           </div>
         </CloudCard>
       </section>
-
     </motion.div>
   );
 }

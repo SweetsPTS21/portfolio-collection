@@ -34,7 +34,8 @@ export const personalInfo = {
   motto:
     "Chào mừng thầy cô và các bạn đến với không gian số của mình! Nơi đây không có những lý thuyết rập khuôn, mà là một sân chơi năng động, nơi những dòng lý thuyết khô khan, khó hiểu được đơn giản và trực quan hóa thông qua một trang web mang những màu sắc, dấu ấn đậm chất cá nhân.",
   major: "Luật học",
-  university: "Đại học Luật",
+  university: "Trường Đại học Luật",
+  studentId: "24061207",
   style:
     "Giản dị, đời thường trong cuộc sống hằng ngày nhưng luôn hướng ngoại và tràn đầy năng lượng khi bước vào các hoạt động tập thể hay thử thách mới.",
   avatarUrl,

@@ -1877,7 +1877,7 @@ src/
 
 ---
 
-## 8. `strawberry-picnic-meadow` — Strawberry Picnic Meadow Portfolio
+## 13. `strawberry-picnic-meadow` — Strawberry Picnic Meadow Portfolio
 
 Portfolio như một buổi picnic dâu giữa đồng cỏ mùa xuân: khăn caro hồng, giỏ mây, bánh kem mini, lọ mứt, hoa cúc, ong nhỏ và bướm bay. Theme rực rỡ, ngọt, nữ tính, background là một meadow scene nhiều lớp để tạo cảm giác sống động ngay từ màn đầu.
 
@@ -2028,7 +2028,7 @@ src/
 
 ---
 
-## 9. `pastel-magic-boutique` — Pastel Magic Boutique Portfolio
+## 14. `pastel-magic-boutique` — Pastel Magic Boutique Portfolio
 
 Portfolio như một boutique phép thuật pastel: kệ potion hồng tím, gương trái tim, hộp ribbon, charm lấp lánh và mèo/mascot tiệm nhỏ. Background là storefront/inside-shop scene nhiều lớp, tạo cảm giác bước vào một cửa hàng cute, rực rỡ nhưng vẫn mềm mắt.
 
@@ -2179,7 +2179,7 @@ src/
 
 ---
 
-## 10. `dreamy-flower-train` — Dreamy Flower Train Portfolio
+## 15. `dreamy-flower-train` — Dreamy Flower Train Portfolio
 
 Portfolio như một chuyến tàu hoa chạy qua bầu trời pastel: toa tàu phủ hoa, mây bông, đường ray cầu vồng, smoke là cánh hoa và những trạm dừng nhỏ cho từng phần nội dung. Theme có cảm giác hành trình, nữ tính, giàu storytelling và animation mượt.
 
@@ -2329,7 +2329,7 @@ src/
 
 ---
 
-## 11. `mermaid-pearl-lagoon` — Mermaid Pearl Lagoon Portfolio
+## 16. `mermaid-pearl-lagoon` — Mermaid Pearl Lagoon Portfolio
 
 Portfolio như một lagoon ngọc trai dành cho nàng tiên cá: nước xanh ngọc, san hô hồng tím, vỏ sò mở, pearl shimmer, sao biển và ánh caustics trên nền. Theme fantasy nữ tính, sáng, lấp lánh, dùng background lagoon làm lớp chính để tạo chiều sâu.
 
@@ -2480,7 +2480,7 @@ src/
 
 ---
 
-## 12. `kawaii-stationery-room` — Kawaii Stationery Room Portfolio
+## 17. `kawaii-stationery-room` — Kawaii Stationery Room Portfolio
 
 Portfolio như một căn phòng stationery cute: bàn học pastel, sticker sheet, bút gel, washi tape, sticky note, kẹp giấy trái tim và ánh sáng cửa sổ mềm. Theme thân thiện, nữ tính, giàu chi tiết handmade, dùng background room/desk làm lớp chính thay vì chỉ trang trí ở góc.
 
@@ -2631,7 +2631,7 @@ src/
 
 ---
 
-## 8. `ballet-swan-lake` — Ballet Swan Lake Portfolio
+## 18. `ballet-swan-lake` — Ballet Swan Lake Portfolio
 
 Giao diện mềm mại, thanh tao như hồ thiên nga dưới trăng. Kết hợp chuyển động của ruy băng satin bay nhẹ, mặt nước phản chiếu lung linh dạng kính mờ (glassmorphism) lấp lánh xà cừ, lông vũ trắng rơi lơ lửng, và những bông hồng phấn nhạt nở trên mặt hồ.
 
@@ -2898,7 +2898,7 @@ src/
 
 ---
 
-## 10. `carousel-dream-palace` — Carousel Dream Palace Portfolio
+## 19. `carousel-dream-palace` — Carousel Dream Palace Portfolio
 
 Khung cảnh cỗ xe vòng quay ngựa gỗ lung linh dưới trăng lãng mạn. Thiết kế sử dụng các tấm kính glassmorphism lớn được mài vát cạnh lấp lánh ánh trăng, thắt dải ruy băng voan hồng xếp lớp mềm mại, có sao đêm lấp lánh và màn sương pha lê mờ ảo phía sau.
 
@@ -3164,7 +3164,7 @@ src/
 
 ---
 
-## 12. `angel-perfume-atelier` — Angel Perfume Atelier Portfolio
+## 20. `angel-perfume-atelier` — Angel Perfume Atelier Portfolio
 
 Một xưởng nước hoa phép thuật của thiên thần nhỏ lãng mạn. Những chai nước hoa làm bằng thủy tinh mài tinh xảo phát ra làn sương ma thuật lấp lánh ánh ngọc trai/aurora (holographic glassmorphism), đôi cánh thiên thần trắng muốt xếp lớp bay nhẹ, những sợi lông vũ và cánh hoa hồng rơi tự do dưới ánh trăng. Thiết kế kính mờ phản quang cầu vồng (aurora glassmorphism) mang đến một vẻ đẹp cực kỳ thời thượng, sang xịn và quyến rũ cho portfolio.
 

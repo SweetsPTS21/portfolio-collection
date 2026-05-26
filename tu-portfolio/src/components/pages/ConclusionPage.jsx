@@ -6,7 +6,7 @@ import SectionTitle from '../ui/SectionTitle.jsx';
 import SoftCard from '../ui/SoftCard.jsx';
 
 export default function ConclusionPage() {
-  const { conclusion } = portfolioData;
+  const { conclusion, visualAssets } = portfolioData;
 
   return (
     <div className="portfolio-page conclusion-page">
@@ -14,6 +14,13 @@ export default function ConclusionPage() {
         <SectionTitle eyebrow="Conclusion" title="Khép lại một chặng đường đầy màu sắc" icon="HeartHandshake">
           {conclusion.opening}
         </SectionTitle>
+        <ScrollReveal className="conclusion-panel" delay={0.08}>
+          <img src={visualAssets.conclusionPanel} alt="" aria-hidden="true" />
+          <div className="conclusion-panel__copy">
+            <span>Reflective note</span>
+            <strong>Luật, công nghệ và cách kể chuyện gần gũi có thể đi cùng nhau.</strong>
+          </div>
+        </ScrollReveal>
       </section>
 
       <section className="reflection-layout">

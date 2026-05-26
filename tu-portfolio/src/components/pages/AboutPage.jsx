@@ -19,11 +19,11 @@ const toolIcons = {
 };
 
 export default function AboutPage() {
-  const { profile, principles, tools } = portfolioData;
+  const { profile, principles, tools, visualAssets } = portfolioData;
 
   return (
     <div className="portfolio-page about-page">
-      <section className="hero-section">
+      <section className="hero-section hero-section--about">
         <ScrollReveal className="hero-section__copy">
           <span className="kicker">Sweet legal studio</span>
           <h1>{profile.name}</h1>
@@ -40,31 +40,42 @@ export default function AboutPage() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="profile-card" delay={0.08}>
-          <div className="profile-card__portrait">
-            <div className="profile-card__initial">Tú</div>
-            <span className="profile-card__sticker">✿</span>
+        <ScrollReveal className="hero-editorial" delay={0.08}>
+          <div className="profile-card">
+            <div className="profile-card__portrait">
+              <img src={profile.avatar} alt={`Chân dung ${profile.name}`} />
+              <span className="profile-card__sticker">✿</span>
+            </div>
+            <div className="profile-card__info">
+              <div>
+                <span>Ngành học</span>
+                <strong>{profile.major}</strong>
+              </div>
+              <div>
+                <span>Trường</span>
+                <strong>{profile.school}</strong>
+              </div>
+              <div>
+                <span>Phong cách</span>
+                <strong>{profile.personality.join(' · ')}</strong>
+              </div>
+            </div>
           </div>
-          <div className="profile-card__info">
-            <div>
-              <span>Ngành học</span>
-              <strong>{profile.major}</strong>
-            </div>
-            <div>
-              <span>Trường</span>
-              <strong>{profile.school}</strong>
-            </div>
-            <div>
-              <span>Phong cách</span>
-              <strong>{profile.personality.join(' · ')}</strong>
-            </div>
+          <div className="hero-editorial__caption">
+            <span>Portfolio moodboard</span>
+            <strong>Pastel legal editorial</strong>
           </div>
         </ScrollReveal>
       </section>
 
       <section className="content-section" id="about-profile">
-        <SectionTitle eyebrow="About me" title="Một người kể chuyện pháp luật dễ gần" icon="Sparkles">
-          Portfolio này phản chiếu cách Tú học và làm việc: chính xác trong thông tin, mềm mại trong trình bày và chân thành trong kết nối.
+        <SectionTitle
+          eyebrow="About me"
+          title="Một người kể chuyện pháp luật dễ gần"
+          icon="Sparkles"
+        >
+          Portfolio này phản chiếu cách Tú học và làm việc: chính xác trong
+          thông tin, mềm mại trong trình bày và chân thành trong kết nối.
         </SectionTitle>
 
         <div className="about-grid">
@@ -84,7 +95,11 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <SectionTitle eyebrow="Working principles" title="Ba nguyên tắc cho từng bài tập" icon="BadgeCheck" />
+        <SectionTitle
+          eyebrow="Working principles"
+          title="Ba nguyên tắc cho từng bài tập"
+          icon="BadgeCheck"
+        />
         <div className="principle-grid">
           {principles.map((principle, index) => (
             <ScrollReveal key={principle.title} delay={index * 0.06}>
@@ -97,8 +112,13 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <SectionTitle eyebrow="Toolkit" title="Hệ sinh thái công cụ đã sử dụng" icon="Palette">
-          Các công cụ được trình bày như một chip cloud nhẹ, giúp người xem quét nhanh kỹ năng số và quy trình học tập.
+        <SectionTitle
+          eyebrow="Toolkit"
+          title="Hệ sinh thái công cụ đã sử dụng"
+          icon="Palette"
+        >
+          Các công cụ được trình bày như một chip cloud nhẹ, giúp người xem quét
+          nhanh kỹ năng số và quy trình học tập.
         </SectionTitle>
         <div className="tool-cloud">
           {tools.map((tool, index) => (

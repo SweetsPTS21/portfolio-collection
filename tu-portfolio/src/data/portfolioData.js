@@ -1,6 +1,15 @@
+export const visualAssets = {
+  background: '/assets/generated/sweet-legal-background.png',
+  cardTexture: '/assets/generated/card-paper-texture.png',
+  projectStickerSheet: '/assets/generated/project-sticker-sheet.png',
+  conclusionPanel: '/assets/generated/conclusion-soft-panel.png',
+};
+
 export const portfolioData = {
+  visualAssets,
   profile: {
     name: 'Lê Thị Cẩm Tú',
+    avatar: '/assets/avatar.jpg',
     major: 'Luật Kinh Doanh',
     school: 'Đại học Luật - Đại học Quốc gia Hà Nội',
     hobbies:
@@ -8,8 +17,7 @@ export const portfolioData = {
     personality: ['Sáng tạo', 'Cá nhân hóa', 'Thân thiện', 'Dễ tiếp cận'],
     intro:
       'Đây không phải là một kho lưu trữ tài liệu khô khan, mà là một không gian mở nơi kiến thức pháp lý và công nghệ được kể lại bằng ngôn ngữ của sự sáng tạo, tính thẩm mỹ và tinh thần kết nối chân thành.',
-    goal:
-      'Trở thành chuyên gia pháp chế doanh nghiệp kiêm người sáng tạo nội dung pháp lý, dùng tư duy thẩm mỹ và công nghệ để biến điều luật phức tạp thành sản phẩm có hồn, đẹp mắt và dễ hiểu.',
+    goal: 'Trở thành chuyên gia pháp chế doanh nghiệp kiêm người sáng tạo nội dung pháp lý, dùng tư duy thẩm mỹ và công nghệ để biến điều luật phức tạp thành sản phẩm có hồn, đẹp mắt và dễ hiểu.',
     portfolioGoal:
       'Portfolio hệ thống hóa quá trình thực hành kỹ năng số và chứng minh rằng sinh viên Luật có thể làm chủ công nghệ bằng tư duy nghệ thuật, rành mạch và đầy cảm hứng.',
   },
@@ -57,6 +65,11 @@ export const portfolioData = {
       pdf: '/docs/bt1.pdf',
       icon: 'FolderKanban',
       accent: '#EF7C82',
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 1 visual sticker về thư mục, tài liệu và quản lý dữ liệu',
+        motif: 'folder',
+      },
     },
     {
       id: 'bt2',
@@ -69,6 +82,11 @@ export const portfolioData = {
       pdf: '/docs/bt2.pdf',
       icon: 'SearchCheck',
       accent: '#D8D99A',
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 2 visual sticker về tìm kiếm học thuật và trích dẫn nguồn',
+        motif: 'research',
+      },
     },
     {
       id: 'bt3',
@@ -81,6 +99,11 @@ export const portfolioData = {
       pdf: '/docs/bt3.pdf',
       icon: 'Sparkles',
       accent: '#F3B6C2',
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 3 visual sticker về AI, prompt và cộng sự học thuật',
+        motif: 'ai',
+      },
     },
     {
       id: 'bt4',
@@ -93,6 +116,11 @@ export const portfolioData = {
       pdf: '/docs/bt4.pdf',
       icon: 'UsersRound',
       accent: '#EBD9C4',
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 4 visual sticker về họp nhóm và hợp tác trực tuyến',
+        motif: 'meeting',
+      },
     },
     {
       id: 'bt5',
@@ -106,6 +134,11 @@ export const portfolioData = {
       icon: 'Presentation',
       accent: '#EF7C82',
       featured: true,
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 5 visual sticker về sáng tạo nội dung số và thiết kế slide',
+        motif: 'content',
+      },
     },
     {
       id: 'bt6',
@@ -118,6 +151,13 @@ export const portfolioData = {
       pdf: '/docs/bt6.pdf',
       icon: 'ShieldCheck',
       accent: '#D8D99A',
+      featured: true,
+      flip: true,
+      visual: {
+        image: visualAssets.projectStickerSheet,
+        alt: 'Chương 6 visual sticker về an toàn số và liêm chính học thuật',
+        motif: 'integrity',
+      },
     },
   ],
   conclusion: {

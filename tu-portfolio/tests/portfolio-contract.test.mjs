@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { existsSync } from 'node:fs';
 
 import { pageConfig } from '../src/app/pageConfig.js';
 import { motionConfig } from '../src/app/motionConfig.js';
@@ -22,6 +23,8 @@ describe('tu portfolio contract', () => {
   it('contains Cam Tu profile, tools, projects and conclusion content', () => {
     expect(portfolioData.profile.name).toBe('Lê Thị Cẩm Tú');
     expect(portfolioData.profile.major).toBe('Luật Kinh Doanh');
+    expect(portfolioData.profile.avatar).toBe('/assets/avatar.jpg');
+    expect(existsSync('public/assets/avatar.jpg')).toBe(true);
     expect(portfolioData.tools).toContain('ChatGPT');
     expect(portfolioData.tools).toContain('Canva');
     expect(portfolioData.projects).toHaveLength(6);
@@ -42,6 +45,24 @@ describe('tu portfolio contract', () => {
     expect(theme.fonts.body).toContain('Quicksand');
     expect(theme.radii.card).toBe('12px');
     expect(theme.radii.pill).toBe('999px');
+  });
+
+  it('defines generated PNG visual assets and project card imagery', () => {
+    expect(Object.keys(portfolioData.visualAssets ?? {}).sort()).toEqual([
+      'background',
+      'cardTexture',
+      'conclusionPanel',
+      'projectStickerSheet',
+    ]);
+
+    Object.values(portfolioData.visualAssets).forEach((assetPath) => {
+      expect(assetPath).toMatch(/^\/assets\/generated\/.+\.png$/);
+    });
+
+    portfolioData.projects.forEach((project) => {
+      expect(project.visual?.image).toMatch(/^\/assets\/generated\/.+\.png$/);
+      expect(project.visual?.alt).toContain(project.chapter);
+    });
   });
 
   it('keeps motion subtle and reduced-motion aware', () => {

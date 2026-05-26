@@ -8,8 +8,13 @@ export default function ProjectsPage() {
   return (
     <div className="portfolio-page projects-page">
       <section className="content-section content-section--hero">
-        <SectionTitle eyebrow="Projects" title="Hành trình nâng cấp bản thân qua 6 chương" icon="FolderKanban">
-          Mỗi bài tập không chỉ là nhiệm vụ môn học, mà là một sản phẩm nhỏ được chăm chút từ nội dung, quy trình đến hình thức trình bày.
+        <SectionTitle
+          eyebrow="Projects"
+          title="Hành trình nâng cấp bản thân qua 6 chương"
+          icon="FolderKanban"
+        >
+          Mỗi bài tập không chỉ là nhiệm vụ môn học, mà là một sản phẩm nhỏ được
+          chăm chút từ nội dung, quy trình đến hình thức trình bày.
         </SectionTitle>
       </section>
 
@@ -26,18 +31,59 @@ export default function ProjectsPage() {
               label={project.chapter}
               title={project.title}
               tone={project.accent}
-              action={<PdfLinkButton href={project.pdf}>Mở {project.chapter}</PdfLinkButton>}
+              action={
+                <PdfLinkButton href={project.pdf}>
+                  Mở {project.chapter}
+                </PdfLinkButton>
+              }
             >
-              <div className="project-card__content">
-                <div>
-                  <span>Mục tiêu</span>
-                  <p>{project.objective}</p>
-                </div>
-                <div>
-                  <span>Quá trình thực hiện</span>
-                  <p>{project.process}</p>
-                </div>
-              </div>
+              {project.flip ? (
+                <>
+                  <div className="project-card__content">
+                    <div>
+                      <span>Mục tiêu</span>
+                      <p>{project.objective}</p>
+                    </div>
+                    <div>
+                      <span>Quá trình thực hiện</span>
+                      <p>{project.process}</p>
+                    </div>
+                  </div>
+                  <div
+                    className={`project-card__visual project-card__visual--${project.visual.motif}`}
+                  >
+                    <img
+                      src={project.visual.image}
+                      alt={project.visual.alt}
+                      loading="lazy"
+                    />
+                    <span>{project.chapter}</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div
+                    className={`project-card__visual project-card__visual--${project.visual.motif}`}
+                  >
+                    <img
+                      src={project.visual.image}
+                      alt={project.visual.alt}
+                      loading="lazy"
+                    />
+                    <span>{project.chapter}</span>
+                  </div>
+                  <div className="project-card__content">
+                    <div>
+                      <span>Mục tiêu</span>
+                      <p>{project.objective}</p>
+                    </div>
+                    <div>
+                      <span>Quá trình thực hiện</span>
+                      <p>{project.process}</p>
+                    </div>
+                  </div>
+                </>
+              )}
             </SoftCard>
           </ScrollReveal>
         ))}
