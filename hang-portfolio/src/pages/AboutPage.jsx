@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import MarketButton from '../components/ui/MarketButton.jsx';
 import PriceTag from '../components/ui/PriceTag.jsx';
 import { aboutCards, personalInfo } from '../data/portfolioData.js';
-import { pageReveal } from '../app/motionConfig.js';
+import { cardHoverMotion, dynamicCardReveal, pageReveal } from '../app/motionConfig.js';
 
 export default function AboutPage() {
   return (
@@ -21,13 +21,17 @@ export default function AboutPage() {
       <div className="content-card-grid about-card-grid">
         {aboutCards.slice(1).map((card, index) => (
           <motion.article
-            className="content-card"
+            className={`content-card content-card--${card.layout} decor-${card.decor}`}
             key={card.title}
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.06 }}
+            custom={index}
+            variants={dynamicCardReveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.24 }}
+            whileHover={cardHoverMotion.whileHover}
+            whileTap={cardHoverMotion.whileTap}
           >
-            <span className="section-kicker">{card.eyebrow}</span>
+            <span className="section-kicker section-kicker-card">{card.eyebrow}</span>
             <h2>{card.title}</h2>
             {card.body ? <p>{card.body}</p> : null}
             {card.facts ? (

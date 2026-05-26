@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
 
 /* beach-market-stroll */
 :root {
-  --market-cream: #F8F3EA;
-  --coast-blue: #2F80B7;
-  --sky-blue: #7DB8DA;
-  --sand-beige: #EFE0C4;
-  --warm-beige: #D8C39D;
-  --paper-white: #FFFFFF;
-  --mist-border: #D8E7EF;
-  --ink-blue: #1E3A4C;
+  --market-cream: #f8f3ea;
+  --coast-blue: #2f80b7;
+  --sky-blue: #7db8da;
+  --sand-beige: #efe0c4;
+  --warm-beige: #d8c39d;
+  --paper-white: #ffffff;
+  --mist-border: #d8e7ef;
+  --ink-blue: #1e3a4c;
   --soft-shadow: 0 24px 70px rgba(30, 58, 76, 0.16);
   color: var(--ink-blue);
   background: var(--market-cream);
-  font-family: "Nunito", system-ui, sans-serif;
+  font-family: 'Nunito', system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
@@ -45,9 +45,22 @@ img {
   min-height: 100vh;
   isolation: isolate;
   background:
-    radial-gradient(circle at 12% 10%, rgba(125, 184, 218, 0.34), transparent 24rem),
-    radial-gradient(circle at 92% 20%, rgba(239, 224, 196, 0.22), transparent 28rem),
-    linear-gradient(180deg, rgba(238, 248, 252, 0.68) 0%, rgba(248, 243, 234, 0.28) 46%, #FFFFFF 100%);
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(125, 184, 218, 0.34),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 92% 20%,
+      rgba(239, 224, 196, 0.22),
+      transparent 28rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba(238, 248, 252, 0.68) 0%,
+      rgba(248, 243, 234, 0.28) 46%,
+      #ffffff 100%
+    );
 }
 
 .beach-market-background {
@@ -59,13 +72,22 @@ img {
 }
 
 .beach-market-background::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   z-index: 3;
   background:
-    linear-gradient(90deg, rgba(248, 243, 234, 0.18) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(248, 243, 234, 0.2) 100%),
-    linear-gradient(180deg, rgba(238, 248, 252, 0.08), rgba(248, 243, 234, 0.22) 78%);
+    linear-gradient(
+      90deg,
+      rgba(248, 243, 234, 0.18) 0%,
+      rgba(255, 255, 255, 0.08) 42%,
+      rgba(248, 243, 234, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(238, 248, 252, 0.08),
+      rgba(248, 243, 234, 0.22) 78%
+    );
 }
 
 .market-hero-generated,
@@ -95,6 +117,47 @@ img {
   animation: sparkle-drift 16s ease-in-out infinite alternate;
 }
 
+.floating-market-props {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.floating-prop {
+  position: absolute;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0.46;
+  filter: saturate(1.12) drop-shadow(0 22px 34px rgba(30, 58, 76, 0.2));
+  animation: prop-drift 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.floating-prop-camera {
+  top: clamp(82px, 13vh, 146px);
+  right: clamp(-42px, 3vw, 48px);
+  width: clamp(220px, 24vw, 380px);
+  transform: rotate(5deg);
+}
+
+.floating-prop-basket {
+  left: clamp(-42px, 3vw, 70px);
+  bottom: clamp(50px, 12vh, 132px);
+  width: clamp(180px, 19vw, 310px);
+  opacity: 0.42;
+  animation-delay: -4s;
+}
+
+.floating-prop-starfish {
+  left: clamp(52px, 10vw, 120px);
+  top: clamp(52px, 6vh, 132px);
+  width: clamp(240px, 30vw, 460px);
+  opacity: 0.4;
+  animation-delay: -8s;
+  rotate: -3deg;
+}
+
 .market-header {
   position: sticky;
   top: 0;
@@ -116,7 +179,7 @@ img {
   height: 44px;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--coast-blue), var(--sand-beige));
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: 0 12px 30px rgba(47, 128, 183, 0.24);
   font-weight: 800;
 }
@@ -137,7 +200,7 @@ img {
   font-size: 0.84rem;
 }
 
-.market-header nav a[aria-current="page"] {
+.market-header nav a[aria-current='page'] {
   background: var(--coast-blue);
   color: var(--paper-white);
   border-color: rgba(47, 128, 183, 0.86);
@@ -169,7 +232,7 @@ img {
 .basket-section::after,
 .order-section::before,
 .order-section::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 0;
   pointer-events: none;
@@ -184,7 +247,7 @@ img {
   right: -38px;
   width: clamp(116px, 13vw, 210px);
   aspect-ratio: 358 / 310;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-camera.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-camera.png');
   transform: rotate(7deg);
 }
 
@@ -193,7 +256,7 @@ img {
   bottom: 20px;
   width: clamp(180px, 22vw, 330px);
   aspect-ratio: 595 / 318;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png');
   transform: rotate(-4deg);
 }
 
@@ -202,7 +265,7 @@ img {
   left: -48px;
   width: clamp(120px, 15vw, 230px);
   aspect-ratio: 439 / 346;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-parasol.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-parasol.png');
   transform: rotate(-10deg);
 }
 
@@ -211,7 +274,7 @@ img {
   bottom: 10px;
   width: clamp(128px, 16vw, 240px);
   aspect-ratio: 356 / 276;
-  background-image: url("./assets/beach-market-stroll/generated/slices/props-empty-crate.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/props-empty-crate.png');
   transform: rotate(5deg);
 }
 
@@ -220,7 +283,7 @@ img {
   left: -42px;
   width: clamp(160px, 22vw, 300px);
   aspect-ratio: 689 / 539;
-  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png');
   transform: rotate(-6deg);
 }
 
@@ -229,7 +292,7 @@ img {
   top: 48px;
   width: clamp(82px, 10vw, 140px);
   aspect-ratio: 371 / 308;
-  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png');
   transform: rotate(9deg);
 }
 
@@ -256,7 +319,7 @@ img {
 .route-hero h1,
 .route-heading h1 {
   margin: 18px 0 16px;
-  font-family: "Josefin Sans", "Nunito", sans-serif;
+  font-family: 'Josefin Sans', 'Nunito', sans-serif;
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -276,7 +339,7 @@ img {
 .content-card p,
 .project-chapter-card p,
 .fact-list dd {
-  color: #506C7B;
+  color: #506c7b;
   font-size: 1.02rem;
   line-height: 1.72;
 }
@@ -288,8 +351,25 @@ img {
 }
 
 .route-avatar {
+  position: relative;
   margin-top: 0;
   min-width: 0;
+}
+
+.route-avatar::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  z-index: 2;
+  width: clamp(62px, 8vw, 96px);
+  aspect-ratio: 358 / 371;
+  pointer-events: none;
+  background: url('./assets/beach-market-stroll/generated/slices/coastal-starfish.png')
+    center / contain no-repeat;
+  filter: drop-shadow(0 12px 18px rgba(30, 58, 76, 0.2));
+  transform: rotate(10deg);
+  animation: avatar-corner-float 4.8s ease-in-out infinite alternate;
 }
 
 .content-card-grid,
@@ -308,8 +388,15 @@ img {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)) padding-box,
-    linear-gradient(135deg, var(--coast-blue), var(--sky-blue), var(--sand-beige)) border-box;
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94))
+      padding-box,
+    linear-gradient(
+        135deg,
+        var(--coast-blue),
+        var(--sky-blue),
+        var(--sand-beige)
+      )
+      border-box;
   border: 3px solid transparent;
   border-radius: 22px;
   box-shadow: var(--soft-shadow);
@@ -317,6 +404,196 @@ img {
 
 .content-card {
   padding: 24px;
+}
+
+.content-card > *,
+.project-chapter-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.content-card::before,
+.content-card::after,
+.project-chapter-card::before,
+.project-chapter-card::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content-card::before {
+  top: 14px;
+  right: 18px;
+  width: 72px;
+  height: 22px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(239, 224, 196, 0.74)),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 8px,
+      rgba(47, 128, 183, 0.14) 8px 10px
+    );
+  box-shadow: 0 10px 24px rgba(30, 58, 76, 0.08);
+  transform: rotate(4deg);
+}
+
+.content-card::after {
+  right: -38px;
+  bottom: -34px;
+  width: 158px;
+  aspect-ratio: 1;
+  opacity: 0.18;
+  filter: drop-shadow(0 16px 22px rgba(30, 58, 76, 0.14));
+  transform: rotate(8deg);
+}
+
+.content-card--postcard {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(238, 248, 252, 0.9))
+      padding-box,
+    linear-gradient(
+        135deg,
+        var(--coast-blue),
+        var(--sky-blue),
+        var(--sand-beige)
+      )
+      border-box;
+}
+
+.content-card--receipt {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 243, 234, 0.9))
+      padding-box,
+    linear-gradient(135deg, var(--sand-beige), var(--coast-blue)) border-box;
+}
+
+.content-card--receipt::before {
+  left: 18px;
+  right: 18px;
+  top: 14px;
+  width: auto;
+  height: 14px;
+  border-radius: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(47, 128, 183, 0.28) 0 12px,
+    transparent 12px 24px
+  );
+  box-shadow: none;
+  transform: none;
+}
+
+.content-card--basket {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95))
+      padding-box,
+    linear-gradient(
+        135deg,
+        var(--warm-beige),
+        var(--sky-blue),
+        var(--coast-blue)
+      )
+      border-box;
+}
+
+.content-card--basket::before {
+  inset: 0 0 auto;
+  width: auto;
+  height: 42px;
+  border-radius: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(47, 128, 183, 0.82) 0 18px,
+    rgba(255, 255, 255, 0.7) 18px 36px,
+    rgba(239, 224, 196, 0.86) 36px 54px
+  );
+  opacity: 0.45;
+  box-shadow: none;
+  transform: none;
+}
+
+.content-card--letter {
+  background:
+    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.97),
+        rgba(238, 248, 252, 0.78)
+      )
+      padding-box,
+    linear-gradient(135deg, var(--coast-blue), var(--sand-beige)) border-box;
+}
+
+.content-card--letter::before {
+  top: auto;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  width: auto;
+  height: 1px;
+  border-radius: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(47, 128, 183, 0.28),
+    transparent
+  );
+  box-shadow: none;
+  transform: none;
+}
+
+.decor-profile-shell::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-scallop-shell.png');
+}
+
+.decor-direction-compass::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png');
+  width: 132px;
+  opacity: 0.2;
+  transform: rotate(-8deg);
+}
+
+.decor-portfolio-camera::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-camera.png');
+  width: 146px;
+  opacity: 0.16;
+}
+
+.decor-principles-starfish::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-starfish.png');
+  width: 140px;
+  opacity: 0.2;
+  transform: rotate(-10deg);
+}
+
+.decor-tools-crate::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/props-empty-crate.png');
+  width: 180px;
+  opacity: 0.17;
+  transform: rotate(5deg);
+}
+
+.decor-lesson-glass::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/props-sea-glass.png');
+  width: 160px;
+  opacity: 0.2;
+}
+
+.decor-favorite-shell::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png');
+  width: 190px;
+  opacity: 0.16;
+}
+
+.decor-challenge-stamp::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png');
+  width: 132px;
+  opacity: 0.18;
+  transform: rotate(11deg);
 }
 
 .about-card-grid .content-card:nth-child(1),
@@ -335,7 +612,7 @@ img {
   position: relative;
   z-index: 1;
   margin: 14px 0 12px;
-  font-family: "Josefin Sans", "Nunito", sans-serif;
+  font-family: 'Josefin Sans', 'Nunito', sans-serif;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -375,6 +652,68 @@ img {
 .project-chapter-card {
   min-height: 520px;
   padding: 24px 22px 72px;
+}
+
+.project-chapter-card::before {
+  inset: 0 0 auto;
+  height: 48px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent),
+    repeating-linear-gradient(
+      90deg,
+      var(--coast-blue) 0 22px,
+      rgba(255, 255, 255, 0.78) 22px 44px,
+      var(--sand-beige) 44px 66px,
+      rgba(255, 255, 255, 0.78) 66px 88px
+    );
+  opacity: 0.64;
+}
+
+.project-chapter-card::after {
+  right: -34px;
+  bottom: 44px;
+  width: 170px;
+  aspect-ratio: 1;
+  opacity: 0.16;
+  filter: drop-shadow(0 16px 22px rgba(30, 58, 76, 0.13));
+  transform: rotate(7deg);
+}
+
+.project-chapter-card--archive-crate::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/props-empty-crate.png');
+  width: 190px;
+}
+
+.project-chapter-card--research-stamp::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-blue-stamp.png');
+  width: 132px;
+  opacity: 0.22;
+  transform: rotate(-9deg);
+}
+
+.project-chapter-card--ai-seaglass::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/props-sea-glass.png');
+  width: 176px;
+  opacity: 0.2;
+}
+
+.project-chapter-card--meeting-parasol::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-parasol.png');
+  width: 196px;
+  opacity: 0.15;
+  transform: rotate(-11deg);
+}
+
+.project-chapter-card--design-camera::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-camera.png');
+  width: 168px;
+}
+
+.project-chapter-card--integrity-shells::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png');
+  width: 220px;
+  opacity: 0.14;
+  transform: rotate(-4deg);
 }
 
 .project-chapter-card h2 {
@@ -417,6 +756,10 @@ img {
   min-height: 0;
 }
 
+.conclusion-card--closing-letter::after {
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-kraft-tag.png');
+}
+
 .conclusion-card > * {
   position: relative;
   z-index: 1;
@@ -432,7 +775,7 @@ img {
 }
 
 .conclusion-card:nth-child(1)::before {
-  content: "";
+  content: '';
   position: absolute;
   left: clamp(20px, 3vw, 40px);
   bottom: clamp(30px, 4vw, 62px);
@@ -440,7 +783,7 @@ img {
   width: clamp(82px, 12vw, 142px);
   aspect-ratio: 358 / 371;
   pointer-events: none;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-starfish.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-starfish.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -450,7 +793,7 @@ img {
 }
 
 .conclusion-card:nth-child(1)::after {
-  content: "";
+  content: '';
   position: absolute;
   right: clamp(20px, 4vw, 50px);
   bottom: clamp(16px, 3vw, 34px);
@@ -458,7 +801,7 @@ img {
   width: min(48%, 330px);
   aspect-ratio: 595 / 318;
   pointer-events: none;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -484,7 +827,7 @@ img {
 .section-heading h2,
 .order-card h2 {
   margin: 18px 0 16px;
-  font-family: "Josefin Sans", "Nunito", sans-serif;
+  font-family: 'Josefin Sans', 'Nunito', sans-serif;
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -499,7 +842,7 @@ img {
 .vendor-profile-card p,
 .order-card p,
 .stall-card p {
-  color: #506C7B;
+  color: #506c7b;
   font-size: 1.02rem;
   line-height: 1.75;
 }
@@ -557,7 +900,12 @@ img {
   height: 18px;
   border-radius: 50%;
   background:
-    linear-gradient(90deg, transparent 45%, rgba(255, 255, 255, 0.82) 45% 55%, transparent 55%),
+    linear-gradient(
+      90deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.82) 45% 55%,
+      transparent 55%
+    ),
     var(--coast-blue);
   box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.65);
 }
@@ -570,7 +918,13 @@ img {
   overflow: hidden;
   background:
     linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(135deg, var(--coast-blue), var(--sky-blue), var(--sand-beige)) border-box;
+    linear-gradient(
+        135deg,
+        var(--coast-blue),
+        var(--sky-blue),
+        var(--sand-beige)
+      )
+      border-box;
   border: 3px solid transparent;
   box-shadow: var(--soft-shadow);
 }
@@ -583,11 +937,17 @@ img {
 .vendor-profile-card::before,
 .order-card::before,
 .stall-card::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0 0 auto;
   height: 54px;
-  background: repeating-linear-gradient(90deg, var(--coast-blue) 0 26px, var(--paper-white) 26px 52px, var(--sand-beige) 52px 78px, var(--paper-white) 78px 104px);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--coast-blue) 0 26px,
+    var(--paper-white) 26px 52px,
+    var(--sand-beige) 52px 78px,
+    var(--paper-white) 78px 104px
+  );
   opacity: 0.9;
 }
 
@@ -608,7 +968,7 @@ img {
   position: relative;
   z-index: 1;
   margin: 20px 0 8px;
-  font-family: "Josefin Sans", "Nunito", sans-serif;
+  font-family: 'Josefin Sans', 'Nunito', sans-serif;
 }
 
 .principle-list {
@@ -627,7 +987,7 @@ img {
   border-radius: 999px;
   padding: 9px 13px;
   background: #fff;
-  color: #1E3A4C;
+  color: #1e3a4c;
   border: 1px solid rgba(47, 128, 183, 0.3);
   font-weight: 900;
   text-transform: uppercase;
@@ -652,14 +1012,15 @@ img {
 }
 
 .stall-card::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -30px;
   bottom: 42px;
   z-index: 0;
   width: 150px;
   aspect-ratio: 1;
-  background: url("./assets/beach-market-stroll/generated/slices/coastal-scallop-shell.png") center / contain no-repeat;
+  background: url('./assets/beach-market-stroll/generated/slices/coastal-scallop-shell.png')
+    center / contain no-repeat;
   opacity: 0.16;
   transform: rotate(8deg);
 }
@@ -667,7 +1028,7 @@ img {
 .stall-card:nth-child(2)::after {
   right: -22px;
   bottom: 34px;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-starfish.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-starfish.png');
   transform: rotate(-10deg);
 }
 
@@ -675,7 +1036,7 @@ img {
   right: -36px;
   bottom: 28px;
   width: 170px;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-camera.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-camera.png');
   transform: rotate(7deg);
 }
 
@@ -683,7 +1044,7 @@ img {
   right: -28px;
   bottom: 24px;
   width: 180px;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-parasol.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-parasol.png');
   transform: rotate(-12deg);
 }
 
@@ -691,7 +1052,7 @@ img {
   right: -58px;
   bottom: 40px;
   width: 230px;
-  background-image: url("./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/coastal-shell-tray.png');
   transform: rotate(5deg);
 }
 
@@ -699,7 +1060,7 @@ img {
   right: -44px;
   bottom: 38px;
   width: 190px;
-  background-image: url("./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png");
+  background-image: url('./assets/beach-market-stroll/generated/slices/receipt-seascape-postcard.png');
   transform: rotate(-7deg);
 }
 
@@ -710,7 +1071,13 @@ img {
   right: 18px;
   height: 34px;
   border-radius: 16px;
-  background: repeating-linear-gradient(90deg, var(--coast-blue) 0 18px, var(--paper-white) 18px 36px, var(--sand-beige) 36px 54px, var(--paper-white) 54px 72px);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--coast-blue) 0 18px,
+    var(--paper-white) 18px 36px,
+    var(--sand-beige) 36px 54px,
+    var(--paper-white) 54px 72px
+  );
 }
 
 .price-tag {
@@ -723,7 +1090,7 @@ img {
   padding: 8px 12px;
   background: #fff;
   border: 2px solid rgba(47, 128, 183, 0.32);
-  color: #1E3A4C;
+  color: #1e3a4c;
   font-size: 0.82rem;
   font-weight: 900;
 }
@@ -750,7 +1117,7 @@ img {
 
 .project-goal {
   font-weight: 900;
-  color: #1E3A4C;
+  color: #1e3a4c;
 }
 
 .stall-card-link {
@@ -763,7 +1130,7 @@ img {
   justify-content: center;
   border-radius: 999px;
   padding: 11px 14px;
-  background: linear-gradient(135deg, #FFFFFF, var(--sand-beige));
+  background: linear-gradient(135deg, #ffffff, var(--sand-beige));
   font-weight: 900;
 }
 
@@ -780,14 +1147,15 @@ img {
 }
 
 .basket-skill-card::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -54px;
   bottom: -48px;
   z-index: 0;
   width: 172px;
   aspect-ratio: 1;
-  background: url("./assets/beach-market-stroll/generated/slices/props-sea-glass.png") center / contain no-repeat;
+  background: url('./assets/beach-market-stroll/generated/slices/props-sea-glass.png')
+    center / contain no-repeat;
   opacity: 0.2;
   transform: rotate(-10deg);
 }
@@ -822,14 +1190,15 @@ img {
 }
 
 .order-card::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -38px;
   bottom: -54px;
   z-index: 0;
   width: clamp(180px, 28vw, 320px);
   aspect-ratio: 1;
-  background: url("./assets/beach-market-stroll/generated/slices/receipt-kraft-tag.png") center / contain no-repeat;
+  background: url('./assets/beach-market-stroll/generated/slices/receipt-kraft-tag.png')
+    center / contain no-repeat;
   opacity: 0.16;
   transform: rotate(6deg);
 }
@@ -845,7 +1214,7 @@ img {
   border-left: 8px solid var(--coast-blue);
   border-radius: 0 18px 18px 0;
   background: rgba(248, 243, 234, 0.86);
-  color: #1E3A4C;
+  color: #1e3a4c;
   font-weight: 900;
   line-height: 1.7;
 }
@@ -860,13 +1229,41 @@ img {
 }
 
 @keyframes scenic-breathe {
-  from { transform: scale(1.025) translate3d(-0.4%, 0, 0); }
-  to { transform: scale(1.055) translate3d(0.4%, -0.7%, 0); }
+  from {
+    transform: scale(1.025) translate3d(-0.4%, 0, 0);
+  }
+  to {
+    transform: scale(1.055) translate3d(0.4%, -0.7%, 0);
+  }
 }
 
 @keyframes sparkle-drift {
-  from { transform: translate3d(-1%, 0, 0) scale(1.02); opacity: 0.18; }
-  to { transform: translate3d(1%, -1%, 0) scale(1.04); opacity: 0.28; }
+  from {
+    transform: translate3d(-1%, 0, 0) scale(1.02);
+    opacity: 0.18;
+  }
+  to {
+    transform: translate3d(1%, -1%, 0) scale(1.04);
+    opacity: 0.28;
+  }
+}
+
+@keyframes prop-drift {
+  from {
+    transform: translate3d(0, 0, 0) rotate(-4deg);
+  }
+  to {
+    transform: translate3d(12px, -18px, 0) rotate(6deg);
+  }
+}
+
+@keyframes avatar-corner-float {
+  from {
+    transform: translate3d(0, 0, 0) rotate(7deg) scale(0.98);
+  }
+  to {
+    transform: translate3d(-4px, -8px, 0) rotate(13deg) scale(1.04);
+  }
 }
 
 @media (max-width: 920px) {
@@ -914,6 +1311,19 @@ img {
     object-position: 46% bottom;
   }
 
+  .floating-prop-camera {
+    right: -10px;
+  }
+
+  .floating-prop-basket {
+    left: -26px;
+  }
+
+  .floating-prop-starfish {
+    right: 18px;
+    bottom: 22vh;
+  }
+
   .projects-section::before,
   .basket-section::after {
     opacity: 0.64;
@@ -950,6 +1360,14 @@ img {
   .project-chapter-card,
   .conclusion-card {
     min-height: auto;
+  }
+
+  .floating-prop {
+    opacity: 0.16;
+  }
+
+  .floating-prop-starfish {
+    display: none;
   }
 
   .projects-section::before,

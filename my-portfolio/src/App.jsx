@@ -14,6 +14,9 @@ import bt3Pdf from '../docs/Bt3.pdf';
 import bt4Pdf from '../docs/Bt4.pdf';
 import bt5Pdf from '../docs/Bt5.pdf';
 import bt6Pdf from '../docs/Bt6.pdf';
+import ProfileModal from './components/ProfileModal.jsx';
+import ProjectModal from './components/ProjectModal.jsx';
+import { chapters, goals, profile } from './data/portfolioData.js';
 import conclutionLeft1 from './assets/portfolio/conclution-left.png';
 import conclutionRight1 from './assets/portfolio/conclution-right.png';
 import infoCardBg from './assets/portfolio/info-card-bg.png';
@@ -104,6 +107,7 @@ import bgGemHeartPink from './assets/portfolio/wrap-icon-2/wrap2-069-gem-heart-p
 import bgCursorWhite from './assets/portfolio/wrap-icon-2/wrap2-056-cursor-white.png';
 import bgFlowerPurple from './assets/portfolio/wrap-icon-2/wrap2-043-flower-purple.png';
 import bgSparkleWhite from './assets/portfolio/wrap-icon-2/wrap2-028-sparkle-white.png';
+import viewMoreIcon from './assets/portfolio/wrap-icon-1/wrap1-056-washi-grid-scallop.png';
 
 const pageMotion = {
   hidden: { opacity: 0, scale: 0.985, y: 18 },
@@ -355,7 +359,59 @@ const BackgroundDecor = () => (
   </div>
 );
 
+const projectAssets = [
+  {
+    cardClassName: 'project-card',
+    imageClassName: 'img',
+    titleClassName: 'text-wrapper-4',
+    image: bt6Img1,
+    pdfUrl: bt1Pdf,
+  },
+  {
+    cardClassName: 'project-card-2',
+    imageClassName: 'bt-img',
+    titleClassName: 'text-wrapper-4',
+    image: bt5Img1,
+    pdfUrl: bt2Pdf,
+  },
+  {
+    cardClassName: 'project-card-3',
+    imageClassName: 'img-2',
+    titleClassName: 'text-wrapper-4',
+    image: bt3Img1,
+    pdfUrl: bt3Pdf,
+  },
+  {
+    cardClassName: 'project-card-4',
+    imageClassName: 'img-3',
+    titleClassName: 'text-wrapper-11',
+    image: bt4Img1,
+    pdfUrl: bt4Pdf,
+  },
+  {
+    cardClassName: 'project-card-5',
+    imageClassName: 'img-4',
+    titleClassName: 'text-wrapper-12',
+    image: bt2Img1,
+    pdfUrl: bt5Pdf,
+  },
+  {
+    cardClassName: 'project-card-6',
+    imageClassName: 'img-5',
+    titleClassName: 'text-wrapper-12',
+    image: bt1Img1,
+    pdfUrl: bt6Pdf,
+  },
+];
+
 const App = () => {
+  const [selectedProject, setSelectedProject] = React.useState(null);
+  const [isProfileModalOpen, setIsProfileModalOpen] = React.useState(false);
+  const projects = chapters.map((chapter, index) => ({
+    ...chapter,
+    ...projectAssets[index],
+  }));
+
   return (
     <div className="wrapper">
       <div className="app">
@@ -412,114 +468,29 @@ const App = () => {
               </div>
             </div>
             <div className="project-section">
-              <div className="project-card">
-                <div className="project-img-fram">
-                  <img className="img" alt="Img" src={bt6Img1} />
+              {projects.map((chapter) => (
+                <div className={chapter.cardClassName} key={chapter.number}>
+                  <div className="project-img-fram">
+                    <img
+                      className={chapter.imageClassName}
+                      alt={`Minh họa ${chapter.cardTitle}`}
+                      src={chapter.image}
+                    />
+                  </div>
+                  <div className={chapter.titleClassName}>
+                    {chapter.cardTitle}
+                  </div>
+                  <p className="text-wrapper-5">{chapter.shortText}</p>
+                  <button
+                    className="text-wrapper-6"
+                    type="button"
+                    aria-label={`Xem thêm ${chapter.title}`}
+                    onClick={() => setSelectedProject(chapter)}
+                  >
+                    Xem thêm
+                  </button>
                 </div>
-                <div className="text-wrapper-4">Lưu trữ dữ liệu</div>
-                <p className="text-wrapper-5">
-                  Sắp xếp file như một kệ sách tiểu thuyết, đặt tên đúng chuẩn
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt1Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 1 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
-              <div className="project-card-2">
-                <div className="project-img-fram">
-                  <img className="bt-img" alt="Img" src={bt5Img1} />
-                </div>
-                <div className="text-wrapper-4">Khai thác dữ liệu</div>
-                <p className="text-wrapper-5">
-                  Tìm kiếm nguồn dữ liệu chính thống, giúp học nhẹ nhàng hơn
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt2Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 2 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
-              <div className="project-card-3">
-                <div className="project-img-fram">
-                  <img className="img-2" alt="Img" src={bt3Img1} />
-                </div>
-                <div className="text-wrapper-4">Trí tuệ nhân tạo</div>
-                <p className="text-wrapper-5">
-                  AI là công cụ, quyết định vẫn là ở con người
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt3Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 3 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
-              <div className="project-card-4">
-                <div className="project-img-fram">
-                  <img className="img-3" alt="Img" src={bt4Img1} />
-                </div>
-                <div className="text-wrapper-11">Giao tiếp số</div>
-                <p className="text-wrapper-5">
-                  Làm việc nhóm trên Notion như một câu lạc bộ sách nhỏ
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt4Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 4 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
-              <div className="project-card-5">
-                <div className="project-img-fram">
-                  <img className="img-4" alt="Img" src={bt2Img1} />
-                </div>
-                <div className="text-wrapper-12">Sáng tạo số</div>
-                <p className="text-wrapper-5">
-                  Dùng AI gợi ý kịch bản video ngắn về luật sở hữu trí tuệ
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt5Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 5 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
-              <div className="project-card-6">
-                <div className="project-img-fram">
-                  <img className="img-5" alt="Img" src={bt1Img1} />
-                </div>
-                <div className="text-wrapper-12">An toàn số</div>
-                <p className="text-wrapper-5">
-                  Không copy AI, luôn tư duy độc lập, trích dẫn nguồn đầy đủ
-                </p>
-                <a
-                  className="text-wrapper-6"
-                  href={bt6Pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mở bài tập 6 PDF"
-                >
-                  Xem thêm
-                </a>
-              </div>
+              ))}
             </div>
             <div className="hero-section">
               <div className="info-card">
@@ -546,6 +517,19 @@ const App = () => {
                 <div className="text-wrapper-20 kawaii-shine">Trà My</div>
                 <div className="text-wrapper-21">mình là</div>
                 <div className="text-wrapper-22">Xin chào,</div>
+                <button
+                  className="profile-more-button"
+                  type="button"
+                  aria-label="Xem thêm thông tin cá nhân"
+                  onClick={() => setIsProfileModalOpen(true)}
+                  style={{
+                    backgroundImage: `url(${viewMoreIcon})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  Xem thêm
+                </button>
               </div>
               <div className="avatar-block">
                 <img
@@ -814,6 +798,16 @@ const App = () => {
             <div className="text-wrapper-24 kawaii-shine">Danh sách dự án</div>
           </motion.div>
         </motion.div>
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+        <ProfileModal
+          isOpen={isProfileModalOpen}
+          profile={profile}
+          goals={goals}
+          onClose={() => setIsProfileModalOpen(false)}
+        />
       </div>
     </div>
   );

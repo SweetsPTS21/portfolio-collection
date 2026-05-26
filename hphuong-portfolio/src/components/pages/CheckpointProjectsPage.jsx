@@ -7,7 +7,7 @@ export default function CheckpointProjectsPage() {
   return (
     <PageTransition className="projects-page">
       <div className="page-heading">
-        <span className="welcome-badge">Kayak Journey Logs</span>
+        <span className="welcome-badge">Journey Logs</span>
         <h2>Hành trình Dự án</h2>
         <p className="page-intro-text">{projectsIntro}</p>
       </div>
@@ -21,7 +21,12 @@ export default function CheckpointProjectsPage() {
               <div className="checkpoint-marker-container">
                 <div className="checkpoint-node">
                   <span className="checkpoint-index">{idx + 1}</span>
-                  <img src={buoyMarkerUrl} alt="" className="asset-buoy-icon" aria-hidden="true" />
+                  <img
+                    src={buoyMarkerUrl}
+                    alt=""
+                    className="asset-buoy-icon"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
@@ -29,12 +34,12 @@ export default function CheckpointProjectsPage() {
               <div className="checkpoint-card">
                 <span className="checkpoint-label">{project.label}</span>
                 <h3>{project.title}</h3>
-                
+
                 <div className="checkpoint-details">
                   <div className="detail-section">
                     <h4 className="detail-heading">
                       <Navigation size={14} className="icon-accent" />
-                      <span>Mục tiêu chặng (Goal)</span>
+                      <span>Mục tiêu (Goal)</span>
                     </h4>
                     <p className="detail-body">{project.goal}</p>
                   </div>
@@ -42,7 +47,7 @@ export default function CheckpointProjectsPage() {
                   <div className="detail-section">
                     <h4 className="detail-heading">
                       <CheckCircle size={14} className="icon-accent" />
-                      <span>Tiến trình chèo (Process)</span>
+                      <span>Tiến trình (Process)</span>
                     </h4>
                     <p className="detail-body">{project.process}</p>
                   </div>

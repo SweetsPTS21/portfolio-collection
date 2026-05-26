@@ -1,0 +1,167 @@
+{
+  "source": "bt3.pdf",
+  "totalPages": 23,
+  "pages": [
+    {
+      "page": 1,
+      "image": "page-1.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 2,
+      "image": "page-2.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 3,
+      "image": "page-3.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 4,
+      "image": "page-4.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 5,
+      "image": "page-5.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 6,
+      "image": "page-6.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 7,
+      "image": "page-7.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 8,
+      "image": "page-8.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 9,
+      "image": "page-9.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 10,
+      "image": "page-10.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 11,
+      "image": "page-11.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 12,
+      "image": "page-12.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 13,
+      "image": "page-13.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 14,
+      "image": "page-14.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 15,
+      "image": "page-15.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 16,
+      "image": "page-16.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 17,
+      "image": "page-17.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 18,
+      "image": "page-18.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 19,
+      "image": "page-19.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 20,
+      "image": "page-20.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 21,
+      "image": "page-21.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 22,
+      "image": "page-22.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 23,
+      "image": "page-23.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    }
+  ]
+}
