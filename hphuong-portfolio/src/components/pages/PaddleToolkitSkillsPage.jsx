@@ -8,10 +8,12 @@ export default function PaddleToolkitSkillsPage() {
   return (
     <PageTransition className="skills-page">
       <div className="page-heading">
-        <span className="welcome-badge">Kayak Gear & Survival Skills</span>
+        <span className="welcome-badge">Gear & Skills</span>
         <h2>Hộp dụng cụ Kỹ năng</h2>
         <p className="page-intro-text">
-          Để thực hiện các bài tập một cách an toàn và đúng đắn trên không gian số, mình tự trang bị bộ quy tắc sinh tồn cùng hộp công cụ tối giản nhưng sắc bén.
+          Để thực hiện các bài tập một cách an toàn và đúng đắn trên không gian
+          số, mình tự trang bị bộ quy tắc sinh tồn cùng hộp công cụ tối giản
+          nhưng sắc bén.
         </p>
       </div>
 
@@ -24,21 +26,28 @@ export default function PaddleToolkitSkillsPage() {
                 <CheckSquare className="icon-checkbox" size={16} />
                 <div>
                   <strong>Chính xác về mặt dữ liệu</strong>
-                  <p className="subtext">Mọi thông tin pháp lý phải được đối chiếu đa chiều.</p>
+                  <p className="subtext">
+                    Mọi thông tin pháp lý phải được đối chiếu đa chiều.
+                  </p>
                 </div>
               </li>
               <li>
                 <CheckSquare className="icon-checkbox" size={16} />
                 <div>
                   <strong>Tối giản về mặt hình thức</strong>
-                  <p className="subtext">Loại bỏ chi tiết rườm rà, tập trung vào giá trị cốt lõi.</p>
+                  <p className="subtext">
+                    Loại bỏ chi tiết rườm rà, tập trung vào giá trị cốt lõi.
+                  </p>
                 </div>
               </li>
               <li>
                 <CheckSquare className="icon-checkbox" size={16} />
                 <div>
                   <strong>Độc lập về mặt tư duy</strong>
-                  <p className="subtext">AI chỉ hỗ trợ lên khung, trí não là người quyết định lập luận.</p>
+                  <p className="subtext">
+                    AI chỉ hỗ trợ lên khung, trí não là người quyết định lập
+                    luận.
+                  </p>
                 </div>
               </li>
             </ul>
@@ -48,7 +57,10 @@ export default function PaddleToolkitSkillsPage() {
             <div className="strengths-wrapper">
               {strengths.map((str, i) => (
                 <div key={i} className="strength-chip">
-                  <ShieldCheck size={18} style={{ color: 'var(--kayak-teal)', flexShrink: 0 }} />
+                  <ShieldCheck
+                    size={18}
+                    style={{ color: "var(--kayak-teal)", flexShrink: 0 }}
+                  />
                   <span>{str}</span>
                 </div>
               ))}
@@ -60,7 +72,11 @@ export default function PaddleToolkitSkillsPage() {
         <div className="toolkit-main">
           <div className="toolkit-banner" aria-hidden="true">
             <h3>Explorer's Waterproof Toolkit</h3>
-            <img src={toolkitIconsUrl} alt="Toolkit Strip" className="asset-toolkit-strip" />
+            <img
+              src={toolkitIconsUrl}
+              alt="Toolkit Strip"
+              className="asset-toolkit-strip"
+            />
           </div>
 
           <div className="toolkit-grid">
@@ -71,9 +87,18 @@ export default function PaddleToolkitSkillsPage() {
                 <div key={index} className="toolkit-gear-card">
                   {/* SVG clip extraction for individual gear icon */}
                   <div className="gear-icon-frame">
-                    <svg viewBox={`${svgX - 35} 15 70 70`} className="gear-svg-icon">
+                    <svg
+                      viewBox={`${svgX - 35} 15 70 70`}
+                      className="gear-svg-icon"
+                    >
                       <use href={`${toolkitIconsUrl}#svgView`} />
-                      <image href={toolkitIconsUrl} x="0" y="0" width="500" height="100" />
+                      <image
+                        href={toolkitIconsUrl}
+                        x="0"
+                        y="0"
+                        width="500"
+                        height="100"
+                      />
                     </svg>
                   </div>
 

@@ -1,4 +1,5 @@
 import LagoonNav from "./LagoonNav.jsx";
+import MusicPlayer from "./MusicPlayer.jsx";
 import { profile } from "../../data/portfolioData.js";
 import lagoonMapSceneUrl from "../../assets/lagoon-kayak-adventure/lagoon-map-scene.svg";
 import kayakPaddleUrl from "../../assets/lagoon-kayak-adventure/kayak-paddle-set.svg";
@@ -25,25 +26,61 @@ export default function LagoonShell({ children }) {
 
         {/* Drifting Clouds */}
         <div className="cloud-layer">
-          <svg viewBox="200 50 150 100" className="asset-cloud asset-cloud--one">
+          <svg
+            viewBox="200 50 150 100"
+            className="asset-cloud asset-cloud--one"
+          >
             <use href={`${seagullCloudUrl}#cloud-one`} />
-            <image href={seagullCloudUrl} x="0" y="0" width="400" height="200" />
+            <image
+              href={seagullCloudUrl}
+              x="0"
+              y="0"
+              width="400"
+              height="200"
+            />
           </svg>
-          <svg viewBox="200 50 150 100" className="asset-cloud asset-cloud--two">
+          <svg
+            viewBox="200 50 150 100"
+            className="asset-cloud asset-cloud--two"
+          >
             <use href={`${seagullCloudUrl}#cloud-one`} />
-            <image href={seagullCloudUrl} x="0" y="0" width="400" height="200" />
+            <image
+              href={seagullCloudUrl}
+              x="0"
+              y="0"
+              width="400"
+              height="200"
+            />
           </svg>
         </div>
 
         {/* Gliding Seagulls */}
         <div className="seagull-layer">
-          <svg viewBox="30 20 100 100" className="asset-seagull asset-seagull--one">
+          <svg
+            viewBox="30 20 100 100"
+            className="asset-seagull asset-seagull--one"
+          >
             <use href={`${seagullCloudUrl}#seagull-one`} />
-            <image href={seagullCloudUrl} x="0" y="0" width="400" height="200" />
+            <image
+              href={seagullCloudUrl}
+              x="0"
+              y="0"
+              width="400"
+              height="200"
+            />
           </svg>
-          <svg viewBox="150 20 60 60" className="asset-seagull asset-seagull--two">
+          <svg
+            viewBox="150 20 60 60"
+            className="asset-seagull asset-seagull--two"
+          >
             <use href={`${seagullCloudUrl}#seagull-two`} />
-            <image href={seagullCloudUrl} x="0" y="0" width="400" height="200" />
+            <image
+              href={seagullCloudUrl}
+              x="0"
+              y="0"
+              width="400"
+              height="200"
+            />
           </svg>
         </div>
 
@@ -51,12 +88,28 @@ export default function LagoonShell({ children }) {
         <img className="asset-kayak" src={kayakPaddleUrl} alt="" />
 
         {/* Swaying Tropical Leaves */}
-        <img className="asset-leaves asset-leaves--top-left" src={tropicalFlowerUrl} alt="" />
-        <img className="asset-leaves asset-leaves--bottom-right" src={tropicalFlowerUrl} alt="" />
+        <img
+          className="asset-leaves asset-leaves--top-left"
+          src={tropicalFlowerUrl}
+          alt=""
+        />
+        <img
+          className="asset-leaves asset-leaves--bottom-right"
+          src={tropicalFlowerUrl}
+          alt=""
+        />
 
         {/* Bubbles and Ripples */}
-        <img className="asset-ripples asset-ripples--one" src={waterRippleUrl} alt="" />
-        <img className="asset-ripples asset-ripples--two" src={waterRippleUrl} alt="" />
+        <img
+          className="asset-ripples asset-ripples--one"
+          src={waterRippleUrl}
+          alt=""
+        />
+        <img
+          className="asset-ripples asset-ripples--two"
+          src={waterRippleUrl}
+          alt=""
+        />
 
         {/* Swimming Fishes */}
         <img className="asset-fish-dart" src={fishDartUrl} alt="" />
@@ -65,11 +118,16 @@ export default function LagoonShell({ children }) {
       {/* Floating Header */}
       <header className="lagoon-header">
         <div className="header-logo">
-          <p className="eyebrow">lagoon-kayak-adventure</p>
+          <p className="eyebrow">Adventure Portfolio</p>
           <h1>{profile.name}</h1>
         </div>
         <LagoonNav />
       </header>
+
+      {/* Music Player Dock */}
+      <div className="player-dock">
+        <MusicPlayer />
+      </div>
 
       {/* Primary Page Canvas */}
       <main className="lagoon-canvas">{children}</main>
