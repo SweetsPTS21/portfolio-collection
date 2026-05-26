@@ -1,0 +1,62 @@
+{
+  "source": "bt1.pdf",
+  "totalPages": 8,
+  "pages": [
+    {
+      "page": 1,
+      "image": "page-1.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 2,
+      "image": "page-2.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 3,
+      "image": "page-3.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 4,
+      "image": "page-4.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 5,
+      "image": "page-5.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 6,
+      "image": "page-6.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 7,
+      "image": "page-7.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    },
+    {
+      "page": 8,
+      "image": "page-8.png",
+      "text": "",
+      "width": 1242,
+      "height": 1755
+    }
+  ]
+}
