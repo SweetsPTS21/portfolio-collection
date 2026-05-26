@@ -38,6 +38,11 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùn
 | `kitty-cafe-menu`       | Kitty Café Menu Portfolio        | Mèo, café, bánh, xanh lam nhạt, cozy cute | Portfolio nữ yêu mèo, food, lifestyle |
 | `underwater-world`      | Underwater World Portfolio       | Đại dương, cá, san hô, xanh dương nhạt, dreamy aqua | Portfolio art, creative, ocean lover |
 | `storybook-royal-forest` | Storybook Royal Forest Portfolio | Đêm trăng, sao băng, cỗ xe ngựa, cổ tích | Portfolio nữ tính, art, luxury creative |
+| `strawberry-picnic-meadow` | Strawberry Picnic Meadow Portfolio | Picnic dâu, đồng cỏ, caro, ong/bướm, rực rỡ | Portfolio nữ tính, lifestyle, creative |
+| `pastel-magic-boutique` | Pastel Magic Boutique Portfolio | Boutique phép thuật pastel, potion, gương, ribbon | Portfolio designer, beauty, creative |
+| `dreamy-flower-train` | Dreamy Flower Train Portfolio | Tàu hoa trên mây, sky garden, hành trình mềm mại | Portfolio storytelling, career journey |
+| `mermaid-pearl-lagoon` | Mermaid Pearl Lagoon Portfolio | Lagoon ngọc trai, vỏ sò, san hô hồng tím, shimmer | Portfolio art, beauty, ocean fantasy |
+| `kawaii-stationery-room` | Kawaii Stationery Room Portfolio | Phòng stationery cute, sticker, bút gel, washi tape | Portfolio học tập, design, handmade |
 
 ---
 
@@ -1120,6 +1125,765 @@ src/
 ---
 
 
+## 8. `strawberry-picnic-meadow` — Strawberry Picnic Meadow Portfolio
+
+Portfolio như một buổi picnic dâu giữa đồng cỏ mùa xuân: khăn caro hồng, giỏ mây, bánh kem mini, lọ mứt, hoa cúc, ong nhỏ và bướm bay. Theme rực rỡ, ngọt, nữ tính, background là một meadow scene nhiều lớp để tạo cảm giác sống động ngay từ màn đầu.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Ngọt ngào, tươi sáng, vui, handmade, picnic cute                       |
+| Hình khối   | Gingham card, berry badge, basket frame, flower sticker, picnic label |
+| Không gian  | Đồng cỏ xanh mint, khăn picnic caro hồng, dâu đỏ, hoa vàng, trời sáng |
+| Chuyển động | Butterfly drift, bee loop, berry pop, gingham wave, flower sway       |
+| Điểm nhấn   | Strawberry basket, picnic blanket, cake slice, jam jar, tiny bees      |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFF6F7",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#FF5F8F",
+        colorTextBase: "#3D2434",
+        colorTextSecondary: "#8B6474",
+        colorSuccess: "#77E6B6",
+        colorWarning: "#FFD96F",
+        colorInfo: "#9FD9FF",
+        colorBorder: "#FFC8D8",
+        borderRadius: 18,
+        fontFamily: "'Fredoka', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --strawberry-red: #FF5F8F;
+// --cream-pink: #FFF6F7;
+// --meadow-mint: #77E6B6;
+// --butter-yellow: #FFD96F;
+// --sky-blue: #9FD9FF;
+// --gingham-rose: #FF9FBE;
+// --basket-tan: #D89A5B;
+// --jam-purple: #B678FF;
+// --leaf-green: #4FCB86;
+```
+
+### Typography
+
+- **Heading:** `Fredoka` tròn, đáng yêu, hợp cảm giác berry sticker và picnic label.
+- **Body:** `Nunito` mềm, dễ đọc, giữ độ thân thiện khi card có nhiều decoration.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                          |
+| --------------- | ------------------------------------------------------------------------------ |
+| Framer Motion   | Card reveal như đặt lên khăn picnic, berry pop, section transition mềm         |
+| Rive            | Strawberry mascot wave, bee hover reaction, jam jar success animation          |
+| SVGator         | Butterfly path, gingham blanket wave, flower sway, honey sparkle timeline      |
+| Lenis           | Smooth scroll qua ba trang about, projects, conclution với meadow parallax     |
+| CSS Keyframes   | Bee loop, flower sway, grass shimmer, tiny seed sparkle                        |
+| Realtime Colors | Tạo palette strawberry/mint/yellow/sky hài hòa và không bị gắt                 |
+| Blush           | Illustration picnic girl hoặc berry picnic scene cho background phụ            |
+
+### Layout ideas
+
+- **About:** Full-bleed meadow background; profile đặt trên picnic blanket frame, avatar như polaroid kẹp bằng strawberry clip.
+- **Projects:** Project cards như các hộp bánh trong giỏ picnic, mỗi card có berry sticker, ribbon, mini flower và patterned corner riêng.
+- **Conclution:** Golden-hour picnic scene; reflection card như note viết tay đặt cạnh lọ mứt, có bướm bay qua và berry confetti khi kết thúc.
+
+### Animation rules
+
+| Sự kiện          | Effect                                             | Thư viện          |
+| ---------------- | -------------------------------------------------- | ----------------- |
+| Page load        | Meadow layer fade-in + blanket unfurl + berry pop  | Framer Motion     |
+| Background       | Grass shimmer, flower sway, cloud drift chậm       | CSS keyframes     |
+| Butterfly        | Bay theo path cong, rotate nhẹ theo hướng          | SVGator/CSS       |
+| Bee idle         | Loop quanh flower cluster, wobble nhẹ              | Rive/CSS          |
+| Card hover       | Lift + sticker wiggle + berry sparkle burst        | Framer Motion     |
+| Gingham pattern  | Wave rất nhẹ ở mép khăn, không làm text rung       | CSS/SVGator       |
+| Section entrance | Slide-up + scale 0.96 đến 1, stagger theo card     | Framer Motion     |
+| Conclution       | Berry confetti + handwritten underline draw        | Framer Motion/CSS |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Strawberry picnic meadow shell
+│   ├── routes.js                       ← about, projects, conclution
+│   └── theme.js
+├── pages/
+│   ├── PicnicAboutPage.jsx             ← About trên meadow + blanket profile
+│   ├── BasketProjectsPage.jsx          ← Projects dạng basket/treat cards
+│   └── PicnicConclutionPage.jsx        ← Conclution note cạnh jam jar
+├── features/
+│   ├── picnic-meadow-scene/
+│   │   ├── MeadowBackground.jsx
+│   │   ├── GinghamBlanketLayer.jsx
+│   │   ├── ButterflyDriftLayer.jsx
+│   │   └── FlowerGrassSway.jsx
+│   ├── strawberry-mascot/
+│   │   ├── StrawberryRiveController.jsx
+│   │   ├── BeeHoverReaction.jsx
+│   │   └── BerryPopParticles.jsx
+│   └── picnic-projects/
+│       ├── BasketProjectGrid.jsx
+│       ├── TreatProjectCard.jsx
+│       └── BerryStickerFrame.jsx
+├── components/
+│   ├── layout/                         ← Picnic nav, meadow transition wrapper
+│   └── ui/                             ← BerryButton, GinghamCard, JamTag, FlowerBadge
+└── assets/strawberry-picnic-meadow/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo               | Nội dung cần vẽ                                           | Dùng cho               | Gợi ý kỹ thuật                                           |
+| ----------------------------- | --------------------------------------------------------- | ---------------------- | -------------------------------------------------------- |
+| `meadow-picnic-scene.svg`     | Đồng cỏ, khăn caro, giỏ mây, hoa, mây pastel              | Background chính       | Tách sky, grass, blanket, basket, flowers để parallax    |
+| `strawberry-basket-set.svg`   | Giỏ dâu, quả dâu nhiều trạng thái, leaf, seed sparkle     | Hero/card decoration   | Dâu là symbol reuse, seed tách để pop sparkle            |
+| `gingham-pattern-frames.svg`  | Khung caro hồng, ribbon, tape, corner patch               | Card frame             | Pattern fill nhẹ, border nhiều màu, không dùng flat card |
+| `picnic-treat-icons.svg`      | Cake slice, macaron, jam jar, lemonade, sandwich cute     | Project badges         | Icon 24/32px, fill pastel, stroke trắng mềm              |
+| `bee-butterfly-set.svg`       | Ong nhỏ, bướm nhiều màu, trail dotted path                | Motion layer           | Tách cánh để flap, dùng path animation                   |
+| `flower-grass-clusters.svg`   | Hoa cúc, tulip mini, cỏ, clover, leaf                     | Background/footer      | Stem group riêng để sway, opacity khác nhau              |
+| `berry-confetti.svg`          | Dâu mini, heart seed, star, dot, ribbon bit               | Particle layer         | Random bằng CSS vars, giới hạn số lượng visible          |
+| `picnic-note-labels.svg`      | Note viết tay, price tag, sticker label, paper tape       | About/conclution cards | Paper grain nhẹ, tape group riêng để wiggle              |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `strawberry-picnic-meadow` trong data/theme config và README của sub-project  |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Chỉ dùng 3 trang chính: `about`, `projects`, `conclution`                            |
+| Background priority | Background meadow/blanket/basket là lớp visual chính, không chỉ là decoration nhỏ    |
+| Feature folders    | Tách `picnic-meadow-scene`, `strawberry-mascot`, `picnic-projects`                   |
+| UI components      | Có `BerryButton`, `GinghamCard`, `JamTag`, `FlowerBadge` dùng lại trong các page      |
+| Card decoration    | Project/about cards phải có border caro, sticker, flower/berry accent và nhiều màu   |
+| Asset folder       | Tạo `src/assets/strawberry-picnic-meadow/` và đủ 8 SVG files trong bảng asset         |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Motion             | Nhấn mạnh butterfly drift, bee loop, berry pop, flower sway, gingham wave             |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile giữ meadow + basket chính, giảm bướm/ong/confetti và card về 1 cột            |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt loop bướm, ong, cỏ và confetti            |
+| Performance        | Không render quá 20–30 particle visible, lazy load scene SVG, optimize bằng SVGO      |
+
+---
+
+
+## 9. `pastel-magic-boutique` — Pastel Magic Boutique Portfolio
+
+Portfolio như một boutique phép thuật pastel: kệ potion hồng tím, gương trái tim, hộp ribbon, charm lấp lánh và mèo/mascot tiệm nhỏ. Background là storefront/inside-shop scene nhiều lớp, tạo cảm giác bước vào một cửa hàng cute, rực rỡ nhưng vẫn mềm mắt.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Magical, nữ tính, glossy, đáng yêu, boutique fantasy                  |
+| Hình khối   | Heart mirror card, potion bottle badge, ribbon frame, charm sticker   |
+| Không gian  | Boutique pastel với kệ potion, rèm, gương, đèn sao, hộp quà           |
+| Chuyển động | Potion bubble, mirror shimmer, ribbon flutter, charm twinkle          |
+| Điểm nhấn   | Potion shelf, heart mirror, magic wand, ribbon box, tiny shop mascot  |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFF4FF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#D86BFF",
+        colorTextBase: "#352246",
+        colorTextSecondary: "#80618E",
+        colorSuccess: "#79F0D3",
+        colorWarning: "#FFE17F",
+        colorInfo: "#9CCBFF",
+        colorBorder: "#E8C7FF",
+        borderRadius: 20,
+        fontFamily: "'Baloo 2', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --boutique-pink: #FFF4FF;
+// --magic-purple: #D86BFF;
+// --ribbon-rose: #FF8CCF;
+// --potion-mint: #79F0D3;
+// --star-gold: #FFE17F;
+// --mirror-blue: #9CCBFF;
+// --velvet-violet: #80618E;
+// --pearl-white: #FFFFFF;
+// --charm-coral: #FF9B9B;
+```
+
+### Typography
+
+- **Heading:** `Baloo 2` tròn, vui, tạo cảm giác boutique sign cute.
+- **Body:** `Nunito` dễ đọc, giảm độ fantasy để nội dung portfolio vẫn rõ.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                         |
+| --------------- | ----------------------------------------------------------------------------- |
+| Framer Motion   | Boutique door open, shelf reveal, card hover sparkle, route transition        |
+| Rive            | Potion bottle reaction, mirror wink, shop mascot idle/interact/success        |
+| SVGator         | Bubble rise trong potion, ribbon flutter, mirror shimmer, star charm path     |
+| Lenis           | Smooth scroll qua 3 trang như đi qua các quầy trong boutique                  |
+| CSS Keyframes   | Charm twinkle, curtain sway, bottle glow, ribbon float                        |
+| Realtime Colors | Cân bằng tím/hồng/mint/vàng để rực rỡ nhưng không quá neon                    |
+| Blush           | Illustration magical boutique girl hoặc shop interior cho scene phụ           |
+
+### Layout ideas
+
+- **About:** Profile nằm trong heart mirror lớn; background là boutique shelf với potion bottle và ribbon box ở hai bên.
+- **Projects:** Project cards như product display shelf, mỗi card có potion label, charm icon, ribbon corner và sparkle border khác màu.
+- **Conclution:** Checkout counter hoặc gift wrapping desk; reflection note như receipt xinh, CTA là charm seal đóng dấu.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                   | Thư viện          |
+| ---------------- | -------------------------------------------------------- | ----------------- |
+| Page load        | Boutique door open + shelf lights bật theo stagger       | Framer Motion     |
+| Potion idle      | Bubble rise trong chai, glow pulse nhẹ                   | SVGator/CSS       |
+| Mirror shimmer   | Highlight sweep ngang qua gương 5–8s loop                | CSS keyframes     |
+| Ribbon           | Flutter nhẹ ở góc card và hộp quà                        | CSS/SVGator       |
+| Charm sparkle    | Twinkle không đồng bộ quanh card và nav                  | CSS keyframes     |
+| Card hover       | Lift + potion label pop + ribbon curl                    | Framer Motion     |
+| Section entrance | Shelf items slide-in theo tầng, opacity 0 đến 1          | Framer Motion     |
+| Conclution       | Gift wrap ribbon tie + star dust burst                   | Rive/Framer Motion |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Pastel magic boutique shell
+│   ├── routes.js                       ← about, projects, conclution
+│   └── theme.js
+├── pages/
+│   ├── BoutiqueAboutPage.jsx           ← About trong heart mirror + shelf bg
+│   ├── PotionProjectsPage.jsx          ← Projects dạng product shelf cards
+│   └── GiftWrapConclutionPage.jsx      ← Conclution checkout/gift wrap scene
+├── features/
+│   ├── boutique-scene/
+│   │   ├── BoutiqueInteriorBackground.jsx
+│   │   ├── PotionShelfLayer.jsx
+│   │   ├── HeartMirrorShimmer.jsx
+│   │   └── RibbonCurtainLayer.jsx
+│   ├── magic-mascot/
+│   │   ├── BoutiqueMascotRive.jsx
+│   │   ├── PotionBubbleReaction.jsx
+│   │   └── CharmSparkleBurst.jsx
+│   └── potion-projects/
+│       ├── ProductShelfGrid.jsx
+│       ├── PotionProjectCard.jsx
+│       └── RibbonLabelHover.jsx
+├── components/
+│   ├── layout/                         ← Boutique nav, shimmer transition wrapper
+│   └── ui/                             ← PotionButton, MirrorCard, RibbonTag, CharmBadge
+└── assets/pastel-magic-boutique/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                    | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                         |
+| ---------------------------------- | ---------------------------------------------------- | ---------------------- | ------------------------------------------------------ |
+| `boutique-interior-scene.svg`      | Storefront hoặc interior, kệ potion, rèm, counter    | Background chính       | Tách wall, shelf, lights, counter để parallax          |
+| `potion-bottle-collection.svg`     | Potion nhiều hình: heart, star, moon, bow bottle     | Cards/decoration       | Liquid/bubble group riêng để animate opacity/translate |
+| `heart-mirror-frame.svg`           | Gương trái tim, pearl frame, shine streak            | About hero             | Shine mask riêng, frame nhiều màu không đơn điệu       |
+| `ribbon-bow-set.svg`               | Bow, ribbon strip, gift wrap, curl ribbon            | Card frame/CTA         | Tách tail để flutter, dùng gradient hồng/tím           |
+| `magic-charm-icons.svg`            | Wand, star charm, moon charm, key, compact mirror    | Nav/badges             | Icon 24x24, currentColor + pastel fill                 |
+| `sparkle-star-dust.svg`            | Star, diamond, dot, heart sparkle, glow ring         | Particle layer         | Symbol reuse, random delay, giới hạn visible           |
+| `boutique-labels.svg`              | Price label, product tag, seal, shelf nameplate      | Project cards          | Paper + gold trim + small icon accent                  |
+| `gift-wrap-counter.svg`            | Hộp quà, wrapping paper, scissors cute, checkout tray | Conclution             | Tách ribbon và seal để animate success                 |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `pastel-magic-boutique` trong data/theme config và README của sub-project     |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Chỉ dùng 3 trang chính: `about`, `projects`, `conclution`                            |
+| Background priority | Boutique interior/shelf/mirror phải là visual layer chính xuyên suốt app            |
+| Feature folders    | Tách `boutique-scene`, `magic-mascot`, `potion-projects`                             |
+| UI components      | Có `PotionButton`, `MirrorCard`, `RibbonTag`, `CharmBadge` dùng lại trong các page    |
+| Card decoration    | Cards phải có ribbon, charm, potion label, sparkle border và palette nhiều điểm nhấn |
+| Asset folder       | Tạo `src/assets/pastel-magic-boutique/` và đủ 8 SVG files trong bảng asset            |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Motion             | Nhấn mạnh potion bubbles, mirror shimmer, ribbon flutter, charm twinkle               |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile giữ mirror/shelf chính, giảm charm/sparkle particle và card về 1 cột           |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt sparkle, bubble loop và shimmer sweep     |
+| Performance        | Không render quá 20–30 particle visible, lazy load scene SVG, optimize bằng SVGO      |
+
+---
+
+
+## 10. `dreamy-flower-train` — Dreamy Flower Train Portfolio
+
+Portfolio như một chuyến tàu hoa chạy qua bầu trời pastel: toa tàu phủ hoa, mây bông, đường ray cầu vồng, smoke là cánh hoa và những trạm dừng nhỏ cho từng phần nội dung. Theme có cảm giác hành trình, nữ tính, giàu storytelling và animation mượt.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                 |
+| ----------- | --------------------------------------------------------------------- |
+| Cảm xúc     | Mơ mộng, chuyển động, hopeful, thơ, dịu nhưng rực rỡ                 |
+| Hình khối   | Train ticket card, station sign, flower window, rainbow rail badge   |
+| Không gian  | Sky garden pastel, tàu hoa foreground, mây, cầu vồng, trạm nhỏ       |
+| Chuyển động | Train glide, flower smoke, cloud parallax, rail sparkle, ticket flip |
+| Điểm nhấn   | Flower train, cloud station, rainbow rail, petal smoke, tiny luggage |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F4F8FF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#FF86B7",
+        colorTextBase: "#26324F",
+        colorTextSecondary: "#6C7898",
+        colorSuccess: "#8CE7C1",
+        colorWarning: "#FFE27A",
+        colorInfo: "#8FCBFF",
+        colorBorder: "#CFE2FF",
+        borderRadius: 18,
+        fontFamily: "'Quicksand', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --sky-porcelain: #F4F8FF;
+// --train-rose: #FF86B7;
+// --cloud-blue: #8FCBFF;
+// --garden-mint: #8CE7C1;
+// --rail-gold: #FFE27A;
+// --luggage-lilac: #C8A8FF;
+// --petal-coral: #FFAD9F;
+// --ink-indigo: #26324F;
+// --station-border: #CFE2FF;
+```
+
+### Typography
+
+- **Heading:** `Quicksand` mềm, tròn, hợp mây và flower train.
+- **Body:** `Nunito` rõ, cân bằng phần storytelling và project detail.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                         |
+| --------------- | ----------------------------------------------------------------------------- |
+| Framer Motion   | Train entrance, ticket card flip, station reveal, page transition             |
+| Rive            | Train conductor mascot, whistle reaction, luggage success animation           |
+| SVGator         | Train glide along rail, flower smoke path, cloud drift, rainbow rail draw     |
+| Lenis           | Smooth scroll như đi qua từng station của hành trình                          |
+| CSS Keyframes   | Cloud parallax, petal smoke float, rail sparkle, wheel rotate                 |
+| Realtime Colors | Tạo palette rose/sky/mint/gold có độ tươi nhưng đọc rõ                        |
+| Blush           | Illustration train girl hoặc sky station cho hero/background phụ              |
+
+### Layout ideas
+
+- **About:** Cloud station đầu tiên; profile như train ticket hoặc window cabin, nền có flower train chạy ngang phía dưới.
+- **Projects:** Mỗi project là một toa tàu hoặc station stop, card có ticket stamp, flower window, ribbon rail và icon hành lý riêng.
+- **Conclution:** Trạm cuối lúc hoàng hôn pastel; reflection như arrival board, flower smoke chuyển thành heart/sparkle trail.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                | Thư viện          |
+| ---------------- | ----------------------------------------------------- | ----------------- |
+| Page load        | Sky fade + rail draw + train glide vào foreground     | Framer/SVGator    |
+| Train idle       | TranslateX rất nhẹ, wheel rotate, body bob 2–4px      | CSS/Rive          |
+| Flower smoke     | Petal cloud drift từ ống khói, fade out mềm           | CSS/SVGator       |
+| Cloud background | Parallax nhiều lớp, drift 18–30s loop                 | CSS keyframes     |
+| Card hover       | Ticket flip nhỏ + stamp pop + rail sparkle            | Framer Motion     |
+| Section entrance | Station sign drop-in + card stagger                   | Framer Motion     |
+| Conclution       | Arrival board flip + petal trail sweep                | Framer Motion/CSS |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Dreamy flower train shell
+│   ├── routes.js                       ← about, projects, conclution
+│   └── theme.js
+├── pages/
+│   ├── CloudStationAboutPage.jsx       ← About station + ticket profile
+│   ├── TrainCarProjectsPage.jsx        ← Projects dạng train cars/stations
+│   └── ArrivalConclutionPage.jsx       ← Conclution final station
+├── features/
+│   ├── flower-train-scene/
+│   │   ├── SkyGardenBackground.jsx
+│   │   ├── FlowerTrainLayer.jsx
+│   │   ├── RainbowRailDraw.jsx
+│   │   └── PetalSmokeLayer.jsx
+│   ├── train-mascot/
+│   │   ├── ConductorMascotRive.jsx
+│   │   ├── WhistleReaction.jsx
+│   │   └── LuggageSuccess.jsx
+│   └── station-projects/
+│       ├── StationProjectGrid.jsx
+│       ├── TrainCarProjectCard.jsx
+│       └── TicketStampHover.jsx
+├── components/
+│   ├── layout/                         ← Train nav, station transition wrapper
+│   └── ui/                             ← TicketButton, StationCard, RailTag, FlowerWindowBadge
+└── assets/dreamy-flower-train/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                        |
+| ---------------------------- | ---------------------------------------------------- | ---------------------- | ----------------------------------------------------- |
+| `sky-garden-panorama.svg`    | Nền trời pastel, mây, vườn hoa trên mây, sun glow    | Background chính       | Layer xa/gần để parallax, opacity mềm                 |
+| `flower-train-set.svg`       | Đầu tàu, toa hoa, bánh xe, cửa sổ, conductor mascot  | Hero/background        | Tách wheel, smoke pipe, car body để animate riêng     |
+| `rainbow-rail-path.svg`      | Đường ray cầu vồng, sleepers, sparkle, station path  | Scene connection       | Stroke-dasharray cho rail draw                        |
+| `cloud-station-set.svg`      | Trạm mây, signboard, bench, clock, ticket booth      | About/conclution       | Sign group riêng để drop-in                           |
+| `train-ticket-frames.svg`    | Ticket card, stamp, punched corner, ribbon strip     | Project cards          | Multi-color edge, stamp pop hover                     |
+| `petal-smoke-particles.svg`  | Petal smoke, flower puff, tiny heart, sparkle trail  | Particle layer         | Random delay/scale, giới hạn visible                  |
+| `luggage-flower-icons.svg`   | Suitcase, flower bag, camera, ticket, map, bow       | Badges/nav             | Icon 24x24, currentColor + pastel fill                |
+| `arrival-board-labels.svg`   | Arrival board, station labels, flip panels           | Conclution             | Panel tách riêng để flip animation                    |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `dreamy-flower-train` trong data/theme config và README của sub-project       |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Chỉ dùng 3 trang chính: `about`, `projects`, `conclution`                            |
+| Background priority | Flower train, sky garden và rail path là background scene chính của toàn app        |
+| Feature folders    | Tách `flower-train-scene`, `train-mascot`, `station-projects`                        |
+| UI components      | Có `TicketButton`, `StationCard`, `RailTag`, `FlowerWindowBadge` dùng lại            |
+| Card decoration    | Cards phải có ticket stamp, rail border, flower window, luggage icon và màu đa lớp   |
+| Asset folder       | Tạo `src/assets/dreamy-flower-train/` và đủ 8 SVG files trong bảng asset              |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Motion             | Nhấn mạnh train glide, wheel rotate, flower smoke, cloud parallax, rail sparkle       |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile giữ train và station chính, giảm smoke/cloud particles và card về 1 cột        |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt train loop, smoke drift và cloud parallax |
+| Performance        | Không render quá 20–30 particle visible, lazy load scene SVG, optimize bằng SVGO      |
+
+---
+
+
+## 11. `mermaid-pearl-lagoon` — Mermaid Pearl Lagoon Portfolio
+
+Portfolio như một lagoon ngọc trai dành cho nàng tiên cá: nước xanh ngọc, san hô hồng tím, vỏ sò mở, pearl shimmer, sao biển và ánh caustics trên nền. Theme fantasy nữ tính, sáng, lấp lánh, dùng background lagoon làm lớp chính để tạo chiều sâu.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                    |
+| ----------- | ------------------------------------------------------------------------ |
+| Cảm xúc     | Lấp lánh, mềm mại, nữ tính, ocean fantasy, sang nhẹ                     |
+| Hình khối   | Shell card, pearl badge, coral frame, scale pattern, wave ribbon        |
+| Không gian  | Lagoon xanh ngọc, san hô hồng tím, vỏ sò, pearl, light caustics         |
+| Chuyển động | Pearl shimmer, shell open, water caustics, seahorse drift, coral sway   |
+| Điểm nhấn   | Pearl shell, mermaid silhouette accent, coral arch, starfish, sea glass |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F0FCFF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#FF83C7",
+        colorTextBase: "#18364A",
+        colorTextSecondary: "#5B7E90",
+        colorSuccess: "#66E7D2",
+        colorWarning: "#FFE088",
+        colorInfo: "#73D4FF",
+        colorBorder: "#AFEFFF",
+        borderRadius: 22,
+        fontFamily: "'DM Sans', 'Quicksand', sans-serif",
+    },
+};
+
+// CSS Variables
+// --lagoon-mist: #F0FCFF;
+// --pearl-pink: #FF83C7;
+// --aqua-glow: #73D4FF;
+// --seafoam-mint: #66E7D2;
+// --shell-ivory: #FFFFFF;
+// --coral-lilac: #C9A7FF;
+// --sun-pearl: #FFE088;
+// --deep-teal: #18364A;
+// --sea-glass-border: #AFEFFF;
+```
+
+### Typography
+
+- **Heading:** `Quicksand` tạo cảm giác mềm, tròn, phù hợp pearl/shell.
+- **Body:** `DM Sans` hiện đại, rõ ràng trên background có nhiều shimmer.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                        |
+| --------------- | ---------------------------------------------------------------------------- |
+| Framer Motion   | Shell card open, pearl reveal, coral frame entrance, route transition        |
+| Rive            | Pearl shell interaction, seahorse mascot, lagoon success bubble              |
+| SVGator         | Water caustics sweep, shell open timeline, pearl shimmer, coral sway         |
+| Lenis           | Smooth scroll qua 3 trang với lagoon depth parallax                          |
+| CSS Keyframes   | Bubble rise, seaweed sway, pearl glow, caustic shimmer                       |
+| Realtime Colors | Cân palette aqua/pink/lilac/gold để vừa sáng vừa đủ contrast                 |
+| Blush           | Illustration mermaid lagoon hoặc pearl girl cho hero/about accent            |
+
+### Layout ideas
+
+- **About:** About nằm trong shell mở hoặc pearl frame; background lagoon có coral arch và sunbeam caustics.
+- **Projects:** Project cards như pearl specimens trong reef gallery, mỗi card có coral corner, scale pattern, shell tag và starfish icon riêng.
+- **Conclution:** Lagoon reflection scene; pearl rơi vào nước tạo ripple, lời kết nằm trên sea-glass note nhiều lớp màu.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                  | Thư viện          |
+| ---------------- | ------------------------------------------------------- | ----------------- |
+| Page load        | Lagoon gradient fade + coral grow + shell open reveal   | Framer/SVGator    |
+| Water caustics   | Light sweep rất chậm, opacity 0.25–0.55                 | CSS/SVGator       |
+| Pearl idle       | Glow pulse + small shimmer star                         | CSS keyframes     |
+| Shell interaction | Shell halves rotate open, pearl scale 0.8 đến 1        | Rive/Framer       |
+| Coral background | Gentle sway 5–9s loop, phase lệch nhau                  | CSS keyframes     |
+| Card hover       | Lift + bubble burst + coral rim light                   | Framer Motion     |
+| Section entrance | Fade + y 24 đến 0 + pearl stagger                       | Framer Motion     |
+| Conclution       | Pearl drop + ripple ring + shimmer trail                | Framer Motion/CSS |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Mermaid pearl lagoon shell
+│   ├── routes.js                       ← about, projects, conclution
+│   └── theme.js
+├── pages/
+│   ├── PearlLagoonAboutPage.jsx        ← About shell/pearl profile
+│   ├── ReefPearlProjectsPage.jsx       ← Projects dạng pearl reef cards
+│   └── LagoonConclutionPage.jsx        ← Conclution pearl ripple scene
+├── features/
+│   ├── pearl-lagoon-scene/
+│   │   ├── LagoonBackground.jsx
+│   │   ├── CoralArchLayer.jsx
+│   │   ├── WaterCausticsOverlay.jsx
+│   │   └── BubblePearlLayer.jsx
+│   ├── lagoon-mascot/
+│   │   ├── SeahorseMascotRive.jsx
+│   │   ├── ShellOpenReaction.jsx
+│   │   └── PearlDropSuccess.jsx
+│   └── reef-projects/
+│       ├── PearlProjectGrid.jsx
+│       ├── ShellProjectCard.jsx
+│       └── CoralFrameHover.jsx
+├── components/
+│   ├── layout/                         ← Lagoon nav, water transition wrapper
+│   └── ui/                             ← PearlButton, ShellCard, CoralTag, SeaGlassBadge
+└── assets/mermaid-pearl-lagoon/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                  | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                         |
+| -------------------------------- | ---------------------------------------------------- | ---------------------- | ------------------------------------------------------ |
+| `pearl-lagoon-background.svg`    | Lagoon, nước xanh ngọc, đá, sand bed, sunbeam        | Background chính       | Tách water, caustics, sand, rocks để parallax          |
+| `coral-shell-arch.svg`           | Coral hồng tím, shell arch, seaweed, starfish        | Hero/section frame     | Coral branch group riêng để sway                       |
+| `pearl-shell-set.svg`            | Shell mở/đóng, pearl, shimmer star, shell shadow     | About/CTA              | Shell halves tách riêng, pearl radialGradient          |
+| `mermaid-accent-set.svg`         | Mermaid silhouette mềm, tail scale, hair ribbon      | Background accent      | Chỉ dùng decorative layer, không thay avatar thật       |
+| `sea-glass-cards.svg`            | Sea glass note, translucent frame, wave ribbon       | Cards                  | Border nhiều màu, shimmer overlay nhẹ                  |
+| `lagoon-creature-icons.svg`      | Seahorse, fish, turtle mini, crab, starfish, shell   | Nav/badges             | Icon 24x24, currentColor + aqua/pink fill              |
+| `bubble-pearl-particles.svg`     | Bubble, pearl dot, sparkle, ripple ring              | Particle layer         | Random delay, fade top, giới hạn 20–30 visible         |
+| `scale-pattern-ribbons.svg`      | Mermaid scale pattern, wave ribbon, pearl divider    | Decoration/card frame  | Pattern opacity thấp, không làm text khó đọc           |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `mermaid-pearl-lagoon` trong data/theme config và README của sub-project      |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Chỉ dùng 3 trang chính: `about`, `projects`, `conclution`                            |
+| Background priority | Lagoon, coral arch, caustics và pearl shell là visual layer chính                   |
+| Feature folders    | Tách `pearl-lagoon-scene`, `lagoon-mascot`, `reef-projects`                          |
+| UI components      | Có `PearlButton`, `ShellCard`, `CoralTag`, `SeaGlassBadge` dùng lại trong các page    |
+| Card decoration    | Cards phải có coral frame, pearl badge, shell tag, wave/scale pattern đa màu         |
+| Asset folder       | Tạo `src/assets/mermaid-pearl-lagoon/` và đủ 8 SVG files trong bảng asset             |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Motion             | Nhấn mạnh pearl shimmer, shell open, water caustics, coral sway, bubble rise          |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile giữ shell/lagoon chính, giảm caustics/bubble/coral density và card về 1 cột    |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt caustics, bubble loop và coral sway       |
+| Performance        | Không render quá 20–30 particle visible, lazy load scene SVG, optimize bằng SVGO      |
+
+---
+
+
+## 12. `kawaii-stationery-room` — Kawaii Stationery Room Portfolio
+
+Portfolio như một căn phòng stationery cute: bàn học pastel, sticker sheet, bút gel, washi tape, sticky note, kẹp giấy trái tim và ánh sáng cửa sổ mềm. Theme thân thiện, nữ tính, giàu chi tiết handmade, dùng background room/desk làm lớp chính thay vì chỉ trang trí ở góc.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Cute, chăm chỉ, gọn gàng, handmade, học tập sáng tạo                  |
+| Hình khối   | Notebook card, sticker badge, washi frame, memo tab, gel pen underline|
+| Không gian  | Bàn stationery pastel, cửa sổ, sticker board, notebook, hộp bút       |
+| Chuyển động | Sticker peel, pen doodle draw, paper float, washi curl, desk sparkle  |
+| Điểm nhấn   | Sticker sheet, gel pen, sticky notes, washi tape, heart paperclip     |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFF9FD",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#FF75B8",
+        colorTextBase: "#30283F",
+        colorTextSecondary: "#756981",
+        colorSuccess: "#78E8C6",
+        colorWarning: "#FFE06F",
+        colorInfo: "#91D7FF",
+        colorBorder: "#FFD1EA",
+        borderRadius: 16,
+        fontFamily: "'Nunito', 'Patrick Hand', sans-serif",
+    },
+};
+
+// CSS Variables
+// --stationery-blush: #FFF9FD;
+// --marker-pink: #FF75B8;
+// --mint-note: #78E8C6;
+// --sunny-sticky: #FFE06F;
+// --pen-blue: #91D7FF;
+// --lavender-paper: #C9B3FF;
+// --coral-sticker: #FF9A9A;
+// --ink-soft: #30283F;
+// --washi-border: #FFD1EA;
+```
+
+### Typography
+
+- **Heading:** `Patrick Hand` dùng nhẹ cho accent/label để có cảm giác note viết tay.
+- **Body:** `Nunito` là font chính để portfolio vẫn rõ, ổn định và dễ đọc.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                        |
+| --------------- | ---------------------------------------------------------------------------- |
+| Framer Motion   | Sticker peel, note reveal, project card drag-like hover, route transition    |
+| Rive            | Gel pen doodle interaction, sticker mascot, paperclip success animation      |
+| SVGator         | Pen stroke draw, washi curl, paper float path, sticker peel timeline         |
+| Lenis           | Smooth scroll như lướt qua desk board và notebook pages                      |
+| CSS Keyframes   | Paper float, desk sparkle, tape flutter, pencil wiggle                       |
+| Realtime Colors | Kiểm palette pink/mint/yellow/blue/lavender rực rỡ nhưng đủ contrast         |
+| Blush           | Illustration stationery room, study desk, cute note character                |
+
+### Layout ideas
+
+- **About:** Background là desk room; profile như notebook mở, avatar dán bằng washi tape và sticker corner nhiều màu.
+- **Projects:** Project cards như sticker sheet hoặc assignment memo, mỗi card có tab, clip, doodle icon, washi strip và patterned border khác nhau.
+- **Conclution:** Reflection như trang cuối notebook; pen tự vẽ underline, sticker peel hiện quote/kết luận và paperclip success.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                   | Thư viện          |
+| ---------------- | -------------------------------------------------------- | ----------------- |
+| Page load        | Desk background fade + notebook open + stickers pop      | Framer Motion     |
+| Sticker peel     | Corner rotate + shadow change + small elastic settle     | Framer/SVGator    |
+| Pen doodle       | Stroke-dashoffset draw line, heart, star, underline      | SVG/CSS/Rive      |
+| Paper idle       | Sticky notes float 2–4px, rotate rất nhẹ                 | CSS keyframes     |
+| Washi tape       | Tape tail curl/flutter ở card corners                    | CSS/SVGator       |
+| Card hover       | Lift + doodle sparkle + paperclip wiggle                 | Framer Motion     |
+| Section entrance | Notes pop in theo grid, stagger 0.06–0.1s                | Framer Motion     |
+| Conclution       | Pen underline + sticker reveal + confetti dot burst      | Rive/Framer Motion |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Kawaii stationery room shell
+│   ├── routes.js                       ← about, projects, conclution
+│   └── theme.js
+├── pages/
+│   ├── StationeryAboutPage.jsx         ← About notebook trên desk background
+│   ├── StickerProjectsPage.jsx         ← Projects dạng sticker/memo cards
+│   └── NotebookConclutionPage.jsx      ← Conclution final notebook page
+├── features/
+│   ├── stationery-room-scene/
+│   │   ├── DeskRoomBackground.jsx
+│   │   ├── StickerBoardLayer.jsx
+│   │   ├── WashiTapeLayer.jsx
+│   │   └── PaperFloatLayer.jsx
+│   ├── stationery-mascot/
+│   │   ├── GelPenRiveController.jsx
+│   │   ├── StickerPeelReaction.jsx
+│   │   └── PaperclipSuccess.jsx
+│   └── sticker-projects/
+│       ├── StickerProjectGrid.jsx
+│       ├── MemoProjectCard.jsx
+│       └── DoodleFrameHover.jsx
+├── components/
+│   ├── layout/                         ← Stationery nav, notebook transition wrapper
+│   └── ui/                             ← GelPenButton, NotebookCard, WashiTag, StickerBadge
+└── assets/kawaii-stationery-room/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                  | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                          |
+| -------------------------------- | ---------------------------------------------------- | ---------------------- | ------------------------------------------------------- |
+| `stationery-desk-room.svg`       | Bàn học, cửa sổ, notebook, hộp bút, sticker board    | Background chính       | Tách wall, desk, window light, notebook để parallax     |
+| `sticker-sheet-set.svg`          | Sticker heart, star, flower, bow, cat face, label    | Cards/particles        | Sticker shadow riêng, corner peel group                 |
+| `washi-tape-frames.svg`          | Washi tape nhiều pattern: caro, heart, cloud, flower | Card frame             | Pattern nhiều màu, tape tail tách để flutter            |
+| `gel-pen-doodle-set.svg`         | Gel pen, underline, heart doodle, star doodle        | About/conclution       | Stroke paths cho draw animation                         |
+| `sticky-note-memo-cards.svg`     | Sticky note, notebook page, memo tab, index label    | Project cards          | Paper grain nhẹ, tab group nhiều màu                    |
+| `paperclip-charm-icons.svg`      | Heart clip, push pin, binder clip, charm, eraser     | Badges/nav             | Icon 24x24, currentColor + pastel fill                  |
+| `desk-sparkle-particles.svg`     | Tiny sparkle, dot, paper fleck, mini sticker bit     | Particle layer         | Random delay/position, giới hạn visible                 |
+| `stationery-tool-icons.svg`      | Pen, pencil, scissors, ruler, glue, notebook, stamp  | UI icons               | Stroke 2px, fill pastel, dùng chung trong buttons/cards |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `kawaii-stationery-room` trong data/theme config và README của sub-project    |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Chỉ dùng 3 trang chính: `about`, `projects`, `conclution`                            |
+| Background priority | Desk room/sticker board/notebook là lớp background chính, luôn thấy rõ personality  |
+| Feature folders    | Tách `stationery-room-scene`, `stationery-mascot`, `sticker-projects`                |
+| UI components      | Có `GelPenButton`, `NotebookCard`, `WashiTag`, `StickerBadge` dùng lại trong các page |
+| Card decoration    | Cards phải có washi tape, sticker, memo tab, doodle border và màu accent khác nhau   |
+| Asset folder       | Tạo `src/assets/kawaii-stationery-room/` và đủ 8 SVG files trong bảng asset           |
+| Asset usage        | SVG assets phải được import vào UI/feature layer, không chỉ nằm trong thư mục         |
+| Motion             | Nhấn mạnh sticker peel, pen doodle draw, paper float, washi curl, paperclip wiggle    |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile giữ notebook/sticker board chính, giảm paper/sparkle density và card về 1 cột  |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt paper float, sparkle và sticker loop      |
+| Performance        | Không render quá 20–30 particle visible, lazy load scene SVG, optimize bằng SVGO      |
+
+---
+
+
 ## Quy chuẩn triển khai cho Catalog 5
 
 ### Motion architecture
@@ -1187,10 +1951,13 @@ src/
 | ------------------------- | ---------------------------------------------------------------------- |
 | Tông màu chủ đạo          | Hồng pastel + mint/xanh lá nhạt + vàng ấm + tím lavender              |
 | Cảm giác chung            | Cute, dreamy, ấm áp, nữ tính, nhiều chi tiết dễ thương                 |
+| Background-first scene    | Background là lớp asset/animation chính, có chiều sâu và personality rõ |
+| Three-page flow           | Với theme yêu cầu 3 trang, dùng đúng flow `about` → `projects` → `conclution` |
 | SVG-first approach        | Ưu tiên SVG 2D cho mọi decoration, icon, scene, background, mascot    |
 | Mascot-driven             | Mỗi theme có mascot/character chính tạo personality riêng              |
 | Animation philosophy      | Mềm, bouncy, organic, gợi cảm giác sống động nhưng không quá nhanh   |
 | Icon density              | Nhiều icon nhỏ cute rải rác tạo cảm giác phong phú, handmade          |
+| Card decoration           | Card phải có frame/sticker/pattern/icon/accent nhiều màu, không dùng nền đơn điệu |
 | Accessibility             | Text luôn là HTML, contrast đủ trên nền pastel, reduced motion ready   |
 | Mobile-first decoration   | Giảm decoration trên mobile, giữ mascot và content rõ ràng             |
 | Reusable SVG symbols      | Dùng `<symbol>` và `<use>` để tái sử dụng elements trong SVG          |
@@ -1204,6 +1971,9 @@ src/
 - [ ] Tự vẽ hoặc generate tất cả SVG assets theo spec trong bảng "Tự tạo Assets 2D".
 - [ ] Thiết kế mascot Rive file với ít nhất 3 states (idle, interact, special).
 - [ ] Tách scene, mascot, animation và content features thành folder riêng.
+- [ ] Với theme 3 trang, route/content chính phải là `about`, `projects`, `conclution`.
+- [ ] Background scene phải được import/render như layer chính, không chỉ là decorative corner.
+- [ ] Card project/about/conclution phải có frame, sticker, pattern, icon hoặc animated accent nhiều màu.
 - [ ] Dùng HTML/CSS cho text chính, form, button và navigation.
 - [ ] Optimize SVG bằng SVGO trước khi commit.
 - [ ] Kiểm tra desktop/mobile ở 375px, 768px, 1280px.
@@ -1213,4 +1983,4 @@ src/
 
 ---
 
-_Cập nhật lần cuối: 2026-05-21 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot, underwater world, storybook fantasy và animation phong phú._
+_Cập nhật lần cuối: 2026-05-25 — Catalog 5: Cute & Dreamy Feminine themes với tông pastel sáng, nhiều SVG 2D assets, icon cute, mascot, background-first scenes, layout 3 trang about-projects-conclution và animation phong phú._

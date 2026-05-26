@@ -35,6 +35,11 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; SVGator d
 | `sunset-cruise-log`    | Sunset Cruise Log Portfolio     | Hoàng hôn, du thuyền, lãng mạn, ấm  | Portfolio nữ tính, storytelling       |
 | `island-adventure-map` | Island Adventure Map Portfolio  | Bản đồ, khám phá, vui, năng động     | Portfolio trải nghiệm, interactive   |
 | `coral-reef-gallery`   | Coral Reef Gallery Portfolio    | San hô, đại dương, sâu, huyền bí nhẹ | Portfolio visual, art, illustration  |
+| `seaside-train-ticket` | Seaside Train Ticket Portfolio  | Tàu ven biển, vé giấy, ga nhỏ, cửa sổ nhìn ra biển | Portfolio kể chuyện, travel, career journey |
+| `lagoon-kayak-adventure` | Lagoon Kayak Adventure Portfolio | Kayak lagoon, nước xanh, bản đồ chèo, hoa nhiệt đới | Portfolio năng động, outdoor, experience |
+| `beach-market-stroll` | Beach Market Stroll Portfolio | Chợ ven biển, giỏ cói, trái cây, quầy souvenir | Portfolio lifestyle, business, creative |
+| `sailboat-regatta-diary` | Sailboat Regatta Diary Portfolio | Thuyền buồm, cờ hiệu, gió biển, nhật ký hành trình | Portfolio nữ tính, leadership, travel |
+| `lighthouse-photo-trip` | Lighthouse Photo Trip Portfolio | Hải đăng, máy ảnh, film strip, chuyến đi ven biển | Portfolio photography, media, design |
 
 ---
 
@@ -723,6 +728,751 @@ src/
 ---
 
 
+## 6. `seaside-train-ticket` — Seaside Train Ticket Portfolio
+
+Portfolio như một chuyến tàu chạy dọc bờ biển: cửa sổ toa tàu nhìn ra sóng xanh, vé giấy, biển ga nhỏ, vali pastel, hoa giấy và nắng phản chiếu trên mặt nước. Theme kể chuyện nhẹ nhàng, hợp portfolio muốn thể hiện hành trình phát triển cá nhân hoặc career journey qua từng điểm dừng.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                    |
+| ----------- | ------------------------------------------------------------------------ |
+| Cảm xúc     | Hoài niệm, mát mẻ, chuyển động, travel diary, nữ tính                    |
+| Hình khối   | Ticket card, window frame, station sign, luggage tag, rail line divider |
+| Không gian  | Tàu ven biển, nền sky-blue, sóng xa, ga nhỏ, vali và vé giấy             |
+| Chuyển động | Train glide, window parallax, ticket flip, seagull glide, wave shimmer  |
+| Điểm nhấn   | Train window, paper ticket, station board, suitcase, coastal rail        |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#EFFAFF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#4BB8E8",
+        colorTextBase: "#1D3A4F",
+        colorTextSecondary: "#5D8195",
+        colorSuccess: "#65DDBF",
+        colorWarning: "#FFD37A",
+        colorError: "#FF8AA6",
+        colorBorder: "#BFE9F7",
+        borderRadius: 16,
+        fontFamily: "'Quicksand', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --train-sky: #EFFAFF;
+// --coastal-blue: #4BB8E8;
+// --wave-aqua: #A6E7FF;
+// --ticket-cream: #FFF8E6;
+// --sun-gold: #FFD37A;
+// --coral-pink: #FF8AA6;
+// --seafoam: #65DDBF;
+// --rail-navy: #1D3A4F;
+```
+
+### Typography
+
+- **Heading:** `Quicksand` mềm, tròn, hợp travel diary và cửa sổ tàu.
+- **Body:** `Nunito` rõ ràng, thân thiện, dễ đọc trên nền sáng nhiều chi tiết.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                       |
+| --------------- | --------------------------------------------------------------------------- |
+| Framer Motion   | Ticket flip, station card reveal, train-window transition, card hover       |
+| SVGator         | Train glide path, seagull fly, rail line draw, wave shimmer                 |
+| Lenis           | Smooth scroll qua các station section                                       |
+| CSS Keyframes   | Window parallax, luggage float, ticket flutter, sea sparkle                 |
+| Realtime Colors | Kiểm palette sky/aqua/ticket cream đủ sáng và đủ contrast                   |
+| Blush           | Illustration travel girl, train cabin, coastal station cho hero/about       |
+
+### Layout ideas
+
+- **Hero:** Full-width train cabin window, biển chạy parallax phía ngoài, vé giấy đóng dấu tên portfolio.
+- **About:** Profile như ticket/passenger card, có station stamp và luggage tag.
+- **Projects:** Mỗi project là một stop card trên tuyến ven biển; hover thì ticket stamp pop.
+- **Skills:** Suitcase packing grid: mỗi skill group là một luggage sticker màu khác nhau.
+- **Contact:** "Send from next station" CTA, postcard/ticket trượt vào mail slot.
+
+### Animation rules
+
+| Sự kiện          | Effect                                                | Thư viện          |
+| ---------------- | ----------------------------------------------------- | ----------------- |
+| Page load        | Train window fade-in + rail line draw + wave reveal   | Framer/SVGator    |
+| Background       | Sea/window parallax 12–20s loop                       | CSS keyframes     |
+| Train motion     | Cabin/rail translate rất nhẹ để tạo cảm giác di chuyển| CSS/SVGator       |
+| Ticket hover     | Flip 3D nhẹ + stamp pop + paper shadow                | Framer Motion     |
+| Seagull          | Glide ngang qua cửa sổ, loop chậm                     | SVG/CSS           |
+| Section entrance | Station sign slide-up + cards stagger                 | Framer Motion     |
+| Contact success  | Ticket slide + wave sparkle + stamp seal              | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                      ← Seaside train shell
+│   ├── routes.js                    ← cabin, stops, suitcase, station-mail
+│   └── theme.js
+├── pages/
+│   ├── TrainCabinHeroPage.jsx       ← Hero cửa sổ tàu nhìn ra biển
+│   ├── StationStopsProjectsPage.jsx ← Projects dạng các trạm dừng
+│   ├── SuitcaseSkillsPage.jsx       ← Skills dạng luggage stickers
+│   └── StationMailContactPage.jsx   ← Contact ticket/postcard mail slot
+├── features/
+│   ├── train-scene/
+│   │   ├── TrainWindowBackground.jsx
+│   │   ├── CoastalRailLayer.jsx
+│   │   ├── SeaParallaxLayer.jsx
+│   │   └── SeagullGlide.jsx
+│   ├── ticket-system/
+│   │   ├── TicketCard.jsx
+│   │   ├── TicketStampPop.jsx
+│   │   └── StationBoard.jsx
+│   └── luggage-skills/
+│       ├── SuitcaseGrid.jsx
+│       └── LuggageStickerBadge.jsx
+├── components/
+│   ├── layout/                      ← Train nav, station transition wrapper
+│   └── ui/                          ← TicketButton, WindowCard, StationTag, LuggageBadge
+└── assets/seaside-train-ticket/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                      |
+| ------------------------------ | ---------------------------------------------------- | ---------------------- | --------------------------------------------------- |
+| `train-window-coast.svg`       | Khung cửa sổ tàu, biển, mây, rail ven biển           | Hero/background        | Tách window, sea, cloud, rail để parallax           |
+| `coastal-train-set.svg`        | Đầu tàu/toa tàu cute, bánh xe, shadow                | Decoration/transition  | Wheel group riêng để rotate                         |
+| `paper-ticket-stamps.svg`      | Vé giấy, stamp, punched corner, barcode decor        | Cards/nav              | Paper grain nhẹ, stamp pop bằng scale               |
+| `station-signs.svg`            | Bảng ga, mốc km, platform sign, timetable            | Section headings       | Dùng text HTML overlay, SVG chỉ làm frame           |
+| `luggage-sticker-set.svg`      | Vali, tag, sticker biển, shell, camera, heart        | Skills/cards           | Nhiều màu pastel, symbol reuse                      |
+| `rail-wave-divider.svg`        | Rail line, wave line, dashed route                   | Divider/background     | Stroke-dashoffset cho line draw                     |
+| `seagull-cloud-set.svg`        | Seagull poses, cloud cluster, wind line              | Motion layer           | Animate translateX + slight y wave                  |
+| `station-mail-postcard.svg`    | Postcard, mail slot, envelope, ticket seal           | Contact CTA            | Tách postcard để slide                              |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `seaside-train-ticket` trong data/theme config và README của sub-project      |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ train cabin hero, station projects, suitcase skills, station mail contact      |
+| Feature folders    | Tách `train-scene`, `ticket-system`, `luggage-skills`                                |
+| UI components      | Có `TicketButton`, `WindowCard`, `StationTag`, `LuggageBadge` dùng lại trong page    |
+| Asset folder       | Tạo `src/assets/seaside-train-ticket/` và đủ 8 SVG files trong bảng asset             |
+| Visual priority    | Hero phải thể hiện rõ cửa sổ tàu ven biển, sóng, rail, vé giấy và station sign       |
+| Motion             | Nhấn mạnh train glide, window parallax, ticket flip, rail draw, seagull glide         |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Mobile chuyển station/cards về 1 cột, giữ window hero và giảm parallax layer          |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt train glide, seagull và sea parallax      |
+| Performance        | Giới hạn 20–30 animated elements visible, lazy load scene SVG, optimize bằng SVGO     |
+
+---
+
+
+## 7. `lagoon-kayak-adventure` — Lagoon Kayak Adventure Portfolio
+
+Portfolio như một chuyến chèo kayak qua lagoon xanh ngọc: bản đồ nước, mái chèo, hoa nhiệt đới, cá nhỏ, lá cọ và những điểm dừng khám phá. Theme năng động nhưng vẫn mềm, sáng, nhiều chuyển động nước và phù hợp portfolio trải nghiệm/outdoor.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                               |
+| ----------- | ------------------------------------------------------------------- |
+| Cảm xúc     | Năng động, tươi mới, khám phá, tự do, playful travel                |
+| Hình khối   | Kayak card, paddle divider, map marker, ripple badge, lagoon blob  |
+| Không gian  | Lagoon xanh ngọc, đảo nhỏ, hoa nhiệt đới, kayak foreground          |
+| Chuyển động | Kayak bob, paddle stroke, ripple expand, fish dart, leaf sway       |
+| Điểm nhấn   | Kayak SVG, paddle, water map path, tropical flower, fish ripple     |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#ECFFFB",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#27C6C2",
+        colorTextBase: "#123E48",
+        colorTextSecondary: "#4F7D86",
+        colorSuccess: "#70E6A8",
+        colorWarning: "#FFD86B",
+        colorError: "#FF7F9E",
+        colorBorder: "#B9F3EE",
+        borderRadius: 18,
+        fontFamily: "'Fredoka', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --lagoon-mint: #ECFFFB;
+// --kayak-teal: #27C6C2;
+// --water-aqua: #7CEAFF;
+// --leaf-green: #70E6A8;
+// --flower-pink: #FF7F9E;
+// --sun-yellow: #FFD86B;
+// --deep-lagoon: #123E48;
+// --sand-soft: #FFF0C9;
+```
+
+### Typography
+
+- **Heading:** `Fredoka` tạo cảm giác adventure vui và gần gũi.
+- **Body:** `Nunito` mềm, rõ, hợp UI nhiều marker và badge.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Kayak entrance, marker pop, route reveal, project card hover           |
+| SVGator         | Paddle stroke, water ripple, fish dart path, route line draw           |
+| Lenis           | Smooth scroll theo hành trình trên lagoon map                          |
+| CSS Keyframes   | Kayak bob, leaf sway, ripple pulse, bubble float                       |
+| Realtime Colors | Cân palette teal/mint/pink/yellow rực nhưng vẫn mát                    |
+| Blush           | Illustration kayak girl, tropical lagoon hoặc island stop scene        |
+
+### Layout ideas
+
+- **Hero:** Lagoon map full-bleed với kayak ở foreground, paddle stroke tạo ripple.
+- **About:** Explorer profile card như waterproof map/pass, có marker và flower clip.
+- **Projects:** Mỗi project là một checkpoint trên đường chèo, card dạng island/water blob.
+- **Skills:** Paddle toolkit: paddle, compass, waterproof bag, sunscreen, map marker.
+- **Contact:** "Send a signal" CTA, bottle/marker ripple lan ra trên mặt nước.
+
+### Animation rules
+
+| Sự kiện          | Effect                                             | Thư viện          |
+| ---------------- | -------------------------------------------------- | ----------------- |
+| Page load        | Lagoon fade-in + kayak bob entrance + route draw   | Framer/SVGator    |
+| Kayak idle       | TranslateY 0→-6px→0, rotate ±1deg, 4–6s loop      | CSS keyframes     |
+| Paddle stroke    | Paddle rotate + ripple expand theo nhịp            | SVGator/CSS       |
+| Fish decoration  | Dart path ngắn, opacity fade                       | CSS/SVG animation |
+| Marker hover     | Bounce + ripple ring + label reveal                | Framer Motion     |
+| Section entrance | Map marker pop + cards slide-up                    | Framer Motion     |
+| Contact success  | Signal ripple + tropical flower burst              | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Lagoon kayak shell
+│   ├── routes.js                       ← lagoon, checkpoints, toolkit, signal
+│   └── theme.js
+├── pages/
+│   ├── LagoonHeroPage.jsx              ← Hero kayak + lagoon route
+│   ├── CheckpointProjectsPage.jsx      ← Projects dạng checkpoints
+│   ├── PaddleToolkitSkillsPage.jsx     ← Skills dạng paddle/toolkit
+│   └── LagoonSignalContactPage.jsx     ← Contact signal ripple
+├── features/
+│   ├── lagoon-scene/
+│   │   ├── LagoonMapBackground.jsx
+│   │   ├── KayakBobLayer.jsx
+│   │   ├── PaddleStrokeRipple.jsx
+│   │   └── FishDartLayer.jsx
+│   ├── checkpoint-projects/
+│   │   ├── CheckpointGrid.jsx
+│   │   ├── LagoonProjectCard.jsx
+│   │   └── MapMarkerHover.jsx
+│   └── paddle-toolkit/
+│       ├── ToolkitGrid.jsx
+│       └── PaddleSkillBadge.jsx
+├── components/
+│   ├── layout/                         ← Lagoon nav, ripple transition wrapper
+│   └── ui/                             ← KayakButton, LagoonCard, PaddleTag, RippleBadge
+└── assets/lagoon-kayak-adventure/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                      |
+| ------------------------------ | ---------------------------------------------------- | ---------------------- | --------------------------------------------------- |
+| `lagoon-map-scene.svg`         | Lagoon, đảo nhỏ, route line, water blobs             | Hero/background        | ViewBox lớn, route stroke-dasharray                 |
+| `kayak-paddle-set.svg`         | Kayak nhiều màu, paddle, shadow, splash              | Hero/object            | Tách paddle và splash để animate riêng              |
+| `water-ripple-bubbles.svg`     | Ripple rings, bubble, splash dot                     | Particle layer         | Scale + opacity, random delay                       |
+| `tropical-flower-leaves.svg`   | Hibiscus, plumeria, palm leaf, monstera              | Decoration/cards       | Leaf group sway, flower pop                         |
+| `checkpoint-markers.svg`       | Marker, flag, buoy, dock, mini island                | Projects/nav           | Icon 32px, glow ring hover                          |
+| `fish-dart-set.svg`            | Cá nhỏ nhiều màu, tail, dotted trail                 | Motion layer           | Path animation ngắn, loop lệch nhịp                 |
+| `paddle-toolkit-icons.svg`     | Paddle, compass, dry bag, sunscreen, binoculars      | Skills                 | Icon 24x24, currentColor + fill pastel              |
+| `signal-bottle-ripple.svg`     | Bottle, floating note, ripple, flower success        | Contact CTA            | Tách bottle/note/ripple để animate                  |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `lagoon-kayak-adventure` trong data/theme config và README của sub-project    |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ lagoon hero, checkpoint projects, paddle toolkit skills, signal contact        |
+| Feature folders    | Tách `lagoon-scene`, `checkpoint-projects`, `paddle-toolkit`                         |
+| UI components      | Có `KayakButton`, `LagoonCard`, `PaddleTag`, `RippleBadge` dùng lại trong page        |
+| Asset folder       | Tạo `src/assets/lagoon-kayak-adventure/` và đủ 8 SVG files trong bảng asset           |
+| Visual priority    | Hero phải thể hiện rõ kayak, nước lagoon, route line, island markers và ripple       |
+| Motion             | Nhấn mạnh kayak bob, paddle stroke, ripple expand, fish dart, marker pop             |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Lagoon route và checkpoint cards về 1 cột ở mobile, giảm fish/bubble density          |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt kayak bob, fish dart, ripple loop         |
+| Performance        | Giới hạn 20–30 animated elements visible, lazy load scene SVG, optimize bằng SVGO     |
+
+---
+
+
+## 8. `beach-market-stroll` — Beach Market Stroll Portfolio
+
+Portfolio như một buổi dạo chợ ven biển: quầy trái cây nhiệt đới, giỏ cói, bảng giá viết tay, vỏ sò souvenir, mái che sọc và nắng biển. Theme tươi sáng, gần gũi, hợp portfolio lifestyle, business, marketing hoặc creative muốn có cảm giác vui và nhiều màu.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                 |
+| ----------- | --------------------------------------------------------------------- |
+| Cảm xúc     | Vui, rực rỡ, thân thiện, summer lifestyle, handmade                  |
+| Hình khối   | Market stall card, woven basket frame, price tag, fruit sticker      |
+| Không gian  | Chợ biển, quầy mái sọc, trái cây, souvenir, biển xanh phía sau       |
+| Chuyển động | Awning sway, fruit bounce, shell sparkle, basket lift, flag flutter  |
+| Điểm nhấn   | Market stall, woven basket, citrus, coconut, shell souvenir, flags   |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFFDF2",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#FF8FA3",
+        colorTextBase: "#243C3A",
+        colorTextSecondary: "#5D7A77",
+        colorSuccess: "#4ED9B4",
+        colorWarning: "#FFD166",
+        colorError: "#FF6B7A",
+        colorBorder: "#B7EFE8",
+        borderRadius: 14,
+        fontFamily: "'Josefin Sans', 'Nunito', sans-serif",
+    },
+};
+
+// CSS Variables
+// --market-cream: #FFFDF2;
+// --stall-pink: #FF8FA3;
+// --sea-teal: #4ED9B4;
+// --citrus-gold: #FFD166;
+// --coral-red: #FF6B7A;
+// --basket-tan: #D6A25F;
+// --ocean-mint: #B7EFE8;
+// --ink-green: #243C3A;
+```
+
+### Typography
+
+- **Heading:** `Josefin Sans` cho cảm giác travel magazine và biển mùa hè.
+- **Body:** `Nunito` mềm, rõ, hợp bảng giá và card nhiều chi tiết.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                   |
+| --------------- | ----------------------------------------------------------------------- |
+| Framer Motion   | Stall reveal, fruit bounce, basket card hover, tag pop                  |
+| SVGator         | Awning sway, flag flutter, shell sparkle, fruit crate bounce            |
+| Lenis           | Smooth scroll qua các quầy market và postcard sections                  |
+| CSS Keyframes   | Awning idle, sea shimmer, fruit float, price tag wiggle                 |
+| Realtime Colors | Kiểm palette pink/teal/gold/coral đủ rực nhưng không chói               |
+| Blush           | Illustration beach market, vendor girl, summer shopping scene           |
+
+### Layout ideas
+
+- **Hero:** Beach market street với 2–3 quầy hàng, biển xanh phía sau, mái che sọc chuyển động nhẹ.
+- **About:** Profile như vendor card hoặc woven basket label, có fruit sticker và shell clip.
+- **Projects:** Mỗi project là một stall card: fruit stand, souvenir booth, drink bar, flower basket.
+- **Skills:** Market basket collection, mỗi nhóm skill là một item trong giỏ.
+- **Contact:** "Send a seaside order" CTA, price tag stamp và receipt slide.
+
+### Animation rules
+
+| Sự kiện          | Effect                                            | Thư viện          |
+| ---------------- | ------------------------------------------------- | ----------------- |
+| Page load        | Stall awning unfurl + sea background fade-in      | Framer/SVGator    |
+| Awning idle      | Sway nhẹ 5–8s, transform-origin top               | CSS keyframes     |
+| Fruit decoration | Bounce nhỏ khi card enter hoặc hover              | Framer Motion     |
+| Price tag        | Wiggle + stamp pop                                | CSS/Framer        |
+| Shell sparkle    | Tiny star twinkle quanh souvenir                  | CSS keyframes     |
+| Card hover       | Basket lift + fruit sticker pop + shadow warm     | Framer Motion     |
+| Contact success  | Receipt slide + flag flutter + shell sparkle      | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Beach market shell
+│   ├── routes.js                       ← market, stalls, basket, order
+│   └── theme.js
+├── pages/
+│   ├── BeachMarketHeroPage.jsx         ← Hero beach market street
+│   ├── MarketStallProjectsPage.jsx     ← Projects dạng market stalls
+│   ├── BasketSkillsPage.jsx            ← Skills dạng basket collection
+│   └── SeasideOrderContactPage.jsx     ← Contact order/receipt
+├── features/
+│   ├── market-scene/
+│   │   ├── BeachMarketBackground.jsx
+│   │   ├── AwningSwayLayer.jsx
+│   │   ├── FlagFlutterLayer.jsx
+│   │   └── SeaBehindMarket.jsx
+│   ├── market-stalls/
+│   │   ├── StallProjectGrid.jsx
+│   │   ├── MarketStallCard.jsx
+│   │   └── PriceTagPop.jsx
+│   └── basket-skills/
+│       ├── BasketSkillGrid.jsx
+│       └── MarketItemBadge.jsx
+├── components/
+│   ├── layout/                         ← Market nav, stall transition wrapper
+│   └── ui/                             ← MarketButton, StallCard, PriceTag, BasketBadge
+└── assets/beach-market-stroll/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                  | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                      |
+| -------------------------------- | ---------------------------------------------------- | ---------------------- | --------------------------------------------------- |
+| `beach-market-street.svg`        | Quầy hàng, biển phía sau, mái che sọc, sand path     | Hero/background        | Tách awning, stall, sea, flags để animate           |
+| `market-stall-frames.svg`        | Stall frame, table, crate, striped awning            | Project cards          | Frame nhiều màu, awning group riêng                 |
+| `tropical-fruit-set.svg`         | Pineapple, orange, coconut, mango, watermelon        | Decoration/skills      | Fruit sticker style, bounce hover                   |
+| `woven-basket-tags.svg`          | Giỏ cói, luggage tag, price tag, receipt             | About/contact/cards    | Woven pattern opacity thấp                          |
+| `souvenir-shell-icons.svg`       | Shell, starfish, sunglasses, postcard, bracelet      | Nav/badges             | Icon 24x24, currentColor + fill pastel              |
+| `market-flag-bunting.svg`        | Cờ dây, ribbon, mini banner                          | Header/divider         | Flutter bằng rotate nhẹ                             |
+| `receipt-order-set.svg`          | Receipt, stamp, paper bag, order ticket              | Contact CTA            | Receipt slide, stamp pop                            |
+| `sun-sea-sparkles.svg`           | Sparkle, sun dot, sea shimmer, sand fleck            | Particle layer         | Random opacity, giới hạn visible                    |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `beach-market-stroll` trong data/theme config và README của sub-project       |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ beach market hero, market stall projects, basket skills, seaside order contact |
+| Feature folders    | Tách `market-scene`, `market-stalls`, `basket-skills`                                |
+| UI components      | Có `MarketButton`, `StallCard`, `PriceTag`, `BasketBadge` dùng lại trong page         |
+| Asset folder       | Tạo `src/assets/beach-market-stroll/` và đủ 8 SVG files trong bảng asset              |
+| Visual priority    | Hero phải thể hiện rõ beach market: quầy, awning, trái cây, souvenir, biển phía sau  |
+| Motion             | Nhấn mạnh awning sway, fruit bounce, price tag pop, flag flutter, sea shimmer         |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Market stalls về 1 cột ở mobile, giảm flag/sparkle density                           |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt awning sway, sea shimmer và sparkle       |
+| Performance        | Giới hạn 20–30 animated elements visible, lazy load scene SVG, optimize bằng SVGO     |
+
+---
+
+
+## 9. `sailboat-regatta-diary` — Sailboat Regatta Diary Portfolio
+
+Portfolio như nhật ký một ngày regatta ven biển: thuyền buồm trắng, cờ hiệu nhiều màu, gió biển, sóng lấp lánh, la bàn và bản ghi hành trình. Theme sáng, thanh lịch, có năng lượng lãnh đạo/định hướng, phù hợp portfolio muốn kể câu chuyện phát triển qua các chặng.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                               |
+| ----------- | ------------------------------------------------------------------- |
+| Cảm xúc     | Tự do, tự tin, trong trẻo, elegant summer, journey-driven           |
+| Hình khối   | Sail card, signal flag, compass badge, logbook panel, rope divider |
+| Không gian  | Biển sáng, thuyền buồm, cờ hiệu, la bàn, logbook trên boong         |
+| Chuyển động | Sail billow, flag flutter, boat tilt, compass spin, wave sparkle   |
+| Điểm nhấn   | Sailboat fleet, signal flags, rope knot, compass, sea logbook      |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F2FBFF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#3FA9F5",
+        colorTextBase: "#183A54",
+        colorTextSecondary: "#5E7E92",
+        colorSuccess: "#62D9B3",
+        colorWarning: "#FFD36E",
+        colorError: "#FF7A91",
+        colorBorder: "#B9E5F7",
+        borderRadius: 16,
+        fontFamily: "'DM Sans', 'Playfair Display', sans-serif",
+    },
+};
+
+// CSS Variables
+// --regatta-sky: #F2FBFF;
+// --sail-blue: #3FA9F5;
+// --foam-white: #FFFFFF;
+// --flag-coral: #FF7A91;
+// --signal-yellow: #FFD36E;
+// --seafoam-green: #62D9B3;
+// --navy-log: #183A54;
+// --rope-sand: #E8C88D;
+```
+
+### Typography
+
+- **Heading:** `Playfair Display` tạo cảm giác diary thanh lịch và trưởng thành.
+- **Body:** `DM Sans` hiện đại, rõ, cân bằng với hình ảnh regatta nhiều chi tiết.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                               |
+| --------------- | ------------------------------------------------------------------- |
+| Framer Motion   | Sail card reveal, logbook page transition, project card hover       |
+| SVGator         | Sail billow, flag flutter, boat tilt path, compass needle movement  |
+| Lenis           | Smooth scroll như đọc sea logbook từng chặng                        |
+| CSS Keyframes   | Wave sparkle, rope sway, flag idle, compass glint                   |
+| Realtime Colors | Kiểm palette blue/white/coral/yellow đủ sáng và chuyên nghiệp       |
+| Blush           | Illustration sailing girl, regatta scene hoặc dock logbook          |
+
+### Layout ideas
+
+- **Hero:** Fleet thuyền buồm trên biển sáng, signal flags làm navigation accent.
+- **About:** Logbook profile panel trên boong, có compass badge và rope corner.
+- **Projects:** Mỗi project là một sail card/route entry với flag code riêng.
+- **Skills:** Signal flag board, mỗi nhóm skill là một flag color set.
+- **Contact:** "Send a harbor signal" CTA, flag raise và compass sparkle success.
+
+### Animation rules
+
+| Sự kiện          | Effect                                             | Thư viện          |
+| ---------------- | -------------------------------------------------- | ----------------- |
+| Page load        | Sea fade + sailboats slide-in + flags stagger      | Framer/SVGator    |
+| Sail idle        | Sail billow bằng scale/skew nhẹ                    | SVGator/CSS       |
+| Boat motion      | Bob + tilt ±1.5deg, shadow move theo sóng          | CSS keyframes     |
+| Signal flags     | Flutter 2–4s loop, delay lệch                      | CSS/SVGator       |
+| Card hover       | Sail lift + flag code pop + compass glint          | Framer Motion     |
+| Section entrance | Logbook page slide + rope divider draw             | Framer Motion     |
+| Contact success  | Flag raise + compass needle spin + sparkle         | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Sailboat regatta shell
+│   ├── routes.js                       ← regatta, routes, flags, signal
+│   └── theme.js
+├── pages/
+│   ├── RegattaHeroPage.jsx             ← Hero sailboat fleet + flags
+│   ├── SailRouteProjectsPage.jsx       ← Projects dạng route/logbook entries
+│   ├── SignalFlagsSkillsPage.jsx       ← Skills dạng flag board
+│   └── HarborSignalContactPage.jsx     ← Contact flag/signal CTA
+├── features/
+│   ├── regatta-scene/
+│   │   ├── SailboatFleetLayer.jsx
+│   │   ├── SignalFlagLine.jsx
+│   │   ├── WaveSparkleLayer.jsx
+│   │   └── CompassGlint.jsx
+│   ├── sail-projects/
+│   │   ├── SailProjectGrid.jsx
+│   │   ├── SailRouteCard.jsx
+│   │   └── FlagCodeBadge.jsx
+│   └── signal-skills/
+│       ├── SignalFlagBoard.jsx
+│       └── FlagSkillBadge.jsx
+├── components/
+│   ├── layout/                         ← Regatta nav, logbook transition wrapper
+│   └── ui/                             ← SailButton, LogbookCard, FlagTag, CompassBadge
+└── assets/sailboat-regatta-diary/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                      |
+| ------------------------------ | ---------------------------------------------------- | ---------------------- | --------------------------------------------------- |
+| `sailboat-fleet-scene.svg`     | Biển sáng, nhiều thuyền buồm, horizon, foam          | Hero/background        | Tách sail, hull, shadow, wave layer                 |
+| `signal-flag-line.svg`         | Dây cờ hiệu nhiều màu, flags, rope knots             | Nav/divider            | Flag group riêng để flutter                         |
+| `sea-logbook-frame.svg`        | Logbook, ruled paper, route line, date stamp         | About/projects         | Paper texture nhẹ, route line draw                  |
+| `compass-rope-icons.svg`       | Compass, rope, anchor, knot, helm, buoy              | Skills/nav             | Icon 24x24, currentColor + fill pastel              |
+| `sail-card-frames.svg`         | Card hình sail/window, rope corner, flag strip       | Project cards          | Multi-color trim, shadow mềm                        |
+| `wave-sparkle-pattern.svg`     | Wave lines, sparkle, foam dot                        | Background/particle    | Opacity/translate loop                              |
+| `harbor-signal-set.svg`        | Flag pole, raised flag, signal light, postcard       | Contact CTA            | Flag raise transform, light glow                    |
+| `regatta-stamp-labels.svg`     | Stamp, route label, number badge, ribbon             | Badges/cards           | SVG frame, text HTML overlay                        |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `sailboat-regatta-diary` trong data/theme config và README của sub-project    |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ regatta hero, sail route projects, signal flags skills, harbor signal contact  |
+| Feature folders    | Tách `regatta-scene`, `sail-projects`, `signal-skills`                               |
+| UI components      | Có `SailButton`, `LogbookCard`, `FlagTag`, `CompassBadge` dùng lại trong page         |
+| Asset folder       | Tạo `src/assets/sailboat-regatta-diary/` và đủ 8 SVG files trong bảng asset           |
+| Visual priority    | Hero phải thể hiện rõ sailboat fleet, signal flags, sea logbook và wave sparkle      |
+| Motion             | Nhấn mạnh sail billow, boat tilt, flag flutter, wave sparkle, compass glint           |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Fleet/cards/flag board về 1 cột ở mobile, giảm wave sparkle và flag density           |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt sail billow, flag flutter, boat tilt      |
+| Performance        | Giới hạn 20–30 animated elements visible, lazy load scene SVG, optimize bằng SVGO     |
+
+---
+
+
+## 10. `lighthouse-photo-trip` — Lighthouse Photo Trip Portfolio
+
+Portfolio như một chuyến đi chụp ảnh ven biển: hải đăng trắng đỏ, máy ảnh film, postcard, film strip, mây sáng và sóng dịu. Theme thiên photography/media/design, có cảm giác ghi lại khoảnh khắc, sáng tạo và chỉn chu.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                 |
+| ----------- | --------------------------------------------------------------------- |
+| Cảm xúc     | Sáng tạo, ký ức mùa hè, cinematic nhẹ, trong trẻo, coastal photo trip |
+| Hình khối   | Film card, viewfinder frame, postcard panel, lighthouse badge        |
+| Không gian  | Hải đăng ven biển, cliff, camera foreground, film strip, postcard    |
+| Chuyển động | Lighthouse beam, shutter blink, film slide, cloud drift, wave glow   |
+| Điểm nhấn   | Lighthouse, camera, film strip, photo frame, postcard stamps         |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F1FAFF",
+        colorBgContainer: "#FFFFFF",
+        colorPrimary: "#5BBBEF",
+        colorTextBase: "#1D3445",
+        colorTextSecondary: "#60798A",
+        colorSuccess: "#6FE0BD",
+        colorWarning: "#FFD276",
+        colorError: "#FF7C91",
+        colorBorder: "#C3E8F8",
+        borderRadius: 12,
+        fontFamily: "'DM Sans', 'Fraunces', sans-serif",
+    },
+};
+
+// CSS Variables
+// --photo-sky: #F1FAFF;
+// --lighthouse-blue: #5BBBEF;
+// --film-ink: #1D3445;
+// --beam-gold: #FFD276;
+// --postcard-coral: #FF7C91;
+// --seafoam: #6FE0BD;
+// --cloud-white: #FFFFFF;
+// --mist-border: #C3E8F8;
+```
+
+### Typography
+
+- **Heading:** `Fraunces` có chất editorial/photo essay.
+- **Body:** `DM Sans` hiện đại, đọc tốt trong layout gallery và caption.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Film slide gallery, viewfinder reveal, card hover, modal transition    |
+| SVGator         | Lighthouse beam sweep, shutter blink, wave glow, cloud drift           |
+| Lenis           | Smooth scroll qua photo trip journal và gallery cards                  |
+| CSS Keyframes   | Film strip drift, cloud float, beam pulse, sparkle on water            |
+| Realtime Colors | Kiểm palette sky/blue/coral/gold cho ảnh giả lập và caption            |
+| Blush           | Illustration photographer girl, lighthouse trip, coastal camera scene   |
+
+### Layout ideas
+
+- **Hero:** Hải đăng trên cliff, beam quét nhẹ qua sky, camera viewfinder frame overlay.
+- **About:** Profile như camera info card, có film border và postcard stamp.
+- **Projects:** Project cards như photo prints/film frames; hover thì shutter blink và caption reveal.
+- **Skills:** Camera bag toolkit: lens, film roll, tripod, map, notebook, editing spark.
+- **Contact:** "Send photo postcard" CTA, postcard slide vào envelope với stamp pop.
+
+### Animation rules
+
+| Sự kiện          | Effect                                             | Thư viện          |
+| ---------------- | -------------------------------------------------- | ----------------- |
+| Page load        | Lighthouse fade + beam sweep + viewfinder reveal   | Framer/SVGator    |
+| Lighthouse beam  | Sweep 8–12s loop, opacity nhẹ                      | SVGator/CSS       |
+| Shutter          | Blink 0.2s + small flash on card hover             | Framer/CSS        |
+| Film strip       | Slide horizontal chậm, parallax theo scroll        | CSS/Framer        |
+| Wave glow        | Sparkle on water, opacity lệch nhịp                | CSS keyframes     |
+| Card hover       | Photo lift + caption reveal + stamp pop            | Framer Motion     |
+| Contact success  | Postcard slide + stamp seal + tiny flash           | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                         ← Lighthouse photo trip shell
+│   ├── routes.js                       ← lighthouse, gallery, camera-bag, postcard
+│   └── theme.js
+├── pages/
+│   ├── LighthouseHeroPage.jsx          ← Hero lighthouse + camera viewfinder
+│   ├── PhotoGalleryProjectsPage.jsx    ← Projects dạng photo/film cards
+│   ├── CameraBagSkillsPage.jsx         ← Skills dạng camera bag toolkit
+│   └── PhotoPostcardContactPage.jsx    ← Contact postcard/envelope
+├── features/
+│   ├── lighthouse-scene/
+│   │   ├── LighthouseBackground.jsx
+│   │   ├── BeamSweepLayer.jsx
+│   │   ├── ViewfinderOverlay.jsx
+│   │   └── CoastalCloudDrift.jsx
+│   ├── photo-gallery/
+│   │   ├── FilmProjectGrid.jsx
+│   │   ├── PhotoPrintCard.jsx
+│   │   └── ShutterHoverReveal.jsx
+│   └── camera-toolkit/
+│       ├── CameraBagGrid.jsx
+│       └── LensSkillBadge.jsx
+├── components/
+│   ├── layout/                         ← Photo trip nav, film transition wrapper
+│   └── ui/                             ← ShutterButton, FilmCard, PostcardTag, LighthouseBadge
+└── assets/lighthouse-photo-trip/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo                  | Nội dung cần vẽ                                      | Dùng cho               | Gợi ý kỹ thuật                                      |
+| -------------------------------- | ---------------------------------------------------- | ---------------------- | --------------------------------------------------- |
+| `lighthouse-coast-scene.svg`     | Hải đăng, cliff, biển, mây, beam cone                | Hero/background        | Beam polygon/radialGradient tách riêng              |
+| `camera-viewfinder-frame.svg`    | Camera, viewfinder corners, focus dot, shutter icon  | Hero/UI overlay        | Text HTML overlay, frame SVG responsive             |
+| `film-strip-frames.svg`          | Film strip, photo print, caption label               | Project cards/gallery  | Frame reusable, hover reveal caption                |
+| `postcard-stamp-photo.svg`       | Postcard, stamp, envelope, tape, photo corner        | Contact/about          | Postcard slide group riêng                          |
+| `camera-bag-icons.svg`           | Lens, tripod, film roll, SD card, map, notebook      | Skills/nav             | Icon 24x24, currentColor + pastel fill              |
+| `coastal-cloud-wave.svg`         | Mây, wave line, sea sparkle, gull                    | Background/particle    | Cloud drift, sparkle twinkle                        |
+| `lighthouse-badges.svg`          | Lighthouse badge, compass rose, location pin         | Cards/badges           | Badge nhiều màu, currentColor support               |
+| `shutter-flash-particles.svg`    | Flash burst, sparkle, focus ring, tiny dot           | Motion layer           | Scale/opacity, không quá nhiều visible              |
+
+### Yêu cầu triển khai bắt buộc
+
+| Nhóm yêu cầu       | Quy định triển khai                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Theme ID           | Ghi rõ `lighthouse-photo-trip` trong data/theme config và README của sub-project     |
+| App shell          | Tách `src/app/App.jsx`, `src/app/routes.js`, `src/app/theme.js` theo component notes |
+| Pages              | Có đủ lighthouse hero, photo gallery projects, camera bag skills, photo postcard contact |
+| Feature folders    | Tách `lighthouse-scene`, `photo-gallery`, `camera-toolkit`                           |
+| UI components      | Có `ShutterButton`, `FilmCard`, `PostcardTag`, `LighthouseBadge` dùng lại trong page  |
+| Asset folder       | Tạo `src/assets/lighthouse-photo-trip/` và đủ 8 SVG files trong bảng asset            |
+| Visual priority    | Hero phải thể hiện rõ lighthouse, beam, camera viewfinder, film strip và biển         |
+| Motion             | Nhấn mạnh lighthouse beam, shutter blink, film slide, cloud drift, wave glow          |
+| Accessibility      | Text chính là HTML, SVG decoration dùng `alt=""` hoặc `aria-hidden`, contrast đủ      |
+| Responsive         | Gallery/card layout về 1 cột ở mobile, giảm film strip và flash particle             |
+| Reduced motion     | Có fallback `prefers-reduced-motion` để tắt beam sweep, film slide và cloud drift     |
+| Performance        | Giới hạn 20–30 animated elements visible, lazy load scene SVG, optimize bằng SVGO     |
+
+---
+
+
 ## Quy chuẩn triển khai cho Catalog 4
 
 ### Motion architecture
@@ -785,8 +1535,10 @@ src/
 | ------------------------- | -------------------------------------------------------------------- |
 | Tông màu chủ đạo          | Xanh mát (ocean/teal/sky) + hồng pastel (coral/blush/rose)          |
 | Cảm giác chung            | Mùa hè, biển, du lịch, trải nghiệm, tự do, nữ tính                  |
+| Background-first scene    | Hero/background phải thể hiện rõ bối cảnh biển hoặc hành trình du lịch |
 | SVG-first approach        | Ưu tiên SVG 2D cho mọi decoration, icon, scene, background          |
 | Animation philosophy      | Mềm, organic, gợi cảm giác nước/gió/tự nhiên, không quá nhanh      |
+| Travel object driven      | Mỗi theme nên có vật thể chính: tàu, kayak, quầy chợ, thuyền buồm, camera |
 | Accessibility             | Text luôn là HTML, contrast đủ trên nền pastel, reduced motion ready |
 | Mobile-first decoration   | Giảm decoration trên mobile, giữ content rõ ràng                     |
 | Reusable SVG symbols      | Dùng `<symbol>` và `<use>` để tái sử dụng elements trong SVG        |
@@ -799,6 +1551,8 @@ src/
 - [ ] Tạo `src/assets/<theme-id>/` chứa tất cả SVG files theo bảng asset.
 - [ ] Tự vẽ hoặc generate tất cả SVG assets theo spec trong bảng "Tự tạo Assets 2D".
 - [ ] Tách scene, animation và content features thành folder riêng.
+- [ ] Background/hero scene phải import và render asset chính, không chỉ dùng gradient nền.
+- [ ] Cards dùng decoration theo bối cảnh: ticket, marker, basket, flag, film frame, shell hoặc travel stamp.
 - [ ] Dùng HTML/CSS cho text chính, form, button và navigation.
 - [ ] Optimize SVG bằng SVGO trước khi commit.
 - [ ] Kiểm tra desktop/mobile ở 375px, 768px, 1280px.
@@ -807,4 +1561,4 @@ src/
 
 ---
 
-_Cập nhật lần cuối: 2026-05-18 — Catalog 4: Summer Breeze & Travel themes với tông xanh mát, hồng pastel, nhiều SVG 2D assets và animation._
+_Cập nhật lần cuối: 2026-05-25 — Catalog 4: Summer Breeze & Travel themes với tông xanh mát, hồng pastel, nhiều SVG 2D assets, background-first travel scenes và animation biển/du lịch phong phú._
