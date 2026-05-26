@@ -38,6 +38,11 @@ Nguyên tắc phân vai: Framer Motion điều khiển UI trong React; Rive dùn
 | `kitty-cafe-menu`       | Kitty Café Menu Portfolio        | Mèo, café, bánh, xanh lam nhạt, cozy cute | Portfolio nữ yêu mèo, food, lifestyle |
 | `underwater-world`      | Underwater World Portfolio       | Đại dương, cá, san hô, xanh dương nhạt, dreamy aqua | Portfolio art, creative, ocean lover |
 | `storybook-royal-forest` | Storybook Royal Forest Portfolio | Đêm trăng, sao băng, cỗ xe ngựa, cổ tích | Portfolio nữ tính, art, luxury creative |
+| `ballet-swan-lake`      | Ballet Swan Lake Portfolio       | Thiên nga, hồ trăng, ruy băng satin hồng, hoa hồng phấn nhạt, glassmorphic lấp lánh | Portfolio nữ tính, dancer, nghệ thuật, nhạc sĩ |
+| `unicorn-parfait-island`| Unicorn Parfait Island Portfolio | Kỳ lân, kem parfait glassmorphic, marshmallow, mây kẹo bông hồng, ngọt ngào | Portfolio sáng tạo, designer, illustrator |
+| `carousel-dream-palace` | Carousel Dream Palace Portfolio  | Vòng quay ngựa gỗ đêm, sao lấp lánh, ruy băng voan hồng, sương pha lê | Portfolio sang trọng, creative, fashion blogger |
+| `strawberry-glasshouse` | Strawberry Glasshouse Portfolio | Nhà kính dâu tây thủy tinh mờ, giọt sương mai, ong béo, quả dâu hồng mọng | Portfolio thực vật, lifestyle, food blogger |
+| `angel-perfume-atelier` | Angel Perfume Atelier Portfolio  | Chai nước hoa thủy tinh phản quang, cánh thiên thần, bong bóng xà cừ | Portfolio sang xịn, beauty, designer, fashion |
 
 ---
 
@@ -1119,6 +1124,672 @@ src/
 
 ---
 
+
+## 8. `ballet-swan-lake` — Ballet Swan Lake Portfolio
+
+Giao diện mềm mại, thanh tao như hồ thiên nga dưới trăng. Kết hợp chuyển động của ruy băng satin bay nhẹ, mặt nước phản chiếu lung linh dạng kính mờ (glassmorphism) lấp lánh xà cừ, lông vũ trắng rơi lơ lửng, và những bông hồng phấn nhạt nở trên mặt hồ.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Nhẹ nhàng, quý phái, thanh tao, lãng mạn, yên bình                     |
+| Hình khối   | Oval-rounded card, satin ribbon border, swan outline frame, water drop badge |
+| Không gian  | Nền trắng kem sữa, hồng phấn ballet nhạt, mặt nước hồ gợn sóng lấp lánh phía sau các ô kính glassmorphism mờ |
+| Chuyển động | Swan swim glide, feather fall, ribbon flutter, ripple wave expand, star twinkle |
+| Điểm nhấn   | Swan mascot SVG đội vương miện nhỏ, satin ribbon bay quanh, ballet shoes, floating rose petals |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FFF9FA",
+        colorBgContainer: "rgba(255, 255, 255, 0.72)",
+        colorPrimary: "#FFAEC9",
+        colorTextBase: "#4A3338",
+        colorTextSecondary: "#9E7D84",
+        colorSuccess: "#BCEFD0",
+        colorWarning: "#FFF0B3",
+        colorInfo: "#DCE6FF",
+        colorBorder: "rgba(255, 174, 201, 0.28)",
+        borderRadius: 24,
+        fontFamily: "'Playfair Display', 'Nunito', serif",
+    },
+};
+
+// CSS Variables
+// --ballet-pink: #FFAEC9;
+// --swan-white: #FFFDFE;
+// --lake-shimmer: #DCE6FF;
+// --gold-tiara: #FFF0B3;
+// --rose-petal: #FFD2DC;
+// --glass-bg: rgba(255, 255, 255, 0.42);
+// --glass-border: rgba(255, 255, 255, 0.6);
+```
+
+### Typography
+
+- **Heading:** `Playfair Display` kiêu sa, sang trọng.
+- **Body:** `Nunito` mềm mại, bay bổng.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Nunito:wght@400;600;700;800&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                 |
+| --------------- | --------------------------------------------------------------------- |
+| Framer Motion   | Feather falling drift, ribbon path draw, glass card tilt, page glide transition |
+| Rive            | Swan mascot swimming with wind, tiara sparkle glow on mouse over, ballet dancer spinning |
+| SVGator         | Water ripple wave expanding, ribbon winding loop, feather landing splash |
+| Lenis           | Smooth vertical scroll with parallax lake depth layers               |
+| CSS Keyframes   | Lake sparkle twinkle, rose petal float, swan gentle bobbing           |
+| Realtime Colors | Tạo palette ballet-pink/lake-shimmer/gold-tiara thanh tao và bay bổng |
+| Blush           | Illustration ballet dancer / swan princess                            |
+
+### Layout ideas
+
+- **Hero:** Hồ thiên nga lung linh trăng rằm, thiên nga nhỏ lướt nhẹ từ cánh màn nhung/ruy băng rủ xuống, tiêu đề dập nổi kính mờ.
+- **About:** Thiệp mời ballet bằng giấy lụa mờ (glassmorphism), thắt ruy băng nơ hồng, có hình vẽ thiên nga và chữ thư pháp thanh nhã.
+- **Projects:** Mỗi project là một cỗ kịch nghệ thu nhỏ (theatre stage frame), hover vào thì ruy băng cuộn tròn bay lên tiết lộ chi tiết dự án.
+- **Skills:** Các phím đàn piano/cánh thiên nga sắp xếp nhịp nhàng dạng glassmorphic chips.
+- **Contact:** "Gửi cánh thư lụa" (Send a satin note), ruy băng thắt nút nơ đóng gói và thiên nga cất cánh mang thư đi.
+
+### Animation rules
+
+| Sự kiện          | Effect                                         | Thư viện          |
+| ---------------- | ---------------------------------------------- | ----------------- |
+| Page load        | Feather flutter in + curtain slide open        | Framer Motion     |
+| Feather fall     | Fall diagonal slow, wobble sway, fade out      | CSS keyframes     |
+| Ribbon flutter   | Smooth wave distortion loop                    | SVGator / CSS     |
+| Swan glide       | TranslateX drift slowly, float up/down         | CSS keyframes     |
+| Lake shimmer     | Refraction light glow, opacity pulse 6s        | CSS keyframes     |
+| Card hover       | Glass shine swipe + tilt + ribbon loosen       | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                       ← Ballet swan lake shell
+│   ├── routes.js                     ← lake-stage, invitations, playhouse, backstage, satin-post
+│   └── theme.js
+├── pages/
+│   ├── SwanLakeHeroPage.jsx          ← Hero hồ thiên nga lung linh
+│   ├── PlayhouseProjectsPage.jsx     ← Projects dạng sân khấu cổ điển
+│   ├── BackstageSkillsPage.jsx       ← Skills dạng phím đàn/cánh thiên nga
+│   └── SatinMailboxContactPage.jsx   ← Contact gửi thư thắt ruy băng
+├── features/
+│   ├── lake-scene/
+│   │   ├── LakeWaterShimmer.jsx
+│   │   ├── CurtainSlideReveal.jsx
+│   │   ├── FeatherFallLayer.jsx
+│   │   └── FloatingRosePetals.jsx
+│   ├── swan-mascot/
+│   │   ├── SwanRiveController.jsx
+│   │   ├── SwanSwimAnimation.jsx
+│   │   └── TiaraSparkleGlow.jsx
+│   ├── theater-stage/
+│   │   ├── StageFrameGrid.jsx
+│   │   ├── StageProjectCard.jsx
+│   │   └── RibbonUnrollHover.jsx
+│   └── satin-mailbox/
+│       ├── RibbonBowTying.jsx
+│       ├── MailboxCard.jsx
+│       └── SwanTakeoffAnimation.jsx
+├── components/
+│   ├── layout/                       ← Swan lake nav, curtain page transition
+│   └── ui/                           ← RibbonButton, GlassCard, SwanBadge, TiaraTag
+└── assets/ballet-swan-lake/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                       |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
+| `swan-mascot-set.svg`        | Thiên nga nhỏ đội vương miện, bơi, cúi đầu, vỗ cánh   | Mascot/decoration      | Tách cánh và đầu để animate, fill soft white gradient|
+| `satin-ribbon-curves.svg`    | Ruy băng lụa cuốn tròn, thắt nơ, bay nhẹ              | Border/card deco       | Path lượn sóng mềm, gradient hồng xà cừ              |
+| `feather-particles.svg`      | Lông vũ trắng muốt, mềm mại nhiều góc độ              | Falling particles      | Path nét mảnh, fill semi-transparent white, blur     |
+| `theatre-stage-frame.svg`    | Khung sân khấu cổ điển, rèm nhung xếp ly              | Project card frame     | Rect rounded, drape path, drop-shadow sâu            |
+| `rose-petal-set.svg`         | Cánh hoa hồng phấn rơi, trôi trên nước                | Particle layer         | Ellipse biến dạng nhẹ, fill soft rose gradient       |
+| `lake-water-ripples.svg`     | Gợn sóng tròn đồng tâm phát sáng                      | Background/hover effect| Circle paths, stroke-width giảm dần, animate scale    |
+| `ballet-icons.svg`           | Giày múa, tiara, đàn cầm, nơ lụa, khóa nhạc, hoa hồng | Nav/badge icons        | Icon 24x24, nét mảnh 1.5px, fill pink/gold           |
+
+---
+
+## 9. `unicorn-parfait-island` — Unicorn Parfait Island Portfolio
+
+Một hòn đảo bay kỳ ảo được làm bằng thạch kem parfait ngọt ngào: thạch thủy tinh nhiều tầng lấp lánh ánh kim, mây kẹo bông màu hồng bay lơ lửng, bánh macaron nhiều màu, kỳ lân nhỏ thích kẹo dẻo. Thiết kế card dạng ly kem thủy tinh glassmorphic mờ sương chứa thạch trái cây màu sắc, vô cùng mơ mộng và đáng yêu.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Ngọt ngào, đáng yêu, trẻ trung, rực rỡ, giàu trí tưởng tượng           |
+| Hình khối   | Parfait glass outline, star badge, cloud pill button, marshmallow grid |
+| Không gian  | Nền trắng kem sữa pha tím oải hương nhạt, mây cotton candy bồng bềnh, dải thạch thủy tinh phát sáng xà cừ |
+| Chuyển động | Unicorn bounce hop, parfait layer shimmer, star fall splash, marshmallow float, rainbow draw |
+| Điểm nhấn   | Unicorn mascot Rive, parfait glass container, marshmallow cloud, pastel stars, bubble pop |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FCF5FF",
+        colorBgContainer: "rgba(255, 255, 255, 0.76)",
+        colorPrimary: "#FFA3DF",
+        colorTextBase: "#441D35",
+        colorTextSecondary: "#8A5477",
+        colorSuccess: "#8EECD4",
+        colorWarning: "#FFE893",
+        colorInfo: "#A3D8FF",
+        colorBorder: "rgba(255, 163, 223, 0.3)",
+        borderRadius: 20,
+        fontFamily: "'Fredoka', 'Quicksand', sans-serif",
+    },
+};
+
+// CSS Variables
+// --unicorn-pink: #FFA3DF;
+// --marshmallow-yellow: #FFE893;
+// --cotton-candy-blue: #A3D8FF;
+// --parfait-mint: #8EECD4;
+// --jelly-purple: #D5B3FF;
+// --cream-white: #FCF5FF;
+```
+
+### Typography
+
+- **Heading:** `Fredoka` siêu đáng yêu, bầu bĩnh.
+- **Body:** `Quicksand` bo tròn mềm mịn, cực kỳ cute.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Parfait ingredients drop bounce, jelly layer scale, bubble scatter, cotton candy float |
+| Rive            | Unicorn eating jelly candy, horn shining on hover, sleeping on cotton candy cloud |
+| SVGator         | Rainbow bridge path draw, star sparkle scale, parfait glass fog-up / condensate drops |
+| Lenis           | Smooth scroll down through dessert layers                              |
+| CSS Keyframes   | Marshmallow sway, jelly shine reflection, sparkle twinkling            |
+| Realtime Colors | Palette marshmallow-pink/parfait-mint/cotton-candy-blue ngọt ngào và năng động |
+| Blush           | Illustration cute unicorn girl / dreamy dessert island                 |
+
+### Layout ideas
+
+- **Hero:** Hòn đảo bay làm bằng ly kem khổng lồ, mây kẹo bông trôi lững lờ, kỳ lân chào đón bằng sừng phát sáng cầu vồng.
+- **About:** Ly parfait thủy tinh mờ sương, mỗi lớp thạch hiển thị thông tin học vấn/sở thích của Phương với icon thạch trái cây siêu dễ thương.
+- **Projects:** Mỗi dự án là một hộp kẹo dẻo/macaron glassmorphic nhiều sắc màu, hover thì hộp mở nắp và kẹo nảy tưng bừng.
+- **Skills:** Chiếc máy gắp kẹo bông (candy grabber), kỹ năng nằm trong quả bóng gắp thủy tinh mờ lung linh.
+- **Contact:** "Gửi viên kẹo ước nguyện" (Send a sweet wish), viên kẹo dẻo rơi vào ly thạch parfait phát nổ đom đóm rực rỡ.
+
+### Animation rules
+
+| Sự kiện          | Effect                                         | Thư viện          |
+| ---------------- | ---------------------------------------------- | ----------------- |
+| Page load        | Parfait toppings drop bounce in                | Framer Motion     |
+| Rainbow bridge   | Draw stroke-dashoffset + shine sweep 1.8s      | SVGator / CSS     |
+| Unicorn mascot   | Bounce, wag tail, head tilt loop               | Rive / CSS        |
+| Jelly glow       | Color shimmer (hue-rotate ±15deg)              | CSS keyframes     |
+| Glass fog        | Fade in soft white fog + tiny dew drops sliding| CSS transition    |
+| Card hover       | Bubble pop + jelly wobble + gold star spin     | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                       ← Unicorn parfait island shell
+│   ├── routes.js                     ← parfait-diner, jelly-layers, candy-grabber, wish-fountain
+│   └── theme.js
+├── pages/
+│   ├── DessertIslandHeroPage.jsx     ← Hero đảo parfait bồng bềnh
+│   ├── JellyProjectsPage.jsx         ← Projects dạng lớp thạch ngọt ngào
+│   ├── CandyGrabberSkillsPage.jsx    ← Skills dạng máy gắp kẹo bông
+│   └── WishFountainContactPage.jsx   ← Contact giếng ước kẹo dẻo
+├── features/
+│   ├── parfait-scene/
+│   │   ├── ParfaitGlassIsland.jsx
+│   │   ├── CottonCandyClouds.jsx
+│   │   ├── RainbowBridge.jsx
+│   │   └── JellyShimmerBg.jsx
+│   ├── unicorn-mascot/
+│   │   ├── UnicornRiveController.jsx
+│   │   ├── SweetEatingAnimation.jsx
+│   │   └── HornGlowEffect.jsx
+│   ├── jelly-toppings/
+│   │   ├── ToppingsGrid.jsx
+│   │   ├── JellyProjectCard.jsx
+│   │   └── CondensationEffect.jsx
+│   └── candy-grabber/
+│       ├── GrabberMachine.jsx
+│       ├── SkillGlassSphere.jsx
+│       └── PrizeClawAction.jsx
+├── components/
+│   ├── layout/                       ← Parfait nav, rainbow transition wrapper
+│   └── ui/                           ← JellyButton, ParfaitCard, StarBadge, MarshmallowTag
+└── assets/unicorn-parfait-island/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                       |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
+| `unicorn-character-set.svg`  | Kỳ lân tròn trịa, mắt to lấp lánh, sừng cầu vồng      | Mascot/hero            | Tách đuôi/sừng để animate, fill bright pastel pink   |
+| `parfait-glass-island.svg`   | Ly thủy tinh parfait lớn chứa thạch nhiều màu, cherry | Hero/background        | Multi-layered path, linear gradient với opacity thấp |
+| `cotton-candy-clouds.svg`    | Mây kẹo bông tròn trịa xốp mềm, có màu hồng xanh tím   | Background clouds      | Đè nhiều đường tròn mềm, stroke-width dày, blur      |
+| `marshmallow-shapes.svg`     | Kẹo xoắn, kẹo dẻo hình thỏ/tim/sao dễ thương          | Decoration/bullets     | Path lượn sóng mềm, màu trắng/vàng/hồng pastel       |
+| `bubble-pop-particles.svg`   | Bong bóng nước xà cừ phát nổ thành các tia sao nhỏ    | Hover particle layer   | Cicle + tiny lines, animate scale + opacity          |
+| `star-candy-sprinkles.svg`   | Hạt đường sao nhỏ lấp lánh nhiều màu                  | Particle rain          | Path star 4 cánh, animate fall + spin                |
+| `parfait-icons.svg`          | Kem, cherry, kẹo dẻo, cốc parfait, star wand, cup     | Nav/badge icons        | Icon 24x24, nét dày 2px, fill bright pastel          |
+
+---
+
+## 10. `carousel-dream-palace` — Carousel Dream Palace Portfolio
+
+Khung cảnh cỗ xe vòng quay ngựa gỗ lung linh dưới trăng lãng mạn. Thiết kế sử dụng các tấm kính glassmorphism lớn được mài vát cạnh lấp lánh ánh trăng, thắt dải ruy băng voan hồng xếp lớp mềm mại, có sao đêm lấp lánh và màn sương pha lê mờ ảo phía sau.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Mơ mộng, hoàng gia cổ tích, ấm áp, lộng lẫy, kỳ ảo                     |
+| Hình khối   | Octagonal glass card vát cạnh, starburst frame, ribbon bow divider, golden crown badge |
+| Không gian  | Nền xanh tím đêm huyền bí lãng mạn, mặt trăng vàng kem khổng lồ, sương pha lê trôi nhẹ |
+| Chuyển động | Carousel spin, horse swing, shooting star, lantern glow pulse, ribbon curtain sway |
+| Điểm nhấn   | Carousel horse mascot Rive, giant moon, crystal carriage, gold bells, voan ribbon drape |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#140A24",
+        colorBgContainer: "rgba(34, 18, 54, 0.72)",
+        colorPrimary: "#FF9EB5",
+        colorTextBase: "#FFF2E6",
+        colorTextSecondary: "#D8C5B3",
+        colorSuccess: "#84E296",
+        colorWarning: "#FFDE7D",
+        colorInfo: "#9BC1FF",
+        colorBorder: "rgba(255, 158, 181, 0.28)",
+        borderRadius: 26,
+        fontFamily: "'Cinzel', 'Quicksand', serif",
+    },
+};
+
+// CSS Variables
+// --carousel-pink: #FF9EB5;
+// --night-violet: #140A24;
+// --gold-bell: #FFDE7D;
+// --sky-mist: #9BC1FF;
+// --moon-crème: #FFF2E6;
+// --voan-rose: #FFAEC9;
+```
+
+### Typography
+
+- **Heading:** `Cinzel` mang nét cổ điển, sang trọng và kiêu sa của hoàng gia.
+- **Body:** `Quicksand` mềm mại, bo tròn dễ thương để giữ độ cute.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Quicksand:wght@300..700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Carousel horse entrance swing, gold stars stagger rise, parchment fold card |
+| Rive            | Carousel horse mascot gallop loop, lantern click to glow, gold bell chime sequence |
+| SVGator         | Carousel roof spinning effect, shooting star drop diagonal, ribbon curtain part |
+| Lenis           | Smooth scroll như lật từng chương truyện trong đêm                     |
+| CSS Keyframes   | Moon glow pulse, star twinkle shimmer, gold bell gentle sway           |
+| Realtime Colors | Palette night-violet/carousel-pink/gold-bell sang trọng mà lộng lẫy mơ mộng |
+| Blush           | Illustration vintage carousel / carriage palace                        |
+
+### Layout ideas
+
+- **Hero:** Một vòng quay ngựa gỗ khổng lồ dưới ánh trăng vàng, các chú ngựa gỗ dạng thủy tinh mờ phát sáng nhẹ khi hover.
+- **About:** Khung cỗ xe ngựa pha lê mờ (glassmorphism frame), chứa bức chân dung vintage của Phương thắt nơ lụa voan.
+- **Projects:** Mỗi dự án là một chiếc vé vào cửa vòng quay (carousel ticket card) làm bằng kính mờ viền vàng rực rỡ, hover thì vé xoay góc lấp lánh ánh kim.
+- **Skills:** Các cột phát sáng giữ ngựa carousel, mỗi skill là một chiếc chuông vàng đung đưa trên cột.
+- **Contact:** "Gửi cánh thư trăng" (Send a moonlight mail), thả vào hộp thư cỗ xe ngựa, cỗ xe chạy nhanh dần bay lên trời sao.
+
+### Animation rules
+
+| Sự kiện          | Effect                                         | Thư viện          |
+| ---------------- | ---------------------------------------------- | ----------------- |
+| Page load        | Carriage slide-in + stars twinkle stagger      | Framer Motion     |
+| Shooting star    | Diagonal stroke path sweep + fade-out 8s       | CSS keyframes     |
+| Carousel spin    | Slow background rotation 3D effect             | SVGator           |
+| Bell chime       | Rotate swing ±12deg on hover                   | CSS keyframes     |
+| Crystal glass    | Sparkle glint sweep reflection                 | CSS keyframes     |
+| Ticket hover     | Card flip + edge shine + gold dust burst       | Framer Motion     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                       ← Carousel dream palace shell
+│   ├── routes.js                     ← royal-gate, crystal-carriage, gold-columns, starlight-post
+│   └── theme.js
+├── pages/
+│   ├── CarouselHeroPage.jsx          ← Hero vòng quay khổng lồ dưới trăng
+│   ├── CrystalCarriageProjectsPage.jsx ← Projects dạng cỗ xe kính mờ
+│   ├── GoldColumnsSkillsPage.jsx     ← Skills dạng cột giữ ngựa carousel
+│   └── StarlightMailContactPage.jsx  ← Contact gửi thư trăng bay cỗ xe
+├── features/
+│   ├── carousel-scene/
+│   │   ├── SpinningCarousel.jsx
+│   │   ├── GiantMoonlitSky.jsx
+│   │   ├── CrystalCarriageFrame.jsx
+│   │   └── VoanRibbonCurtains.jsx
+│   ├── horse-mascot/
+│   │   ├── HorseRiveController.jsx
+│   │   ├── HorseSwingAction.jsx
+│   │   └── BellChimeSound.jsx
+│   ├── royal-tickets/
+│   │   ├── TicketGrid.jsx
+│   │   ├── GlassTicketCard.jsx
+│   │   └── GoldGlintHover.jsx
+│   └── gold-columns/
+│       ├── CarouselPillars.jsx
+│       ├── GoldenBellSkill.jsx
+│       └── SkillLightBeam.jsx
+├── components/
+│   ├── layout/                       ← Palace nav, carriage page transition
+│   └── ui/                           ← CrownButton, TicketCard, BellBadge, VoanTag
+└── assets/carousel-dream-palace/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                       |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
+| `carousel-horse-set.svg`     | Ngựa vòng quay trạm trổ tinh xảo, đính ngọc, đuôi nơ  | Mascot/hero scene      | Tách thân ngựa và cột sắt để animate nhịp nhàng      |
+| `octagonal-glass-tickets.svg`| Vé kính 8 cạnh vát góc, viền ren vàng, thắt nơ voan   | Project cards          | Path phức tạp, vát cạnh gradient trắng/vàng, viền vàng|
+| `crystal-carriage-frame.svg` | Cỗ xe ngựa pha lê hoàng gia có bánh xe lấp lánh       | About frame            | Tách khung xe và 4 bánh để animate xoay nhẹ          |
+| `voan-ribbon-swags.svg`      | Ruy băng lụa voan xếp lớp xếp nếp, thắt nơ rủ bay     | Page dividers/borders  | Path mềm xếp ly, fill hồng phấn trong suốt mờ       |
+| `starburst-particles.svg`    | Sao chổi lấp lánh 8 cánh, cụm bụi sao lơ lửng         | Starry sky layer       | Path starburst, animate opacity + spin nhấp nháy     |
+| `gold-carriage-bell.svg`     | Chuông vàng quả lắc đính hạt pha lê                   | Skills badges          | Tách bell body và clapper để animate swing đung đưa  |
+| `carousel-palace-icons.svg`  | Ngựa, xe, lâu đài, chuông, vé, vương miện, nơ, trăng  | Nav/badge icons        | Icon 24x24, nét mảnh 1.5px, màu gold/pink            |
+
+---
+
+## 11. `strawberry-glasshouse` — Strawberry Glasshouse Portfolio
+
+Một khu vườn dâu tây nhỏ xinh nằm trong nhà kính thủy tinh mờ (frosted glass greenhouse) ngập tràn nắng mai. Những quả dâu tây chín mọng màu hồng phấn, những cành lá xanh non nhạt, giọt sương sớm đọng trên kính trượt dài, chú ong mật tròn mập lướt cánh xung quanh. Thiết kế kính mờ trong suốt (high opacity glassmorphism) bao phủ toàn bộ thẻ bài, đem lại cảm giác tự nhiên, tươi mới nhưng cực kỳ cute và thơ mộng.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Tươi mát, bình yên, trong trẻo, gần gũi thiên nhiên, dâu tây ngọt ngào  |
+| Hình khối   | Greenhouse window pane, strawberry leaf badge, water drop card, honeycomb grid |
+| Không gian  | Nền trắng bạc hà nhạt, cửa sổ nhà kính thủy tinh mờ phản chiếu những chùm dâu tây trĩu quả |
+| Chuyển động | Dew drop slide, bee flutter fly, strawberry growth bloom, leaf sway, steam rise |
+| Điểm nhấn   | Chubby bee mascot Rive, red/pink strawberries, glass greenhouse frame, honeycomb, dew drop |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#F2FBF6",
+        colorBgContainer: "rgba(255, 255, 255, 0.8)",
+        colorPrimary: "#FFA0AB",
+        colorTextBase: "#1D3E2F",
+        colorTextSecondary: "#527D68",
+        colorSuccess: "#84E2A8",
+        colorWarning: "#FFE17A",
+        colorInfo: "#9DE4FF",
+        colorBorder: "rgba(132, 226, 168, 0.3)",
+        borderRadius: 22,
+        fontFamily: "'Comfortaa', 'Quicksand', sans-serif",
+    },
+};
+
+// CSS Variables
+// --berry-pink: #FFA0AB;
+// --berry-red: #FF6B7D;
+// --leaf-green: #84E2A8;
+// --honey-yellow: #FFE17A;
+// --dew-blue: #9DE4FF;
+// --glasshouse-mint: #F2FBF6;
+```
+
+### Typography
+
+- **Heading:** `Comfortaa` tròn lịm, ấm áp gợi tả quả dâu căng tròn.
+- **Body:** `Quicksand` trong trẻo, mềm mại.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400..700&family=Quicksand:wght@300..700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Strawberry grow zoom in, greenhouse pane wipe reveal, dew drop falling path |
+| Rive            | Chubby bee flying around mouse pointer, strawberry flower blooming on hover, honey dripping |
+| SVGator         | Sunbeam caustics through glass, water pipe flowing, leaf sway loop     |
+| Lenis           | Smooth scroll through garden rows                                      |
+| CSS Keyframes   | Bee wing buzz, leaf sway gentle, strawberry bobbing, sun ray shimmer    |
+| Realtime Colors | Palette glasshouse-mint/berry-pink/honey-yellow mát xanh tươi trẻ và trong lành |
+| Blush           | Illustration greenhouse garden girl / strawberry field                 |
+
+### Layout ideas
+
+- **Hero:** Khung cảnh nhà kính thủy tinh mờ ngập nắng, ong béo lượn lờ vẽ đường bay lấp lánh xung quanh tên Phương bằng dâu tây.
+- **About:** Khung ô cửa kính trong suốt của nhà kính (glass window pane card), có đọng nước sương mờ và lá dâu quấn quanh.
+- **Projects:** Mỗi dự án là một hộp dâu tây tươi mọng thắt nơ rơm (strawberry basket glass card), hover dâu tây chín toả sáng lấp lánh.
+- **Skills:** Cây dâu tây sum suê quả, mỗi cụm dâu chín là một nhóm kỹ năng với hạt dâu lấp lánh xà cừ.
+- **Contact:** "Gửi hũ mứt dâu ngọt ngào" (Send a sweet jam jar), hũ jam glassmorphic đóng nắp lấp lánh và bay theo chú ong mật mang đi.
+
+### Animation rules
+
+| Sự kiện          | Effect                                         | Thư viện          |
+| ---------------- | ---------------------------------------------- | ----------------- |
+| Page load        | Glass fog clear + bee hop flight path          | Framer Motion     |
+| Dew drop         | Slide down greenhouse window pane slowly 4s    | SVGator / CSS     |
+| Leaf sway        | Pendulum wave oscillation loop                 | CSS keyframes     |
+| Bee wing buzz    | High frequency shake rotation ±3deg 0.05s      | CSS keyframes     |
+| Jam jar seal     | Jar lid rotate close + sticker pop             | Framer Motion     |
+| Strawberry glow  | Bioluminescent berry heart pulse 2.5s          | CSS keyframes     |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                       ← Strawberry glasshouse shell
+│   ├── routes.js                     ← sun-greenhouse, strawberry-baskets, berry-branches, jam-factory
+│   └── theme.js
+├── pages/
+│   ├── GreenhouseHeroPage.jsx        ← Hero nhà kính thủy tinh mờ ngập nắng
+│   ├── StrawberryBasketsPage.jsx     ← Projects dạng giỏ dâu tây đan
+│   ├── BerryBranchesPage.jsx         ← Skills dạng cành dâu trĩu quả
+│   └── JamFactoryContactPage.jsx     ← Contact làm hũ mứt ước nguyện
+├── features/
+│   ├── greenhouse-scene/
+│   │   ├── FrostedGlassHouse.jsx
+│   │   ├── SunbeamCaustics.jsx
+│   │   ├── DewSlideLayer.jsx
+│   │   └── StrawberryBushes.jsx
+│   ├── bee-mascot/
+│   │   ├── BeeRiveController.jsx
+│   │   ├── FlightPathDraw.jsx
+│   │   └── HoneycombReaction.jsx
+│   ├── berry-baskets/
+│   │   ├── BasketGrid.jsx
+│   │   ├── StrawberryCard.jsx
+│   │   └── SeedSparkleHover.jsx
+│   └── jam-factory/
+│       ├── GlassJamJar.jsx
+│       ├── BoilingJamParticles.jsx
+│       └── JamLabelCustomize.jsx
+├── components/
+│   ├── layout/                       ← Greenhouse nav, window page transition
+│   └── ui/                           ← BerryButton, GreenhouseCard, LeafBadge, JamTag
+└── assets/strawberry-glasshouse/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                       |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
+| `chubby-bee-mascot.svg`      | Chú ong tròn béo vàng đen, cánh trong suốt, phấn hoa  | Mascot/hero scene      | Tách cánh để buzz rung nhanh, fill pastel yellow     |
+| `strawberry-branches.svg`    | Quả dâu tây treo lơ lửng, hoa trắng, lá 3 thùy xanh   | Projects/background    | Tách cành, quả dâu chín đỏ/hồng để animate đung đưa |
+| `greenhouse-panes.svg`       | Khung ô cửa nhà kính lớn bằng kính mờ, đọng sương     | About board/card       | Path ô vuông, fill gradient trong suốt, mờ mịn       |
+| `jam-jars.svg`               | Hũ mứt thủy tinh tròn béo thắt dây cói, dán nhãn       | Contact form           | Tách dây cói, nhãn dán dâu tây làm group riêng       |
+| `honeycomb-cells.svg`        | Tổ ong lục giác xếp xen kẽ phát sáng màu mật ong      | Skills grid            | Path hexagon pattern tile, radial gradient           |
+| `dew-drop-fluid.svg`         | Giọt nước chảy dẹt trên kính mờ trơn trượt            | Background particles   | Path dẹt giọt nước rơi, animate scaleY dẹt dài       |
+| `strawberry-icons.svg`       | Ong, dâu, lá, hũ mứt, tổ ong, kính mờ, xẻng vườn, bình| Nav/badge icons        | Icon 24x24, nét mảnh 2px, màu berry-pink/leaf-green  |
+
+---
+
+## 12. `angel-perfume-atelier` — Angel Perfume Atelier Portfolio
+
+Một xưởng nước hoa phép thuật của thiên thần nhỏ lãng mạn. Những chai nước hoa làm bằng thủy tinh mài tinh xảo phát ra làn sương ma thuật lấp lánh ánh ngọc trai/aurora (holographic glassmorphism), đôi cánh thiên thần trắng muốt xếp lớp bay nhẹ, những sợi lông vũ và cánh hoa hồng rơi tự do dưới ánh trăng. Thiết kế kính mờ phản quang cầu vồng (aurora glassmorphism) mang đến một vẻ đẹp cực kỳ thời thượng, sang xịn và quyến rũ cho portfolio.
+
+### Đặc điểm nhận dạng
+
+| Yếu tố      | Mô tả                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| Cảm xúc     | Sang xịn mịn, phép thuật mơ mộng, thanh khiết, thời thượng, ngọt ngào   |
+| Hình khối   | Crystal perfume bottle card, angel wing tab, gold ribbon badge, feather capsule tag |
+| Không gian  | Bầu trời hoàng hôn tím hồng xà cừ, các chai nước hoa thủy tinh khúc xạ ánh sáng lộng lẫy |
+| Chuyển động | Angel wing hover sway, perfume mist scatter, feather drift fall, bubble shine, bottle click spray |
+| Điểm nhấn   | Angel mascot Rive, crystal perfume bottle, pearl bubble, pink rose, gold ribbon |
+
+### Bảng màu
+
+```js
+export const theme = {
+    token: {
+        colorBgBase: "#FDF6FF",
+        colorBgContainer: "rgba(255, 255, 255, 0.68)",
+        colorPrimary: "#E0B3FF",
+        colorTextBase: "#3A214E",
+        colorTextSecondary: "#866D9F",
+        colorSuccess: "#8EECCD",
+        colorWarning: "#FFEFA8",
+        colorInfo: "#FFB0E0",
+        colorBorder: "rgba(224, 179, 255, 0.28)",
+        borderRadius: 24,
+        fontFamily: "'Cinzel Decorative', 'Poppins', serif",
+    },
+};
+
+// CSS Variables
+// --angel-purple: #E0B3FF;
+// --sweet-pink: #FFB0E0;
+// --aurora-gold: #FFEFA8;
+// --pearl-mint: #8EECCD;
+// --feather-white: #FFFFFF;
+// --perfume-violet: #3A214E;
+```
+
+### Typography
+
+- **Heading:** `Cinzel Decorative` siêu lộng lẫy, đầy những nét thắt nghệ thuật cổ tích.
+- **Body:** `Poppins` hiện đại, tinh tế, giữ bố cục gọn gàng sang xịn.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+```
+
+### Library usage
+
+| Library / Tool  | Cách dùng trong theme                                                  |
+| --------------- | ---------------------------------------------------------------------- |
+| Framer Motion   | Perfume bottle spray animation, feather falling loop, mist expand reveal, glass cards ripple |
+| Rive            | Little angel flying/posing, spray bottle mist button, potion cooking magic |
+| SVGator         | Wing flutter loop, glass crystal reflection refraction, aurora rainbow flow |
+| Lenis           | Smooth scroll down through atelier perfume racks                       |
+| CSS Keyframes   | Feather float drift, perfume mist flow, pearl bubble shine             |
+| Realtime Colors | Palette sweet-pink/angel-purple/aurora-gold sang xịn mịn và vô cùng thơ mộng |
+| Blush           | Illustration angel girl / magic potion dresser                         |
+
+### Layout ideas
+
+- **Hero:** Chiếc bàn trang điểm đầy chai nước hoa pha lê lấp lánh ánh xà cừ dưới trăng hoàng hôn hồng tím, lông vũ bay lãng mạn.
+- **About:** Chai nước hoa pha lê khổng lồ dạng aurora glassmorphism cực kỳ lấp lánh khúc xạ ánh sáng, hiển thị profile ở trung tâm.
+- **Projects:** Mỗi dự án là một mùi hương nước hoa đặc sắc (fragrance vial card), hover thì chai phun ra làn sương lấp lánh chứa thông tin dự án.
+- **Skills:** Kệ tủ nước hoa pha lê, mỗi tầng kệ là một tầng hương skill khác nhau (top notes, heart notes, base notes).
+- **Contact:** "Xịt sương ước nguyện" (Spray a wish), xịt một chai nước hoa phép thuật, làn sương kết thành bướm bay lên cao.
+
+### Animation rules
+
+| Sự kiện          | Effect                                         | Thư viện          |
+| ---------------- | ---------------------------------------------- | ----------------- |
+| Page load        | Mist puff in + angel feather float entrance    | Framer Motion     |
+| Wing flutter     | Dual wing rotate wave (left/right opposite)    | SVGator           |
+| Perfume spray    | Puff organic particle spray from nozzle 1.2s    | Framer Motion/CSS |
+| Aurora shimmer   | Linear gradient angles rotation loop           | CSS keyframes     |
+| Bubble glide     | Vertical drift + wobble sway, opacity glow     | CSS keyframes     |
+| Bottle hover     | Refraction glint sweep + slight float          | CSS transition    |
+
+### Component notes
+
+```txt
+src/
+├── app/
+│   ├── App.jsx                       ← Angel perfume atelier shell
+│   ├── routes.js                     ← angel-boudoir, fragrance-racks, notes-shelf, magic-dresser
+│   └── theme.js
+├── pages/
+│   ├── BoudoirHeroPage.jsx           ← Hero bàn trang điểm lấp lánh ngọc trai
+│   ├── FragranceRacksPage.jsx        ← Projects dạng kệ chai nước hoa
+│   ├── NotesShelfSkillsPage.jsx      ← Skills chia theo 3 tầng hương thơm
+│   └── DresserContactPage.jsx        ← Contact xịt sương nước hoa phép thuật
+├── features/
+│   ├── boudoir-scene/
+│   │   ├── DressingTableMirror.jsx
+│   │   ├── AuroraRefractionLayer.jsx
+│   │   ├── FeatherFloatingLayer.jsx
+│   │   └── PearlBubblesDrift.jsx
+│   ├── angel-mascot/
+│   │   ├── AngelRiveController.jsx
+│   │   ├── WingFlutterAnimation.jsx
+│   │   └── MagicSprayReaction.jsx
+│   ├── fragrance-racks/
+│   │   ├── RacksGrid.jsx
+│   │   ├── CrystalBottleCard.jsx
+│   │   └── MistPuffHover.jsx
+│   └── notes-shelf/
+│       ├── PotionShelves.jsx
+│       ├── FragranceNoteSkill.jsx
+│       └── ScentCloudTooltip.jsx
+├── components/
+│   ├── layout/                       ← Atelier nav, perfume mist transition
+│   └── ui/                           ← SprayButton, CrystalCard, WingBadge, PearlTag
+└── assets/angel-perfume-atelier/
+```
+
+### Tự tạo Assets 2D bằng SVG
+
+| File SVG tự tạo              | Nội dung cần vẽ                                       | Dùng cho               | Gợi ý kỹ thuật                                       |
+| ---------------------------- | ----------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
+| `angel-mascot-set.svg`       | Thiên thần nhỏ có cánh trắng, áo đầm lụa, cầm chai    | Mascot/hero scene      | Tách đôi cánh bay lượn để animate, fill soft lilac   |
+| `crystal-perfume-bottles.svg`| Chai nước hoa pha lê nhiều hình dạng mài vát lộng lẫy | Projects/decor         | Khúc xạ gradient đa sắc (aurora), glow xà cừ filter  |
+| `feather-drift-capsules.svg` | Sợi lông tơ tơi mềm màu trắng rơi rải rác              | Background particles   | Path lông vũ nét tơ siêu mảnh, opacity thấp 0.3–0.5  |
+| `magic-dresser-mirror.svg`   | Gương bàn trang điểm viền kim loại vàng nghệ thuật    | Hero border            | Oval path, fill gradient gương soi mờ phản quang     |
+| `pearl-glow-bubbles.svg`     | Hạt bong bóng xà cừ phát quang óng ánh tròn vo        | Particle layer         | Circle + radialGradient ngọc trai, glow drop-shadow  |
+| `perfume-spray-mist.svg`     | Làn sương phun ra dạng dải mây lấp lánh ánh sao       | Page transition/effect | Path cloud rải rác sao, animate scaleX/fade out      |
+| `perfume-atelier-icons.svg`  | Chai nước hoa, cánh, lông vũ, gương, ngọc, giọt sương | Nav/badge icons        | Icon 24x24, nét mảnh 1.5px, màu gold/purple          |
+
+---
 
 ## Quy chuẩn triển khai cho Catalog 5
 
