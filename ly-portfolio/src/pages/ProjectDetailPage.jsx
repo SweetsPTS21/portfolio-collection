@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, Download, ArrowUp } from "lucide-react";
 import PageShell from "../components/layout/PageShell";
 import PageGallery from "../components/projects/PageGallery";
 import { projects } from "../data/portfolioData";
@@ -12,6 +12,18 @@ export default function ProjectDetailPage() {
   const chapterNum = parseInt(chapter, 10);
   const project = projects.items.find((p) => p.chapter === chapterNum);
   const pdfContent = getPdfContent(chapterNum);
+
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [chapterNum]);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   if (!project) {
     return (
@@ -67,6 +79,7 @@ export default function ProjectDetailPage() {
             <Link
               to={`/projects/${chapterNum - 1}`}
               className="flower-action secondary"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               ← Chương {chapterNum - 1}
             </Link>
@@ -75,12 +88,22 @@ export default function ProjectDetailPage() {
             <Link
               to={`/projects/${chapterNum + 1}`}
               className="flower-action primary"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Chương {chapterNum + 1} →
             </Link>
           )}
         </div>
       </motion.div>
+
+      {/* Scroll-to-top float button */}
+      <button
+        className={`scroll-top-btn${showTop ? " visible" : ""}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Lên đầu trang"
+      >
+        <ArrowUp size={20} />
+      </button>
     </PageShell>
   );
 }
