@@ -1,14 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, GraduationCap, Heart, User } from 'lucide-react';
+import {
+  BookOpen,
+  GraduationCap,
+  Heart,
+  User,
+  QrCode,
+  AudioLines,
+} from 'lucide-react';
 import { person } from '../data/portfolio';
 
 const infoItems = [
   { icon: User, label: 'Họ và tên', value: person.name },
+  { icon: QrCode, label: 'Mã sinh viên', value: person.code },
   { icon: GraduationCap, label: 'Ngành học', value: person.major },
   { icon: BookOpen, label: 'Trường', value: person.school },
   { icon: Heart, label: 'Sở thích', value: person.hobbies },
-  { icon: Heart, label: 'Phong cách cá nhân', value: person.style },
+  { icon: AudioLines, label: 'Phong cách cá nhân', value: person.style },
 ];
 
 function scrollToProjects() {
@@ -68,7 +76,9 @@ export default function About({ onNavigate }) {
             <div className="about-avatar">
               <img src="/avatar.jpg" alt="Thúy Nhung" />
             </div>
-            <div className="about-avatar__spark" aria-hidden="true">✦</div>
+            <div className="about-avatar__spark" aria-hidden="true">
+              ✦
+            </div>
           </div>
 
           <div className="about-info-list">
@@ -105,7 +115,9 @@ export default function About({ onNavigate }) {
             viewport={{ once: true }}
             transition={{ delay: 0.12 + index * 0.08 }}
           >
-            <span className="home-info-card__index">{String(index + 1).padStart(2, '0')}</span>
+            <span className="home-info-card__index">
+              {String(index + 1).padStart(2, '0')}
+            </span>
             <h2>{card.title}</h2>
             <p>{card.content}</p>
           </motion.article>

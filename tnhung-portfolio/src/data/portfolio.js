@@ -15,6 +15,7 @@ import bt6Pdf from '../assets/Bt6.pdf';
 
 export const person = {
   name: 'Trịnh Thị Thúy Nhung',
+  code: '2406134',
   role: 'Sinh viên Luật học',
   major: 'Luật học',
   school: 'Trường Đại học Luật, Đại học Quốc gia Hà Nội (ĐHQGHN)',
