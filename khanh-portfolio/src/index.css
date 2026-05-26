@@ -1418,6 +1418,7 @@ button {
   min-height: 500px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .pdf-fallback-container {
