@@ -3,6 +3,56 @@ export const visualAssets = {
   cardTexture: '/assets/generated/card-paper-texture.png',
   projectStickerSheet: '/assets/generated/project-sticker-sheet.png',
   conclusionPanel: '/assets/generated/conclusion-soft-panel.png',
+  decorations: [
+    {
+      id: 'flower-sprig',
+      src: '/assets/decor/decor-flower-sprig.png',
+      alt: '',
+      className: 'background-scene__decor--flower-sprig',
+    },
+    {
+      id: 'law-book',
+      src: '/assets/decor/decor-law-book.png',
+      alt: '',
+      className: 'background-scene__decor--law-book',
+    },
+    {
+      id: 'folder',
+      src: '/assets/decor/decor-folder.png',
+      alt: '',
+      className: 'background-scene__decor--folder',
+    },
+    {
+      id: 'laptop',
+      src: '/assets/decor/decor-laptop.png',
+      alt: '',
+      className: 'background-scene__decor--laptop',
+    },
+    {
+      id: 'ai-sparkle',
+      src: '/assets/decor/decor-ai-sparkle.png',
+      alt: '',
+      className: 'background-scene__decor--ai-sparkle',
+    },
+    {
+      id: 'shield',
+      src: '/assets/decor/decor-shield.png',
+      alt: '',
+      className: 'background-scene__decor--shield',
+    },
+    {
+      id: 'paperclip-note',
+      src: '/assets/decor/decor-paperclip-note.png',
+      alt: '',
+      className: 'background-scene__decor--paperclip-note',
+    },
+    {
+      id: 'scales',
+      src: '/assets/decor/decor-scales.png',
+      alt: '',
+      className: 'background-scene__decor--scales',
+    },
+  ],
 };
 
 export const portfolioData = {

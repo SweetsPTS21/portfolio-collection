@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 import { pageConfig } from '../src/app/pageConfig.js';
 import { motionConfig } from '../src/app/motionConfig.js';
@@ -52,11 +52,21 @@ describe('tu portfolio contract', () => {
       'background',
       'cardTexture',
       'conclusionPanel',
+      'decorations',
       'projectStickerSheet',
     ]);
 
-    Object.values(portfolioData.visualAssets).forEach((assetPath) => {
+    Object.entries(portfolioData.visualAssets)
+      .filter(([key]) => key !== 'decorations')
+      .forEach(([, assetPath]) => {
       expect(assetPath).toMatch(/^\/assets\/generated\/.+\.png$/);
+    });
+
+    expect(portfolioData.visualAssets.decorations).toHaveLength(8);
+    portfolioData.visualAssets.decorations.forEach((decoration) => {
+      expect(decoration.src).toMatch(/^\/assets\/decor\/decor-.+\.png$/);
+      expect(decoration.className).toMatch(/^background-scene__decor--/);
+      expect(decoration.alt).toBe('');
     });
 
     portfolioData.projects.forEach((project) => {
@@ -68,5 +78,29 @@ describe('tu portfolio contract', () => {
   it('keeps motion subtle and reduced-motion aware', () => {
     expect(motionConfig.defaultTransition.duration).toBeLessThanOrEqual(0.55);
     expect(motionConfig.reducedMotion).toBe('user');
+  });
+
+  it('keeps the background scene layered and kinetic', () => {
+    const sceneSource = readFileSync('src/components/layout/BackgroundScene.jsx', 'utf8');
+    const styles = readFileSync('src/index.css', 'utf8');
+
+    expect(sceneSource).toContain('background-scene__motion-field');
+    expect(sceneSource.match(/background-scene__streak/g)).toHaveLength(3);
+    expect(sceneSource.match(/background-scene__spark/g)).toHaveLength(6);
+
+    [
+      'ambient-pan',
+      'decor-bob',
+      'decor-orbit',
+      'spark-rush',
+      'streak-sweep',
+      'paper-glide',
+      'dot-drift',
+      'flower-spin',
+    ].forEach((animationName) => {
+      expect(styles).toContain(`@keyframes ${animationName}`);
+    });
+
+    expect(styles).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*background-scene/);
   });
 });

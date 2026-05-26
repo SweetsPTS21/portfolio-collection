@@ -125,6 +125,217 @@ svg {
       rgba(243, 182, 194, 0.14)
     );
   opacity: 0.86;
+  background-position: center, center, center, center;
+  animation: ambient-pan 14s ease-in-out infinite alternate;
+  will-change: background-position, opacity;
+}
+
+.background-scene__motion-field {
+  position: absolute;
+  inset: -12vh -14vw;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.background-scene__streak {
+  position: absolute;
+  width: clamp(150px, 24vw, 340px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(239, 124, 130, 0.04) 18%,
+    rgba(239, 124, 130, 0.34) 48%,
+    rgba(216, 217, 154, 0.3) 62%,
+    transparent
+  );
+  transform: translate3d(-20vw, 0, 0) rotate(var(--streak-tilt, -14deg));
+  animation: streak-sweep var(--streak-speed, 6s) linear infinite;
+  animation-delay: var(--streak-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.background-scene__streak.is-one {
+  --streak-speed: 5.8s;
+  --streak-delay: -2.4s;
+  --streak-tilt: -13deg;
+  left: 2vw;
+  top: 18vh;
+}
+
+.background-scene__streak.is-two {
+  --streak-speed: 7.2s;
+  --streak-delay: -4.7s;
+  --streak-tilt: 10deg;
+  left: 52vw;
+  top: 48vh;
+}
+
+.background-scene__streak.is-three {
+  --streak-speed: 6.4s;
+  --streak-delay: -1.2s;
+  --streak-tilt: -18deg;
+  left: 18vw;
+  top: 78vh;
+}
+
+.background-scene__spark {
+  position: absolute;
+  width: clamp(12px, 1.5vw, 22px);
+  aspect-ratio: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(0.78) rotate(0deg);
+  animation: spark-rush var(--spark-speed, 5.6s) ease-in-out infinite;
+  animation-delay: var(--spark-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.background-scene__spark::before,
+.background-scene__spark::after {
+  position: absolute;
+  content: '';
+  inset: 48% 0 auto;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(239, 124, 130, 0.42);
+}
+
+.background-scene__spark::after {
+  transform: rotate(90deg);
+  background: rgba(140, 132, 83, 0.32);
+}
+
+.background-scene__spark.is-one {
+  --spark-delay: -0.8s;
+  left: 14vw;
+  top: 28vh;
+}
+
+.background-scene__spark.is-two {
+  --spark-delay: -3.1s;
+  --spark-speed: 4.8s;
+  left: 35vw;
+  top: 13vh;
+}
+
+.background-scene__spark.is-three {
+  --spark-delay: -1.9s;
+  left: 69vw;
+  top: 25vh;
+}
+
+.background-scene__spark.is-four {
+  --spark-delay: -4.2s;
+  --spark-speed: 6.2s;
+  left: 82vw;
+  top: 67vh;
+}
+
+.background-scene__spark.is-five {
+  --spark-delay: -2.6s;
+  left: 26vw;
+  top: 72vh;
+}
+
+.background-scene__spark.is-six {
+  --spark-delay: -5.1s;
+  --spark-speed: 5.2s;
+  left: 54vw;
+  top: 58vh;
+}
+
+.background-scene__decor-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.background-scene__decor {
+  position: absolute;
+  width: var(--decor-size, 120px);
+  opacity: var(--decor-opacity, 0.42);
+  filter: drop-shadow(0 12px 20px rgba(188, 108, 122, 0.12));
+  transform-origin: center;
+  animation: decor-bob var(--decor-duration, 9s) ease-in-out infinite;
+  animation-delay: var(--decor-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.background-scene__decor--flower-sprig {
+  --decor-size: clamp(120px, 14vw, 210px);
+  --decor-opacity: 0.52;
+  --decor-duration: 8.8s;
+  --decor-delay: -2s;
+  left: 3vw;
+  top: 18vh;
+}
+
+.background-scene__decor--law-book {
+  --decor-size: clamp(92px, 10vw, 160px);
+  --decor-opacity: 0.36;
+  --decor-duration: 10.6s;
+  --decor-delay: -5s;
+  right: 7vw;
+  top: 14vh;
+  animation-name: decor-orbit;
+}
+
+.background-scene__decor--folder {
+  --decor-size: clamp(92px, 11vw, 170px);
+  --decor-opacity: 0.34;
+  --decor-duration: 9.4s;
+  --decor-delay: -3.4s;
+  left: 8vw;
+  bottom: 12vh;
+  animation-name: decor-orbit;
+}
+
+.background-scene__decor--laptop {
+  --decor-size: clamp(108px, 13vw, 210px);
+  --decor-opacity: 0.32;
+  --decor-duration: 11s;
+  --decor-delay: -6.2s;
+  right: 4vw;
+  bottom: 17vh;
+  animation-name: decor-orbit;
+}
+
+.background-scene__decor--ai-sparkle {
+  --decor-size: clamp(64px, 7vw, 112px);
+  --decor-opacity: 0.46;
+  --decor-duration: 5.8s;
+  --decor-delay: -1.6s;
+  left: 47vw;
+  top: 10vh;
+  animation-name: decor-twinkle;
+}
+
+.background-scene__decor--shield {
+  --decor-size: clamp(76px, 8vw, 130px);
+  --decor-opacity: 0.32;
+  --decor-duration: 8.2s;
+  --decor-delay: -4.1s;
+  right: 18vw;
+  bottom: 8vh;
+}
+
+.background-scene__decor--paperclip-note {
+  --decor-size: clamp(86px, 9vw, 150px);
+  --decor-opacity: 0.34;
+  --decor-duration: 9.8s;
+  --decor-delay: -2.7s;
+  left: 22vw;
+  top: 61vh;
+  animation-name: decor-orbit;
+}
+
+.background-scene__decor--scales {
+  --decor-size: clamp(72px, 8vw, 130px);
+  --decor-opacity: 0.32;
+  --decor-duration: 7.6s;
+  --decor-delay: -3.8s;
+  right: 27vw;
+  top: 49vh;
 }
 
 .background-scene__paper {
@@ -146,18 +357,26 @@ svg {
     );
   box-shadow: 0 22px 60px rgba(188, 108, 122, 0.08);
   opacity: 0.42;
+  transform: translate3d(0, 0, 0) rotate(var(--paper-rotation, 0deg));
+  animation: paper-glide var(--paper-speed, 12s) ease-in-out infinite;
+  animation-delay: var(--paper-delay, 0s);
+  will-change: transform;
 }
 
 .background-scene__paper--left {
+  --paper-rotation: -9deg;
+  --paper-speed: 10.5s;
+  --paper-delay: -4.6s;
   left: -180px;
   top: 130px;
-  transform: rotate(-9deg);
 }
 
 .background-scene__paper--right {
+  --paper-rotation: 8deg;
+  --paper-speed: 12.5s;
+  --paper-delay: -7.1s;
   right: -210px;
   bottom: 40px;
-  transform: rotate(8deg);
 }
 
 .background-scene__flower {
@@ -165,14 +384,22 @@ svg {
   color: rgba(239, 124, 130, 0.22);
   font-family: var(--font-heading);
   font-size: clamp(80px, 12vw, 160px);
+  transform-origin: center;
+  animation: flower-spin var(--flower-speed, 13s) ease-in-out infinite;
+  animation-delay: var(--flower-delay, 0s);
+  will-change: transform, opacity;
 }
 
 .background-scene__flower--one {
+  --flower-speed: 11s;
+  --flower-delay: -3.2s;
   top: 9vh;
   right: 10vw;
 }
 
 .background-scene__flower--two {
+  --flower-speed: 12.8s;
+  --flower-delay: -6.4s;
   bottom: 12vh;
   left: 8vw;
   color: rgba(140, 132, 83, 0.18);
@@ -189,16 +416,162 @@ svg {
   );
   background-size: 16px 16px;
   opacity: 0.45;
+  animation: dot-drift var(--dot-speed, 8s) steps(4, end) infinite;
+  animation-delay: var(--dot-delay, 0s);
 }
 
 .background-scene__dots--left {
+  --dot-speed: 6.8s;
+  --dot-delay: -2s;
   left: 7vw;
   top: 44vh;
 }
 
 .background-scene__dots--right {
+  --dot-speed: 7.6s;
+  --dot-delay: -4.2s;
   right: 9vw;
   top: 26vh;
+}
+
+@keyframes ambient-pan {
+  0% {
+    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    opacity: 0.78;
+  }
+
+  100% {
+    background-position: 48% 52%, 52% 48%, 46% 50%, 50% 53%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes streak-sweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-36vw, 0, 0) rotate(var(--streak-tilt, -14deg));
+  }
+
+  16%,
+  58% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(118vw, 0, 0) rotate(var(--streak-tilt, -14deg));
+  }
+}
+
+@keyframes spark-rush {
+  0%,
+  100% {
+    opacity: 0.16;
+    transform: translate3d(0, 0, 0) scale(0.72) rotate(-16deg);
+  }
+
+  35% {
+    opacity: 0.62;
+    transform: translate3d(12px, -18px, 0) scale(1.12) rotate(74deg);
+  }
+
+  70% {
+    opacity: 0.3;
+    transform: translate3d(-9px, 10px, 0) scale(0.88) rotate(132deg);
+  }
+}
+
+@keyframes decor-bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(-4deg);
+  }
+
+  38% {
+    transform: translate3d(14px, -22px, 0) scale(1.03) rotate(6deg);
+  }
+
+  68% {
+    transform: translate3d(-10px, 10px, 0) scale(0.98) rotate(-1deg);
+  }
+}
+
+@keyframes decor-orbit {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(2deg);
+  }
+
+  30% {
+    transform: translate3d(22px, -12px, 0) rotate(-7deg);
+  }
+
+  65% {
+    transform: translate3d(-18px, 16px, 0) rotate(6deg);
+  }
+}
+
+@keyframes decor-twinkle {
+  0%,
+  100% {
+    opacity: 0.26;
+    transform: translate3d(0, 0, 0) scale(0.94) rotate(-4deg);
+  }
+
+  50% {
+    opacity: 0.54;
+    transform: translate3d(0, -10px, 0) scale(1.04) rotate(5deg);
+  }
+}
+
+@keyframes paper-glide {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--paper-rotation, 0deg));
+  }
+
+  50% {
+    transform: translate3d(18px, -12px, 0) rotate(calc(var(--paper-rotation, 0deg) + 3deg));
+  }
+}
+
+@keyframes flower-spin {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  45% {
+    opacity: 0.32;
+    transform: translate3d(-8px, -12px, 0) rotate(18deg) scale(1.06);
+  }
+
+  72% {
+    opacity: 0.24;
+    transform: translate3d(10px, 6px, 0) rotate(28deg) scale(0.98);
+  }
+}
+
+@keyframes dot-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    background-position: 0 0;
+  }
+
+  50% {
+    transform: translate3d(10px, -8px, 0);
+    background-position: 16px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-scene *,
+  .background-scene *::before,
+  .background-scene *::after {
+    animation: none !important;
+  }
 }
 
 .site-nav {
