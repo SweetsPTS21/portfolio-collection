@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 import MarketButton from '../components/ui/MarketButton.jsx';
 import PriceTag from '../components/ui/PriceTag.jsx';
 import { projects, projectsIntro } from '../data/portfolioData.js';
-import { pageReveal } from '../app/motionConfig.js';
+import {
+  cardHoverMotion,
+  contentBlockReveal,
+  dynamicCardReveal,
+  pageReveal,
+} from '../app/motionConfig.js';
 
 export default function ProjectsPage() {
   return (
@@ -16,23 +21,40 @@ export default function ProjectsPage() {
       <div className="project-chapter-grid">
         {projects.map((project, index) => (
           <motion.article
-            className="project-chapter-card"
+            className={`project-chapter-card project-chapter-card--${project.decor}`}
             key={project.chapter}
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.06 }}
-            whileHover={{ y: -6 }}
+            custom={index}
+            variants={dynamicCardReveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.18 }}
+            whileHover={cardHoverMotion.whileHover}
+            whileTap={cardHoverMotion.whileTap}
           >
             <PriceTag tone={index % 2 === 0 ? 'mint' : 'gold'}>{project.chapter}</PriceTag>
             <h2>{project.title}</h2>
-            <div className="chapter-block">
+            <motion.div
+              className="chapter-block"
+              custom={0}
+              variants={contentBlockReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.32 }}
+            >
               <h3>Mục tiêu</h3>
               <p>{project.goal}</p>
-            </div>
-            <div className="chapter-block">
+            </motion.div>
+            <motion.div
+              className="chapter-block"
+              custom={1}
+              variants={contentBlockReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.32 }}
+            >
               <h3>Quá trình thực hiện</h3>
               <p>{project.process}</p>
-            </div>
+            </motion.div>
             <a className="stall-card-link chapter-link" href={project.pdf} target="_blank" rel="noreferrer">
               Mở tài liệu PDF
             </a>

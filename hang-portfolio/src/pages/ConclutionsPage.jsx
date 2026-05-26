@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import MarketButton from '../components/ui/MarketButton.jsx';
 import PriceTag from '../components/ui/PriceTag.jsx';
 import { conclusionCards, conclusionIntro } from '../data/portfolioData.js';
-import { pageReveal } from '../app/motionConfig.js';
+import { cardHoverMotion, dynamicCardReveal, pageReveal } from '../app/motionConfig.js';
 
 export default function ConclutionsPage() {
   return (
@@ -16,11 +16,15 @@ export default function ConclutionsPage() {
       <div className="conclusion-card-grid">
         {conclusionCards.map((card, index) => (
           <motion.article
-            className="content-card conclusion-card"
+            className={`content-card content-card--${card.layout} conclusion-card conclusion-card--${card.decor} decor-${card.decor}`}
             key={card.title}
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.08 }}
+            custom={index}
+            variants={dynamicCardReveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.24 }}
+            whileHover={cardHoverMotion.whileHover}
+            whileTap={cardHoverMotion.whileTap}
           >
             <PriceTag tone={index % 2 === 0 ? 'gold' : 'mint'}>{card.eyebrow}</PriceTag>
             <h2>{card.title}</h2>

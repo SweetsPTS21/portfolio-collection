@@ -75,6 +75,7 @@ assert.ok(pkg.dependencies['framer-motion'], 'framer-motion dependency is requir
 assert.ok(pkg.dependencies.lenis, 'lenis dependency is required');
 
 const app = read('src/app/App.jsx');
+const motionConfig = read('src/app/motionConfig.js');
 const theme = read('src/app/theme.js');
 const routes = read('src/app/routes.js');
 const data = read('src/data/portfolioData.js');
@@ -96,12 +97,30 @@ assert.match(app, /ConclutionsPage/);
 assert.match(app, /useLenis/);
 assert.match(app, /motion\./, 'Framer Motion must be used in app shell');
 assert.match(app, /window\.history\.pushState|location\.pathname/, 'app shell must support browser routes');
+assert.match(motionConfig, /dynamicCardReveal/, 'shared dynamic card reveal variant is required');
+assert.match(motionConfig, /cardHoverMotion/, 'shared card hover motion config is required');
+assert.match(motionConfig, /contentBlockReveal/, 'shared content block reveal variant is required');
 
 assert.match(data, /aboutCards/);
 assert.match(data, /conclusionCards/);
+assert.match(data, /decor:\s*'profile-shell'/, 'about cards must carry data-driven decoration metadata');
+assert.match(data, /layout:\s*'postcard'/, 'about cards must support postcard-style card variants');
+assert.match(data, /decor:\s*'research-stamp'/, 'project cards must carry per-chapter decoration metadata');
+assert.match(data, /decor:\s*'closing-letter'/, 'conclusion cards must carry reflection decoration metadata');
 assert.match(aboutPage, /aboutCards[\s\S]*\.map/, 'about page must split content into cards');
+assert.match(aboutPage, /content-card--\$\{card\.layout/, 'about cards must render layout modifier classes from data');
+assert.match(aboutPage, /decor-\$\{card\.decor/, 'about cards must render decoration modifier classes from data');
+assert.match(aboutPage, /variants=\{dynamicCardReveal\}/, 'about cards must use shared Framer Motion card reveal variants');
+assert.match(aboutPage, /whileHover=\{cardHoverMotion\.whileHover\}/, 'about cards must use shared hover motion');
+assert.match(aboutPage, /whileTap=\{cardHoverMotion\.whileTap\}/, 'about cards must use shared tap motion');
 assert.match(projectsPage, /projects\.map/, 'projects page must split chapters into cards');
+assert.match(projectsPage, /project-chapter-card--\$\{project\.decor/, 'project cards must render decoration modifier classes from data');
+assert.match(projectsPage, /variants=\{dynamicCardReveal\}/, 'project cards must use shared Framer Motion card reveal variants');
+assert.match(projectsPage, /motion\.div[\s\S]*className="chapter-block"[\s\S]*variants=\{contentBlockReveal\}/, 'project chapter blocks must animate with Framer Motion');
 assert.match(conclutionsPage, /conclusionCards\.map/, 'conclutions page must split conclusion into cards');
+assert.match(conclutionsPage, /conclusion-card--\$\{card\.decor/, 'conclusion cards must render decoration modifier classes from data');
+assert.match(conclutionsPage, /variants=\{dynamicCardReveal\}/, 'conclusion cards must use shared Framer Motion card reveal variants');
+assert.match(conclutionsPage, /whileHover=\{cardHoverMotion\.whileHover\}/, 'conclusion cards must use shared hover motion');
 assert.doesNotMatch(css, /\.conclusion-card-grid\s*{[^}]*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s, 'conclusion page must not use a four-column grid');
 assert.match(css, /\.conclusion-card-grid\s*{[^}]*grid-template-columns:\s*minmax\(0,\s*1\.15fr\)\s+minmax\(280px,\s*0\.85fr\)/s, 'conclusion page needs an asymmetric readable grid');
 assert.match(css, /\.conclusion-card:nth-child\(1\)\s*{[^}]*grid-row:\s*span 2/s, 'long conclusion card should span rows instead of forcing narrow columns');
@@ -116,13 +135,31 @@ for (const asset of [
   assert.match(background + app + css, new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${asset} must be imported or referenced`);
 }
 
+const allowedBackgroundSlicedAssets = new Set([
+  'generated/slices/coastal-camera.png',
+  'generated/slices/receipt-seascape-postcard.png',
+]);
+
 for (const asset of requiredSlicedAssets) {
   assert.match(css, new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${asset} must decorate pages or cards independently`);
-  assert.doesNotMatch(background, new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${asset} must not be injected into the fixed background`);
+  if (!allowedBackgroundSlicedAssets.has(asset)) {
+    assert.doesNotMatch(background, new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${asset} must not be injected into the fixed background`);
+  }
 }
 
 assert.doesNotMatch(background, /sceneAssets|generated-market-assets|generated-bunting-anchor/, 'fixed background must not scatter extra decorative cutouts');
-assert.doesNotMatch(background, /market-stall-card-frame|woven-basket-cutout|bunting-flags/, 'fixed background should rely on the main scene, not extra cutouts');
+assert.doesNotMatch(background, /market-stall-card-frame|bunting-flags/, 'fixed background should rely on the main scene and a small controlled prop layer');
+assert.match(background, /floating-market-props/, 'fixed background should expose a controlled animated prop layer');
+assert.match(background, /floating-prop-camera/, 'background prop layer should include an animated camera asset');
+assert.match(background, /floating-prop-basket/, 'background prop layer should include an animated basket asset');
+assert.match(background, /floating-prop-starfish/, 'background prop layer should include an animated starfish asset');
+for (const animatedAsset of [
+  'generated/slices/coastal-camera.png',
+  'generated/woven-basket-cutout.png',
+  'generated/slices/receipt-seascape-postcard.png',
+]) {
+  assert.match(background + css, new RegExp(animatedAsset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${animatedAsset} must be used by the animated decoration layer`);
+}
 
 for (const oldAsset of [
   'beach-market-street.svg',
@@ -137,8 +174,8 @@ for (const oldAsset of [
   assert.doesNotMatch(background, new RegExp(oldAsset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${oldAsset} must be retired from the background layer`);
 }
 
-for (const retiredSpriteSheet of ['coastal-sticker-sheet.png', 'receipt-postcard-set.png', 'market-props-strip.png']) {
-  assert.doesNotMatch(background, new RegExp(retiredSpriteSheet.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${retiredSpriteSheet} must be replaced by sliced assets in the background layer`);
+for (const controlledBackgroundAsset of ['coastal-camera.png', 'woven-basket-cutout.png', 'receipt-seascape-postcard.png']) {
+  assert.match(background, new RegExp(controlledBackgroundAsset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${controlledBackgroundAsset} must be used as a controlled animated background asset`);
 }
 
 for (const snippet of [
@@ -184,6 +221,34 @@ assert.match(background, /aria-hidden="true"/, 'decorative generated scene must 
 for (const cardAsset of ['coastal-scallop-shell.png', 'receipt-kraft-tag.png', 'props-sea-glass.png']) {
   assert.match(css, new RegExp(cardAsset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${cardAsset} must decorate cards from CSS`);
 }
+
+for (const selector of [
+  '.content-card--postcard',
+  '.content-card--receipt',
+  '.content-card--basket',
+  '.decor-profile-shell::after',
+  '.decor-tools-crate::after',
+  '.project-chapter-card--research-stamp::after',
+  '.conclusion-card--closing-letter::after',
+]) {
+  assert.match(css, new RegExp(selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${selector} must exist in the decoration system`);
+}
+
+for (const selector of [
+  '.route-avatar::after',
+  '.floating-market-props',
+  '.floating-prop-camera',
+  '.floating-prop-basket',
+  '.floating-prop-starfish',
+  '@keyframes avatar-corner-float',
+  '@keyframes prop-drift',
+]) {
+  assert.match(css, new RegExp(selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${selector} must exist for animated decorative assets`);
+}
+
+assert.match(css, /\.floating-prop\s*{[^}]*opacity:\s*0\.(?:4|5|6)/s, 'floating background props should be more visible for a stylized look');
+assert.match(css, /\.floating-prop-camera\s*{[^}]*width:\s*clamp\(220px,\s*24vw,\s*380px\)/s, 'camera background prop should use a large asset scale');
+assert.match(css, /\.floating-prop-starfish\s*{[^}]*width:\s*clamp\(240px,\s*30vw,\s*460px\)/s, 'starfish/background sheet prop should use a large asset scale');
 
 const backgroundVeil = css.match(/\.beach-market-background::after\s*{[^}]*}/s)?.[0] ?? '';
 assert.doesNotMatch(backgroundVeil, /rgba\(248,\s*243,\s*234,\s*0\.(?:7|8|9)\)/, 'beige background veil must not cover generated art');
