@@ -71,11 +71,11 @@ export default function AboutPage() {
       <section className="content-section" id="about-profile">
         <SectionTitle
           eyebrow="About me"
-          title="Một người kể chuyện pháp luật dễ gần"
+          title="Pháp luật dễ tiếp cận hơn qua góc nhìn sinh viên Luật cùng công nghệ số"
           icon="Sparkles"
         >
-          Portfolio này phản chiếu cách Tú học và làm việc: chính xác trong
-          thông tin, mềm mại trong trình bày và chân thành trong kết nối.
+          Portfolio này phản ánh cách tôi học tập và làm việc: chính xác trong
+          thông tin, tinh tế trong trình bày và chân thành trong kết nối
         </SectionTitle>
 
         <div className="about-grid">

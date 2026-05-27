@@ -67,9 +67,9 @@ export const portfolioData = {
     personality: ['Sáng tạo', 'Cá nhân hóa', 'Thân thiện', 'Dễ tiếp cận'],
     intro:
       'Đây không phải là một kho lưu trữ tài liệu khô khan, mà là một không gian mở nơi kiến thức pháp lý và công nghệ được kể lại bằng ngôn ngữ của sự sáng tạo, tính thẩm mỹ và tinh thần kết nối chân thành.',
-    goal: 'Trở thành chuyên gia pháp chế doanh nghiệp kiêm người sáng tạo nội dung pháp lý, dùng tư duy thẩm mỹ và công nghệ để biến điều luật phức tạp thành sản phẩm có hồn, đẹp mắt và dễ hiểu.',
+    goal: 'Mình mong muốn trở thành cầu nối giữa pháp luật và cộng đồng. Là một sinh viên Luật, mình kết hợp kiến thức chuyên môn vững chắc với tư duy thẩm mỹ và công nghệ số nhằm biến những quy định pháp lý phức tạp thành nội dung dễ hiểu, tinh tế và giàu giá trị cảm xúc.',
     portfolioGoal:
-      'Portfolio hệ thống hóa quá trình thực hành kỹ năng số và chứng minh rằng sinh viên Luật có thể làm chủ công nghệ bằng tư duy nghệ thuật, rành mạch và đầy cảm hứng.',
+      'Portfolio này hệ thống hóa hành trình thực hành kỹ năng số của mình, đồng thời chứng minh rằng sinh viên Luật hoàn toàn có thể làm chủ công nghệ và sáng tạo nội dung một cách chuyên nghiệp.',
   },
   principles: [
     {
