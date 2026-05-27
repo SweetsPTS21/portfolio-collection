@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 190" role="img" aria-label="Seahorse">
-  <path d="M78 23c-30-17-58 5-56 34 1 23 20 38 45 34-4 20-8 42 11 57 18 14 1 34-24 18 20 25 66 11 62-23-3-24-20-35-16-64 4-30 22-43-22-56Z" fill="#CDB8FF"/>
-  <path d="M72 47c21 3 38 1 52-9-6 17-23 28-45 29Z" fill="#FFB785"/>
-  <circle cx="57" cy="49" r="6" fill="#fff"/>
-  <circle cx="59" cy="49" r="3" fill="#17364D"/>
-  <path d="M79 90c-18 14-17 31 0 51" fill="none" stroke="#FFF4C8" stroke-width="8" stroke-linecap="round"/>
-  <path d="M43 86c-18 17-22 37-8 58" fill="none" stroke="#7FE3C6" stroke-width="8" stroke-linecap="round"/>
-</svg>

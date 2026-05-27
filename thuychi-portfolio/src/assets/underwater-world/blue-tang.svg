@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 110" role="img" aria-label="Blue tang">
-  <path d="M24 56 2 31v50z" fill="#FFE08A"/>
-  <ellipse cx="92" cy="56" rx="78" ry="39" fill="#68C7F5"/>
-  <path d="M48 37c34 25 67 26 106 2-17 30-45 45-84 44-18 0-29-13-22-46Z" fill="#17364D" opacity=".82"/>
-  <path d="M66 20c17 8 25 19 22 36 22-11 27-25-22-36Z" fill="#7FE3C6"/>
-  <circle cx="142" cy="48" r="6" fill="#fff"/>
-  <circle cx="144" cy="49" r="3.5" fill="#17364D"/>
-</svg>

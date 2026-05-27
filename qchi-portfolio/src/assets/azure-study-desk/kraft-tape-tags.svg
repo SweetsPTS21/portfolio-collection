@@ -1,9 +1,0 @@
-<svg width="500" height="360" viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kraft tape labels and desk tags">
-  <rect x="54" y="64" width="172" height="56" rx="12" fill="#B98245" transform="rotate(-8 54 64)"/>
-  <rect x="292" y="60" width="148" height="54" rx="12" fill="#FFF0CE" stroke="#C49A5A" stroke-width="5" transform="rotate(7 292 60)"/>
-  <rect x="96" y="172" width="154" height="98" rx="16" fill="#B98245"/>
-  <circle cx="126" cy="202" r="10" fill="#FFF7EA"/>
-  <path d="M146 202H214M126 236H224" stroke="#FFF7EA" stroke-width="7" stroke-linecap="round"/>
-  <rect x="276" y="166" width="142" height="102" rx="18" fill="#7B4D2E" opacity=".92"/>
-  <path d="M300 202H386M300 234H362" stroke="#FFE7B2" stroke-width="7" stroke-linecap="round"/>
-</svg>

@@ -1,7 +1,0 @@
-<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layered walnut desk surface">
-  <rect x="0" y="86" width="1200" height="334" rx="44" fill="#7B4D2E"/>
-  <path d="M0 132C120 98 230 126 354 102C486 76 572 128 718 104C865 80 988 103 1200 72V420H0V132Z" fill="#8B5A36" opacity=".72"/>
-  <path d="M62 168C176 142 255 171 360 148M492 172C610 132 700 184 832 144M908 212C1018 184 1090 207 1168 184M106 304C270 270 388 318 544 282M666 316C806 284 936 326 1082 292" stroke="#A87045" stroke-width="13" stroke-linecap="round" opacity=".55"/>
-  <path d="M74 122H1126" stroke="#C49A5A" stroke-width="5" stroke-linecap="round" opacity=".32"/>
-  <path d="M92 374H1120" stroke="#4E2F1F" stroke-width="18" stroke-linecap="round" opacity=".2"/>
-</svg>

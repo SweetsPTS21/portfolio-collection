@@ -1,7 +1,0 @@
-<svg width="560" height="300" viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blue and kraft index tabs">
-  <path d="M42 76H182C196 76 208 88 208 102V224H42V76Z" fill="#2E86C1"/>
-  <path d="M176 110H322C336 110 348 122 348 136V252H176V110Z" fill="#B98245"/>
-  <path d="M314 58H478C492 58 504 70 504 84V208H314V58Z" fill="#FFF0CE" stroke="#C49A5A" stroke-width="7"/>
-  <path d="M72 124H160M206 160H300M350 112H460" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity=".78"/>
-  <path d="M350 152H438" stroke="#B98245" stroke-width="8" stroke-linecap="round" opacity=".78"/>
-</svg>

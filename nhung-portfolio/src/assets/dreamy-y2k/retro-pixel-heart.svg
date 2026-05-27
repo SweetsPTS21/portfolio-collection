@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 144" role="img" aria-label="Retro pixel heart sticker">
-  <g filter="drop-shadow(0 8px 8px rgba(124,95,160,.24))">
-    <path d="M32 8h32v16h32V8h32v16h16v48h-16v16h-16v16H96v16H64v-16H48V88H32V72H16V24h16Z" fill="#fff"/>
-    <path d="M32 24h32v16h32V24h32v16h16v32h-16v16h-16v16H96v16H64v-16H48V88H32V72H16V40h16Z" fill="#F9A8D4"/>
-    <path d="M64 40h32v16H64Z" fill="#DDD6FE" opacity=".8"/>
-    <path d="M96 56h32v16H96Z" fill="#BAE6FD" opacity=".75"/>
-  </g>
-</svg>

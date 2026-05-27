@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-label="Simple seagull silhouettes">
-  <g fill="none" stroke="#18384A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".64">
-    <path d="M22 70c42-48 82-48 124 0 42-48 82-48 124 0"/>
-    <path d="M172 42c22-24 44-24 66 0 22-24 44-24 66 0" opacity=".58"/>
-    <path d="M58 28c16-18 32-18 48 0 16-18 32-18 48 0" opacity=".44"/>
-  </g>
-  <circle cx="146" cy="69" r="5" fill="#FFD978" opacity=".8"/>
-</svg>

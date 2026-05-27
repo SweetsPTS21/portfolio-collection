@@ -1,9 +1,0 @@
-<svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paper and dust particles">
-  <rect x="42" y="46" width="54" height="34" rx="6" fill="#FFFDF7" stroke="#CFE5F4" stroke-width="4" transform="rotate(-9 42 46)"/>
-  <rect x="226" y="48" width="62" height="40" rx="7" fill="#FFF0CE" stroke="#B98245" stroke-width="4" transform="rotate(8 226 48)"/>
-  <rect x="140" y="154" width="70" height="44" rx="8" fill="#EFF8FF" stroke="#8DCBF5" stroke-width="4" transform="rotate(-5 140 154)"/>
-  <circle cx="108" cy="132" r="6" fill="#B98245" opacity=".55"/>
-  <circle cx="276" cy="154" r="5" fill="#2E86C1" opacity=".45"/>
-  <circle cx="64" cy="178" r="4" fill="#C49A5A" opacity=".5"/>
-  <circle cx="318" cy="108" r="4" fill="#8DCBF5" opacity=".6"/>
-</svg>

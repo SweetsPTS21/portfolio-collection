@@ -1,8 +1,0 @@
-<svg width="430" height="340" viewBox="0 0 430 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brass clips pins and fasteners">
-  <path d="M92 94C92 54 122 32 158 40C194 48 212 84 202 122L178 214C168 252 126 274 92 252C64 234 56 198 72 168L122 74" stroke="#C49A5A" stroke-width="20" stroke-linecap="round"/>
-  <circle cx="298" cy="98" r="34" fill="#C49A5A"/>
-  <circle cx="298" cy="98" r="14" fill="#FFF7EA" opacity=".7"/>
-  <path d="M298 132L286 232" stroke="#7B4D2E" stroke-width="9" stroke-linecap="round"/>
-  <rect x="238" y="210" width="132" height="48" rx="18" fill="#C49A5A" transform="rotate(-8 238 210)"/>
-  <path d="M266 230H344" stroke="#FFF7EA" stroke-width="7" stroke-linecap="round" opacity=".68"/>
-</svg>

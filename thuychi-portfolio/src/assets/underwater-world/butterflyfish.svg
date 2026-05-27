@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 108" role="img" aria-label="Butterflyfish">
-  <path d="M26 54 4 30v48z" fill="#FF9DB4"/>
-  <ellipse cx="88" cy="54" rx="70" ry="36" fill="#FFE08A"/>
-  <path d="M56 23c10 20 10 43 0 62M92 18c-12 25-12 47 0 72M124 27c-9 18-9 35 0 52" stroke="#FF9DB4" stroke-width="9" stroke-linecap="round"/>
-  <path d="M82 18c21 8 29 23 21 43 27-13 32-30-21-43Z" fill="#CDB8FF" opacity=".72"/>
-  <circle cx="137" cy="47" r="6" fill="#17364D"/>
-</svg>

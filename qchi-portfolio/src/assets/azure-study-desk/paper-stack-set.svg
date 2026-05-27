@@ -1,8 +1,0 @@
-<svg width="520" height="420" viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack of research papers">
-  <rect x="76" y="108" width="310" height="218" rx="18" fill="#D9EBF6" transform="rotate(-8 76 108)"/>
-  <rect x="116" y="66" width="324" height="230" rx="18" fill="#FFF0CE" transform="rotate(7 116 66)"/>
-  <rect x="82" y="82" width="338" height="248" rx="20" fill="#FFFDF7" stroke="#CFE5F4" stroke-width="7"/>
-  <path d="M128 144H348M128 188H312M128 232H360M128 276H290" stroke="#8DCBF5" stroke-width="8" stroke-linecap="round"/>
-  <rect x="320" y="102" width="82" height="34" rx="10" fill="#B98245" opacity=".82"/>
-  <path d="M372 82L420 82L420 130" stroke="#CFE5F4" stroke-width="6" stroke-linejoin="round"/>
-</svg>
