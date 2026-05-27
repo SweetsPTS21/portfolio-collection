@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Flamingo decoration">
+  <path d="M75 178c31 10 74 10 111-4" fill="none" stroke="#5BBBEF" stroke-width="16" stroke-linecap="round" opacity=".35"/>
+  <path d="M96 82c10-39 47-56 67-31 16 20 2 46-22 51-23 5-41-4-45-20Z" fill="#FF9FB0"/>
+  <path d="M120 95c-8 36-4 69 13 100" fill="none" stroke="#FF9FB0" stroke-width="10" stroke-linecap="round"/>
+  <path d="M143 48c9-25-3-36-20-29-12 5-19 17-18 33" fill="none" stroke="#FF9FB0" stroke-width="12" stroke-linecap="round"/>
+  <path d="M119 20c-5 4-7 12-3 19 10 3 19 0 26-8-4-13-13-17-23-11Z" fill="#FFD8E2"/>
+  <path d="M138 30c12-1 20 3 24 12-5 7-13 11-24 12" fill="#12324A"/>
+  <circle cx="127" cy="27" r="3" fill="#12324A"/>
+  <path d="M132 193c-13 8-24 7-33-1" fill="none" stroke="#FF9FB0" stroke-width="7" stroke-linecap="round"/>
+</svg>
