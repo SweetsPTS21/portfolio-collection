@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Cotton Candy Cloud Base -->
+  <g class="cotton-cloud" fill="#FCF5FF" filter="drop-shadow(0 8px 12px rgba(255, 163, 223, 0.25))">
+    <ellipse cx="60" cy="140" rx="30" ry="25" fill="#FFE893" opacity="0.8"/>
+    <ellipse cx="140" cy="140" rx="30" ry="25" fill="#A3D8FF" opacity="0.8"/>
+    <ellipse cx="100" cy="150" rx="45" ry="30" fill="#FFA3DF" opacity="0.9"/>
+    <ellipse cx="80" cy="130" rx="35" ry="25" fill="#FCF5FF"/>
+    <ellipse cx="120" cy="130" rx="35" ry="25" fill="#FCF5FF"/>
+  </g>
+
+  <!-- Unicorn Body -->
+  <g class="unicorn-body" transform="translate(0, -10)">
+    <!-- Round Chubby Body -->
+    <ellipse cx="100" cy="90" rx="42" ry="38" fill="#FCF5FF" stroke="#FFA3DF" stroke-width="3"/>
+    
+    <!-- Belly (Soft Pink) -->
+    <ellipse cx="100" cy="98" rx="25" ry="20" fill="#FFEBF6"/>
+
+    <!-- Cute Chubby Feet -->
+    <ellipse cx="75" cy="122" rx="12" ry="10" fill="#FCF5FF" stroke="#FFA3DF" stroke-width="2"/>
+    <ellipse cx="75" cy="122" rx="8" ry="4" fill="#FFA3DF"/>
+    <ellipse cx="125" cy="122" rx="12" ry="10" fill="#FCF5FF" stroke="#FFA3DF" stroke-width="2"/>
+    <ellipse cx="125" cy="122" rx="8" ry="4" fill="#FFA3DF"/>
+    
+    <!-- Ears -->
+    <path d="M72,55 C65,40 78,35 80,48 Z" fill="#FCF5FF" stroke="#FFA3DF" stroke-width="2"/>
+    <path d="M74,53 C69,44 76,41 78,49 Z" fill="#FFA3DF"/>
+    
+    <path d="M128,55 C135,40 122,35 120,48 Z" fill="#FCF5FF" stroke="#FFA3DF" stroke-width="2"/>
+    <path d="M126,53 C131,44 124,41 122,49 Z" fill="#FFA3DF"/>
+
+    <!-- Rainbow Mane (Behind Horn) -->
+    <path d="M85,42 C85,25 100,20 100,32 Z" fill="#A3D8FF"/>
+    <path d="M100,32 C100,20 115,25 115,42 Z" fill="#FFE893"/>
+
+    <!-- Shining Rainbow Horn -->
+    <g class="rainbow-horn" id="horn-glow">
+      <path d="M94,40 L100,10 L106,40 Z" fill="url(#horn-gradient)" stroke="#FFA3DF" stroke-width="1.5"/>
+      <line x1="97" y1="30" x2="103" y2="28" stroke="#FCF5FF" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="95" y1="20" x2="101" y2="18" stroke="#FCF5FF" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="76" cy="85" rx="8" ry="5" fill="#FFA3DF" opacity="0.6"/>
+    <ellipse cx="124" cy="85" rx="8" ry="5" fill="#FFA3DF" opacity="0.6"/>
+
+    <!-- Large Twinkling Eyes (Sleeping style or happy curved) -->
+    <!-- We make curved happy closed eyes for maximum cuteness -->
+    <path d="M72,75 Q82,85 88,75" fill="none" stroke="#441D35" stroke-width="3" stroke-linecap="round"/>
+    <path d="M112,75 Q118,85 128,75" fill="none" stroke="#441D35" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Tiny Smile -->
+    <path d="M96,86 Q100,90 104,86" fill="none" stroke="#441D35" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sparkle stars around -->
+  <g class="sparkles" fill="#FFE893">
+    <path d="M50,45 Q55,45 55,40 Q55,45 60,45 Q55,45 55,50 Q55,45 50,45" opacity="0.8"/>
+    <path d="M150,55 Q155,55 155,50 Q155,55 160,55 Q155,55 155,60 Q155,55 150,55" opacity="0.8"/>
+  </g>
+
+  <defs>
+    <linearGradient id="horn-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFA3DF" />
+      <stop offset="35%" stop-color="#FFE893" />
+      <stop offset="70%" stop-color="#8EECD4" />
+      <stop offset="100%" stop-color="#A3D8FF" />
+    </linearGradient>
+  </defs>
+</svg>
