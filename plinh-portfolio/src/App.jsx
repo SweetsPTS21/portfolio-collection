@@ -53,7 +53,6 @@ export default function App() {
   return (
     <ConfigProvider theme={theme}>
       <div className="min-h-screen relative overflow-hidden flex flex-col justify-between z-10 selection:bg-[#588157]/30 selection:text-[#3A5A40]">
-        
         {/* Unified nature layers: sunlight dapple, corner branches sway, sparkles and falling leaves */}
         <NatureBackground />
 
@@ -62,7 +61,10 @@ export default function App() {
           <BotanicalNav activeTab={activeTab} setActiveTab={setActiveTab} />
 
           {/* Main Content with framer-motion AnimatePresence for transitions */}
-          <main className="flex-grow py-8 relative" aria-label={`Đặng Phương Linh Portfolio - Trang ${activeTab}`}>
+          <main
+            className="flex-grow py-8 relative"
+            aria-label={`Đặng Phương Linh Portfolio - Trang ${activeTab}`}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
