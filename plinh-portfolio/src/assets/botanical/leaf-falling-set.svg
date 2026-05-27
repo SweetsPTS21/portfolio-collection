@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Leaf Type 1: Rounded Sage Leaf -->
+    <g id="leaf-1">
+      <path d="M50,15 C65,30 65,55 50,75 C35,55 35,30 50,15 Z" fill="#A3B18A" fill-opacity="0.8" stroke="#588157" stroke-width="1.5" />
+      <path d="M50,15 L50,75" stroke="#588157" stroke-width="1" />
+      <path d="M50,30 Q43,35 40,40" stroke="#588157" stroke-width="0.8" fill="none" />
+      <path d="M50,42 Q57,47 60,52" stroke="#588157" stroke-width="0.8" fill="none" />
+      <path d="M50,54 Q43,59 40,64" stroke="#588157" stroke-width="0.8" fill="none" />
+    </g>
+    <!-- Leaf Type 2: Narrow Leaf -->
+    <g id="leaf-2">
+      <path d="M50,10 C62,35 58,65 50,85 C42,65 38,35 50,10 Z" fill="#588157" fill-opacity="0.7" stroke="#3A5A40" stroke-width="1.5" />
+      <path d="M50,10 L50,85" stroke="#3A5A40" stroke-width="1" />
+    </g>
+    <!-- Leaf Type 3: Oak-like Lobed Leaf -->
+    <g id="leaf-3">
+      <path d="M50,15 C58,22 62,25 60,32 C58,35 55,36 57,42 C59,48 57,52 54,58 C51,64 50,72 50,75 C50,72 49,64 46,58 C43,52 41,48 43,42 C45,36 42,35 40,32 C38,25 42,22 50,15 Z" fill="#DAD7CD" fill-opacity="0.9" stroke="#A3B18A" stroke-width="1.5" />
+      <path d="M50,15 L50,75" stroke="#A3B18A" stroke-width="1" />
+    </g>
+  </defs>
+</svg>

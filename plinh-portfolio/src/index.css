@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --leaf: #588157;
+  --white: #F5F5F5;
+  --cream: #DAD7CD;
+  --beige: #A3B18A;
+  --moss: #3A5A40;
+  --wood-gold: #D6A25F;
+  --paper-grain: rgba(0, 0, 0, 0.015);
+}
+
+/* Tăng base font size toàn dự án lên 18px để tất cả chữ to hơn đồng bộ */
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--moss);
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  /* Paper grain simulation */
+  background-image: 
+    radial-gradient(var(--paper-grain) 1px, transparent 0),
+    radial-gradient(var(--paper-grain) 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--moss);
+}
+
+/* Readable Tailwind typography scale */
+.text-\[10px\] {
+  font-size: 0.78rem;
+  line-height: 1.35rem;
+}
+
+.text-xs {
+  font-size: 0.86rem;
+  line-height: 1.45rem;
+}
+
+.text-sm {
+  font-size: 0.98rem;
+  line-height: 1.6rem;
+}
+
+.text-base {
+  font-size: 1.08rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.22rem;
+  line-height: 1.85rem;
+}
+
+.text-xl {
+  font-size: 1.42rem;
+  line-height: 2rem;
+}
+
+.text-2xl {
+  font-size: 1.72rem;
+  line-height: 2.25rem;
+}
+
+.text-3xl {
+  font-size: 2.05rem;
+  line-height: 2.45rem;
+}
+
+.text-4xl {
+  font-size: 2.45rem;
+  line-height: 2.9rem;
+}
+
+/* Botanical canopy background */
+.nature-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.nature-bg img,
+.nature-bg span {
+  user-select: none;
+}
+
+.nature-bg__paper,
+.nature-bg__wash,
+.nature-bg__sun-rays {
+  position: absolute;
+  inset: 0;
+}
+
+.nature-bg__paper {
+  z-index: 0;
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+}
+
+.nature-bg__wash {
+  z-index: 1;
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(88, 129, 87, 0.18), transparent 32%),
+    radial-gradient(circle at 86% 18%, rgba(163, 177, 138, 0.28), transparent 30%),
+    radial-gradient(circle at 18% 86%, rgba(218, 215, 205, 0.55), transparent 34%),
+    radial-gradient(circle at 82% 82%, rgba(58, 90, 64, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(245, 245, 245, 0.72), rgba(218, 215, 205, 0.22));
+  animation: nature-bg-wash 18s ease-in-out infinite alternate;
+}
+
+.nature-bg__sun-rays {
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: min(92vw, 980px) auto;
+  background-position: 52% 0;
+  opacity: 0.22;
+  filter: blur(0.2px);
+  mix-blend-mode: multiply;
+  animation: nature-bg-rays 21s ease-in-out infinite alternate;
+}
+
+.nature-bg__canopy {
+  position: absolute;
+  top: -2.5rem;
+  z-index: 4;
+  width: clamp(300px, 44vw, 680px);
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 18px 28px rgba(58, 90, 64, 0.08));
+}
+
+.nature-bg__canopy--left {
+  left: -2.5rem;
+  transform-origin: top left;
+  animation: nature-bg-sway-left 12s ease-in-out infinite alternate;
+}
+
+.nature-bg__canopy--right {
+  right: -2.5rem;
+  transform-origin: top right;
+  animation: nature-bg-sway-right 13.5s ease-in-out infinite alternate;
+}
+
+.nature-bg__vine {
+  position: absolute;
+  top: -3rem;
+  z-index: 3;
+  width: clamp(84px, 10vw, 150px);
+  height: min(118vh, 840px);
+  object-fit: cover;
+  opacity: 0.78;
+  filter: drop-shadow(0 12px 18px rgba(58, 90, 64, 0.06));
+}
+
+.nature-bg__vine--left {
+  left: -1.6rem;
+  animation: nature-bg-vine-left 16s ease-in-out infinite alternate;
+}
+
+.nature-bg__vine--right {
+  right: -1.6rem;
+  animation: nature-bg-vine-right 17s ease-in-out infinite alternate;
+}
+
+.nature-bg__edge {
+  position: absolute;
+  z-index: 5;
+  width: clamp(96px, 14vw, 190px);
+  height: auto;
+  opacity: 0.28;
+  filter: blur(0.1px) drop-shadow(0 10px 22px rgba(58, 90, 64, 0.06));
+  animation: nature-bg-edge-float 19s ease-in-out infinite alternate;
+}
+
+.nature-bg__edge--left-top {
+  left: clamp(0.5rem, 3vw, 2.5rem);
+  top: clamp(8rem, 18vh, 13rem);
+  transform: rotate(-15deg);
+}
+
+.nature-bg__edge--right-mid {
+  right: clamp(0.5rem, 3vw, 2.5rem);
+  top: 44vh;
+  transform: rotate(14deg);
+  animation-duration: 23s;
+}
+
+.nature-bg__edge--left-bottom {
+  left: clamp(0.25rem, 2vw, 2rem);
+  bottom: 5vh;
+  transform: rotate(10deg);
+  animation-duration: 21s;
+}
+
+.nature-bg__pressed {
+  position: absolute;
+  left: var(--left);
+  top: var(--top);
+  z-index: 2;
+  width: clamp(76px, 13vw, var(--size));
+  height: auto;
+  opacity: var(--opacity);
+  transform: translate(-50%, -50%) rotate(var(--rotate));
+  filter: grayscale(0.05) blur(0.15px);
+  animation: nature-bg-pressed var(--duration) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+
+.nature-bg__pollen {
+  position: absolute;
+  left: var(--left);
+  bottom: -2rem;
+  z-index: 6;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  background: var(--wood-gold);
+  opacity: 0;
+  box-shadow: 0 0 12px rgba(214, 162, 95, 0.36);
+  filter: blur(0.8px);
+  animation: nature-bg-pollen var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+
+.nature-bg__leaf {
+  position: absolute;
+  left: var(--left);
+  top: -7rem;
+  z-index: 7;
+  width: var(--size);
+  height: var(--size);
+  object-fit: contain;
+  opacity: 0;
+  filter: drop-shadow(0 8px 12px rgba(58, 90, 64, 0.08));
+  animation: nature-bg-leaf-fall var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes nature-bg-wash {
+  0% { transform: scale(1) translate3d(0, 0, 0); opacity: 0.82; }
+  100% { transform: scale(1.04) translate3d(-1.5rem, 1rem, 0); opacity: 1; }
+}
+
+@keyframes nature-bg-rays {
+  0% { transform: translate3d(-1rem, -0.5rem, 0) scale(1); opacity: 0.16; }
+  50% { opacity: 0.28; }
+  100% { transform: translate3d(1.2rem, 0.7rem, 0) scale(1.05); opacity: 0.2; }
+}
+
+@keyframes nature-bg-sway-left {
+  0% { transform: rotate(-1deg) scale(1); }
+  100% { transform: rotate(3deg) scale(1.025); }
+}
+
+@keyframes nature-bg-sway-right {
+  0% { transform: rotate(1deg) scale(1); }
+  100% { transform: rotate(-3deg) scale(1.02); }
+}
+
+@keyframes nature-bg-vine-left {
+  0% { transform: translate3d(0, -0.5rem, 0) rotate(-1deg); }
+  100% { transform: translate3d(0.5rem, 1.25rem, 0) rotate(2deg); }
+}
+
+@keyframes nature-bg-vine-right {
+  0% { transform: translate3d(0, 0.3rem, 0) rotate(1deg); }
+  100% { transform: translate3d(-0.6rem, 1.6rem, 0) rotate(-2deg); }
+}
+
+@keyframes nature-bg-edge-float {
+  0% { margin-top: 0; opacity: 0.2; }
+  100% { margin-top: 1.2rem; opacity: 0.34; }
+}
+
+@keyframes nature-bg-pressed {
+  0% { margin-left: -0.5rem; margin-top: 0; }
+  100% { margin-left: 0.8rem; margin-top: 1.1rem; }
+}
+
+@keyframes nature-bg-pollen {
+  0% { transform: translate3d(0, 0, 0) scale(0.65); opacity: 0; }
+  18% { opacity: var(--opacity); }
+  76% { opacity: var(--opacity); }
+  100% { transform: translate3d(var(--drift), -108vh, 0) scale(1.4); opacity: 0; }
+}
+
+@keyframes nature-bg-leaf-fall {
+  0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.78); opacity: 0; }
+  8% { opacity: var(--opacity); }
+  42% { transform: translate3d(calc(var(--drift) * 0.72), 46vh, 0) rotate(calc(var(--spin) * 2.8)) scale(1); }
+  82% { opacity: var(--opacity); }
+  100% { transform: translate3d(var(--drift), 112vh, 0) rotate(calc(var(--spin) * 6)) scale(0.9); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .nature-bg__canopy {
+    top: -1.25rem;
+    width: clamp(220px, 72vw, 420px);
+    opacity: 0.68;
+  }
+
+  .nature-bg__vine {
+    width: 74px;
+    opacity: 0.42;
+  }
+
+  .nature-bg__edge,
+  .nature-bg__pressed {
+    opacity: 0.08;
+  }
+
+  .nature-bg__leaf:nth-of-type(n + 18),
+  .nature-bg__pollen:nth-of-type(n + 12) {
+    display: none;
+  }
+}
+
+/* Organic curved sheet for cards */
+.pulp-card {
+  position: relative;
+  background-color: var(--cream);
+  border: 1px solid var(--beige);
+  /* Organic leaf shape asymmetric border radius */
+  border-radius: 24px 8px 24px 8px;
+  box-shadow: 0 8px 25px rgba(58, 90, 64, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+.pulp-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 100%);
+}
+
+/* Card inner double border (thin gold border) */
+.card-double-border {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--wood-gold);
+  opacity: 0.45;
+  border-radius: 20px 6px 20px 6px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Faint botanical leaf watermark in background of card */
+.card-leaf-watermark {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,15 C65,30 65,55 50,75 C35,55 35,30 50,15 Z' fill='%23588157'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pulp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(58, 90, 64, 0.12);
+  border-color: var(--leaf);
+}
+
+/* Leaf Badge */
+.leaf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: rgba(163, 177, 138, 0.25);
+  color: var(--moss);
+  border: 1px solid rgba(163, 177, 138, 0.4);
+}
+
+/* Underline branch */
+.botanical-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.botanical-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,2 50,5 T100,5' fill='none' stroke='%23588157' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .nature-bg__wash,
+  .nature-bg__sun-rays,
+  .nature-bg__canopy,
+  .nature-bg__vine,
+  .nature-bg__edge,
+  .nature-bg__pressed,
+  .nature-bg__pollen,
+  .nature-bg__leaf {
+    animation: none !important;
+  }
+
+  .nature-bg__pollen,
+  .nature-bg__leaf {
+    display: none !important;
+  }
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--leaf);
+}
