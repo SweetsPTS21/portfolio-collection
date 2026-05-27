@@ -3,7 +3,7 @@ import { personalInfo } from '../../data/portfolioData';
 import PulpCard from '../ui/PulpCard';
 import { motion } from 'framer-motion';
 import { Sparkles, Music, Palette, Gamepad2, Award, Heart } from 'lucide-react';
-import avatarImg from '../../../public/avatar.jpg';
+import avatarImg from '../../../docs/avatar.jpg';
 
 export default function AboutSection() {
   const iconMap = {
