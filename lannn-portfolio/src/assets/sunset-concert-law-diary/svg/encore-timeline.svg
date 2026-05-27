@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title">
+  <title id="title">Encore timeline lights</title>
+  <path class="timelineCord" d="M30 112c110-92 202 92 320 0s212-76 380 18" fill="none" stroke="#351411" stroke-width="8" stroke-linecap="round"/>
+  <g class="sparkleDot">
+    <circle cx="94" cy="76" r="22" fill="#d9362b"/>
+    <circle cx="214" cy="138" r="22" fill="#f97316"/>
+    <circle cx="352" cy="112" r="22" fill="#f7b801"/>
+    <circle cx="496" cy="58" r="22" fill="#ff6b4a"/>
+    <circle cx="634" cy="106" r="22" fill="#ffd166"/>
+  </g>
+  <path d="M84 174h520" stroke="#f6b26b" stroke-width="4" stroke-dasharray="14 14" stroke-linecap="round"/>
+</svg>
