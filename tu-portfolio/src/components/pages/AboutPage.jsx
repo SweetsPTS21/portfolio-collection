@@ -28,6 +28,20 @@ export default function AboutPage() {
           <span className="kicker">Sweet legal studio</span>
           <h1>{profile.name}</h1>
           <p className="hero-section__lead">{profile.intro}</p>
+          <div className="profile-card__info">
+            <div>
+              <span>Ngành học</span>
+              <strong>{profile.major}</strong>
+            </div>
+            <div>
+              <span>Trường</span>
+              <strong>{profile.school}</strong>
+            </div>
+            <div>
+              <span>Phong cách</span>
+              <strong>{profile.personality.join(' · ')}</strong>
+            </div>
+          </div>
           <div className="hero-section__cta-row">
             <a href="#about-profile" className="primary-cta">
               <span>Khám phá hồ sơ</span>
@@ -45,20 +59,6 @@ export default function AboutPage() {
             <div className="profile-card__portrait">
               <img src={profile.avatar} alt={`Chân dung ${profile.name}`} />
               <span className="profile-card__sticker">✿</span>
-            </div>
-            <div className="profile-card__info">
-              <div>
-                <span>Ngành học</span>
-                <strong>{profile.major}</strong>
-              </div>
-              <div>
-                <span>Trường</span>
-                <strong>{profile.school}</strong>
-              </div>
-              <div>
-                <span>Phong cách</span>
-                <strong>{profile.personality.join(' · ')}</strong>
-              </div>
             </div>
           </div>
           <div className="hero-editorial__caption">
@@ -134,3 +134,5 @@ export default function AboutPage() {
     </div>
   );
 }
+
+

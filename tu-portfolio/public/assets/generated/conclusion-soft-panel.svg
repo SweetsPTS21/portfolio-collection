@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" fill="none">
-  <rect x="18" y="18" width="964" height="484" rx="24" fill="#FFFDF8" stroke="#D99AAA" stroke-width="2"/>
-  <rect x="44" y="44" width="912" height="432" rx="16" fill="#FAF6DF" opacity="0.62"/>
-  <path d="M156 118c26 38 26 78 0 116c-26-38-26-78 0-116Z" stroke="#EF7C82" stroke-width="4" opacity="0.42"/>
-  <path d="M98 176c38-26 78-26 116 0c-38 26-78 26-116 0Z" stroke="#EF7C82" stroke-width="4" opacity="0.42"/>
-  <path d="M820 316c24 36 24 72 0 108c-24-36-24-72 0-108Z" stroke="#D8D99A" stroke-width="4" opacity="0.58"/>
-  <path d="M766 370c36-24 72-24 108 0c-36 24-72 24-108 0Z" stroke="#D8D99A" stroke-width="4" opacity="0.58"/>
-  <path d="M280 160h440M280 222h360M280 284h420M280 346h300" stroke="#EBD9C4" stroke-width="10" stroke-linecap="round" opacity="0.46"/>
+  <rect x="18" y="18" width="964" height="484" rx="24" fill="#FFFAFC" stroke="#E9BFD0" stroke-width="2"/>
+  <rect x="44" y="44" width="912" height="432" rx="16" fill="#FFF4F8" opacity="0.62"/>
+  <path d="M156 118c26 38 26 78 0 116c-26-38-26-78 0-116Z" stroke="#D98AA8" stroke-width="4" opacity="0.42"/>
+  <path d="M98 176c38-26 78-26 116 0c-38 26-78 26-116 0Z" stroke="#D98AA8" stroke-width="4" opacity="0.42"/>
+  <path d="M820 316c24 36 24 72 0 108c-24-36-24-72 0-108Z" stroke="#F1B8CB" stroke-width="4" opacity="0.58"/>
+  <path d="M766 370c36-24 72-24 108 0c-36 24-72 24-108 0Z" stroke="#F1B8CB" stroke-width="4" opacity="0.58"/>
+  <path d="M280 160h440M280 222h360M280 284h420M280 346h300" stroke="#F8DCE8" stroke-width="10" stroke-linecap="round" opacity="0.46"/>
 </svg>
+

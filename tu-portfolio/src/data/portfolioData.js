@@ -1,7 +1,6 @@
 export const visualAssets = {
   background: '/assets/generated/sweet-legal-background.png',
   cardTexture: '/assets/generated/card-paper-texture.png',
-  projectStickerSheet: '/assets/generated/project-sticker-sheet.png',
   conclusionPanel: '/assets/generated/conclusion-soft-panel.png',
   decorations: [
     {
@@ -114,10 +113,10 @@ export const portfolioData = {
         'Cẩm Tú coi việc sắp xếp máy tính như trang trí lại căn phòng làm việc số: tạo thư mục gốc, phân chia tài liệu theo môn học, dự án cá nhân và kho podcast, sau đó dọn dẹp dữ liệu thừa để không gian luôn thoáng đãng.',
       pdf: '/docs/bt1.pdf',
       icon: 'FolderKanban',
-      accent: '#EF7C82',
+      accent: '#D98AA8',
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 1 visual sticker về thư mục, tài liệu và quản lý dữ liệu',
+        image: '/assets/decor/decor-folder.png',
+        alt: 'Chương 1 decor thư mục và quản lý dữ liệu',
         motif: 'folder',
       },
     },
@@ -131,10 +130,10 @@ export const portfolioData = {
         'Tú tra cứu cơ sở dữ liệu thư viện và tạp chí khoa học mở, chọn lọc 10 tài liệu tham khảo, đánh giá độ tin cậy theo tác giả, nhà xuất bản, tính cập nhật và trình bày trích dẫn theo Harvard.',
       pdf: '/docs/bt2.pdf',
       icon: 'SearchCheck',
-      accent: '#D8D99A',
+      accent: '#F1B8CB',
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 2 visual sticker về tìm kiếm học thuật và trích dẫn nguồn',
+        image: '/assets/decor/decor-law-book.png',
+        alt: 'Chương 2 decor sách luật và nghiên cứu học thuật',
         motif: 'research',
       },
     },
@@ -148,10 +147,10 @@ export const portfolioData = {
         'Tú thử nghiệm prompt để tóm tắt án lệ kinh doanh, giải thích khái niệm luật phức tạp và tạo câu hỏi ôn tập tương tác, từ đó học cách biến AI thành cộng sự học thuật ăn ý.',
       pdf: '/docs/bt3.pdf',
       icon: 'Sparkles',
-      accent: '#F3B6C2',
+      accent: '#F6C6D7',
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 3 visual sticker về AI, prompt và cộng sự học thuật',
+        image: '/assets/decor/decor-ai-sparkle.png',
+        alt: 'Chương 3 decor AI và prompt học thuật',
         motif: 'ai',
       },
     },
@@ -165,10 +164,10 @@ export const portfolioData = {
         'Tú cùng nhóm chuẩn bị chương trình nghị sự, tổ chức buổi họp Google Meet 30 phút, phân công điều phối và ghi chép, rồi thiết kế lại biên bản để chia sẻ trực quan.',
       pdf: '/docs/bt4.pdf',
       icon: 'UsersRound',
-      accent: '#EBD9C4',
+      accent: '#E9BFD0',
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 4 visual sticker về họp nhóm và hợp tác trực tuyến',
+        image: '/assets/decor/decor-laptop.png',
+        alt: 'Chương 4 decor laptop cho hợp tác trực tuyến',
         motif: 'meeting',
       },
     },
@@ -182,11 +181,11 @@ export const portfolioData = {
         'Đây là phần Tú yêu thích nhất: lên kịch bản thuyết trình pháp luật doanh nghiệp, tạo hình minh họa độc quyền, lắp ráp slide trên Canva và phân tích vai trò, ưu nhược điểm, đạo đức khi dùng AI tạo sinh.',
       pdf: '/docs/bt5.pdf',
       icon: 'Presentation',
-      accent: '#EF7C82',
+      accent: '#D98AA8',
       featured: true,
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 5 visual sticker về sáng tạo nội dung số và thiết kế slide',
+        image: '/assets/decor/decor-flower-sprig.png',
+        alt: 'Chương 5 decor hoa cho sáng tạo nội dung số',
         motif: 'content',
       },
     },
@@ -200,12 +199,12 @@ export const portfolioData = {
         'Tú nghiên cứu quy định về liêm chính học thuật, ghi lại minh bạch cách đặt câu lệnh và tự chỉnh sửa lập luận, sau đó xây dựng 7 nguyên tắc đạo đức cá nhân bằng infographic dễ tiếp cận.',
       pdf: '/docs/bt6.pdf',
       icon: 'ShieldCheck',
-      accent: '#D8D99A',
+      accent: '#F1B8CB',
       featured: true,
       flip: true,
       visual: {
-        image: visualAssets.projectStickerSheet,
-        alt: 'Chương 6 visual sticker về an toàn số và liêm chính học thuật',
+        image: '/assets/decor/decor-shield.png',
+        alt: 'Chương 6 decor khiên cho an toàn số và liêm chính học thuật',
         motif: 'integrity',
       },
     },
@@ -232,3 +231,7 @@ export const portfolioData = {
       'Cảm ơn thầy cô, bạn bè đồng hành và những người đã ghé thăm góc nhỏ này. Hy vọng portfolio mang lại một chút cảm hứng ngọt ngào trong ngày hôm nay.',
   },
 };
+
+
+
+

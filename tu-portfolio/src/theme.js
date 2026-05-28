@@ -1,14 +1,14 @@
 export const theme = {
   colors: {
-    cream: '#FAF6DF',
-    warmBeige: '#EBD9C4',
-    softPink: '#F3B6C2',
-    coral: '#EF7C82',
-    sage: '#D8D99A',
-    roseLine: '#D99AAA',
-    oliveText: '#8C8453',
-    ink: '#4C3F3F',
-    white: '#FFFDF8',
+    cream: '#FFF4F8',
+    warmBeige: '#F8DCE8',
+    softPink: '#F6C6D7',
+    coral: '#D98AA8',
+    sage: '#F1B8CB',
+    roseLine: '#E9BFD0',
+    oliveText: '#B9859D',
+    ink: '#5F4653',
+    white: '#FFFAFC',
   },
   fonts: {
     heading: '"Playfair Display", "Cormorant Garamond", Georgia, serif',
@@ -22,7 +22,8 @@ export const theme = {
     pill: '999px',
   },
   shadows: {
-    card: '0 10px 30px rgba(188, 108, 122, 0.12)',
-    hover: '0 16px 40px rgba(188, 108, 122, 0.18)',
+    card: '0 10px 30px rgba(185, 133, 157, 0.12)',
+    hover: '0 16px 40px rgba(185, 133, 157, 0.18)',
   },
 };
+

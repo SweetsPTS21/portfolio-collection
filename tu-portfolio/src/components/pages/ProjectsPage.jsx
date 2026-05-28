@@ -37,53 +37,22 @@ export default function ProjectsPage() {
                 </PdfLinkButton>
               }
             >
-              {project.flip ? (
-                <>
-                  <div className="project-card__content">
-                    <div>
-                      <span>Mục tiêu</span>
-                      <p>{project.objective}</p>
-                    </div>
-                    <div>
-                      <span>Quá trình thực hiện</span>
-                      <p>{project.process}</p>
-                    </div>
-                  </div>
-                  <div
-                    className={`project-card__visual project-card__visual--${project.visual.motif}`}
-                  >
-                    <img
-                      src={project.visual.image}
-                      alt={project.visual.alt}
-                      loading="lazy"
-                    />
-                    <span>{project.chapter}</span>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div
-                    className={`project-card__visual project-card__visual--${project.visual.motif}`}
-                  >
-                    <img
-                      src={project.visual.image}
-                      alt={project.visual.alt}
-                      loading="lazy"
-                    />
-                    <span>{project.chapter}</span>
-                  </div>
-                  <div className="project-card__content">
-                    <div>
-                      <span>Mục tiêu</span>
-                      <p>{project.objective}</p>
-                    </div>
-                    <div>
-                      <span>Quá trình thực hiện</span>
-                      <p>{project.process}</p>
-                    </div>
-                  </div>
-                </>
-              )}
+              <div
+                className={`project-card__decor project-card__decor--${project.visual.motif}`}
+                aria-hidden="true"
+              >
+                <img src={project.visual.image} alt="" loading="lazy" />
+              </div>
+              <div className="project-card__content">
+                <div>
+                  <span>Mục tiêu</span>
+                  <p>{project.objective}</p>
+                </div>
+                <div>
+                  <span>Quá trình thực hiện</span>
+                  <p>{project.process}</p>
+                </div>
+              </div>
             </SoftCard>
           </ScrollReveal>
         ))}
@@ -91,3 +60,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+

@@ -39,9 +39,15 @@ describe('tu portfolio contract', () => {
     expect(portfolioData.conclusion.futureDirection).toContain('chuyên gia pháp lý hiện đại');
   });
 
-  it('exposes the pastel editorial theme tokens from the README', () => {
-    expect(theme.colors.coral).toBe('#EF7C82');
-    expect(theme.colors.sage).toBe('#D8D99A');
+  it('exposes the pink prototype theme tokens from the design reference', () => {
+    expect(theme.colors.cream).toBe('#FFF4F8');
+    expect(theme.colors.warmBeige).toBe('#F8DCE8');
+    expect(theme.colors.softPink).toBe('#F6C6D7');
+    expect(theme.colors.coral).toBe('#D98AA8');
+    expect(theme.colors.sage).toBe('#F1B8CB');
+    expect(theme.colors.roseLine).toBe('#E9BFD0');
+    expect(theme.colors.oliveText).toBe('#B9859D');
+    expect(theme.colors.ink).toBe('#5F4653');
     expect(theme.fonts.body).toContain('Quicksand');
     expect(theme.radii.card).toBe('12px');
     expect(theme.radii.pill).toBe('999px');
@@ -53,7 +59,6 @@ describe('tu portfolio contract', () => {
       'cardTexture',
       'conclusionPanel',
       'decorations',
-      'projectStickerSheet',
     ]);
 
     Object.entries(portfolioData.visualAssets)
@@ -69,12 +74,62 @@ describe('tu portfolio contract', () => {
       expect(decoration.alt).toBe('');
     });
 
+    const projectImages = portfolioData.projects.map((project) => project.visual?.image);
+    expect(projectImages).toEqual([
+      '/assets/decor/decor-folder.png',
+      '/assets/decor/decor-law-book.png',
+      '/assets/decor/decor-ai-sparkle.png',
+      '/assets/decor/decor-laptop.png',
+      '/assets/decor/decor-flower-sprig.png',
+      '/assets/decor/decor-shield.png',
+    ]);
+
     portfolioData.projects.forEach((project) => {
-      expect(project.visual?.image).toMatch(/^\/assets\/generated\/.+\.png$/);
+      expect(project.visual?.image).toMatch(/^\/assets\/decor\/decor-.+\.png$/);
       expect(project.visual?.alt).toContain(project.chapter);
     });
   });
 
+  it('keeps generated source assets in the pink palette', () => {
+    const generatedSvgs = [
+      'public/assets/generated/card-paper-texture.svg',
+      'public/assets/generated/conclusion-soft-panel.svg',
+      'public/assets/generated/sweet-legal-background.svg',
+    ];
+    const retiredColors = ['#FAF6DF', '#EBD9C4', '#EF7C82', '#D8D99A', '#8C8453'];
+
+    portfolioData.projects.forEach((project) => {
+      expect(project.accent).toMatch(/^#(?:D98AA8|F1B8CB|F6C6D7|E9BFD0)$/);
+    });
+
+    generatedSvgs.forEach((svgPath) => {
+      const svg = readFileSync(svgPath, 'utf8').toUpperCase();
+      retiredColors.forEach((color) => {
+        expect(svg).not.toContain(color);
+      });
+    });
+  });
+
+  it('keeps About hero profile info in the copy and portrait square', () => {
+    const aboutSource = readFileSync('src/components/pages/AboutPage.jsx', 'utf8');
+    const styles = readFileSync('src/index.css', 'utf8');
+    const copyStart = aboutSource.indexOf('className="hero-section__copy"');
+    const infoStart = aboutSource.indexOf('className="profile-card__info"');
+    const ctaStart = aboutSource.indexOf('className="hero-section__cta-row"');
+    const editorialStart = aboutSource.indexOf('className="hero-editorial"');
+    const profileCardStart = aboutSource.indexOf('className="profile-card"');
+    const portraitRule = styles.match(/\.profile-card__portrait\s*\{[\s\S]*?\}/)?.[0] ?? '';
+    const portraitImageRule = styles.match(/\.profile-card__portrait img\s*\{[\s\S]*?\}/)?.[0] ?? '';
+
+    expect(copyStart).toBeGreaterThan(-1);
+    expect(infoStart).toBeGreaterThan(copyStart);
+    expect(infoStart).toBeLessThan(ctaStart);
+    expect(infoStart).toBeLessThan(editorialStart);
+    expect(profileCardStart).toBeGreaterThan(editorialStart);
+    expect(portraitRule).toContain('aspect-ratio: 1');
+    expect(portraitRule).not.toContain('border-radius: 50%');
+    expect(portraitImageRule).not.toContain('border-radius: 50%');
+  });
   it('keeps motion subtle and reduced-motion aware', () => {
     expect(motionConfig.defaultTransition.duration).toBeLessThanOrEqual(0.55);
     expect(motionConfig.reducedMotion).toBe('user');
@@ -104,3 +159,8 @@ describe('tu portfolio contract', () => {
     expect(styles).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*background-scene/);
   });
 });
+
+
+
+
+
