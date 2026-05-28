@@ -13,7 +13,7 @@ export default function Footer() {
           text-align: center;
           padding: 40px 20px;
           color: var(--text-secondary);
-          font-size: 0.85rem;
+          font-size: 0.95rem;
         }
         .footer-content {
           display: flex;
@@ -22,7 +22,7 @@ export default function Footer() {
           gap: 8px;
         }
         .footer-berry {
-          font-size: 1.2rem;
+          font-size: 1.35rem;
           animation: gentleFloat 3s ease-in-out infinite;
         }
       `}</style>

@@ -30,14 +30,46 @@ export default function GreenhouseHeroPage() {
         <div className="hero-greenhouse-frame">
           <svg viewBox="0 0 600 400" fill="none" className="hero-frame-svg">
             {/* Arch */}
-            <path d="M50 380 L50 120 Q300 20 550 120 L550 380" stroke="rgba(132,226,168,0.3)" strokeWidth="2" fill="none" />
+            <path
+              d="M50 380 L50 120 Q300 20 550 120 L550 380"
+              stroke="rgba(132,226,168,0.3)"
+              strokeWidth="2"
+              fill="none"
+            />
             {/* Panes */}
-            <line x1="200" y1="80" x2="200" y2="380" stroke="rgba(132,226,168,0.15)" strokeWidth="1" />
-            <line x1="400" y1="80" x2="400" y2="380" stroke="rgba(132,226,168,0.15)" strokeWidth="1" />
-            <line x1="50" y1="200" x2="550" y2="200" stroke="rgba(132,226,168,0.12)" strokeWidth="1" />
+            <line
+              x1="200"
+              y1="80"
+              x2="200"
+              y2="380"
+              stroke="rgba(132,226,168,0.15)"
+              strokeWidth="1"
+            />
+            <line
+              x1="400"
+              y1="80"
+              x2="400"
+              y2="380"
+              stroke="rgba(132,226,168,0.15)"
+              strokeWidth="1"
+            />
+            <line
+              x1="50"
+              y1="200"
+              x2="550"
+              y2="200"
+              stroke="rgba(132,226,168,0.12)"
+              strokeWidth="1"
+            />
             {/* Corner leaves */}
-            <path d="M60 360 C70 340, 90 345, 80 360 C90 355, 95 370, 80 375" fill="rgba(132,226,168,0.3)" />
-            <path d="M520 360 C530 340, 550 345, 540 360 C550 355, 555 370, 540 375" fill="rgba(132,226,168,0.3)" />
+            <path
+              d="M60 360 C70 340, 90 345, 80 360 C90 355, 95 370, 80 375"
+              fill="rgba(132,226,168,0.3)"
+            />
+            <path
+              d="M520 360 C530 340, 550 345, 540 360 C550 355, 555 370, 540 375"
+              fill="rgba(132,226,168,0.3)"
+            />
           </svg>
         </div>
 
@@ -47,61 +79,78 @@ export default function GreenhouseHeroPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
         >
+          <div className="hero-copy">
+            <motion.div
+              className="hero-berry-icon"
+              animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              🍓
+            </motion.div>
+
+            {/* Animated name with sparkle trail */}
+            <motion.h1
+              className="hero-name"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              {personalInfo.name}
+            </motion.h1>
+
+            <motion.p
+              className="hero-major"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              {personalInfo.major} — {personalInfo.school}
+            </motion.p>
+
+            <motion.p
+              className="hero-tagline"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              "{personalInfo.tagline}"
+            </motion.p>
+
+            <motion.div
+              className="hero-style"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.4, type: 'spring', stiffness: 200 }}
+            >
+              <LeafBadge>{personalInfo.style}</LeafBadge>
+            </motion.div>
+
+            <motion.div
+              className="hero-cta"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.6 }}
+            >
+              <BerryButton href="/projects">
+                <Sparkles size={16} />
+                Xem bài tập
+              </BerryButton>
+            </motion.div>
+          </div>
+
           <motion.div
-            className="hero-berry-icon"
-            animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            className="hero-avatar-wrap"
+            initial={{ opacity: 0, x: 40, scale: 0.96 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.9, ease: [0.4, 0, 0.2, 1] }}
           >
-            🍓
-          </motion.div>
-
-          {/* Animated name with sparkle trail */}
-          <motion.h1
-            className="hero-name"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            {personalInfo.name}
-          </motion.h1>
-
-          <motion.p
-            className="hero-major"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
-            {personalInfo.major} — {personalInfo.school}
-          </motion.p>
-
-          <motion.p
-            className="hero-tagline"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-          >
-            "{personalInfo.tagline}"
-          </motion.p>
-
-          <motion.div
-            className="hero-style"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.4, type: 'spring', stiffness: 200 }}
-          >
-            <LeafBadge>{personalInfo.style}</LeafBadge>
-          </motion.div>
-
-          <motion.div
-            className="hero-cta"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6 }}
-          >
-            <BerryButton href="/projects">
-              <Sparkles size={16} />
-              Xem bài tập
-            </BerryButton>
+            <div className="hero-avatar-frame">
+              <img
+                className="hero-avatar-image"
+                src="/avatar.png"
+                alt={personalInfo.name}
+              />
+            </div>
           </motion.div>
         </motion.div>
       </section>
@@ -127,7 +176,9 @@ export default function GreenhouseHeroPage() {
             </h3>
             <div className="hobby-tags">
               {personalInfo.hobbies.map((hobby) => (
-                <span key={hobby} className="hobby-tag">{hobby}</span>
+                <span key={hobby} className="hobby-tag">
+                  {hobby}
+                </span>
               ))}
             </div>
           </div>
@@ -208,10 +259,19 @@ export default function GreenhouseHeroPage() {
         .hero-content {
           position: relative;
           z-index: 2;
-          max-width: 600px;
+          width: min(100%, 920px);
+          max-width: 920px;
+          display: grid;
+          grid-template-columns: minmax(0, 1.1fr) minmax(240px, 320px);
+          align-items: center;
+          gap: clamp(28px, 6vw, 72px);
+          text-align: left;
+        }
+        .hero-copy {
+          min-width: 0;
         }
         .hero-berry-icon {
-          font-size: 3.5rem;
+          font-size: 3.8rem;
           margin-bottom: 16px;
           display: inline-block;
         }
@@ -225,12 +285,12 @@ export default function GreenhouseHeroPage() {
           background-clip: text;
         }
         .hero-major {
-          font-size: 1.05rem;
+          font-size: 1.15rem;
           color: var(--text-secondary);
           margin-bottom: 10px;
         }
         .hero-tagline {
-          font-size: 0.95rem;
+          font-size: 1.05rem;
           color: var(--berry-rose);
           font-weight: 600;
           margin-bottom: 16px;
@@ -242,13 +302,49 @@ export default function GreenhouseHeroPage() {
         .hero-cta {
           margin-top: 8px;
         }
+        .hero-avatar-wrap {
+          width: min(32vw, 320px);
+          min-width: 240px;
+          justify-self: end;
+        }
+        .hero-avatar-frame {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 4 / 5;
+          padding: 10px;
+          border-radius: 18px;
+          border: 1px solid rgba(132, 226, 168, 0.42);
+          background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.22)),
+            linear-gradient(145deg, rgba(132, 226, 168, 0.22), rgba(255, 160, 171, 0.18));
+          box-shadow: 0 18px 45px rgba(95, 125, 92, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.62);
+          overflow: hidden;
+        }
+        .hero-avatar-frame::after {
+          content: '';
+          position: absolute;
+          inset: 10px;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.38);
+          pointer-events: none;
+          z-index: 2;
+        }
+        .hero-avatar-image {
+          position: relative;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
 
         /* About */
         .about-section {
           padding: 40px 0;
         }
         .section-title {
-          font-size: 1.8rem;
+          font-size: 2rem;
           text-align: center;
           margin-bottom: 40px;
           color: var(--text-primary);
@@ -257,7 +353,7 @@ export default function GreenhouseHeroPage() {
           display: flex;
           align-items: center;
           gap: 8px;
-          font-size: 1rem;
+          font-size: 1.1rem;
           margin-bottom: 14px;
           color: var(--berry-rose);
           font-family: 'Comfortaa', sans-serif;
@@ -276,7 +372,7 @@ export default function GreenhouseHeroPage() {
           padding: 6px 14px;
           background: rgba(255, 160, 171, 0.1);
           border-radius: 20px;
-          font-size: 0.85rem;
+          font-size: 0.95rem;
           color: var(--text-secondary);
           font-weight: 500;
         }
@@ -290,12 +386,12 @@ export default function GreenhouseHeroPage() {
         }
         .skill-item strong, .principle-item strong {
           display: block;
-          font-size: 0.88rem;
+          font-size: 0.98rem;
           color: var(--text-primary);
           margin-bottom: 3px;
         }
         .skill-item p, .principle-item p {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           color: var(--text-secondary);
           line-height: 1.5;
         }
@@ -311,7 +407,7 @@ export default function GreenhouseHeroPage() {
           align-items: center;
           gap: 6px;
           font-weight: 600;
-          font-size: 0.83rem;
+          font-size: 0.93rem;
           color: var(--text-primary);
           margin-bottom: 5px;
         }
@@ -324,7 +420,7 @@ export default function GreenhouseHeroPage() {
           padding: 3px 10px;
           background: rgba(132, 226, 168, 0.12);
           border-radius: 12px;
-          font-size: 0.75rem;
+          font-size: 0.85rem;
           color: #3d8b5e;
           font-weight: 500;
         }
@@ -333,6 +429,17 @@ export default function GreenhouseHeroPage() {
           .hero-section {
             min-height: 50vh;
             padding: 40px 0;
+          }
+          .hero-content {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            text-align: center;
+          }
+          .hero-avatar-wrap {
+            order: -1;
+            width: min(72vw, 280px);
+            min-width: 0;
+            justify-self: center;
           }
           .hero-greenhouse-frame {
             display: none;

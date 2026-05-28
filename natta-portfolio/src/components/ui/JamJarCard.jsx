@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
-export default function JamJarCard({ children, label = 'Mứt dâu ngọt ngào' }) {
+export default function JamJarCard({ children, label = 'Mứt dâu ngọt ngào', className = '' }) {
   return (
     <motion.div
-      className="jam-jar-card"
+      className={`jam-jar-card ${className}`.trim()}
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-50px' }}
@@ -100,7 +100,7 @@ export default function JamJarCard({ children, label = 'Mứt dâu ngọt ngào'
         .jar-berry {
           position: absolute;
           bottom: 0;
-          font-size: 1.2rem;
+          font-size: 1.35rem;
           animation: gentleFloat 3s ease-in-out infinite;
           opacity: 0.6;
         }
@@ -118,9 +118,17 @@ export default function JamJarCard({ children, label = 'Mứt dâu ngọt ngào'
           border: 1px solid var(--border-glass);
           border-radius: 20px;
           font-family: 'Comfortaa', sans-serif;
-          font-size: 0.78rem;
+          font-size: 0.88rem;
           font-weight: 600;
           color: var(--berry-rose);
+        }
+        @media (max-width: 768px) {
+          .jar-body {
+            padding: 24px 18px;
+          }
+          .jar-berries {
+            opacity: 0.55;
+          }
         }
       `}</style>
     </motion.div>

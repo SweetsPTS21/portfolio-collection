@@ -27,7 +27,7 @@ export default function BerryButton({ children, href, onClick, ...props }) {
           border-radius: 16px;
           font-family: 'Comfortaa', sans-serif;
           font-weight: 600;
-          font-size: 0.9rem;
+          font-size: 1rem;
           cursor: pointer;
           text-decoration: none;
           box-shadow: 0 4px 16px rgba(255, 138, 154, 0.3);

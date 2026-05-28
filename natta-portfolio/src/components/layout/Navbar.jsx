@@ -7,47 +7,52 @@ const icons = [Home, FolderOpen, BookHeart];
 
 export default function Navbar() {
   return (
-    <motion.nav
-      className="navbar glass"
-      initial={{ y: -60, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-    >
-      <div className="navbar-brand">
-        <span className="navbar-logo">🍓</span>
-        <span className="navbar-name">An Na</span>
-      </div>
-      <ul className="navbar-links">
-        {routes.map((route, i) => {
-          const Icon = icons[i];
-          return (
-            <li key={route.path}>
-              <NavLink
-                to={route.path}
-                className={({ isActive }) =>
-                  `nav-link ${isActive ? 'nav-link--active' : ''}`
-                }
-              >
-                <Icon size={18} />
-                <span>{route.label}</span>
-              </NavLink>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="navbar-shell">
+      <motion.nav
+        className="navbar glass"
+        initial={{ y: -60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <div className="navbar-brand">
+          <span className="navbar-logo">🍓</span>
+          <span className="navbar-name">An Na</span>
+        </div>
+        <ul className="navbar-links">
+          {routes.map((route, i) => {
+            const Icon = icons[i];
+            return (
+              <li key={route.path}>
+                <NavLink
+                  to={route.path}
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? 'nav-link--active' : ''}`
+                  }
+                >
+                  <Icon size={18} />
+                  <span>{route.label}</span>
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
+      </motion.nav>
 
       <style>{`
-        .navbar {
+        .navbar-shell {
           position: fixed;
           top: 16px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 100;
+          width: min(90vw, 700px);
+        }
+        .navbar {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 12px 28px;
-          width: min(90vw, 700px);
+          width: 100%;
           gap: 20px;
         }
         .navbar-brand {
@@ -56,11 +61,11 @@ export default function Navbar() {
           gap: 8px;
           font-family: 'Comfortaa', sans-serif;
           font-weight: 700;
-          font-size: 1.05rem;
+          font-size: 1.15rem;
           color: var(--berry-rose);
         }
         .navbar-logo {
-          font-size: 1.3rem;
+          font-size: 1.45rem;
         }
         .navbar-links {
           display: flex;
@@ -76,7 +81,7 @@ export default function Navbar() {
           text-decoration: none;
           color: var(--text-secondary);
           font-weight: 600;
-          font-size: 0.88rem;
+          font-size: 0.98rem;
           transition: all 0.3s ease;
         }
         .nav-link:hover {
@@ -88,9 +93,11 @@ export default function Navbar() {
           background: rgba(255, 160, 171, 0.15);
         }
         @media (max-width: 600px) {
+          .navbar-shell {
+            width: 95vw;
+          }
           .navbar {
             padding: 10px 16px;
-            width: 95vw;
           }
           .navbar-name {
             display: none;
@@ -103,6 +110,6 @@ export default function Navbar() {
           }
         }
       `}</style>
-    </motion.nav>
+    </div>
   );
 }

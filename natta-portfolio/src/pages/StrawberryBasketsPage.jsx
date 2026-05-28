@@ -44,7 +44,7 @@ export default function StrawberryBasketsPage() {
         }
         .baskets-icon {
           display: inline-block;
-          font-size: 2.5rem;
+          font-size: 2.75rem;
           margin-bottom: 12px;
         }
         .baskets-title {
@@ -53,7 +53,7 @@ export default function StrawberryBasketsPage() {
           margin-bottom: 12px;
         }
         .baskets-subtitle {
-          font-size: 0.95rem;
+          font-size: 1.05rem;
           color: var(--text-secondary);
         }
         .baskets-grid {

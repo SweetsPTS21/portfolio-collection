@@ -79,7 +79,7 @@ export default function WindowPaneCard({ children, className = '' }) {
         .frame-title {
           margin-left: 10px;
           font-family: 'Comfortaa', sans-serif;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-weight: 600;
           color: var(--text-secondary);
         }

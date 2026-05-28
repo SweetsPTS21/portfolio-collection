@@ -31,8 +31,14 @@ export const skills = [
 ];
 
 export const tools = [
-  { category: 'Quản lý tệp', items: ['File Explorer', 'Công cụ nén dữ liệu', 'Quản lý phiên bản'] },
-  { category: 'Nguồn học thuật', items: ['Google Scholar', 'Cơ sở dữ liệu trực tuyến'] },
+  {
+    category: 'Quản lý tệp',
+    items: ['File Explorer', 'Công cụ nén dữ liệu', 'Quản lý phiên bản'],
+  },
+  {
+    category: 'Nguồn học thuật',
+    items: ['Google Scholar', 'Cơ sở dữ liệu trực tuyến'],
+  },
   { category: 'Hỗ trợ AI', items: ['ChatGPT', 'Gemini'] },
   { category: 'Thiết kế', items: ['Canva', 'Midjourney', 'DALL·E'] },
   { category: 'Hợp tác', items: ['Trello', 'Google Docs', 'Slack'] },
@@ -41,15 +47,18 @@ export const tools = [
 export const principles = [
   {
     title: 'Ưu tiên trải nghiệm người đọc',
-    description: 'Nội dung được trình bày mạch lạc, chia thành các mục rõ ràng, có tiêu đề và bố cục hợp lý.',
+    description:
+      'Nội dung được trình bày mạch lạc, chia thành các mục rõ ràng, có tiêu đề và bố cục hợp lý.',
   },
   {
     title: 'Minh chứng rõ ràng, minh bạch',
-    description: 'Hình ảnh và tài liệu đính kèm đảm bảo chất lượng, hiển thị rõ ràng và có thể phóng to khi cần.',
+    description:
+      'Hình ảnh và tài liệu đính kèm đảm bảo chất lượng, hiển thị rõ ràng và có thể phóng to khi cần.',
   },
   {
     title: 'Sử dụng AI có trách nhiệm',
-    description: 'AI chỉ đóng vai trò hỗ trợ tham khảo, người thực hiện hoàn toàn chịu trách nhiệm về nội dung cuối cùng.',
+    description:
+      'AI chỉ đóng vai trò hỗ trợ tham khảo, người thực hiện hoàn toàn chịu trách nhiệm về nội dung cuối cùng.',
   },
 ];
 
@@ -60,7 +69,7 @@ export const projects = [
     chapter: 'Chương 1',
     description:
       'Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi (bàn phím, chuột, máy in…), kèm minh chứng thực hành trong file đính kèm.',
-    pdf: '/docs/bt1.pdf',
+    pdf: '/bt1.pdf',
   },
   {
     id: 2,
@@ -68,7 +77,7 @@ export const projects = [
     chapter: 'Chương 2',
     description:
       'Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.',
-    pdf: '/docs/bt2.pdf',
+    pdf: '/bt2.pdf',
   },
   {
     id: 3,
@@ -76,7 +85,7 @@ export const projects = [
     chapter: 'Chương 3',
     description:
       'Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế trong học tập.',
-    pdf: '/docs/bt3.pdf',
+    pdf: '/bt3.pdf',
   },
   {
     id: 4,
@@ -84,7 +93,7 @@ export const projects = [
     chapter: 'Chương 4',
     description:
       'Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.',
-    pdf: '/docs/bt4.pdf',
+    pdf: '/bt4.pdf',
   },
   {
     id: 5,
@@ -92,7 +101,7 @@ export const projects = [
     chapter: 'Chương 5',
     description:
       'Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.',
-    pdf: '/docs/bt5.pdf',
+    pdf: '/bt5.pdf',
   },
   {
     id: 6,
@@ -100,7 +109,7 @@ export const projects = [
     chapter: 'Chương 6',
     description:
       'Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch).',
-    pdf: '/docs/bt6.pdf',
+    pdf: '/bt6.pdf',
   },
 ];
 

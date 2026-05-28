@@ -15,7 +15,7 @@ export default function LeafBadge({ children }) {
           background: rgba(132, 226, 168, 0.15);
           color: #3d8b5e;
           border-radius: 20px;
-          font-size: 0.78rem;
+          font-size: 0.88rem;
           font-weight: 600;
         }
       `}</style>

@@ -66,7 +66,7 @@ export default function HoneycombGrid({ items }) {
         }
         .hex-category {
           font-family: 'Comfortaa', sans-serif;
-          font-size: 0.7rem;
+          font-size: 0.8rem;
           font-weight: 700;
           color: var(--text-primary);
         }
@@ -80,7 +80,7 @@ export default function HoneycombGrid({ items }) {
           padding: 2px 6px;
           background: rgba(132, 226, 168, 0.15);
           border-radius: 8px;
-          font-size: 0.65rem;
+          font-size: 0.75rem;
           color: #3d8b5e;
           font-weight: 500;
         }

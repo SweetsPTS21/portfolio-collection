@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --berry-pink: #FFA0AB;
-  --berry-blush: #FFD1D8;
-  --berry-rose: #FF8A9A;
-  --leaf-green: #84E2A8;
-  --honey-yellow: #FFE17A;
-  --dew-blue: #9DE4FF;
-  --glasshouse-mint: #F2FBF6;
-  --bg-base: #FFF8FA;
+  --berry-pink: #ffa0ab;
+  --berry-blush: #ffd1d8;
+  --berry-rose: #ff8a9a;
+  --leaf-green: #84e2a8;
+  --honey-yellow: #ffe17a;
+  --dew-blue: #9de4ff;
+  --glasshouse-mint: #f2fbf6;
+  --bg-base: #fff8fa;
   --bg-glass: rgba(255, 255, 255, 0.75);
-  --text-primary: #3D2B33;
-  --text-secondary: #7A5D66;
+  --text-primary: #3d2b33;
+  --text-secondary: #7a5d66;
   --border-glass: rgba(255, 160, 171, 0.25);
   --radius: 22px;
 }
@@ -33,10 +33,17 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
-  cursor: url('/honey-jar-cursor.svg') 16 4, auto;
+  cursor:
+    url('/honey-jar-cursor.svg') 16 4,
+    auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 700;
   line-height: 1.3;
@@ -63,8 +70,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom cursor for interactive elements */
-a, button, [role="button"], .berry-button, .nav-link, .basket-link {
-  cursor: url('/honey-jar-pointer.svg') 16 4, pointer;
+a,
+button,
+[role='button'],
+.berry-button,
+.nav-link,
+.basket-link {
+  cursor:
+    url('/honey-jar-pointer.svg') 16 4,
+    pointer;
 }
 
 /* Scrollbar styling */
@@ -87,53 +101,111 @@ a, button, [role="button"], .berry-button, .nav-link, .basket-link {
 
 /* Background animations */
 @keyframes beeFly {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(40px, -20px) rotate(5deg); }
-  50% { transform: translate(80px, 10px) rotate(-3deg); }
-  75% { transform: translate(30px, 30px) rotate(4deg); }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(40px, -20px) rotate(5deg);
+  }
+  50% {
+    transform: translate(80px, 10px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(30px, 30px) rotate(4deg);
+  }
 }
 
 @keyframes dewSlide {
-  0% { transform: translateY(-10px) scaleY(0.8); opacity: 0; }
-  20% { opacity: 0.7; }
-  100% { transform: translateY(100vh) scaleY(1.4); opacity: 0; }
+  0% {
+    transform: translateY(-10px) scaleY(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) scaleY(1.4);
+    opacity: 0;
+  }
 }
 
 @keyframes leafSway {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
 }
 
 @keyframes sunbeamShimmer {
-  0%, 100% { opacity: 0.3; transform: translateX(0) skewX(-5deg); }
-  50% { opacity: 0.6; transform: translateX(5px) skewX(-5deg); }
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateX(0) skewX(-5deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(5px) skewX(-5deg);
+  }
 }
 
 @keyframes strawberryGlow {
-  0%, 100% { filter: brightness(1) drop-shadow(0 0 0px var(--berry-pink)); }
-  50% { filter: brightness(1.1) drop-shadow(0 0 8px var(--berry-pink)); }
+  0%,
+  100% {
+    filter: brightness(1) drop-shadow(0 0 0px var(--berry-pink));
+  }
+  50% {
+    filter: brightness(1.1) drop-shadow(0 0 8px var(--berry-pink));
+  }
 }
 
 @keyframes wingBuzz {
-  0%, 100% { transform: rotate(-3deg) scaleY(1); }
-  50% { transform: rotate(3deg) scaleY(0.85); }
+  0%,
+  100% {
+    transform: rotate(-3deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(3deg) scaleY(0.85);
+  }
 }
 
 @keyframes floatPetal {
-  0% { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { transform: translate(60px, 100vh) rotate(180deg); opacity: 0; }
+  0% {
+    transform: translate(0, -20px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(60px, 100vh) rotate(180deg);
+    opacity: 0;
+  }
 }
 
 @keyframes gentleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* Responsive */

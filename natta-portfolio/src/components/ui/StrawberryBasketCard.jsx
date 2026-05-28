@@ -153,16 +153,16 @@ export default function StrawberryBasketCard({ project, index }) {
         .basket-number {
           font-family: 'Comfortaa', sans-serif;
           font-weight: 700;
-          font-size: 0.85rem;
+          font-size: 0.95rem;
           color: var(--berry-pink);
         }
         .basket-title {
-          font-size: 1.1rem;
+          font-size: 1.25rem;
           margin-bottom: 10px;
           color: var(--text-primary);
         }
         .basket-desc {
-          font-size: 0.88rem;
+          font-size: 1rem;
           color: var(--text-secondary);
           line-height: 1.6;
           margin-bottom: 16px;
@@ -177,7 +177,7 @@ export default function StrawberryBasketCard({ project, index }) {
           border-radius: 12px;
           text-decoration: none;
           font-weight: 600;
-          font-size: 0.82rem;
+          font-size: 0.92rem;
           transition: background 0.3s ease;
         }
         .basket-link:hover {
