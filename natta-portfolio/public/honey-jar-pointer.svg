@@ -1,0 +1,18 @@
+<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stem (tilted for pointer feel) -->
+  <line x1="14" y1="32" x2="13" y2="18" stroke="#84E2A8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Small leaf -->
+  <ellipse cx="17" cy="24" rx="3.5" ry="2" fill="#84E2A8" opacity="0.7" transform="rotate(25 17 24)"/>
+  <!-- Petals (bloomed wider = clickable) -->
+  <ellipse cx="14" cy="6" rx="4.5" ry="6" fill="#FFA0AB"/>
+  <ellipse cx="7" cy="10.5" rx="4.5" ry="6" fill="#FFA0AB" transform="rotate(-72 7 10.5)"/>
+  <ellipse cx="9.5" cy="17.5" rx="4.5" ry="6" fill="#FFA0AB" transform="rotate(-144 9.5 17.5)"/>
+  <ellipse cx="18.5" cy="17.5" rx="4.5" ry="6" fill="#FFA0AB" transform="rotate(144 18.5 17.5)"/>
+  <ellipse cx="21" cy="10.5" rx="4.5" ry="6" fill="#FFA0AB" transform="rotate(72 21 10.5)"/>
+  <!-- Center -->
+  <circle cx="14" cy="13" r="4.5" fill="#FFE17A"/>
+  <circle cx="13" cy="12" r="1.2" fill="rgba(255,255,255,0.6)"/>
+  <!-- Sparkles (clickable indicator) -->
+  <path d="M24 4 L25 2 L26 4 L28 5 L26 6 L25 8 L24 6 L22 5 Z" fill="#FFE17A" opacity="0.8"/>
+  <path d="M2 8 L3 6.5 L4 8 L5.5 9 L4 10 L3 11.5 L2 10 L0.5 9 Z" fill="#FFE17A" opacity="0.6"/>
+</svg>

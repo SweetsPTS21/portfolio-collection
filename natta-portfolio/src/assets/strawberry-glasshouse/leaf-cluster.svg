@@ -1,0 +1,6 @@
+<svg width="60" height="50" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 45 C20 35, 5 30, 10 20 C15 10, 25 15, 30 25" fill="rgba(132,226,168,0.4)" stroke="rgba(132,226,168,0.6)" stroke-width="0.5"/>
+  <path d="M30 45 C40 35, 55 30, 50 20 C45 10, 35 15, 30 25" fill="rgba(132,226,168,0.35)" stroke="rgba(132,226,168,0.5)" stroke-width="0.5"/>
+  <path d="M30 40 C25 30, 15 28, 18 18 C21 8, 28 12, 30 20" fill="rgba(132,226,168,0.3)" stroke="rgba(132,226,168,0.45)" stroke-width="0.5"/>
+  <line x1="30" y1="45" x2="30" y2="15" stroke="rgba(132,226,168,0.5)" stroke-width="1"/>
+</svg>
