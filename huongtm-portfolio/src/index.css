@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Nền */
+  --huong-bg-base: #fff8fa;
+  --huong-bg-surface: #ffffff;
+  --huong-bg-blush: #ffe8f0;
+  --huong-bg-meadow: #f5fff7;
+
+  /* Primary hồng pastel nhạt */
+  --huong-pink: #f4a7be;
+  --huong-pink-soft: #f9c8d8;
+  --huong-pink-muted: #fbdce8;
+
+  /* Accent */
+  --huong-mint: #a8edca;
+  --huong-mint-soft: #c8f5e2;
+  --huong-yellow: #ffe89a;
+  --huong-yellow-soft: #fff5cc;
+  --huong-lavender: #d8b8ff;
+  --huong-lavender-soft: #edd8ff;
+  --huong-basket: #e8c99a;
+
+  /* Text */
+  --huong-text: #4a2535;
+  --huong-text-muted: #8b6474;
+  --huong-text-light: #c8a0b0;
+
+  /* Border & gingham */
+  --huong-border: #f4c8d8;
+  --huong-shadow: rgba(200, 120, 150, 0.12);
+  --huong-shadow-deep: rgba(74, 37, 53, 0.08);
+  --huong-gingham: #ffb8d0;
+}
+
+/* Base resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--huong-bg-base);
+  color: var(--huong-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--huong-text);
+  font-weight: 700;
+}
+
+a {
+  color: var(--huong-pink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--huong-bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--huong-pink-soft);
+  border-radius: 999px;
+  border: 2px solid var(--huong-bg-base);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--huong-pink);
+}
+
+/* ----------------------------------------------------
+   ANIMATION KEYFRAMES (Idle Loops & Ambient Movement)
+   ---------------------------------------------------- */
+
+/* Cloud Drifting */
+@keyframes cloudDrift1 {
+  0% { transform: translate(-100px, 0); }
+  100% { transform: translate(1440px, 0); }
+}
+@keyframes cloudDrift2 {
+  0% { transform: translate(-200px, 10px); }
+  100% { transform: translate(1440px, 10px); }
+}
+
+.cloud-slow-1 {
+  animation: cloudDrift1 90s linear infinite;
+}
+.cloud-slow-2 {
+  animation: cloudDrift2 120s linear infinite;
+}
+
+/* Daisy & Tulip Stems Swaying in the breeze */
+@keyframes grassWindSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes flowerHeadSway {
+  0%, 100% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(-5deg) translate(-2px, 1px); }
+}
+
+.sway-element {
+  animation: grassWindSway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.sway-head-element {
+  animation: flowerHeadSway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Whimsical Honey Bee Loop */
+@keyframes beeOrbit {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-25px, -15px) rotate(-10deg); }
+  50% { transform: translate(0, -30px) rotate(0deg); }
+  75% { transform: translate(25px, -15px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+.bee-hover-loop {
+  animation: beeOrbit 6s ease-in-out infinite;
+}
+
+/* Butterfly Flight Path */
+@keyframes butterflyFlight {
+  0% { transform: translate(0, 0) scaleX(1); }
+  45% { transform: translate(200px, -60px) scaleX(1); }
+  50% { transform: translate(220px, -60px) scaleX(-1); }
+  95% { transform: translate(20px, -10px) scaleX(-1); }
+  100% { transform: translate(0, 0) scaleX(1); }
+}
+.butterfly-drift {
+  animation: butterflyFlight 18s ease-in-out infinite;
+}
+
+/* Wiggle animation for stickers */
+@keyframes wiggleSticker {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(6deg); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(3deg); }
+}
+.wiggle-hover:hover {
+  animation: wiggleSticker 0.5s ease-out;
+}
+
+/* Sparkle burst */
+@keyframes sparklePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.sparkle-burst {
+  animation: sparklePop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* ----------------------------------------------------
+   LAYOUT SHELLS AND SCENIC BACKDROP
+   ---------------------------------------------------- */
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--huong-bg-base);
+}
+
+.scenic-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.main-viewport {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 80px 24px; /* Space for fixed nav */
+  flex: 1;
+}
+
+/* Gingham patterns and decorative cards */
+.gingham-card {
+  background-color: var(--huong-bg-surface);
+  border: 3px solid var(--huong-border);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px var(--huong-shadow);
+  padding: 32px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), 
+              box-shadow 0.4s ease;
+}
+
+/* Unique card features: gingham border padding effect */
+.gingham-border-box::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 4px solid var(--huong-gingham);
+  border-radius: 24px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Paper shadow depth styling */
+.paper-texture {
+  background-image: radial-gradient(var(--huong-pink-muted) 0.5px, transparent 0.5px), 
+                    radial-gradient(var(--huong-pink-muted) 0.5px, var(--huong-bg-surface) 0.5px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  box-shadow: 
+    0 1px 1px var(--huong-shadow-deep), 
+    0 2px 2px var(--huong-shadow-deep), 
+    0 4px 4px var(--huong-shadow-deep), 
+    0 8px 8px var(--huong-shadow-deep), 
+    0 16px 16px var(--huong-shadow-deep);
+}
+
+/* Patterned corners for custom card vibes */
+.pattern-corner {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.15;
+  background-image: radial-gradient(var(--huong-text) 2px, transparent 2px);
+  background-size: 6px 6px;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE LAYOUT SYSTEM
+   ---------------------------------------------------- */
+
+/* Navigation pills container */
+.nav-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  background: rgba(255, 248, 250, 0.85);
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--huong-border);
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px var(--huong-shadow);
+  gap: 12px;
+}
+
+.nav-tag-item {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: var(--huong-text-muted);
+  font-size: 1.05rem;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-tag-item:hover {
+  color: var(--huong-pink);
+  background: var(--huong-bg-blush);
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.nav-tag-item.active {
+  color: var(--huong-text);
+  background: var(--huong-pink-soft);
+  box-shadow: inset 0 2px 4px rgba(74, 37, 53, 0.06);
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Project grid wrapper */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+/* About page details grids */
+.about-grid-sections {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Conclusion lists */
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-grid-sections {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .conclusion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .main-viewport {
+    padding: 90px 16px 60px 16px;
+  }
+  .nav-container {
+    bottom: 20px;
+    top: auto;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    justify-content: space-around;
+  }
+  .nav-tag-item {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+}
+
+/* ----------------------------------------------------
+   PREFERS REDUCED MOTION (Accessibility Fallback)
+   ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .sway-element, .sway-head-element, .cloud-slow-1, .cloud-slow-2, .bee-hover-loop, .butterfly-drift {
+    animation: none !important;
+    transform: none !important;
+  }
+}
