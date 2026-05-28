@@ -36,7 +36,7 @@ export const portfolioData = {
       goal: 'Rèn luyện kỹ năng tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục một cách thành thạo trên hệ điều hành.',
       process:
         'Dọn dẹp không gian máy tính như chuẩn bị hành lý cho một chuyến du lịch êm ả. Tạo thư mục gốc mang tên mình, phân nhánh thành các tệp bài học, thao tác đổi tên, sao chép, di chuyển và dọn dữ liệu vào thùng rác. Không gian làm việc trở nên trong trẻo, gọn gàng.',
-      evidence: '/Bt1.pdf',
+      evidence: 'bt1.pdf',
       icon: 'FileText',
     },
     {
@@ -45,7 +45,7 @@ export const portfolioData = {
       goal: 'Phát triển kỹ năng tìm kiếm và đánh giá thông tin học thuật từ các nguồn đáng tin cậy.',
       process:
         'Tra cứu chậm rãi, có chọn lọc qua các tạp chí khoa học uy tín. Tập hợp 10 nguồn tài liệu với 5 bài báo khoa học chất lượng. Từng nguồn được soi chiếu cẩn thận về uy tín tác giả, lập bảng đánh giá chi tiết và khách quan.',
-      evidence: '/bt2.pdf',
+      evidence: 'bt2.pdf',
       icon: 'Search',
     },
     {
@@ -54,7 +54,7 @@ export const portfolioData = {
       goal: 'Phát triển kỹ năng viết câu lệnh hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập.',
       process:
         'Đặt ba tác vụ cho hệ thống: tóm tắt văn bản, phân tích thuật ngữ và lập bộ đề ôn tập. Nâng cấp phiên bản câu lệnh qua nhiều lần. Nhận thấy công cụ số nhanh bén nhưng thiếu chiều sâu cảm xúc, từ đó đưa ra ý kiến phản biện riêng và chỉ ra điểm chưa hợp lý trong logic thuật toán.',
-      evidence: '/bt3.pdf',
+      evidence: 'bt3.pdf',
       icon: 'Sparkles',
     },
     {
@@ -63,7 +63,7 @@ export const portfolioData = {
       goal: 'Rèn luyện kỹ năng tổ chức và tham gia cuộc họp trực tuyến chuyên nghiệp.',
       process:
         'Tham gia chỉnh sửa trực tiếp trên Google Docs, viết nội dung chính cho các phần được phân công. Nhóm có phiên thảo luận trực tuyến hòa nhã: thống nhất chương trình từ trước, phân định vai trò điều phối, chia sẻ góc nhìn cởi mở, lắng nghe ý kiến nhau để tìm tiếng nói chung. Biên bản được đúc kết súc tích.',
-      evidence: '/bt4.pdf',
+      evidence: 'bt4.pdf',
       icon: 'Users',
     },
     {
@@ -72,7 +72,7 @@ export const portfolioData = {
       goal: 'Thành thạo việc sử dụng các công cụ trí tuệ nhân tạo tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.',
       process:
         'Thiết kế bài thuyết trình chuyên đề như một thước phim ngắn giàu cảm xúc. Công cụ hỗ trợ phác thảo khung nội dung và hình ảnh, nhưng tự tay tinh chỉnh lại tông màu pastel và biên tập từng ngôn từ để truyền tải sự êm ả, chuyên nghiệp. Kèm theo phân tích sâu về ranh giới giữa mượn công cụ sáng tạo và đánh mất bản sắc cá nhân.',
-      evidence: '/bt5.pdf',
+      evidence: 'bt5.pdf',
       icon: 'Film',
     },
     {
@@ -81,7 +81,7 @@ export const portfolioData = {
       goal: 'Phát triển kỹ năng sử dụng trí tuệ nhân tạo có trách nhiệm và đạo đức trong học tập và nghiên cứu.',
       process:
         'Trân trọng tri thức nguyên bản, thực hiện bài luận với sự hỗ trợ công cụ số nhưng lưu vết toàn bộ câu lệnh một cách minh bạch. Thiết kế 7 quy tắc đạo đức cá nhân thành bản đồ họa thông tin tối giản, nhẹ nhàng. Cam kết bảo vệ sự trong sáng học thuật, nói không với đạo văn.',
-      evidence: '/bt6.pdf',
+      evidence: 'bt6.pdf',
       icon: 'ShieldCheck',
     },
   ],

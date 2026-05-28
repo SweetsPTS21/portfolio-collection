@@ -69,7 +69,7 @@ export const projects = [
     chapter: 'Chương 1',
     description:
       'Tổng quan về máy tính, các thành phần cơ bản và thiết bị ngoại vi (bàn phím, chuột, máy in…), kèm minh chứng thực hành trong file đính kèm.',
-    pdf: '/bt1.pdf',
+    pdf: 'bt1.pdf',
   },
   {
     id: 2,
@@ -77,7 +77,7 @@ export const projects = [
     chapter: 'Chương 2',
     description:
       'Thực hành tìm kiếm, thu thập và tổ chức thông tin; biết cách đánh giá độ tin cậy của nguồn và trích dẫn phù hợp.',
-    pdf: '/bt2.pdf',
+    pdf: 'bt2.pdf',
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const projects = [
     chapter: 'Chương 3',
     description:
       'Tổng quan về AI: khái niệm, ứng dụng phổ biến, lợi ích – rủi ro và ví dụ liên hệ thực tế trong học tập.',
-    pdf: '/bt3.pdf',
+    pdf: 'bt3.pdf',
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ export const projects = [
     chapter: 'Chương 4',
     description:
       'Rèn kỹ năng giao tiếp số và làm việc nhóm online: phân công, trao đổi, chia sẻ tài liệu và quy tắc ứng xử trên môi trường số.',
-    pdf: '/bt4.pdf',
+    pdf: 'bt4.pdf',
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const projects = [
     chapter: 'Chương 5',
     description:
       'Thực hành sáng tạo nội dung số: lên ý tưởng, lựa chọn công cụ, biên tập/thiết kế và lưu ý bản quyền khi sử dụng tài nguyên.',
-    pdf: '/bt5.pdf',
+    pdf: 'bt5.pdf',
   },
   {
     id: 6,
@@ -109,7 +109,7 @@ export const projects = [
     chapter: 'Chương 6',
     description:
       'Tập trung vào an toàn số, bảo mật tài khoản, quyền riêng tư và liêm chính học thuật (tránh đạo văn, trích dẫn đúng, dùng AI minh bạch).',
-    pdf: '/bt6.pdf',
+    pdf: 'bt6.pdf',
   },
 ];
 
