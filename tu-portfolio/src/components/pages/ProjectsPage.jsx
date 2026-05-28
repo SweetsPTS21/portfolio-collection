@@ -1,8 +1,8 @@
 import { portfolioData } from '../../data/portfolioData.js';
 import PdfLinkButton from '../ui/PdfLinkButton.jsx';
+import { InfoTile, MosaicGrid, PrototypeCard, PrototypePanel } from '../ui/PrototypeCard.jsx';
 import ScrollReveal from '../ui/ScrollReveal.jsx';
 import SectionTitle from '../ui/SectionTitle.jsx';
-import SoftCard from '../ui/SoftCard.jsx';
 
 export default function ProjectsPage() {
   return (
@@ -18,46 +18,42 @@ export default function ProjectsPage() {
         </SectionTitle>
       </section>
 
-      <section className="project-grid" aria-label="Danh sách bài tập">
-        {portfolioData.projects.map((project, index) => (
-          <ScrollReveal
-            key={project.id}
-            className={project.featured ? 'project-grid__featured' : undefined}
-            delay={index * 0.04}
-          >
-            <SoftCard
-              className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
-              icon={project.icon}
-              label={project.chapter}
-              title={project.title}
-              tone={project.accent}
-              action={
-                <PdfLinkButton href={project.pdf}>
-                  Mở {project.chapter}
-                </PdfLinkButton>
-              }
+      <PrototypePanel className="project-board" aria-label="Danh sách bài tập">
+        <MosaicGrid className="project-grid">
+          {portfolioData.projects.map((project, index) => (
+            <ScrollReveal
+              key={project.id}
+              className={project.featured ? 'project-grid__featured' : undefined}
+              delay={index * 0.04}
             >
-              <div
-                className={`project-card__decor project-card__decor--${project.visual.motif}`}
-                aria-hidden="true"
+              <PrototypeCard
+                className="project-card"
+                icon={project.icon}
+                label={project.chapter}
+                title={project.title}
+                tone={project.accent}
+                span={project.featured ? 'wide' : undefined}
+                variant="ghostMedia"
+                decor={{ src: project.visual.image }}
+                action={
+                  <PdfLinkButton href={project.pdf}>
+                    Mở {project.chapter}
+                  </PdfLinkButton>
+                }
               >
-                <img src={project.visual.image} alt="" loading="lazy" />
-              </div>
-              <div className="project-card__content">
-                <div>
-                  <span>Mục tiêu</span>
-                  <p>{project.objective}</p>
+                <div className="project-card__content">
+                  <InfoTile label="Mục tiêu">
+                    <p>{project.objective}</p>
+                  </InfoTile>
+                  <InfoTile label="Quá trình thực hiện">
+                    <p>{project.process}</p>
+                  </InfoTile>
                 </div>
-                <div>
-                  <span>Quá trình thực hiện</span>
-                  <p>{project.process}</p>
-                </div>
-              </div>
-            </SoftCard>
-          </ScrollReveal>
-        ))}
-      </section>
+              </PrototypeCard>
+            </ScrollReveal>
+          ))}
+        </MosaicGrid>
+      </PrototypePanel>
     </div>
   );
 }
-

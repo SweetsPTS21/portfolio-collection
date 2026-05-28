@@ -117,7 +117,7 @@ describe('tu portfolio contract', () => {
     const infoStart = aboutSource.indexOf('className="profile-card__info"');
     const ctaStart = aboutSource.indexOf('className="hero-section__cta-row"');
     const editorialStart = aboutSource.indexOf('className="hero-editorial"');
-    const profileCardStart = aboutSource.indexOf('className="profile-card"');
+    const profileCardStart = aboutSource.indexOf('profile-card--portrait');
     const portraitRule = styles.match(/\.profile-card__portrait\s*\{[\s\S]*?\}/)?.[0] ?? '';
     const portraitImageRule = styles.match(/\.profile-card__portrait img\s*\{[\s\S]*?\}/)?.[0] ?? '';
 
@@ -129,6 +129,28 @@ describe('tu portfolio contract', () => {
     expect(portraitRule).toContain('aspect-ratio: 1');
     expect(portraitRule).not.toContain('border-radius: 50%');
     expect(portraitImageRule).not.toContain('border-radius: 50%');
+  });
+  it('uses prototype card primitives for design-reference card layouts', () => {
+    const primitiveSource = readFileSync('src/components/ui/PrototypeCard.jsx', 'utf8');
+    const aboutSource = readFileSync('src/components/pages/AboutPage.jsx', 'utf8');
+    const projectsSource = readFileSync('src/components/pages/ProjectsPage.jsx', 'utf8');
+    const conclusionSource = readFileSync('src/components/pages/ConclusionPage.jsx', 'utf8');
+    const styles = readFileSync('src/index.css', 'utf8');
+
+    ['PrototypePanel', 'PrototypeCard', 'InfoTile', 'MosaicGrid'].forEach((name) => {
+      expect(primitiveSource).toContain(`function ${name}`);
+    });
+
+    expect(aboutSource).toContain('PrototypePanel');
+    expect(aboutSource).toContain('InfoTile');
+    expect(projectsSource).toContain('MosaicGrid');
+    expect(projectsSource).toContain('variant="ghostMedia"');
+    expect(conclusionSource).toContain('PrototypePanel');
+    expect(conclusionSource).toContain('span="wide"');
+
+    ['.prototype-panel', '.prototype-card', '.info-tile', '.mosaic-grid'].forEach((selector) => {
+      expect(styles).toContain(selector);
+    });
   });
   it('keeps motion subtle and reduced-motion aware', () => {
     expect(motionConfig.defaultTransition.duration).toBeLessThanOrEqual(0.55);
@@ -159,6 +181,8 @@ describe('tu portfolio contract', () => {
     expect(styles).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*background-scene/);
   });
 });
+
+
 
 
 

@@ -10,6 +10,7 @@ import {
   Library,
   Palette,
   Presentation,
+  Quote,
   SearchCheck,
   ShieldCheck,
   Sparkles,
@@ -29,6 +30,7 @@ const icons = {
   Library,
   Palette,
   Presentation,
+  Quote,
   SearchCheck,
   ShieldCheck,
   Sparkles,
@@ -45,3 +47,5 @@ export default function IconBadge({ icon = 'Sparkles', size = 'default', tone })
     </span>
   );
 }
+
+
