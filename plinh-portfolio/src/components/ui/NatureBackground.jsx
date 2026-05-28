@@ -10,6 +10,8 @@ import pressedFlower from '../../assets/botanical/background/pressed-flower.svg'
 import seedPod from '../../assets/botanical/background/seed-pod.svg';
 import sunRayMask from '../../assets/botanical/background/sun-ray-mask.svg';
 import paperSpeckles from '../../assets/botanical/background/paper-speckles.svg';
+import butterflyWhite from '../../assets/botanical/background/butterfly-white.svg';
+import butterflyGold from '../../assets/botanical/background/butterfly-gold.svg';
 
 const FALLING_LEAVES = [
   { id: 'leaf-01', asset: leafCluster1, left: 2, size: 48, delay: -4, duration: 24, drift: 86, spin: 32, opacity: 0.34 },
@@ -53,6 +55,17 @@ const POLLEN_PARTICLES = [
   { id: 'pollen-12', left: 84, size: 4, delay: -3, duration: 16, drift: -36, opacity: 0.34 },
   { id: 'pollen-13', left: 90, size: 5, delay: -17, duration: 21, drift: 42, opacity: 0.28 },
   { id: 'pollen-14', left: 96, size: 3, delay: -7, duration: 13, drift: -32, opacity: 0.32 }
+];
+
+const FLYING_BUTTERFLIES = [
+  { id: 'butterfly-01', asset: butterflyWhite, left: 8, top: 20, size: 68, delay: -3, duration: 18, x1: 24, y1: -18, x2: 86, y2: 22, x3: 42, y3: 48, x4: 124, y4: 6, bank1: 18, bank2: -16, bank3: 10, opacity: 0.74 },
+  { id: 'butterfly-02', asset: butterflyGold, left: 19, top: 68, size: 55, delay: -11, duration: 22, x1: 32, y1: -46, x2: 116, y2: -18, x3: 78, y3: 24, x4: 148, y4: -62, bank1: -14, bank2: 20, bank3: -8, opacity: 0.66 },
+  { id: 'butterfly-03', asset: butterflyWhite, left: 31, top: 34, size: 44, delay: -7, duration: 20, x1: -26, y1: -32, x2: -78, y2: 18, x3: -42, y3: 50, x4: -118, y4: 8, bank1: -18, bank2: 14, bank3: -12, opacity: 0.62 },
+  { id: 'butterfly-04', asset: butterflyGold, left: 46, top: 16, size: 62, delay: -15, duration: 24, x1: 38, y1: 24, x2: 92, y2: -28, x3: 44, y3: 64, x4: 116, y4: 42, bank1: 16, bank2: -20, bank3: 12, opacity: 0.64 },
+  { id: 'butterfly-05', asset: butterflyWhite, left: 58, top: 76, size: 49, delay: -5, duration: 21, x1: -34, y1: -54, x2: -94, y2: -14, x3: -62, y3: -72, x4: -138, y4: -48, bank1: -16, bank2: 18, bank3: -10, opacity: 0.6 },
+  { id: 'butterfly-06', asset: butterflyGold, left: 72, top: 42, size: 73, delay: -13, duration: 23, x1: -44, y1: 28, x2: -120, y2: -18, x3: -84, y3: 56, x4: -154, y4: 34, bank1: 18, bank2: -18, bank3: 8, opacity: 0.68 },
+  { id: 'butterfly-07', asset: butterflyWhite, left: 84, top: 24, size: 57, delay: -9, duration: 19, x1: -24, y1: -22, x2: -86, y2: 18, x3: -38, y3: 44, x4: -128, y4: -16, bank1: -14, bank2: 20, bank3: -12, opacity: 0.65 },
+  { id: 'butterfly-08', asset: butterflyGold, left: 91, top: 64, size: 47, delay: -17, duration: 26, x1: -42, y1: -36, x2: -126, y2: 8, x3: -84, y3: -64, x4: -160, y4: -42, bank1: -18, bank2: 16, bank3: -10, opacity: 0.58 }
 ];
 
 const PRESSED_SPECIMENS = [
@@ -118,6 +131,34 @@ export default function NatureBackground() {
             '--opacity': pollen.opacity
           }}
         />
+      ))}
+
+      {FLYING_BUTTERFLIES.map((butterfly) => (
+        <span
+          key={butterfly.id}
+          className="nature-bg__butterfly-flight"
+          style={{
+            '--left': `${butterfly.left}%`,
+            '--top': `${butterfly.top}%`,
+            '--size': `${butterfly.size}px`,
+            '--delay': `${butterfly.delay}s`,
+            '--duration': `${butterfly.duration}s`,
+            '--x1': `${butterfly.x1}px`,
+            '--y1': `${butterfly.y1}px`,
+            '--x2': `${butterfly.x2}px`,
+            '--y2': `${butterfly.y2}px`,
+            '--x3': `${butterfly.x3}px`,
+            '--y3': `${butterfly.y3}px`,
+            '--x4': `${butterfly.x4}px`,
+            '--y4': `${butterfly.y4}px`,
+            '--bank-1': `${butterfly.bank1}deg`,
+            '--bank-2': `${butterfly.bank2}deg`,
+            '--bank-3': `${butterfly.bank3}deg`,
+            '--opacity': butterfly.opacity
+          }}
+        >
+          <img className="nature-bg__butterfly" src={butterfly.asset} alt="" draggable="false" />
+        </span>
       ))}
 
       {FALLING_LEAVES.map((leaf) => (

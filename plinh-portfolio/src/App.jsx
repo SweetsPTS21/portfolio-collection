@@ -7,6 +7,7 @@ import Lenis from 'lenis';
 import BotanicalNav from './components/layout/BotanicalNav';
 import NatureFooter from './components/layout/NatureFooter';
 import NatureBackground from './components/ui/NatureBackground';
+import MusicPlayer from './components/ui/MusicPlayer';
 
 import AboutSection from './components/sections/AboutSection';
 import ProjectsSection from './components/sections/ProjectsSection';
@@ -82,6 +83,9 @@ export default function App() {
           {/* Botanical Footer */}
           <NatureFooter />
         </div>
+
+        {/* Music Player - fixed popup bottom right */}
+        <MusicPlayer />
       </div>
     </ConfigProvider>
   );

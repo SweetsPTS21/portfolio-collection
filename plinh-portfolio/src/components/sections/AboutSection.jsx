@@ -4,6 +4,7 @@ import PulpCard from '../ui/PulpCard';
 import { motion } from 'framer-motion';
 import { Sparkles, Music, Palette, Gamepad2, Award, Heart } from 'lucide-react';
 import avatarImg from '../../../docs/avatar.jpg';
+import aboutButterfly from '../../assets/botanical/about-butterfly-cutout.png';
 
 export default function AboutSection() {
   const iconMap = {
@@ -85,6 +86,12 @@ export default function AboutSection() {
                 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400';
             }}
           />
+          <img
+            className="avatar-frame-butterfly"
+            src={aboutButterfly}
+            alt=""
+            draggable="false"
+          />
         </motion.div>
 
         {/* Basic Meta Details */}
@@ -113,7 +120,13 @@ export default function AboutSection() {
       <div className="lg:col-span-8 space-y-8">
         {/* Intro Goal Card */}
         <motion.div variants={itemVariants}>
-          <PulpCard hasClip={true}>
+          <PulpCard hasClip={true} className="about-feature-card">
+            <img
+              className="about-feature-card__butterfly"
+              src={aboutButterfly}
+              alt=""
+              draggable="false"
+            />
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-5 h-5 text-[#D6A25F] flex-shrink-0" />
               <h3 className="text-xl font-bold text-[#3A5A40] m-0">
