@@ -160,7 +160,7 @@ export default function About() {
                 Chuyên Ngành:
               </span>
               <span className="text-sm font-semibold text-charcoal-black">
-                Luật
+                Luật chung
               </span>
             </div>
             <div className="border-l-2 border-accent-sepia pl-3 py-1">
