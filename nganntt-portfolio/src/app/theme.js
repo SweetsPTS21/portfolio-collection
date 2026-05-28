@@ -1,0 +1,22 @@
+export const theme = {
+  id: "blue-cafe-bakery-atelier",
+  color: {
+    bgBase: "#EAF6FF",
+    bgPaper: "#F8FCFF",
+    bgCanvas: "#D7ECFA",
+    bgMenu: "#FFF9EF",
+    primary: "#4D91C6",
+    primaryDeep: "#2F6F9F",
+    primarySoft: "#A9D7F4",
+    accentSky: "#78BDE8",
+    accentCaramel: "#D7A86E",
+    accentVanilla: "#FFF1D6",
+    accentMocha: "#B87A84",
+    accentMatcha: "#8DBA9A",
+    textBase: "#203747",
+    textMuted: "#607988",
+    border: "#B8D9EC",
+    paperBorder: "#E7D2B6",
+    shadow: "rgba(47, 111, 159, 0.18)",
+  },
+};
