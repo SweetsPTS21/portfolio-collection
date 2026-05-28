@@ -80,14 +80,14 @@ export default function About() {
             {/* Main portrait space */}
             <div className="aspect-[3/4] w-full overflow-hidden bg-bg-paper-dark relative flex items-center justify-center">
               <img
-                src="/assets/images/hero-about.jpg"
+                src="/assets/images/avatar.jpg"
                 alt="Chân dung nghệ thuật Trần Hà Vy"
                 onError={(e) => {
                   // Fallback beautiful hand-drawn graphite style canvas placeholder if image not yet generated
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
                 }}
-                className="w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Graphic Pencil placeholder fallback */}
