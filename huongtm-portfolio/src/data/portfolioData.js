@@ -3,7 +3,7 @@ export const portfolioData = {
     fullName: 'Trịnh Mai Hương',
     dob: '06/06/2006',
     studentId: '24063110',
-    major: 'Luật',
+    major: 'Luật kinh doanh',
     university: 'Đại học Luật, ĐHQGHN',
     interests: ['Du lịch', 'Điện ảnh', 'Âm nhạc'],
     style: 'Nhẹ nhàng, êm ả và tinh tế',
