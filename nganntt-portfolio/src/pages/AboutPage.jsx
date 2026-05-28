@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { Page } from '../components/ui/Page';
 import { IngredientBadge, RecipeCard } from '../components/ui/Cards';
+import avatarImg from '../../docs/avatar.jpg';
 
 export function AboutPage() {
   const { person, about } = portfolioData;
@@ -12,7 +13,7 @@ export function AboutPage() {
       <section className="heroGrid">
         <div className="heroCopy">
           <IngredientBadge>Blue Cafe Counter</IngredientBadge>
-          <h1>Blue Cafe Counter</h1>
+          <h1>Welcome to My Portfolio</h1>
           <p className="heroLead">{about.headline}</p>
           <p>{about.intro}</p>
           <div className="heroBadges">
@@ -33,7 +34,7 @@ export function AboutPage() {
           animate={{ opacity: 1, rotate: 0, y: 0 }}
         >
           <div className="avatarFrame">
-            <img src="/docs/avatar.jpg" alt="Nguyễn Thị Thu Ngân" />
+            <img src={avatarImg} alt="Nguyễn Thị Thu Ngân" />
           </div>
           <div>
             <span className="handNote">today's special</span>
