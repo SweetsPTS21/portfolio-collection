@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-labelledby="title">
+  <title id="title">Concert tickets and music stickers</title>
+  <g class="ticketFloat" transform="rotate(-8 160 92)">
+    <path d="M40 52h244a28 28 0 0 0 28 28v74a28 28 0 0 0-28 28H40a28 28 0 0 0-28-28V80a28 28 0 0 0 28-28z" fill="#fffdf7" stroke="#d9362b" stroke-width="6"/>
+    <path d="M100 82h118M100 116h158M100 150h86" stroke="#f97316" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="58" cy="92" r="10" fill="#f7b801"/>
+    <circle cx="58" cy="144" r="10" fill="#f7b801"/>
+  </g>
+  <g class="ticketFloat" transform="translate(328 48) rotate(11)">
+    <path d="M0 42c0-23 18-42 42-42s42 19 42 42v58" fill="none" stroke="#351411" stroke-width="12" stroke-linecap="round"/>
+    <rect x="-8" y="82" width="30" height="70" rx="15" fill="#ff6b4a"/>
+    <rect x="62" y="82" width="30" height="70" rx="15" fill="#ff6b4a"/>
+  </g>
+  <g class="sparkleDot" fill="none" stroke="#f7b801" stroke-width="8" stroke-linecap="round">
+    <path d="M430 48v48M406 72h48"/>
+    <path d="M380 172v34M363 189h34"/>
+    <path d="M174 220c26-42 56-22 50-82" stroke="#d9362b"/>
+    <circle cx="159" cy="226" r="18" fill="#f97316" stroke="none"/>
+  </g>
+</svg>
