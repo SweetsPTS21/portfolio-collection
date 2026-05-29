@@ -188,7 +188,7 @@ function AboutPage() {
   return (
     <section className="page about-page section-grid">
       <div className="hero-copy">
-        <PastelTag icon="Sparkles">Lavender Dream Glass</PastelTag>
+        <PastelTag icon="Sparkles">About me</PastelTag>
         <h1>{profile.name}</h1>
         <p className="lead">{profile.greeting}</p>
         <div className="hero-actions" aria-label="Thông tin nhanh">
