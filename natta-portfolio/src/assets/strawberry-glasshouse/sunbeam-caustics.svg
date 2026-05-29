@@ -1,5 +1,0 @@
-<svg width="200" height="600" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="0" width="30" height="600" rx="15" fill="rgba(255,225,122,0.08)" transform="skewX(-5)"/>
-  <rect x="80" y="0" width="40" height="600" rx="20" fill="rgba(255,225,122,0.06)" transform="skewX(-5)"/>
-  <rect x="150" y="0" width="25" height="600" rx="12" fill="rgba(255,225,122,0.07)" transform="skewX(-5)"/>
-</svg>

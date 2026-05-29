@@ -1,6 +1,0 @@
-<svg width="120" height="104" viewBox="0 0 120 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M30 0 L60 0 L75 26 L60 52 L30 52 L15 26 Z" fill="rgba(255,225,122,0.1)" stroke="rgba(255,225,122,0.3)" stroke-width="1"/>
-  <path d="M90 0 L120 0 L135 26 L120 52 L90 52 L75 26 Z" fill="rgba(255,225,122,0.08)" stroke="rgba(255,225,122,0.25)" stroke-width="1"/>
-  <path d="M0 52 L30 52 L45 78 L30 104 L0 104 L-15 78 Z" fill="rgba(255,225,122,0.08)" stroke="rgba(255,225,122,0.25)" stroke-width="1"/>
-  <path d="M60 52 L90 52 L105 78 L90 104 L60 104 L45 78 Z" fill="rgba(255,225,122,0.1)" stroke="rgba(255,225,122,0.3)" stroke-width="1"/>
-</svg>

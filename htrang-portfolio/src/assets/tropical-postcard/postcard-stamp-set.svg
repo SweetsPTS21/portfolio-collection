@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 150" role="img" aria-label="Postcard stamp set">
-  <rect x="14" y="18" width="76" height="58" rx="10" fill="#EAF7FF" stroke="#3FA9F5" stroke-width="4" stroke-dasharray="8 6"/>
-  <circle cx="52" cy="47" r="18" fill="#FFD166" opacity=".9"/>
-  <path d="M36 54c16-13 29-13 47 0" fill="none" stroke="#5BBBEF" stroke-width="6" stroke-linecap="round"/>
-  <rect x="108" y="38" width="62" height="78" rx="12" fill="#FFFFFF" stroke="#FF9FB0" stroke-width="4" stroke-dasharray="7 5"/>
-  <path d="M122 88h34M122 101h26" stroke="#4F718A" stroke-width="4" stroke-linecap="round"/>
-  <path d="M120 59c8-11 24-12 36 0-4 12-13 20-18 28-5-8-14-16-18-28Z" fill="#4DD9B4"/>
-  <circle cx="139" cy="62" r="6" fill="#FFFFFF"/>
-</svg>

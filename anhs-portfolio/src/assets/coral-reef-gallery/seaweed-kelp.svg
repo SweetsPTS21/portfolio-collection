@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" fill="none">
+  <!-- Tall kelp strand 1 -->
+  <path d="M20 200 C20 170 15 150 22 120 C29 90 18 70 25 40 C28 25 22 12 26 5" stroke="#5EEBC4" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <ellipse cx="22" cy="100" rx="6" ry="10" fill="#5EEBC4" opacity="0.2" transform="rotate(-10 22 100)"/>
+  <ellipse cx="25" cy="60" rx="5" ry="8" fill="#5EEBC4" opacity="0.2" transform="rotate(8 25 60)"/>
+  <ellipse cx="26" cy="25" rx="4" ry="7" fill="#5EEBC4" opacity="0.15" transform="rotate(-5 26 25)"/>
+  <!-- Kelp strand 2 -->
+  <path d="M50 200 C50 175 55 155 48 130 C41 105 52 85 48 60 C46 45 50 30 48 18" stroke="#38B2D8" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  <ellipse cx="48" cy="110" rx="5" ry="9" fill="#38B2D8" opacity="0.18" transform="rotate(12 48 110)"/>
+  <ellipse cx="50" cy="70" rx="5" ry="8" fill="#38B2D8" opacity="0.15" transform="rotate(-8 50 70)"/>
+  <!-- Sea grass cluster -->
+  <path d="M80 200 C80 180 78 165 82 145 C86 125 80 110 84 90" stroke="#5EEBC4" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M88 200 C88 185 90 170 86 155 C82 140 88 125 85 110" stroke="#38B2D8" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+  <path d="M96 200 C96 188 94 176 98 164 C102 152 97 140 100 128" stroke="#5EEBC4" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Small decorative leaves -->
+  <ellipse cx="84" cy="95" rx="4" ry="6" fill="#5EEBC4" opacity="0.15" transform="rotate(15 84 95)"/>
+  <ellipse cx="85" cy="115" rx="4" ry="6" fill="#38B2D8" opacity="0.12" transform="rotate(-10 85 115)"/>
+</svg>
