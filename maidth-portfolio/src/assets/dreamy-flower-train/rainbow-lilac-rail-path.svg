@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 260" role="img" aria-label="Rainbow lilac rail path">
+  <defs><filter id="railGlow"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#b88cff" flood-opacity="0.55"/></filter></defs>
+  <path d="M10 170 C280 40 440 210 690 120 C890 48 1030 185 1245 128 C1390 90 1480 118 1590 60" fill="none" stroke="#ffe48a" stroke-width="18" stroke-linecap="round" filter="url(#railGlow)"/>
+  <path d="M10 196 C280 66 440 236 690 146 C890 74 1030 211 1245 154 C1390 116 1480 144 1590 86" fill="none" stroke="#b88cff" stroke-width="16" stroke-linecap="round"/>
+  <g stroke="#fff" stroke-width="9" stroke-linecap="round" opacity="0.82">
+    <path d="M130 134 l44 72"/><path d="M270 104 l46 76"/><path d="M430 128 l44 70"/><path d="M592 132 l42 70"/>
+    <path d="M750 104 l42 70"/><path d="M910 112 l42 70"/><path d="M1078 134 l42 70"/><path d="M1240 112 l42 70"/>
+    <path d="M1392 96 l42 70"/><path d="M1510 76 l42 70"/>
+  </g>
+  <g fill="#fff"><circle cx="340" cy="72" r="7"/><circle cx="760" cy="82" r="6"/><circle cx="1185" cy="104" r="7"/><circle cx="1450" cy="60" r="6"/></g>
+</svg>
+

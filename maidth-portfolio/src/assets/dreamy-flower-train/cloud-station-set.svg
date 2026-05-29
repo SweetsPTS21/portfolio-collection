@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 310" role="img" aria-label="Cloud station set">
+  <defs><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#d9c7ff" stop-opacity="0.7"/></linearGradient></defs>
+  <path d="M72 230 C25 226 0 198 8 164 C18 124 58 112 92 132 C112 78 172 48 228 72 C252 32 314 20 356 54 C394 84 396 128 376 154 C438 150 500 174 508 218 C514 254 486 278 440 278 L80 278 C52 278 42 238 72 230Z" fill="#fff" opacity="0.78"/>
+  <rect x="130" y="98" width="260" height="104" rx="30" fill="url(#glass)" stroke="#b88cff" stroke-width="5"/>
+  <rect x="170" y="126" width="180" height="42" rx="18" fill="#2e2348" opacity="0.86"/>
+  <circle cx="260" cy="70" r="24" fill="#ffe48a" stroke="#b88cff" stroke-width="4"/>
+  <path d="M260 70 l0 -14 M260 70 l14 8" stroke="#2e2348" stroke-width="4" stroke-linecap="round"/>
+  <rect x="145" y="208" width="230" height="18" rx="9" fill="#b88cff" opacity="0.78"/>
+  <rect x="185" y="226" width="18" height="48" rx="9" fill="#2e2348" opacity="0.65"/>
+  <rect x="320" y="226" width="18" height="48" rx="9" fill="#2e2348" opacity="0.65"/>
+  <g fill="#ff9ecb"><circle cx="95" cy="186" r="11"/><circle cx="120" cy="178" r="8"/><circle cx="404" cy="188" r="10"/><circle cx="430" cy="178" r="8"/></g>
+</svg>
+

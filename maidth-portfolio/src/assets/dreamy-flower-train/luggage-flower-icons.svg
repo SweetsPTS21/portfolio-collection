@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-label="Luggage flower icons">
+  <g fill="none" stroke="#2e2348" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="28" y="42" width="54" height="48" rx="12" fill="#e8d6ff"/>
+    <path d="M44 42 v-10 h22 v10"/>
+    <path d="M132 88 C112 70 122 42 150 44 C172 45 184 72 162 90 Z" fill="#ff9ecb"/>
+    <path d="M150 44 C148 30 158 22 170 18"/>
+    <rect x="216" y="36" width="62" height="52" rx="10" fill="#fff"/>
+    <path d="M228 52 h38 M228 68 h28"/>
+    <path d="M316 38 c20 0 20 28 0 28 c-20 0 -20 -28 0 -28Z" fill="#ffe48a"/>
+    <path d="M316 66 v28"/>
+  </g>
+</svg>
+
