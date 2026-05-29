@@ -1,0 +1,13 @@
+<svg viewBox="0 0 250 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FF8EC7" stop-opacity="0.6"/><stop offset="50%" stop-color="#B8D4FF" stop-opacity="0.4"/><stop offset="100%" stop-color="#D4A0FF" stop-opacity="0.2"/></linearGradient>
+    <linearGradient id="wr" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#B8D4FF" stop-opacity="0.6"/><stop offset="50%" stop-color="#FF8EC7" stop-opacity="0.4"/><stop offset="100%" stop-color="#E8D5FF" stop-opacity="0.2"/></linearGradient>
+  </defs>
+  <path d="M125 100 C100 60 50 40 40 70 C30 100 60 120 80 110 C100 100 110 90 125 100Z" fill="url(#wl)" opacity="0.5"/>
+  <path d="M125 100 C110 120 80 150 90 170 C100 190 120 170 125 150Z" fill="url(#wl)" opacity="0.4"/>
+  <path d="M125 100 C150 60 200 40 210 70 C220 100 190 120 170 110 C150 100 140 90 125 100Z" fill="url(#wr)" opacity="0.5"/>
+  <path d="M125 100 C140 120 170 150 160 170 C150 190 130 170 125 150Z" fill="url(#wr)" opacity="0.4"/>
+  <ellipse cx="125" cy="105" rx="3" ry="20" fill="#8A5A72" opacity="0.5"/>
+  <circle cx="110" cy="55" r="2" fill="#FF8EC7" opacity="0.6"/>
+  <circle cx="140" cy="55" r="2" fill="#D4A0FF" opacity="0.6"/>
+</svg>

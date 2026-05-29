@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8EC7"/><stop offset="16%" stop-color="#FFB6D9"/><stop offset="33%" stop-color="#FFD4B8"/><stop offset="50%" stop-color="#FFE4A8"/><stop offset="66%" stop-color="#8EECD4"/><stop offset="83%" stop-color="#B8D4FF"/><stop offset="100%" stop-color="#D4A0FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 80 Q75 20 150 50 Q225 80 290 30" stroke="url(#rainbow)" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M20 90 Q100 40 180 60 Q260 80 290 50" stroke="url(#rainbow)" stroke-width="1.5" fill="none" opacity="0.2"/>
+</svg>

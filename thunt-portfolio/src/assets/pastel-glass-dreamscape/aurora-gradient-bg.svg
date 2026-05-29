@@ -1,0 +1,13 @@
+<svg viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aurora1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5"/>
+      <stop offset="30%" stop-color="#FFD6EC"/>
+      <stop offset="60%" stop-color="#E8D5FF"/>
+      <stop offset="100%" stop-color="#B8D4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#aurora1)"/>
+  <path d="M0 300 Q200 200 400 350 Q600 500 800 300" fill="#D4A0FF" opacity="0.15"/>
+  <path d="M0 400 Q300 300 500 400 Q700 500 800 350" fill="#FF8EC7" opacity="0.1"/>
+</svg>

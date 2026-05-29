@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pastel-pink: #FF8EC7;
+  --blush-rose: #FFB6D9;
+  --lavender-mist: #E8D5FF;
+  --baby-blue: #B8D4FF;
+  --mint-cream: #8EECD4;
+  --peach-glow: #FFD4B8;
+  --aurora-purple: #D4A0FF;
+  --crystal-white: #FFFFFF;
+  --dream-bg: #FFF0F5;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: rgba(255, 182, 217, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--dream-bg);
+}
+
+/* Aurora gradient animation */
+@keyframes aurora-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+}
+
+/* Bokeh drift */
+@keyframes bokeh-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  25% { transform: translate(15px, -20px) scale(1.1); opacity: 0.3; }
+  50% { transform: translate(-10px, 15px) scale(0.9); opacity: 0.15; }
+  75% { transform: translate(20px, 10px) scale(1.05); opacity: 0.25; }
+}
+
+/* Petal fall */
+@keyframes petal-fall {
+  0% { transform: translateY(-10%) translateX(0) rotate(0deg); opacity: 0.8; }
+  100% { transform: translateY(110vh) translateX(80px) rotate(360deg); opacity: 0; }
+}
+
+/* Shimmer sweep */
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Crystal rose rotate */
+@keyframes crystal-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sakura branch sway */
+@keyframes branch-sway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(15px) rotate(2deg); }
+}
+
+/* Moon glow pulse */
+@keyframes moon-glow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 142, 199, 0.3)); }
+  50% { filter: drop-shadow(0 0 40px rgba(255, 142, 199, 0.6)); }
+}
+
+/* Butterfly flutter */
+@keyframes butterfly-flutter {
+  0%, 100% { transform: scaleX(1) translateX(0) translateY(0); }
+  25% { transform: scaleX(0.8) translateX(10px) translateY(-5px); }
+  50% { transform: scaleX(1) translateX(20px) translateY(0); }
+  75% { transform: scaleX(0.8) translateX(10px) translateY(5px); }
+}
+
+/* Diamond spin */
+@keyframes diamond-spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* Cloud drift */
+@keyframes cloud-drift {
+  0%, 100% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(30px) scale(1.05); }
+}
+
+/* Swan sway */
+@keyframes swan-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Rainbow hue */
+@keyframes rainbow-hue {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.02); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

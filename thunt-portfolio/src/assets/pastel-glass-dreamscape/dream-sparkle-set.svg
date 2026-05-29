@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 4-point star sparkles -->
+  <path d="M50 30 L52 38 L60 40 L52 42 L50 50 L48 42 L40 40 L48 38Z" fill="#FFE4A8" opacity="0.7"/>
+  <path d="M140 60 L141.5 65 L147 67 L141.5 69 L140 74 L138.5 69 L133 67 L138.5 65Z" fill="#FF8EC7" opacity="0.6"/>
+  <path d="M80 120 L82 128 L90 130 L82 132 L80 140 L78 132 L70 130 L78 128Z" fill="#D4A0FF" opacity="0.5"/>
+  <path d="M160 150 L161 154 L165 155 L161 156 L160 160 L159 156 L155 155 L159 154Z" fill="#B8D4FF" opacity="0.6"/>
+  <!-- Diamond dots -->
+  <circle cx="30" cy="100" r="2" fill="#FFB6D9" opacity="0.5"/>
+  <circle cx="170" cy="30" r="1.5" fill="#E8D5FF" opacity="0.6"/>
+  <circle cx="100" cy="180" r="2.5" fill="#8EECD4" opacity="0.4"/>
+</svg>
