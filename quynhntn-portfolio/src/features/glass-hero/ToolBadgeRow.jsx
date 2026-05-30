@@ -9,7 +9,8 @@ export default function ToolBadgeRow() {
   return (
     <section className="relative z-10 max-w-4xl mx-auto px-4 pb-16">
       <motion.h2
-        className="text-2xl md:text-3xl font-heading font-bold text-center text-text-primary mb-6"
+        className="text-2xl md:text-3xl font-heading font-bold text-center mb-6"
+        style={{ color: '#1A1A4E' }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -29,7 +30,7 @@ export default function ToolBadgeRow() {
           const Icon = iconMap[tool.icon] || Wrench;
           return (
             <GlassBadge key={tool.name}>
-              <Icon size={16} className="text-pastel-pink" />
+              <Icon size={16} style={{ color: '#7B3FBE' }} />
               {tool.name}
             </GlassBadge>
           );
@@ -38,3 +39,4 @@ export default function ToolBadgeRow() {
     </section>
   );
 }
+

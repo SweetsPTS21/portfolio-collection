@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Legacy pastel tokens (giữ để không break)
         'pastel-pink': '#FF8EC7',
         'blush-rose': '#FFB6D9',
         'lavender-mist': '#E8D5FF',
@@ -11,9 +12,15 @@ export default {
         'mint-cream': '#8EECD4',
         'peach-glow': '#FFD4B8',
         'aurora-purple': '#D4A0FF',
-        'dream-bg': '#FFF0F5',
-        'text-primary': '#3D1F33',
-        'text-secondary': '#8A5A72',
+        'dream-bg': '#FFFFFF',
+        'text-primary': '#2D2D2D',      // charcoal
+        'text-secondary': '#4A4A4A',    // dark gray
+
+        // Sakura Parchment — Concept A accent tokens
+        'accent-rose':  '#D4607E',
+        'accent-plum':  '#8B4BAB',
+        'accent-teal':  '#3A9A8A',
+        'accent-peach': '#D4784A',
       },
       fontFamily: {
         heading: ['Quicksand', 'sans-serif'],
@@ -22,10 +29,8 @@ export default {
       borderRadius: {
         glass: '24px',
       },
-      backdropBlur: {
-        glass: '20px',
-      },
     },
   },
   plugins: [],
 };
+

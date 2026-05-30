@@ -11,10 +11,19 @@
   --peach-glow: #FFD4B8;
   --aurora-purple: #D4A0FF;
   --crystal-white: #FFFFFF;
-  --dream-bg: #FFF0F5;
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-shadow: rgba(255, 182, 217, 0.15);
+
+  /* Sakura Parchment — Concept A */
+  --dream-bg: #FFFFFF;
+
+  /* Card accent colors */
+  --accent-rose:  #D4607E;
+  --accent-plum:  #8B4BAB;
+  --accent-teal:  #3A9A8A;
+  --accent-peach: #D4784A;
+
+  /* Card text — high contrast on white */
+  --card-title: #2D2D2D;
+  --card-body:  #4A4A4A;
 }
 
 * {
@@ -30,8 +39,9 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  background: var(--dream-bg);
+  background: #FFFFFF;
 }
+
 
 /* Aurora gradient animation */
 @keyframes aurora-shift {
