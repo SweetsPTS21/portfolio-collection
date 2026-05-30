@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220">
+  <defs>
+    <linearGradient id="bottleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A7E4FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7CCDF2" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="bottleShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FBFEFF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FBFEFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bottle body -->
+  <path d="M40,70 Q32,80 30,110 Q28,150 32,175 Q36,195 60,198 Q84,195 88,175 Q92,150 90,110 Q88,80 80,70 Z"
+        fill="url(#bottleGrad)" stroke="#BFEAF8" stroke-width="2"/>
+
+  <!-- Bottle neck -->
+  <path d="M46,70 Q44,55 46,42 L74,42 Q76,55 74,70 Z"
+        fill="url(#bottleGrad)" stroke="#BFEAF8" stroke-width="1.5"/>
+
+  <!-- Bottle mouth -->
+  <rect x="42" y="32" width="36" height="12" rx="4" fill="#7CCDF2" stroke="#BFEAF8" stroke-width="1.5"/>
+
+  <!-- Cork -->
+  <rect x="48" y="22" width="24" height="14" rx="6" fill="#FFEBC7" stroke="#FFD978" stroke-width="1.5"/>
+  <!-- Cork lines -->
+  <line x1="48" y1="28" x2="72" y2="28" stroke="#FFD978" stroke-width="1" opacity="0.6"/>
+
+  <!-- Glass shine -->
+  <path d="M38,85 Q36,120 38,160" fill="none" stroke="url(#bottleShine)" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Message scroll inside -->
+  <rect x="42" y="100" width="36" height="50" rx="4" fill="#FBFEFF" opacity="0.85" transform="rotate(-5,60,125)"/>
+  <!-- Message lines -->
+  <g stroke="#BFEAF8" stroke-width="1.5" opacity="0.7" transform="rotate(-5,60,125)">
+    <line x1="46" y1="112" x2="74" y2="112"/>
+    <line x1="46" y1="120" x2="74" y2="120"/>
+    <line x1="46" y1="128" x2="68" y2="128"/>
+  </g>
+  <!-- Heart on note -->
+  <path d="M56,140 Q56,136 60,138 Q64,136 64,140 Q64,144 60,148 Q56,144 56,140 Z"
+        fill="#FFB7C8" opacity="0.8" transform="rotate(-5,60,142)"/>
+
+  <!-- Water line inside bottle -->
+  <ellipse cx="60" cy="170" rx="26" ry="6" fill="#A7E4FF" opacity="0.4"/>
+
+  <!-- Bubbles inside -->
+  <circle cx="50" cy="155" r="3" fill="#FBFEFF" opacity="0.5"/>
+  <circle cx="68" cy="148" r="2" fill="#FBFEFF" opacity="0.4"/>
+  <circle cx="55" cy="138" r="1.5" fill="#FBFEFF" opacity="0.45"/>
+
+  <!-- Sparkle near cork -->
+  <g fill="#FFD978" opacity="0.9">
+    <polygon points="60,15 61.5,19 66,19 62.5,21.5 64,25.5 60,23 56,25.5 57.5,21.5 54,19 58.5,19" transform="scale(0.6) translate(40,-2)"/>
+  </g>
+</svg>

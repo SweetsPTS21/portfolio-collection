@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100">
+  <defs>
+    <linearGradient id="whaleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2F5F78"/>
+      <stop offset="100%" stop-color="#18384A"/>
+    </linearGradient>
+    <linearGradient id="whaleLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4A7D96" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#3A6E88" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2F5F78" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Water spout / blow -->
+  <g opacity="0.85">
+    <!-- Main spout column -->
+    <path d="M80,18 Q82,8 80,2 Q78,8 80,18" fill="none" stroke="#FBFEFF" stroke-width="3" stroke-linecap="round"/>
+    <!-- Spout spread at top -->
+    <path d="M80,12 Q70,4 66,0 Q72,6 80,12" fill="none" stroke="#FBFEFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M80,12 Q90,4 94,0 Q88,6 80,12" fill="none" stroke="#FBFEFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M80,10 Q74,2 70,0" fill="none" stroke="#FBFEFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M80,10 Q86,2 90,0" fill="none" stroke="#FBFEFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <!-- Mist droplets -->
+    <g fill="#FBFEFF" opacity="0.7">
+      <circle cx="72" cy="3" r="1.5"/>
+      <circle cx="88" cy="2" r="1.2"/>
+      <circle cx="80" cy="0" r="1.8"/>
+      <circle cx="76" cy="5" r="1"/>
+      <circle cx="84" cy="4" r="1.2"/>
+    </g>
+  </g>
+
+  <!-- Whale body (massive, mostly submerged) -->
+  <path d="M10,55 Q60,30 160,38 Q220,42 260,55 Q240,68 200,70 Q130,72 60,68 Q30,66 10,55 Z"
+        fill="url(#whaleGrad)" stroke="#18384A" stroke-width="1.5"/>
+
+  <!-- Body highlight -->
+  <path d="M20,52 Q80,34 160,40 Q210,44 250,54"
+        fill="none" stroke="url(#whaleLight)" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Belly lighter patch -->
+  <ellipse cx="120" cy="64" rx="80" ry="12" fill="#3A6E88" opacity="0.35"/>
+
+  <!-- Dorsal fin -->
+  <path d="M160,38 Q175,20 185,32 Q172,38 160,38 Z"
+        fill="#18384A" stroke="#2F5F78" stroke-width="1"/>
+
+  <!-- Head / rostrum -->
+  <path d="M10,55 Q0,52 0,60 Q4,66 14,64 Q10,60 10,55 Z"
+        fill="#18384A"/>
+
+  <!-- Eye -->
+  <circle cx="22" cy="52" r="5" fill="#18384A"/>
+  <circle cx="23.5" cy="51" r="2" fill="#FBFEFF" opacity="0.8"/>
+
+  <!-- Barnacles (texture) -->
+  <g fill="#3A6E88" opacity="0.5">
+    <circle cx="55" cy="50" r="2"/>
+    <circle cx="68" cy="48" r="1.5"/>
+    <circle cx="82" cy="46" r="2"/>
+    <circle cx="100" cy="45" r="1.5"/>
+  </g>
+
+  <!-- Pectoral fin (submerged shadow) -->
+  <path d="M50,60 Q62,72 46,76 Q38,68 50,60 Z"
+        fill="#18384A" opacity="0.4"/>
+
+  <!-- Tail flukes (visible at water surface, far right) -->
+  <path d="M248,56 Q264,40 272,50 Q264,60 252,62 Z"
+        fill="#18384A" stroke="#2F5F78" stroke-width="1"/>
+  <path d="M248,56 Q258,68 270,64 Q264,56 252,58 Z"
+        fill="#18384A" stroke="#2F5F78" stroke-width="1"/>
+
+  <!-- Water line / wake -->
+  <path d="M0,60 Q70,56 140,60 Q210,64 280,60"
+        fill="none" stroke="#7CCDF2" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Wake ripples -->
+  <path d="M240,62 Q260,58 280,62" fill="none" stroke="#A7E4FF" stroke-width="1.5" opacity="0.5"/>
+  <path d="M230,66 Q260,62 280,66" fill="none" stroke="#A7E4FF" stroke-width="1" opacity="0.4"/>
+
+  <!-- Foam around body -->
+  <g fill="#FBFEFF" opacity="0.6">
+    <circle cx="12" cy="58" r="3"/>
+    <circle cx="6" cy="62" r="2"/>
+    <circle cx="262" cy="58" r="2.5"/>
+    <circle cx="268" cy="64" r="2"/>
+    <circle cx="140" cy="38" r="2"/>
+    <circle cx="150" cy="36" r="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EEF9FF"/>
+      <stop offset="35%" stop-color="#C8EEFF"/>
+      <stop offset="70%" stop-color="#A7E4FF"/>
+      <stop offset="100%" stop-color="#7CCDF2"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="75%" cy="20%" r="18%">
+      <stop offset="0%" stop-color="#FFD978" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FFB7C8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#A7E4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunCore" cx="75%" cy="20%" r="5%">
+      <stop offset="0%" stop-color="#FFFDE0"/>
+      <stop offset="60%" stop-color="#FFD978"/>
+      <stop offset="100%" stop-color="#FFD978" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Sky gradient -->
+  <rect width="1440" height="560" fill="url(#skyGrad)"/>
+
+  <!-- Sun glow halo -->
+  <ellipse cx="1080" cy="112" rx="200" ry="180" fill="url(#sunGlow)"/>
+
+  <!-- Sun disc -->
+  <circle cx="1080" cy="112" r="54" fill="url(#sunCore)"/>
+  <circle cx="1080" cy="112" r="42" fill="#FFFDE0"/>
+  <circle cx="1080" cy="112" r="32" fill="#FFD978"/>
+
+  <!-- Sun rays -->
+  <g fill="none" stroke="#FFD978" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <line x1="1080" y1="56" x2="1080" y2="44"/>
+    <line x1="1080" y1="168" x2="1080" y2="180"/>
+    <line x1="1024" y1="112" x2="1012" y2="112"/>
+    <line x1="1136" y1="112" x2="1148" y2="112"/>
+    <line x1="1040" y1="72" x2="1031" y2="63"/>
+    <line x1="1120" y1="152" x2="1129" y2="161"/>
+    <line x1="1120" y1="72" x2="1129" y2="63"/>
+    <line x1="1040" y1="152" x2="1031" y2="161"/>
+  </g>
+
+  <!-- Horizon glow band -->
+  <ellipse cx="720" cy="360" rx="800" ry="80" fill="#FFD978" opacity="0.12" filter="url(#softBlur)"/>
+
+  <!-- Pink cloud clusters -->
+  <ellipse cx="200" cy="80" rx="90" ry="35" fill="#FFD7E2" opacity="0.75"/>
+  <ellipse cx="250" cy="68" rx="70" ry="28" fill="#FBFEFF" opacity="0.8"/>
+  <ellipse cx="160" cy="75" rx="55" ry="22" fill="#FFD7E2" opacity="0.6"/>
+
+  <ellipse cx="600" cy="55" rx="100" ry="32" fill="#FFD7E2" opacity="0.55"/>
+  <ellipse cx="650" cy="44" rx="75" ry="25" fill="#FBFEFF" opacity="0.7"/>
+
+  <ellipse cx="900" cy="70" rx="80" ry="28" fill="#FFD7E2" opacity="0.45"/>
+  <ellipse cx="940" cy="58" rx="60" ry="22" fill="#FBFEFF" opacity="0.65"/>
+
+  <!-- Water surface horizon line -->
+  <path d="M0,370 Q360,360 720,368 Q1080,376 1440,366 L1440,560 L0,560 Z"
+        fill="#4BAED8" opacity="0.8"/>
+
+  <!-- Horizon shimmer -->
+  <ellipse cx="720" cy="370" rx="680" ry="8" fill="#FBFEFF" opacity="0.25"/>
+</svg>

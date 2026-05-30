@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="wave1Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A7E4FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7CCDF2" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="wave2Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7CCDF2" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#4BAED8" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="wave3Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4BAED8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2F8FC8" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="wave4Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2F8FC8" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#18384A" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wave layer 1 — topmost, lightest -->
+  <path d="M0,60 C180,20 360,100 540,55 C720,10 900,90 1080,45 C1260,0 1380,70 1440,50 L1440,200 L0,200 Z"
+        fill="url(#wave1Grad)"/>
+  <!-- Foam crest on wave 1 -->
+  <path d="M0,60 C180,20 360,100 540,55 C720,10 900,90 1080,45 C1260,0 1380,70 1440,50"
+        fill="none" stroke="#FBFEFF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Wave layer 2 -->
+  <path d="M0,90 C200,50 400,130 600,80 C800,30 1000,110 1200,70 C1350,42 1420,90 1440,80 L1440,200 L0,200 Z"
+        fill="url(#wave2Grad)"/>
+  <path d="M0,90 C200,50 400,130 600,80 C800,30 1000,110 1200,70 C1350,42 1420,90 1440,80"
+        fill="none" stroke="#A7E4FF" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Wave layer 3 -->
+  <path d="M0,120 C240,80 480,160 720,110 C960,60 1200,140 1440,100 L1440,200 L0,200 Z"
+        fill="url(#wave3Grad)"/>
+  <path d="M0,120 C240,80 480,160 720,110 C960,60 1200,140 1440,100"
+        fill="none" stroke="#7CCDF2" stroke-width="2" opacity="0.4"/>
+
+  <!-- Wave layer 4 — deepest -->
+  <path d="M0,150 C300,110 600,180 900,140 C1100,112 1300,165 1440,145 L1440,200 L0,200 Z"
+        fill="url(#wave4Grad)"/>
+
+  <!-- Sparkle dots on top wave -->
+  <g fill="#FFD978" opacity="0.8">
+    <circle cx="150" cy="57" r="2.5"/>
+    <circle cx="380" cy="72" r="2"/>
+    <circle cx="620" cy="50" r="3"/>
+    <circle cx="850" cy="68" r="2"/>
+    <circle cx="1050" cy="42" r="2.5"/>
+    <circle cx="1280" cy="62" r="2"/>
+  </g>
+  <g fill="#FBFEFF" opacity="0.6">
+    <circle cx="240" cy="52" r="1.5"/>
+    <circle cx="490" cy="78" r="1.5"/>
+    <circle cx="730" cy="48" r="2"/>
+    <circle cx="960" cy="65" r="1.5"/>
+    <circle cx="1180" cy="55" r="1.5"/>
+  </g>
+</svg>

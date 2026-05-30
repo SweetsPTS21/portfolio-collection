@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 120">
+  <defs>
+    <linearGradient id="hullGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2F8FC8"/>
+      <stop offset="100%" stop-color="#18384A"/>
+    </linearGradient>
+    <linearGradient id="sailGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBFEFF"/>
+      <stop offset="100%" stop-color="#EEF9FF"/>
+    </linearGradient>
+    <linearGradient id="sail2Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD7E2"/>
+      <stop offset="100%" stop-color="#FFB7C8"/>
+    </linearGradient>
+    <linearGradient id="reflectGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2F8FC8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#18384A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Water reflection (distorted) -->
+  <path d="M18,92 Q70,88 122,92 Q118,108 70,112 Q22,108 18,92 Z"
+        fill="url(#reflectGrad)" opacity="0.5"/>
+  <!-- Reflection ripple lines -->
+  <path d="M30,96 Q70,93 110,96" fill="none" stroke="#A7E4FF" stroke-width="1" opacity="0.4"/>
+  <path d="M38,101 Q70,98 102,101" fill="none" stroke="#A7E4FF" stroke-width="1" opacity="0.3"/>
+
+  <!-- Hull -->
+  <path d="M20,82 Q70,74 120,82 L112,94 Q70,98 28,94 Z"
+        fill="url(#hullGrad)" stroke="#18384A" stroke-width="1.5"/>
+  <!-- Hull stripe -->
+  <path d="M24,84 Q70,78 116,84" fill="none" stroke="#A7E4FF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Deck -->
+  <rect x="52" y="72" width="36" height="12" rx="4" fill="#FFEBC7" stroke="#FFD978" stroke-width="1.5"/>
+
+  <!-- Cabin window -->
+  <circle cx="62" cy="78" r="4" fill="#A7E4FF" stroke="#7CCDF2" stroke-width="1"/>
+  <circle cx="74" cy="78" r="4" fill="#A7E4FF" stroke="#7CCDF2" stroke-width="1"/>
+  <!-- Window shine -->
+  <circle cx="63" cy="77" r="1.2" fill="#FBFEFF" opacity="0.8"/>
+  <circle cx="75" cy="77" r="1.2" fill="#FBFEFF" opacity="0.8"/>
+
+  <!-- Mast -->
+  <line x1="70" y1="18" x2="70" y2="76" stroke="#18384A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Boom -->
+  <line x1="70" y1="65" x2="100" y2="70" stroke="#18384A" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Main sail (white) -->
+  <path d="M70,20 L104,62 L70,66 Z" fill="url(#sailGrad)" stroke="#BFEAF8" stroke-width="1.5"/>
+  <!-- Sail folds -->
+  <line x1="70" y1="30" x2="96" y2="54" stroke="#BFEAF8" stroke-width="0.8" opacity="0.6"/>
+  <line x1="70" y1="42" x2="88" y2="58" stroke="#BFEAF8" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Jib sail (pink) -->
+  <path d="M70,22 L42,60 L70,64 Z" fill="url(#sail2Grad)" stroke="#FFD7E2" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Flag at top -->
+  <path d="M70,18 L82,14 L70,22 Z" fill="#FFD978" stroke="#FFB7C8" stroke-width="1"/>
+
+  <!-- Rope/rigging lines -->
+  <line x1="70" y1="20" x2="28" y2="74" stroke="#FFEBC7" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Water line foam -->
+  <path d="M22,90 Q45,87 70,88 Q95,87 118,90" fill="none" stroke="#FBFEFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Small wave beside hull -->
+  <path d="M12,88 Q18,84 26,88" fill="none" stroke="#A7E4FF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M114,88 Q120,84 128,88" fill="none" stroke="#A7E4FF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+</svg>

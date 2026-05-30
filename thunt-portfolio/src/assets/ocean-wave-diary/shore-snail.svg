@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 90">
+  <defs>
+    <linearGradient id="shellSpiral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4956A"/>
+      <stop offset="50%" stop-color="#E8B090"/>
+      <stop offset="100%" stop-color="#C07050"/>
+    </linearGradient>
+    <linearGradient id="shellHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFEBC7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFD978" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEBC7"/>
+      <stop offset="100%" stop-color="#FFD978"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shell (cone spiral) -->
+  <!-- Outer whorl -->
+  <path d="M40,8 Q68,10 72,32 Q74,52 58,64 Q44,74 28,68 Q12,60 14,42 Q16,24 30,14 Q34,10 40,8 Z"
+        fill="url(#shellSpiral)" stroke="#A05030" stroke-width="2"/>
+  <!-- Middle whorl -->
+  <path d="M40,18 Q60,20 62,36 Q64,52 52,58 Q40,64 30,58 Q20,52 22,38 Q24,26 34,20 Q36,18 40,18 Z"
+        fill="#C07050" stroke="#A05030" stroke-width="1.5"/>
+  <!-- Inner whorl -->
+  <path d="M40,26 Q52,28 52,40 Q52,52 42,54 Q32,56 28,46 Q26,36 34,30 Q36,26 40,26 Z"
+        fill="#D4956A" stroke="#A05030" stroke-width="1.5"/>
+  <!-- Innermost -->
+  <ellipse cx="40" cy="42" rx="8" ry="9" fill="#E8B090" stroke="#A05030" stroke-width="1"/>
+  <ellipse cx="40" cy="42" rx="4" ry="4.5" fill="#C07050"/>
+
+  <!-- Shell stripe pattern -->
+  <path d="M26,20 Q36,18 46,22" fill="none" stroke="#A05030" stroke-width="1.5" opacity="0.5"/>
+  <path d="M18,34 Q22,28 30,24" fill="none" stroke="#A05030" stroke-width="1.5" opacity="0.4"/>
+  <path d="M16,46 Q16,38 20,30" fill="none" stroke="#A05030" stroke-width="1" opacity="0.35"/>
+  <path d="M60,26 Q66,34 64,46" fill="none" stroke="#A05030" stroke-width="1" opacity="0.35"/>
+
+  <!-- Highlight shine -->
+  <path d="M28,16 Q36,12 46,16 Q40,18 34,18 Q30,18 28,16" fill="url(#shellHighlight)" opacity="0.7"/>
+
+  <!-- Snail body (peeking out from shell opening) -->
+  <path d="M40,72 Q30,68 22,72 Q18,80 26,84 Q34,88 44,84 Q50,80 40,72 Z"
+        fill="url(#bodyGrad)" stroke="#C8A050" stroke-width="1.5"/>
+
+  <!-- Snail head -->
+  <ellipse cx="20" cy="72" rx="10" ry="8" fill="#FFEBC7" stroke="#C8A050" stroke-width="1.5"/>
+
+  <!-- Eye stalks -->
+  <path d="M16,68 Q14,60 15,56" stroke="#C8A050" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M22,67 Q22,59 24,55" stroke="#C8A050" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Eyes on stalks -->
+  <circle cx="15" cy="55" r="4" fill="#18384A"/>
+  <circle cx="24" cy="54" r="4" fill="#18384A"/>
+  <circle cx="16" cy="53.5" r="1.5" fill="#FBFEFF"/>
+  <circle cx="25" cy="52.5" r="1.5" fill="#FBFEFF"/>
+
+  <!-- Snail smile -->
+  <path d="M14,76 Q20,80 26,76" fill="none" stroke="#A07030" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="11" cy="74" rx="3.5" ry="2.5" fill="#FFB7C8" opacity="0.5"/>
+
+  <!-- Antennae -->
+  <path d="M16,68 Q12,62 10,58" stroke="#C8A050" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M22,67 Q20,61 20,56" stroke="#C8A050" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+</svg>

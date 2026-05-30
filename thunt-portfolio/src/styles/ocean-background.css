@@ -1,0 +1,329 @@
+/* ============================================================
+   OCEAN WAVE DIARY — Ocean Background
+   Phase 2: Shore doubled (24%), Ocean halved (28%)
+   ============================================================ */
+
+.ocean-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: var(--z-ocean);
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #EEF9FF 0%,
+    #C8EEFF 18%,
+    #7CCDF2 44%,
+    #4BAED8 60%,
+    #FFEBC7 78%,
+    #FFD978 92%,
+    #FFEBC7 100%
+  );
+}
+
+/* ── Sky layer ── */
+.ocean-sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  z-index: 1;
+}
+
+/* ── Sun glow ── */
+.ocean-sun {
+  position: absolute;
+  top: 8%;
+  right: 18%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFD978 0%, #FFB7C8 50%, transparent 75%);
+  animation: sun-glow 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .ocean-sun {
+    width: 80px;
+    height: 80px;
+    top: 5%;
+    right: 10%;
+  }
+}
+
+/* ── Water body — Phase 2: reduced to 28% ── */
+.ocean-water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28%;
+  background: linear-gradient(
+    180deg,
+    rgba(124,205,242,0.6) 0%,
+    rgba(47,143,200,0.85) 50%,
+    rgba(24,56,74,0.95) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Wave layer base styles ── */
+.wave-layer {
+  position: absolute;
+  width: 200%;
+  left: -50%;
+  background-repeat: repeat-x;
+  transform-origin: center bottom;
+}
+
+/* Phase 2: all wave bottom positions shifted down to match new ocean height */
+.wave-layer-1 {
+  bottom: 25%;
+  height: 80px;
+  opacity: 0.7;
+  animation: wave-sway-1 8s ease-in-out infinite;
+  z-index: 3;
+}
+
+.wave-layer-2 {
+  bottom: 20%;
+  height: 70px;
+  opacity: 0.6;
+  animation: wave-sway-2 10s ease-in-out infinite;
+  z-index: 4;
+}
+
+.wave-layer-3 {
+  bottom: 16%;
+  height: 60px;
+  opacity: 0.5;
+  animation: wave-sway-3 12s ease-in-out infinite;
+  z-index: 5;
+}
+
+.wave-layer-4 {
+  bottom: 12%;
+  height: 55px;
+  opacity: 0.4;
+  animation: wave-sway-4 14s ease-in-out infinite;
+  z-index: 6;
+}
+
+.wave-layer-5 {
+  bottom: 6%;
+  height: 50px;
+  opacity: 0.35;
+  animation: wave-sway-1 16s ease-in-out infinite reverse;
+  z-index: 7;
+}
+
+/* ── Shimmer ribbons — adjusted for new ocean zone ── */
+.shimmer-ribbon {
+  position: absolute;
+  width: 60%;
+  height: 12px;
+  left: 20%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, transparent, rgba(255,217,120,0.6), rgba(255,255,255,0.8), rgba(255,217,120,0.6), transparent);
+  animation: shimmer-ribbon 5s ease-in-out infinite;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.shimmer-ribbon-1 { bottom: 28%; animation-delay: 0s; }
+.shimmer-ribbon-2 { bottom: 22%; animation-delay: 2s; width: 40%; left: 30%; }
+.shimmer-ribbon-3 { bottom: 16%; animation-delay: 4s; width: 25%; left: 38%; }
+
+/* ── Sparkle field — stays on water surface ── */
+.sparkle-field {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.sparkle-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,217,120,0.9);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: sparkle-twinkle var(--duration, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (max-width: 768px) {
+  .sparkle-dot:nth-child(n+8) { display: none; }
+}
+
+/* ── Cloud layer ── */
+.cloud-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.cloud-shape {
+  position: absolute;
+  border-radius: 50px;
+  background: rgba(255, 235, 199, 0.55);
+  filter: blur(2px);
+}
+
+.cloud-1 {
+  top: 12%;
+  animation: cloud-drift-slow 35s linear infinite;
+  animation-delay: 0s;
+}
+
+.cloud-2 {
+  top: 22%;
+  animation: cloud-drift-medium 28s linear infinite;
+  animation-delay: -10s;
+}
+
+.cloud-3 {
+  top: 8%;
+  animation: cloud-drift-slow 42s linear infinite;
+  animation-delay: -20s;
+}
+
+@media (max-width: 768px) {
+  .cloud-3 { display: none; }
+}
+
+/* ── Shore decor — Phase 2: doubled to 24% ── */
+.shore-decor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24%;
+  z-index: 11;
+}
+
+/* ── Shore creatures layer (on top of shore SVG) ── */
+.shore-creatures-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24%;
+  z-index: 12;
+  pointer-events: none;
+}
+
+/* ── Individual shore creature positions ── */
+.shore-crab {
+  position: absolute;
+  bottom: 28%;
+  left: 12%;
+  animation: crab-walk 8s ease-in-out infinite;
+}
+
+.shore-starfish-1 {
+  position: absolute;
+  bottom: 20%;
+  left: 28%;
+}
+
+.shore-starfish-2 {
+  position: absolute;
+  bottom: 32%;
+  left: 52%;
+  transform: rotate(25deg) scale(0.8);
+  opacity: 0.85;
+}
+
+.shore-snail {
+  position: absolute;
+  bottom: 22%;
+  left: 68%;
+}
+
+/* ── Palm tree — fixed right side ── */
+.shore-palm {
+  position: absolute;
+  bottom: 18%;
+  right: 2%;
+  transform-origin: bottom center;
+  animation: palm-sway 6s ease-in-out infinite;
+  z-index: 13;
+}
+
+/* ── Water creatures layer ── */
+.water-creatures-layer {
+  position: absolute;
+  bottom: 22%;
+  left: 0;
+  right: 0;
+  height: 16%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── Boat on water ── */
+.water-boat {
+  position: absolute;
+  bottom: 30%;
+  left: 8%;
+  animation: boat-sway 5s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* ── Dolphin jump position ── */
+.water-dolphin {
+  position: absolute;
+  bottom: 22%;
+  left: 38%;
+  z-index: 11;
+}
+
+/* ── Whale position ── */
+.water-whale {
+  position: absolute;
+  bottom: 28%;
+  right: 12%;
+  animation: whale-drift 30s linear infinite;
+  z-index: 9;
+}
+
+/* ── Foam dots ── */
+.foam-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(251,254,255,0.8);
+  animation: foam-appear 2s ease-out forwards;
+}
+
+/* ── Seagull ── */
+.seagull {
+  position: absolute;
+  top: 15%;
+  animation: gull-glide 25s linear infinite;
+  animation-delay: var(--delay, 0s);
+  z-index: 12;
+}
+
+/* ── Responsive overrides ── */
+@media (max-width: 768px) {
+  .seagull { display: none; }
+  .wave-layer-4, .wave-layer-5 { display: none; }
+  .water-whale { display: none; }
+  .shore-starfish-2 { display: none; }
+  .shore-palm { right: 0; transform: scale(0.75); transform-origin: bottom right; }
+}
+
+@media (max-width: 480px) {
+  .water-boat { left: 4%; transform: scale(0.8); }
+  .shore-palm { display: none; }
+  .water-dolphin { left: 30%; }
+}

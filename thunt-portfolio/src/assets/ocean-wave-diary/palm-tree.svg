@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 280">
+  <defs>
+    <linearGradient id="trunkGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5E3C"/>
+      <stop offset="50%" stop-color="#A0724A"/>
+      <stop offset="100%" stop-color="#7A4E2D"/>
+    </linearGradient>
+    <linearGradient id="leafGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4CAF78"/>
+      <stop offset="100%" stop-color="#2E7D50"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5BBF86"/>
+      <stop offset="100%" stop-color="#3A9062"/>
+    </linearGradient>
+    <linearGradient id="coconutGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B4423"/>
+      <stop offset="100%" stop-color="#4A2E12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Trunk base (roots spread in sand) -->
+  <ellipse cx="55" cy="270" rx="20" ry="6" fill="#7A4E2D" opacity="0.4"/>
+  <!-- Root lines -->
+  <path d="M45,268 Q30,272 22,270" stroke="#6B3E1C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M65,268 Q80,272 88,270" stroke="#6B3E1C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Main trunk (curved leaning right) -->
+  <path d="M52,265 Q48,240 44,210 Q40,180 38,150 Q36,120 38,90 Q40,60 48,38"
+        fill="none" stroke="url(#trunkGrad)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M58,265 Q54,240 50,210 Q46,180 44,150 Q42,120 44,90 Q46,60 54,38"
+        fill="none" stroke="url(#trunkGrad)" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Trunk texture (rings) -->
+  <g stroke="#6B4423" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M44,240 Q54,238 62,240"/>
+    <path d="M42,215 Q52,213 60,215"/>
+    <path d="M40,190 Q50,188 58,190"/>
+    <path d="M39,165 Q49,163 57,165"/>
+    <path d="M38,140 Q48,138 56,140"/>
+    <path d="M38,115 Q48,113 56,115"/>
+    <path d="M39,90 Q49,88 57,90"/>
+    <path d="M40,68 Q50,66 58,68"/>
+  </g>
+
+  <!-- Coconuts (cluster near top) -->
+  <circle cx="44" cy="55" r="9" fill="url(#coconutGrad)" stroke="#3A1E08" stroke-width="1.5"/>
+  <circle cx="56" cy="50" r="9" fill="url(#coconutGrad)" stroke="#3A1E08" stroke-width="1.5"/>
+  <circle cx="50" cy="62" r="8" fill="url(#coconutGrad)" stroke="#3A1E08" stroke-width="1.5"/>
+  <!-- Coconut texture -->
+  <path d="M40,52 Q44,48 48,52" fill="none" stroke="#2A0E00" stroke-width="1" opacity="0.5"/>
+  <path d="M52,47 Q56,43 60,47" fill="none" stroke="#2A0E00" stroke-width="1" opacity="0.5"/>
+
+  <!-- Leaf stems (radiating from top of trunk) -->
+  <g stroke="#3A7040" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M48,40 Q30,20 10,18"/>
+    <path d="M50,38 Q48,10 50,0"/>
+    <path d="M52,38 Q70,16 90,10"/>
+    <path d="M50,42 Q20,38 4,50"/>
+    <path d="M52,42 Q82,34 104,42"/>
+    <path d="M50,44 Q36,54 24,70"/>
+    <path d="M52,44 Q68,52 82,66"/>
+  </g>
+
+  <!-- Palm leaves -->
+  <!-- Leaf 1 (left sweeping) -->
+  <path d="M48,40 Q30,22 12,20 Q20,30 30,36 Q38,38 48,40"
+        fill="url(#leafGrad1)" stroke="#2E7D50" stroke-width="1"/>
+  <path d="M30,22 Q24,28 20,35" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.6"/>
+  <path d="M22,24 Q18,30 16,36" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Leaf 2 (straight up) -->
+  <path d="M50,38 Q46,14 48,2 Q52,14 54,38"
+        fill="url(#leafGrad2)" stroke="#2E7D50" stroke-width="1"/>
+  <path d="M48,20 Q46,12 48,6" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.6"/>
+  <path d="M52,20 Q54,12 52,6" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Leaf 3 (right sweeping) -->
+  <path d="M52,38 Q72,16 92,12 Q82,22 72,28 Q62,34 52,38"
+        fill="url(#leafGrad1)" stroke="#2E7D50" stroke-width="1"/>
+  <path d="M70,18 Q76,24 80,30" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.6"/>
+  <path d="M78,14 Q84,20 86,26" fill="none" stroke="#2E7D50" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Leaf 4 (left drooping) -->
+  <path d="M50,42 Q24,38 6,52 Q16,50 26,46 Q38,44 50,42"
+        fill="url(#leafGrad2)" stroke="#2E7D50" stroke-width="1"/>
+
+  <!-- Leaf 5 (right drooping) -->
+  <path d="M52,42 Q80,36 106,44 Q94,46 80,46 Q66,44 52,42"
+        fill="url(#leafGrad1)" stroke="#2E7D50" stroke-width="1"/>
+
+  <!-- Leaf 6 (left lower) -->
+  <path d="M50,44 Q34,56 22,72 Q32,62 40,52 Q46,48 50,44"
+        fill="url(#leafGrad1)" stroke="#2E7D50" stroke-width="1"/>
+
+  <!-- Leaf 7 (right lower) -->
+  <path d="M52,44 Q68,54 82,68 Q72,58 62,52 Q56,48 52,44"
+        fill="url(#leafGrad2)" stroke="#2E7D50" stroke-width="1"/>
+
+  <!-- Sun dapple on leaves -->
+  <g fill="#FFD978" opacity="0.15">
+    <ellipse cx="20" cy="24" rx="6" ry="3"/>
+    <ellipse cx="80" cy="18" rx="6" ry="3"/>
+  </g>
+</svg>
