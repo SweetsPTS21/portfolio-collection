@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Passport page frame">
+  <rect x="18" y="16" width="324" height="208" rx="18" fill="#FFFFFF" stroke="#B9E3FF" stroke-width="5"/>
+  <path d="M180 18v204" stroke="#EAF7FF" stroke-width="5"/>
+  <rect x="42" y="52" width="104" height="116" rx="14" fill="#EAF7FF" stroke="#3FA9F5" stroke-width="4"/>
+  <path d="M209 60h92M209 92h70M209 124h96M209 156h58" stroke="#4F718A" stroke-width="7" stroke-linecap="round" opacity=".5"/>
+  <circle cx="94" cy="97" r="27" fill="#FFD166" opacity=".75"/>
+  <path d="M60 150c22-27 47-27 70 0" stroke="#4DD9B4" stroke-width="8" stroke-linecap="round" fill="none"/>
+</svg>

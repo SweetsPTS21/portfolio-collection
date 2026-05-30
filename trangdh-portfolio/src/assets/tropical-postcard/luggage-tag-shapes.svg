@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 170" role="img" aria-label="Luggage tag shapes">
+  <g transform="rotate(-8 78 84)">
+    <path d="M28 28h92l28 28v79a14 14 0 0 1-14 14H28a14 14 0 0 1-14-14V42a14 14 0 0 1 14-14Z" fill="#EAF7FF" stroke="#3FA9F5" stroke-width="4"/>
+    <circle cx="44" cy="52" r="8" fill="#FFFFFF" stroke="#3FA9F5" stroke-width="3"/>
+    <path d="M50 86h70M50 108h48" stroke="#4F718A" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(132 18) rotate(9)">
+    <rect x="0" y="0" width="100" height="132" rx="18" fill="#FFF8E8" stroke="#FFD166" stroke-width="4"/>
+    <circle cx="50" cy="27" r="9" fill="#FFFFFF" stroke="#FFD166" stroke-width="3"/>
+    <path d="M29 69h42M29 91h58" stroke="#4F718A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M20 116c21-14 42-14 62 0" stroke="#4DD9B4" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
