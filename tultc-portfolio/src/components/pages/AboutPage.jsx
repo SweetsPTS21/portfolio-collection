@@ -1,9 +1,9 @@
-import { ArrowRight, Camera, GraduationCap, Heart, Quote } from 'lucide-react';
+import { ArrowRight, Heart } from 'lucide-react';
 import { portfolioData } from '../../data/portfolioData.js';
 import IconBadge from '../ui/IconBadge.jsx';
+import { InfoTile, MosaicGrid, PrototypeCard, PrototypePanel } from '../ui/PrototypeCard.jsx';
 import ScrollReveal from '../ui/ScrollReveal.jsx';
 import SectionTitle from '../ui/SectionTitle.jsx';
-import SoftCard from '../ui/SoftCard.jsx';
 
 const toolIcons = {
   'File Explorer': 'FolderKanban',
@@ -19,7 +19,7 @@ const toolIcons = {
 };
 
 export default function AboutPage() {
-  const { profile, principles, tools, visualAssets } = portfolioData;
+  const { profile, principles, tools } = portfolioData;
 
   return (
     <div className="portfolio-page about-page">
@@ -28,6 +28,11 @@ export default function AboutPage() {
           <span className="kicker">Sweet legal studio</span>
           <h1>{profile.name}</h1>
           <p className="hero-section__lead">{profile.intro}</p>
+          <div className="profile-card__info">
+            <InfoTile label="Ngành học" value={profile.major} />
+            <InfoTile label="Trường" value={profile.school} />
+            <InfoTile label="Phong cách" value={profile.personality.join(' · ')} />
+          </div>
           <div className="hero-section__cta-row">
             <a href="#about-profile" className="primary-cta">
               <span>Khám phá hồ sơ</span>
@@ -41,26 +46,14 @@ export default function AboutPage() {
         </ScrollReveal>
 
         <ScrollReveal className="hero-editorial" delay={0.08}>
-          <div className="profile-card">
+          <PrototypeCard className="profile-card profile-card--portrait" variant="media">
             <div className="profile-card__portrait">
               <img src={profile.avatar} alt={`Chân dung ${profile.name}`} />
-              <span className="profile-card__sticker">✿</span>
+              <span className="profile-card__sticker profile-card__sticker--br">✿</span>
+              <span className="profile-card__sticker profile-card__sticker--tl">⭐</span>
+              <span className="profile-card__sticker profile-card__sticker--bl">🌸</span>
             </div>
-            <div className="profile-card__info">
-              <div>
-                <span>Ngành học</span>
-                <strong>{profile.major}</strong>
-              </div>
-              <div>
-                <span>Trường</span>
-                <strong>{profile.school}</strong>
-              </div>
-              <div>
-                <span>Phong cách</span>
-                <strong>{profile.personality.join(' · ')}</strong>
-              </div>
-            </div>
-          </div>
+          </PrototypeCard>
           <div className="hero-editorial__caption">
             <span>Portfolio moodboard</span>
             <strong>Pastel legal editorial</strong>
@@ -78,20 +71,25 @@ export default function AboutPage() {
           thông tin, tinh tế trong trình bày và chân thành trong kết nối
         </SectionTitle>
 
-        <div className="about-grid">
-          <ScrollReveal className="about-panel">
-            <Quote size={30} />
-            <p>{profile.goal}</p>
-          </ScrollReveal>
-          <ScrollReveal className="about-panel about-panel--soft" delay={0.08}>
-            <GraduationCap size={30} />
-            <p>{profile.portfolioGoal}</p>
-          </ScrollReveal>
-          <ScrollReveal className="about-panel about-panel--wide" delay={0.12}>
-            <Camera size={30} />
-            <p>{profile.hobbies}</p>
-          </ScrollReveal>
-        </div>
+        <PrototypePanel className="about-board">
+          <MosaicGrid className="about-grid">
+            <ScrollReveal>
+              <PrototypeCard icon="Quote" className="about-panel" span="tall">
+                <p>{profile.goal}</p>
+              </PrototypeCard>
+            </ScrollReveal>
+            <ScrollReveal delay={0.08}>
+              <PrototypeCard icon="GraduationCap" className="about-panel">
+                <p>{profile.portfolioGoal}</p>
+              </PrototypeCard>
+            </ScrollReveal>
+            <ScrollReveal className="about-panel--wide" delay={0.12}>
+              <PrototypeCard icon="Camera" className="about-panel" span="wide">
+                <p>{profile.hobbies}</p>
+              </PrototypeCard>
+            </ScrollReveal>
+          </MosaicGrid>
+        </PrototypePanel>
       </section>
 
       <section className="content-section">
@@ -100,15 +98,17 @@ export default function AboutPage() {
           title="Ba nguyên tắc cho từng bài tập"
           icon="BadgeCheck"
         />
-        <div className="principle-grid">
-          {principles.map((principle, index) => (
-            <ScrollReveal key={principle.title} delay={index * 0.06}>
-              <SoftCard icon={principle.icon} title={principle.title}>
-                <p>{principle.description}</p>
-              </SoftCard>
-            </ScrollReveal>
-          ))}
-        </div>
+        <PrototypePanel className="principle-board">
+          <MosaicGrid className="principle-grid">
+            {principles.map((principle, index) => (
+              <ScrollReveal key={principle.title} delay={index * 0.06}>
+                <PrototypeCard icon={principle.icon} title={principle.title}>
+                  <p>{principle.description}</p>
+                </PrototypeCard>
+              </ScrollReveal>
+            ))}
+          </MosaicGrid>
+        </PrototypePanel>
       </section>
 
       <section className="content-section">
@@ -134,3 +134,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
