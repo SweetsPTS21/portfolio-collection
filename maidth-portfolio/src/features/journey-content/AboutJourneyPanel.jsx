@@ -1,15 +1,38 @@
-import { Camera, GraduationCap, Heart, Scale, Sparkles } from "lucide-react";
+import {
+  Camera,
+  GraduationCap,
+  Heart,
+  Scale,
+  Sparkles,
+  Target,
+  BookOpen,
+  ShieldCheck,
+  Wrench,
+} from "lucide-react";
 import { portfolioContent } from "./portfolioContent";
 import { FlowerWindowBadge } from "../../components/ui/FlowerWindowBadge";
 import { RailTag } from "../../components/ui/RailTag";
 import { SparkleDivider } from "../../components/ui/SparkleDivider";
 import avatar from "../../../docs/avatar.jpg";
 
+function InfoCard({ icon: Icon, label, tone, children }) {
+  return (
+    <div className={`about-info-card about-info-card--${tone ?? "default"}`}>
+      <div className="about-info-card__header">
+        {Icon && <Icon size={16} className="about-info-card__icon" />}
+        <span className="about-info-card__label">{label}</span>
+      </div>
+      <div className="about-info-card__body">{children}</div>
+    </div>
+  );
+}
+
 export function AboutJourneyPanel() {
   const about = portfolioContent.about;
 
   return (
     <div className="about-grid">
+      {/* ── Profile ticket ── */}
       <section className="profile-ticket glass-surface">
         <div className="avatar-window">
           <img src={avatar} alt="Đỗ Thị Huyền Mai" />
@@ -25,9 +48,10 @@ export function AboutJourneyPanel() {
         </div>
       </section>
 
+      {/* ── Personal info ── */}
       <section className="station-card glass-surface static-card">
         <span className="card-shine" aria-hidden="true" />
-        <RailTag tone="gold">Họ và tên</RailTag>
+        <RailTag tone="gold">Thông tin cá nhân</RailTag>
         <dl className="info-list">
           <div>
             <dt>Mã sinh viên</dt>
@@ -43,36 +67,47 @@ export function AboutJourneyPanel() {
           </div>
         </dl>
         <SparkleDivider />
-        <div className="text-stack">
-          <FlowerWindowBadge icon={Heart}>Sở thích</FlowerWindowBadge>
-          <p>{about.interests}</p>
-          <FlowerWindowBadge icon={Camera}>Phong cách</FlowerWindowBadge>
-          <p>{about.style}</p>
+        <div className="about-cards-stack">
+          <InfoCard icon={Heart} label="Sở thích" tone="rose">
+            {about.interests}
+          </InfoCard>
+          <InfoCard icon={Camera} label="Phong cách" tone="mint">
+            {about.style}
+          </InfoCard>
         </div>
       </section>
 
+      {/* ── Goals ── */}
       <section className="station-card glass-surface wide-card static-card">
         <span className="card-shine" aria-hidden="true" />
-        <RailTag>Mục tiêu học tập và định hướng phát triển</RailTag>
-        <p>{about.goals}</p>
-        <SparkleDivider />
-        <RailTag tone="rose">Mục tiêu của Portfolio</RailTag>
-        <p>{about.portfolioGoal}</p>
+        <RailTag>Định hướng &amp; Mục tiêu</RailTag>
+        <div className="about-cards-stack">
+          <InfoCard icon={Target} label="Mục tiêu học tập và định hướng phát triển" tone="gold">
+            {about.goals}
+          </InfoCard>
+          <InfoCard icon={BookOpen} label="Mục tiêu của Portfolio" tone="rose">
+            {about.portfolioGoal}
+          </InfoCard>
+        </div>
       </section>
 
+      {/* ── Principles & Tools ── */}
       <section className="station-card glass-surface wide-card static-card">
         <span className="card-shine" aria-hidden="true" />
-        <RailTag tone="mint">Nguyên tắc thực hiện bài tập</RailTag>
-        <p>{about.principle}</p>
-        <SparkleDivider />
-        <FlowerWindowBadge icon={Sparkles}>Các công cụ đã sử dụng</FlowerWindowBadge>
-        <ul className="tool-list">
-          {about.tools.map((tool) => (
-            <li key={tool}>{tool}</li>
-          ))}
-        </ul>
+        <RailTag tone="mint">Nguyên tắc &amp; Công cụ</RailTag>
+        <div className="about-cards-stack">
+          <InfoCard icon={ShieldCheck} label="Nguyên tắc thực hiện bài tập" tone="mint">
+            {about.principle}
+          </InfoCard>
+          <InfoCard icon={Wrench} label="Các công cụ đã sử dụng" tone="default">
+            <ul className="tool-list">
+              {about.tools.map((tool) => (
+                <li key={tool}>{tool}</li>
+              ))}
+            </ul>
+          </InfoCard>
+        </div>
       </section>
     </div>
   );
 }
-
