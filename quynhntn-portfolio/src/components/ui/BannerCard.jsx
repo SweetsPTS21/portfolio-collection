@@ -28,12 +28,14 @@ export default function BannerCard({
   bannerIndex = 0,
   delay = 0,
   className = '',
+  onClick,
 }) {
   const b = BANNERS[bannerIndex % BANNERS.length];
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-2xl flex flex-col ${className}`}
+      onClick={onClick}
+      className={`relative overflow-hidden rounded-2xl flex flex-col ${onClick ? 'cursor-pointer' : ''} ${className}`}
       style={{
         background:  '#FFFFFF',
         border:      `1px solid rgba(0,0,0,0.07)`,
