@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <filter id="shieldGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Shield of Justice / Legal Protection -->
+  <g stroke="#1E78C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#shieldGlow)" fill="#EDF8FF" fill-opacity="0.3">
+    <!-- Outer Shield Boundary -->
+    <path d="M 100 25 C 150 25 175 45 175 45 C 175 110 150 155 100 175 C 50 155 25 110 25 45 C 25 45 50 25 100 25 Z" />
+    
+    <!-- Inner Shield Boundary -->
+    <path d="M 100 37 C 140 37 160 52 160 52 C 160 102 140 140 100 158 C 60 140 40 102 40 52 C 40 52 60 37 100 37 Z" 
+          fill="#1E78C8" fill-opacity="0.06" />
+          
+    <!-- Center Emblem: Gavel and Scale intersecting silhouettes -->
+    <line x1="65" y1="135" x2="135" y2="65" stroke-width="2" />
+    <path d="M 60 140 L 70 130 L 60 120 Z" />
+    <path d="M 130 80 L 140 70 L 130 60 Z" />
+    
+    <!-- Luminous center sparkle -->
+    <polygon points="100,55 105,70 120,75 105,80 100,95 95,80 80,75 95,70" fill="#8ABBEA" stroke="none" />
+  </g>
+</svg>

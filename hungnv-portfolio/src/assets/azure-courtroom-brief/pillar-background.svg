@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <filter id="pillarGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Classical Legal Courtroom Pillars -->
+  <g stroke="#1E78C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pillarGlow)" fill="#EDF8FF" fill-opacity="0.3">
+    <!-- Pediment (Top triangular pediment) -->
+    <polygon points="100,25 25,50 175,50" />
+    <line x1="32" y1="50" x2="168" y2="50" stroke-width="4" />
+    
+    <!-- Shafts (Pillars) -->
+    <!-- Pillar 1 (Left) -->
+    <rect x="42" y="62" width="16" height="95" />
+    <line x1="50" y1="62" x2="50" y2="157" stroke-width="1.5" />
+    
+    <!-- Pillar 2 (Center) -->
+    <rect x="92" y="62" width="16" height="95" />
+    <line x1="100" y1="62" x2="100" y2="157" stroke-width="1.5" />
+    
+    <!-- Pillar 3 (Right) -->
+    <rect x="142" y="62" width="16" height="95" />
+    <line x1="150" y1="62" x2="150" y2="157" stroke-width="1.5" />
+    
+    <!-- Stylobate (Base platform) -->
+    <rect x="15" y="157" width="170" height="10" rx="2" fill="#1E78C8" fill-opacity="0.1" />
+    <rect x="25" y="167" width="150" height="8" rx="2" fill="#1E78C8" fill-opacity="0.1" />
+  </g>
+</svg>

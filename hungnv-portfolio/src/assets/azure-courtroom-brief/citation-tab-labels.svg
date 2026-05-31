@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <defs>
+    <filter id="tabShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#12304A" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <!-- Interactive Folder Tab Visuals -->
+  <g filter="url(#tabShadow)">
+    <path d="M 10 10 L 80 10 L 95 30 L 190 30 L 190 70 L 10 70 Z" fill="#FFFFFF" stroke="#C4E2F5" stroke-width="2" />
+    <path d="M 10 10 L 80 10 L 90 25 L 10 25 Z" fill="#1E78C8" />
+  </g>
+  <text x="20" y="21" fill="#FFFFFF" font-family="'Source Sans 3', sans-serif" font-size="8" font-weight="bold" letter-spacing="1">INDEX 24</text>
+  <line x1="25" y1="42" x2="175" y2="42" stroke="#EDF8FF" stroke-width="4" stroke-linecap="round" />
+  <line x1="25" y1="52" x2="145" y2="52" stroke="#EDF8FF" stroke-width="4" stroke-linecap="round" />
+  <circle cx="170" cy="52" r="3" fill="#8ABBEA" />
+</svg>

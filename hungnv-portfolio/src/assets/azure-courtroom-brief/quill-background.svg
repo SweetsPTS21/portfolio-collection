@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <filter id="quillGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Quill Feather & Glass Inkwell (Legal transcription theme) -->
+  <g stroke="#1E78C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#quillGlow)" fill="#EDF8FF" fill-opacity="0.3">
+    <!-- Inkwell Body -->
+    <rect x="50" y="115" width="60" height="50" rx="8" fill="#1E78C8" fill-opacity="0.08" />
+    <!-- Inkwell Neck & Cap -->
+    <rect x="65" y="98" width="30" height="17" rx="3" fill="#FFFFFF" />
+    <line x1="60" y1="115" x2="100" y2="115" stroke-width="3" />
+    <path d="M 58 135 C 70 145 90 145 102 135" fill="none" opacity="0.3" />
+    
+    <!-- Quill Feather (Floating gracefully) -->
+    <!-- Center shaft -->
+    <path d="M 78 122 Q 130 90, 160 30" fill="none" stroke-width="3" />
+    
+    <!-- Left vanes -->
+    <path d="M 160 30 Q 140 50, 120 70 Q 135 75, 110 90 Q 120 95, 95 110 Q 105 112, 78 122" 
+          fill="#FFFFFF" fill-opacity="0.5" />
+          
+    <!-- Right vanes -->
+    <path d="M 160 30 Q 155 55, 140 75 Q 148 78, 130 95 Q 138 98, 115 113 Q 120 115, 78 122" 
+          fill="#FFFFFF" fill-opacity="0.5" />
+          
+    <!-- Dynamic Ink drips -->
+    <circle cx="72" cy="140" r="4.5" fill="#1E78C8" stroke="none" />
+    <circle cx="118" cy="88" r="2" fill="#8ABBEA" stroke="none" />
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <filter id="gavelGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Detailed Gavel of Justice in Luminous cobalt line-art -->
+  <g stroke="#1E78C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#gavelGlow)" fill="#EDF8FF" fill-opacity="0.3">
+    <!-- Sound block -->
+    <ellipse cx="100" cy="160" rx="45" ry="12" />
+    <ellipse cx="100" cy="168" rx="45" ry="12" />
+    
+    <!-- Handle shaft -->
+    <path d="M 125 125 L 45 45 C 40 40, 30 50, 35 55 L 115 135 Z" fill="#1E78C8" fill-opacity="0.1" />
+    
+    <!-- Gavel Head -->
+    <path d="M 100 80 L 150 130 L 170 110 L 120 60 Z" />
+    <path d="M 95 85 C 90 90 90 100 95 105 L 115 125 C 120 130 130 130 135 125" />
+    
+    <!-- Sparkles -->
+    <circle cx="160" cy="70" r="2.5" fill="#8ABBEA" stroke="none" />
+    <circle cx="50" cy="130" r="1.5" fill="#8ABBEA" stroke="none" />
+  </g>
+</svg>
