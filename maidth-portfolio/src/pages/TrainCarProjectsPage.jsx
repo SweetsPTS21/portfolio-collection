@@ -11,7 +11,7 @@ export function TrainCarProjectsPage() {
         initial="hidden"
         animate="visible"
       >
-        <span className="station-kicker">II. Projects</span>
+        <p className="station-kicker">II. Projects</p>
         <h1>Trang Dự án</h1>
         <p>
           Dưới đây là các sản phẩm thực hành được em hoàn thiện một cách chỉn

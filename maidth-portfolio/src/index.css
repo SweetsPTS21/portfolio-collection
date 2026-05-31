@@ -10,6 +10,18 @@
   --rail-gold: #ffe48a;
   --sky-blue: #a7c7ff;
   --mint-glow: #9fe7d0;
+  --heading-gradient: linear-gradient(
+    135deg,
+    #7c3aed 0%,
+    #ff7fbc 52%,
+    #f1b928 100%
+  );
+  --heading-secondary-gradient: linear-gradient(
+    135deg,
+    #6f55ad 0%,
+    #bd729c 54%,
+    #b18b3a 100%
+  );
   --glass-white: rgba(255, 255, 255, 0.58);
   --glass-border: rgba(184, 140, 255, 0.34);
   color: var(--amethyst-deep);
@@ -277,7 +289,7 @@ img {
 }
 
 .station-kicker {
-  display: inline-flex;
+  /* display: inline-flex; */
   color: var(--amethyst-deep);
   font-weight: 800;
 }
@@ -672,6 +684,30 @@ img {
   line-height: 1.08;
 }
 
+.station-heading h1,
+.profile-ticket h1 {
+  display: inline-block;
+  background: var(--heading-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(184, 140, 255, 0.18);
+}
+
+.project-car h2,
+.arrival-section h2,
+.arrival-card h2,
+.modal-heading h2 {
+  display: inline-block;
+  background: var(--heading-secondary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 8px 22px rgba(126, 92, 170, 0.14);
+}
+
 .modal-heading p {
   max-width: 780px;
   color: #3f315d;
@@ -839,6 +875,8 @@ img {
 
 .arrival-section-heading h2 {
   margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0.4rem;
 }
 
 .arrival-note-grid {

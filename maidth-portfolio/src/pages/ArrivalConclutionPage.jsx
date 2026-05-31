@@ -11,7 +11,7 @@ export function ArrivalConclutionPage() {
         initial="hidden"
         animate="visible"
       >
-        <span className="station-kicker">III. Conclusion</span>
+        <p className="station-kicker">III. Conclusion</p>
         <h1>Trang Tổng kết</h1>
       </motion.header>
       <ConclusionArrivalPanel />
