@@ -301,7 +301,7 @@ function ProjectsPage() {
       <SectionHeader
         tag="Projects"
         title="6 chương thực hành kỹ năng số"
-        text="Mỗi bài thực hành được trình bày như một folder kính pastel, giữ trọng tâm yêu cầu và thể hiện tư duy làm việc độc lập."
+        text="Toàn bộ các bài thực hành dưới đây được thực hiện một cách cẩn trọng, đi thẳng vào trọng tâm yêu cầu môn học và phản ánh rõ nét tư duy làm việc độc lập của bản thân."
       />
       <div className="chapter-grid">
         {projectChapters.map((chapter, index) => {
@@ -378,7 +378,7 @@ function ConclusionPage() {
       <SectionHeader
         tag="Conclusion"
         title="Tổng kết hành trình"
-        text="Portfolio khép lại bằng những thay đổi, hành trang, thách thức và lời cảm ơn được đặt trong một khung cảnh chòm sao tím mộng mơ."
+        text="Hoàn thành portfolio này là một trải nghiệm rất thiết thực đối với em."
       />
       <div className="timeline">
         {reflectionItems.map((item, index) => (

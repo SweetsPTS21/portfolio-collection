@@ -128,7 +128,7 @@ export const profile = {
 export const projectChapters = [
   {
     number: 1,
-    title: 'Tổ chức, sắp xếp và lưu trữ dữ liệu',
+    title: 'Thao tác cơ bản tệp tin và thư mục',
     icon: 'FolderKanban',
     skill: 'Quản lý dữ liệu',
     goal: 'Tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục thành thạo.',
@@ -243,7 +243,7 @@ export const reflectionItems = [
   },
   {
     title: 'Chặng đường tiếp theo',
-    text: 'Em sẽ duy trì thói quen làm việc số cho các môn học và dự án học tập tiếp theo.',
+    text: 'Em sẽ duy trì thói quen làm việc số này để phục vụ cho các môn học chuyên ngành sắp tới. Việc lưu trữ tốt và tra cứu nhanh sẽ giúp quá trình làm khóa luận sau này của em bớt vất vả hơn rất nhiều.',
   },
 ];
 
