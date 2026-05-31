@@ -12,7 +12,8 @@ export const aboutCards = [
     id: 'info',
     title: 'Thông tin cá nhân',
     icon: 'User',
-    content: 'MSV: 24063261 | Ngành: Luật kinh doanh | Trường: Đại học Luật - ĐHQGHN',
+    content:
+      'MSV: 24063261 | Ngành: Luật kinh doanh | Trường: Đại học Luật - ĐHQGHN',
   },
   {
     id: 'hobbies',
@@ -73,55 +74,61 @@ export const projects = [
     id: 1,
     title: 'Thao tác cơ bản với tệp tin và thư mục',
     icon: 'FolderOpen',
-    objective: 'Rèn luyện kỹ năng tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục một cách thành thạo trên hệ điều hành.',
+    objective:
+      'Rèn luyện kỹ năng tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục một cách thành thạo trên hệ điều hành.',
     summary:
       'Em áp dụng tư duy tối giản để quy hoạch lại toàn bộ không gian lưu trữ máy tính. Em khởi tạo thư mục gốc mang tên thật của mình, sau đó phân chia thành các thư mục con theo từng chuyên đề môn học và tài liệu học ngoại ngữ. Mọi thao tác đổi tên tệp, dùng phím tắt sao chép, di chuyển tài liệu được thực hiện tuần tự để bảo đảm tính hệ thống. Những dữ liệu nháp không còn giá trị được dọn dẹp vào thùng rác và xóa vĩnh viễn, trả lại giao diện làm việc vô cùng ngăn nắp.',
-    pdf: '/bt1.pdf',
+    pdf: '/Bt1.pdf',
   },
   {
     id: 2,
     title: 'Tìm kiếm và đánh giá thông tin học thuật',
     icon: 'Search',
-    objective: 'Phát triển kỹ năng tìm kiếm và đánh giá thông tin học thuật từ các nguồn đáng tin cậy.',
+    objective:
+      'Phát triển kỹ năng tìm kiếm và đánh giá thông tin học thuật từ các nguồn đáng tin cậy.',
     summary:
       'Em sử dụng các từ khóa chuyên ngành kết hợp bộ lọc nâng cao để bóc tách thông tin từ các tạp chí khoa học uy tín. Em đã tập hợp 10 nguồn tài liệu tham khảo chất lượng, trong đó có 5 bài báo khoa học chuẩn mực. Từng nguồn đều được kiểm chứng về tư cách tác giả, thời gian xuất bản và lập thành bảng đánh giá chi tiết theo chuẩn Harvard.',
-    pdf: '/bt2.pdf',
+    pdf: '/Bt2.pdf',
   },
   {
     id: 3,
     title: 'Viết prompt hiệu quả cho các tác vụ học tập',
     icon: 'Brain',
-    objective: 'Phát triển kỹ năng viết câu lệnh hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập.',
+    objective:
+      'Phát triển kỹ năng viết câu lệnh hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập.',
     summary:
       'Em đặt ra ba tác vụ cụ thể cho hệ thống: tóm tắt một điều ước thương mại, phân tích thuật ngữ luật kinh doanh và thiết lập bộ câu hỏi ôn tập. Thông qua ba phiên bản câu lệnh nâng cấp dần từ cơ bản đến cấu trúc nâng cao, em tiến hành phân tích và nhận diện rõ giới hạn logic của thuật toán. Em đưa ra các luận điểm phê phán học thuật độc lập, chỉ ra những điểm rập khuôn và thiếu chính xác của máy móc, khẳng định vai trò tối thượng của bộ óc người nghiên cứu.',
-    pdf: '/bt3.pdf',
+    pdf: '/Bt3.pdf',
   },
   {
     id: 4,
     title: 'Giao tiếp và hợp tác trong môi trường số',
     icon: 'Video',
-    objective: 'Rèn luyện kỹ năng tổ chức và tham gia cuộc họp trực tuyến chuyên nghiệp.',
+    objective:
+      'Rèn luyện kỹ năng tổ chức và tham gia cuộc họp trực tuyến chuyên nghiệp.',
     summary:
       'Nhóm 28 của tụi em đã thiết lập một cuộc họp trực tuyến trên nền tảng Google Meet để thảo luận bài tập chuyên môn. Trong bài tập nhóm này, em chịu trách nhiệm đảm nhận vai trò làm nội dung chính và viết kịch bản chi tiết cho dự án. Phiên họp kéo dài 30 phút diễn ra rất nghiêm túc và có sự đồng thuận ghi hình từ các thành viên. Sau khi cuộc họp kết thúc, biên bản họp được em tóm tắt lại một cách gọn gàng, chia sẻ đồng bộ tài liệu chung và đính kèm bảng tự đánh giá chéo khách quan.',
-    pdf: '/bt4.pdf',
+    pdf: '/Bt4.pdf',
   },
   {
     id: 5,
     title: 'Sử dụng AI tạo sinh để sáng tạo nội dung',
     icon: 'Palette',
-    objective: 'Thành thạo việc sử dụng các công cụ trí tuệ nhân tạo tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.',
+    objective:
+      'Thành thạo việc sử dụng các công cụ trí tuệ nhân tạo tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.',
     summary:
       'Em phụ trách thiết kế một Infographic với tiêu chí trình bày trang nhã và tinh gọn. Sự hỗ trợ từ 3 công cụ tự động giúp em phác thảo kịch bản và khung bố cục hình ảnh, nhưng em trực tiếp can thiệp để tinh chỉnh lại màu sắc, biên tập câu chữ sao cho sản phẩm mang đúng văn phong pháp lý và cá tính của mình. Đi kèm sản phẩm là một bài báo cáo phân tích nghiêm túc về ưu nhược điểm và ranh giới đạo đức khi ứng dụng công nghệ tạo sinh.',
-    pdf: '/bt5.pdf',
+    pdf: '/Bt5.pdf',
   },
   {
     id: 6,
     title: 'Sử dụng AI có trách nhiệm trong học tập và nghiên cứu',
     icon: 'Shield',
-    objective: 'Phát triển kỹ năng sử dụng trí tuệ nhân tạo có trách nhiệm và đạo đức trong học tập và nghiên cứu.',
+    objective:
+      'Phát triển kỹ năng sử dụng trí tuệ nhân tạo có trách nhiệm và đạo đức trong học tập và nghiên cứu.',
     summary:
       'Để bảo vệ tính liêm chính trong học đường, em đã nghiên cứu rất kỹ quy chế học vụ của nhà trường. Em hoàn thiện một bài luận cá nhân có sử dụng công cụ số hỗ trợ nhưng lưu vết minh bạch toàn bộ các câu lệnh đã nhập và cách thức biên tập lại dữ liệu đầu ra. Đồng thời, em tự thiết lập 7 quy tắc đạo đức cá nhân và thiết kế thành một đồ họa thông tin tối giản, khẳng định cam kết tuyệt đối nói không với đạo văn.',
-    pdf: '/bt6.pdf',
+    pdf: '/Bt6.pdf',
   },
 ];
 
