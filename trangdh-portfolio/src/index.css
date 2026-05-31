@@ -375,6 +375,59 @@ p {
   grid-column: 1 / -1;
 }
 
+.goals-panel {
+  grid-column: 1 / -1;
+  padding: 36px;
+}
+
+.goals-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+}
+
+.goals-copy h3,
+.tool-group-card h3 {
+  margin: 0;
+  color: #1b7ead;
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.direction-list,
+.goal-list,
+.tool-group-list,
+.conclusion-list {
+  display: grid;
+  gap: 10px;
+}
+
+.direction-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.direction-list p,
+.goal-list p {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(185, 227, 255, 0.72);
+  border-radius: 8px;
+  background: rgba(234, 247, 255, 0.76);
+}
+
+.direction-list p {
+  display: flex;
+  gap: 9px;
+}
+
+.direction-list svg {
+  flex: 0 0 auto;
+  margin-top: 4px;
+  color: #4dd9b4;
+}
+
 .fact-card,
 .passport-note,
 .project-postcard {
@@ -419,11 +472,11 @@ p {
 }
 
 .tools-panel {
-  grid-column: span 1;
+  grid-column: 1 / -1;
 }
 
 .values-panel {
-  grid-column: span 1;
+  grid-column: 1 / -1;
 }
 
 .tools-panel .postcard-label,
@@ -480,6 +533,25 @@ p {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 18px;
+}
+
+.tool-group-list {
+  margin-top: 18px;
+}
+
+.tool-group-card {
+  padding: 14px;
+  border: 1px solid rgba(185, 227, 255, 0.72);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.tool-group-card p {
+  margin: 8px 0 0;
+}
+
+.tool-group-card .tool-cloud {
+  margin-top: 10px;
 }
 
 .tool-cloud span,
@@ -948,6 +1020,24 @@ p {
   margin: 0;
 }
 
+.conclusion-note {
+  min-height: auto;
+}
+
+.conclusion-note h2 {
+  align-self: center;
+}
+
+.conclusion-list {
+  grid-column: 2;
+}
+
+.conclusion-list p {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(234, 247, 255, 0.72);
+}
+
 .reflection-strip {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -991,6 +1081,14 @@ p {
   display: flex;
   gap: 10px;
   margin: 10px 0 0;
+}
+
+.conclusion-strip {
+  align-items: start;
+}
+
+.conclusion-copy p {
+  align-items: flex-start;
 }
 
 .reflection-strip svg {
@@ -1342,12 +1440,17 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .goals-panel,
   .tools-panel,
   .values-panel {
     grid-template-columns: 1fr;
     grid-template-areas:
       'media'
       'copy';
+  }
+
+  .direction-list {
+    grid-template-columns: 1fr;
   }
 
   .tools-copy,
@@ -1413,6 +1516,7 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .goals-panel,
   .tools-panel,
   .values-panel,
   .project-postcard,

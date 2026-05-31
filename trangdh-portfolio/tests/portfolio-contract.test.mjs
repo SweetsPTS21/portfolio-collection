@@ -63,6 +63,64 @@ assert.match(
     /Ứng dụng công nghệ và AI nhằm tối ưu hóa quy trình/,
     "profile direction should include the AI development goal from portfolio.md",
 );
+assert.match(
+    portfolioData.profile.hobbies,
+    /những trang sách, những thước phim đầy tính nhân văn/,
+    "profile hobbies should map the about hobbies sentence from portfolio.md",
+);
+assert.deepEqual(
+    portfolioData.profile.directionLines,
+    [
+        "Định hướng trở thành pháp chế doanh nghiệp với phong thái điềm tĩnh, cẩn trọng và chuyên nghiệp.",
+        "Phát huy sự tỉ mỉ trong viết lách, nghiên cứu và tư duy học hỏi từ việc đọc sách để giải quyết các vấn đề pháp lý.",
+        "Ứng dụng công nghệ và AI nhằm tối ưu hóa quy trình, giảm bớt thủ tục và công việc lặp lại.",
+        "Tập trung nhiều hơn vào nghiên cứu chuyên sâu, đánh giá rủi ro và đưa ra giải pháp pháp lý an toàn, hiệu quả cho doanh nghiệp.",
+    ],
+    "profile direction should preserve portfolio.md direction as separate lines",
+);
+assert.deepEqual(
+    portfolioData.portfolioGoals,
+    [
+        "Không gian số này tựa như một cuốn nhật ký học tập, nơi mình lưu giữ từng bước làm quen với công nghệ.",
+        "Mục tiêu của Portfolio là hệ thống hóa các kỹ năng số một cách mạch lạc, logic.",
+        "Chứng minh rằng công nghệ hoàn toàn có thể được tiếp cận bằng một tư duy tối giản, nhẹ nhàng và đầy tính học thuật.",
+        "Biến AI trở thành công cụ đắc lực giúp đỡ trong quá trình học tập học phần Công nghệ số và trí tuệ nhân tạo.",
+    ],
+    "portfolio goals should keep all bullet points from portfolio.md",
+);
+assert.deepEqual(
+    portfolioData.principles,
+    [
+        "Mọi sản phẩm của mình đều tuân thủ sự tĩnh tại trong tư duy: độc lập khi đánh giá vấn đề, tối giản trong hình thức trình bày và tuyệt đối minh bạch, tôn trọng tính nguyên bản của nguồn học liệu.",
+    ],
+    "principles should expose the assignment principles as their own section",
+);
+assert.deepEqual(
+    portfolioData.toolGroups.map((group) => group.task),
+    [
+        "Tác vụ quản lý và lưu trữ dữ liệu",
+        "Tác vụ tra cứu và khai thác thông tin",
+        "Tác vụ tương tác với trí tuệ nhân tạo",
+        "Tác vụ họp trực tuyến và hợp tác nhóm",
+        "Tác vụ thiết kế đồ họa và sáng tạo nội dung",
+    ],
+    "tools should be grouped by task from portfolio.md",
+);
+assert.match(
+    portfolioData.toolGroups.map((group) => group.description).join(" "),
+    /Canva với các mẫu thiết kế tối giản/,
+    "tool groups should preserve detailed tool descriptions from portfolio.md",
+);
+assert.match(
+    portfolioData.conclusion.opening,
+    /Khép lại những trang nhật ký học tập này/,
+    "conclusion should expose the opening paragraph from portfolio.md",
+);
+assert.match(
+    portfolioData.conclusion.future,
+    /chuyên viên tư vấn pháp lý doanh nghiệp chuyên sâu/,
+    "conclusion should expose the future direction from portfolio.md",
+);
 assert.equal(portfolioData.projects.length, 6, "project data should map all six chapters from portfolio.md");
 assert.match(
     portfolioData.projects[2].steps.join(" "),
@@ -153,6 +211,10 @@ assert.match(css, /prefers-reduced-motion/, "reduced motion should be handled");
 assert.match(css, /\.tropical-background/, "background component should be styled");
 assert.match(heroPage, /heroTravelGirl/, "hero should use generated travel girl cutout");
 assert.match(heroPage, /tropicalSuitcase/, "home should use generated suitcase cutout");
+assert.match(heroPage, /portfolioGoals/, "home page should render portfolio goals from portfolio.md");
+assert.match(heroPage, /principles/, "home page should render assignment principles from portfolio.md");
+assert.match(heroPage, /toolGroups/, "home page should render task-grouped tools from portfolio.md");
+assert.match(heroPage, /directionLines/, "home page should render direction lines from portfolio.md");
 assert.match(heroPage, /className="profile-copy"/, "profile postcard should wrap text in profile-copy");
 assert.match(heroPage, /className="tools-copy"/, "tools panel should wrap text in tools-copy");
 assert.match(heroPage, /className="values-copy"/, "values panel should wrap text in values-copy");
@@ -169,6 +231,7 @@ assert.match(css, /\.suitcase-cutout\s*{[\s\S]*animation:\s*panel-art-float/, "s
 assert.match(css, /@keyframes\s+panel-art-float/, "panel art float should not rotate the panel art");
 assert.match(projectsPage, /postcardStack/, "projects should use generated postcard stack cutout");
 assert.match(projectsPage, /flowerCluster/, "projects should use generated flower cluster cutout");
+assert.match(passportPage, /conclusion/, "passport page should render conclusion content from portfolio.md");
 assert.match(passportPage, /coconutCocktail/, "passport should use generated coconut cocktail cutout");
 assert.match(passportPage, /flamingoFloat/, "passport should use generated flamingo float cutout");
 

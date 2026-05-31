@@ -7,13 +7,62 @@ export const profile = {
     'Một không gian nhật ký học tập tĩnh lặng, nơi công nghệ được tiếp cận bằng tư duy tối giản, nhẹ nhàng và học thuật.',
   intro:
     'Chào bạn, người đang dừng chân tại không gian nhỏ bé này. Giữa thế giới số vô vàn âm thanh và dữ liệu, mong rằng góc nhỏ của Huyền Trang sẽ mang đến cho bạn một nhịp nghỉ tĩnh lặng, nhẹ nhàng và bình yên. Mình tìm thấy sự cân bằng qua sách, phim nhân văn, viết lách mỗi ngày và những bản nhạc êm dịu.',
+  opening:
+    'Chào bạn, người đang dừng chân tại không gian nhỏ bé này. Giữa thế giới số vô vàn âm thanh và dữ liệu, mong rằng góc nhỏ của Huyền Trang sẽ mang đến cho bạn một nhịp nghỉ tĩnh lặng, nhẹ nhàng và bình yên.',
+  hobbies:
+    'Mình tìm thấy sự cân bằng và bình yên qua những trang sách, những thước phim đầy tính nhân văn, thói quen viết lách mỗi ngày và những bản nhạc êm dịu.',
   style:
     'Trầm lắng, nhẹ nhàng và tối giản. Mình yêu sự tĩnh lặng để suy nghĩ sâu sắc hơn và luôn hướng tới việc lược bỏ những điều rườm rà để giữ lại những giá trị cốt lõi nhất.',
   direction:
     'Định hướng trở thành pháp chế doanh nghiệp với phong thái điềm tĩnh, cẩn trọng và chuyên nghiệp. Phát huy sự tỉ mỉ trong viết lách, nghiên cứu và tư duy học hỏi từ việc đọc sách để giải quyết các vấn đề pháp lý. Ứng dụng công nghệ và AI nhằm tối ưu hóa quy trình, giảm bớt thủ tục và công việc lặp lại. Tập trung nhiều hơn vào nghiên cứu chuyên sâu, đánh giá rủi ro và đưa ra giải pháp pháp lý an toàn, hiệu quả cho doanh nghiệp.',
+  directionLines: [
+    'Định hướng trở thành pháp chế doanh nghiệp với phong thái điềm tĩnh, cẩn trọng và chuyên nghiệp.',
+    'Phát huy sự tỉ mỉ trong viết lách, nghiên cứu và tư duy học hỏi từ việc đọc sách để giải quyết các vấn đề pháp lý.',
+    'Ứng dụng công nghệ và AI nhằm tối ưu hóa quy trình, giảm bớt thủ tục và công việc lặp lại.',
+    'Tập trung nhiều hơn vào nghiên cứu chuyên sâu, đánh giá rủi ro và đưa ra giải pháp pháp lý an toàn, hiệu quả cho doanh nghiệp.',
+  ],
   portfolioGoal:
     'Portfolio này là một cuốn nhật ký học tập, nơi mình lưu giữ từng bước làm quen với công nghệ, hệ thống hóa kỹ năng số mạch lạc và chứng minh rằng công nghệ có thể được tiếp cận bằng tư duy tối giản, nhẹ nhàng và đầy tính học thuật.',
 };
+
+export const portfolioGoals = [
+  'Không gian số này tựa như một cuốn nhật ký học tập, nơi mình lưu giữ từng bước làm quen với công nghệ.',
+  'Mục tiêu của Portfolio là hệ thống hóa các kỹ năng số một cách mạch lạc, logic.',
+  'Chứng minh rằng công nghệ hoàn toàn có thể được tiếp cận bằng một tư duy tối giản, nhẹ nhàng và đầy tính học thuật.',
+  'Biến AI trở thành công cụ đắc lực giúp đỡ trong quá trình học tập học phần Công nghệ số và trí tuệ nhân tạo.',
+];
+
+export const principles = [
+  'Mọi sản phẩm của mình đều tuân thủ sự tĩnh tại trong tư duy: độc lập khi đánh giá vấn đề, tối giản trong hình thức trình bày và tuyệt đối minh bạch, tôn trọng tính nguyên bản của nguồn học liệu.',
+];
+
+export const toolGroups = [
+  {
+    task: 'Tác vụ quản lý và lưu trữ dữ liệu',
+    description: 'Hệ điều hành Windows, trình quản lý tệp tin File Explorer và nền tảng Google Drive.',
+    tools: ['Windows', 'File Explorer', 'Google Drive'],
+  },
+  {
+    task: 'Tác vụ tra cứu và khai thác thông tin',
+    description: 'Mạng lưới Thư viện điện tử, cơ sở dữ liệu Google Scholar.',
+    tools: ['Thư viện điện tử', 'Google Scholar'],
+  },
+  {
+    task: 'Tác vụ tương tác với trí tuệ nhân tạo',
+    description: 'Các mô hình ngôn ngữ lớn như ChatGPT và Google Gemini.',
+    tools: ['ChatGPT', 'Google Gemini'],
+  },
+  {
+    task: 'Tác vụ họp trực tuyến và hợp tác nhóm',
+    description: 'Nền tảng Google Meet, Zoom và công cụ ghi chú tối giản.',
+    tools: ['Google Meet', 'Zoom', 'Công cụ ghi chú tối giản'],
+  },
+  {
+    task: 'Tác vụ thiết kế đồ họa và sáng tạo nội dung',
+    description: 'Nền tảng Canva với các mẫu thiết kế tối giản, công cụ xử lý văn bản Microsoft Word để gọt giũa câu từ.',
+    tools: ['Canva', 'Microsoft Word'],
+  },
+];
 
 export const tools = [
   'Windows',
@@ -28,9 +77,7 @@ export const tools = [
   'Microsoft Word',
 ];
 
-export const values = [
-  'Mọi sản phẩm của mình đều tuân thủ sự tĩnh tại trong tư duy: độc lập khi đánh giá vấn đề, tối giản trong hình thức trình bày và tuyệt đối minh bạch, tôn trọng tính nguyên bản của nguồn học liệu.',
-];
+export const values = principles;
 
 export const projects = [
   {
@@ -113,6 +160,26 @@ export const projects = [
     stamp: 'Integrity',
   },
 ];
+
+export const conclusion = {
+  opening:
+    'Khép lại những trang nhật ký học tập này, mình xin dành một nhịp tĩnh lặng để nhìn lại sự trưởng thành của bản thân sau chuỗi ngày làm bạn với công nghệ. Quá trình xây dựng Portfolio này mang lại cho mình một cảm giác vô cùng bình yên. Mình nhận ra rằng công nghệ không nhất thiết phải ồn ào hay phức tạp. Khi ta tiếp cận nó bằng tư duy tối giản, công nghệ sẽ trở thành một khu vườn tĩnh lặng, giúp ta nuôi dưỡng và lưu giữ những hạt giống tri thức một cách trọn vẹn nhất.',
+  learnedSkills: [
+    'Giá trị lớn nhất mình nhận được là kỹ năng chắt lọc thông tin chuyên sâu và năng lực thiết lập ngôn ngữ câu lệnh để giao tiếp với trí tuệ nhân tạo.',
+    'Việc tổ chức và duy trì những cuộc họp trực tuyến chất lượng, lắng nghe và thấu hiểu đồng đội cũng là một hành trang quý báu cho môi trường chuyên nghiệp sau này.',
+  ],
+  highlights: [
+    'Điều khiến mình cảm thấy ưng ý nhất là đã bảo vệ được phong cách trầm lắng, nhẹ nhàng của bản thân giữa một môn học thiên về máy móc.',
+    'Chứng minh được rằng sự tối giản có thể mang lại hiệu quả thị giác và học thuật rất cao.',
+  ],
+  challenges: [
+    'Khó khăn lớn nhất mình gặp phải là nguy cơ thuật toán tự động cung cấp những điều luật bịa đặt. Để bảo vệ tính liêm chính, mình vượt qua thử thách này bằng sự nhẫn nại, luôn đọc chậm lại và đối chiếu cẩn thận từng chi tiết với văn bản quy phạm pháp luật gốc trước khi sử dụng.',
+  ],
+  future:
+    'Mang theo sự tĩnh tại và những kỹ năng số này, mình định hướng sẽ trở thành một chuyên viên tư vấn pháp lý doanh nghiệp chuyên sâu. Mình sẽ dùng công nghệ để tinh gọn các quy trình thủ tục rườm rà, để bản thân có thêm khoảng lặng dành cho việc nghiên cứu, viết lách và đưa ra những góc nhìn pháp lý nhân văn, vững chắc nhất.',
+  thanks:
+    'Hoàn thành xong dự án, em xin gửi lời cảm ơn chân thành nhất đến các thầy cô đã luôn tận tụy hướng dẫn, mang đến những giờ học đầy cảm hứng và giá trị. Cảm ơn những người bạn cùng nhóm đã luôn chia sẻ, lắng nghe và tôn trọng sự tĩnh lặng của nhau để cùng hoàn thành tốt công việc. Cuối cùng, cảm ơn bạn đã kiên nhẫn đọc đến những dòng chữ này. Chúc bạn luôn tìm thấy sự bình yên và cân bằng trong cuộc sống!',
+};
 
 export const reflections = [
   'Quá trình xây dựng Portfolio mang lại cho mình cảm giác bình yên: công nghệ không nhất thiết phải ồn ào hay phức tạp, mà có thể trở thành một khu vườn tĩnh lặng để lưu giữ tri thức.',

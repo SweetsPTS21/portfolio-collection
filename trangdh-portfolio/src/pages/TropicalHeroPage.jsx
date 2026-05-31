@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BookOpen, BriefcaseBusiness, GraduationCap, PenLine } from "lucide-react";
-import { profile, tools, values } from "../data/portfolioData.js";
+import { BookOpen, BriefcaseBusiness, CheckCircle2, GraduationCap, PenLine } from "lucide-react";
+import { profile, portfolioGoals, principles, toolGroups } from "../data/portfolioData.js";
 import PostcardPanel from "../components/ui/PostcardPanel.jsx";
 import StampBadge from "../components/ui/StampBadge.jsx";
 import passportFrame from "../assets/tropical-postcard/passport-page-frame.svg";
@@ -36,7 +36,8 @@ export default function TropicalHeroPage() {
                 </div>
                 <div className="profile-copy">
                     <h2>{profile.school}</h2>
-                    <p>{profile.intro}</p>
+                    <p>{profile.opening}</p>
+                    <p>{profile.hobbies}</p>
                 </div>
             </PostcardPanel>
 
@@ -59,15 +60,40 @@ export default function TropicalHeroPage() {
                 })}
             </section>
 
+            <PostcardPanel className="goals-panel" label="Learning Plan">
+                <div className="goals-copy">
+                    <h2>Mục tiêu học tập và định hướng phát triển bản thân</h2>
+                    <div className="direction-list">
+                        {profile.directionLines.map((line) => (
+                            <p key={line}><CheckCircle2 size={17} /> {line}</p>
+                        ))}
+                    </div>
+                    <h3>Mục tiêu của Portfolio</h3>
+                    <div className="goal-list">
+                        {portfolioGoals.map((goal) => (
+                            <p key={goal}>{goal}</p>
+                        ))}
+                    </div>
+                </div>
+            </PostcardPanel>
+
             <PostcardPanel className="tools-panel" label="Travel Kit">
                 <div className="panel-media">
                     <img className="passport-art" src={passportFrame} alt="" />
                 </div>
                 <div className="tools-copy">
                     <h2>Công cụ đã dùng</h2>
-                    <div className="tool-cloud">
-                        {tools.map((tool) => (
-                            <span key={tool}>{tool}</span>
+                    <div className="tool-group-list">
+                        {toolGroups.map((group) => (
+                            <article className="tool-group-card" key={group.task}>
+                                <h3>{group.task}</h3>
+                                <p>{group.description}</p>
+                                <div className="tool-cloud">
+                                    {group.tools.map((tool) => (
+                                        <span key={tool}>{tool}</span>
+                                    ))}
+                                </div>
+                            </article>
                         ))}
                     </div>
                 </div>
@@ -81,7 +107,7 @@ export default function TropicalHeroPage() {
                 <div className="values-copy">
                     <h2>Nguyên tắc thực hiện bài tập</h2>
                     <div className="value-list">
-                        {values.map((value) => (
+                        {principles.map((value) => (
                             <p key={value}>{value}</p>
                         ))}
                     </div>
