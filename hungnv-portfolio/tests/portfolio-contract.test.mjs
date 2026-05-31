@@ -107,4 +107,42 @@ for (const page of [
   assert.match(read(page), /framer-motion/, `${page} should use Framer Motion`);
 }
 
+// 9. Verify background motion does not fight over the same transform axis.
+const background = read("src/features/legal-brief-scene/CourtroomBackground.jsx");
+const hasConflictingParallaxAndIdleY = /style=\{\{[\s\S]*?y: (?:assetL1Y|assetL2Y|scaleParallaxY)[\s\S]*?\}\}\s*animate=\{\{[\s\S]*?y:/m.test(background);
+assert.equal(
+  hasConflictingParallaxAndIdleY,
+  false,
+  "background parallax and idle y animation should be split across nested elements"
+);
+assert.match(
+  background,
+  /requestAnimationFrame/,
+  "background pointer parallax should be throttled with requestAnimationFrame"
+);
+assert.match(
+  background,
+  /cancelAnimationFrame/,
+  "background pointer parallax should clean up pending animation frames"
+);
+
+// 10. Verify background assets stay visible without adding expensive shadows.
+assert.match(
+  css,
+  /\.particles-layer\s*\{[\s\S]*?opacity:\s*0\.78;/,
+  "background layer should be prominent enough to reveal legal assets"
+);
+assert.match(
+  css,
+  /\.legal-bg-float\s*\{[\s\S]*?filter:\s*saturate\(1\.12\) contrast\(1\.08\);/,
+  "background assets should use lightweight contrast instead of drop shadows"
+);
+for (const expectedOpacity of ["0.5", "0.4", "0.42", "0.46", "0.52", "0.56"]) {
+  assert.match(
+    background,
+    new RegExp(`opacity:\\s*${expectedOpacity}`),
+    `background should include asset opacity ${expectedOpacity}`
+  );
+}
+
 console.log("✓ All contract test checks passed successfully for hungnv-portfolio!");

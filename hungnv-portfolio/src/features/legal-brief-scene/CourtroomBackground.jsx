@@ -10,22 +10,93 @@ import lawbookBg from "../../assets/azure-courtroom-brief/lawbook-background.svg
 import shieldBg from "../../assets/azure-courtroom-brief/shield-background.svg";
 import quillBg from "../../assets/azure-courtroom-brief/quill-background.svg";
 
+const particles = [
+  { top: "10%", left: "5%", size: 60, delay: 0 },
+  { top: "35%", left: "85%", size: 50, delay: 2 },
+  { top: "80%", left: "15%", size: 70, delay: 4 },
+  { top: "70%", left: "75%", size: 55, delay: 1 },
+  { top: "20%", left: "50%", size: 65, delay: 3 },
+];
+
+function LegalBackgroundAsset({
+  src,
+  alt,
+  style,
+  x,
+  y,
+  animate,
+  transition,
+}) {
+  return (
+    <motion.div
+      className="legal-bg-parallax"
+      style={{
+        ...style,
+        x,
+        y,
+      }}
+    >
+      <motion.img
+        className="legal-bg-float"
+        src={src}
+        alt={alt}
+        style={{ width: "100%", height: "auto" }}
+        animate={animate}
+        transition={transition}
+        draggable="false"
+      />
+    </motion.div>
+  );
+}
+
+const loopTransition = (duration) => ({
+  repeat: Infinity,
+  duration,
+  ease: "easeInOut",
+});
+
 export default function CourtroomBackground() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const frameRef = React.useRef(null);
+  const pendingPointRef = React.useRef({ x: 0, y: 0 });
 
-  // Active parallax interaction based on mouse coordinates
   React.useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const x = (clientX / window.innerWidth - 0.5) * 30; // Max offset 15px
-      const y = (clientY / window.innerHeight - 0.5) * 30;
-      mouseX.set(x);
-      mouseY.set(y);
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const applyParallax = () => {
+      frameRef.current = null;
+      mouseX.set(pendingPointRef.current.x);
+      mouseY.set(pendingPointRef.current.y);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    const handlePointerMove = (e) => {
+      pendingPointRef.current = {
+        x: (e.clientX / window.innerWidth - 0.5) * 18,
+        y: (e.clientY / window.innerHeight - 0.5) * 18,
+      };
+
+      if (frameRef.current === null) {
+        frameRef.current = requestAnimationFrame(applyParallax);
+      }
+    };
+
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+
+      if (frameRef.current !== null) {
+        cancelAnimationFrame(frameRef.current);
+        frameRef.current = null;
+      }
+    };
   }, [mouseX, mouseY]);
 
   // Transform values for multi-layered depth
@@ -39,15 +110,6 @@ export default function CourtroomBackground() {
   const assetL1Y = useTransform(mouseY, (y) => y * -0.3);
   const assetL2X = useTransform(mouseX, (x) => x * 0.25);
   const assetL2Y = useTransform(mouseY, (y) => y * 0.25);
-
-  // Generate coordinates for scattered floating paper fibers
-  const particles = [
-    { top: "10%", left: "5%", size: 60, delay: 0 },
-    { top: "35%", left: "85%", size: 50, delay: 2 },
-    { top: "80%", left: "15%", size: 70, delay: 4 },
-    { top: "70%", left: "75%", size: 55, delay: 1 },
-    { top: "20%", left: "50%", size: 65, delay: 3 },
-  ];
 
   return (
     <div className="particles-layer">
@@ -68,151 +130,108 @@ export default function CourtroomBackground() {
       {/* 5 High-Opacity Legal Background Decor Elements (Wow visual factors) */}
 
       {/* 1. Large Gavel of Justice (Bottom-Left) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={gavelBg}
+        alt="Background Gavel"
+        x={assetL1X}
+        y={assetL1Y}
         style={{
           position: "fixed",
           bottom: "5%",
           left: "2%",
           width: "min(24vw, 240px)",
-          height: "auto",
-          x: assetL1X,
-          y: assetL1Y,
-          opacity: 0.28,
+          opacity: 0.5,
           zIndex: 1,
-          pointerEvents: "none",
-          filter: "drop-shadow(0px 8px 16px rgba(30, 120, 200, 0.12))",
         }}
         animate={{
           y: [0, -8, 0],
           rotate: [-15, -13, -15],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 9,
-          ease: "easeInOut",
-        }}
-      >
-        <img src={gavelBg} alt="Background Gavel" style={{ width: "100%" }} />
-      </motion.div>
+        transition={loopTransition(9)}
+      />
 
       {/* 2. Classical Legal Pillars (Center-Left) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={pillarBg}
+        alt="Background Pillars"
+        x={assetL2X}
+        y={assetL2Y}
         style={{
           position: "fixed",
           top: "25%",
           left: "4%",
           width: "min(20vw, 200px)",
-          height: "auto",
-          x: assetL2X,
-          y: assetL2Y,
-          opacity: 0.22,
+          opacity: 0.4,
           zIndex: 1,
-          pointerEvents: "none",
-          filter: "drop-shadow(0px 8px 16px rgba(30, 120, 200, 0.1))",
         }}
         animate={{
           scale: [1, 1.02, 1],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 12,
-          ease: "easeInOut",
-        }}
-      >
-        <img
-          src={pillarBg}
-          alt="Background Pillars"
-          style={{ width: "100%" }}
-        />
-      </motion.div>
+        transition={loopTransition(12)}
+      />
 
       {/* 3. Open Lawbook of Statutes (Top-Left) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={lawbookBg}
+        alt="Background Lawbook"
+        x={assetL1X}
+        y={assetL1Y}
         style={{
           position: "fixed",
           top: "6%",
           left: "15%",
           width: "min(18vw, 180px)",
-          height: "auto",
-          x: assetL1X,
-          y: assetL1Y,
-          opacity: 0.24,
+          opacity: 0.42,
           zIndex: 1,
-          pointerEvents: "none",
-          filter: "drop-shadow(0px 8px 16px rgba(30, 120, 200, 0.12))",
         }}
         animate={{
           y: [0, -6, 0],
           rotate: [5, 7, 5],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 7,
-          ease: "easeInOut",
-        }}
-      >
-        <img
-          src={lawbookBg}
-          alt="Background Lawbook"
-          style={{ width: "100%" }}
-        />
-      </motion.div>
+        transition={loopTransition(7)}
+      />
 
       {/* 4. Shield of Protection & Justice (Top-Right) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={shieldBg}
+        alt="Background Shield"
+        x={assetL2X}
+        y={assetL2Y}
         style={{
           position: "fixed",
           top: "8%",
           right: "12%",
           width: "min(19vw, 190px)",
-          height: "auto",
-          x: assetL2X,
-          y: assetL2Y,
-          opacity: 0.26,
+          opacity: 0.46,
           zIndex: 1,
-          pointerEvents: "none",
-          filter: "drop-shadow(0px 8px 16px rgba(30, 120, 200, 0.12))",
         }}
         animate={{
           scale: [1, 1.03, 1],
           rotate: [-2, 2, -2],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 10,
-          ease: "easeInOut",
-        }}
-      >
-        <img src={shieldBg} alt="Background Shield" style={{ width: "100%" }} />
-      </motion.div>
+        transition={loopTransition(10)}
+      />
 
       {/* 5. Quill Feather & Glass Inkwell (Center-Right) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={quillBg}
+        alt="Background Quill"
+        x={assetL1X}
+        y={assetL1Y}
         style={{
           position: "fixed",
           top: "40%",
           right: "3%",
           width: "min(16vw, 160px)",
-          height: "auto",
-          x: assetL1X,
-          y: assetL1Y,
-          opacity: 0.29,
+          opacity: 0.52,
           zIndex: 1,
-          pointerEvents: "none",
-          filter: "drop-shadow(0px 8px 16px rgba(30, 120, 200, 0.12))",
         }}
         animate={{
           y: [0, -10, 0],
           rotate: [12, 15, 12],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 8,
-          ease: "easeInOut",
-        }}
-      >
-        <img src={quillBg} alt="Background Quill" style={{ width: "100%" }} />
-      </motion.div>
+        transition={loopTransition(8)}
+      />
 
       {/* Floating Parchment Dust/Particles layer */}
       <motion.div
@@ -245,35 +264,24 @@ export default function CourtroomBackground() {
       </motion.div>
 
       {/* Swaying Scales of Justice Visual Anchor (Large Core Asset at Bottom-Right) */}
-      <motion.div
+      <LegalBackgroundAsset
+        src={balanceScale}
+        alt="Scales of Justice"
+        x={scaleParallaxX}
+        y={scaleParallaxY}
         style={{
           position: "fixed",
           bottom: "3%",
           right: "2%",
           width: "min(35vw, 360px)",
-          height: "auto",
-          x: scaleParallaxX,
-          y: scaleParallaxY,
           zIndex: 2,
-          pointerEvents: "none",
-          opacity: 0.32, // Elevated opacity as requested
-          filter: "drop-shadow(0px 10px 20px rgba(30, 120, 200, 0.25))",
+          opacity: 0.56,
         }}
         animate={{
           rotate: [0, 1, 0, -1, 0],
         }}
-        transition={{
-          repeat: Infinity,
-          duration: 16,
-          ease: "easeInOut",
-        }}
-      >
-        <img
-          src={balanceScale}
-          alt="Scales of Justice"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </motion.div>
+        transition={loopTransition(16)}
+      />
 
       {/* Floating Paper Folder background sheets */}
       <motion.div
@@ -283,7 +291,7 @@ export default function CourtroomBackground() {
           left: "-50px",
           width: "280px",
           height: "280px",
-          opacity: 0.08,
+          opacity: 0.16,
           rotate: -20,
           pointerEvents: "none",
           zIndex: 0,
