@@ -32,8 +32,8 @@ export default function NotebookConclutionPage() {
         <NotebookCard
           className="constellation-card"
           style={{
-            background: 'var(--ink-soft)',
-            color: '#fff',
+            // background: 'var(--ink-soft)',
+            // color: '#fff',
             overflow: 'visible',
           }}
         >
@@ -58,7 +58,7 @@ export default function NotebookConclutionPage() {
               style={{
                 margin: '8px 0 20px',
                 fontSize: '0.95rem',
-                color: 'rgba(255, 255, 255, 0.8)',
+                // color: 'rgba(255, 255, 255, 0.8)',
               }}
             >
               Những bài học thực tế, kỹ năng làm việc nhóm trực tuyến và tinh
