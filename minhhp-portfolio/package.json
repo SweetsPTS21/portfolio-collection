@@ -1,0 +1,23 @@
+{
+  "name": "minhhp-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5198",
+    "build": "vite build",
+    "test": "node tests/portfolio-contract.test.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4198"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "framer-motion": "latest",
+    "lenis": "latest",
+    "lucide-react": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}

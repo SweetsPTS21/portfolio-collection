@@ -1,0 +1,20 @@
+export const theme = {
+  id: "blue-rain-notebook",
+  token: {
+    colorBgBase: "#EAF5FF",
+    colorBgContainer: "#FFFFFF",
+    colorPrimary: "#2D8BD8",
+    colorTextBase: "#18324A",
+    colorTextSecondary: "#617789",
+    colorSuccess: "#62BFA8",
+    colorWarning: "#8EC5F2",
+    colorError: "#E86D82",
+    colorBorder: "#C8E4F7",
+    colorPastelPink: "#F8B9D4",
+    colorPastelLilac: "#D9CCFF",
+    colorPastelMint: "#C8F3E4",
+    borderRadius: 12,
+    fontFamily: "'Nunito Sans', 'Lora', sans-serif",
+    headingFamily: "'Lora', serif",
+  },
+};

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" role="img" aria-label="rain ink icons">
+  <g fill="none" stroke="#2D8BD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 42h70v94H70zM88 42V28h34v14M88 72h34M88 100h34"/>
+    <path d="M230 34c42 42 58 74 58 100 0 24-18 38-42 38s-42-14-42-38c0-26 14-58 26-100Z" fill="#EAF5FF"/>
+    <path d="M384 130c-26-2-46-22-46-48 0-28 23-50 51-50 22 0 41 14 48 33 7-4 15-6 24-6 25 0 45 20 45 45s-20 45-45 45H384" fill="#FDF7FF"/>
+    <path d="M582 42h88l34 34v72H582zM670 42v38h34M608 106h68" fill="#FFFFFF"/>
+    <path d="M760 132c48-58 100-68 120-28 12 24-6 48-34 46-28-2-56-24-76-66"/>
+  </g>
+  <g fill="#F8B9D4"><circle cx="164" cy="38" r="10"/><circle cx="526" cy="46" r="11"/><circle cx="720" cy="144" r="9"/></g>
+</svg>
