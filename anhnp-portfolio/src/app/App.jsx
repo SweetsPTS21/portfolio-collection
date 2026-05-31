@@ -397,10 +397,20 @@ function ConclusionPage() {
           </motion.article>
         ))}
       </div>
-      <GlassCard className="thanks-card">
-        <PastelTag icon="Sparkles">Cảm ơn</PastelTag>
-        <h2>Khép lại bằng sự biết ơn</h2>
-        <p>{thanks}</p>
+      <GlassCard className="thanks-card thanks-card-moon-gate">
+        <div className="thanks-visual-layer" aria-hidden="true">
+          <img className="thanks-gate" src={gateUrl} alt="" />
+          <img className="thanks-sparkle-dust" src={sparkleUrl} alt="" />
+          <span className="thanks-glow thanks-glow-a" />
+          <span className="thanks-glow thanks-glow-b" />
+          <span className="thanks-star thanks-star-a" />
+          <span className="thanks-star thanks-star-b" />
+        </div>
+        <div className="thanks-content">
+          <PastelTag icon="Sparkles">Cảm ơn</PastelTag>
+          <h2>Khép lại bằng sự biết ơn</h2>
+          <p>{thanks}</p>
+        </div>
       </GlassCard>
     </section>
   );
