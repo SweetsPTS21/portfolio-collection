@@ -8,7 +8,7 @@ export default function ShellMailPage() {
   return (
     <div className="shell-mail-page">
       <header className="page-heading shell-mail-heading">
-        <span className="ocean-badge"><Mail size={16} /> Shell Mail</span>
+        <span className="ocean-badge"><Mail size={16} /> Tổng kết</span>
         <h1>Tổng kết hành trình</h1>
         <p>{conclusion.opening}</p>
       </header>
@@ -48,7 +48,7 @@ export default function ShellMailPage() {
       </section>
 
       <section className="thanks-panel">
-        <h2>Lời nhắn gửi theo sóng</h2>
+        <h2>Lời cảm ơn</h2>
         <p>{conclusion.thanks}</p>
       </section>
     </div>

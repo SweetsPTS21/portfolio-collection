@@ -10,19 +10,19 @@ const facts = [
   { icon: GraduationCap, label: "Ngành", value: profile.major },
   { icon: BookOpen, label: "Mã SV", value: profile.studentId },
   { icon: Scale, label: "Trường", value: profile.school },
-  { icon: ShieldCheck, label: "Phong cách", value: "Tận tâm · kỷ luật · rõ ràng" },
+  { icon: ShieldCheck, label: "Phong cách", value: profile.style.split(". ")[0] },
 ];
 
 export default function SunCovePage({ onNavigate }) {
   return (
     <div className="page-grid hero-grid">
       <motion.section className="hero-copy" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}>
-        <span className="ocean-badge"><Sparkles size={16} /> Sunlit Ocean Life</span>
+        <span className="ocean-badge"><Sparkles size={16} /> Hồ sơ cá nhân</span>
         <h1>{profile.name}</h1>
         <p className="hero-lead">{profile.headline}</p>
         <div className="hero-actions">
-          <button type="button" onClick={() => onNavigate("/logs")}>Open ocean logs</button>
-          <button type="button" onClick={() => onNavigate("/beacon")}>Send shell mail</button>
+          <button type="button" onClick={() => onNavigate("/logs")}>Xem bài thực hành</button>
+          <button type="button" onClick={() => onNavigate("/beacon")}>Xem tổng kết</button>
         </div>
       </motion.section>
 
@@ -32,7 +32,7 @@ export default function SunCovePage({ onNavigate }) {
           <img src={avatar} alt="Nguyễn Đỗ Bảo Trân" />
         </div>
         <div className="profile-manifest">
-          <span>Ocean identity</span>
+          <span>Thông tin sinh viên</span>
           <h2>{profile.school}</h2>
           <p>{profile.intro}</p>
         </div>
@@ -53,7 +53,7 @@ export default function SunCovePage({ onNavigate }) {
 
       <section className="mission-panel">
         <div>
-          <h2>Sun cove brief</h2>
+          <h2>Mục tiêu và nguyên tắc</h2>
           <p>{profile.direction}</p>
           <p>{profile.portfolioGoal}</p>
           <p>{profile.principle}</p>

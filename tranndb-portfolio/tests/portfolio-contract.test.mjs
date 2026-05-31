@@ -18,10 +18,12 @@ for (const path of [
   "src/app/lenisSetup.js",
   "src/data/portfolioData.js",
   "src/components/layout/SunlitOceanShell.jsx",
+  "src/components/music/OceanMusicPlayer.jsx",
   "src/features/sunlit-ocean-scene/SunlitOceanBackground.jsx",
   "src/pages/SunCovePage.jsx",
   "src/pages/OceanLogsPage.jsx",
   "src/pages/ShellMailPage.jsx",
+  "public/music/playlist.json",
 ]) {
   assert.ok(exists(path), `${path} should exist`);
 }
@@ -57,6 +59,39 @@ for (const phrase of [
   assert.match(data, new RegExp(phrase), `data should contain ${phrase}`);
 }
 
+const jsxContent = [
+  "src/components/layout/SunlitOceanShell.jsx",
+  "src/components/music/OceanMusicPlayer.jsx",
+  "src/pages/SunCovePage.jsx",
+  "src/pages/OceanLogsPage.jsx",
+  "src/pages/ShellMailPage.jsx",
+].map(read).join("\n");
+
+for (const phrase of [
+  "Open ocean logs",
+  "Send shell mail",
+  "Ocean identity",
+  "Sun cove brief",
+  "Ocean Log Archive",
+  "Shell Mail",
+  "Ocean playlist",
+  "chuyến trôi trên mặt biển",
+  "Lời nhắn gửi theo sóng",
+]) {
+  assert.doesNotMatch(jsxContent, new RegExp(phrase), `JSX should not invent copy: ${phrase}`);
+}
+
+for (const phrase of [
+  "Hồ sơ cá nhân",
+  "Thông tin sinh viên",
+  "Mục tiêu và nguyên tắc",
+  "Bài tập thực hành",
+  "Playlist nhạc",
+  "Lời cảm ơn",
+]) {
+  assert.match(jsxContent, new RegExp(phrase), `JSX should use portfolio-aligned copy: ${phrase}`);
+}
+
 const assetDir = join(root, "src/assets/sunlit-ocean-life");
 assert.ok(exists("src/assets/sunlit-ocean-life"), "sunlit ocean asset folder should exist");
 const svgAssets = readdirSync(assetDir).filter((file) => file.endsWith(".svg"));
@@ -77,6 +112,23 @@ for (const asset of [
 const css = read("src/styles.css");
 for (const token of [
   "sunlit-stage",
+  "ocean-music-player",
+  "width: min\\(360px",
+  "music-player-toggle",
+  "music-player-toggle.playing",
+  "music-player-spin",
+  "music-volume-control",
+  "music-volume-slider",
+  "music-seek-control",
+  "music-seek-slider",
+  "music-player-main",
+  "music-player-info",
+  "music-vinyl-disc",
+  "width: 88px",
+  "music-vinyl-label",
+  "music-vinyl-disc.playing",
+  "music-vinyl-spin",
+  "music-playlist",
   "fish-swim",
   "bubble-rise",
   "seaweed-sway",
@@ -93,6 +145,44 @@ assert.match(bg, /sunlitOceanScene/, "background should use large sunlit ocean S
 assert.match(bg, /cuteFishSchool/, "background should use cute fish SVG");
 assert.match(bg, /seaweedCoralGarden/, "background should use seaweed/coral SVG");
 assert.doesNotMatch(bg, /deep-sea-research-log/, "background should not import old deep-sea assets");
+
+const shell = read("src/components/layout/SunlitOceanShell.jsx");
+assert.match(shell, /OceanMusicPlayer/, "shell should render the floating music player");
+
+const player = read("src/components/music/OceanMusicPlayer.jsx");
+for (const token of [
+  "playlist.json",
+  "new Audio",
+  "music-player-toggle",
+  "playing",
+  "setVolume",
+  "audio.volume",
+  "setCurrentTime",
+  "setDuration",
+  "audio.currentTime",
+  "type=\"range\"",
+  "track.artist",
+  "music-track-artist",
+  "music-player-main",
+  "music-player-info",
+  "music-vinyl-disc",
+  "music-vinyl-label",
+  "Đang phát",
+  "setIsExpanded",
+  "skipTrack",
+  "togglePlayback",
+]) {
+  assert.match(player, new RegExp(token), `music player should include ${token}`);
+}
+
+const playlist = JSON.parse(read("public/music/playlist.json"));
+assert.ok(Array.isArray(playlist.tracks), "playlist should expose tracks array");
+assert.ok(playlist.tracks.length >= 2, "playlist should include at least two tracks");
+for (const track of playlist.tracks) {
+  assert.match(track.src, /^\/music\/.*\.mp3$/, "track src should point to public/music mp3");
+  assert.ok(track.title, "track title should be present");
+  assert.ok(track.artist, "track artist should be present");
+}
 
 for (const page of [
   "src/pages/SunCovePage.jsx",

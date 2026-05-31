@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, FileText, Gauge, Waves } from "lucide-react";
-import { projects } from "../data/portfolioData.js";
+import { profile, projects } from "../data/portfolioData.js";
 import bt1 from "../../docs/bt1.pdf";
 import bt2 from "../../docs/bt2.pdf";
 import bt3 from "../../docs/bt3.pdf";
@@ -16,9 +16,9 @@ export default function OceanLogsPage() {
   return (
     <div className="logs-page">
       <header className="page-heading">
-        <span className="ocean-badge"><Waves size={16} /> Ocean Log Archive</span>
+        <span className="ocean-badge"><Waves size={16} /> Bài tập thực hành</span>
         <h1>Sáu nhiệm vụ thực hành</h1>
-        <p>Các dự án được trình bày như những chuyến trôi trên mặt biển: sáng, rõ, có nhãn tín hiệu, mục tiêu, quá trình và bài nộp kèm.</p>
+        <p>{profile.portfolioGoal}</p>
       </header>
       <section className="ocean-log-grid" aria-label="Projects">
         {projects.map((project, index) => (

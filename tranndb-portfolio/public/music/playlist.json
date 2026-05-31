@@ -1,0 +1,19 @@
+{
+  "tracks": [
+    {
+      "title": "Clear",
+      "artist": "Chillpeach",
+      "src": "/music/clear.mp3"
+    },
+    {
+      "title": "Dreamland",
+      "artist": "Chillpeach",
+      "src": "/music/dreamland.mp3"
+    },
+    {
+      "title": "Dawn",
+      "artist": "Stella Blade OST",
+      "src": "/music/dawn.mp3"
+    }
+  ]
+}

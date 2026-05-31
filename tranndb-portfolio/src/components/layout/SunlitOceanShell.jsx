@@ -3,7 +3,9 @@ import { Radio, Waves } from "lucide-react";
 import { routes } from "../../app/routes.js";
 import { cssVars } from "../../app/theme.js";
 import { setupLenis } from "../../app/lenisSetup.js";
+import { profile } from "../../data/portfolioData.js";
 import SunlitOceanBackground from "../../features/sunlit-ocean-scene/SunlitOceanBackground.jsx";
+import OceanMusicPlayer from "../music/OceanMusicPlayer.jsx";
 
 export default function SunlitOceanShell({ activePath, onNavigate, children }) {
   useEffect(() => setupLenis(), []);
@@ -15,8 +17,8 @@ export default function SunlitOceanShell({ activePath, onNavigate, children }) {
         <button className="brand-mark" type="button" onClick={() => onNavigate("/")}> 
           <span className="brand-orb"><Waves size={19} /></span>
           <span>
-            <strong>Bảo Trân</strong>
-            <small>sunlit-ocean-life</small>
+            <strong>{profile.name}</strong>
+            <small>{profile.major}</small>
           </span>
         </button>
 
@@ -36,10 +38,11 @@ export default function SunlitOceanShell({ activePath, onNavigate, children }) {
 
         <button className="signal-action" type="button" onClick={() => onNavigate("/beacon")}>
           <Radio size={18} />
-          <span>Send</span>
+          <span>Tổng kết</span>
         </button>
       </header>
       {children}
+      <OceanMusicPlayer />
     </div>
   );
 }
