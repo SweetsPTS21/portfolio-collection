@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Bright wave ribbons">
+  <g fill="none" stroke-linecap="round">
+    <path d="M20 92 C180 22 320 150 480 88 S780 28 1180 112" stroke="#08A8F8" stroke-width="18" opacity=".62"/>
+    <path d="M0 170 C230 82 370 235 580 168 S920 96 1210 214" stroke="#54D4FF" stroke-width="14" opacity=".66"/>
+    <path d="M70 245 C250 175 420 285 620 238 S960 194 1160 275" stroke="#FFFFFF" stroke-width="9" opacity=".82"/>
+  </g>
+</svg>

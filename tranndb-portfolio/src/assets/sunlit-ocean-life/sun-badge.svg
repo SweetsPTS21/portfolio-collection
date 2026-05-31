@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Smiling sun badge">
+  <g stroke="#07436B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="160" cy="160" r="74" fill="#FFD86B"/>
+    <path d="M160 26v52M160 242v52M26 160h52M242 160h52M65 65l38 38M217 217l38 38M255 65l-38 38M103 217l-38 38"/>
+    <circle cx="134" cy="146" r="7" fill="#07436B"/><circle cx="186" cy="146" r="7" fill="#07436B"/>
+    <path d="M128 180q32 28 64 0" fill="none"/>
+  </g>
+</svg>

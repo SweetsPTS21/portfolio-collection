@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Sunlit cute ocean scene">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#E9FAFF"/><stop offset=".55" stop-color="#9AE7FF"/><stop offset="1" stop-color="#08A8F8"/></linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop stop-color="#FFF7B0"/><stop offset=".7" stop-color="#FFD86B"/><stop offset="1" stop-color="#FFD86B" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1270" cy="170" r="160" fill="url(#sun)"/>
+  <g fill="#fff" opacity=".86">
+    <ellipse cx="260" cy="150" rx="90" ry="34"/><ellipse cx="330" cy="145" rx="58" ry="28"/><ellipse cx="190" cy="155" rx="54" ry="24"/>
+    <ellipse cx="760" cy="110" rx="70" ry="26"/><ellipse cx="820" cy="108" rx="45" ry="22"/><ellipse cx="705" cy="116" rx="38" ry="18"/>
+  </g>
+  <path d="M0 520 C180 470 330 570 520 520 S870 470 1080 520 S1380 575 1600 510 L1600 1000 L0 1000Z" fill="#08A8F8"/>
+  <path d="M0 610 C200 560 390 665 600 610 S950 565 1160 615 S1420 675 1600 610 L1600 1000 L0 1000Z" fill="#0CB7FF" opacity=".78"/>
+  <path d="M0 720 C190 680 390 760 610 715 S960 675 1190 725 S1450 790 1600 710 L1600 1000 L0 1000Z" fill="#54D4FF" opacity=".72"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="9" opacity=".72" stroke-linecap="round">
+    <path d="M70 565 C210 530 300 610 450 575"/><path d="M640 612 C760 580 870 640 990 606"/><path d="M1180 552 C1290 520 1390 585 1510 550"/>
+  </g>
+</svg>

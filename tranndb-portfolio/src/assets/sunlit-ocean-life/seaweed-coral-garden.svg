@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-label="Cute seaweed and coral garden">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 330 C40 250 105 200 70 120 C145 188 110 250 150 330" fill="#33D9B2" stroke="#07436B" stroke-width="5"/>
+    <path d="M210 330 C170 220 235 165 215 70 C295 165 270 238 320 330" fill="#1FC89F" stroke="#07436B" stroke-width="5"/>
+    <path d="M690 330 C650 235 715 190 690 95 C770 175 755 250 810 330" fill="#33D9B2" stroke="#07436B" stroke-width="5"/>
+    <path d="M410 330v-90m0 35c-50-20-56-65-22-90m28 98c48-32 62-77 31-111" fill="none" stroke="#FF7BA8" stroke-width="22"/>
+    <path d="M520 330v-110m0 36c48-20 58-60 26-88m-30 102c-44-28-58-68-30-102" fill="none" stroke="#FFD86B" stroke-width="18"/>
+    <path d="M870 330v-84m0 28c38-18 50-50 24-72m-28 78c-38-20-46-54-22-76" fill="none" stroke="#FF9BC0" stroke-width="18"/>
+  </g>
+  <g fill="#FFF7DE" stroke="#07436B" stroke-width="5"><ellipse cx="125" cy="334" rx="78" ry="22"/><ellipse cx="510" cy="336" rx="96" ry="24"/><ellipse cx="835" cy="336" rx="90" ry="22"/></g>
+</svg>

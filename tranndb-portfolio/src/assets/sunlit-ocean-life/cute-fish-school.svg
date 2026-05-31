@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-label="Cute colorful fish school">
+  <g stroke="#07436B" stroke-width="5" stroke-linejoin="round">
+    <g transform="translate(40 55)"><ellipse cx="95" cy="50" rx="78" ry="42" fill="#FFD86B"/><path d="M168 50l54-38v76z" fill="#FF7BA8"/><circle cx="70" cy="39" r="7" fill="#07436B"/><path d="M78 64q20 16 44 0" fill="none" stroke-linecap="round"/></g>
+    <g transform="translate(300 25) scale(.82)"><ellipse cx="95" cy="50" rx="78" ry="42" fill="#33D9B2"/><path d="M168 50l54-38v76z" fill="#08A8F8"/><circle cx="70" cy="39" r="7" fill="#07436B"/><path d="M78 64q20 16 44 0" fill="none" stroke-linecap="round"/></g>
+    <g transform="translate(510 105) scale(.72)"><ellipse cx="95" cy="50" rx="78" ry="42" fill="#FF9BC0"/><path d="M168 50l54-38v76z" fill="#FFD86B"/><circle cx="70" cy="39" r="7" fill="#07436B"/><path d="M78 64q20 16 44 0" fill="none" stroke-linecap="round"/></g>
+  </g>
+  <g fill="#FFFFFF" opacity=".9"><circle cx="270" cy="75" r="10"/><circle cx="250" cy="112" r="6"/><circle cx="455" cy="155" r="8"/><circle cx="690" cy="80" r="7"/></g>
+</svg>

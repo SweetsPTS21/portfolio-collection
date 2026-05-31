@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Cute sailing boat">
+  <path d="M90 255 C155 312 340 312 430 255 Z" fill="#FFB05C" stroke="#07436B" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M258 60v200" stroke="#07436B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M268 70 C350 122 382 176 280 228 Z" fill="#FFFFFF" stroke="#07436B" stroke-width="7"/>
+  <path d="M248 92 C170 138 140 190 238 236 Z" fill="#BCEBFF" stroke="#07436B" stroke-width="7"/>
+  <circle cx="190" cy="274" r="16" fill="#08A8F8" stroke="#07436B" stroke-width="5"/>
+  <circle cx="265" cy="279" r="16" fill="#33D9B2" stroke="#07436B" stroke-width="5"/>
+  <circle cx="340" cy="274" r="16" fill="#FF7BA8" stroke="#07436B" stroke-width="5"/>
+  <path d="M60 315 C155 282 240 340 330 312 S450 300 500 320" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity=".8"/>
+</svg>
