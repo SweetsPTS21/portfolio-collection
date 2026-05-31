@@ -77,7 +77,10 @@ function SectionHeader({ eyebrow, title, icon, accent = 'rose' }) {
         >
           {eyebrow}
         </p>
-        <h3 className="text-lg md:text-xl font-heading font-bold" style={{ color: '#25233A' }}>
+        <h3
+          className="text-lg md:text-xl font-heading font-bold"
+          style={{ color: '#25233A' }}
+        >
           {title}
         </h3>
       </div>
@@ -107,12 +110,16 @@ function GlassPanel({ children, className = '', accent = 'rose', delay = 0 }) {
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: `linear-gradient(90deg, transparent, ${tone.color}88, transparent)` }}
+        style={{
+          background: `linear-gradient(90deg, transparent, ${tone.color}88, transparent)`,
+        }}
       />
       <div
         aria-hidden="true"
         className="absolute -right-14 -top-14 h-40 w-40 rounded-full"
-        style={{ background: `radial-gradient(circle, ${tone.color}22, transparent 70%)` }}
+        style={{
+          background: `radial-gradient(circle, ${tone.color}22, transparent 70%)`,
+        }}
       />
       {children}
     </motion.div>
@@ -123,7 +130,7 @@ function ReflectionFragmentGrid({ items, accent = 'rose' }) {
   const tone = ACCENTS[accent];
 
   return (
-    <div className="conclusion-fragment-grid relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div className="conclusion-fragment-grid relative z-10 grid grid-cols-1 md:grid-cols-1 gap-3">
       {items.map((item, index) => (
         <motion.div
           key={item}
@@ -139,7 +146,10 @@ function ReflectionFragmentGrid({ items, accent = 'rose' }) {
           viewport={{ once: true }}
           transition={{ duration: 0.36, delay: index * 0.05 }}
         >
-          <span className="font-heading font-bold mr-2" style={{ color: tone.color }}>
+          <span
+            className="font-heading font-bold mr-2"
+            style={{ color: tone.color }}
+          >
             {String(index + 1).padStart(2, '0')}
           </span>
           {item}
@@ -187,7 +197,8 @@ export default function ConclusionGlassScroll() {
           background:
             'linear-gradient(135deg, rgba(255,255,255,0.64), rgba(255,240,248,0.42), rgba(238,255,250,0.36))',
           border: '1px solid rgba(255,255,255,0.68)',
-          boxShadow: '0 24px 80px rgba(139,75,171,0.15), inset 0 1px 0 rgba(255,255,255,0.75)',
+          boxShadow:
+            '0 24px 80px rgba(139,75,171,0.15), inset 0 1px 0 rgba(255,255,255,0.75)',
           backdropFilter: 'blur(18px)',
         }}
         initial={{ opacity: 0, y: 18 }}
@@ -218,12 +229,19 @@ export default function ConclusionGlassScroll() {
           >
             Dream reflection
           </p>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight" style={{ color: '#25233A' }}>
+          <h2
+            className="text-3xl md:text-5xl font-heading font-bold leading-tight"
+            style={{ color: '#25233A' }}
+          >
             Tổng kết hành trình
           </h2>
-          <p className="mt-4 text-sm md:text-base leading-relaxed max-w-2xl" style={{ color: '#5A5268' }}>
-            Phần tổng kết được chia thành nhiều lớp kính nhỏ để người xem đọc theo nhịp: trải nghiệm,
-            hành trang, điểm tâm đắc, thách thức, định hướng và lời cảm ơn.
+          <p
+            className="mt-4 text-sm md:text-base leading-relaxed max-w-2xl"
+            style={{ color: '#5A5268' }}
+          >
+            Phần tổng kết được chia thành nhiều lớp kính nhỏ để người xem đọc
+            theo nhịp: trải nghiệm, hành trang, điểm tâm đắc, thách thức, định
+            hướng và lời cảm ơn.
           </p>
         </div>
       </motion.div>
@@ -240,14 +258,24 @@ export default function ConclusionGlassScroll() {
         </GlassPanel>
 
         <GlassPanel className="lg:col-span-5" accent="plum" delay={0.08}>
-          <SectionHeader eyebrow="Baggage" title="Hành trang quý giá" icon={Star} accent="plum" />
+          <SectionHeader
+            eyebrow="Baggage"
+            title="Hành trang quý giá"
+            icon={Star}
+            accent="plum"
+          />
           <ReflectionFragmentGrid items={baggageParts} accent="plum" />
         </GlassPanel>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-5">
         <GlassPanel className="lg:col-span-6" accent="teal" delay={0.12}>
-          <SectionHeader eyebrow="Highlights" title="Điểm tâm đắc nhất" icon={Heart} accent="teal" />
+          <SectionHeader
+            eyebrow="Highlights"
+            title="Điểm tâm đắc nhất"
+            icon={Heart}
+            accent="teal"
+          />
           <BulletGrid items={conclusion.highlights} accent="teal" marker="✦" />
         </GlassPanel>
 
@@ -273,7 +301,12 @@ export default function ConclusionGlassScroll() {
           aria-hidden="true"
           className="absolute right-8 top-4 w-24 opacity-25 pointer-events-none"
         />
-        <SectionHeader eyebrow="Next path" title="Định hướng phía trước" icon={Compass} accent="plum" />
+        <SectionHeader
+          eyebrow="Next path"
+          title="Định hướng phía trước"
+          icon={Compass}
+          accent="plum"
+        />
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-3">
           {conclusion.future.map((item, index) => (
             <div
@@ -285,7 +318,10 @@ export default function ConclusionGlassScroll() {
                 color: '#4A4A4A',
               }}
             >
-              <div className="font-heading font-bold mb-2" style={{ color: '#8B4BAB' }}>
+              <div
+                className="font-heading font-bold mb-2"
+                style={{ color: '#8B4BAB' }}
+              >
                 Hướng {index + 1}
               </div>
               {item}
@@ -300,7 +336,8 @@ export default function ConclusionGlassScroll() {
           background:
             'linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,240,245,0.46))',
           border: '1px solid rgba(212,96,126,0.18)',
-          boxShadow: '0 18px 52px rgba(212,96,126,0.14), inset 0 1px 0 rgba(255,255,255,0.74)',
+          boxShadow:
+            '0 18px 52px rgba(212,96,126,0.14), inset 0 1px 0 rgba(255,255,255,0.74)',
           backdropFilter: 'blur(16px)',
         }}
         initial={{ opacity: 0, y: 18 }}
@@ -311,7 +348,11 @@ export default function ConclusionGlassScroll() {
         <span
           aria-hidden="true"
           className="absolute -left-1 -top-7 text-[7rem] leading-none font-bold"
-          style={{ color: '#D4607E', opacity: 0.07, fontFamily: 'Georgia, serif' }}
+          style={{
+            color: '#D4607E',
+            opacity: 0.07,
+            fontFamily: 'Georgia, serif',
+          }}
         >
           &#8220;
         </span>
@@ -320,7 +361,12 @@ export default function ConclusionGlassScroll() {
           aria-hidden="true"
           className="absolute -right-10 -top-10 w-52 opacity-20 pointer-events-none"
         />
-        <SectionHeader eyebrow="Gratitude" title="Lời cảm ơn" icon={Layers} accent="rose" />
+        <SectionHeader
+          eyebrow="Gratitude"
+          title="Lời cảm ơn"
+          icon={Layers}
+          accent="rose"
+        />
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-3">
           {thanksParts.map((part, index) => (
             <div
@@ -333,7 +379,10 @@ export default function ConclusionGlassScroll() {
               }}
             >
               <Heart size={17} className="mb-2" style={{ color: '#D4607E' }} />
-              <span className="font-heading font-bold mr-1" style={{ color: '#D4607E' }}>
+              <span
+                className="font-heading font-bold mr-1"
+                style={{ color: '#D4607E' }}
+              >
                 {index + 1}.
               </span>
               {part}
