@@ -1,0 +1,1027 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --beach-sky: #f0fbff;
+  --aqua-wave: #55c9f6;
+  --foam-blue: #bdefff;
+  --coral-pink: #ff7fa8;
+  --sunny-yellow: #ffd66e;
+  --mint-splash: #73e6c2;
+  --sand-cream: #fff0c8;
+  --cream-white: #fffaf0;
+  --ink-blue: #244052;
+  --muted-blue: #648497;
+  --shadow-blue: rgba(36, 64, 82, 0.16);
+  --radius: 22px;
+  color: var(--ink-blue);
+  font-family: 'Nunito', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--beach-sky);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      rgba(255, 255, 255, 0.9),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 84% 18%,
+      rgba(255, 214, 110, 0.34),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #f0fbff 0%, #d9f8ff 42%, #fff0c8 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: '';
+  background-image: url('./assets/kawaii-beach-day/pastel-beach-hero-scene.svg');
+  background-position: center bottom;
+  background-size: cover;
+  opacity: 0.88;
+}
+
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: '';
+  background-image: url('./assets/kawaii-beach-day/foam-bubble-particles.svg');
+  background-size: min(900px, 120vw) auto;
+  opacity: 0.42;
+  animation: particle-drift 18s ease-in-out infinite alternate;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 106px clamp(16px, 4vw, 56px) 64px;
+}
+
+.beach-nav {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 30;
+  display: flex;
+  width: min(1120px, calc(100vw - 28px));
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px;
+  border: 2px solid rgba(189, 239, 255, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.78);
+  box-shadow: 0 18px 55px rgba(85, 201, 246, 0.22);
+  backdrop-filter: blur(18px);
+  transform: translateX(-50%);
+}
+
+.brand-mark,
+.nav-shell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.brand-mark {
+  padding: 0 18px;
+  color: var(--coral-pink);
+}
+
+.brand-sun {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--sunny-yellow);
+  box-shadow: 0 0 0 7px rgba(255, 214, 110, 0.28);
+  animation: sun-sparkle 3.2s ease-in-out infinite;
+}
+
+.beach-nav nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-shell {
+  padding: 0 15px;
+  color: var(--muted-blue);
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.nav-shell.active,
+.nav-shell:hover {
+  color: var(--ink-blue);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 127, 168, 0.2),
+    rgba(115, 230, 194, 0.34)
+  );
+  box-shadow: inset 0 -4px 0 rgba(85, 201, 246, 0.24);
+  transform: translateY(-2px) rotate(-1deg);
+}
+
+.beach-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scene-hero {
+  position: absolute;
+  inset: auto 50% 0 auto;
+  width: max(1380px, 108vw);
+  max-width: none;
+  opacity: 0.5;
+  transform: translateX(50%);
+}
+
+.scene-towel {
+  position: absolute;
+  right: -70px;
+  bottom: -4vh;
+  width: min(48vw, 580px);
+  opacity: 0.6;
+  transform: rotate(-5deg);
+  animation: towel-stripe-slide 9s ease-in-out infinite;
+}
+
+.scene-floatie {
+  position: absolute;
+  right: min(4vw, 58px);
+  top: 19vh;
+  width: min(34vw, 440px);
+  opacity: 0.82;
+  animation: floatie-bob 5.2s ease-in-out infinite;
+}
+
+.scene-float {
+  position: absolute;
+  left: clamp(18px, 7vw, 118px);
+  bottom: 18vh;
+  width: min(26vw, 300px);
+  min-width: 150px;
+  opacity: 0.92;
+  animation: mascot-bounce 4.8s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+.scene-sandcastle {
+  position: absolute;
+  left: 0;
+  bottom: 2vh;
+  width: min(34vw, 400px);
+  opacity: 0.78;
+  animation: shell-wiggle 6.4s ease-in-out infinite;
+}
+
+.scene-stickers {
+  position: absolute;
+  top: 13vh;
+  left: 6vw;
+  width: min(34vw, 390px);
+  opacity: 0.52;
+  animation: sticker-bounce 7s ease-in-out infinite;
+}
+
+.scene-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+  animation: particle-drift 14s ease-in-out infinite alternate;
+}
+
+.wave-stack {
+  position: absolute;
+  right: -10vw;
+  bottom: 17vh;
+  left: -10vw;
+  height: 155px;
+  opacity: 0.62;
+}
+
+.wave {
+  position: absolute;
+  inset-inline: 0;
+  height: 90px;
+  border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+  background: repeating-radial-gradient(
+    ellipse at 50% 110%,
+    rgba(255, 255, 255, 0.9) 0 11px,
+    rgba(85, 201, 246, 0.42) 12px 38px
+  );
+  transform-origin: center bottom;
+}
+
+.wave-a {
+  bottom: 56px;
+  animation: wave-sway 8s ease-in-out infinite;
+}
+
+.wave-b {
+  bottom: 24px;
+  opacity: 0.6;
+  animation: wave-sway 11s ease-in-out infinite reverse;
+}
+
+.wave-c {
+  bottom: 0;
+  opacity: 0.42;
+  animation: wave-sway 14s ease-in-out infinite;
+}
+
+.bubble-field {
+  position: absolute;
+  inset: 0;
+}
+
+.bubble {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  background: rgba(189, 239, 255, 0.24);
+  animation: bubble-float 9s ease-in-out infinite;
+}
+
+.bubble-1 {
+  left: 8%;
+  top: 72%;
+  animation-delay: -0.6s;
+}
+.bubble-2 {
+  left: 18%;
+  top: 52%;
+  animation-delay: -2s;
+}
+.bubble-3 {
+  left: 34%;
+  top: 66%;
+  animation-delay: -3.8s;
+}
+.bubble-4 {
+  right: 31%;
+  top: 58%;
+  animation-delay: -1.4s;
+}
+.bubble-5 {
+  right: 17%;
+  top: 44%;
+  animation-delay: -4.8s;
+}
+.bubble-6 {
+  right: 8%;
+  top: 68%;
+  animation-delay: -6s;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 2;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin: 0 0 10px;
+  padding: 8px 14px;
+  border: 2px solid rgba(255, 214, 110, 0.88);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.8);
+  color: #c85278;
+  font-size: 0.86rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(255, 127, 168, 0.14);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 980px;
+  margin-bottom: 26px;
+  color: var(--ink-blue);
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
+  font-size: clamp(2.45rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-shadow:
+    0 4px 0 rgba(255, 255, 255, 0.86),
+    0 16px 38px rgba(85, 201, 246, 0.2);
+}
+
+.lead,
+.hero-copy > p,
+.mail-copy > p,
+.beach-panel p,
+.activity-ticket p {
+  color: var(--muted-blue);
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  line-height: 1.72;
+}
+
+.lead {
+  max-width: 820px;
+  margin-bottom: 28px;
+  padding: 18px 22px;
+  border: 2px dashed rgba(255, 127, 168, 0.45);
+  border-radius: 24px;
+  background: rgba(255, 250, 240, 0.76);
+  box-shadow: 0 20px 48px rgba(36, 64, 82, 0.1);
+}
+
+.quote {
+  color: var(--ink-blue) !important;
+  font-weight: 900;
+}
+
+.hero-grid,
+.panel-grid,
+.beach-mail-hero {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
+  align-items: stretch;
+}
+
+.two-column {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin-top: 24px;
+}
+
+.three-column {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.towel-card,
+.beach-panel,
+.avatar-floatie-card,
+.beach-mail-hero,
+.activity-ticket {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 250, 240, 0.76);
+  box-shadow: 0 24px 70px rgba(36, 64, 82, 0.14);
+  backdrop-filter: blur(17px);
+}
+
+.towel-card {
+  overflow: hidden;
+  min-height: 430px;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 34px;
+}
+
+.towel-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: '';
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 18%,
+      rgba(255, 127, 168, 0.14) 18% 30%,
+      transparent 30% 46%,
+      rgba(85, 201, 246, 0.16) 46% 58%,
+      transparent 58%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(255, 214, 110, 0.34),
+      transparent 24%
+    );
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.info-shell {
+  min-height: 104px;
+  padding: 16px;
+  border: 2px solid rgba(189, 239, 255, 0.9);
+  border-radius: 20px 28px 20px 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(115, 230, 194, 0.16)
+  );
+}
+
+.info-shell span {
+  display: block;
+  margin-bottom: 8px;
+  color: #c85278;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.info-shell strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.avatar-floatie-card {
+  min-height: 540px;
+  overflow: hidden;
+  border-radius: 42px 28px 42px 28px;
+}
+
+.avatar-photo {
+  position: absolute;
+  inset: 7% 9% 8%;
+  z-index: 1;
+  width: 82%;
+  height: 85%;
+  border: 12px solid rgba(255, 255, 255, 0.72);
+  border-radius: 38px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  box-shadow: 0 28px 70px rgba(36, 64, 82, 0.24);
+}
+
+.avatar-floatie-card::before {
+  position: absolute;
+  inset: 16px;
+  content: '';
+  border-radius: 36px;
+  background:
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(255, 214, 110, 0.62),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 82% 30%,
+      rgba(115, 230, 194, 0.45),
+      transparent 28%
+    ),
+    url('./assets/kawaii-beach-day/kawaii-beach-stickers.svg') center/cover;
+  opacity: 0.26;
+}
+
+.avatar-mascot {
+  position: absolute;
+  z-index: 3;
+  right: -2%;
+  bottom: -2%;
+  width: min(52%, 250px);
+  animation: mascot-bounce 4.2s ease-in-out infinite;
+}
+
+.floatie-ring {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  bottom: 6%;
+  width: 160px;
+  height: 112px;
+  border: 28px solid var(--coral-pink);
+  border-radius: 58% 44% 58% 44%;
+  box-shadow:
+    inset 0 0 0 22px rgba(255, 255, 255, 0.74),
+    0 18px 38px rgba(255, 127, 168, 0.28);
+  transform: rotate(-12deg);
+  animation: floatie-bob 4.6s ease-in-out infinite;
+}
+
+.beach-panel {
+  overflow: hidden;
+  min-height: 250px;
+  padding: clamp(20px, 3vw, 30px);
+  border-radius: 28px 20px 34px 20px;
+}
+
+.beach-panel::after {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  width: 108px;
+  height: 108px;
+  content: '';
+  background: url('./assets/kawaii-beach-day/sandcastle-shells.svg')
+    center/contain no-repeat;
+  opacity: 0.14;
+  animation: shell-wiggle 7s ease-in-out infinite;
+}
+
+.panel-foam {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  left: -20px;
+  height: 76px;
+  background: url('./assets/kawaii-beach-day/wave-foam-edge.svg') center/cover
+    no-repeat;
+  opacity: 0.38;
+  transition: transform 220ms ease;
+}
+
+.beach-panel:hover .panel-foam {
+  transform: translateY(8px);
+}
+
+.panel-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #c85278;
+}
+
+.panel-title h2 {
+  margin: 0;
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.panel-icon {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px 22px 16px 22px;
+  color: var(--ink-blue);
+  background: linear-gradient(135deg, var(--sunny-yellow), var(--mint-splash));
+  box-shadow: 0 10px 20px rgba(255, 214, 110, 0.24);
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted-blue);
+  line-height: 1.75;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+.chip-bucket {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-bucket span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 2px solid rgba(255, 214, 110, 0.72);
+  border-radius: 999px 999px 999px 18px;
+  color: var(--ink-blue);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(189, 239, 255, 0.54)
+  );
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(85, 201, 246, 0.12);
+}
+
+.compact-panel {
+  min-height: 310px;
+}
+
+.wide-panel {
+  margin-top: 24px;
+  min-height: 190px;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.activity-ticket {
+  display: grid;
+  min-height: 410px;
+  overflow: hidden;
+  grid-template-columns: 112px minmax(0, 1fr);
+  border-radius: 26px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 250, 240, 0.88),
+      rgba(240, 251, 255, 0.82)
+    ),
+    url('./assets/kawaii-beach-day/umbrella-towel-pattern.svg') center/cover;
+}
+
+.activity-ticket::before {
+  position: absolute;
+  inset: 14px;
+  content: '';
+  border: 2px dashed rgba(255, 127, 168, 0.36);
+  border-radius: 22px;
+}
+
+.ticket-stub {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 12px;
+  border-right: 2px dashed rgba(36, 64, 82, 0.18);
+  background: linear-gradient(
+    180deg,
+    rgba(85, 201, 246, 0.28),
+    rgba(255, 214, 110, 0.32)
+  );
+}
+
+.ticket-stub span {
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.ticket-stub strong {
+  writing-mode: vertical-rl;
+  color: #c85278;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ticket-content {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+}
+
+.ticket-label {
+  display: inline-flex;
+  margin: 0 0 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #c85278 !important;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem !important;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ticket-content h2 {
+  margin-bottom: 12px;
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.86rem);
+  line-height: 1.12;
+}
+
+.ticket-content h3 {
+  color: var(--ink-blue);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.beach-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 0 15px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  color: var(--ink-blue);
+  background: linear-gradient(135deg, var(--sunny-yellow), var(--mint-splash));
+  box-shadow: 0 14px 26px rgba(36, 64, 82, 0.14);
+  font-weight: 900;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.beach-action:hover,
+.beach-action:focus-visible {
+  transform: translateY(-2px) rotate(-1deg);
+  box-shadow: 0 18px 34px rgba(36, 64, 82, 0.18);
+}
+
+.beach-mail-hero {
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
+  align-items: center;
+  min-height: 430px;
+  margin-bottom: 24px;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 34px 24px 42px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 250, 240, 0.86),
+      rgba(189, 239, 255, 0.66)
+    ),
+    url('./assets/kawaii-beach-day/wave-foam-edge.svg') bottom/100% auto
+      no-repeat;
+}
+
+.mail-object {
+  position: relative;
+  min-height: 290px;
+}
+
+.mail-object img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: shell-mail-float 5.4s ease-in-out infinite;
+}
+
+.reflection-lists .beach-panel {
+  min-height: 420px;
+}
+
+@keyframes particle-drift {
+  to {
+    transform: translate3d(20px, -18px, 0) scale(1.03);
+  }
+}
+
+@keyframes sun-sparkle {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(255, 214, 110, 0.28);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 13px rgba(255, 214, 110, 0.12);
+  }
+}
+
+@keyframes towel-stripe-slide {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-5deg);
+  }
+  50% {
+    transform: translate3d(16px, -10px, 0) rotate(-2deg);
+  }
+}
+
+@keyframes floatie-bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes mascot-bounce {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+  45% {
+    transform: translate3d(0, -12px, 0) rotate(1deg);
+  }
+  58% {
+    transform: translate3d(0, -8px, 0) rotate(0.4deg);
+  }
+}
+
+@keyframes shell-wiggle {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-6px);
+  }
+}
+
+@keyframes sticker-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+@keyframes wave-sway {
+  0%,
+  100% {
+    transform: translateX(-2%) scaleY(0.95);
+  }
+  50% {
+    transform: translateX(2%) scaleY(1.04);
+  }
+}
+
+@keyframes bubble-float {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.72);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-160px) scale(1.16);
+  }
+}
+
+@keyframes shell-mail-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(12px, -16px, 0) rotate(2deg);
+  }
+}
+
+@media (max-width: 920px) {
+  .app-shell {
+    padding-top: 164px;
+  }
+
+  .beach-nav {
+    align-items: stretch;
+    border-radius: 28px;
+    flex-direction: column;
+  }
+
+  .beach-nav nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .brand-mark,
+  .nav-shell {
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .two-column,
+  .three-column,
+  .activity-grid,
+  .beach-mail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar-floatie-card {
+    min-height: 460px;
+  }
+
+  .scene-stickers,
+  .scene-towel,
+  .scene-sandcastle {
+    opacity: 0.3;
+  }
+
+  .scene-floatie {
+    top: 24vh;
+    width: 240px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding-inline: 12px;
+  }
+
+  .beach-nav nav {
+    gap: 6px;
+  }
+
+  .nav-shell {
+    min-height: 42px;
+    padding: 0 8px;
+  }
+
+  .nav-shell span {
+    font-size: 0.78rem;
+  }
+
+  .identity-grid,
+  .activity-ticket {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-stub {
+    min-height: 82px;
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 2px dashed rgba(36, 64, 82, 0.18);
+  }
+
+  .ticket-stub strong {
+    writing-mode: initial;
+  }
+
+  .towel-card,
+  .beach-panel,
+  .ticket-content,
+  .beach-mail-hero {
+    padding: 20px;
+  }
+
+  .avatar-floatie-card {
+    min-height: 380px;
+  }
+
+  .floatie-ring {
+    width: 116px;
+    height: 84px;
+    border-width: 20px;
+  }
+
+  .scene-mascot {
+    right: -20px;
+    width: 170px;
+  }
+
+  .scene-floatie {
+    right: -55px;
+    top: 28vh;
+    width: 215px;
+  }
+
+  .bubble:nth-child(n + 9) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" role="img" aria-label="Sandcastle shells">
+  <ellipse cx="350" cy="440" rx="280" ry="38" fill="#244052" opacity=".12"/>
+  <path d="M185 390V210h105v180M340 390V170h118v220M505 390V235h95v155" fill="#FFD66E"/>
+  <path d="M178 210 h118 l-20 -52 h-78zM330 170 h138 l-24 -62 h-90zM498 235 h110 l-18 -48 h-74z" fill="#FFF0C8"/>
+  <path d="M158 390h475v46H158z" fill="#FFF0C8"/>
+  <path d="M232 390v-54c0-34 48-34 48 0v54M383 390v-72c0-42 58-42 58 0v72" fill="#244052" opacity=".18"/>
+  <g transform="translate(44 330)" fill="#FF7FA8"><path d="M74 74 C25 58 18 18 74 5 C130 18 123 58 74 74Z"/><path d="M74 5v69M38 22l36 52M110 22L74 74" stroke="#fff" stroke-width="8" opacity=".8"/></g>
+  <g transform="translate(592 320)" fill="#73E6C2"><path d="M52 12 l16 32 36 6 -26 25 6 36 -32 -17 -32 17 6 -36L0 50l36 -6z"/></g>
+  <path d="M110 250 l-34 135" stroke="#FF7FA8" stroke-width="16" stroke-linecap="round"/><path d="M62 254 h70" stroke="#55C9F6" stroke-width="22" stroke-linecap="round"/>
+</svg>

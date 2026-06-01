@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img" aria-label="Kawaii beach stickers">
+  <g fill="#FFD66E"><circle cx="90" cy="90" r="54"/><path d="M90 8v34M90 138v34M8 90h34M138 90h34M32 32l25 25M148 32l-25 25M32 148l25-25M148 148l-25-25" stroke="#FFD66E" stroke-width="14" stroke-linecap="round"/></g>
+  <g fill="#fff" stroke="#BDEFFF" stroke-width="10"><path d="M300 110c26-54 102-38 104 20 48-6 80 44 48 80H214c-34-50 24-104 86-100Z"/></g>
+  <path d="M620 86 c-30 -46 -102 -18 -88 38 c11 46 88 84 88 84 s77 -38 88 -84 c14 -56 -58 -84 -88 -38Z" fill="#FF7FA8"/>
+  <path d="M152 396 l22 46 51 7 -37 36 9 51 -45 -24 -45 24 9 -51 -37 -36 51 -7Z" fill="#FFD66E"/>
+  <g transform="translate(340 330)"><path d="M20 80 C50 18 150 18 180 80 C150 126 50 126 20 80Z" fill="#73E6C2"/><circle cx="70" cy="76" r="14" fill="#244052"/><circle cx="130" cy="76" r="14" fill="#244052"/></g>
+  <g transform="translate(610 340)"><path d="M26 0h56l-26 150H0z" fill="#55C9F6"/><path d="M108 0h56l26 150h-56z" fill="#FF7FA8"/><path d="M0 150h82M108 150h82" stroke="#244052" stroke-width="14" stroke-linecap="round"/></g>
+  <g transform="translate(705 200)"><path d="M0 36 C42 0 120 0 160 36 C126 74 34 74 0 36Z" fill="#FF7FA8"/><path d="M25 35h110" stroke="#244052" stroke-width="14" stroke-linecap="round"/></g>
+</svg>

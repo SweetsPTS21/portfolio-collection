@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" role="img" aria-label="Beach girl mascot">
+  <defs><linearGradient id="dress" x1="0" x2="1"><stop stop-color="#FF7FA8"/><stop offset="1" stop-color="#FFD66E"/></linearGradient></defs>
+  <ellipse cx="260" cy="566" rx="170" ry="34" fill="#244052" opacity=".12"/>
+  <circle cx="260" cy="150" r="106" fill="#FFD7C6"/>
+  <path d="M150 142 C155 45 240 10 315 38 C385 65 414 128 380 210 C352 162 310 148 260 150 C210 152 184 168 150 142Z" fill="#6B4A3E"/>
+  <circle cx="218" cy="155" r="12" fill="#244052"/><circle cx="305" cy="155" r="12" fill="#244052"/>
+  <path d="M226 205 C250 226 286 226 310 205" fill="none" stroke="#FF7FA8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="184" cy="186" r="17" fill="#FF9BB8" opacity=".65"/><circle cx="336" cy="186" r="17" fill="#FF9BB8" opacity=".65"/>
+  <path d="M163 292 C190 240 330 240 358 292 L410 520 H110Z" fill="url(#dress)"/>
+  <path d="M172 334 C220 360 302 360 348 334" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+  <path d="M155 310 C92 318 68 380 96 430" fill="none" stroke="#FFD7C6" stroke-width="34" stroke-linecap="round"/>
+  <path d="M365 310 C428 296 466 340 456 395" fill="none" stroke="#FFD7C6" stroke-width="34" stroke-linecap="round"/>
+  <path d="M420 360 q42 -48 72 4" fill="none" stroke="#FF7FA8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M145 520 l-35 64" stroke="#FFD7C6" stroke-width="32" stroke-linecap="round"/><path d="M360 520 l38 64" stroke="#FFD7C6" stroke-width="32" stroke-linecap="round"/>
+  <path d="M172 98 l36 -54 30 68" fill="#55C9F6"/><path d="M340 92 l-28 -58 -38 64" fill="#73E6C2"/>
+  <g fill="#fff"><circle cx="214" cy="150" r="4"/><circle cx="301" cy="150" r="4"/></g>
+</svg>

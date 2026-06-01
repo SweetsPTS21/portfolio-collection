@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Umbrella towel pattern">
+  <rect x="120" y="120" width="560" height="300" rx="34" fill="#fff"/>
+  <path d="M154 120 h96 v300 h-96zM346 120 h96v300h-96zM538 120h96v300h-96z" fill="#FF7FA8" opacity=".82"/>
+  <path d="M120 188 h560M120 282h560M120 376h560" stroke="#FFD66E" stroke-width="18" opacity=".78"/>
+  <g transform="translate(610 20)">
+    <path d="M86 342 L110 74" stroke="#244052" stroke-width="12" stroke-linecap="round"/>
+    <path d="M0 104 C60 4 190 -2 252 104 C170 78 82 78 0 104Z" fill="#55C9F6"/>
+    <path d="M48 87 C83 24 130 12 160 91" fill="#fff" opacity=".86"/>
+    <path d="M128 85 C158 24 208 32 235 101" fill="#FFD66E" opacity=".9"/>
+  </g>
+  <g fill="#BDEFFF"><circle cx="82" cy="100" r="26"/><circle cx="760" cy="450" r="22"/><circle cx="805" cy="410" r="12"/></g>
+</svg>

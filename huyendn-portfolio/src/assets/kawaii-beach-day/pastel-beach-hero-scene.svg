@@ -1,0 +1,50 @@
+<svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg" aria-label="Pastel beach scene" role="img">
+ <defs>
+  <filter id="soft">
+   <feGaussianBlur stdDeviation="6"/>
+  </filter>
+  <linearGradient y2="1" x2="0" y1="0" x1="0" id="sky">
+   <stop stop-color="#F0FBFF"/>
+   <stop stop-color="#BDEFFF" offset="0.55"/>
+   <stop stop-color="#FFF0C8" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="1" x2="0" y1="0" x1="0" id="sea">
+   <stop stop-color="#73E6C2"/>
+   <stop stop-color="#55C9F6" offset="0.55"/>
+   <stop stop-color="#BDEFFF" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" fill="url(#sky)" height="900" width="1600"/>
+  <circle id="svg_2" opacity="0.9" fill="#FFD66E" r="86" cy="130" cx="1280"/>
+  <g id="svg_3" opacity="0.82" fill="#fff">
+   <ellipse id="svg_4" ry="34" rx="120" cy="130" cx="300"/>
+   <ellipse id="svg_5" ry="28" rx="90" cy="126" cx="390"/>
+   <ellipse id="svg_6" ry="38" rx="150" cy="210" cx="1120"/>
+   <ellipse id="svg_7" ry="32" rx="110" cy="205" cx="1210"/>
+  </g>
+  <path id="svg_8" opacity="0.92" fill="url(#sea)" d="m0,360c180,-50 320,60 520,5s360,-35 560,15s290,50 520,-15l0,325l-1600,0l0,-330z"/>
+  <path id="svg_9" opacity="0.55" fill="#F0FBFF" d="m0,430c210,-60 335,60 560,0s315,-38 560,15s270,60 480,-20l0,295l-1600,0l0,-290z"/>
+  <path id="svg_10" opacity="0.54" fill="#55C9F6" d="m0,510c230,-50 420,50 630,-5s320,-43 555,15s245,55 415,-10l0,250l-1600,0l0,-250z"/>
+  <path id="svg_11" fill="#FFF0C8" d="m0,645c210,-45 410,45 625,-5s375,-40 575,25s250,40 400,-20l0,255l-1600,0l0,-255z"/>
+  <g id="svg_12">
+   <path id="svg_13" stroke-linecap="round" stroke-width="16" stroke="#244052" d="m123,695l25,-260"/>
+   <path id="svg_14" fill="#FF7FA8" d="m-7,491c80,-105 220,-105 305,0c-95,-25 -209,-25 -305,0z"/>
+   <path stroke="null" id="svg_15" opacity="0.9" fill="#fff" d="m23,477c40.90225,-42.10469 62.07518,-59.60407 109.99999,-13"/>
+   <path id="svg_16" opacity="0.9" fill="#FFD66E" d="m149,464c43,-44 80,-37 116,12"/>
+  </g>
+  <g id="svg_17" opacity="0.7" fill="#FF7FA8">
+   <path id="svg_18" d="m1367,502c-45,-70 -160,-30 -135,62c19,70 135,115 135,115s116,-45 135,-115c25,-92 -90,-132 -135,-62z"/>
+  </g>
+  <g id="svg_22" opacity="0.8" fill="#FFD66E">
+   <path id="svg_23" d="m53,700l18,38l42,6l-30,29l7,42l-37,-20l-37,20l7,-42l-30,-29l42,-6l18,-38z"/>
+   <path id="svg_24" d="m1465,710l14,30l33,5l-24,23l6,33l-29,-16l-29,16l6,-33l-24,-23l33,-5l14,-30z"/>
+  </g>
+  <g id="svg_25" opacity="0.6" filter="url(#soft)">
+   <circle id="svg_26" fill="#fff" r="32" cy="742" cx="600"/>
+   <circle id="svg_27" fill="#fff" r="18" cy="718" cx="680"/>
+   <circle id="svg_28" fill="#fff" r="24" cy="760" cx="760"/>
+  </g>
+ </g>
+</svg>
