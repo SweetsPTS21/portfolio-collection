@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Sleeping / Sitting cute cat silhouette -->
+  <g fill="#2C1E16">
+    <!-- Cat body -->
+    <path d="M30 70 C30 50, 45 45, 60 55 C70 65, 70 80, 50 80 C35 80, 30 75, 30 70 Z" />
+    <!-- Cat head -->
+    <circle cx="35" cy="50" r="14" />
+    <!-- Cat ears -->
+    <polygon points="23,43 23,28 33,40" />
+    <polygon points="47,43 47,28 37,40" />
+    <!-- Whiskers (light color) -->
+    <path d="M15 50 H5" stroke="#F5F0EB" stroke-width="1.5" opacity="0.8" />
+    <path d="M16 46 L7 42" stroke="#F5F0EB" stroke-width="1.5" opacity="0.8" />
+    <path d="M16 54 L7 58" stroke="#F5F0EB" stroke-width="1.5" opacity="0.8" />
+    <path d="M55 50 H65" stroke="#F5F0EB" stroke-width="1.5" opacity="0.8" />
+    <!-- Tail (animated using CSS) -->
+    <path class="cat-tail" d="M60 70 C68 70, 75 65, 78 50 C80 40, 75 35, 78 30 C80 25, 83 28, 81 33 C78 40, 83 50, 78 60 C73 70, 68 76, 58 76" fill="#2C1E16" />
+  </g>
+</svg>

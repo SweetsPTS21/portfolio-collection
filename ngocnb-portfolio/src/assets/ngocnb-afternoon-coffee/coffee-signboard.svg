@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="100%" height="100%">
+  <!-- Signboard hanging chains -->
+  <line x1="60" y1="0" x2="60" y2="40" stroke="#8B7355" stroke-width="2" />
+  <line x1="140" y1="0" x2="140" y2="40" stroke="#8B7355" stroke-width="2" />
+  <circle cx="60" cy="40" r="3" fill="#2C1E16" />
+  <circle cx="140" cy="40" r="3" fill="#2C1E16" />
+  
+  <!-- Wooden Board base -->
+  <rect x="20" y="35" width="160" height="75" rx="6" fill="#8B7355" stroke="#4E3629" stroke-width="3" />
+  <!-- Inner border -->
+  <rect x="26" y="41" width="148" height="63" rx="4" fill="none" stroke="#FAF5EF" stroke-width="1.5" stroke-dasharray="4,2" />
+  
+  <!-- Text: CAT COFFEE -->
+  <text x="50%" y="68" font-family="'Playfair Display', serif" font-size="16" font-weight="bold" fill="#FAF5EF" text-anchor="middle" letter-spacing="2">CAT COFFEE</text>
+  <!-- Coffee shop subtitle -->
+  <text x="50%" y="88" font-family="'Inter', sans-serif" font-size="7" fill="#E6DCD3" text-anchor="middle" letter-spacing="1">MEOW &amp; BREW</text>
+  
+  <!-- Tiny cat ears on top of board -->
+  <polygon points="40,35 48,22 56,35" fill="#4E3629" />
+  <polygon points="160,35 152,22 144,35" fill="#4E3629" />
+</svg>
