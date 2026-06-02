@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 620" role="img" aria-label="Football corner flag">
+  <defs>
+    <linearGradient id="flag" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff7a00"/><stop offset="0.52" stop-color="#ffe15a"/><stop offset="1" stop-color="#00cff5"/></linearGradient>
+    <linearGradient id="pole" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#135dff"/><stop offset="1" stop-color="#00cff5"/></linearGradient>
+  </defs>
+  <path d="M170 86v466" stroke="url(#pole)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M178 86c70-36 116 20 154-4v146c-56 30-106-28-154 8z" fill="url(#flag)" stroke="#062043" stroke-width="6"/>
+  <path d="M188 118c50-18 86 22 124 8M188 174c54-22 86 24 124 6" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+  <path d="M70 552h220l-46 44H116z" fill="#00c875" stroke="#062043" stroke-width="6"/>
+  <path d="M44 552c76-56 154-64 276-14" fill="none" stroke="#00cff5" stroke-width="10" stroke-linecap="round"/>
+</svg>

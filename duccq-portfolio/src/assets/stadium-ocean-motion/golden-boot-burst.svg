@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="Golden football boot burst">
+  <defs>
+    <linearGradient id="boot" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe15a"/><stop offset="0.45" stop-color="#ff7a00"/><stop offset="1" stop-color="#135dff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="14" flood-color="#ff7a00" flood-opacity="0.28"/></filter>
+  </defs>
+  <g opacity="0.85" stroke-linecap="round">
+    <path d="M120 228h-74M164 162l-56-42M182 302l-62 52M566 126l48-58M594 246h76M528 336l58 42" stroke="#00cff5" stroke-width="12"/>
+    <path d="M108 278l-42 14M610 184l42-18" stroke="#135dff" stroke-width="10"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M176 238c68 32 142 34 248 4 24-7 52-2 72 16l78 70c20 18 10 54-17 56-124 8-230-2-318-32-48-16-78-44-90-84-6-20 8-40 27-30z" fill="url(#boot)" stroke="#062043" stroke-width="8"/>
+    <path d="M234 208c54-54 120-76 188-70l28 82c-92 32-166 36-236 6z" fill="#fff" opacity="0.72" stroke="#062043" stroke-width="7"/>
+    <path d="M312 174l18 64M366 158l20 64M420 154l20 58" stroke="#062043" stroke-width="8"/>
+    <path d="M284 354l-18 44M354 368l-8 48M430 382l10 44" stroke="#062043" stroke-width="8"/>
+  </g>
+</svg>

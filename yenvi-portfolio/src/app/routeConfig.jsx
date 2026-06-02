@@ -5,7 +5,7 @@ import ConclutionPage from '../pages/ConclutionPage';
 import ProjectsPage from '../pages/ProjectsPage';
 
 export const navItems = [
-  { to: '/about', label: 'Về tôi', icon: MoonStar },
+  { to: '/about', label: 'Về mình', icon: MoonStar },
   { to: '/projects', label: 'Dự án', icon: BookOpen },
   { to: '/conclution', label: 'Kết luận', icon: Sparkles },
 ];

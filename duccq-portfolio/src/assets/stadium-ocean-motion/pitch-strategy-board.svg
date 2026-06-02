@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-label="Football strategy board">
+  <defs>
+    <linearGradient id="pitch" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00c875"/><stop offset="0.58" stop-color="#e8fff6"/><stop offset="1" stop-color="#00cff5"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#135dff" flood-opacity="0.22"/></filter>
+  </defs>
+  <g filter="url(#soft)">
+    <path d="M88 56h584l-42 408H46z" fill="url(#pitch)" stroke="#135dff" stroke-width="10"/>
+    <path d="M381 70v392M92 260h574" stroke="#fff" stroke-width="8" opacity="0.8"/>
+    <circle cx="381" cy="260" r="86" fill="none" stroke="#fff" stroke-width="8" opacity="0.75"/>
+    <path d="M88 176h98v168H88M672 176h-98v168h98" fill="none" stroke="#fff" stroke-width="8" opacity="0.75"/>
+    <path d="M202 120C292 108 351 194 426 186c62-6 106-54 158-28" fill="none" stroke="#ff7a00" stroke-width="12" stroke-linecap="round"/>
+    <path d="M210 386c84-74 172-78 276-20" fill="none" stroke="#135dff" stroke-width="12" stroke-linecap="round"/>
+    <g fill="#062043">
+      <circle cx="202" cy="120" r="20"/><circle cx="426" cy="186" r="20"/><circle cx="584" cy="158" r="20"/><circle cx="210" cy="386" r="20"/><circle cx="486" cy="366" r="20"/>
+    </g>
+    <g fill="#fff" stroke="#062043" stroke-width="5">
+      <circle cx="302" cy="224" r="18"/><circle cx="520" cy="278" r="18"/><circle cx="340" cy="344" r="18"/>
+    </g>
+  </g>
+</svg>
