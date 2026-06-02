@@ -39,6 +39,7 @@ export default function RainNotebookHeroPage({ onNavigate }) {
             <h2>{profile.school}</h2>
             <p>{profile.objective}</p>
           </div>
+          <img className="hero-avatar-sticker" src="/avatar.jpg" alt={profile.name} />
           <img className="ink-icon-strip" src={rainInkIcons} alt="" />
         </motion.div>
       </div>
